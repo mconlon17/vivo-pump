@@ -1,0 +1,3 @@
+uri	name	type	url	within	overview	photo	abbreviation	successor	address	phone	email	isni	action
+NA	University of Florida	university	http://www.ufl.edu	NA	Big land grant university	uf.jpg	UF	NA	710 SW 13th Street;Gainesville;FL	352-392-8600	info@ufl.edu	12345678	NA
+NA	Board of Trustees	governance	http://trustees.ufl.edu	University of Florida	The board is the boss	NA	BOT	NA	NA	NA	NA	NA	NA
