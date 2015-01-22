@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.0"
+__version__ = "0.1"
 
 from vivofoundation import read_csv
 import argparse
@@ -92,7 +92,7 @@ def do_get_orgs(filename):
         #  Each property is either single-valued, multi-valued, and/or de-referenced.  We're not
         #  not ready for de-referenced yet.  That will require more complex SPARQL
 
-        # Single valued attributes.  If data has more than one value, use the last value found
+        #  Single valued attributes.  If data has more than one value, use the last value found
     
         for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address', 'phone', 'email', 'isni'):
             if name in binding:
@@ -109,25 +109,28 @@ def do_get_orgs(filename):
 
     print orgs
 
+
     # Write out the file
-    # TODO: Add header line
-    # TODO: get order of fields right
+    # TODO: deref url, address, photo
+    # TODO: Code the types
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
+    columns = ('uri', 'name', 'type', 'within', 'url', 'phone', 'email', 'address', 'photo',
+               'abbreviation', 'isni', 'successor', 'overview')
+    outfile.write('\t'.join(columns))
+    outfile.write('\n')
+
     for uri in sorted(orgs.keys()):
-        for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address', 'phone', 'email', 'isni'):
+        for name in columns:
             if name in orgs[uri]:
-                val = orgs[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
+                if type(orgs[uri][name]) is list:
+                    val = ';'.join([x['value'] for x in orgs[uri][name]])
+                else:
+                    val = orgs[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
                 outfile.write(val)
-            outfile.write('\t')
-        for name in ('successor', 'within', 'type'):
-            if name in orgs[uri]:
-                for x in orgs[uri][name]:
-                    val = x['value'].replace('\n', ' ').replace('\r', ' ')
-                    outfile.write(val)
-                    outfile.write(';')
-            outfile.write('\t')
+            if name != columns[len(columns)-1]:
+                outfile.write('\t')
         outfile.write('\n')
 
     outfile.close()
