@@ -6,6 +6,8 @@
     Read a spreadsheet and follow the directions to add, update or remove organizations and/or
     organization attributes from VIVO.
 
+    Produce a spreadsheet from VIVO that has the fields ready for editing and updating
+
     Exceptions are thrown, caught and logged for missing required elements that are missing
 
     See CHANGELOG.md for history
@@ -13,14 +15,13 @@
 """
 
 # TODO: test file with test cases and notes for each
-# TODO: Finish get
 # TODO: Write do_update_orgs using rdflib
 # TODO: Support lookup by name or uri
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.1"
+__version__ = "0.2"
 
 from vivofoundation import read_csv
 import argparse
@@ -55,21 +56,27 @@ def do_get_orgs(filename):
     """
 
     query = """
-    SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address ?phone ?email ?isni
+    SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address1 ?address2 ?city ?state ?zip ?phone ?email ?isni
     WHERE {
 
-       ?uri a foaf:Organization .
-       ?uri a ufVivo:UFEntity .
-       ?uri rdf:type ?type .
-       FILTER (?type != foaf:Organization && ?type != foaf:Agent && ?type != owl:Thing && ?type != ufVivo:UFEntity)
-       ?uri rdfs:label ?name .
-       OPTIONAL { ?uri vivo:webpage ?url . }
-       OPTIONAL { ?uri vivo:subOrganizationWithin ?within . }
-       OPTIONAL { ?uri vivo:overview ?overview . }
-       OPTIONAL { ?uri vitro:mainImage ?photo . }
-       OPTIONAL { ?uri vivo:abbreviation ?abbreviation . }
-       OPTIONAL { ?uri vivo:hasSuccessorOrganization ?successor . }
-       OPTIONAL { ?uri vivo:mailingAddress ?address . }
+        ?uri a foaf:Organization .
+        ?uri a ufVivo:UFEntity .
+        ?uri rdf:type ?type .
+        FILTER (?type != foaf:Organization && ?type != foaf:Agent && ?type != owl:Thing && ?type != ufVivo:UFEntity)
+        ?uri rdfs:label ?name .
+        OPTIONAL { ?uri vivo:webpage ?weburi .  ?weburi vivo:linkURI ?url .}
+        OPTIONAL { ?uri vivo:subOrganizationWithin ?within . }
+        OPTIONAL { ?uri vivo:overview ?overview . }
+        OPTIONAL { ?uri vitro-public:mainImage ?photouri . ?photouri vitro-public:filename ?photo .}
+        OPTIONAL { ?uri vivo:abbreviation ?abbreviation . }
+        OPTIONAL { ?uri vivo:hasSuccessorOrganization ?successor . }
+        OPTIONAL { ?uri vivo:mailingAddress ?address .
+            OPTIONAL{ ?address vivo:address1 ?address1 . }
+            OPTIONAL{ ?address vivo:address2 ?address2 . }
+            OPTIONAL{ ?address vivo:addressCity ?city . }
+            OPTIONAL{ ?address vivo:addressPostalCode ?zip . }
+            OPTIONAL{ ?address vivo:addressState ?state . }
+            }
        OPTIONAL { ?uri vivo:phoneNumber ?phone . }
        OPTIONAL { ?uri vivo:email ?email . }
        OPTIONAL { ?uri ufVivo:isni ?isni . }
@@ -78,8 +85,7 @@ def do_get_orgs(filename):
     ORDER BY ?name
     """
 
-    org_result_set = vivo_sparql_query(query, debug=True)  # show the encoded query
-    print org_result_set
+    org_result_set = vivo_sparql_query(query)
     
     orgs = {}
     
@@ -94,7 +100,8 @@ def do_get_orgs(filename):
 
         #  Single valued attributes.  If data has more than one value, use the last value found
     
-        for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address', 'phone', 'email', 'isni'):
+        for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address1', 'address2', 'city', 'state',
+                     'zip', 'phone', 'email', 'isni'):
             if name in binding:
                 orgs[uri][name] = binding[name]
 
@@ -107,16 +114,14 @@ def do_get_orgs(filename):
                 else:
                     orgs[uri][name] = [binding[name]]
 
-    print orgs
-
 
     # Write out the file
-    # TODO: deref url, address, photo
-    # TODO: Code the types
+
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
-    columns = ('uri', 'name', 'type', 'within', 'url', 'phone', 'email', 'address', 'photo',
+    columns = ('uri', 'name', 'type', 'within', 'url', 'phone', 'email', 'address1', 'address2', 'city', 'state',
+               'zip', 'photo',
                'abbreviation', 'isni', 'successor', 'overview')
     outfile.write('\t'.join(columns))
     outfile.write('\n')
@@ -125,7 +130,10 @@ def do_get_orgs(filename):
         for name in columns:
             if name in orgs[uri]:
                 if type(orgs[uri][name]) is list:
-                    val = ';'.join([x['value'] for x in orgs[uri][name]])
+                    if name == 'type':
+                        val = ';'.join(set(org_types.get(x['value'], ' ') for x in orgs[uri][name]))
+                    else:
+                        val = ';'.join(set(x['value'] for x in orgs[uri][name]))
                 else:
                     val = orgs[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
                 outfile.write(val)
@@ -138,6 +146,14 @@ def do_get_orgs(filename):
     return len(orgs)
 
 # Driver program starts here
+
+org_type_data = read_csv("org_types.txt", delimiter=' ')
+org_types = {}
+org_uris = {}
+for row in org_type_data.values():
+    org_uris[row['type']] = row['uri']
+    org_types[row['uri']] = row['type']
+print org_types
 
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get org data from VIVO.  update = update VIVO organ"
