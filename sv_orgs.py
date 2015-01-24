@@ -21,7 +21,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.21"
+__version__ = "0.22"
 
 from vivofoundation import read_csv
 import argparse
@@ -161,14 +161,67 @@ def get_org_triples():
     return triples
 
 
+def iri_string(d):
+    """
+    Given a dict representing the value of an element returned by a fuseki query, generate
+    the string version suitable for inclusion in an NT file.
+    """
+    return '<' + d['value'] + '>'
+
+
+def iri_predicate(d):
+    """
+    Give a dict representing the value of an element returned by a fuseki query corresponding
+    to the predicate of a triple, return the string version suitable for inclusion in an NT file.
+    :param d: dictionary of a value returned by fuseki
+    :return: string
+
+    See http://www.w3.org/TR/n-triples/ for standards for n-triples
+    """
+    if d['type'] == 'literal' or d['type'] == 'typed-literal':
+        s = '"' + d['value'].replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r') + '"'
+        if 'xml:lang' in d:
+            s = s + '@' + d['xml:lang']
+        if 'datatype' in d:
+            s = s + '^^<' + d['datatype'] + '>'
+        return s
+    else:
+        return iri_string(d)
+
+def write_triples(triples, filename):
+    """
+    Given a structure from fuseki with the triples, write the triples to a file in nt format
+
+    :param triples: structure from fuseki query with s, p, o
+    :param filename: filename to write triples to
+    :return:
+    """
+    import codecs
+    outfile = codecs.open('__'+filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
+    for row in triples['results']['bindings']:
+        outfile.write(iri_string(row['s']))
+        outfile.write(' ')
+        outfile.write(iri_string(row['p']))
+        outfile.write(' ')
+        outfile.write(iri_predicate(row['o']))
+        outfile.write(' .\n')
+    outfile.close()
+    return
+
+
 def do_update_orgs(filename):
     """
     read updates from a spreadsheet filename.  Compare to orgs in VIVO.  generate add and sub
     rdf as necessary to process requested changes
     """
-    norgs = 0
+    from rdflib import Graph
     triples = get_org_triples()
-    return norgs
+    write_triples(triples, filename)
+    og = Graph()
+    og.parse('__'+filename, format='nt')
+    ug = og
+    print 'Graphs ready for processing. Original has ', len(og), '. Update graph has', len(ug)
+    return len(og)
 
 # Driver program starts here
 
@@ -193,10 +246,7 @@ if args.action == 'get':
     print norgs, "Organizations in", args.filename
 elif args.action == "update":
     orgs = read_csv(args.filename, delimiter="\t")
-    print orgs
     print len(orgs), "Organizations in", args.filename
-    for row in sorted(orgs.keys()):
-        print row, orgs[row]['uri']
     norgs = do_update_orgs(args.filename)
 else:
     print "Unknown action.  Try sv_orgs -h for help"
