@@ -21,7 +21,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.2"
+__version__ = "0.21"
 
 from vivofoundation import read_csv
 import argparse
@@ -145,6 +145,31 @@ def do_get_orgs(filename):
     
     return len(orgs)
 
+
+def get_org_triples():
+    org_query = """
+    SELECT ?s ?p ?o
+    WHERE {
+        {?s a foaf:Organization . ?s ?p ?o . }
+        UNION
+        {?o a foaf:Organization . ?s ?p ?o . }
+    }
+    """
+    from vivofoundation import vivo_sparql_query
+    triples = vivo_sparql_query(org_query)
+    print len(triples["results"]["bindings"]), "org triples"
+    return triples
+
+
+def do_update_orgs(filename):
+    """
+    read updates from a spreadsheet filename.  Compare to orgs in VIVO.  generate add and sub
+    rdf as necessary to process requested changes
+    """
+    norgs = 0
+    triples = get_org_triples()
+    return norgs
+
 # Driver program starts here
 
 org_type_data = read_csv("org_types.txt", delimiter=' ')
@@ -169,6 +194,10 @@ if args.action == 'get':
 elif args.action == "update":
     orgs = read_csv(args.filename, delimiter="\t")
     print orgs
+    print len(orgs), "Organizations in", args.filename
+    for row in sorted(orgs.keys()):
+        print row, orgs[row]['uri']
+    norgs = do_update_orgs(args.filename)
 else:
     print "Unknown action.  Try sv_orgs -h for help"
 
