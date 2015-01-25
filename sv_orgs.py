@@ -8,6 +8,10 @@
 
     Produce a spreadsheet from VIVO that has the fields ready for editing and updating
 
+    Inputs:  spreadsheet containing updates and additions (stdin).  VIVO for current state
+    Outputs:  spreadsheet with current state (stdout).  VIVO state changes
+    Intermediates:  Org triples
+
     Exceptions are thrown, caught and logged for missing required elements that are missing
 
     See CHANGELOG.md for history
@@ -21,9 +25,10 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.22"
+__version__ = "0.23"
 
 from vivofoundation import read_csv
+from datetime import datetime
 import argparse
 import codecs
 
@@ -157,7 +162,7 @@ def get_org_triples():
     """
     from vivofoundation import vivo_sparql_query
     triples = vivo_sparql_query(org_query)
-    print len(triples["results"]["bindings"]), "org triples"
+    print datetime.now(), len(triples["results"]["bindings"]), "org triples"
     return triples
 
 
@@ -214,13 +219,27 @@ def do_update_orgs(filename):
     read updates from a spreadsheet filename.  Compare to orgs in VIVO.  generate add and sub
     rdf as necessary to process requested changes
     """
-    from rdflib import Graph
+    from rdflib import Graph, URIRef, RDFS, Literal
     triples = get_org_triples()
     write_triples(triples, filename)
     og = Graph()
     og.parse('__'+filename, format='nt')
     ug = og
-    print 'Graphs ready for processing. Original has ', len(og), '. Update graph has', len(ug)
+    print datetime.now(), 'Graphs ready for processing. Original has ', len(og), '. Update graph has', len(ug)
+    org_updates = read_csv(filename, delimiter='\t')
+    print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(org_updates), 'rows.'
+    for row, org_update in org_updates.items():
+        uri = URIRef(org_update['uri'])
+        print datetime.now(), row, org_update['uri'], str(ug.label(uri))
+        columns = ('uri', 'name', 'type', 'within', 'url', 'phone', 'email', 'address1', 'address2', 'city', 'state',
+                   'zip', 'photo', 'abbreviation', 'isni', 'successor', 'overview')
+        #  Let's update name only.  We will refactor to a loop to update each column
+        if str(ug.Label(uri)) == org_update['name']:
+            print datetime.now(), uri, 'No name update'
+        else:
+            print datetime.now(), 'Update org', uri, ' name from', ug.Label(uri), 'to', org_update['name']
+            ug.remove((uri, RDFS.Label, Literal(ug.Label(uri))))
+            ug.add((uri, RDFS.Label, Literal(org_update['name'])))
     return len(og)
 
 # Driver program starts here
@@ -231,7 +250,7 @@ org_uris = {}
 for row in org_type_data.values():
     org_uris[row['type']] = row['uri']
     org_types[row['uri']] = row['type']
-print org_types
+print datetime.now(), org_types
 
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get org data from VIVO.  update = update VIVO organ"
@@ -241,13 +260,11 @@ parser.add_argument("filename", help="name of spreadsheet containing org data to
 args = parser.parse_args()
 
 if args.action == 'get':
-    print "will get org data from VIVO"
-    norgs = do_get_orgs(args.filename)
-    print norgs, "Organizations in", args.filename
+    print datetime.now(), "will get org data from VIVO"
+    n_orgs = do_get_orgs(args.filename)
+    print datetime.now(), n_orgs, "Organizations in", args.filename
 elif args.action == "update":
-    orgs = read_csv(args.filename, delimiter="\t")
-    print len(orgs), "Organizations in", args.filename
-    norgs = do_update_orgs(args.filename)
+    n_orgs = do_update_orgs(args.filename)
 else:
-    print "Unknown action.  Try sv_orgs -h for help"
+    print datetime.now(), "Unknown action.  Try sv_orgs -h for help"
 
