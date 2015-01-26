@@ -10,7 +10,7 @@ http://vivo.ufl.edu/individual/n1023303	Sarasota County Extension Office	extensi
 http://vivo.ufl.edu/individual/n1023304	Seminole County Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219													
 http://vivo.ufl.edu/individual/n1023305	Suwannee County Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219													
 http://vivo.ufl.edu/individual/n1023306	Alachua County Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219	http://alachua.ifas.ufl.edu/												
-http://vivo.ufl.edu/individual/n1023307	Brevard County Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219													
+http://vivo.ufl.edu/individual/n1023307	Brevard County Supreme Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219													
 http://vivo.ufl.edu/individual/n1023308	Broward County Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219													
 http://vivo.ufl.edu/individual/n1023309	Calhoun County Extension Office	extensionunit	http://vivo.ufl.edu/individual/n243219													
 http://vivo.ufl.edu/individual/n102459	UF/SPC Partnership Dental Clinic	clinicalorganization	http://vivo.ufl.edu/individual/n243222													

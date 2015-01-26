@@ -25,7 +25,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.23"
+__version__ = "0.24"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -153,11 +153,11 @@ def do_get_orgs(filename):
 
 def get_org_triples():
     org_query = """
-    SELECT ?s ?p ?o
+   SELECT ?s ?p ?o
     WHERE {
-        {?s a foaf:Organization . ?s ?p ?o . }
-        UNION
-        {?o a foaf:Organization . ?s ?p ?o . }
+        ?s a foaf:Organization .
+        ?s a vivo:ExtensionUnit .
+        ?s ?p ?o .
     }
     """
     from vivofoundation import vivo_sparql_query
@@ -219,27 +219,77 @@ def do_update_orgs(filename):
     read updates from a spreadsheet filename.  Compare to orgs in VIVO.  generate add and sub
     rdf as necessary to process requested changes
     """
-    from rdflib import Graph, URIRef, RDFS, Literal
+    from rdflib import Graph, URIRef, RDFS, RDF, Literal, Namespace
+
+    VIVO = Namespace('http://vivoweb.org/ontology/core#')
+    VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
+    UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
+
+    column_defs = {
+        'name': [RDFS.label],
+        'type': [RDF.type],
+        'within': [VIVO.hasSubOrganization],
+        'url': [VIVO.webPage, VIVO.linkURI],
+        'phone': [VIVO.primaryPhone],
+        'email': [VIVO.primaryEmail],
+        'address1': [VIVO.mailingAddress, VIVO.address1],
+        'address2': [VIVO.mailingAddress, VIVO.address2],
+        'city': [VIVO.mailingAddress, VIVO.addressCity],
+        'state': [VIVO.mailingAddress, VIVO.addressState],
+        'zip': [VIVO.mailingAddress, VIVO.addressPostalCode],
+        'photo': [VITROP.mainImage, VITROP.filename],
+        'abbreviation': [VIVO.abbreviation],
+        'isni': [UFV.isni],
+        'successor': [VIVO.hasSuccessorOrg],
+        'overview': [VIVO.overview]
+    }
+
     triples = get_org_triples()
     write_triples(triples, filename)
     og = Graph()
     og.parse('__'+filename, format='nt')
-    ug = og
+    ug = Graph()
+    for s, p, o in og:
+        ug.add((s, p, o))
     print datetime.now(), 'Graphs ready for processing. Original has ', len(og), '. Update graph has', len(ug)
     org_updates = read_csv(filename, delimiter='\t')
     print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(org_updates), 'rows.'
     for row, org_update in org_updates.items():
         uri = URIRef(org_update['uri'])
-        print datetime.now(), row, org_update['uri'], str(ug.label(uri))
-        columns = ('uri', 'name', 'type', 'within', 'url', 'phone', 'email', 'address1', 'address2', 'city', 'state',
-                   'zip', 'photo', 'abbreviation', 'isni', 'successor', 'overview')
-        #  Let's update name only.  We will refactor to a loop to update each column
-        if str(ug.Label(uri)) == org_update['name']:
-            print datetime.now(), uri, 'No name update'
-        else:
-            print datetime.now(), 'Update org', uri, ' name from', ug.Label(uri), 'to', org_update['name']
-            ug.remove((uri, RDFS.Label, Literal(ug.Label(uri))))
-            ug.add((uri, RDFS.Label, Literal(org_update['name'])))
+        if (uri, None, None) in ug:
+
+            for column_name, column_def in column_defs.items():
+                if len(column_def) == 1:
+
+                    vivo_value = str(ug.value(uri, column_def[0], None, any=True))
+
+                    # TODO: Handle multiple values
+                    # TODO: Handle data types and lang
+                    # TODO: Handle special processing for dates and such
+
+                    if org_update[column_name] == '':
+                        pass  # No action required if spreadsheet is blank
+                    elif org_update[column_name] == 'None':
+                        ug.remove((uri, column_def[0], Literal(vivo_value)))
+                    elif org_update[column_name] == str(ug.value(uri, column_def[0], None, any=True)):
+                        pass  # No action required if spreadsheet value is the same as VIVO value
+                    else:
+                        print datetime.now(), 'Update org', uri, column_name, ' from', \
+                            vivo_value, 'to', org_update[column_name]
+                        ug.remove((uri, column_def[0], Literal(vivo_value)))
+                        ug.add((uri, column_def[0], Literal(org_update[column_name])))
+
+    # Write out the triples to be added and subbed in n-triples format
+
+    add = ug - og  # Triples in update that are not in original
+    sub = og - ug  # Triples in original that are not in update
+    print datetime.now(), "Add\n", add
+    print datetime.now(), "Sub\n", sub
+    print datetime.now(), "will add", len(add), "triples and subtract ", len(sub), "triples."
+    print datetime.now(), "Triples to add:"
+    print add.serialize(format='nt')
+    print datetime.now(), "Triples to sub:"
+    print sub.serialize(format='nt')
     return len(og)
 
 # Driver program starts here
