@@ -18,11 +18,7 @@
 
 """
 
-# TODO: Write do_update_orgs using rdflib
-# TODO: Support lookup by name or uri
-# TODO: Support for remove action
 # TODO: Support for stdin and stdout
-# TODO: Produce the get query from the column_defs data structure (!)
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
@@ -61,6 +57,8 @@ def do_get_orgs(filename):
     :param filename: Tab delimited file of org data
     :return:  None.  File is written
     """
+
+    # TODO: Produce the query from the column_defs data structure (!)
 
     query = """
     SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address1 ?address2 ?city ?state ?zip ?phone ?email ?isni
@@ -226,6 +224,14 @@ def do_update_orgs(filename):
     from rdflib.namespace import FOAF
     from vivofoundation import get_vivo_uri
 
+    # TODO: Handle multiple values
+    # TODO: Handle special processing for dates and such
+    # TODO: Handle enumerated values such as type
+    # TODO: Handle intermediate entity
+    # TODO: Handle Literal vs URIRef distinction for objects of triples to be added
+    # TODO: Support lookup by name or uri
+    # TODO: Support for remove action
+
     VIVO = Namespace('http://vivoweb.org/ontology/core#')
     VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
     UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
@@ -277,12 +283,6 @@ def do_update_orgs(filename):
 
                 vivo_object = ug.value(uri, column_def[0], None, any=True)
                 vivo_string = str(vivo_object)
-
-                # TODO: Handle multiple values
-                # TODO: Handle special processing for dates and such
-                # TODO: Handle enumerated values such as type
-                # TODO: Handle intermediate entity
-                # TODO: Handle Literal vs URIRef distinction for objects of triples to be added
 
                 # if org_update[column_name] != '':
                 #     print row, column_name, org_update[column_name], vivo_string
