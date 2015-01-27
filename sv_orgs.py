@@ -18,14 +18,16 @@
 
 """
 
-# TODO: test file with test cases and notes for each
 # TODO: Write do_update_orgs using rdflib
 # TODO: Support lookup by name or uri
+# TODO: Support for remove action
+# TODO: Support for stdin and stdout
+# TODO: Produce the get query from the column_defs data structure (!)
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.24"
+__version__ = "0.25"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -66,6 +68,7 @@ def do_get_orgs(filename):
 
         ?uri a foaf:Organization .
         ?uri a ufVivo:UFEntity .
+        ?uri a vivo:ExtensionUnit .
         ?uri rdf:type ?type .
         FILTER (?type != foaf:Organization && ?type != foaf:Agent && ?type != owl:Thing && ?type != ufVivo:UFEntity)
         ?uri rdfs:label ?name .
@@ -220,6 +223,8 @@ def do_update_orgs(filename):
     rdf as necessary to process requested changes
     """
     from rdflib import Graph, URIRef, RDFS, RDF, Literal, Namespace
+    from rdflib.namespace import FOAF
+    from vivofoundation import get_vivo_uri
 
     VIVO = Namespace('http://vivoweb.org/ontology/core#')
     VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
@@ -227,8 +232,8 @@ def do_update_orgs(filename):
 
     column_defs = {
         'name': [RDFS.label],
-        'type': [RDF.type],
-        'within': [VIVO.hasSubOrganization],
+        # 'type': [RDF.type],
+        'within': [VIVO.subOrganizationWithin],
         'url': [VIVO.webPage, VIVO.linkURI],
         'phone': [VIVO.primaryPhone],
         'email': [VIVO.primaryEmail],
@@ -256,36 +261,50 @@ def do_update_orgs(filename):
     print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(org_updates), 'rows.'
     for row, org_update in org_updates.items():
         uri = URIRef(org_update['uri'])
-        if (uri, None, None) in ug:
+        if (uri, None, None) not in ug:
 
-            for column_name, column_def in column_defs.items():
-                if len(column_def) == 1:
+            #  If the org uri can not be found in the update graph, make a new URI ignoring the one in the spreadsheet
+            #  if any, and add the URI to the update graph.  Reaming processing is unchanged.  Since the new uri does
+            #  not have triples for the columns in the spreadsheet, each will be added
 
-                    vivo_value = str(ug.value(uri, column_def[0], None, any=True))
+            uri_string = get_vivo_uri()
+            print "Adding an organization for row", row, ".  Will be added at", uri_string
+            uri = URIRef(uri_string)
+            ug.add((uri, RDF.type, FOAF.Organization))
 
-                    # TODO: Handle multiple values
-                    # TODO: Handle data types and lang
-                    # TODO: Handle special processing for dates and such
+        for column_name, column_def in column_defs.items():
+            if len(column_def) == 1:
 
-                    if org_update[column_name] == '':
-                        pass  # No action required if spreadsheet is blank
-                    elif org_update[column_name] == 'None':
-                        ug.remove((uri, column_def[0], Literal(vivo_value)))
-                    elif org_update[column_name] == str(ug.value(uri, column_def[0], None, any=True)):
-                        pass  # No action required if spreadsheet value is the same as VIVO value
-                    else:
-                        print datetime.now(), 'Update org', uri, column_name, ' from', \
-                            vivo_value, 'to', org_update[column_name]
-                        ug.remove((uri, column_def[0], Literal(vivo_value)))
-                        ug.add((uri, column_def[0], Literal(org_update[column_name])))
+                vivo_object = ug.value(uri, column_def[0], None, any=True)
+                vivo_string = str(vivo_object)
+
+                # TODO: Handle multiple values
+                # TODO: Handle special processing for dates and such
+                # TODO: Handle enumerated values such as type
+                # TODO: Handle intermediate entity
+                # TODO: Handle Literal vs URIRef distinction for objects of triples to be added
+
+                # if org_update[column_name] != '':
+                #     print row, column_name, org_update[column_name], vivo_string
+
+                if org_update[column_name] == '':
+                    pass  # No action required if spreadsheet is blank
+                elif org_update[column_name] == 'None':
+                    print "Remove", column_name, "from", str(uri)
+                    ug.remove((uri, column_def[0], vivo_object))
+                elif org_update[column_name] == vivo_string:
+                    pass  # No action required if spreadsheet string is the same as VIVO string
+                else:
+                    print datetime.now(), 'Update org', uri, column_name, ' from', \
+                        vivo_string, 'to', org_update[column_name]
+                    ug.remove((uri, column_def[0], vivo_object))
+                    ug.add((uri, column_def[0], Literal(org_update[column_name])))
 
     # Write out the triples to be added and subbed in n-triples format
 
     add = ug - og  # Triples in update that are not in original
     sub = og - ug  # Triples in original that are not in update
-    print datetime.now(), "Add\n", add
-    print datetime.now(), "Sub\n", sub
-    print datetime.now(), "will add", len(add), "triples and subtract ", len(sub), "triples."
+    print datetime.now(), "Will add", len(add), "triples and subtract ", len(sub), "triples."
     print datetime.now(), "Triples to add:"
     print add.serialize(format='nt')
     print datetime.now(), "Triples to sub:"
@@ -310,7 +329,6 @@ parser.add_argument("filename", help="name of spreadsheet containing org data to
 args = parser.parse_args()
 
 if args.action == 'get':
-    print datetime.now(), "will get org data from VIVO"
     n_orgs = do_get_orgs(args.filename)
     print datetime.now(), n_orgs, "Organizations in", args.filename
 elif args.action == "update":
