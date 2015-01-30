@@ -7,4 +7,5 @@ from VIVO
 * **2015-01-27** General data structure for updates and updates.  Now handles datatype and lang.  Handles updates 
 and adds. Handles all six value conditions.
 * **2015-01-29** Enumerations handled.  Filters handled.
-* **2015-01-30** 0.28 Data structure enhanced to indicate multi-valued predicates
+* **2015-01-30** 0.29 Data structure enhanced to indicate multi-valued predicates. 0.30 Handles multi-valued 
+predicates. Added include parameter to add predicate values to source.  Useful to short hand inference paths

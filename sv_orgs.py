@@ -12,27 +12,26 @@
     Outputs:  spreadsheet with current state (stdout).  VIVO state changes
     Intermediates:  Org triples
 
-    Exceptions are thrown, caught and logged for missing required elements that are missing
+    Exceptions are thrown, caught and logged for missing required elements
 
     See CHANGELOG.md for history
 
 """
 
-# TODO: Support for stdin and stdout
-# TODO: Read/write columns defs as JSON.  Then all ingests are just data (!)
+# TODO: Support for stdin and stdout -- easy
+# TODO: Read/write columns defs as JSON.  Then all ingests are just data -- easy
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.29"
+__version__ = "0.30"
 
 from vivofoundation import read_csv
 from datetime import datetime
 import argparse
 import codecs
 
-# Helper functions start here.  Reusable code for orgs will be moved to vivoorgs
-
+# TODO: Generalize the helper functions -- medium
 
 def do_get_orgs(filename):
     from vivofoundation import vivo_sparql_query
@@ -59,7 +58,7 @@ def do_get_orgs(filename):
     :return:  None.  File is written
     """
 
-    # TODO: Produce the query from the column_defs data structure (!)
+    # TODO: Produce the query from the column_defs data structure (!) -- difficult
 
     query = """
     SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address1 ?address2 ?city ?state
@@ -166,6 +165,7 @@ def get_org_triples():
     print datetime.now(), len(triples["results"]["bindings"]), "org triples"
     return triples
 
+# TODO: Replace the functions with functions from rdflib -- easy
 
 def iri_string(d):
     """
@@ -225,11 +225,9 @@ def do_update_orgs(filename):
     from vivofoundation import get_vivo_uri
     from vivopeople import repair_phone_number, repair_email
 
-    # TODO: Handle multiple values -- use multi-valued structures and set logic to update
     # TODO: Handle intermediate entity -- difficult
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- easy
-    # TODO: Handle highest level entity subject (!) -- medium
 
     VIVO = Namespace('http://vivoweb.org/ontology/core#')
     VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
@@ -237,7 +235,8 @@ def do_update_orgs(filename):
 
     column_defs = {
         'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
-        'type': [{'predicate': {'ref': RDF.type, 'single': False}, 'object': {'literal': False, 'enum': 'org_uris'}}],
+        'type': [{'predicate': {'ref': RDF.type, 'single': False, 'include': ['thing', 'agent', 'org']},
+                  'object': {'literal': False, 'enum': 'org_uris'}}],
         'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False}, 'object': {'literal': False}}],
         'url': [{'predicate': {'ref': VIVO.webPage, 'single': False}, 'object': {'literal': True}},
                 {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
@@ -295,54 +294,85 @@ def do_update_orgs(filename):
                 for s, p, o in ug.triples((uri, column_def[0]['predicate']['ref'], None)):
                     vivo_objs[str(o)] = o
 
-                vivo_object = ug.value(uri, column_def[0]['predicate']['ref'], None, any=True)
-                vivo_string = str(vivo_object)
-
                 # Gather all column values for the column
 
                 if column_def[0]['predicate']['single']:
                     column_values = [org_update[column_name]]
                 else:
                     column_values = org_update[column_name].split(';')
-                print row, column_name, column_values
+                    if 'include' in column_def[0]['predicate']:
+                        column_values += column_def[0]['predicate']['include']
+
+                # Check column values for consistency with single and multi-value attributes
+
+                if column_def[0]['predicate']['single'] and len(column_values) > 1:
+                    print row, column_name, 'INVALID data.  Predicate is single-valued, multiple values in source.'
+                    continue
+                if '' in column_values and len(column_values) > 1:
+                    print row, column_name, 'INVALID data.  Blank element in multi-valued predicate set'
+                    continue
+                if 'None' in column_values and len(column_values) > 1:
+                    print row, column_name, 'INVALID data. None value in multi-valued predicate set'
+                    continue
 
                 # Handle enumerations
 
                 if 'enum' in column_def[0]['object']:
-                    column_string = eval(column_def[0]['object']['enum']).get(org_update[column_name], None)
-                    if column_string is None:
-                        print row, column_name, "INVALID", org_update[column_name], "not found in", \
-                            column_def[0]['object']['enum']
-                        continue
-                else:
-                    column_string = org_update[column_name]
+                    for i in range(len(column_values)):
+                        column_values[i] = eval(column_def[0]['object']['enum']).get(column_values[i], None)
+                        if column_values[i] is None:
+                            print row, column_name, "INVALID", column_values[i], "not found in", \
+                                column_def[0]['object']['enum']
+                            continue
 
                 # Handle filters
 
                 if 'filter' in column_def[0]['object']:
-                    was_string = column_string
-                    column_string = eval(column_def[0]['object']['filter'])(column_string)
-                    if was_string != column_string:
-                        print row, column_name, column_def[0]['object']['filter'], "FILTER IMPROVED", was_string, 'to',\
-                            column_string
+                    for i in range(len(column_values)):
+                        was_string = column_values[i]
+                        column_values[i] = eval(column_def[0]['object']['filter'])(column_values[i])
+                        if was_string != column_values[i]:
+                            print row, column_name, column_def[0]['object']['filter'], "FILTER IMPROVED", was_string, 'to',\
+                                column_values[i]
+
+                print row, column_name, column_values
 
                 # Compare VIVO to Input and update as indicated
 
-                if column_string == '':
-                    pass  # No action required if spreadsheet is blank
-                elif column_string == 'None':
-                    print "Remove", column_name, "from", str(uri)
-                    ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
-                elif column_string == vivo_string:
-                    pass  # No action required if spreadsheet string is the same as VIVO string
-                else:
-                    print datetime.now(), 'Update org', uri, column_name, ' from', \
-                        vivo_string, 'to', column_string
-                    ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
-                    if column_def[0]['object']['literal']:
-                        ug.add((uri, column_def[0]['predicate']['ref'], Literal(column_string)))
+                if len(column_values) == 1:
+                    column_string = column_values[0]
+                    if column_string == '':
+                        continue  # No action required if spreadsheet is blank
+                    elif column_string == 'None':
+                        print "Remove", column_name, "from", str(uri)
+                        for vivo_object in vivo_objs:
+                            ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
                     else:
-                        ug.add((uri, column_def[0]['predicate']['ref'], URIRef(column_string)))
+                        for vivo_object in vivo_objs.values():
+                            if str(vivo_object) == column_string:
+                                continue  # No action required if vivo same as source
+                            else:
+                                ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
+                                print "REMOVE", row, column_name, str(vivo_object)
+                            if column_def[0]['object']['literal']:
+                                ug.add((uri, column_def[0]['predicate']['ref'], Literal(column_string)))
+                            else:
+                                ug.add((uri, column_def[0]['predicate']['ref'], URIRef(column_string)))
+                else:
+
+                    # Ready for set comparison
+
+                    print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
+
+                    add_values = set(column_values) - set(vivo_objs.keys())
+                    sub_values = set(vivo_objs.keys()) - set(column_values)
+                    for value in add_values:
+                        if column_def[0]['object']['literal']:
+                            ug.add((uri, column_def[0]['predicate']['ref'], Literal(value)))
+                        else:
+                            ug.add((uri, column_def[0]['predicate']['ref'], URIRef(value)))
+                    for value in sub_values:
+                        ug.remove((uri, column_def[0]['predicate']['ref'], vivo_objs[value]))
 
     # Write out the triples to be added and subbed in n-triples format
 

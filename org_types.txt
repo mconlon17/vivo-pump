@@ -1,4 +1,8 @@
 type uri
+org http://xmlns.com/foaf/0.1/Organization
+thing http://www.w3.org/2002/07/owl#Thing
+agent http://xmlns.com/foaf/0.1/Agent
+uf http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity
 fundingorganization http://vivoweb.org/ontology/core#FundingOrganization
 company http://vivoweb.org/ontology/core#Company
 publisher http://vivoweb.org/ontology/core#Publisher
