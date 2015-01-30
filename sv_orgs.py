@@ -24,7 +24,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.28"
+__version__ = "0.29"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -225,7 +225,7 @@ def do_update_orgs(filename):
     from vivofoundation import get_vivo_uri
     from vivopeople import repair_phone_number, repair_email
 
-    # TODO: Handle multiple values -- medium
+    # TODO: Handle multiple values -- use multi-valued structures and set logic to update
     # TODO: Handle intermediate entity -- difficult
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- easy
@@ -236,29 +236,31 @@ def do_update_orgs(filename):
     UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
 
     column_defs = {
-        'name': [{'predicate': RDFS.label, 'object': {'literal': True}}],
-        'type': [{'predicate': RDF.type, 'object': {'literal': False, 'enum': 'org_uris'}}],
-        'within': [{'predicate': VIVO.subOrganizationWithin, 'object': {'literal': False}}],
-        'url': [{'predicate': VIVO.webPage, 'object': {'literal': True}},
-                {'predicate': VIVO.linkURI, 'object': {'literal': True}}],
-        'phone': [{'predicate': VIVO.primaryPhone, 'object': {'literal': True, 'filter': 'repair_phone_number'}}],
-        'email': [{'predicate': VIVO.primaryEmail, 'object': {'literal': True, 'filter': 'repair_email'}}],
-        'address1': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
-                     {'predicate': VIVO.address1, 'object': {'literal': True}}],
-        'address2': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
-                     {'predicate': VIVO.address2, 'object': {'literal': True}}],
-        'city': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
-                 {'predicate': VIVO.addressCity, 'object': {'literal': True}}],
-        'state': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
-                  {'predicate': VIVO.addressState, 'object': {'literal': True}}],
-        'zip': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
-                {'predicate': VIVO.addressPostalCode, 'object': {'literal': True}}],
-        'photo': [{'predicate': VITROP.mainImage, 'object': {'literal': False}},
-                  {'predicate': VITROP.filename, 'object': {'literal': True}}],
-        'abbreviation': [{'predicate': VIVO.abbreviation, 'object': {'literal': True}}],
-        'isni': [{'predicate': UFV.isni, 'object': {'literal': True}}],
-        'successor': [{'predicate': VIVO.hasSuccessorOrg, 'object': {'literal': False}}],
-        'overview': [{'predicate': VIVO.overview, 'object': {'literal': True}}]
+        'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
+        'type': [{'predicate': {'ref': RDF.type, 'single': False}, 'object': {'literal': False, 'enum': 'org_uris'}}],
+        'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False}, 'object': {'literal': False}}],
+        'url': [{'predicate': {'ref': VIVO.webPage, 'single': False}, 'object': {'literal': True}},
+                {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
+        'phone': [{'predicate': {'ref': VIVO.primaryPhone, 'single': True},
+                   'object': {'literal': True, 'filter': 'repair_phone_number'}}],
+        'email': [{'predicate': {'ref': VIVO.primaryEmail, 'single': True},
+                   'object': {'literal': True, 'filter': 'repair_email'}}],
+        'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+                     {'predicate': {'ref': VIVO.address1, 'single': True}, 'object': {'literal': True}}],
+        'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+                     {'predicate': {'ref': VIVO.address2, 'single': True}, 'object': {'literal': True}}],
+        'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+                 {'predicate': {'ref': VIVO.addressCity, 'single': True}, 'object': {'literal': True}}],
+        'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+                  {'predicate': {'ref': VIVO.addressState, 'single': True}, 'object': {'literal': True}}],
+        'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+                {'predicate': {'ref': VIVO.addressPostalCode, 'single': True}, 'object': {'literal': True}}],
+        'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True}, 'object': {'literal': False}},
+                  {'predicate': {'ref': VITROP.filename, 'single': True}, 'object': {'literal': True}}],
+        'abbreviation': [{'predicate': {'ref': VIVO.abbreviation, 'single': True}, 'object': {'literal': True}}],
+        'isni': [{'predicate': {'ref': UFV.isni, 'single': True}, 'object': {'literal': True}}],
+        'successor': [{'predicate': {'ref': VIVO.hasSuccessorOrg, 'single': False}, 'object': {'literal': False}}],
+        'overview': [{'predicate': {'ref': VIVO.overview, 'single': True}, 'object': {'literal': True}}]
     }
 
     triples = get_org_triples()
@@ -276,7 +278,7 @@ def do_update_orgs(filename):
         if (uri, None, None) not in ug:
 
             #  If the org uri can not be found in the update graph, make a new URI ignoring the one in the spreadsheet
-            #  if any, and add the URI to the update graph.  Reaming processing is unchanged.  Since the new uri does
+            #  if any, and add the URI to the update graph.  Remaining processing is unchanged.  Since the new uri does
             #  not have triples for the columns in the spreadsheet, each will be added
 
             uri_string = get_vivo_uri()
@@ -287,17 +289,31 @@ def do_update_orgs(filename):
         for column_name, column_def in column_defs.items():
             if len(column_def) == 1:
 
-                vivo_object = ug.value(uri, column_def[0]['predicate'], None, any=True)
+                # Gather all VIVO objects for the column
+
+                vivo_objs = {}
+                for s, p, o in ug.triples((uri, column_def[0]['predicate']['ref'], None)):
+                    vivo_objs[str(o)] = o
+
+                vivo_object = ug.value(uri, column_def[0]['predicate']['ref'], None, any=True)
                 vivo_string = str(vivo_object)
+
+                # Gather all column values for the column
+
+                if column_def[0]['predicate']['single']:
+                    column_values = [org_update[column_name]]
+                else:
+                    column_values = org_update[column_name].split(';')
+                print row, column_name, column_values
 
                 # Handle enumerations
 
                 if 'enum' in column_def[0]['object']:
                     column_string = eval(column_def[0]['object']['enum']).get(org_update[column_name], None)
                     if column_string is None:
-                        print row, column_name, "INVALID", org_update[column_name], "not found in", column_def[0]['object']['enum']
+                        print row, column_name, "INVALID", org_update[column_name], "not found in", \
+                            column_def[0]['object']['enum']
                         continue
-                    print row, column_name, column_string
                 else:
                     column_string = org_update[column_name]
 
@@ -316,17 +332,17 @@ def do_update_orgs(filename):
                     pass  # No action required if spreadsheet is blank
                 elif column_string == 'None':
                     print "Remove", column_name, "from", str(uri)
-                    ug.remove((uri, column_def[0]['predicate'], vivo_object))
+                    ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
                 elif column_string == vivo_string:
                     pass  # No action required if spreadsheet string is the same as VIVO string
                 else:
                     print datetime.now(), 'Update org', uri, column_name, ' from', \
                         vivo_string, 'to', column_string
-                    ug.remove((uri, column_def[0]['predicate'], vivo_object))
+                    ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
                     if column_def[0]['object']['literal']:
-                        ug.add((uri, column_def[0]['predicate'], Literal(column_string)))
+                        ug.add((uri, column_def[0]['predicate']['ref'], Literal(column_string)))
                     else:
-                        ug.add((uri, column_def[0]['predicate'], URIRef(column_string)))
+                        ug.add((uri, column_def[0]['predicate']['ref'], URIRef(column_string)))
 
     # Write out the triples to be added and subbed in n-triples format
 
