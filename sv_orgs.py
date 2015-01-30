@@ -24,7 +24,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.27"
+__version__ = "0.28"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -60,7 +60,6 @@ def do_get_orgs(filename):
     """
 
     # TODO: Produce the query from the column_defs data structure (!)
-
 
     query = """
     SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address1 ?address2 ?city ?state
@@ -224,14 +223,13 @@ def do_update_orgs(filename):
     from rdflib import Graph, URIRef, RDFS, RDF, Literal, Namespace
     from rdflib.namespace import FOAF
     from vivofoundation import get_vivo_uri
+    from vivopeople import repair_phone_number, repair_email
 
-    # TODO: Handle multiple values
-    # TODO: Handle special processing for dates and such
-    # TODO: Handle enumerated values such as type
-    # TODO: Handle intermediate entity
-    # TODO: Support lookup by name or uri
-    # TODO: Support for remove action
-    # TODO: Handle highest level entity subject (!)
+    # TODO: Handle multiple values -- medium
+    # TODO: Handle intermediate entity -- difficult
+    # TODO: Support lookup by name or uri -- medium
+    # TODO: Support for remove action -- easy
+    # TODO: Handle highest level entity subject (!) -- medium
 
     VIVO = Namespace('http://vivoweb.org/ontology/core#')
     VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
@@ -243,19 +241,19 @@ def do_update_orgs(filename):
         'within': [{'predicate': VIVO.subOrganizationWithin, 'object': {'literal': False}}],
         'url': [{'predicate': VIVO.webPage, 'object': {'literal': True}},
                 {'predicate': VIVO.linkURI, 'object': {'literal': True}}],
-        'phone': [{'predicate': VIVO.primaryPhone, 'object': {'literal': True}}],
-        'email': [{'predicate': VIVO.primaryEmail, 'object': {'literal': True}}],
-        'address1': [{'predicate': VIVO.mailingAddress, 'object': {'literal': True}},
+        'phone': [{'predicate': VIVO.primaryPhone, 'object': {'literal': True, 'filter': 'repair_phone_number'}}],
+        'email': [{'predicate': VIVO.primaryEmail, 'object': {'literal': True, 'filter': 'repair_email'}}],
+        'address1': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
                      {'predicate': VIVO.address1, 'object': {'literal': True}}],
-        'address2': [{'predicate': VIVO.mailingAddress, 'object': {'literal': True}},
+        'address2': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
                      {'predicate': VIVO.address2, 'object': {'literal': True}}],
-        'city': [{'predicate': VIVO.mailingAddress, 'object': {'literal': True}},
+        'city': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
                  {'predicate': VIVO.addressCity, 'object': {'literal': True}}],
-        'state': [{'predicate': VIVO.mailingAddress, 'object': {'literal': True}},
+        'state': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
                   {'predicate': VIVO.addressState, 'object': {'literal': True}}],
-        'zip': [{'predicate': VIVO.mailingAddress, 'object': {'literal': True}},
+        'zip': [{'predicate': VIVO.mailingAddress, 'object': {'literal': False}},
                 {'predicate': VIVO.addressPostalCode, 'object': {'literal': True}}],
-        'photo': [{'predicate': VITROP.mainImage, 'object': {'literal': True}},
+        'photo': [{'predicate': VITROP.mainImage, 'object': {'literal': False}},
                   {'predicate': VITROP.filename, 'object': {'literal': True}}],
         'abbreviation': [{'predicate': VIVO.abbreviation, 'object': {'literal': True}}],
         'isni': [{'predicate': UFV.isni, 'object': {'literal': True}}],
@@ -292,6 +290,8 @@ def do_update_orgs(filename):
                 vivo_object = ug.value(uri, column_def[0]['predicate'], None, any=True)
                 vivo_string = str(vivo_object)
 
+                # Handle enumerations
+
                 if 'enum' in column_def[0]['object']:
                     column_string = eval(column_def[0]['object']['enum']).get(org_update[column_name], None)
                     if column_string is None:
@@ -300,6 +300,17 @@ def do_update_orgs(filename):
                     print row, column_name, column_string
                 else:
                     column_string = org_update[column_name]
+
+                # Handle filters
+
+                if 'filter' in column_def[0]['object']:
+                    was_string = column_string
+                    column_string = eval(column_def[0]['object']['filter'])(column_string)
+                    if was_string != column_string:
+                        print row, column_name, column_def[0]['object']['filter'], "FILTER IMPROVED", was_string, 'to',\
+                            column_string
+
+                # Compare VIVO to Input and update as indicated
 
                 if column_string == '':
                     pass  # No action required if spreadsheet is blank
