@@ -24,7 +24,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.30"
+__version__ = "0.31"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -215,6 +215,63 @@ def write_triples(triples, filename):
     return
 
 
+def gen_step(uri, step_def, values):
+    """
+    Scaffolding for now.  Used with gen_path to generate changes to the update graph based on the current
+    step in a path describing the steps from the entity to be updated to the values for the update.  See
+    gen_path for examples
+    :param uri: uri of the current subject of the step in the path
+    :param step_def: description of the current step
+    :param values: source value or values to update VIVO
+    :return: uri of the next entity in the path, if any
+    """
+    from vivofoundation import get_vivo_uri
+    from rdflib import URIRef
+
+    print '\t', uri, step_def, values
+
+    # Determine what needs to be done:
+    #  -- locate an existing intermediate entity
+    #  -- create a new intermediate entity
+    #  -- apply the values to the current uri (the existing code is for this case)
+
+    if 'type' in step_def['object']:
+        print '\t', 'Look for ', step_def['object']['type']
+        path_uri = URIRef(get_vivo_uri())
+    else:
+        print '\t', 'Apply values to ', uri
+        path_uri = uri
+    print '\t', path_uri
+    return path_uri
+
+
+def gen_path(uri, path_def, values):
+    """
+    Scaffolding for now.  Exploring recursive function for updating along a path from original entity
+    to leaf.
+
+    Patterns
+
+    Length 1 path:   entity has literal
+    Length 2 path:   entity has object has literal
+    Length 3 path:   entity has object1 has object2 has literal
+
+    Examples
+
+    Length 1 path:   org primaryPhone stringLiteral
+    Length 2 path:   org mailingAddress  address addressLine1 stringLiteral
+    Length 3 path:   grant dateTimeInterval  dti start  start_thing dateTimeValue dateLiteral
+    :param uri: the uri of the entity for the current location in the path
+    :param path_def: list of elements, one element per path step, containing declarative info regarding the step
+    :param values: List of source values for the ends of paths.  May be literal or URIRef.  May be single or
+        multi-valued
+    :return:
+    """
+    next_uri = gen_step(uri, path_def[0], values)
+    if len(path_def) > 1:
+        gen_path(next_uri, path_def[1:], values)
+
+
 def do_update_orgs(filename):
     """
     read updates from a spreadsheet filename.  Compare to orgs in VIVO.  generate add and sub
@@ -238,23 +295,30 @@ def do_update_orgs(filename):
         'type': [{'predicate': {'ref': RDF.type, 'single': False, 'include': ['thing', 'agent', 'org']},
                   'object': {'literal': False, 'enum': 'org_uris'}}],
         'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False}, 'object': {'literal': False}}],
-        'url': [{'predicate': {'ref': VIVO.webPage, 'single': False}, 'object': {'literal': True}},
+        'url': [{'predicate': {'ref': VIVO.webPage, 'single': False},
+                 'object': {'literal': False, 'type': VIVO.URLLink}},
                 {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
         'phone': [{'predicate': {'ref': VIVO.primaryPhone, 'single': True},
                    'object': {'literal': True, 'filter': 'repair_phone_number'}}],
         'email': [{'predicate': {'ref': VIVO.primaryEmail, 'single': True},
                    'object': {'literal': True, 'filter': 'repair_email'}}],
-        'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+        'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                      'object': {'literal': False, 'type': VIVO.Address}},
                      {'predicate': {'ref': VIVO.address1, 'single': True}, 'object': {'literal': True}}],
-        'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+        'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                      'object': {'literal': False, 'type': VIVO.Address}},
                      {'predicate': {'ref': VIVO.address2, 'single': True}, 'object': {'literal': True}}],
-        'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+        'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                  'object': {'literal': False, 'type': VIVO.Address}},
                  {'predicate': {'ref': VIVO.addressCity, 'single': True}, 'object': {'literal': True}}],
-        'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+        'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                   'object': {'literal': False, 'type': VIVO.Address}},
                   {'predicate': {'ref': VIVO.addressState, 'single': True}, 'object': {'literal': True}}],
-        'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True}, 'object': {'literal': False}},
+        'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                 'object': {'literal': False, 'type': VIVO.Address}},
                 {'predicate': {'ref': VIVO.addressPostalCode, 'single': True}, 'object': {'literal': True}}],
-        'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True}, 'object': {'literal': False}},
+        'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True},
+                   'object': {'literal': False, 'type': VITROP.File}},
                   {'predicate': {'ref': VITROP.filename, 'single': True}, 'object': {'literal': True}}],
         'abbreviation': [{'predicate': {'ref': VIVO.abbreviation, 'single': True}, 'object': {'literal': True}}],
         'isni': [{'predicate': {'ref': UFV.isni, 'single': True}, 'object': {'literal': True}}],
@@ -286,6 +350,10 @@ def do_update_orgs(filename):
             ug.add((uri, RDF.type, FOAF.Organization))
 
         for column_name, column_def in column_defs.items():
+
+            if org_update[column_name] != '':
+                gen_path(uri, column_def, org_update[column_name])  # scaffolding for now
+
             if len(column_def) == 1:
 
                 # Gather all VIVO objects for the column
