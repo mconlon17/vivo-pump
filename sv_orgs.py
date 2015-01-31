@@ -3,16 +3,15 @@
 """
     sv_orgs.py: Simple VIVO for Organizations
 
-    Read a spreadsheet and follow the directions to add, update or remove organizations and/or
-    organization attributes from VIVO.
+    Read a spreadsheet and follow the directions to add, update or remove entities and/or
+    entity attributes from VIVO.
 
-    Produce a spreadsheet from VIVO that has the fields ready for editing and updating
+    Produce a spreadsheet from VIVO that has the entities and attributes ready for editing and updating
 
     Inputs:  spreadsheet containing updates and additions (stdin).  VIVO for current state
     Outputs:  spreadsheet with current state (stdout).  VIVO state changes
-    Intermediates:  Org triples
 
-    Exceptions are thrown, caught and logged for missing required elements
+    Log entries indicate errors and actions
 
     See CHANGELOG.md for history
 
@@ -24,41 +23,25 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.31"
+__version__ = "0.32"
 
 from vivofoundation import read_csv
 from datetime import datetime
 import argparse
 import codecs
 
-# TODO: Generalize the helper functions -- medium
 
-def do_get_orgs(filename):
+def do_get(filename):
     from vivofoundation import vivo_sparql_query
     """
-    Organization data is queried from VIVO and returned as a tab delimited text file suitable for
-    editing using an editor or spreadsheet, and suitable for use by sv_orgs update.
-    The following columns are returned:
+    Data is queried from VIVO and returned as a tab delimited text file suitable for
+    editing using an editor or spreadsheet, and suitable for use by do_update.
 
-    uri           VIVO uri of organization
-    name          name of organization
-    type          type of organization
-    url           url of organization web site
-    within        uri or name of parent organization(s).  Semi-colon delimited
-    overview      text describing organization
-    photo         filename of photo
-    abbreviation  Abbreviated name of organization
-    successor     uri or name of successor if any
-    address       semi-colon delimited address lines
-    phone         primary phone number
-    email         primary email address
-    isni          ISNI of org if any
-
-    :param filename: Tab delimited file of org data
+    :param filename: Tab delimited file of data from VIVO
     :return:  None.  File is written
     """
 
-    # TODO: Produce the query from the column_defs data structure (!) -- difficult
+    # TODO: Produce the get query from the update_defs data structure (!) -- difficult
 
     query = """
     SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address1 ?address2 ?city ?state
@@ -92,15 +75,15 @@ def do_get_orgs(filename):
     ORDER BY ?name
     """
 
-    org_result_set = vivo_sparql_query(query)
+    result_set = vivo_sparql_query(query)
     
-    orgs = {}
+    data = {}
     
-    for binding in org_result_set['results']['bindings']:
+    for binding in result_set['results']['bindings']:
 
         uri = binding['uri']['value']
-        if uri not in orgs:
-            orgs[uri] = {}
+        if uri not in data:
+            data[uri] = {}
     
         #  Each property is either single-valued, multi-valued, and/or de-referenced.  We're not
         #  not ready for de-referenced yet.  That will require more complex SPARQL
@@ -110,16 +93,16 @@ def do_get_orgs(filename):
         for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address1', 'address2', 'city', 'state',
                      'zip', 'phone', 'email', 'isni'):
             if name in binding:
-                orgs[uri][name] = binding[name]
+                data[uri][name] = binding[name]
 
         # multi-valued attributes.  Collect all values into lists
         
         for name in ('successor', 'within', 'type'):
             if name in binding:
-                if name in orgs[uri]:
-                    orgs[uri][name].append(binding[name])
+                if name in data[uri]:
+                    data[uri][name].append(binding[name])
                 else:
-                    orgs[uri][name] = [binding[name]]
+                    data[uri][name] = [binding[name]]
 
     # Write out the file
 
@@ -131,16 +114,16 @@ def do_get_orgs(filename):
     outfile.write('\t'.join(columns))
     outfile.write('\n')
 
-    for uri in sorted(orgs.keys()):
+    for uri in sorted(data.keys()):
         for name in columns:
-            if name in orgs[uri]:
-                if type(orgs[uri][name]) is list:
+            if name in data[uri]:
+                if type(data[uri][name]) is list:
                     if name == 'type':
-                        val = ';'.join(set(org_types.get(x['value'], ' ') for x in orgs[uri][name]))
+                        val = ';'.join(set(org_types.get(x['value'], ' ') for x in data[uri][name]))
                     else:
-                        val = ';'.join(set(x['value'] for x in orgs[uri][name]))
+                        val = ';'.join(set(x['value'] for x in data[uri][name]))
                 else:
-                    val = orgs[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
+                    val = data[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
                 outfile.write(val)
             if name != columns[len(columns)-1]:
                 outfile.write('\t')
@@ -148,12 +131,19 @@ def do_get_orgs(filename):
 
     outfile.close()
     
-    return len(orgs)
+    return len(data)
 
 
-def get_org_triples():
-    org_query = """
-   SELECT ?s ?p ?o
+def get_graph():
+    """
+    Given the update def, get a graph from VIVO of the triples eligible for updating
+    :return: graph of triples
+    """
+
+    # TODO: generate the graph query from the update_def -- easy
+
+    graph_query = """
+    SELECT ?s ?p ?o
     WHERE {
         ?s a foaf:Organization .
         ?s a vivo:ExtensionUnit .
@@ -161,58 +151,22 @@ def get_org_triples():
     }
     """
     from vivofoundation import vivo_sparql_query
-    triples = vivo_sparql_query(org_query)
-    print datetime.now(), len(triples["results"]["bindings"]), "org triples"
-    return triples
-
-# TODO: Replace the functions with functions from rdflib -- easy
-
-def iri_string(d):
-    """
-    Given a dict representing the value of an element returned by a fuseki query, generate
-    the string version suitable for inclusion in an NT file.
-    """
-    return '<' + d['value'] + '>'
-
-
-def iri_predicate(d):
-    """
-    Give a dict representing the value of an element returned by a fuseki query corresponding
-    to the predicate of a triple, return the string version suitable for inclusion in an NT file.
-    :param d: dictionary of a value returned by fuseki
-    :return: string
-
-    See http://www.w3.org/TR/n-triples/ for standards for n-triples
-    """
-    if d['type'] == 'literal' or d['type'] == 'typed-literal':
-        s = '"' + d['value'].replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r') + '"'
-        if 'xml:lang' in d:
-            s = s + '@' + d['xml:lang']
-        if 'datatype' in d:
-            s = s + '^^<' + d['datatype'] + '>'
-        return s
-    else:
-        return iri_string(d)
-
-def write_triples(triples, filename):
-    """
-    Given a structure from fuseki with the triples, write the triples to a file in nt format
-
-    :param triples: structure from fuseki query with s, p, o
-    :param filename: filename to write triples to
-    :return:
-    """
-    import codecs
-    outfile = codecs.open('__'+filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
+    from rdflib import Graph, URIRef, Literal
+    triples = vivo_sparql_query(graph_query)
+    a = Graph()
     for row in triples['results']['bindings']:
-        outfile.write(iri_string(row['s']))
-        outfile.write(' ')
-        outfile.write(iri_string(row['p']))
-        outfile.write(' ')
-        outfile.write(iri_predicate(row['o']))
-        outfile.write(' .\n')
-    outfile.close()
-    return
+        s = URIRef(row['s']['value'])
+        p = URIRef(row['p']['value'])
+        if row['o']['type'] == 'literal' or row['o']['type'] == 'typed-literal':
+            o = Literal(row['o']['value'])
+            if 'xml:lang' in row:
+                o.lang(row['xml:lang'])
+            if 'datatype' in row:
+                o.datatype(row['o']['datatype'])
+        else:
+            o = URIRef(row['o']['value'])
+        a.add((s, p, o))
+    return a
 
 
 def gen_step(uri, step_def, values):
@@ -272,9 +226,9 @@ def gen_path(uri, path_def, values):
         gen_path(next_uri, path_def[1:], values)
 
 
-def do_update_orgs(filename):
+def do_update(filename):
     """
-    read updates from a spreadsheet filename.  Compare to orgs in VIVO.  generate add and sub
+    read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
     rdf as necessary to process requested changes
     """
     from rdflib import Graph, URIRef, RDFS, RDF, Literal, Namespace
@@ -326,33 +280,30 @@ def do_update_orgs(filename):
         'overview': [{'predicate': {'ref': VIVO.overview, 'single': True}, 'object': {'literal': True}}]
     }
 
-    triples = get_org_triples()
-    write_triples(triples, filename)
-    og = Graph()
-    og.parse('__'+filename, format='nt')
+    og = get_graph()  # Create the original graph from VIVO using the update_def
     ug = Graph()
     for s, p, o in og:
         ug.add((s, p, o))
     print datetime.now(), 'Graphs ready for processing. Original has ', len(og), '. Update graph has', len(ug)
-    org_updates = read_csv(filename, delimiter='\t')
-    print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(org_updates), 'rows.'
-    for row, org_update in org_updates.items():
-        uri = URIRef(org_update['uri'])
+    data_updates = read_csv(filename, delimiter='\t')
+    print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(data_updates), 'rows.'
+    for row, data_update in data_updates.items():
+        uri = URIRef(data_update['uri'])
         if (uri, None, None) not in ug:
 
-            #  If the org uri can not be found in the update graph, make a new URI ignoring the one in the spreadsheet
-            #  if any, and add the URI to the update graph.  Remaining processing is unchanged.  Since the new uri does
-            #  not have triples for the columns in the spreadsheet, each will be added
+            #  If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
+            #  spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
+            #  Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
             uri_string = get_vivo_uri()
-            print "Adding an organization for row", row, ".  Will be added at", uri_string
+            print "Adding an entity for row", row, ".  Will be added at", uri_string
             uri = URIRef(uri_string)
             ug.add((uri, RDF.type, FOAF.Organization))
 
         for column_name, column_def in column_defs.items():
 
-            if org_update[column_name] != '':
-                gen_path(uri, column_def, org_update[column_name])  # scaffolding for now
+            if data_update[column_name] != '':
+                gen_path(uri, column_def, data_update[column_name])  # scaffolding for now
 
             if len(column_def) == 1:
 
@@ -365,9 +316,9 @@ def do_update_orgs(filename):
                 # Gather all column values for the column
 
                 if column_def[0]['predicate']['single']:
-                    column_values = [org_update[column_name]]
+                    column_values = [data_update[column_name]]
                 else:
-                    column_values = org_update[column_name].split(';')
+                    column_values = data_update[column_name].split(';')
                     if 'include' in column_def[0]['predicate']:
                         column_values += column_def[0]['predicate']['include']
 
@@ -446,14 +397,15 @@ def do_update_orgs(filename):
 
     add = ug - og  # Triples in update that are not in original
     sub = og - ug  # Triples in original that are not in update
-    print datetime.now(), "Will add", len(add), "triples and subtract ", len(sub), "triples."
     print datetime.now(), "Triples to add:"
     print add.serialize(format='nt')
     print datetime.now(), "Triples to sub:"
     print sub.serialize(format='nt')
-    return len(og)
+    return [len(add), len(sub)]
 
 # Driver program starts here
+
+# TODO: Drive enumeration handling from update_def -- medium
 
 org_type_data = read_csv("org_types.txt", delimiter=' ')
 org_types = {}
@@ -464,17 +416,18 @@ for row in org_type_data.values():
 print datetime.now(), org_types
 
 parser = argparse.ArgumentParser()
-parser.add_argument("action", help="desired action.  get = get org data from VIVO.  update = update VIVO organ"
-                                   "izational data from a spreadsheet", default="update", nargs='?')
-parser.add_argument("filename", help="name of spreadsheet containing org data to be updated in VIVO",
-                    default="sv_orgs.txt", nargs='?')
+parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
+                                   "data from a spreadsheet", default="get", nargs='?')
+parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
+                    default="sv_data.txt", nargs='?')
 args = parser.parse_args()
 
 if args.action == 'get':
-    n_orgs = do_get_orgs(args.filename)
-    print datetime.now(), n_orgs, "Organizations in", args.filename
-elif args.action == "update":
-    n_orgs = do_update_orgs(args.filename)
+    n_rows = do_get(args.filename)
+    print datetime.now(), n_rows, "rows in", args.filename
+elif args.action == 'update':
+    [nadd, nsub] = do_update(args.filename)
+    print datetime.now(), nadd, 'triples to add', nsub, 'triples to sub'
 else:
     print datetime.now(), "Unknown action.  Try sv_orgs -h for help"
 

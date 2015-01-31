@@ -9,5 +9,5 @@ and adds. Handles all six value conditions.
 * **2015-01-29** Enumerations handled.  Filters handled.
 * **2015-01-30** 0.29 Data structure enhanced to indicate multi-valued predicates. 0.30 Handles multi-valued 
 predicates. Added include parameter to add predicate values to source.  Useful to short hand inference paths
-* **2015-01-31** 0.31 Data structure enhanced to record type of intermediate object in paths.  
-Added recursive scaffolding for paths.  Added photo test case to extension.txt
+* **2015-01-31** 0.31 Data structure enhanced to record type of intermediate object in paths.  Added recursive scaffolding for paths.  Added photo test case to extension.txt. 0.32 Use rdflib to generate triples 
+from fuseki. Remove temp file processing for loading og graph -- load directly.  Refactor get_triples removing local functions to create serialized triples -- use rdflib instead. Remove "org" and "organization" references from the code.  Everything will be generalized.
