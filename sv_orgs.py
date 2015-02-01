@@ -18,7 +18,7 @@
 """
 
 # TODO: Support for stdin and stdout -- easy
-# TODO: Read/write columns defs as JSON.  Then all ingests are just data -- easy
+# TODO: Read/write columns defs as JSON.  Then all ingests are just data -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
