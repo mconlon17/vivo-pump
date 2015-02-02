@@ -23,16 +23,76 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.32"
+__version__ = "0.33"
 
 from vivofoundation import read_csv
 from datetime import datetime
+from rdflib import Namespace, RDF, RDFS
 import argparse
 import codecs
+
+VIVO = Namespace('http://vivoweb.org/ontology/core#')
+VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
+UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
+
+UPDATE_DEF = {
+    'entity_def': {
+        'entity_sparql': '?s a foaf:Organization . ?s a vivo:ExtensionUnit . ?s a ufVivo:UFEntity . '
+    },
+    'column_defs': {
+        'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
+        'type': [{'predicate': {'ref': RDF.type, 'single': False, 'include': ['thing', 'agent', 'org']},
+                  'object': {'literal': False, 'enum': 'org_uris'}}],
+        'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False},
+                    'object': {'literal': False}}],
+        'url': [{'predicate': {'ref': VIVO.webPage, 'single': False},
+                 'object': {'literal': False, 'type': VIVO.URLLink}},
+                {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
+        'phone': [{'predicate': {'ref': VIVO.primaryPhone, 'single': True},
+                   'object': {'literal': True, 'filter': 'repair_phone_number'}}],
+        'email': [{'predicate': {'ref': VIVO.primaryEmail, 'single': True},
+                   'object': {'literal': True, 'filter': 'repair_email'}}],
+        'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                      'object': {'literal': False, 'type': VIVO.Address}},
+                     {'predicate': {'ref': VIVO.address1, 'single': True}, 'object': {'literal': True}}],
+        'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                      'object': {'literal': False, 'type': VIVO.Address}},
+                     {'predicate': {'ref': VIVO.address2, 'single': True}, 'object': {'literal': True}}],
+        'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                  'object': {'literal': False, 'type': VIVO.Address}},
+                 {'predicate': {'ref': VIVO.addressCity, 'single': True}, 'object': {'literal': True}}],
+        'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                   'object': {'literal': False, 'type': VIVO.Address}},
+                  {'predicate': {'ref': VIVO.addressState, 'single': True}, 'object': {'literal': True}}],
+        'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
+                 'object': {'literal': False, 'type': VIVO.Address}},
+                {'predicate': {'ref': VIVO.addressPostalCode, 'single': True}, 'object': {'literal': True}}],
+        'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True},
+                   'object': {'literal': False, 'type': VITROP.File}},
+                  {'predicate': {'ref': VITROP.filename, 'single': True}, 'object': {'literal': True}}],
+        'abbreviation': [{'predicate': {'ref': VIVO.abbreviation, 'single': True}, 'object': {'literal': True}}],
+        'isni': [{'predicate': {'ref': UFV.isni, 'single': True}, 'object': {'literal': True}}],
+        'successor': [{'predicate': {'ref': VIVO.hasSuccessorOrg, 'single': False}, 'object': {'literal': False}}],
+        'overview': [{'predicate': {'ref': VIVO.overview, 'single': True}, 'object': {'literal': True}}]
+    }
+}
+print UPDATE_DEF
+
+
+def make_get_query():
+    """
+    Given and update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
+    See do_get
+    :return: a sparql query string
+    """
+    front_query = 'SELECT ?uri ?' + ' ?'.join(UPDATE_DEF['column_defs'].keys()) + '\nWHERE {\n\n' + \
+                  UPDATE_DEF['entity_def']['entity_sparql']
+    return front_query
 
 
 def do_get(filename):
     from vivofoundation import vivo_sparql_query
+
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
     editing using an editor or spreadsheet, and suitable for use by do_update.
@@ -40,6 +100,8 @@ def do_get(filename):
     :param filename: Tab delimited file of data from VIVO
     :return:  None.  File is written
     """
+
+    print make_get_query()
 
     # TODO: Produce the get query from the update_defs data structure (!) -- difficult
 
@@ -76,27 +138,27 @@ def do_get(filename):
     """
 
     result_set = vivo_sparql_query(query)
-    
+
     data = {}
-    
+
     for binding in result_set['results']['bindings']:
 
         uri = binding['uri']['value']
         if uri not in data:
             data[uri] = {}
-    
-        #  Each property is either single-valued, multi-valued, and/or de-referenced.  We're not
-        #  not ready for de-referenced yet.  That will require more complex SPARQL
+
+        # Each property is either single-valued, multi-valued, and/or de-referenced.  We're not
+        # not ready for de-referenced yet.  That will require more complex SPARQL
 
         #  Single valued attributes.  If data has more than one value, use the last value found
-    
+
         for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address1', 'address2', 'city', 'state',
                      'zip', 'phone', 'email', 'isni'):
             if name in binding:
                 data[uri][name] = binding[name]
 
         # multi-valued attributes.  Collect all values into lists
-        
+
         for name in ('successor', 'within', 'type'):
             if name in binding:
                 if name in data[uri]:
@@ -125,12 +187,12 @@ def do_get(filename):
                 else:
                     val = data[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
                 outfile.write(val)
-            if name != columns[len(columns)-1]:
+            if name != columns[len(columns) - 1]:
                 outfile.write('\t')
         outfile.write('\n')
 
     outfile.close()
-    
+
     return len(data)
 
 
@@ -140,18 +202,13 @@ def get_graph():
     :return: graph of triples
     """
 
-    # TODO: generate the graph query from the update_def -- easy
-
-    graph_query = """
-    SELECT ?s ?p ?o
-    WHERE {
-        ?s a foaf:Organization .
-        ?s a vivo:ExtensionUnit .
-        ?s ?p ?o .
-    }
-    """
     from vivofoundation import vivo_sparql_query
     from rdflib import Graph, URIRef, Literal
+
+    front_query = "SELECT ?s ?p ?o\nWHERE {\n    "
+    back_query = "    ?s ?p ?o .\n}"
+    graph_query = front_query + UPDATE_DEF['entity_def']['entity_sparql'] + back_query
+    print 'Graph query\n', graph_query
     triples = vivo_sparql_query(graph_query)
     a = Graph()
     for row in triples['results']['bindings']:
@@ -185,8 +242,8 @@ def gen_step(uri, step_def, values):
     print '\t', uri, step_def, values
 
     # Determine what needs to be done:
-    #  -- locate an existing intermediate entity
-    #  -- create a new intermediate entity
+    # -- locate an existing intermediate entity
+    # -- create a new intermediate entity
     #  -- apply the values to the current uri (the existing code is for this case)
 
     if 'type' in step_def['object']:
@@ -240,45 +297,7 @@ def do_update(filename):
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- easy
 
-    VIVO = Namespace('http://vivoweb.org/ontology/core#')
-    VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
-    UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
-
-    column_defs = {
-        'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
-        'type': [{'predicate': {'ref': RDF.type, 'single': False, 'include': ['thing', 'agent', 'org']},
-                  'object': {'literal': False, 'enum': 'org_uris'}}],
-        'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False}, 'object': {'literal': False}}],
-        'url': [{'predicate': {'ref': VIVO.webPage, 'single': False},
-                 'object': {'literal': False, 'type': VIVO.URLLink}},
-                {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
-        'phone': [{'predicate': {'ref': VIVO.primaryPhone, 'single': True},
-                   'object': {'literal': True, 'filter': 'repair_phone_number'}}],
-        'email': [{'predicate': {'ref': VIVO.primaryEmail, 'single': True},
-                   'object': {'literal': True, 'filter': 'repair_email'}}],
-        'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                      'object': {'literal': False, 'type': VIVO.Address}},
-                     {'predicate': {'ref': VIVO.address1, 'single': True}, 'object': {'literal': True}}],
-        'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                      'object': {'literal': False, 'type': VIVO.Address}},
-                     {'predicate': {'ref': VIVO.address2, 'single': True}, 'object': {'literal': True}}],
-        'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                  'object': {'literal': False, 'type': VIVO.Address}},
-                 {'predicate': {'ref': VIVO.addressCity, 'single': True}, 'object': {'literal': True}}],
-        'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                   'object': {'literal': False, 'type': VIVO.Address}},
-                  {'predicate': {'ref': VIVO.addressState, 'single': True}, 'object': {'literal': True}}],
-        'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                 'object': {'literal': False, 'type': VIVO.Address}},
-                {'predicate': {'ref': VIVO.addressPostalCode, 'single': True}, 'object': {'literal': True}}],
-        'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True},
-                   'object': {'literal': False, 'type': VITROP.File}},
-                  {'predicate': {'ref': VITROP.filename, 'single': True}, 'object': {'literal': True}}],
-        'abbreviation': [{'predicate': {'ref': VIVO.abbreviation, 'single': True}, 'object': {'literal': True}}],
-        'isni': [{'predicate': {'ref': UFV.isni, 'single': True}, 'object': {'literal': True}}],
-        'successor': [{'predicate': {'ref': VIVO.hasSuccessorOrg, 'single': False}, 'object': {'literal': False}}],
-        'overview': [{'predicate': {'ref': VIVO.overview, 'single': True}, 'object': {'literal': True}}]
-    }
+    column_defs = UPDATE_DEF['column_defs']
 
     og = get_graph()  # Create the original graph from VIVO using the update_def
     ug = Graph()
@@ -290,9 +309,8 @@ def do_update(filename):
     for row, data_update in data_updates.items():
         uri = URIRef(data_update['uri'])
         if (uri, None, None) not in ug:
-
-            #  If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
-            #  spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
+            # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
+            # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
             #  Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
             uri_string = get_vivo_uri()
@@ -351,7 +369,8 @@ def do_update(filename):
                         was_string = column_values[i]
                         column_values[i] = eval(column_def[0]['object']['filter'])(column_values[i])
                         if was_string != column_values[i]:
-                            print row, column_name, column_def[0]['object']['filter'], "FILTER IMPROVED", was_string, 'to',\
+                            print row, column_name, column_def[0]['object'][
+                                'filter'], "FILTER IMPROVED", was_string, 'to', \
                                 column_values[i]
 
                 print row, column_name, column_values
