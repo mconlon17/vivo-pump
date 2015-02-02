@@ -28,8 +28,17 @@ __version__ = "0.33"
 from vivofoundation import read_csv
 from datetime import datetime
 from rdflib import Namespace, RDF, RDFS
+from rdflib.namespace import FOAF
 import argparse
 import codecs
+
+
+class PathLengthException(Exception):
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
 
 VIVO = Namespace('http://vivoweb.org/ontology/core#')
 VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
@@ -37,7 +46,9 @@ UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
 
 UPDATE_DEF = {
     'entity_def': {
-        'entity_sparql': '?s a foaf:Organization . ?s a vivo:ExtensionUnit . ?s a ufVivo:UFEntity . '
+        'entity_sparql': '?uri a foaf:Organization . ?uri a vivo:Institute . ?uri a ufVivo:UFEntity . ',
+        'order_by': 'name',
+        'type': FOAF.Organization
     },
     'column_defs': {
         'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
@@ -45,30 +56,30 @@ UPDATE_DEF = {
                   'object': {'literal': False, 'enum': 'org_uris'}}],
         'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False},
                     'object': {'literal': False}}],
-        'url': [{'predicate': {'ref': VIVO.webPage, 'single': False},
-                 'object': {'literal': False, 'type': VIVO.URLLink}},
+        'url': [{'predicate': {'ref': VIVO.webpage, 'single': False},
+                 'object': {'literal': False, 'type': VIVO.URLLink, 'name': 'weburi'}},
                 {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
         'phone': [{'predicate': {'ref': VIVO.primaryPhone, 'single': True},
                    'object': {'literal': True, 'filter': 'repair_phone_number'}}],
         'email': [{'predicate': {'ref': VIVO.primaryEmail, 'single': True},
                    'object': {'literal': True, 'filter': 'repair_email'}}],
         'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                      'object': {'literal': False, 'type': VIVO.Address}},
+                      'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
                      {'predicate': {'ref': VIVO.address1, 'single': True}, 'object': {'literal': True}}],
         'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                      'object': {'literal': False, 'type': VIVO.Address}},
+                      'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
                      {'predicate': {'ref': VIVO.address2, 'single': True}, 'object': {'literal': True}}],
         'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                  'object': {'literal': False, 'type': VIVO.Address}},
+                  'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
                  {'predicate': {'ref': VIVO.addressCity, 'single': True}, 'object': {'literal': True}}],
         'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                   'object': {'literal': False, 'type': VIVO.Address}},
+                   'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
                   {'predicate': {'ref': VIVO.addressState, 'single': True}, 'object': {'literal': True}}],
         'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                 'object': {'literal': False, 'type': VIVO.Address}},
+                 'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
                 {'predicate': {'ref': VIVO.addressPostalCode, 'single': True}, 'object': {'literal': True}}],
         'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True},
-                   'object': {'literal': False, 'type': VITROP.File}},
+                   'object': {'literal': False, 'type': VITROP.File, 'name': 'photouri'}},
                   {'predicate': {'ref': VITROP.filename, 'single': True}, 'object': {'literal': True}}],
         'abbreviation': [{'predicate': {'ref': VIVO.abbreviation, 'single': True}, 'object': {'literal': True}}],
         'isni': [{'predicate': {'ref': UFV.isni, 'single': True}, 'object': {'literal': True}}],
@@ -85,13 +96,34 @@ def make_get_query():
     See do_get
     :return: a sparql query string
     """
-    front_query = 'SELECT ?uri ?' + ' ?'.join(UPDATE_DEF['column_defs'].keys()) + '\nWHERE {\n\n' + \
-                  UPDATE_DEF['entity_def']['entity_sparql']
-    return front_query
+    front_query = 'SELECT ?uri ?' + ' ?'.join(UPDATE_DEF['column_defs'].keys()) + '\nWHERE {\n    ' + \
+                  UPDATE_DEF['entity_def']['entity_sparql'] + '\n'
+
+    # Fake recursion here to depth 3.  Could be replaced by real recursion to arbitrary path length
+
+    middle_query = ""
+    for name, path in UPDATE_DEF['column_defs'].items():
+        middle_query += '    OPTIONAL { ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
+        if len(path) == 1:
+            middle_query += name + ' . }\n'
+        else:
+            middle_query += path[0]['object']['name'] + ' . \n        OPTIONAL { ?' +\
+                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
+            if len(path) == 2:
+                middle_query += name + ' . }}\n'
+            else:
+                middle_query += path[1]['object']['name'] + ' . \n        OPTIONAL { ?' +\
+                    path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
+                if len(path) == 3:
+                    middle_query += name + ' . }}}\n'
+                else:
+                    raise PathLengthException('Path length >3 not supported in do_get')
+
+    back_query = '}\nORDER BY ?' + UPDATE_DEF['entity_def']['order_by']
+    return front_query + middle_query + back_query
 
 
 def do_get(filename):
-    from vivofoundation import vivo_sparql_query
 
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
@@ -100,44 +132,15 @@ def do_get(filename):
     :param filename: Tab delimited file of data from VIVO
     :return:  None.  File is written
     """
+    from vivofoundation import vivo_sparql_query
 
-    print make_get_query()
-
-    # TODO: Produce the get query from the update_defs data structure (!) -- difficult
-
-    query = """
-    SELECT ?uri ?name ?type ?url ?within ?overview ?photo ?abbreviation ?successor ?address1 ?address2 ?city ?state
-        ?zip ?phone ?email ?isni
-    WHERE {
-
-        ?uri a foaf:Organization .
-        ?uri a ufVivo:UFEntity .
-        ?uri a vivo:ExtensionUnit .
-        ?uri rdf:type ?type .
-        FILTER (?type != foaf:Organization && ?type != foaf:Agent && ?type != owl:Thing && ?type != ufVivo:UFEntity)
-        ?uri rdfs:label ?name .
-        OPTIONAL { ?uri vivo:webpage ?weburi .  ?weburi vivo:linkURI ?url .}
-        OPTIONAL { ?uri vivo:subOrganizationWithin ?within . }
-        OPTIONAL { ?uri vivo:overview ?overview . }
-        OPTIONAL { ?uri vitro-public:mainImage ?photouri . ?photouri vitro-public:filename ?photo .}
-        OPTIONAL { ?uri vivo:abbreviation ?abbreviation . }
-        OPTIONAL { ?uri vivo:hasSuccessorOrganization ?successor . }
-        OPTIONAL { ?uri vivo:mailingAddress ?address .
-            OPTIONAL{ ?address vivo:address1 ?address1 . }
-            OPTIONAL{ ?address vivo:address2 ?address2 . }
-            OPTIONAL{ ?address vivo:addressCity ?city . }
-            OPTIONAL{ ?address vivo:addressPostalCode ?zip . }
-            OPTIONAL{ ?address vivo:addressState ?state . }
-            }
-       OPTIONAL { ?uri vivo:phoneNumber ?phone . }
-       OPTIONAL { ?uri vivo:email ?email . }
-       OPTIONAL { ?uri ufVivo:isni ?isni . }
-
-    }
-    ORDER BY ?name
-    """
-
+    query = make_get_query()
+    print query
     result_set = vivo_sparql_query(query)
+
+    # Create a data structure from the query results that collects the values from
+    # the query and has unique uri values.  Multi-valued attributes are collected
+    # into lists
 
     data = {}
 
@@ -150,16 +153,17 @@ def do_get(filename):
         # Each property is either single-valued, multi-valued, and/or de-referenced.  We're not
         # not ready for de-referenced yet.  That will require more complex SPARQL
 
-        #  Single valued attributes.  If data has more than one value, use the last value found
+        #  Single valued attributes.  If VIVO data has more than one value, use the last value found
 
-        for name in ('uri', 'name', 'url', 'overview', 'photo', 'abbreviation', 'address1', 'address2', 'city', 'state',
-                     'zip', 'phone', 'email', 'isni'):
+        for name in ['uri']+[x for x in UPDATE_DEF['column_defs'].keys()
+                     if UPDATE_DEF['column_defs'][x][0]['predicate']['single']]:
             if name in binding:
                 data[uri][name] = binding[name]
 
         # multi-valued attributes.  Collect all values into lists
 
-        for name in ('successor', 'within', 'type'):
+        for name in [x for x in UPDATE_DEF['column_defs'].keys()
+                     if not UPDATE_DEF['column_defs'][x][0]['predicate']['single']]:
             if name in binding:
                 if name in data[uri]:
                     data[uri][name].append(binding[name])
@@ -170,9 +174,7 @@ def do_get(filename):
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
-    columns = ('uri', 'name', 'type', 'within', 'url', 'phone', 'email', 'address1', 'address2', 'city', 'state',
-               'zip', 'photo',
-               'abbreviation', 'isni', 'successor', 'overview')
+    columns = (['uri']+UPDATE_DEF['column_defs'].keys())
     outfile.write('\t'.join(columns))
     outfile.write('\n')
 
@@ -205,14 +207,14 @@ def get_graph():
     from vivofoundation import vivo_sparql_query
     from rdflib import Graph, URIRef, Literal
 
-    front_query = "SELECT ?s ?p ?o\nWHERE {\n    "
-    back_query = "    ?s ?p ?o .\n}"
+    front_query = "SELECT ?uri ?p ?o\nWHERE {\n    "
+    back_query = "    ?uri ?p ?o .\n}"
     graph_query = front_query + UPDATE_DEF['entity_def']['entity_sparql'] + back_query
     print 'Graph query\n', graph_query
     triples = vivo_sparql_query(graph_query)
     a = Graph()
     for row in triples['results']['bindings']:
-        s = URIRef(row['s']['value'])
+        s = URIRef(row['uri']['value'])
         p = URIRef(row['p']['value'])
         if row['o']['type'] == 'literal' or row['o']['type'] == 'typed-literal':
             o = Literal(row['o']['value'])
@@ -316,7 +318,7 @@ def do_update(filename):
             uri_string = get_vivo_uri()
             print "Adding an entity for row", row, ".  Will be added at", uri_string
             uri = URIRef(uri_string)
-            ug.add((uri, RDF.type, FOAF.Organization))
+            ug.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
 
         for column_name, column_def in column_defs.items():
 
