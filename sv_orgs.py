@@ -19,11 +19,13 @@
 
 # TODO: Support for stdin and stdout -- easy
 # TODO: Read/write columns defs as JSON.  Then all ingests are just data -- medium
+# TODO: Create UPDATE_DEF for people, grants, courses, pubs -- medium
+# TODO: Use pyunit for unit level tests -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.33"
+__version__ = "0.34"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -31,6 +33,7 @@ from rdflib import Namespace, RDF, RDFS
 from rdflib.namespace import FOAF
 import argparse
 import codecs
+import json
 
 
 class PathLengthException(Exception):
@@ -46,14 +49,14 @@ UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
 
 UPDATE_DEF = {
     'entity_def': {
-        'entity_sparql': '?uri a foaf:Organization . ?uri a vivo:Institute . ?uri a ufVivo:UFEntity . ',
+        'entity_sparql': '?uri a foaf:Organization . ?uri a vivo:ExtensionUnit . ?uri a ufVivo:UFEntity . ',
         'order_by': 'name',
         'type': FOAF.Organization
     },
     'column_defs': {
         'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
         'type': [{'predicate': {'ref': RDF.type, 'single': False, 'include': ['thing', 'agent', 'org']},
-                  'object': {'literal': False, 'enum': 'org_uris'}}],
+                  'object': {'literal': False, 'enum': 'org_types'}}],
         'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False},
                     'object': {'literal': False}}],
         'url': [{'predicate': {'ref': VIVO.webpage, 'single': False},
@@ -162,6 +165,8 @@ def do_get(filename):
 
         # multi-valued attributes.  Collect all values into lists
 
+        # TODO: Refactor.  Everything should be in lists.  Both single and multiple valued -- don't have to ask -- easy
+
         for name in [x for x in UPDATE_DEF['column_defs'].keys()
                      if not UPDATE_DEF['column_defs'][x][0]['predicate']['single']]:
             if name in binding:
@@ -181,11 +186,22 @@ def do_get(filename):
     for uri in sorted(data.keys()):
         for name in columns:
             if name in data[uri]:
-                if type(data[uri][name]) is list:
-                    if name == 'type':
-                        val = ';'.join(set(org_types.get(x['value'], ' ') for x in data[uri][name]))
+
+                # TODO: Refactor.  Once everything is in lists, you don't need to check whether its in a list -- easy
+
+                if name in UPDATE_DEF['column_defs'] and 'enum' in \
+                        UPDATE_DEF['column_defs'][name][len(UPDATE_DEF['column_defs'][name])-1]['object']:
+                    enum_name = UPDATE_DEF['column_defs'][name][len(UPDATE_DEF['column_defs'][name])-1]['object']['enum']
+                    if type(data[uri][name]) is list:
+                        a = []
+                        for x in data[uri][name]:
+                            x['value'] = enum[enum_name]['get'][x['value']]
+                            a.append(x)
+                        data[uri][name] = a
                     else:
-                        val = ';'.join(set(x['value'] for x in data[uri][name]))
+                        data[uri][name]['value'] = enum[enum_name]['get'][data[uri][name]['value']]
+                if type(data[uri][name]) is list:
+                    val = ';'.join(set(x['value'] for x in data[uri][name]))
                 else:
                     val = data[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
                 outfile.write(val)
@@ -358,7 +374,7 @@ def do_update(filename):
 
                 if 'enum' in column_def[0]['object']:
                     for i in range(len(column_values)):
-                        column_values[i] = eval(column_def[0]['object']['enum']).get(column_values[i], None)
+                        column_values[i] = enum[column_def[0]['object']['enum']]['update'].get(column_values[i], None)
                         if column_values[i] is None:
                             print row, column_name, "INVALID", column_values[i], "not found in", \
                                 column_def[0]['object']['enum']
@@ -424,17 +440,39 @@ def do_update(filename):
     print sub.serialize(format='nt')
     return [len(add), len(sub)]
 
+
+def load_enum():
+    """
+    Find all enumerations in the UPDATE_DEF. for each, read the corresponding enum file and build the corresponding
+    pair of enum dictionaries.
+
+    The two columns in the tab delimited input file must be called "short" and "vivo".  "vivo" is the value to put in
+    vivo (update) or get from vivo.  short is the human usable short form.
+
+    The input file name must be named enum_name + '.txt', where enum_name appears as the 'enum' value in UPDATE_DEF
+
+    :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
+    """
+    enum = {}
+    for key, path in UPDATE_DEF['column_defs'].items():
+        for step in path:
+            if 'object' in step and 'enum' in step['object']:
+                enum_name = step['object']['enum']
+                if enum_name not in enum:
+                    enum[enum_name] = {}
+                    enum[enum_name]['get'] = {}
+                    enum[enum_name]['update'] = {}
+                    enum_data = read_csv(enum_name + '.txt', delimiter='\t')
+                    print enum_data
+                    for enum_datum in enum_data.values():
+                        enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
+                        enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
+    return enum
+
 # Driver program starts here
 
-# TODO: Drive enumeration handling from update_def -- medium
-
-org_type_data = read_csv("org_types.txt", delimiter=' ')
-org_types = {}
-org_uris = {}
-for row in org_type_data.values():
-    org_uris[row['type']] = row['uri']
-    org_types[row['uri']] = row['type']
-print datetime.now(), org_types
+enum = load_enum()
+print datetime.now(), "Enumerations", json.dumps(enum, indent=4)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
