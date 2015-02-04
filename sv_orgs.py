@@ -90,7 +90,6 @@ UPDATE_DEF = {
         'overview': [{'predicate': {'ref': VIVO.overview, 'single': True}, 'object': {'literal': True}}]
     }
 }
-print UPDATE_DEF
 
 
 def make_get_query():
@@ -227,63 +226,6 @@ def get_graph():
     return a
 
 
-def gen_step(uri, step_def, values):
-    """
-    Scaffolding for now.  Used with gen_path to generate changes to the update graph based on the current
-    step in a path describing the steps from the entity to be updated to the values for the update.  See
-    gen_path for examples
-    :param uri: uri of the current subject of the step in the path
-    :param step_def: description of the current step
-    :param values: source value or values to update VIVO
-    :return: uri of the next entity in the path, if any
-    """
-    from vivofoundation import get_vivo_uri
-    from rdflib import URIRef
-
-    print '\t', uri, step_def, values
-
-    # Determine what needs to be done:
-    # -- locate an existing intermediate entity
-    # -- create a new intermediate entity
-    # -- apply the values to the current uri (the existing code is for this case)
-
-    if 'type' in step_def['object']:
-        print '\t', 'Look for ', step_def['object']['type']
-        path_uri = URIRef(get_vivo_uri())
-    else:
-        print '\t', 'Apply values to ', uri
-        path_uri = uri
-    print '\t', path_uri
-    return path_uri
-
-
-def gen_path(uri, path_def, values):
-    """
-    Scaffolding for now.  Exploring recursive function for updating along a path from original entity
-    to leaf.
-
-    Patterns
-
-    Length 1 path:   entity has literal
-    Length 2 path:   entity has object has literal
-    Length 3 path:   entity has object1 has object2 has literal
-
-    Examples
-
-    Length 1 path:   org primaryPhone stringLiteral
-    Length 2 path:   org mailingAddress  address addressLine1 stringLiteral
-    Length 3 path:   grant dateTimeInterval  dti start  start_thing dateTimeValue dateLiteral
-    :param uri: the uri of the entity for the current location in the path
-    :param path_def: list of elements, one element per path step, containing declarative info regarding the step
-    :param values: List of source values for the ends of paths.  May be literal or URIRef.  May be single or
-        multi-valued
-    :return:
-    """
-    next_uri = gen_step(uri, path_def[0], values)
-    if len(path_def) > 1:
-        gen_path(next_uri, path_def[1:], values)
-
-
 def do_update(filename):
     """
     read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
@@ -294,7 +236,7 @@ def do_update(filename):
     from vivofoundation import get_vivo_uri
     from vivopeople import repair_phone_number, repair_email
 
-    # TODO: Handle intermediate entity -- difficult
+    # TODO: Additional testing of 2 step path -- medium
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- easy
 
@@ -310,6 +252,7 @@ def do_update(filename):
     for row, data_update in data_updates.items():
         uri = URIRef(data_update['uri'])
         if (uri, None, None) not in ug:
+
             # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
             # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
             #  Since the new uri does not have triples for the columns in the spreadsheet, each will be added
@@ -318,13 +261,15 @@ def do_update(filename):
             print "Adding an entity for row", row, ".  Will be added at", uri_string
             uri = URIRef(uri_string)
             ug.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
+        entity_uri = uri
 
         for column_name, column_def in column_defs.items():
+            uri = entity_uri
 
-            if data_update[column_name] != '':
-                gen_path(uri, column_def, data_update[column_name])  # scaffolding for now
+            if data_update[column_name] == '':
+                continue
 
-            #  Hmmm, more scaffolding.  Perhaps we handle "in order"  step 1, step 2, step last.  The code
+            #  Perhaps we handle "in order"  step 1, step 2, step last.  The code
             #  we have is for step last.
 
             if len(column_def) > 3:
@@ -334,22 +279,28 @@ def do_update(filename):
             if len(column_def) == 3:
 
                 # Handle first and second step of length 3 path here
+                # TODO: Handle length 3 path in do_update -- medium
 
                 pass
 
             if len(column_def) == 2:
-
-                #  Handle first step of length 2 path here.  Suspect that the independent path approach
-                #  implied by the current tabular data structure and the scaffolding for recursion will
-                #  prove to be inadequate.  Will need to represent the "network".  The first item in the
-                #  two step path is a hub.  Other elements are leafs on that hub.  Without this clarity
-                #  it will be difficult/impossible to tell that city and state belong to the same address
-                #  for example.
-
                 step_def = column_def[0]
                 print "WILL HANDLE", step_def
+                step_uri = None
+                if step_def['predicate']['single']:
 
-                pass
+                    # If single valued, try to find it and use last value if VIVO has multiple
+
+                    for s, p, o in ug.triples((uri, step_def['predicate']['ref'], None)):
+                        step_uri = o
+                if step_uri is None:
+
+                    # If no single value was found, or the predicate is multi-valued, we add another one
+
+                    step_uri = URIRef(get_vivo_uri())
+                    ug.add((uri, step_def['predicate']['ref'], step_uri))
+                    # TODO: Handle label for intermediate entity -- medium
+                uri = step_uri  # the rest of processing of this column refers to the intermediate entity
 
             # Now handle the last step which is always the same (really?)
 
@@ -403,7 +354,7 @@ def do_update(filename):
                             'filter'], "FILTER IMPROVED", was_string, 'to', \
                             column_values[i]
 
-            print row, column_name, column_values
+            print row, column_name, column_values, uri, vivo_objs
 
             # Compare VIVO to Input and update as indicated
 
@@ -413,8 +364,15 @@ def do_update(filename):
                     continue  # No action required if spreadsheet is blank
                 elif column_string == 'None':
                     print "Remove", column_name, "from", str(uri)
-                    for vivo_object in vivo_objs:
+                    for vivo_object in vivo_objs.values():
                         ug.remove((uri, step_def['predicate']['ref'], vivo_object))
+                        print uri, step_def['predicate']['ref'], vivo_object
+                elif len(vivo_objs) == 0:
+                    print "Adding", column_name, column_string
+                    if step_def['object']['literal']:
+                        ug.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                    else:
+                        ug.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
                 else:
                     for vivo_object in vivo_objs.values():
                         if str(vivo_object) == column_string:
@@ -475,13 +433,14 @@ def load_enum():
                     enum[enum_name]['get'] = {}
                     enum[enum_name]['update'] = {}
                     enum_data = read_csv(enum_name + '.txt', delimiter='\t')
-                    print enum_data
                     for enum_datum in enum_data.values():
                         enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
     return enum
 
 # Driver program starts here
+
+print UPDATE_DEF
 
 enum = load_enum()
 print datetime.now(), "Enumerations", json.dumps(enum, indent=4)
