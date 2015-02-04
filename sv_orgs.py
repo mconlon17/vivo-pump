@@ -245,7 +245,7 @@ def gen_step(uri, step_def, values):
     # Determine what needs to be done:
     # -- locate an existing intermediate entity
     # -- create a new intermediate entity
-    #  -- apply the values to the current uri (the existing code is for this case)
+    # -- apply the values to the current uri (the existing code is for this case)
 
     if 'type' in step_def['object']:
         print '\t', 'Look for ', step_def['object']['type']
@@ -324,94 +324,123 @@ def do_update(filename):
             if data_update[column_name] != '':
                 gen_path(uri, column_def, data_update[column_name])  # scaffolding for now
 
-            if len(column_def) == 1:
+            #  Hmmm, more scaffolding.  Perhaps we handle "in order"  step 1, step 2, step last.  The code
+            #  we have is for step last.
 
-                # Gather all VIVO objects for the column
+            if len(column_def) > 3:
+                raise PathLengthException(
+                    "Path lengths >3 not supported.  Path length for " + column_name + " is " + len(column_def))
 
-                vivo_objs = {}
-                for s, p, o in ug.triples((uri, column_def[0]['predicate']['ref'], None)):
-                    vivo_objs[str(o)] = o
+            if len(column_def) == 3:
 
-                # Gather all column values for the column
+                # Handle first and second step of length 3 path here
 
-                if column_def[0]['predicate']['single']:
-                    column_values = [data_update[column_name]]
+                pass
+
+            if len(column_def) == 2:
+
+                #  Handle first step of length 2 path here.  Suspect that the independent path approach
+                #  implied by the current tabular data structure and the scaffolding for recursion will
+                #  prove to be inadequate.  Will need to represent the "network".  The first item in the
+                #  two step path is a hub.  Other elements are leafs on that hub.  Without this clarity
+                #  it will be difficult/impossible to tell that city and state belong to the same address
+                #  for example.
+
+                step_def = column_def[0]
+                print "WILL HANDLE", step_def
+
+                pass
+
+            # Now handle the last step which is always the same (really?)
+
+            step_def = column_def[len(column_def)-1]
+
+            # Gather all VIVO objects for the column
+
+            vivo_objs = {}
+            for s, p, o in ug.triples((uri, step_def['predicate']['ref'], None)):
+                vivo_objs[str(o)] = o
+
+            # Gather all column values for the column
+
+            if step_def['predicate']['single']:
+                column_values = [data_update[column_name]]
+            else:
+                column_values = data_update[column_name].split(';')
+                if 'include' in step_def['predicate']:
+                    column_values += step_def['predicate']['include']
+
+            # Check column values for consistency with single and multi-value attributes
+
+            if step_def['predicate']['single'] and len(column_values) > 1:
+                print row, column_name, 'INVALID data.  Predicate is single-valued, multiple values in source.'
+                continue
+            if '' in column_values and len(column_values) > 1:
+                print row, column_name, 'INVALID data.  Blank element in multi-valued predicate set'
+                continue
+            if 'None' in column_values and len(column_values) > 1:
+                print row, column_name, 'INVALID data. None value in multi-valued predicate set'
+                continue
+
+            # Handle enumerations
+
+            if 'enum' in step_def['object']:
+                for i in range(len(column_values)):
+                    column_values[i] = enum[step_def['object']['enum']]['update'].get(column_values[i], None)
+                    if column_values[i] is None:
+                        print row, column_name, "INVALID", column_values[i], "not found in", \
+                            step_def['object']['enum']
+                        continue
+
+            # Handle filters
+
+            if 'filter' in step_def['object']:
+                for i in range(len(column_values)):
+                    was_string = column_values[i]
+                    column_values[i] = eval(step_def['object']['filter'])(column_values[i])
+                    if was_string != column_values[i]:
+                        print row, column_name, step_def['object'][
+                            'filter'], "FILTER IMPROVED", was_string, 'to', \
+                            column_values[i]
+
+            print row, column_name, column_values
+
+            # Compare VIVO to Input and update as indicated
+
+            if len(column_values) == 1:
+                column_string = column_values[0]
+                if column_string == '':
+                    continue  # No action required if spreadsheet is blank
+                elif column_string == 'None':
+                    print "Remove", column_name, "from", str(uri)
+                    for vivo_object in vivo_objs:
+                        ug.remove((uri, step_def['predicate']['ref'], vivo_object))
                 else:
-                    column_values = data_update[column_name].split(';')
-                    if 'include' in column_def[0]['predicate']:
-                        column_values += column_def[0]['predicate']['include']
-
-                # Check column values for consistency with single and multi-value attributes
-
-                if column_def[0]['predicate']['single'] and len(column_values) > 1:
-                    print row, column_name, 'INVALID data.  Predicate is single-valued, multiple values in source.'
-                    continue
-                if '' in column_values and len(column_values) > 1:
-                    print row, column_name, 'INVALID data.  Blank element in multi-valued predicate set'
-                    continue
-                if 'None' in column_values and len(column_values) > 1:
-                    print row, column_name, 'INVALID data. None value in multi-valued predicate set'
-                    continue
-
-                # Handle enumerations
-
-                if 'enum' in column_def[0]['object']:
-                    for i in range(len(column_values)):
-                        column_values[i] = enum[column_def[0]['object']['enum']]['update'].get(column_values[i], None)
-                        if column_values[i] is None:
-                            print row, column_name, "INVALID", column_values[i], "not found in", \
-                                column_def[0]['object']['enum']
-                            continue
-
-                # Handle filters
-
-                if 'filter' in column_def[0]['object']:
-                    for i in range(len(column_values)):
-                        was_string = column_values[i]
-                        column_values[i] = eval(column_def[0]['object']['filter'])(column_values[i])
-                        if was_string != column_values[i]:
-                            print row, column_name, column_def[0]['object'][
-                                'filter'], "FILTER IMPROVED", was_string, 'to', \
-                                column_values[i]
-
-                print row, column_name, column_values
-
-                # Compare VIVO to Input and update as indicated
-
-                if len(column_values) == 1:
-                    column_string = column_values[0]
-                    if column_string == '':
-                        continue  # No action required if spreadsheet is blank
-                    elif column_string == 'None':
-                        print "Remove", column_name, "from", str(uri)
-                        for vivo_object in vivo_objs:
-                            ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
-                    else:
-                        for vivo_object in vivo_objs.values():
-                            if str(vivo_object) == column_string:
-                                continue  # No action required if vivo same as source
-                            else:
-                                ug.remove((uri, column_def[0]['predicate']['ref'], vivo_object))
-                                print "REMOVE", row, column_name, str(vivo_object)
-                            if column_def[0]['object']['literal']:
-                                ug.add((uri, column_def[0]['predicate']['ref'], Literal(column_string)))
-                            else:
-                                ug.add((uri, column_def[0]['predicate']['ref'], URIRef(column_string)))
-                else:
-
-                    # Ready for set comparison
-
-                    print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
-
-                    add_values = set(column_values) - set(vivo_objs.keys())
-                    sub_values = set(vivo_objs.keys()) - set(column_values)
-                    for value in add_values:
-                        if column_def[0]['object']['literal']:
-                            ug.add((uri, column_def[0]['predicate']['ref'], Literal(value)))
+                    for vivo_object in vivo_objs.values():
+                        if str(vivo_object) == column_string:
+                            continue  # No action required if vivo same as source
                         else:
-                            ug.add((uri, column_def[0]['predicate']['ref'], URIRef(value)))
-                    for value in sub_values:
-                        ug.remove((uri, column_def[0]['predicate']['ref'], vivo_objs[value]))
+                            ug.remove((uri, step_def['predicate']['ref'], vivo_object))
+                            print "REMOVE", row, column_name, str(vivo_object)
+                        if step_def['object']['literal']:
+                            ug.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                        else:
+                            ug.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
+            else:
+
+                # Ready for set comparison
+
+                print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
+
+                add_values = set(column_values) - set(vivo_objs.keys())
+                sub_values = set(vivo_objs.keys()) - set(column_values)
+                for value in add_values:
+                    if step_def['object']['literal']:
+                        ug.add((uri, step_def['predicate']['ref'], Literal(value)))
+                    else:
+                        ug.add((uri, step_def['predicate']['ref'], URIRef(value)))
+                for value in sub_values:
+                    ug.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
 
     # Write out the triples to be added and subbed in n-triples format
 
