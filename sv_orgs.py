@@ -25,7 +25,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.34"
+__version__ = "0.35"
 
 from vivofoundation import read_csv
 from datetime import datetime
@@ -147,33 +147,19 @@ def do_get(filename):
 
     data = {}
 
-    for binding in result_set['results']['bindings']:
+    print "Query Results"
+    print json.dumps(result_set['results']['bindings'], indent=4)
 
-        uri = binding['uri']['value']
+    for binding in result_set['results']['bindings']:
+        uri = str(binding['uri']['value'])
         if uri not in data:
             data[uri] = {}
-
-        # Each property is either single-valued, multi-valued, and/or de-referenced.  We're not
-        # not ready for de-referenced yet.  That will require more complex SPARQL
-
-        #  Single valued attributes.  If VIVO data has more than one value, use the last value found
-
-        for name in ['uri']+[x for x in UPDATE_DEF['column_defs'].keys()
-                     if UPDATE_DEF['column_defs'][x][0]['predicate']['single']]:
-            if name in binding:
-                data[uri][name] = binding[name]
-
-        # multi-valued attributes.  Collect all values into lists
-
-        # TODO: Refactor.  Everything should be in lists.  Both single and multiple valued -- don't have to ask -- easy
-
-        for name in [x for x in UPDATE_DEF['column_defs'].keys()
-                     if not UPDATE_DEF['column_defs'][x][0]['predicate']['single']]:
+        for name in ['uri'] + UPDATE_DEF['column_defs'].keys():
             if name in binding:
                 if name in data[uri]:
-                    data[uri][name].append(binding[name])
+                    data[uri][name].add(binding[name]['value'])
                 else:
-                    data[uri][name] = [binding[name]]
+                    data[uri][name] = set([binding[name]['value']])
 
     # Write out the file
 
@@ -187,24 +173,21 @@ def do_get(filename):
         for name in columns:
             if name in data[uri]:
 
-                # TODO: Refactor.  Once everything is in lists, you don't need to check whether its in a list -- easy
+                # Translate VIVO values via enumeration if any
 
-                if name in UPDATE_DEF['column_defs'] and 'enum' in \
-                        UPDATE_DEF['column_defs'][name][len(UPDATE_DEF['column_defs'][name])-1]['object']:
-                    enum_name = UPDATE_DEF['column_defs'][name][len(UPDATE_DEF['column_defs'][name])-1]['object']['enum']
-                    if type(data[uri][name]) is list:
-                        a = []
+                if name in UPDATE_DEF['column_defs']:
+                    path = UPDATE_DEF['column_defs'][name]
+                    if 'enum' in path[len(path)-1]['object']:
+                        enum_name = path[len(path)-1]['object']['enum']
+                        a = set()
                         for x in data[uri][name]:
-                            x['value'] = enum[enum_name]['get'][x['value']]
-                            a.append(x)
+                            a.add(enum[enum_name]['get'][x])
                         data[uri][name] = a
-                    else:
-                        data[uri][name]['value'] = enum[enum_name]['get'][data[uri][name]['value']]
-                if type(data[uri][name]) is list:
-                    val = ';'.join(set(x['value'] for x in data[uri][name]))
-                else:
-                    val = data[uri][name]['value'].replace('\n', ' ').replace('\r', ' ')
-                outfile.write(val)
+
+                # Gather values into a delimited string
+
+                val = ';'.join(data[uri][name])
+                outfile.write(val.replace('\r', ' ').replace('\n', ' '))
             if name != columns[len(columns) - 1]:
                 outfile.write('\t')
         outfile.write('\n')
