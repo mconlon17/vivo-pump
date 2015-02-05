@@ -1,23 +1,21 @@
 #!/usr/bin/env/python
 
 """
-    sv_orgs.py: Simple VIVO for Organizations
+    sv_orgs.py: Simple VIVO
 
     Read a spreadsheet and follow the directions to add, update or remove entities and/or
     entity attributes from VIVO.
 
     Produce a spreadsheet from VIVO that has the entities and attributes ready for editing and updating
 
-    Inputs:  spreadsheet containing updates and additions (stdin).  VIVO for current state
-    Outputs:  spreadsheet with current state (stdout).  VIVO state changes
-
-    Log entries indicate errors and actions
+    Inputs:  spreadsheet containing updates and additions.  Enumeration tables for translating
+        spreadsheet values to VIVO values and back.  VIVO for current state
+    Outputs:  spreadsheet with current state.  VIVO state changes. Log with date times and messages.
 
     See CHANGELOG.md for history
 
 """
 
-# TODO: Support for stdin and stdout -- easy
 # TODO: Read/write columns defs as JSON.  Then all ingests are just data -- medium
 # TODO: Create UPDATE_DEF for people, grants, courses, pubs -- medium
 # TODO: Use pyunit for unit level tests -- medium
@@ -180,7 +178,7 @@ def do_get(filename):
                         enum_name = path[len(path)-1]['object']['enum']
                         a = set()
                         for x in data[uri][name]:
-                            a.add(enum[enum_name]['get'][x])
+                            a.add(ENUM[enum_name]['get'][x])
                         data[uri][name] = a
 
                 # Gather values into a delimited string
@@ -299,7 +297,7 @@ def do_update(filename):
 
                     step_uri = URIRef(get_vivo_uri())
                     ug.add((uri, step_def['predicate']['ref'], step_uri))
-                    # TODO: Handle label for intermediate entity -- medium
+                    # TODO: Handle label and type for intermediate entity -- medium
                 uri = step_uri  # the rest of processing of this column refers to the intermediate entity
 
             # Now handle the last step which is always the same (really?)
@@ -337,7 +335,7 @@ def do_update(filename):
 
             if 'enum' in step_def['object']:
                 for i in range(len(column_values)):
-                    column_values[i] = enum[step_def['object']['enum']]['update'].get(column_values[i], None)
+                    column_values[i] = ENUM[step_def['object']['enum']]['update'].get(column_values[i], None)
                     if column_values[i] is None:
                         print row, column_name, "INVALID", column_values[i], "not found in", \
                             step_def['object']['enum']
@@ -442,8 +440,8 @@ def load_enum():
 
 print UPDATE_DEF
 
-enum = load_enum()
-print datetime.now(), "Enumerations", json.dumps(enum, indent=4)
+ENUM = load_enum()
+print datetime.now(), "Enumerations", json.dumps(ENUM, indent=4)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
