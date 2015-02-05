@@ -16,78 +16,76 @@
 
 """
 
-# TODO: Read/write columns defs as JSON.  Then all ingests are just data -- medium
 # TODO: Create UPDATE_DEF for people, grants, courses, pubs -- medium
 # TODO: Use pyunit for unit level tests -- medium
+# TODO: Cut down vivofoundation to only the functions needed for the pump
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.35"
+__version__ = "0.36"
 
-from vivofoundation import read_csv
 from datetime import datetime
-from rdflib import Namespace, RDF, RDFS
-from rdflib.namespace import FOAF
 import argparse
-import codecs
-import json
 
 
 class PathLengthException(Exception):
+    """
+    Raise this exception when a path definition is longer than the allowable (currently 3)
+    """
     def __init__(self, value):
+        Exception.__init__(self)
         self.value = value
 
     def __str__(self):
         return repr(self.value)
 
-VIVO = Namespace('http://vivoweb.org/ontology/core#')
-VITROP = Namespace('http://vitro.mannlib.cornell.edu/ns/vitro/public#')
-UFV = Namespace('http://vivo.ufl.edu/ontology/vivo-ufl/')
 
-UPDATE_DEF = {
-    'entity_def': {
-        'entity_sparql': '?uri a foaf:Organization . ?uri a vivo:ExtensionUnit . ?uri a ufVivo:UFEntity . ',
-        'order_by': 'name',
-        'type': FOAF.Organization
-    },
-    'column_defs': {
-        'name': [{'predicate': {'ref': RDFS.label, 'single': True}, 'object': {'literal': True}}],
-        'type': [{'predicate': {'ref': RDF.type, 'single': False, 'include': ['thing', 'agent', 'org']},
-                  'object': {'literal': False, 'enum': 'org_types'}}],
-        'within': [{'predicate': {'ref': VIVO.subOrganizationWithin, 'single': False},
-                    'object': {'literal': False}}],
-        'url': [{'predicate': {'ref': VIVO.webpage, 'single': False},
-                 'object': {'literal': False, 'type': VIVO.URLLink, 'name': 'weburi'}},
-                {'predicate': {'ref': VIVO.linkURI, 'single': True}, 'object': {'literal': True}}],
-        'phone': [{'predicate': {'ref': VIVO.primaryPhone, 'single': True},
-                   'object': {'literal': True, 'filter': 'repair_phone_number'}}],
-        'email': [{'predicate': {'ref': VIVO.primaryEmail, 'single': True},
-                   'object': {'literal': True, 'filter': 'repair_email'}}],
-        'address1': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                      'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
-                     {'predicate': {'ref': VIVO.address1, 'single': True}, 'object': {'literal': True}}],
-        'address2': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                      'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
-                     {'predicate': {'ref': VIVO.address2, 'single': True}, 'object': {'literal': True}}],
-        'city': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                  'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
-                 {'predicate': {'ref': VIVO.addressCity, 'single': True}, 'object': {'literal': True}}],
-        'state': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                   'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
-                  {'predicate': {'ref': VIVO.addressState, 'single': True}, 'object': {'literal': True}}],
-        'zip': [{'predicate': {'ref': VIVO.mailingAddress, 'single': True},
-                 'object': {'literal': False, 'type': VIVO.Address, 'name': 'address'}},
-                {'predicate': {'ref': VIVO.addressPostalCode, 'single': True}, 'object': {'literal': True}}],
-        'photo': [{'predicate': {'ref': VITROP.mainImage, 'single': True},
-                   'object': {'literal': False, 'type': VITROP.File, 'name': 'photouri'}},
-                  {'predicate': {'ref': VITROP.filename, 'single': True}, 'object': {'literal': True}}],
-        'abbreviation': [{'predicate': {'ref': VIVO.abbreviation, 'single': True}, 'object': {'literal': True}}],
-        'isni': [{'predicate': {'ref': UFV.isni, 'single': True}, 'object': {'literal': True}}],
-        'successor': [{'predicate': {'ref': VIVO.hasSuccessorOrg, 'single': False}, 'object': {'literal': False}}],
-        'overview': [{'predicate': {'ref': VIVO.overview, 'single': True}, 'object': {'literal': True}}]
-    }
-}
+def write_update_def(filename):
+    """
+    Write the UPDATE_DEF global to a json_file
+    :param filename: name of file to write
+    :return: None.  A file is written
+    """
+    import json
+    out_file = open(filename, "w")
+    json.dump(UPDATE_DEF, out_file, indent=4)
+    out_file.close()
+    return
+
+
+def read_update_def(filename):
+    """
+    Read an update_def from a file
+    :param filename: name of file to read
+    :return: JSON object from file
+    """
+
+    def fixit(current_object):
+        """
+        Read the def data structure and replace all string URLs with URIRef entities
+        :param current_object: the piece of the data structure to be fixed
+        :return current_object: the piece repaired in place
+        """
+        from rdflib import URIRef
+        if isinstance(current_object, dict):
+            for k, t in current_object.items():
+                if isinstance(t, basestring) and t.startswith('http://'):
+                    current_object[k] = URIRef(t)
+                else:
+                    current_object[k] = fixit(current_object[k])
+        elif isinstance(current_object, list):
+            for i in range(0, len(current_object)):
+                current_object[i] = fixit(current_object[i])
+        elif isinstance(current_object, basestring):
+            if current_object.startswith("http://"):
+                current_object = URIRef(current_object)
+        return current_object
+
+    import json
+    in_file = open(filename, "r")
+    update_def = fixit(json.load(in_file))
+    return update_def
 
 
 def make_get_query():
@@ -133,6 +131,8 @@ def do_get(filename):
     :return:  None.  File is written
     """
     from vivofoundation import vivo_sparql_query
+    from json import dumps
+    import codecs
 
     query = make_get_query()
     print query
@@ -145,7 +145,7 @@ def do_get(filename):
     data = {}
 
     print "Query Results"
-    print json.dumps(result_set['results']['bindings'], indent=4)
+    print dumps(result_set['results']['bindings'], indent=4)
 
     for binding in result_set['results']['bindings']:
         uri = str(binding['uri']['value'])
@@ -213,11 +213,8 @@ def get_graph():
         s = URIRef(row['uri']['value'])
         p = URIRef(row['p']['value'])
         if row['o']['type'] == 'literal' or row['o']['type'] == 'typed-literal':
-            o = Literal(row['o']['value'])
-            if 'xml:lang' in row:
-                o.lang(row['xml:lang'])
-            if 'datatype' in row:
-                o.datatype(row['o']['datatype'])
+            o = Literal(row['o']['value'], datatype=row['o'].get('datatype', None),
+                        lang=row['o'].get('xml:lang', None))
         else:
             o = URIRef(row['o']['value'])
         a.add((s, p, o))
@@ -229,14 +226,14 @@ def do_update(filename):
     read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
     rdf as necessary to process requested changes
     """
-    from rdflib import Graph, URIRef, RDFS, RDF, Literal, Namespace
-    from rdflib.namespace import FOAF
-    from vivofoundation import get_vivo_uri
+    from rdflib import Graph, URIRef, RDF, Literal
+    from vivofoundation import get_vivo_uri, read_csv
     from vivopeople import repair_phone_number, repair_email
 
     # TODO: Additional testing of 2 step path -- medium
     # TODO: Support lookup by name or uri -- medium
-    # TODO: Support for remove action -- easy
+    # TODO: Support for remove action -- medium
+    # TODO: Bust this code up into helper functions to improve readability and reduce complexity -- medium
 
     column_defs = UPDATE_DEF['column_defs']
 
@@ -421,8 +418,9 @@ def load_enum():
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
+    from vivofoundation import read_csv
     enum = {}
-    for key, path in UPDATE_DEF['column_defs'].items():
+    for path in UPDATE_DEF['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
                 enum_name = step['object']['enum']
@@ -438,10 +436,15 @@ def load_enum():
 
 # Driver program starts here
 
-print UPDATE_DEF
+from json import dumps
+
+UPDATE_DEF = read_update_def("update_def.json")
+print datetime.now(), UPDATE_DEF
 
 ENUM = load_enum()
-print datetime.now(), "Enumerations", json.dumps(ENUM, indent=4)
+print datetime.now(), "Enumerations", dumps(ENUM, indent=4)
+
+write_update_def("update_def.json")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "

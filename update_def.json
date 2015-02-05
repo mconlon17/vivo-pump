@@ -1,0 +1,270 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a foaf:Organization . ?uri a vivo:ExtensionUnit . ?uri a ufVivo:UFEntity . ", 
+        "type": "http://xmlns.com/foaf/0.1/Organization"
+    }, 
+    "column_defs": {
+        "city": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "name": "address"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#addressCity"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "type": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "include": [
+                        "thing", 
+                        "agent", 
+                        "org"
+                    ], 
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "enum": "org_types"
+                }
+            }
+        ], 
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "zip": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "name": "address"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#addressPostalCode"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "url": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#webpage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#URLLink", 
+                    "name": "weburi"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#linkURI"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "address1": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "name": "address"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#address1"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "address2": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "name": "address"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#address2"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "within": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#subOrganizationWithin"
+                }, 
+                "object": {
+                    "literal": false
+                }
+            }
+        ], 
+        "isni": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/isni"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "abbreviation": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#abbreviation"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "phone": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#primaryPhone"
+                }, 
+                "object": {
+                    "filter": "repair_phone_number", 
+                    "literal": true
+                }
+            }
+        ], 
+        "state": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "name": "address"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#addressState"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "photo": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
+                    "name": "photouri"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "overview": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#overview"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "email": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#primaryEmail"
+                }, 
+                "object": {
+                    "filter": "repair_email", 
+                    "literal": true
+                }
+            }
+        ], 
+        "successor": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#hasSuccessorOrg"
+                }, 
+                "object": {
+                    "literal": false
+                }
+            }
+        ]
+    }
+}
