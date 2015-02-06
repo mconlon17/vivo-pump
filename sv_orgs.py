@@ -17,12 +17,11 @@
 """
 
 # TODO: Create UPDATE_DEF for people, grants, courses, pubs -- medium
-# TODO: Use pyunit for unit level tests -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.37"
+__version__ = "0.39"
 
 from datetime import datetime
 import argparse
@@ -130,13 +129,13 @@ def do_get(filename):
     :param filename: Tab delimited file of data from VIVO
     :return:  None.  File is written
     """
-    from vivopump import vivo_sparql_query
+    from vivopump import vivo_query
     import json
     import codecs
 
     query = make_get_query()
     print query
-    result_set = vivo_sparql_query(query)
+    result_set = vivo_query(query)
 
     # Create a data structure from the query results that collects the values from
     # the query and has unique uri values.  Multi-valued attributes are collected
@@ -200,14 +199,14 @@ def get_graph():
     :return: graph of triples
     """
 
-    from vivopump import vivo_sparql_query
+    from vivopump import vivo_query
     from rdflib import Graph, URIRef, Literal
 
     front_query = "SELECT ?uri ?p ?o\nWHERE {\n    "
     back_query = "    ?uri ?p ?o .\n}"
     graph_query = front_query + UPDATE_DEF['entity_def']['entity_sparql'] + back_query
     print 'Graph query\n', graph_query
-    triples = vivo_sparql_query(graph_query)
+    triples = vivo_query(graph_query)
     a = Graph()
     for row in triples['results']['bindings']:
         s = URIRef(row['uri']['value'])
@@ -227,7 +226,7 @@ def do_update(filename):
     rdf as necessary to process requested changes
     """
     from rdflib import Graph, URIRef, RDF, Literal
-    from vivopump import get_vivo_uri, read_csv
+    from vivopump import new_uri, read_csv
     from vivopeople import repair_phone_number, repair_email
 
     # TODO: Additional testing of 2 step path -- medium
@@ -253,7 +252,7 @@ def do_update(filename):
             # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
             #  Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
-            uri_string = get_vivo_uri()
+            uri_string = new_uri()
             print "Adding an entity for row", row, ".  Will be added at", uri_string
             uri = URIRef(uri_string)
             update_graph.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
@@ -293,7 +292,7 @@ def do_update(filename):
 
                     # If no single value was found, or the predicate is multi-valued, we add another one
 
-                    step_uri = URIRef(get_vivo_uri())
+                    step_uri = URIRef(new_uri())
                     update_graph.add((uri, step_def['predicate']['ref'], step_uri))
                     # TODO: Handle label and type for intermediate entity -- medium
                 uri = step_uri  # the rest of processing of this column refers to the intermediate entity
