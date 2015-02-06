@@ -362,7 +362,7 @@ def do_update(filename):
                     # TODO: Verify label and type for photo and webpage.  Address looked good.
                 uri = step_uri  # the rest of processing of this column refers to the intermediate entity
 
-            # Now handle the last step which is always the same (really?)
+            # Now handle the last step which is always the same (really)
 
             step_def = column_def[len(column_def)-1]
 
