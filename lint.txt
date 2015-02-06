@@ -1,37 +1,18 @@
 ************* Module sv_orgs
-W:134, 4: Redefining name 'dumps' from outer scope (line 439) (redefined-outer-name)
-R:124, 0: Too many local variables (17/15) (too-many-locals)
-W:134, 4: Reimport 'dumps' (imported line 439) (reimported)
-R:124, 0: Too many branches (13/12) (too-many-branches)
-R:224, 0: Too many local variables (36/15) (too-many-locals)
-F:231, 4: Unable to import 'vivopeople' (import-error)
-C:240, 4: Invalid variable name "og" (invalid-name)
-C:241, 4: Invalid variable name "ug" (invalid-name)
-W:346,39: Use of eval (eval-used)
-W:231, 4: Unused variable 'repair_email' (unused-variable)
-W:231, 4: Unused variable 'repair_phone_number' (unused-variable)
-R:224, 0: Too many branches (42/12) (too-many-branches)
-R:224, 0: Too many statements (103/100) (too-many-statements)
-C:441, 0: Invalid constant name "UPDATE_DEF" (invalid-name)
-C:444, 0: Invalid constant name "ENUM" (invalid-name)
+R:125, 0: Too many local variables (17/15) (too-many-locals)
+R:125, 0: Too many branches (13/12) (too-many-branches)
+R:225, 0: Too many local variables (36/15) (too-many-locals)
+F:232, 4: Unable to import 'vivopeople' (import-error)
+W:348,39: Use of eval (eval-used)
+W:232, 4: Unused variable 'repair_email' (unused-variable)
+W:232, 4: Unused variable 'repair_phone_number' (unused-variable)
+R:225, 0: Too many branches (42/12) (too-many-branches)
+R:225, 0: Too many statements (103/100) (too-many-statements)
 
 
 Report
 ======
 253 statements analysed.
-
-Duplication
------------
-
-+-------------------------+------+---------+-----------+
-|                         |now   |previous |difference |
-+=========================+======+=========+===========+
-|nb duplicated lines      |0     |0        |=          |
-+-------------------------+------+---------+-----------+
-|percent duplicated lines |0.000 |0.000    |=          |
-+-------------------------+------+---------+-----------+
-
-
 
 Statistics by type
 ------------------
@@ -56,14 +37,27 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |263    |62.17 |261      |+2.00      |
+|code      |263    |61.88 |263      |=          |
 +----------+-------+------+---------+-----------+
-|docstring |73     |17.26 |73       |=          |
+|docstring |74     |17.41 |74       |=          |
 +----------+-------+------+---------+-----------+
-|comment   |34     |8.04  |34       |=          |
+|comment   |34     |8.00  |34       |=          |
 +----------+-------+------+---------+-----------+
-|empty     |53     |12.53 |53       |=          |
+|empty     |54     |12.71 |54       |=          |
 +----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
 
 
 
@@ -73,13 +67,13 @@ Messages by category
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |4      |4        |=          |
+|convention |0      |2        |-2.00      |
 +-----------+-------+---------+-----------+
-|refactor   |5      |4        |+1.00      |
+|refactor   |5      |5        |=          |
 +-----------+-------+---------+-----------+
-|warning    |5      |4        |+1.00      |
+|warning    |3      |3        |=          |
 +-----------+-------+---------+-----------+
-|error      |0      |2        |-2.00      |
+|error      |0      |0        |=          |
 +-----------+-------+---------+-----------+
 
 
@@ -87,33 +81,27 @@ Messages by category
 Messages
 --------
 
-+---------------------+------------+
-|message id           |occurrences |
-+=====================+============+
-|invalid-name         |4           |
-+---------------------+------------+
-|unused-variable      |2           |
-+---------------------+------------+
-|too-many-locals      |2           |
-+---------------------+------------+
-|too-many-branches    |2           |
-+---------------------+------------+
-|too-many-statements  |1           |
-+---------------------+------------+
-|reimported           |1           |
-+---------------------+------------+
-|redefined-outer-name |1           |
-+---------------------+------------+
-|import-error         |1           |
-+---------------------+------------+
-|eval-used            |1           |
-+---------------------+------------+
++--------------------+------------+
+|message id          |occurrences |
++====================+============+
+|unused-variable     |2           |
++--------------------+------------+
+|too-many-locals     |2           |
++--------------------+------------+
+|too-many-branches   |2           |
++--------------------+------------+
+|too-many-statements |1           |
++--------------------+------------+
+|import-error        |1           |
++--------------------+------------+
+|eval-used           |1           |
++--------------------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 9.45/10 (previous run: 9.12/10, +0.32)
+Your code has been rated at 9.68/10 (previous run: 9.60/10, +0.08)
 
 External dependencies
 ---------------------

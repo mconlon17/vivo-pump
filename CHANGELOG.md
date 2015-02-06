@@ -20,3 +20,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
     * update_def.json -- the JSON representation of the update definitions
     * update_def_frag.py -- Python code for the JSON definitions. _DEPRECATED_
     * vivofoundation.py -- Support code for the pump.  Will be renamed.
+* **2015-02-06** 0.37 Minor code improvements to address pylint and pyCharm suggestions

@@ -10,7 +10,7 @@
 
     Inputs:  spreadsheet containing updates and additions.  Enumeration tables for translating
         spreadsheet values to VIVO values and back.  VIVO for current state
-    Outputs:  spreadsheet with current state.  VIVO state changes. Log with date times and messages.
+    Outputs:  spreadsheet with current state.  VIVO state changes. stdout with date times and messages.
 
     See CHANGELOG.md for history
 
@@ -23,7 +23,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.36"
+__version__ = "0.37"
 
 from datetime import datetime
 import argparse
@@ -58,6 +58,7 @@ def read_update_def(filename):
     """
     Read an update_def from a file
     :param filename: name of file to read
+    :rtype: dict
     :return: JSON object from file
     """
 
@@ -131,7 +132,7 @@ def do_get(filename):
     :return:  None.  File is written
     """
     from vivofoundation import vivo_sparql_query
-    from json import dumps
+    import json
     import codecs
 
     query = make_get_query()
@@ -145,7 +146,7 @@ def do_get(filename):
     data = {}
 
     print "Query Results"
-    print dumps(result_set['results']['bindings'], indent=4)
+    print json.dumps(result_set['results']['bindings'], indent=4)
 
     for binding in result_set['results']['bindings']:
         uri = str(binding['uri']['value'])
@@ -156,7 +157,7 @@ def do_get(filename):
                 if name in data[uri]:
                     data[uri][name].add(binding[name]['value'])
                 else:
-                    data[uri][name] = set([binding[name]['value']])
+                    data[uri][name] = {binding[name]['value']}
 
     # Write out the file
 
@@ -237,16 +238,17 @@ def do_update(filename):
 
     column_defs = UPDATE_DEF['column_defs']
 
-    og = get_graph()  # Create the original graph from VIVO using the update_def
-    ug = Graph()
-    for s, p, o in og:
-        ug.add((s, p, o))
-    print datetime.now(), 'Graphs ready for processing. Original has ', len(og), '. Update graph has', len(ug)
+    original_graph = get_graph()  # Create the original graph from VIVO using the update_def
+    update_graph = Graph()
+    for s, p, o in original_graph:
+        update_graph.add((s, p, o))
+    print datetime.now(), 'Graphs ready for processing. Original has ', len(original_graph), '. Update graph has', len(
+        update_graph)
     data_updates = read_csv(filename, delimiter='\t')
     print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(data_updates), 'rows.'
     for row, data_update in data_updates.items():
         uri = URIRef(data_update['uri'])
-        if (uri, None, None) not in ug:
+        if (uri, None, None) not in update_graph:
 
             # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
             # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
@@ -255,7 +257,7 @@ def do_update(filename):
             uri_string = get_vivo_uri()
             print "Adding an entity for row", row, ".  Will be added at", uri_string
             uri = URIRef(uri_string)
-            ug.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
+            update_graph.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
         entity_uri = uri
 
         for column_name, column_def in column_defs.items():
@@ -269,7 +271,7 @@ def do_update(filename):
 
             if len(column_def) > 3:
                 raise PathLengthException(
-                    "Path lengths >3 not supported.  Path length for " + column_name + " is " + len(column_def))
+                    "Path lengths >3 not supported.  Path length for " + column_name + " is " + str(len(column_def)))
 
             if len(column_def) == 3:
 
@@ -286,14 +288,14 @@ def do_update(filename):
 
                     # If single valued, try to find it and use last value if VIVO has multiple
 
-                    for s, p, o in ug.triples((uri, step_def['predicate']['ref'], None)):
+                    for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None)):
                         step_uri = o
                 if step_uri is None:
 
                     # If no single value was found, or the predicate is multi-valued, we add another one
 
                     step_uri = URIRef(get_vivo_uri())
-                    ug.add((uri, step_def['predicate']['ref'], step_uri))
+                    update_graph.add((uri, step_def['predicate']['ref'], step_uri))
                     # TODO: Handle label and type for intermediate entity -- medium
                 uri = step_uri  # the rest of processing of this column refers to the intermediate entity
 
@@ -304,7 +306,7 @@ def do_update(filename):
             # Gather all VIVO objects for the column
 
             vivo_objs = {}
-            for s, p, o in ug.triples((uri, step_def['predicate']['ref'], None)):
+            for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None)):
                 vivo_objs[str(o)] = o
 
             # Gather all column values for the column
@@ -360,25 +362,25 @@ def do_update(filename):
                 elif column_string == 'None':
                     print "Remove", column_name, "from", str(uri)
                     for vivo_object in vivo_objs.values():
-                        ug.remove((uri, step_def['predicate']['ref'], vivo_object))
+                        update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                         print uri, step_def['predicate']['ref'], vivo_object
                 elif len(vivo_objs) == 0:
                     print "Adding", column_name, column_string
                     if step_def['object']['literal']:
-                        ug.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                        update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
                     else:
-                        ug.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
+                        update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
                 else:
                     for vivo_object in vivo_objs.values():
                         if str(vivo_object) == column_string:
                             continue  # No action required if vivo same as source
                         else:
-                            ug.remove((uri, step_def['predicate']['ref'], vivo_object))
+                            update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                             print "REMOVE", row, column_name, str(vivo_object)
                         if step_def['object']['literal']:
-                            ug.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                            update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
                         else:
-                            ug.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
+                            update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
             else:
 
                 # Ready for set comparison
@@ -389,16 +391,16 @@ def do_update(filename):
                 sub_values = set(vivo_objs.keys()) - set(column_values)
                 for value in add_values:
                     if step_def['object']['literal']:
-                        ug.add((uri, step_def['predicate']['ref'], Literal(value)))
+                        update_graph.add((uri, step_def['predicate']['ref'], Literal(value)))
                     else:
-                        ug.add((uri, step_def['predicate']['ref'], URIRef(value)))
+                        update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
                 for value in sub_values:
-                    ug.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
+                    update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
 
     # Write out the triples to be added and subbed in n-triples format
 
-    add = ug - og  # Triples in update that are not in original
-    sub = og - ug  # Triples in original that are not in update
+    add = update_graph - original_graph  # Triples in update that are not in original
+    sub = original_graph - update_graph  # Triples in original that are not in update
     print datetime.now(), "Triples to add:"
     print add.serialize(format='nt')
     print datetime.now(), "Triples to sub:"
@@ -434,7 +436,7 @@ def load_enum():
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
     return enum
 
-# Driver program starts here
+# Driver starts here
 
 from json import dumps
 
@@ -457,8 +459,7 @@ if args.action == 'get':
     n_rows = do_get(args.filename)
     print datetime.now(), n_rows, "rows in", args.filename
 elif args.action == 'update':
-    [nadd, nsub] = do_update(args.filename)
-    print datetime.now(), nadd, 'triples to add', nsub, 'triples to sub'
+    [n_add, n_sub] = do_update(args.filename)
+    print datetime.now(), n_add, 'triples to add', n_sub, 'triples to sub'
 else:
     print datetime.now(), "Unknown action.  Try sv_orgs -h for help"
-
