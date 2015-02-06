@@ -39,6 +39,18 @@ class PathLengthException(Exception):
         return repr(self.value)
 
 
+class InvalidDataException(Exception):
+    """
+    Raise this exception when update data contains values that can not be processed
+    """
+    def __init__(self, value):
+        Exception.__init__(self)
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
 def write_update_def(filename):
     """
     Write the UPDATE_DEF global to a json_file
@@ -220,19 +232,69 @@ def get_graph():
     return a
 
 
+def prepare_column_values(update_string, step_def, row, column_name):
+    """
+    Give the string of data from the update file, the step definition, the row and column name of the
+    update_string in the update file, enumerations and filters, prepare the column values and return them
+    as a list of strings
+    :return: column_values a list of strings
+    :rtype: list[str]
+    """
+    from vivopump import repair_phone_number, repair_email
+
+    if step_def['predicate']['single']:
+        column_values = [update_string]
+    else:
+        column_values = update_string.split(';')
+        if 'include' in step_def['predicate']:
+            column_values += step_def['predicate']['include']
+
+    # Check column values for consistency with single and multi-value attributes
+
+    if step_def['predicate']['single'] and len(column_values) > 1:
+        raise InvalidDataException(str(row) + str(column_name) +
+                                   'Predicate is single-valued, multiple values in source.')
+    if '' in column_values and len(column_values) > 1:
+        raise InvalidDataException(str(row) + str(column_name) +
+                                   'Blank element in multi-valued predicate set')
+    if 'None' in column_values and len(column_values) > 1:
+        raise InvalidDataException(str(row) + str(column_name) +
+                                   'None value in multi-valued predicate set')
+
+    # Handle enumerations
+
+    if 'enum' in step_def['object']:
+        for i in range(len(column_values)):
+            column_values[i] = ENUM[step_def['object']['enum']]['update'].get(column_values[i], None)
+            if column_values[i] is None:
+                raise InvalidDataException(str(row) + str(column_name) + column_values[i] + "not found in" +
+                                           step_def['object']['enum'])
+
+    # Handle filters
+
+    if 'filter' in step_def['object']:
+        for i in range(len(column_values)):
+            was_string = column_values[i]
+            column_values[i] = eval(step_def['object']['filter'])(column_values[i])
+            if was_string != column_values[i]:
+                print row, column_name, step_def['object'][
+                    'filter'], "FILTER IMPROVED", was_string, 'to', \
+                    column_values[i]
+    return column_values
+
+
 def do_update(filename):
     """
     read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
     rdf as necessary to process requested changes
     """
-    from rdflib import Graph, URIRef, RDF, Literal
+    from rdflib import Graph, URIRef, RDF, RDFS, Literal
     from vivopump import new_uri, read_csv
-    from vivopeople import repair_phone_number, repair_email
 
     # TODO: Additional testing of 2 step path -- medium
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- medium
-    # TODO: Bust this code up into helper functions to improve readability and reduce complexity -- medium
+    # TODO: More code busting to improve readability and reduce complexity -- medium
 
     column_defs = UPDATE_DEF['column_defs']
 
@@ -294,7 +356,10 @@ def do_update(filename):
 
                     step_uri = URIRef(new_uri())
                     update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-                    # TODO: Handle label and type for intermediate entity -- medium
+                    update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+                    if 'label' in step_def['object']:
+                        update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
+                    # TODO: Verify label and type for photo and webpage.  Address looked good.
                 uri = step_uri  # the rest of processing of this column refers to the intermediate entity
 
             # Now handle the last step which is always the same (really?)
@@ -307,48 +372,9 @@ def do_update(filename):
             for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None)):
                 vivo_objs[str(o)] = o
 
-            # Gather all column values for the column
+            # Prepare all column values for the column
 
-            if step_def['predicate']['single']:
-                column_values = [data_update[column_name]]
-            else:
-                column_values = data_update[column_name].split(';')
-                if 'include' in step_def['predicate']:
-                    column_values += step_def['predicate']['include']
-
-            # Check column values for consistency with single and multi-value attributes
-
-            if step_def['predicate']['single'] and len(column_values) > 1:
-                print row, column_name, 'INVALID data.  Predicate is single-valued, multiple values in source.'
-                continue
-            if '' in column_values and len(column_values) > 1:
-                print row, column_name, 'INVALID data.  Blank element in multi-valued predicate set'
-                continue
-            if 'None' in column_values and len(column_values) > 1:
-                print row, column_name, 'INVALID data. None value in multi-valued predicate set'
-                continue
-
-            # Handle enumerations
-
-            if 'enum' in step_def['object']:
-                for i in range(len(column_values)):
-                    column_values[i] = ENUM[step_def['object']['enum']]['update'].get(column_values[i], None)
-                    if column_values[i] is None:
-                        print row, column_name, "INVALID", column_values[i], "not found in", \
-                            step_def['object']['enum']
-                        continue
-
-            # Handle filters
-
-            if 'filter' in step_def['object']:
-                for i in range(len(column_values)):
-                    was_string = column_values[i]
-                    column_values[i] = eval(step_def['object']['filter'])(column_values[i])
-                    if was_string != column_values[i]:
-                        print row, column_name, step_def['object'][
-                            'filter'], "FILTER IMPROVED", was_string, 'to', \
-                            column_values[i]
-
+            column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
             print row, column_name, column_values, uri, vivo_objs
 
             # Compare VIVO to Input and update as indicated

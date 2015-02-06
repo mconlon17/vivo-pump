@@ -16,6 +16,7 @@ import json
 import time
 import string
 import random
+import re
 
 
 class UnicodeCsvReader(object):
@@ -120,7 +121,7 @@ def new_uri():
 
 
 def vivo_query(query, baseurl=VIVO_QUERY_URI,
-                      format="application/sparql-results+json", debug=False):
+               return_format="application/sparql-results+json", debug=False):
     """
     Given a SPARQL query string return result set of the SPARQL query.  Default
     is to call the UF VIVO SPARQL endpoint and receive results in JSON format
@@ -157,11 +158,12 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI,
         "query": prefix + query,
         "debug": "on",
         "timeout": "7000",  # 7 seconds
-        "format": format,
+        "format": return_format,
         "save": "display",
         "fname": ""
     }
     query_part = urllib.urlencode(params)
+    response = ""
     if debug:
         print "Base URL", baseurl
         print "Query:", query_part
@@ -185,3 +187,93 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI,
         return json.loads(response)
     except KeyError:
         return None
+
+
+def repair_email(email, exp=re.compile(r'\w+\.*\w+@\w+\.(\w+\.*)*\w+')):
+    """
+    Given an email string, fix it
+    """
+    s = exp.search(email)
+    if s is None:
+        return ""
+    elif s.group() is not None:
+        return s.group()
+    else:
+        return ""
+
+
+def repair_phone_number(phone, debug=False):
+    """
+    Given an arbitrary string that attempts to represent a phone number,
+    return a best attempt to format the phone number according to ITU standards
+
+    If the phone number can not be repaired, the function returns an empty string
+    """
+    phone_text = phone.encode('ascii', 'ignore')  # encode to ascii
+    phone_text = phone_text.lower()
+    phone_text = phone_text.strip()
+    extension_digits = None
+    #
+    # strip off US international country code
+    #
+    if phone_text.find('+1 ') == 0:
+        phone_text = phone_text[3:]
+    if phone_text.find('+1-') == 0:
+        phone_text = phone_text[3:]
+    if phone_text.find('(1)') == 0:
+        phone_text = phone_text[3:]
+    digits = []
+    for c in list(phone_text):
+        if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+            digits.append(c)
+    if len(digits) > 10 or phone_text.rfind('x') > -1:
+        # pull off the extension
+        i = phone_text.rfind(' ')  # last blank
+        if i > 0:
+            extension = phone_text[i + 1:]
+            extension_digits = []
+            for c in list(extension):
+                if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+                    extension_digits.append(c)
+            digits = []  # reset the digits
+            for c in list(phone_text[:i + 1]):
+                if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+                    digits.append(c)
+        elif phone_text.rfind('x') > 0:
+            i = phone_text.rfind('x')
+            extension = phone_text[i + 1:]
+            extension_digits = []
+            for c in list(extension):
+                if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+                    extension_digits.append(c)
+            digits = []  # recalc the digits
+            for c in list(phone_text[:i + 1]):
+                if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+                    digits.append(c)
+        else:
+            extension_digits = digits[10:]
+            digits = digits[:10]
+    if len(digits) == 7:
+        if phone[0:5] == '352392':
+            updated_phone = ''  # Damaged UF phone number, nothing to repair
+            extension_digits = None
+        elif phone[0:5] == '352273':
+            updated_phone = ''  # Another damaged phone number, not to repair
+            extension_digits = None
+        else:
+            updated_phone = '(352) ' + "".join(digits[0:3]) + '-' + "".join(digits[3:7])
+    elif len(digits) == 10:
+        updated_phone = '(' + "".join(digits[0:3]) + ') ' + "".join(digits[3:6]) + \
+                        '-' + "".join(digits[6:10])
+    elif len(digits) == 5 and digits[0] == '2':  # UF special
+        updated_phone = '(352) 392-' + "".join(digits[1:5])
+    elif len(digits) == 5 and digits[0] == '3':  # another UF special
+        updated_phone = '(352) 273-' + "".join(digits[1:5])
+    else:
+        updated_phone = ''  # no repair
+        extension_digits = None
+    if extension_digits is not None and len(extension_digits) > 0:
+        updated_phone = updated_phone + ' ext. ' + "".join(extension_digits)
+    if debug:
+        print phone.ljust(25), updated_phone.ljust(25)
+    return updated_phone

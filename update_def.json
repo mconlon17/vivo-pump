@@ -86,7 +86,8 @@
                 "object": {
                     "literal": false, 
                     "type": "http://vivoweb.org/ontology/core#URLLink", 
-                    "name": "weburi"
+                    "name": "weburi", 
+                    "label": "Home Page"
                 }
             }, 
             {
