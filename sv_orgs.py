@@ -18,7 +18,6 @@
 
 # TODO: Create UPDATE_DEF for people, grants, courses, pubs -- medium
 # TODO: Use pyunit for unit level tests -- medium
-# TODO: Cut down vivofoundation to only the functions needed for the pump
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
@@ -131,7 +130,7 @@ def do_get(filename):
     :param filename: Tab delimited file of data from VIVO
     :return:  None.  File is written
     """
-    from vivofoundation import vivo_sparql_query
+    from vivopump import vivo_sparql_query
     import json
     import codecs
 
@@ -201,7 +200,7 @@ def get_graph():
     :return: graph of triples
     """
 
-    from vivofoundation import vivo_sparql_query
+    from vivopump import vivo_sparql_query
     from rdflib import Graph, URIRef, Literal
 
     front_query = "SELECT ?uri ?p ?o\nWHERE {\n    "
@@ -228,7 +227,7 @@ def do_update(filename):
     rdf as necessary to process requested changes
     """
     from rdflib import Graph, URIRef, RDF, Literal
-    from vivofoundation import get_vivo_uri, read_csv
+    from vivopump import get_vivo_uri, read_csv
     from vivopeople import repair_phone_number, repair_email
 
     # TODO: Additional testing of 2 step path -- medium
@@ -420,7 +419,7 @@ def load_enum():
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
-    from vivofoundation import read_csv
+    from vivopump import read_csv
     enum = {}
     for path in UPDATE_DEF['column_defs'].values():
         for step in path:
