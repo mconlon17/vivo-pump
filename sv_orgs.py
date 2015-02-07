@@ -1,7 +1,7 @@
 #!/usr/bin/env/python
 
 """
-    sv_orgs.py: Simple VIVO
+    sv_orgs.py: The VIVO Pump
 
     Read a spreadsheet and follow the directions to add, update or remove entities and/or
     entity attributes from VIVO.
@@ -21,7 +21,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.39"
+__version__ = "0.40"
 
 from datetime import datetime
 import argparse
@@ -132,31 +132,15 @@ def make_get_query():
     return front_query + middle_query + back_query
 
 
-def do_get(filename):
-
+def make_get_data(result_set):
     """
-    Data is queried from VIVO and returned as a tab delimited text file suitable for
-    editing using an editor or spreadsheet, and suitable for use by do_update.
-
-    :param filename: Tab delimited file of data from VIVO
-    :return:  None.  File is written
+    Given a query result set, produce a data structure with one element per uri and column values collected
+    into lists
+    :param result_set: Fuseki result set
+    :return: dictionary
+    :rtype: dict
     """
-    from vivopump import vivo_query
-    import json
-    import codecs
-
-    query = make_get_query()
-    print query
-    result_set = vivo_query(query)
-
-    # Create a data structure from the query results that collects the values from
-    # the query and has unique uri values.  Multi-valued attributes are collected
-    # into lists
-
     data = {}
-
-    print "Query Results"
-    print json.dumps(result_set['results']['bindings'], indent=4)
 
     for binding in result_set['results']['bindings']:
         uri = str(binding['uri']['value'])
@@ -168,6 +152,24 @@ def do_get(filename):
                     data[uri][name].add(binding[name]['value'])
                 else:
                     data[uri][name] = {binding[name]['value']}
+    return data
+
+
+def do_get(filename):
+
+    """
+    Data is queried from VIVO and returned as a tab delimited text file suitable for
+    editing using an editor or spreadsheet, and suitable for use by do_update.
+
+    :param filename: Tab delimited file of data from VIVO
+    :return:  None.  File is written
+    """
+    from vivopump import vivo_query
+    import codecs
+
+    query = make_get_query()
+    result_set = vivo_query(query)
+    data = make_get_data(result_set)
 
     # Write out the file
 
@@ -240,6 +242,7 @@ def prepare_column_values(update_string, step_def, row, column_name):
     :return: column_values a list of strings
     :rtype: list[str]
     """
+    # TODO: Write a date filter -- medium
     from vivopump import repair_phone_number, repair_email
 
     if step_def['predicate']['single']:
@@ -283,6 +286,74 @@ def prepare_column_values(update_string, step_def, row, column_name):
     return column_values
 
 
+def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph):
+    """
+    Given the uri of an entity to be updated, the current step definition, column value(s), vivo object(s), and
+    the update graph, add or remove triples to the update graph as needed to make the appropriate adjustments
+    based on column values and the current state of VIVO.  Whew.
+
+    There is likely controversy and refactoring to come here.  For example, None is not supported for multi-valued
+    predicates.  Why isn't single valued a special case of multi-valued?  What does the pump do when VIVO has data
+    contrary to the flow definition? And there will be more questions.
+
+    The code below represents the guts of the update.  Everything else is getting in position.
+
+    :param uri: uri of the current entity
+    :param step_def: current step definition (always a leaf in the flow graph)
+    :param column_values: list of prepared column values
+    :param vivo_objs: dict of object Literals keyed by string value of literal
+    :param update_graph: rdflib graph of the triples in the update set
+    :return: None
+    """
+    from rdflib import Literal, URIRef
+
+    # Compare VIVO to Input and update as indicated
+
+    if len(column_values) == 1:
+        column_string = column_values[0]
+        if column_string == '':
+            return None  # No action required if spreadsheet is blank
+        elif column_string == 'None':
+            print "Remove", column_name, "from", str(uri)
+            for vivo_object in vivo_objs.values():
+                update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
+                print uri, step_def['predicate']['ref'], vivo_object
+        elif len(vivo_objs) == 0:
+            print "Adding", column_name, column_string
+            if step_def['object']['literal']:
+                update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+            else:
+                update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
+        else:
+            for vivo_object in vivo_objs.values():
+                if str(vivo_object) == column_string:
+                    continue  # No action required if vivo same as source
+                else:
+                    update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
+                    print "REMOVE", row, column_name, str(vivo_object)
+                if step_def['object']['literal']:
+                    update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                else:
+                    update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
+    else:
+
+        # Ready for set comparison
+
+        print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
+
+        add_values = set(column_values) - set(vivo_objs.keys())
+        sub_values = set(vivo_objs.keys()) - set(column_values)
+        for value in add_values:
+            if step_def['object']['literal']:
+                update_graph.add((uri, step_def['predicate']['ref'], Literal(value)))
+            else:
+                update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
+        for value in sub_values:
+            update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
+
+    return None
+
+
 def do_update(filename):
     """
     read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
@@ -291,10 +362,8 @@ def do_update(filename):
     from rdflib import Graph, URIRef, RDF, RDFS, Literal
     from vivopump import new_uri, read_csv
 
-    # TODO: Additional testing of 2 step path -- medium
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- medium
-    # TODO: More code busting to improve readability and reduce complexity -- medium
 
     column_defs = UPDATE_DEF['column_defs']
 
@@ -329,20 +398,20 @@ def do_update(filename):
             #  Perhaps we handle "in order"  step 1, step 2, step last.  The code
             #  we have is for step last.
 
+            # TODO: Refactor the path logic (including length 3) into a separate function -- medium
+
             if len(column_def) > 3:
                 raise PathLengthException(
-                    "Path lengths >3 not supported.  Path length for " + column_name + " is " + str(len(column_def)))
+                    "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(len(column_def)))
 
             if len(column_def) == 3:
 
                 # Handle first and second step of length 3 path here
-                # TODO: Handle length 3 path in do_update -- medium
 
                 pass
 
             if len(column_def) == 2:
                 step_def = column_def[0]
-                print "WILL HANDLE", step_def
                 step_uri = None
                 if step_def['predicate']['single']:
 
@@ -359,7 +428,6 @@ def do_update(filename):
                     update_graph.add((step_uri, RDF.type, step_def['object']['type']))
                     if 'label' in step_def['object']:
                         update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
-                    # TODO: Verify label and type for photo and webpage.  Address looked good.
                 uri = step_uri  # the rest of processing of this column refers to the intermediate entity
 
             # Now handle the last step which is always the same (really)
@@ -377,49 +445,7 @@ def do_update(filename):
             column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
             print row, column_name, column_values, uri, vivo_objs
 
-            # Compare VIVO to Input and update as indicated
-
-            if len(column_values) == 1:
-                column_string = column_values[0]
-                if column_string == '':
-                    continue  # No action required if spreadsheet is blank
-                elif column_string == 'None':
-                    print "Remove", column_name, "from", str(uri)
-                    for vivo_object in vivo_objs.values():
-                        update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                        print uri, step_def['predicate']['ref'], vivo_object
-                elif len(vivo_objs) == 0:
-                    print "Adding", column_name, column_string
-                    if step_def['object']['literal']:
-                        update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
-                    else:
-                        update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
-                else:
-                    for vivo_object in vivo_objs.values():
-                        if str(vivo_object) == column_string:
-                            continue  # No action required if vivo same as source
-                        else:
-                            update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                            print "REMOVE", row, column_name, str(vivo_object)
-                        if step_def['object']['literal']:
-                            update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
-                        else:
-                            update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
-            else:
-
-                # Ready for set comparison
-
-                print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
-
-                add_values = set(column_values) - set(vivo_objs.keys())
-                sub_values = set(vivo_objs.keys()) - set(column_values)
-                for value in add_values:
-                    if step_def['object']['literal']:
-                        update_graph.add((uri, step_def['predicate']['ref'], Literal(value)))
-                    else:
-                        update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
-                for value in sub_values:
-                    update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
+            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph)
 
     # Write out the triples to be added and subbed in n-triples format
 
