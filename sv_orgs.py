@@ -490,20 +490,22 @@ def load_enum():
 
 from json import dumps
 
-UPDATE_DEF = read_update_def("update_def.json")
+
+parser = argparse.ArgumentParser()
+parser.add_argument("defname", help="name of definition file", default="update_def.json", nargs="?")
+parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
+                                   "data from a spreadsheet", default="get", nargs='?')
+parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
+                    default="sv_data.txt", nargs='?')
+args = parser.parse_args()
+
+UPDATE_DEF = read_update_def(args.defname)
 print datetime.now(), UPDATE_DEF
 
 ENUM = load_enum()
 print datetime.now(), "Enumerations", dumps(ENUM, indent=4)
 
 write_update_def("update_def.json")
-
-parser = argparse.ArgumentParser()
-parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
-                                   "data from a spreadsheet", default="get", nargs='?')
-parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
-                    default="sv_data.txt", nargs='?')
-args = parser.parse_args()
 
 if args.action == 'get':
     n_rows = do_get(args.filename)
