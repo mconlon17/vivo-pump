@@ -25,4 +25,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-06** 0.39 pyunit tests for each function in vivopump.  Tests pass.  More tests can/should be added.  sv_orgs operational.  get and update tested.  Code now refers to vivopump for helper functions and uses new vivopump function names. prepare_column_values split out from do_get.  Added label and type triples for intermediate objects
 * **2015-02-07** 0.40 Refactor main code for clean pylint and clean pycharm.  Two step path testing looks good
 * **2015-02-08** Draft grant_def.json for grant management in VIVO.  Requires three new enums (deptid, sponsorid, ufid), and five new filters (datetime, title, dollar_amount, deptid, sponsor_award_id).  Added improve_title, improve_dollar_amount, and comma_space to vivopump.  Test cases for each added to test_vivopump
-* **2015-02-09** Date and deptid filters added to vivopump.py.  Tests added to test_vivopump.py
+* **2015-02-09** Date, deptid and sponsoraward filters added to vivopump.py.  Tests added to test_vivopump.py

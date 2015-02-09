@@ -614,3 +614,20 @@ def improve_deptid(s):
         return match_object.group(1).rjust(8, '0')
     else:
         raise InvalidDataException(s + ' is not a valid deptid')
+
+
+def improve_sponsor_award_id(s):
+    """
+    Given a string with a sponsor award id, standardize presentation and regularize NIH award ids
+    :param s: string with sponsor award id
+    :return: string improved sponsor award id
+    :rtype: string
+    """
+    import re
+    s = s.strip()
+    nih_pattern = re.compile('.*([A-Za-z][0-9][0-9]).*([A-Za-z][A-Za-z][0-9]{6})')
+    match_object = nih_pattern.match(s)
+    if match_object:
+        return match_object.group(1).upper() + match_object.group(2).upper()
+    else:
+        return s

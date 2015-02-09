@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, vivo_query, repair_email, repair_phone_number, comma_space, improve_title, \
-    improve_dollar_amount, InvalidDataException, improve_date, improve_deptid
+    improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 
 
 class NewUriTestCase(unittest.TestCase):
@@ -150,7 +150,7 @@ class ImproveDateTestCase(unittest.TestCase):
             print out_string
 
 
-class ImproveDeptidTestCase(unittest.TestCase):
+class ImproveDeptIdTestCase(unittest.TestCase):
     def test_no_op(self):
         in_string = "16350100"
         out_string = improve_deptid(in_string)
@@ -166,6 +166,28 @@ class ImproveDeptidTestCase(unittest.TestCase):
         with self.assertRaises(InvalidDataException):
             out_string = improve_deptid(in_string)
             print out_string
+
+
+class ImproveSponsorAwardIdTestCase(unittest.TestCase):
+    def test_no_op(self):
+        in_string = "14 A 76 Jan 2009"
+        out_string = improve_sponsor_award_id(in_string)
+        self.assertEqual(in_string, out_string)
+
+    def test_strip(self):
+        in_string = "  1234567 "
+        out_string = improve_sponsor_award_id(in_string)
+        self.assertEqual("1234567", out_string)
+
+    def test_nih(self):
+        in_string = "5R01 DK288283 "
+        out_string = improve_sponsor_award_id(in_string)
+        self.assertEqual("R01DK288283", out_string)
+
+    def test_nih_upper(self):
+        in_string = "5r01 Dk288283 "
+        out_string = improve_sponsor_award_id(in_string)
+        self.assertEqual("R01DK288283", out_string)
 
 
 if __name__ == "__main__":
