@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, vivo_query, repair_email, repair_phone_number, comma_space, improve_title, \
-    improve_dollar_amount, InvalidDataException, improve_date
+    improve_dollar_amount, InvalidDataException, improve_date, improve_deptid
 
 
 class NewUriTestCase(unittest.TestCase):
@@ -147,6 +147,24 @@ class ImproveDateTestCase(unittest.TestCase):
         in_string = "15-alg-9"
         with self.assertRaises(InvalidDataException):
             out_string = improve_date(in_string)
+            print out_string
+
+
+class ImproveDeptidTestCase(unittest.TestCase):
+    def test_no_op(self):
+        in_string = "16350100"
+        out_string = improve_deptid(in_string)
+        self.assertEqual(in_string, out_string)
+
+    def test_short(self):
+        in_string = "1234567"
+        out_string = improve_deptid(in_string)
+        self.assertEqual("01234567", out_string)
+
+    def test_invalid_data(self):
+        in_string = "A6"
+        with self.assertRaises(InvalidDataException):
+            out_string = improve_deptid(in_string)
             print out_string
 
 

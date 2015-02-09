@@ -598,3 +598,19 @@ def improve_date(s):
     date_value = date(y, m, d)
     date_string = date_value.isoformat()
     return date_string
+
+
+def improve_deptid(s):
+    """
+    Given a string with a deptid, confirm validity, add leading zeros if needed
+    :param s: string deptid
+    :return: string improved deptid
+    :rtype: string
+    """
+    import re
+    deptid_pattern = re.compile('([0-9]{1,8})')
+    match_object = deptid_pattern.match(s)
+    if match_object:
+        return match_object.group(1).rjust(8, '0')
+    else:
+        raise InvalidDataException(s + ' is not a valid deptid')
