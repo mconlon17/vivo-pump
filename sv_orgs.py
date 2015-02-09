@@ -16,7 +16,7 @@
 
 """
 
-# TODO: Create UPDATE_DEF for people, grants, courses, pubs -- medium
+# TODO: Create UPDATE_DEF for people, courses, pubs -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"

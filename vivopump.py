@@ -298,7 +298,6 @@ def comma_space(s):
     :return s: improved string with commas always followed by spaces
     :rtype: basestring
     """
-    # TODO write test function
     k = s.find(',')
     if -1 < k < len(s) - 1 and s[k+1] != " ":
         s = s[0:k] + ', ' + comma_space(s[k+1:])
@@ -557,5 +556,45 @@ def improve_dollar_amount(s):
         s = '0' + s
     m = pattern.match(s)
     if not m:
-        raise InvalidDataException(s+' not a valid dollar amount')
+        raise InvalidDataException(s + ' not a valid dollar amount')
     return s
+
+
+def improve_date(s):
+    """
+    Given a string representing a date, year month day, return a string that is standard UTC format.
+    :param s: the string to be improved.  Several input date formats are supported including slashes, spaces or dashes
+    for separators, variable digits for year, month and day.
+    :return: improved date string
+    :rtype: string
+    """
+    import re
+    from datetime import date
+
+    month_words = {
+        'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6, 'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11,
+        'dec': 12, 'january': 1, 'february': 2, 'march': 3, 'april': 4, 'june': 6, 'july': 7, 'august': 8,
+        'september': 9, 'october': 10, 'november': 11, 'december': 12
+    }
+    all_numbers = re.compile('([0-9]+)[-/, ]([0-9]+)[-/, ]([0-9]+)')
+    middle_word = re.compile('([0-9]+)[-/, ]([a-zA-Z]+)[-,/ ]([0-9]+)')
+    match_object = all_numbers.match(s)
+    if match_object:
+        y = int(match_object.group(1))
+        m = int(match_object.group(2))
+        d = int(match_object.group(3))
+    else:
+        match_object = middle_word.match(s)
+        if match_object:
+            y = int(match_object.group(1))
+            m = month_words.get(match_object.group(2).lower(), None)
+            if m is None:
+                raise InvalidDataException(s + ' is not a valid date')
+            d = int(match_object.group(3))
+        else:
+            raise InvalidDataException(s + ' did not match a date pattern')
+    if y < 100:
+        y += 2000
+    date_value = date(y, m, d)
+    date_string = date_value.isoformat()
+    return date_string

@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, vivo_query, repair_email, repair_phone_number, comma_space, improve_title, \
-    improve_dollar_amount, InvalidDataException
+    improve_dollar_amount, InvalidDataException, improve_date
 
 
 class NewUriTestCase(unittest.TestCase):
@@ -113,6 +113,40 @@ class ImproveDollarAmountTestCase(unittest.TestCase):
         in_string = "A6"
         with self.assertRaises(InvalidDataException):
             out_string = improve_dollar_amount(in_string)
+            print out_string
+
+
+class ImproveDateTestCase(unittest.TestCase):
+    def test_no_op(self):
+        in_string = "2014-12-09"
+        out_string = improve_date(in_string)
+        self.assertEqual(in_string, out_string)
+
+    def test_short(self):
+        in_string = "14-12-9"
+        out_string = improve_date(in_string)
+        self.assertEqual("2014-12-09", out_string)
+
+    def test_separators(self):
+        in_string = "34/2/1"
+        out_string = improve_date(in_string)
+        self.assertEqual("2034-02-01", out_string)
+
+    def test_invalid_data(self):
+        in_string = "A6"
+        with self.assertRaises(InvalidDataException):
+            out_string = improve_date(in_string)
+            print out_string
+
+    def test_month_word(self):
+        in_string = "15-aug-9"
+        out_string = improve_date(in_string)
+        self.assertEqual("2015-08-09", out_string)
+
+    def test_invalid_data(self):
+        in_string = "15-alg-9"
+        with self.assertRaises(InvalidDataException):
+            out_string = improve_date(in_string)
             print out_string
 
 
