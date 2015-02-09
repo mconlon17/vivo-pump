@@ -11,3 +11,5 @@ Using rdflib, build command line tools for managing organizations in VIVO.
 # Note
 
 This is morphing into a general input/output tool for managing VIVO data using flat, rectangular files.  This is the central concept behind Simple VIVO.  Now appears that the core software tool will be called "the Pump" and Simple VIVO will be a set of pump definitions and associated filters and tables, along with extensive documentation (a book?)
+
+See the JSON files in this repository for examples of using this software to get and put data into VIVO.
