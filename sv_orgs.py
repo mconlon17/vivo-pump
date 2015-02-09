@@ -39,18 +39,6 @@ class PathLengthException(Exception):
         return repr(self.value)
 
 
-class InvalidDataException(Exception):
-    """
-    Raise this exception when update data contains values that can not be processed
-    """
-    def __init__(self, value):
-        Exception.__init__(self)
-        self.value = value
-
-    def __str__(self):
-        return repr(self.value)
-
-
 def write_update_def(filename):
     """
     Write the UPDATE_DEF global to a json_file
@@ -243,7 +231,7 @@ def prepare_column_values(update_string, step_def, row, column_name):
     :rtype: list[str]
     """
     # TODO: Write a date filter -- medium
-    from vivopump import repair_phone_number, repair_email
+    from vivopump import repair_phone_number, repair_email, InvalidDataException
 
     if step_def['predicate']['single']:
         column_values = [update_string]
