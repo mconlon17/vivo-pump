@@ -21,7 +21,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.40"
+__version__ = "0.41"
 
 from datetime import datetime
 import argparse
@@ -109,7 +109,7 @@ def make_get_query():
             if len(path) == 2:
                 middle_query += name + ' . }}\n'
             else:
-                middle_query += path[1]['object']['name'] + ' . \n        OPTIONAL { ?' +\
+                middle_query += path[1]['object']['name'] + ' . \n            OPTIONAL { ?' +\
                     path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
                 if len(path) == 3:
                     middle_query += name + ' . }}}\n'
@@ -156,6 +156,7 @@ def do_get(filename):
     import codecs
 
     query = make_get_query()
+    print query
     result_set = vivo_query(query)
     data = make_get_data(result_set)
 
@@ -163,7 +164,7 @@ def do_get(filename):
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
-    columns = (['uri']+UPDATE_DEF['column_defs'].keys())
+    columns = (['uri'] + UPDATE_DEF['column_defs'].keys())
     outfile.write('\t'.join(columns))
     outfile.write('\n')
 
@@ -230,8 +231,8 @@ def prepare_column_values(update_string, step_def, row, column_name):
     :return: column_values a list of strings
     :rtype: list[str]
     """
-    # TODO: Write a date filter -- medium
-    from vivopump import repair_phone_number, repair_email, InvalidDataException
+    from vivopump import InvalidDataException
+    import vivopump  # all symbols from vivopump available for eval(). Marked as unused by Pycharm and pylint
 
     if step_def['predicate']['single']:
         column_values = [update_string]
@@ -383,8 +384,7 @@ def do_update(filename):
             if data_update[column_name] == '':
                 continue
 
-            #  Perhaps we handle "in order"  step 1, step 2, step last.  The code
-            #  we have is for step last.
+            #  Perhaps we handle "in order"  step 1, step 2, step last.  The update code is step last
 
             # TODO: Refactor the path logic (including length 3) into a separate function -- medium
 
@@ -394,7 +394,11 @@ def do_update(filename):
 
             if len(column_def) == 3:
 
-                # Handle first and second step of length 3 path here
+                # Handle first and second step of length 3 path here.  Likely that additional triples will be needed
+                # in the update graph for finding and processing.  Why do we use a first order graph for update, but
+                # a full graph for get?  Seems inconsistent, under serves update and creates additional code. Also
+                # seems likely that the path 3 logic will need the entire path for examination and processing.  Leaf
+                # actions should remain as they are.
 
                 pass
 
@@ -493,7 +497,7 @@ print datetime.now(), UPDATE_DEF
 ENUM = load_enum()
 print datetime.now(), "Enumerations", dumps(ENUM, indent=4)
 
-write_update_def("update_def.json")
+write_update_def(args.defname)
 
 if args.action == 'get':
     n_rows = do_get(args.filename)
