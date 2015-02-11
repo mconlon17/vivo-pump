@@ -26,4 +26,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-07** 0.40 Refactor main code for clean pylint and clean pycharm.  Two step path testing looks good
 * **2015-02-08** Draft grant_def.json for grant management in VIVO.  Requires three new enums (deptid, sponsorid, ufid), and five new filters (datetime, title, dollar_amount, deptid, sponsor_award_id).  Added improve_title, improve_dollar_amount, and comma_space to vivopump.  Test cases for each added to test_vivopump
 * **2015-02-09** Date, deptid and sponsor award id filters added to vivopump.py.  Tests added to test_vivopump.py.  All enumerations added.
-* **2015-02-10** Improve formatting of get query. Improve comments.
+* **2015-02-10** Improve formatting of get query. Improve comments. Update for buildings as test case.
