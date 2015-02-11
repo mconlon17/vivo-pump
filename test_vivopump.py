@@ -74,6 +74,12 @@ class ImproveTitleTestCase(unittest.TestCase):
         print out_title
         self.assertEqual("HIV in Florida, a Multi-Center Trial", out_title)
 
+    def test_substitution_at_end(self):
+        in_title = "Agricultural Engineering Bldg"
+        out_title = improve_title(in_title)
+        print out_title
+        self.assertEqual("Agricultural Engineering Building", out_title)
+
     def test_preserve_unicode(self):
         in_title = u"François Börner"
         out_title = improve_title(in_title)

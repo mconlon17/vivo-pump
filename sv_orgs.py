@@ -16,7 +16,9 @@
 
 """
 
+# TODO: Review all print statements for appropriate usage -- medium
 # TODO: Create UPDATE_DEF for people, courses, pubs -- medium
+# TODO: Control column order via update_def -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
@@ -130,6 +132,8 @@ def make_get_data(result_set):
     """
     data = {}
 
+    # TODO: What to do when predicate is single, but VIVO has multiple?
+
     for binding in result_set['results']['bindings']:
         uri = str(binding['uri']['value'])
         if uri not in data:
@@ -231,8 +235,7 @@ def prepare_column_values(update_string, step_def, row, column_name):
     :return: column_values a list of strings
     :rtype: list[str]
     """
-    from vivopump import InvalidDataException
-    import vivopump  # all symbols from vivopump available for eval(). Marked as unused by Pycharm and pylint
+    from vivopump import InvalidDataException, improve_title
 
     if step_def['predicate']['single']:
         column_values = [update_string]
@@ -321,6 +324,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
                     update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                     print "REMOVE", row, column_name, str(vivo_object)
                 if step_def['object']['literal']:
+                    print "ADD   ", row, column_name, column_string
                     update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
                 else:
                     update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
@@ -424,7 +428,7 @@ def do_update(filename):
 
             # Now handle the last step which is always the same (really)
 
-            step_def = column_def[len(column_def)-1]
+            step_def = column_def[len(column_def) - 1]
 
             # Gather all VIVO objects for the column
 
@@ -492,10 +496,8 @@ parser.add_argument("filename", help="name of spreadsheet containing data to be 
 args = parser.parse_args()
 
 UPDATE_DEF = read_update_def(args.defname)
-print datetime.now(), UPDATE_DEF
-
 ENUM = load_enum()
-print datetime.now(), "Enumerations", dumps(ENUM, indent=4)
+
 
 write_update_def(args.defname)
 
@@ -505,5 +507,9 @@ if args.action == 'get':
 elif args.action == 'update':
     [n_add, n_sub] = do_update(args.filename)
     print datetime.now(), n_add, 'triples to add', n_sub, 'triples to sub'
+elif args.action == 'setup':
+    print datetime.now(), "Enumerations\n", dumps(ENUM, indent=4)
+    print datetime.now(), "Update Definitions\n", dumps(UPDATE_DEF, indent=4)
+    print datetime.now(), "Get Query\n", make_get_query()
 else:
     print datetime.now(), "Unknown action.  Try sv_orgs -h for help"
