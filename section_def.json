@@ -1,0 +1,76 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a ufVivo:CourseSection .", 
+        "type": "http://vivo.ufl.edu/ontology/vivo-ufl/CourseSection"
+    }, 
+    "column_defs": {
+        "course": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/sectionForCourse"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivo.ufl.edu/ontology/vivo-ufl/Course", 
+                    "name": "courseuri"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/courseNum"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "term": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "name": "termuri"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "number": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/sectionNum"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "filter": "improve_title", 
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "entity_def": {
+        "order_by": "title", 
+        "entity_sparql": "?uri a vivo:InformationResource .", 
+        "type": "http://vivoweb.org/ontology/core#InformationResource"
+    }, 
+    "column_defs": {
+        "url": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#webpage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#URLLink", 
+                    "name": "weburi", 
+                    "label": "Full Text"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#linkURI"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "doi": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://purl.org/ontology/bibo/doi"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "filter": "improve_title", 
+                    "literal": true
+                }
+            }
+        ]
+    }
+}
