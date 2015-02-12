@@ -1,8 +1,8 @@
 {
     "entity_def": {
-        "type": "http://vivoweb.org/ontology/core#Building", 
+        "order_by": "name", 
         "entity_sparql": "?uri a vivo:Building .", 
-        "order_by": "name"
+        "type": "http://vivoweb.org/ontology/core#Building"
     }, 
     "column_defs": {
         "abbreviation": [
@@ -39,6 +39,28 @@
                 }
             }
         ], 
+        "photo": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
+                    "name": "photouri"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
         "number": [
             {
                 "predicate": {
@@ -58,28 +80,6 @@
                 }, 
                 "object": {
                     "filter": "improve_title", 
-                    "literal": true
-                }
-            }
-        ], 
-        "photo": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
-                    "name": "photouri"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
-                }, 
-                "object": {
                     "literal": true
                 }
             }

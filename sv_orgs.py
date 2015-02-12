@@ -23,7 +23,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.41"
+__version__ = "0.42"
 
 from datetime import datetime
 import argparse
@@ -106,15 +106,15 @@ def make_get_query():
         if len(path) == 1:
             middle_query += name + ' . }\n'
         else:
-            middle_query += path[0]['object']['name'] + ' . \n        OPTIONAL { ?' +\
+            middle_query += path[0]['object']['name'] + ' . ?' +\
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
             if len(path) == 2:
-                middle_query += name + ' . }}\n'
+                middle_query += name + ' . }\n'
             else:
-                middle_query += path[1]['object']['name'] + ' . \n            OPTIONAL { ?' +\
+                middle_query += path[1]['object']['name'] + ' . ?' +\
                     path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
                 if len(path) == 3:
-                    middle_query += name + ' . }}}\n'
+                    middle_query += name + ' . }\n'
                 else:
                     raise PathLengthException('Path length >3 not supported in do_get')
 
@@ -184,7 +184,8 @@ def do_get(filename):
                         enum_name = path[len(path)-1]['object']['enum']
                         a = set()
                         for x in data[uri][name]:
-                            a.add(ENUM[enum_name]['get'][x])
+                            a.add(ENUM[enum_name]['get'].get(x, x))  # if we can't find the value in the enumeration,
+                                # just return the value
                         data[uri][name] = a
 
                 # Gather values into a delimited string
