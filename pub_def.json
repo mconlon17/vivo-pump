@@ -1,8 +1,8 @@
 {
     "entity_def": {
-        "order_by": "title", 
+        "type": "http://vivoweb.org/ontology/core#InformationResource", 
         "entity_sparql": "?uri a vivo:InformationResource .", 
-        "type": "http://vivoweb.org/ontology/core#InformationResource"
+        "order_by": "title"
     }, 
     "column_defs": {
         "url": [

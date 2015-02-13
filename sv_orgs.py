@@ -102,7 +102,7 @@ def make_get_query():
 
     middle_query = ""
     for name, path in UPDATE_DEF['column_defs'].items():
-        middle_query += '    OPTIONAL { ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
+        middle_query += '    OPTIONAL {  ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
         if len(path) == 1:
             middle_query += name + ' . }\n'
         else:

@@ -1,8 +1,8 @@
 {
     "entity_def": {
-        "order_by": "name", 
+        "type": "http://xmlns.com/foaf/0.1/Organization", 
         "entity_sparql": "?uri a foaf:Organization . ?uri a ufVivo:UFEntity . ", 
-        "type": "http://xmlns.com/foaf/0.1/Organization"
+        "order_by": "name"
     }, 
     "column_defs": {
         "city": [
@@ -24,23 +24,6 @@
                 }, 
                 "object": {
                     "literal": true
-                }
-            }
-        ], 
-        "type": [
-            {
-                "predicate": {
-                    "single": false, 
-                    "include": [
-                        "thing", 
-                        "agent", 
-                        "org"
-                    ], 
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "enum": "org_types"
                 }
             }
         ], 
@@ -241,6 +224,23 @@
                 }, 
                 "object": {
                     "literal": true
+                }
+            }
+        ], 
+        "type": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "include": [
+                        "thing", 
+                        "agent", 
+                        "org"
+                    ], 
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "enum": "org_types"
                 }
             }
         ], 
