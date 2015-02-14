@@ -8,7 +8,8 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
 VIVO_URI_PREFIX = "http://vivo.ufl.edu/individual/"
-VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
+#VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
+VIVO_QUERY_URI = "http://localhost:5820/vivo/query"
 
 import csv
 import urllib
@@ -199,6 +200,19 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI,
         return json.loads(response)
     except KeyError:
         return None
+
+
+def write_update_def(update_def, filename):
+    """
+    Write update_def to a json_file
+    :param filename: name of file to write
+    :return: None.  A file is written
+    """
+    import json
+    out_file = open(filename, "w")
+    json.dump(update_def, out_file, indent=4)
+    out_file.close()
+    return
 
 
 def repair_email(email, exp=re.compile(r'\w+\.*\w+@\w+\.(\w+\.*)*\w+')):

@@ -28,3 +28,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-09** Date, deptid and sponsor award id filters added to vivopump.py.  Tests added to test_vivopump.py.  All enumerations added.
 * **2015-02-10** Improve formatting of get query. Improve comments. Update for buildings as test case.
 * **2015-02-11** 0.42 Improve make_get_query to avoid nested optionals.  Handle value in VIVO not in enumeration table. Improve def files.  Now have person, section, pub, grant and building.  All run in Jena, but not all run in Fuseki.
+* **2015-02-14** 0.43 -v option for verbose output.  Move write_update_def to vivopump.  Add test case.

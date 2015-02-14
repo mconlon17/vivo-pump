@@ -9,7 +9,8 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
 import unittest
-from vivopump import new_uri, read_csv, vivo_query, repair_email, repair_phone_number, comma_space, improve_title, \
+from vivopump import new_uri, read_csv, vivo_query, write_update_def, repair_email, repair_phone_number, comma_space, \
+    improve_title, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 
 
@@ -27,8 +28,18 @@ class ReadCSVKeysTestCase(unittest.TestCase):
 
 class VIVOQueryTestCase(unittest.TestCase):
     def test_vivo_query(self):
-        result = vivo_query("SELECT ?uri WHERE { ?uri a foaf:Organization .}")
+        result = vivo_query("SELECT ?uri WHERE { ?uri a foaf:Organization .}", debug=True)
         self.assertTrue(len(result) > 0)
+
+
+class WriteUpdateDefTestCase(unittest.TestCase):
+    def test_create_file(self):
+        import os.path
+        update_def = "{}"
+        filename = "__write_update_def_test_create_file.json"
+        write_update_def(update_def, filename)
+        self.assertTrue(os.path.isfile(filename))
+        os.remove(filename)
 
 
 class RepairEmailTestCase(unittest.TestCase):

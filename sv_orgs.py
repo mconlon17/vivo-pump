@@ -16,14 +16,13 @@
 
 """
 
-# TODO: Review all print statements for appropriate usage -- medium
-# TODO: Create UPDATE_DEF for people, courses, pubs -- medium
+# TODO: Continue work on UPDATE_DEF for people, courses, pubs -- medium
 # TODO: Control column order via update_def -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.42"
+__version__ = "0.43"
 
 from datetime import datetime
 import argparse
@@ -39,19 +38,6 @@ class PathLengthException(Exception):
 
     def __str__(self):
         return repr(self.value)
-
-
-def write_update_def(filename):
-    """
-    Write the UPDATE_DEF global to a json_file
-    :param filename: name of file to write
-    :return: None.  A file is written
-    """
-    import json
-    out_file = open(filename, "w")
-    json.dump(UPDATE_DEF, out_file, indent=4)
-    out_file.close()
-    return
 
 
 def read_update_def(filename):
@@ -147,7 +133,7 @@ def make_get_data(result_set):
     return data
 
 
-def do_get(filename):
+def do_get(filename, debug=True):
 
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
@@ -160,7 +146,8 @@ def do_get(filename):
     import codecs
 
     query = make_get_query()
-    print query
+    if debug:
+        print query
     result_set = vivo_query(query)
     data = make_get_data(result_set)
 
@@ -201,7 +188,7 @@ def do_get(filename):
     return len(data)
 
 
-def get_graph():
+def get_graph(debug=False):
     """
     Given the update def, get a graph from VIVO of the triples eligible for updating
     :return: graph of triples
@@ -213,7 +200,8 @@ def get_graph():
     front_query = "SELECT ?uri ?p ?o\nWHERE {\n    "
     back_query = "    ?uri ?p ?o .\n}"
     graph_query = front_query + UPDATE_DEF['entity_def']['entity_sparql'] + back_query
-    print 'Graph query\n', graph_query
+    if debug:
+        print 'Graph query\n', graph_query
     triples = vivo_query(graph_query)
     a = Graph()
     for row in triples['results']['bindings']:
@@ -228,7 +216,7 @@ def get_graph():
     return a
 
 
-def prepare_column_values(update_string, step_def, row, column_name):
+def prepare_column_values(update_string, step_def, row, column_name, debug=False):
     """
     Give the string of data from the update file, the step definition, the row and column name of the
     update_string in the update file, enumerations and filters, prepare the column values and return them
@@ -273,13 +261,14 @@ def prepare_column_values(update_string, step_def, row, column_name):
             was_string = column_values[i]
             column_values[i] = eval(step_def['object']['filter'])(column_values[i])
             if was_string != column_values[i]:
-                print row, column_name, step_def['object'][
-                    'filter'], "FILTER IMPROVED", was_string, 'to', \
-                    column_values[i]
+                if debug:
+                    print row, column_name, step_def['object'][
+                        'filter'], "FILTER IMPROVED", was_string, 'to', \
+                        column_values[i]
     return column_values
 
 
-def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph):
+def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug=False):
     """
     Given the uri of an entity to be updated, the current step definition, column value(s), vivo object(s), and
     the update graph, add or remove triples to the update graph as needed to make the appropriate adjustments
@@ -307,12 +296,15 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
         if column_string == '':
             return None  # No action required if spreadsheet is blank
         elif column_string == 'None':
-            print "Remove", column_name, "from", str(uri)
+            if debug:
+                print "Remove", column_name, "from", str(uri)
             for vivo_object in vivo_objs.values():
                 update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                print uri, step_def['predicate']['ref'], vivo_object
+                if debug:
+                    print uri, step_def['predicate']['ref'], vivo_object
         elif len(vivo_objs) == 0:
-            print "Adding", column_name, column_string
+            if debug:
+                print "Adding", column_name, column_string
             if step_def['object']['literal']:
                 update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
             else:
@@ -323,17 +315,19 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
                     continue  # No action required if vivo same as source
                 else:
                     update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                    print "REMOVE", row, column_name, str(vivo_object)
+                    if debug:
+                        print "REMOVE", row, column_name, str(vivo_object)
                 if step_def['object']['literal']:
-                    print "ADD   ", row, column_name, column_string
+                    if debug:
+                        print "ADD   ", row, column_name, column_string
                     update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
                 else:
                     update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
     else:
 
         # Ready for set comparison
-
-        print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
+        if debug:
+            print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
 
         add_values = set(column_values) - set(vivo_objs.keys())
         sub_values = set(vivo_objs.keys()) - set(column_values)
@@ -348,7 +342,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     return None
 
 
-def do_update(filename):
+def do_update(filename, debug=False):
     """
     read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
     rdf as necessary to process requested changes
@@ -365,10 +359,12 @@ def do_update(filename):
     update_graph = Graph()
     for s, p, o in original_graph:
         update_graph.add((s, p, o))
-    print datetime.now(), 'Graphs ready for processing. Original has ', len(original_graph), '. Update graph has', len(
-        update_graph)
+    if debug:
+        print datetime.now(), 'Graphs ready for processing. Original has ', len(original_graph), '. Update graph has', \
+            len(update_graph)
     data_updates = read_csv(filename, delimiter='\t')
-    print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(data_updates), 'rows.'
+    if debug:
+        print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(data_updates), 'rows.'
     for row, data_update in data_updates.items():
         uri = URIRef(data_update['uri'])
         if (uri, None, None) not in update_graph:
@@ -378,7 +374,8 @@ def do_update(filename):
             #  Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
             uri_string = new_uri()
-            print "Adding an entity for row", row, ".  Will be added at", uri_string
+            if debug:
+                print "Adding an entity for row", row, ".  Will be added at", uri_string
             uri = URIRef(uri_string)
             update_graph.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
         entity_uri = uri
@@ -440,9 +437,10 @@ def do_update(filename):
             # Prepare all column values for the column
 
             column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
-            print row, column_name, column_values, uri, vivo_objs
+            if debug:
+                print row, column_name, column_values, uri, vivo_objs
 
-            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph)
+            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug=debug)
 
     # Write out the triples to be added and subbed in n-triples format
 
@@ -487,26 +485,25 @@ def load_enum():
 
 from json import dumps
 
-
 parser = argparse.ArgumentParser()
-parser.add_argument("defname", help="name of definition file", default="update_def.json", nargs="?")
 parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
-                                   "data from a spreadsheet", default="get", nargs='?')
+                                   "data from a spreadsheet", default="setup", nargs='?')
+parser.add_argument("defname", help="name of definition file", default="sv_def.json", nargs="?")
+
 parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
                     default="sv_data.txt", nargs='?')
+parser.add_argument("--verbose", "-v", action="store_true", help="write verbose processing messages to the log")
 args = parser.parse_args()
 
 UPDATE_DEF = read_update_def(args.defname)
 ENUM = load_enum()
-
-
-write_update_def(args.defname)
+debug = args.verbose
 
 if args.action == 'get':
-    n_rows = do_get(args.filename)
+    n_rows = do_get(args.filename, debug=debug)
     print datetime.now(), n_rows, "rows in", args.filename
 elif args.action == 'update':
-    [n_add, n_sub] = do_update(args.filename)
+    [n_add, n_sub] = do_update(args.filename, debug=debug)
     print datetime.now(), n_add, 'triples to add', n_sub, 'triples to sub'
 elif args.action == 'setup':
     print datetime.now(), "Enumerations\n", dumps(ENUM, indent=4)
