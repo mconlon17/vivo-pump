@@ -28,13 +28,19 @@ class ReadCSVKeysTestCase(unittest.TestCase):
 
 class VIVOQueryTestCase(unittest.TestCase):
     def test_vivo_query(self):
-        result = vivo_query("SELECT ?uri WHERE { ?uri a foaf:Organization .}", debug=True)
+        result = vivo_query("""
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        SELECT ?label
+        WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
+        """, debug=True)
+        print result
         self.assertTrue(len(result) > 0)
 
 
 class WriteUpdateDefTestCase(unittest.TestCase):
     def test_create_file(self):
         import os.path
+
         update_def = "{}"
         filename = "__write_update_def_test_create_file.json"
         write_update_def(update_def, filename)

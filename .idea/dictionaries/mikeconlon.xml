@@ -3,6 +3,7 @@
     <words>
       <w>baseurl</w>
       <w>börner</w>
+      <w>dbpedia</w>
       <w>defname</w>
       <w>defs</w>
       <w>fixit</w>
@@ -11,6 +12,7 @@
       <w>fuseki</w>
       <w>objs</w>
       <w>pyunit</w>
+      <w>stardog</w>
       <w>stdout</w>
       <w>vivopump</w>
     </words>
