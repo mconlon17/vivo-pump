@@ -29,12 +29,20 @@ class ReadCSVKeysTestCase(unittest.TestCase):
 class VIVOQueryTestCase(unittest.TestCase):
     def test_vivo_query(self):
         result = vivo_query("""
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         SELECT ?label
         WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
         """, debug=True)
         print result
         self.assertTrue(len(result) > 0)
+
+    def test_bad_request(self):
+        from SPARQLWrapper import SPARQLExceptions
+        with self.assertRaises(SPARQLExceptions.QueryBadFormed):
+            result = vivo_query("""
+            SEWECT ?label
+            WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
+            """, debug=True)
+            print result
 
 
 class WriteUpdateDefTestCase(unittest.TestCase):

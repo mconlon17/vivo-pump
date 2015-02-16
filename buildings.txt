@@ -1,4 +1,5 @@
 uri	abbreviation	url	number	name	photo
+http://vivo.ufl.edu/individual/PhillipsCenterforthePerformingArts		http://performingarts.ufl.edu/venues/phillips-center/	315	Phillips Center for the Performing Arts;Phillips Center For The Performing Arts	
 http://vivo.ufl.edu/individual/n1001011525			1228	Polyhouse #9-Ornamental Horticulture	
 http://vivo.ufl.edu/individual/n1010879650			843	Warehouse	
 http://vivo.ufl.edu/individual/n1020350772			166	Parking Garage 9 (Archer Rd S)	
@@ -202,7 +203,7 @@ http://vivo.ufl.edu/individual/n2834485621			15	Henry H. Buckman Hall
 http://vivo.ufl.edu/individual/n2840840371			385	Maguire 21	
 http://vivo.ufl.edu/individual/n2842588694			838	Chemical Storage	
 http://vivo.ufl.edu/individual/n2847305132			1150	Smathers Emergency Generator	
-http://vivo.ufl.edu/individual/n2860053543			683	EH&S Program Support Building	
+http://vivo.ufl.edu/individual/n2860053543			683	EHandS Program Support Building	
 http://vivo.ufl.edu/individual/n2875649174			976	Fertilizer Storage	
 http://vivo.ufl.edu/individual/n2892702649			557	Nuclear Reactor	
 http://vivo.ufl.edu/individual/n2901655257			206	Basic Science Building	
@@ -254,7 +255,6 @@ http://vivo.ufl.edu/individual/n3393346170			593	May A. Mann Jennings Hall A
 http://vivo.ufl.edu/individual/n3413814599			696	Shade House, Plant Pathology	
 http://vivo.ufl.edu/individual/n3439040189			88	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n3449212891			317	Chilled Water Plant #6	
-http://vivo.ufl.edu/individual/n34692		http://performingarts.ufl.edu/venues/phillips-center/	315	Phillips Center for the Performing Arts	
 http://vivo.ufl.edu/individual/n3479503446			619	Entomology Field Laboratory	
 http://vivo.ufl.edu/individual/n3494012269			265	Student RecreationandFitness Ctr	
 http://vivo.ufl.edu/individual/n3506958112			758	Chilled Water Plant #7	
@@ -513,7 +513,7 @@ http://vivo.ufl.edu/individual/n5600957634			1098	Vet Med Medical Gases Storage
 http://vivo.ufl.edu/individual/n5616982477			1102	Leigh Hall Walkways	
 http://vivo.ufl.edu/individual/n5623337471			125	Scott Linder Tennis Stadium	
 http://vivo.ufl.edu/individual/n5624477728			491	Greenhouse, Entomology	
-http://vivo.ufl.edu/individual/n56393		http://www.arts.ufl.edu/venue_details.asp?venueID=3;http://campusmap.ufl.edu/?loc=0687&zoom=17	687	H. Philip Constans Theatre;Constans Theatre	
+http://vivo.ufl.edu/individual/n56393		http://www.arts.ufl.edu/venue_details.asp?venueID=3;http://campusmap.ufl.edu/?loc=0687&zoom=17	687	Constans Theatre;H. Philip Constans Theatre	
 http://vivo.ufl.edu/individual/n5640430024			610	Sanitary Lift Station L2	
 http://vivo.ufl.edu/individual/n5641087504			423	Delta Chi	
 http://vivo.ufl.edu/individual/n5665842365			253	University Foundation Annex	
@@ -939,7 +939,7 @@ http://vivo.ufl.edu/individual/n988751257			1124	Engineering Clock Tower
 http://vivo.ufl.edu/individual/n9890704981			1088	Shands Heliport Office Bldg	
 http://vivo.ufl.edu/individual/n9896151450			14	Kathryn Chicone Ustler Hall	
 http://vivo.ufl.edu/individual/n9898522443			576	Hume Hall Commons Building	
-http://vivo.ufl.edu/individual/n9909447235	FLMNH		308	Powell Hall	
+http://vivo.ufl.edu/individual/n9909447235			308	Powell Hall (FLMNH)	
 http://vivo.ufl.edu/individual/n9926742547			572	Coastal Engineering Test Lab	
 http://vivo.ufl.edu/individual/n9930288785			21	Florida Gymnasium	
 http://vivo.ufl.edu/individual/n9930585930			1257	Greenhouse	

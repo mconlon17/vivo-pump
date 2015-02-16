@@ -22,7 +22,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.43"
+__version__ = "0.44"
 
 from datetime import datetime
 import argparse
@@ -499,6 +499,7 @@ UPDATE_DEF = read_update_def(args.defname)
 ENUM = load_enum()
 debug = args.verbose
 
+print datetime.now(), "Start"
 if args.action == 'get':
     n_rows = do_get(args.filename, debug=debug)
     print datetime.now(), n_rows, "rows in", args.filename
@@ -511,3 +512,4 @@ elif args.action == 'setup':
     print datetime.now(), "Get Query\n", make_get_query()
 else:
     print datetime.now(), "Unknown action.  Try sv_orgs -h for help"
+print datetime.now(), "Finish"

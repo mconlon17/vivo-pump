@@ -146,25 +146,15 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI, debug=False):
     PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
     PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-    PREFIX swrl:  <http://www.w3.org/2003/11/swrl#>
-    PREFIX swrlb: <http://www.w3.org/2003/11/swrlb#>
     PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
     PREFIX bibo: <http://purl.org/ontology/bibo/>
-    PREFIX c4o: <http://purl.org/spar/c4o/>
-    PREFIX cito: <http://purl.org/spar/cito/>
     PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-    PREFIX fabio: <http://purl.org/spar/fabio/>
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX geo: <http://aims.fao.org/aos/geopolitical.owl#>
     PREFIX obo: <http://purl.obolibrary.org/obo/>
-    PREFIX ocrer: <http://purl.org/net/OCRe/research.owl#>
-    PREFIX ocresd: <http://purl.org/net/OCRe/study_design.owl#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    PREFIX ufVivo: <http://vivo.ufl.edu/ontology/vivo-ufl/>
-    PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
-    PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
+    PREFIX ufv: <http://vivo.ufl.edu/ontology/vivo-ufl/>
+    PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
     PREFIX vivo: <http://vivoweb.org/ontology/core#>
-    PREFIX scires: <http://vivoweb.org/ontology/scientific-research#>
     """
     from SPARQLWrapper import SPARQLWrapper, JSON
     if debug:
@@ -172,27 +162,14 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI, debug=False):
         print baseurl
         print query
     sparql = SPARQLWrapper(baseurl)
-    if debug:
-        print "after create"
-        print sparql
     new_query = prefix + query
-    if debug:
-        print "before setQuery"
-        print type(prefix), prefix
-        print type(query), query
-        print type(new_query), new_query
-    sparql.setQuery(query)
+    sparql.setQuery(new_query)
     if debug:
         print "after setQuery"
+        print new_query
     sparql.setReturnFormat(JSON)
-    if debug:
-        print "After set return"
     sparql.setCredentials("anonymous", "anon")
-    if debug:
-        print "after set credentials"
     results = sparql.query().convert()
-    if debug:
-        print "after query, convert"
     return results
 
 
