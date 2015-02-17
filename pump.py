@@ -1,15 +1,16 @@
 #!/usr/bin/env/python
 
 """
-    sv_orgs.py: The VIVO Pump
+    pump.py: The VIVO Pump
 
-    Read a spreadsheet and follow the directions to add, update or remove entities and/or
+    Read a mapping definition and a spreadsheet and follow the directions to add, update or remove entities and/or
     entity attributes from VIVO.
 
     Produce a spreadsheet from VIVO that has the entities and attributes ready for editing and updating
 
-    Inputs:  spreadsheet containing updates and additions.  Enumeration tables for translating
-        spreadsheet values to VIVO values and back.  VIVO for current state
+    Inputs:  spreadsheet containing updates and additions.  Definition file containing maps to/from columns to
+        VIVO objects.  Enumeration tables for translating spreadsheet values to VIVO values and back.  VIVO for
+        current state
     Outputs:  spreadsheet with current state.  VIVO state changes. stdout with date times and messages.
 
     See CHANGELOG.md for history
@@ -23,7 +24,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.45"
+__version__ = "0.46"
 
 from datetime import datetime
 import argparse
@@ -515,11 +516,11 @@ from json import dumps
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
                                    "data from a spreadsheet", default="setup", nargs='?')
-parser.add_argument("defname", help="name of definition file", default="sv_def.json", nargs="?")
+parser.add_argument("defname", help="name of definition file", default="pump_def.json", nargs="?")
 
 parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
-                    default="sv_data.txt", nargs='?')
-parser.add_argument("--verbose", "-v", action="store_true", help="write verbose processing messages to the log")
+                    default="pump_data.txt", nargs='?')
+parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
 args = parser.parse_args()
 
 UPDATE_DEF = read_update_def(args.defname)
@@ -538,5 +539,5 @@ elif args.action == 'setup':
     print datetime.now(), "Update Definitions\n", dumps(UPDATE_DEF, indent=4)
     print datetime.now(), "Get Query\n", make_get_query()
 else:
-    print datetime.now(), "Unknown action.  Try sv_orgs -h for help"
+    print datetime.now(), "Unknown action.  Try pump -h for help"
 print datetime.now(), "Finish"
