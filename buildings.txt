@@ -1,5 +1,5 @@
 uri	abbreviation	url	number	name	photo
-http://vivo.ufl.edu/individual/PhillipsCenterforthePerformingArts		http://performingarts.ufl.edu/venues/phillips-center/	315	Phillips Center for the Performing Arts;Phillips Center For The Performing Arts	
+http://vivo.ufl.edu/individual/PhillipsCenterforthePerformingArts		http://performingarts.ufl.edu/venues/phillips-center/	315	Phillips Center for the Performing Arts	
 http://vivo.ufl.edu/individual/n1001011525			1228	Polyhouse #9-Ornamental Horticulture	
 http://vivo.ufl.edu/individual/n1010879650			843	Warehouse	
 http://vivo.ufl.edu/individual/n1020350772			166	Parking Garage 9 (Archer Rd S)	
@@ -62,7 +62,7 @@ http://vivo.ufl.edu/individual/n1506544177			1362	Greenhouse
 http://vivo.ufl.edu/individual/n152321642			107	Field Lab, Forestry	
 http://vivo.ufl.edu/individual/n1523452873			841	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n1533367859			408	Alpha Omicron Pi	
-http://vivo.ufl.edu/individual/n154420		http://campusmap.ufl.edu/?loc=0448&zoom=17	448	Century Tower;Century Tower Carillon	century_tower_image.jpg
+http://vivo.ufl.edu/individual/n154420		http://campusmap.ufl.edu/?loc=0448&zoom=17	448	Century Tower	century_tower_image.jpg
 http://vivo.ufl.edu/individual/n154519376			794	Physical Plant Storage #1	
 http://vivo.ufl.edu/individual/n1546851117			337	ACS Housing #5	
 http://vivo.ufl.edu/individual/n1557312894			1216	Greenhouse, Ornamental Horticulture	
@@ -275,7 +275,7 @@ http://vivo.ufl.edu/individual/n3621382708			371	Maguire 7
 http://vivo.ufl.edu/individual/n3622110165			952	Storage Bldg	
 http://vivo.ufl.edu/individual/n3623901693			807	Physical Plant Masonry Shop	
 http://vivo.ufl.edu/individual/n363006706			956	Storage Bldg	
-http://vivo.ufl.edu/individual/n36478			100	Robert C. Williamson Hall;Williamson Hall	
+http://vivo.ufl.edu/individual/n36478			100	Robert C. Williamson Hall	
 http://vivo.ufl.edu/individual/n3649190932			602	ACS Storage	
 http://vivo.ufl.edu/individual/n3656275479			1266	Greenhouse, Fruit Crops	
 http://vivo.ufl.edu/individual/n3657370901			1285	Greenhouse, Turfgrass	
@@ -473,7 +473,7 @@ http://vivo.ufl.edu/individual/n5319952922			285	Corry
 http://vivo.ufl.edu/individual/n5321996172			0287_OLD	Corry Laundry and Maint	
 http://vivo.ufl.edu/individual/n5324322202			953	Storage Bldg	
 http://vivo.ufl.edu/individual/n5339358232			1116	Wallace Building Walkway	
-http://vivo.ufl.edu/individual/n53415			9	Leigh Hall;Townes R. Leigh Hall	
+http://vivo.ufl.edu/individual/n53415			9	Leigh Hall	
 http://vivo.ufl.edu/individual/n5345147314			147	Agronomy Plant Intro Lab	
 http://vivo.ufl.edu/individual/n5348887514			599	Fine Arts C	
 http://vivo.ufl.edu/individual/n5351344663			730	Fiber Hut Fifield	
@@ -513,7 +513,7 @@ http://vivo.ufl.edu/individual/n5600957634			1098	Vet Med Medical Gases Storage
 http://vivo.ufl.edu/individual/n5616982477			1102	Leigh Hall Walkways	
 http://vivo.ufl.edu/individual/n5623337471			125	Scott Linder Tennis Stadium	
 http://vivo.ufl.edu/individual/n5624477728			491	Greenhouse, Entomology	
-http://vivo.ufl.edu/individual/n56393		http://www.arts.ufl.edu/venue_details.asp?venueID=3;http://campusmap.ufl.edu/?loc=0687&zoom=17	687	Constans Theatre;H. Philip Constans Theatre	
+http://vivo.ufl.edu/individual/n56393		http://www.arts.ufl.edu/venue_details.asp?venueID=3;http://campusmap.ufl.edu/?loc=0687&zoom=17	687	Constans Theatre	
 http://vivo.ufl.edu/individual/n5640430024			610	Sanitary Lift Station L2	
 http://vivo.ufl.edu/individual/n5641087504			423	Delta Chi	
 http://vivo.ufl.edu/individual/n5665842365			253	University Foundation Annex	
@@ -907,7 +907,7 @@ http://vivo.ufl.edu/individual/n9566272169			796	Natural Area Teaching Pavilion
 http://vivo.ufl.edu/individual/n9579892290			157	Ben Hill Griffin Stadium	
 http://vivo.ufl.edu/individual/n9595647966			1169	Basketball Practice Facility	
 http://vivo.ufl.edu/individual/n9598081928			1201	Greenhouse, Ornamental Horticulture	
-http://vivo.ufl.edu/individual/n96138			1376	Cancer and Genetics Research Center;Cancer/Genetics Research Complex	
+http://vivo.ufl.edu/individual/n96138			1376	Cancer and Genetics Research Center	
 http://vivo.ufl.edu/individual/n9619021094			936	Boat Shelter	
 http://vivo.ufl.edu/individual/n9620401966			328	University Village	
 http://vivo.ufl.edu/individual/n9622508982			397	Parking Garage 5 (N/S Drive)	

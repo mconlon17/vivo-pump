@@ -30,3 +30,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-11** 0.42 Improve make_get_query to avoid nested optionals.  Handle value in VIVO not in enumeration table. Improve def files.  Now have person, section, pub, grant and building.  All run in Jena, but not all run in Fuseki.
 * **2015-02-14** 0.43 -v option for verbose output.  Move write_update_def to vivopump.  Add test case.
 * **2015-02-15** 0.44 Using sparqlwrapper in new vivo_query.  Using stardog SPARQL endpoint.  Add pystardog to repo.  Add try_sparqlwrapper to repo.
+* **2015-02-16** 0.45 Warn regarding multiple values in VIVO for single valued predicate paths

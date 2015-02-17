@@ -17,12 +17,13 @@
 """
 
 # TODO: Continue work on UPDATE_DEF for people, courses, pubs -- medium
-# TODO: Control column order via update_def -- medium
+# TODO: Control column order via update_def -- difficult
+# TODO: Determine and execute a strategy for handling datatypes and language tags -- difficult
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.44"
+__version__ = "0.45"
 
 from datetime import datetime
 import argparse
@@ -108,17 +109,33 @@ def make_get_query():
     return front_query + middle_query + back_query
 
 
+def unique_path(path):
+    """
+    Given a path, determine if all its elements are single-valued predicates.  If so, the path is unique,
+    regardless of length.  If any one of the steps in the path has a non single-valued predicated, the path is not
+    unique.
+    :param path: a definition path
+    :return: True if path is unique
+    :rtype: boolean
+    """
+    unique = True
+    for elem in path:
+        if not elem['predicate']['single']:
+            unique = False
+            break
+    return unique
+
+
 def make_get_data(result_set):
     """
     Given a query result set, produce a data structure with one element per uri and column values collected
-    into lists
-    :param result_set: Fuseki result set
+    into lists.  If VIVO has multiple values for a path defined to be unique, print a WARNING to the log and
+    return the first value found in the data, ignoring the rest
+    :param result_set: SPARQL result set
     :return: dictionary
     :rtype: dict
     """
     data = {}
-
-    # TODO: What to do when predicate is single, but VIVO has multiple?
 
     for binding in result_set['results']['bindings']:
         uri = str(binding['uri']['value'])
@@ -167,8 +184,18 @@ def do_get(filename, debug=True):
 
                 if name in UPDATE_DEF['column_defs']:
                     path = UPDATE_DEF['column_defs'][name]
-                    if 'enum' in path[len(path)-1]['object']:
-                        enum_name = path[len(path)-1]['object']['enum']
+
+                    # Warn/correct if path is unique and VIVO is not
+
+                    if unique_path(path) and len(data[uri][name]) > 1:
+                        print "WARNING. VIVO has non-unique values for unique path:", name, "at", uri, data[uri][name]
+                        data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from the multi-valued set
+                        print data[uri][name]
+
+                    # Handle enumerations
+
+                    if 'enum' in path[len(path) - 1]['object']:
+                        enum_name = path[len(path) - 1]['object']['enum']
                         a = set()
                         for x in data[uri][name]:
                             a.add(ENUM[enum_name]['get'].get(x, x))  # if we can't find the value in the enumeration,
@@ -388,7 +415,7 @@ def do_update(filename, debug=False):
 
             #  Perhaps we handle "in order"  step 1, step 2, step last.  The update code is step last
 
-            # TODO: Refactor the path logic (including length 3) into a separate function -- medium
+            # TODO: Refactor the path logic (including length 3) into a separate function -- difficult
 
             if len(column_def) > 3:
                 raise PathLengthException(
@@ -497,14 +524,14 @@ args = parser.parse_args()
 
 UPDATE_DEF = read_update_def(args.defname)
 ENUM = load_enum()
-debug = args.verbose
+verbose = args.verbose
 
 print datetime.now(), "Start"
 if args.action == 'get':
-    n_rows = do_get(args.filename, debug=debug)
+    n_rows = do_get(args.filename, debug=verbose)
     print datetime.now(), n_rows, "rows in", args.filename
 elif args.action == 'update':
-    [n_add, n_sub] = do_update(args.filename, debug=debug)
+    [n_add, n_sub] = do_update(args.filename, debug=verbose)
     print datetime.now(), n_add, 'triples to add', n_sub, 'triples to sub'
 elif args.action == 'setup':
     print datetime.now(), "Enumerations\n", dumps(ENUM, indent=4)
