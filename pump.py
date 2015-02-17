@@ -20,6 +20,9 @@
 # TODO: Continue work on UPDATE_DEF for people, courses, pubs -- medium
 # TODO: Control column order via update_def -- difficult
 # TODO: Determine and execute a strategy for handling datatypes and language tags -- difficult
+# TODO: Design and refactor code as a pump object with internal data structure and simple methods  -- difficult
+# TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
+# TODO: Add test cases for each data scenario.  There are many -- difficult
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
@@ -206,7 +209,7 @@ def do_get(filename, debug=True):
                 # Gather values into a delimited string
 
                 val = ';'.join(data[uri][name])
-                outfile.write(val.replace('\r', ' ').replace('\n', ' '))
+                outfile.write(val.replace('\r', ' ').replace('\n', ' ').replace('\t', ' '))
             if name != columns[len(columns) - 1]:
                 outfile.write('\t')
         outfile.write('\n')
@@ -246,13 +249,13 @@ def get_graph(debug=False):
 
 def prepare_column_values(update_string, step_def, row, column_name, debug=False):
     """
-    Give the string of data from the update file, the step definition, the row and column name of the
+    Given the string of data from the update file, the step definition, the row and column name of the
     update_string in the update file, enumerations and filters, prepare the column values and return them
     as a list of strings
     :return: column_values a list of strings
     :rtype: list[str]
     """
-    from vivopump import InvalidDataException, improve_title
+    from vivopump import InvalidDataException, improve_title, repair_email, repair_phone_number
 
     if step_def['predicate']['single']:
         column_values = [update_string]
@@ -277,10 +280,7 @@ def prepare_column_values(update_string, step_def, row, column_name, debug=False
 
     if 'enum' in step_def['object']:
         for i in range(len(column_values)):
-            column_values[i] = ENUM[step_def['object']['enum']]['update'].get(column_values[i], None)
-            if column_values[i] is None:
-                raise InvalidDataException(str(row) + str(column_name) + column_values[i] + "not found in" +
-                                           step_def['object']['enum'])
+            column_values[i] = ENUM[step_def['object']['enum']]['update'].get(column_values[i], column_values[i])
 
     # Handle filters
 
@@ -339,12 +339,12 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
                 update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
         else:
             for vivo_object in vivo_objs.values():
-                if str(vivo_object) == column_string:
+                if unicode(vivo_object) == column_string:
                     continue  # No action required if vivo same as source
                 else:
                     update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                     if debug:
-                        print "REMOVE", row, column_name, str(vivo_object)
+                        print "REMOVE", row, column_name, unicode(vivo_object)
                 if step_def['object']['literal']:
                     if debug:
                         print "ADD   ", row, column_name, column_string
@@ -417,6 +417,7 @@ def do_update(filename, debug=False):
             #  Perhaps we handle "in order"  step 1, step 2, step last.  The update code is step last
 
             # TODO: Refactor the path logic (including length 3) into a separate function -- difficult
+            # TODO: Rewrite two step path to find intermediate object and use it when singular -- medium
 
             if len(column_def) > 3:
                 raise PathLengthException(
@@ -460,7 +461,7 @@ def do_update(filename, debug=False):
 
             vivo_objs = {}
             for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None)):
-                vivo_objs[str(o)] = o
+                vivo_objs[unicode(o)] = o
 
             # Prepare all column values for the column
 
