@@ -17,11 +17,9 @@
 
 """
 
-# TODO: Continue work on UPDATE_DEF for people, courses, pubs -- medium
+# TODO: Continue work on UPDATE_DEF for people, pubs -- medium
 # TODO: Control column order via update_def -- difficult
-# TODO: Determine and execute a strategy for handling datatypes and language tags -- difficult
-# TODO: Design and refactor code as a pump object with internal data structure and simple methods  -- difficult
-# TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
+# TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- difficult
 # TODO: Add test cases for each data scenario.  There are many -- difficult
 
 __author__ = "Michael Conlon"
@@ -43,6 +41,51 @@ class PathLengthException(Exception):
 
     def __str__(self):
         return repr(self.value)
+
+
+class Pump(object):
+    """
+    The VIVO Pump is a tool for data management using spreadsheets (delimited rectangular text files).
+
+    May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
+    """
+    # TODO: Finish framing of the Pump class -- easy
+    # TODO: Design and refactor code as a pump object with internal data structure and simple methods  -- difficult
+    def __init__(self, json_def):
+        """
+        Initialize the pump
+        :param json_def:  The definition of the pump.  Can be passed as a dict, a string of the dict, a file containing
+         the json or a file pointer. Can not be None
+        """
+        self.json_def = json_def
+        self.filename = None
+
+    def __str__(self):
+        return self.serialize()
+
+    def serialize(self):
+        result = "Serialized pump for " + self.filename
+        return result
+
+    def summarize(self):
+        result = "Summarized pump for" + self.filename
+        return result
+
+    def get(self, filename):
+        """
+        :param filename: Name of the file to write.
+        """
+        # TODO: Clarify.  What are we "getting?" We are getting the row and column thing, as yet unnamed.
+        self.filename = filename
+        do_get(filename)
+
+    def update(self):
+        """
+        Perform the update, resulting in add and sub RDF files
+        """
+        # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
+        # TODO: Clarify.  What are we updating.  Not the pump!  We are updating VIVO.
+        do_update(self.filename)
 
 
 def read_update_def(filename):
