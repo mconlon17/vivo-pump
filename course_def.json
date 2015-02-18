@@ -1,0 +1,54 @@
+{
+    "entity_def": {
+        "type": "http://vivo.ufl.edu/ontology/vivo-ufl/Course", 
+        "entity_sparql": "?uri a ufVivo:Course .", 
+        "order_by": "name"
+    }, 
+    "column_defs": {  
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "ccn": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/courseNum"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "url": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#webpage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#URLLink", 
+                    "name": "weburi", 
+                    "label": "Catalog Description"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#linkURI"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}
