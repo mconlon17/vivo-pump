@@ -22,7 +22,7 @@ class NewUriTestCase(unittest.TestCase):
 
 class ReadCSVKeysTestCase(unittest.TestCase):
     def test_read_csv_keys(self):
-        data = read_csv("extension.txt")
+        data = read_csv("data/extension.txt")
         self.assertTrue(data.keys() == range(1, 74))
 
 
