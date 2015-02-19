@@ -21,14 +21,18 @@
 # TODO: Control column order via update_def -- difficult
 # TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- difficult
 # TODO: Add test cases for each data scenario.  There are many -- difficult
+# TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.46"
+__version__ = "0.47"
+
+UPDATE_DEF = {}
+ENUM = {}
 
 from datetime import datetime
-import argparse
+from json import dumps
 
 
 class PathLengthException(Exception):
@@ -49,43 +53,67 @@ class Pump(object):
 
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
-    # TODO: Finish framing of the Pump class -- easy
-    # TODO: Design and refactor code as a pump object with internal data structure and simple methods  -- difficult
-    def __init__(self, json_def):
+
+    def __init__(self, json_def_filename="data/pump_def.json", verbose=False):
         """
         Initialize the pump
-        :param json_def:  The definition of the pump.  Can be passed as a dict, a string of the dict, a file containing
-         the json or a file pointer. Can not be None
+        :param json_def_filename:  File name of file containing JSON pump definition
         """
-        self.json_def = json_def
-        self.filename = None
+        # TODO: Get rid of the global variables UPDATE_DEF and ENUM through proper encapsulation -- medium
+        self.update_def = read_update_def(json_def_filename)
+        global UPDATE_DEF
+        UPDATE_DEF = self.update_def
+        self.enum = load_enum()
+        global ENUM
+        ENUM = self.enum
+        self.json_def_filename = json_def_filename
+        self.verbose = verbose
+        self.out_filename = None
 
     def __str__(self):
+        """
+        Return a string representation of the pump
+        :return: the string representation of the pump
+        :rtype: basestring
+        """
         return self.serialize()
 
     def serialize(self):
-        result = "Serialized pump for " + self.filename
-        return result
+        """
+        Return a string representation of the pump
+        :return: the string representation of the pump
+        :rtype: basestring
+        """
+        return dumps(self.update_def)
 
     def summarize(self):
-        result = "Summarized pump for" + self.filename
+        """
+        Produce a string report summarizing the contents of the pump
+        :return: the string summary report
+        :rtype: basestring
+        """
+        result = str(datetime.now()) + " Pump Summary for " + self.json_def_filename + "\n" + \
+            str(datetime.now()) + " Enumerations\n" + dumps(ENUM, indent=4) + "\n" + \
+            str(datetime.now()) + " Update Definitions\n" + dumps(UPDATE_DEF, indent=4) + "\n" + \
+            str(datetime.now()) + " Get Query\n" + make_get_query()
         return result
 
     def get(self, filename):
         """
         :param filename: Name of the file to write.
+        :return: count of the number of rows in the table
+        :rtype: int
         """
-        # TODO: Clarify.  What are we "getting?" We are getting the row and column thing, as yet unnamed.
-        self.filename = filename
-        do_get(filename)
+        self.out_filename = filename
+        return do_get(self.out_filename, debug=self.verbose)
 
-    def update(self):
+    def update(self, filename):
         """
-        Perform the update, resulting in add and sub RDF files
+        Perform the update, resulting in add and sub RDF counts
         """
-        # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
-        # TODO: Clarify.  What are we updating.  Not the pump!  We are updating VIVO.
-        do_update(self.filename)
+
+        self.out_filename = filename
+        return do_update(self.out_filename, debug=self.verbose)
 
 
 def read_update_def(filename):
@@ -198,7 +226,6 @@ def make_get_data(result_set):
 
 
 def do_get(filename, debug=True):
-
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
     editing using an editor or spreadsheet, and suitable for use by do_update.
@@ -552,36 +579,3 @@ def load_enum():
                         enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
     return enum
-
-# Driver starts here
-
-from json import dumps
-
-parser = argparse.ArgumentParser()
-parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
-                                   "data from a spreadsheet", default="setup", nargs='?')
-parser.add_argument("defname", help="name of definition file", default="pump_def.json", nargs="?")
-
-parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
-                    default="pump_data.txt", nargs='?')
-parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
-args = parser.parse_args()
-
-UPDATE_DEF = read_update_def(args.defname)
-ENUM = load_enum()
-verbose = args.verbose
-
-print datetime.now(), "Start"
-if args.action == 'get':
-    n_rows = do_get(args.filename, debug=verbose)
-    print datetime.now(), n_rows, "rows in", args.filename
-elif args.action == 'update':
-    [n_add, n_sub] = do_update(args.filename, debug=verbose)
-    print datetime.now(), n_add, 'triples to add', n_sub, 'triples to sub'
-elif args.action == 'setup':
-    print datetime.now(), "Enumerations\n", dumps(ENUM, indent=4)
-    print datetime.now(), "Update Definitions\n", dumps(UPDATE_DEF, indent=4)
-    print datetime.now(), "Get Query\n", make_get_query()
-else:
-    print datetime.now(), "Unknown action.  Try pump -h for help"
-print datetime.now(), "Finish"

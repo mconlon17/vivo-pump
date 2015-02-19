@@ -33,3 +33,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-16** 0.45 Warn regarding multiple values in VIVO for single valued predicate paths
 * **2015-02-17** 0.46 Named pump.py.  Default files are pump_def.json and pump_data.txt.  Improved help. Unicode bug fixed in update.  Enum not found fixed in update.  Fixed bug in do_get regarding tabs in fields.
 * **2015-02-18** Course_def.json and course_data.txt.  Can all the linkages be created by the pump? Begin framing the Pump class. Begin framing the unit tests for add, change and delete elements.  Restructure files and folders for unit tests and data.  See wiki for test cases.
+* **2015-02-19** 0.47 Pump() is now a class in its own file pump.py.  sv (Simple Vivo) is a main program that runs the pump. Pump Serialize test case.

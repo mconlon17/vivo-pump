@@ -12,6 +12,7 @@ import unittest
 from vivopump import new_uri, read_csv, vivo_query, write_update_def, repair_email, repair_phone_number, comma_space, \
     improve_title, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
+from pump import Pump
 
 
 class NewUriTestCase(unittest.TestCase):
@@ -219,6 +220,47 @@ class ImproveSponsorAwardIdTestCase(unittest.TestCase):
         in_string = "5r01 Dk288283 "
         out_string = improve_sponsor_award_id(in_string)
         self.assertEqual("R01DK288283", out_string)
+
+
+class PumpTestCase(unittest.TestCase):
+    def test_pump_serialize(self):
+        p = Pump()
+        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))
+
+    def test_pump_filename(self):
+        p = Pump("data/building_def.json")
+        self.assertTrue("vivo:Building" in p.serialize())
+
+    def test_pump_summarize(self):
+        p = Pump("data/building_def.json")
+        result = p.summarize()
+        print result
+        self.assertTrue("Pump Summary for data/building" in result)
+
+    def test_pump_get_no_filename(self):
+        p = Pump("data/building_def.json")
+        with self.assertRaises(TypeError):
+            n_rows = p.get()
+            print n_rows
+
+    def test_pump_get(self):
+        p = Pump("data/building_def.json")
+        n_rows = p.get("data/buildings.txt")
+        print n_rows
+        self.assertEqual(951, n_rows)
+
+    def test_pump_update_no_filename(self):
+        p = Pump("data/building_def.json")
+        with self.assertRaises(TypeError):
+            [add, sub] = p.update()
+            print add, sub
+
+    def test_pump_update(self):
+        p = Pump("data/building_def.json")
+        [n_add, n_sub] = p.update("data/buildings.txt")
+        print n_add, n_sub
+        self.assertEqual(106, n_add)
+        self.assertEqual(76, n_sub)
 
 
 if __name__ == "__main__":
