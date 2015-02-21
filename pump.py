@@ -111,7 +111,6 @@ class Pump(object):
         """
         Perform the update, resulting in add and sub RDF counts
         """
-
         self.out_filename = filename
         return do_update(self.out_filename, debug=self.verbose)
 
@@ -373,8 +372,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     based on column values and the current state of VIVO.  Whew.
 
     There is likely controversy and refactoring to come here.  For example, None is not supported for multi-valued
-    predicates.  Why isn't single valued a special case of multi-valued?  What does the pump do when VIVO has data
-    contrary to the flow definition? And there will be more questions.
+    predicates.  Why isn't single valued a special case of multi-valued?  And there will be more questions.
 
     The code below represents the guts of the update.  Everything else is getting in position.
 
@@ -392,7 +390,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     if len(column_values) == 1:
         column_string = column_values[0]
         if column_string == '':
-            return None  # No action required if spreadsheet is blank
+            return None  # No action required if spreadsheet value is empty
         elif column_string == 'None':
             if debug:
                 print "Remove", column_name, "from", str(uri)
@@ -422,7 +420,6 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
                 else:
                     update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
     else:
-
         # Ready for set comparison
         if debug:
             print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()

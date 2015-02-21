@@ -35,3 +35,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-18** Course_def.json and course_data.txt.  Can all the linkages be created by the pump? Begin framing the Pump class. Begin framing the unit tests for add, change and delete elements.  Restructure files and folders for unit tests and data.  See wiki for test cases.
 * **2015-02-19** 0.47 Pump() is now a class in its own file pump.py.  sv (Simple Vivo) is a main program that runs the pump. Pump Serialize test case.
 * **2015-02-20** Added test case descriptions for simple vivo as wiki page to the pump repo for command line testing
+* **2015-02-21** Minor code formatting and comment improvements
