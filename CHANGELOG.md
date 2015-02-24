@@ -36,3 +36,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-02-19** 0.47 Pump() is now a class in its own file pump.py.  sv (Simple Vivo) is a main program that runs the pump. Pump Serialize test case.
 * **2015-02-20** Added test case descriptions for simple vivo as wiki page to the pump repo for command line testing
 * **2015-02-21** Minor code formatting and comment improvements
+* **2015-02-24** 0.48 Clean up the repo.  Removing unused files. Rewrote 2 of 3 step 2 cases, warnings that third are not finished.  **UNTESTED**
