@@ -54,14 +54,15 @@ class Pump(object):
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
 
-    def __init__(self, json_def_filename="data/pump_def.json", verbose=False):
+    def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
         """
-        # TODO: Get rid of the global variables UPDATE_DEF and ENUM through proper encapsulation -- medium
+        # TODO: Get rid of the global variables UPDATE_DEF and ENUM through proper encapsulation -- easy
+        # TODO: Support graph injection to the original graph for testing -- easy
         self.update_def = read_update_def(json_def_filename)
-        self.column_defs = self.update_def['columns_defs']
+        self.column_defs = self.update_def['column_defs']
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
@@ -72,7 +73,7 @@ class Pump(object):
         ENUM = self.enum
         self.json_def_filename = json_def_filename
         self.verbose = verbose
-        self.out_filename = None
+        self.out_filename = out_filename
 
     def __str__(self):
         """
@@ -117,7 +118,10 @@ class Pump(object):
         """
         from vivopump import read_csv
         from rdflib import Graph
-        self.out_filename = filename
+        import logging
+        logging.basicConfig(level=logging.INFO)
+        if filename is not None:
+            self.out_filename = filename
         self.original_graph = get_graph()  # Create the original graph from VIVO using the update_def
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
@@ -125,7 +129,8 @@ class Pump(object):
         if self.verbose:
             print datetime.now(), 'Graphs ready for processing. Original has ', len(self.original_graph), \
                 '. Update graph has', len(self.update_graph)
-        self.update_data = read_csv(self.out_filename, delimiter='\t')
+        if self.update_data is None:  # Test for no injection
+            self.update_data = read_csv(self.out_filename, delimiter='\t')
         if self.verbose:
             print datetime.now(), 'Updates ready for processing. ', len(self.update_data), 'rows.'
         return self.do_update()
@@ -141,9 +146,11 @@ class Pump(object):
         # TODO: Support lookup by name or uri -- medium
         # TODO: Support for remove action -- medium
         # TODO: Provide a path mechanism for enum files.  Current approach assumes in directory with main -- easy
+        # TODO: Return the difference graphs.  Let somebody else process them -- very easy
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
+
             if (uri, None, None) not in self.update_graph:
 
                 # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
@@ -158,6 +165,9 @@ class Pump(object):
             entity_uri = uri
 
             for column_name, column_def in self.column_defs.items():
+                if column_name not in data_update:
+                    continue
+
                 uri = entity_uri
 
                 if data_update[column_name] == '':
@@ -167,7 +177,7 @@ class Pump(object):
 
                     # TODO: Replace this approach with one that can handle mini-graph removal when needed -- medium
 
-                    step_def = self.column_defs[len(self.column_defs) - 1]
+                    step_def = column_def[len(column_def) - 1]
                     vivo_objs = {unicode(o): o for s, p, o in
                                  self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
                     column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)

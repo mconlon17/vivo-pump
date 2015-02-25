@@ -269,13 +269,37 @@ class PumpTestCase(unittest.TestCase):
         self.assertEqual(76, n_sub)
 
 
-class PumpUpdateTestCase(unittest.TestCase):
+class PumpUpdateCallTestCase(unittest.TestCase):
+    def test_default_usage(self):
+        p = Pump(verbose=True)
+        p.update()
+        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert based on summary
+
+    def test_no_update_file(self):
+        p = Pump()
+        with self.assertRaises(IOError):
+            p.update('data/no_update_file.txt')
+
+    def test_normal_inject(self):
+        p = Pump(verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n8984374104', u'abbreviation': u'None'}}
+        p.update()
+        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert based on summary
+
+    def test_broken_inject(self):
+        p = Pump()
+        p.update_data = {'1': {u'overview': u'None'}}
+        p.update()
+        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert. Code should raise Exception
+
+
+class PumpUpdateDataTestCase(unittest.TestCase):
     def test_pump_serialize(self):
         from json import loads
         p = Pump('data/org_def.json')
         p.update_data = loads("{1: {u'uri': u'<http://vivo.ufl.edu/individual/n7023304>', u'overview': u'None'}}")
         p.update()
-        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))
+        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert based on difference graphs
 
 
 if __name__ == "__main__":
