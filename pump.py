@@ -447,6 +447,7 @@ def do_update(filename, debug=False):
 
     # TODO: Support lookup by name or uri -- medium
     # TODO: Support for remove action -- medium
+    # TODO: Move setup to method -- easy
 
     column_defs = UPDATE_DEF['column_defs']
 
