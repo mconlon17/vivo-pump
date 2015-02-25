@@ -61,6 +61,10 @@ class Pump(object):
         """
         # TODO: Get rid of the global variables UPDATE_DEF and ENUM through proper encapsulation -- medium
         self.update_def = read_update_def(json_def_filename)
+        self.column_defs = self.update_def['columns_defs']
+        self.update_data = None
+        self.original_graph = None
+        self.update_graph = None
         global UPDATE_DEF
         UPDATE_DEF = self.update_def
         self.enum = load_enum()
@@ -107,12 +111,169 @@ class Pump(object):
         self.out_filename = filename
         return do_get(self.out_filename, debug=self.verbose)
 
-    def update(self, filename):
+    def update(self, filename=None):
         """
-        Perform the update, resulting in add and sub RDF counts
+        Prepare for the update, getting graph and update_data.  Then do the update, producing triples
         """
+        from vivopump import read_csv
+        from rdflib import Graph
         self.out_filename = filename
-        return do_update(self.out_filename, debug=self.verbose)
+        self.original_graph = get_graph()  # Create the original graph from VIVO using the update_def
+        self.update_graph = Graph()
+        for s, p, o in self.original_graph:
+            self.update_graph.add((s, p, o))
+        if self.verbose:
+            print datetime.now(), 'Graphs ready for processing. Original has ', len(self.original_graph), \
+                '. Update graph has', len(self.update_graph)
+        self.update_data = read_csv(self.out_filename, delimiter='\t')
+        if self.verbose:
+            print datetime.now(), 'Updates ready for processing. ', len(self.update_data), 'rows.'
+        return self.do_update()
+
+    def do_update(self):
+        """
+        read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
+        rdf as necessary to process requested changes
+        """
+        from rdflib import URIRef, RDF, RDFS, Literal
+        from vivopump import new_uri
+
+        # TODO: Support lookup by name or uri -- medium
+        # TODO: Support for remove action -- medium
+        # TODO: Provide a path mechanism for enum files.  Current approach assumes in directory with main -- easy
+
+        for row, data_update in self.update_data.items():
+            uri = URIRef(data_update['uri'])
+            if (uri, None, None) not in self.update_graph:
+
+                # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
+                # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
+                # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
+
+                uri_string = new_uri()
+                if self.verbose:
+                    print "Adding an entity for row", row, ".  Will be added at", uri_string
+                uri = URIRef(uri_string)
+                self.update_graph.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
+            entity_uri = uri
+
+            for column_name, column_def in self.column_defs.items():
+                uri = entity_uri
+
+                if data_update[column_name] == '':
+                    continue
+
+                if data_update[column_name] == 'None':
+
+                    # TODO: Replace this approach with one that can handle mini-graph removal when needed -- medium
+
+                    step_def = self.column_defs[len(self.column_defs) - 1]
+                    vivo_objs = {unicode(o): o for s, p, o in
+                                 self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
+                    column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                    do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                                  debug=self.verbose)
+                    continue
+
+                if len(column_def) > 3:
+                    raise PathLengthException(
+                        "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
+                            len(column_def)))
+
+                if len(column_def) == 3:
+
+                    # TODO: Refactor the path logic (including length 3) into a separate function -- difficult
+
+                    # Handle first and second step of length 3 path here.  Likely that additional triples will be needed
+                    # in the update graph for finding and processing.  Why do we use a first order graph for update, but
+                    # a full graph for get?  Seems inconsistent, under serves update and creates additional code. Also
+                    # seems likely that the path 3 logic will need the entire path for examination and processing.  Leaf
+                    # actions should remain as they are.
+
+                    continue
+
+                if len(column_def) == 2:
+
+                    # TODO: Test two step path to find intermediate object and use it when singular -- medium
+
+                    step_def = column_def[0]
+
+                    # Find all the intermediate entity uris in VIVO and then process cases related to count and defs
+
+                    step_uris = [o for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None))]
+
+                    # Here are the cases and actions:
+                    #                       Predicate Single   Predicate Multiple
+                    # VIVO has 0 values     Add, do_the        Add intermediate, do_the
+                    # VIVO has 1 value         do_the          Set compare through intermediate
+                    # VIVO has >1 value     WARNING, do_the    Set compare through intermediate
+
+                    if len(step_uris) == 0:
+
+                        # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
+
+                        step_uri = URIRef(new_uri())
+                        self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
+                        self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+                        if 'label' in step_def['object']:
+                            self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
+                        uri = step_uri
+                        step_def = column_def[1]
+                        vivo_objs = {unicode(o): o for s, p, o in
+                                     self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
+                        column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                        do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                                      debug=self.verbose)
+
+                    elif step_def['predicate']['single']:
+
+                        # VIVO has 1 or more values, so we need to see if the predicate is expected to be single
+
+                        step_uri = step_uris[0]
+                        if len(step_uris) > 1:
+                            print "WARNING: Single predicate", column_name, "has", len(step_uris), "values: ", \
+                                step_uris, "using", step_uri
+                        uri = step_uri
+                        step_def = column_def[1]
+                        vivo_objs = {unicode(o): o for s, p, o in
+                                     self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
+                        column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                        do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                                      debug=self.verbose)
+
+                    else:
+                        # TODO: Implement set compare through multiple intermediate case
+                        print 'WARNING: Updating multi-step predicates not yet implemented'
+                    continue  # All done with length 2 logic
+
+                # Handle single step predicate
+
+                step_def = column_def[0]
+
+                # Gather all VIVO objects for the column
+
+                vivo_objs = {}
+                for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
+                    vivo_objs[unicode(o)] = o
+
+                # Prepare all column values for the column
+
+                column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                if self.verbose:
+                    print row, column_name, column_values, uri, vivo_objs
+
+                do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                              debug=self.verbose)
+
+        # Write out the triples to be added and subbed in n-triples format
+
+        add = self.update_graph - self.original_graph  # Triples in update that are not in original
+        sub = self.original_graph - self.update_graph  # Triples in original that are not in update
+        print datetime.now(), "Triples to add:"
+        print add.serialize(format='nt')
+        print datetime.now(), "Triples to sub:"
+        print sub.serialize(format='nt')
+        return [len(add), len(sub)]
 
 
 def read_update_def(filename):
@@ -435,149 +596,6 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
             update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
 
     return None
-
-
-def do_update(filename, debug=False):
-    """
-    read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
-    rdf as necessary to process requested changes
-    """
-    from rdflib import Graph, URIRef, RDF, RDFS, Literal
-    from vivopump import new_uri, read_csv
-
-    # TODO: Support lookup by name or uri -- medium
-    # TODO: Support for remove action -- medium
-    # TODO: Move setup to method -- easy
-
-    column_defs = UPDATE_DEF['column_defs']
-
-    original_graph = get_graph()  # Create the original graph from VIVO using the update_def
-    update_graph = Graph()
-    for s, p, o in original_graph:
-        update_graph.add((s, p, o))
-    if debug:
-        print datetime.now(), 'Graphs ready for processing. Original has ', len(original_graph), '. Update graph has', \
-            len(update_graph)
-    data_updates = read_csv(filename, delimiter='\t')
-    if debug:
-        print datetime.now(), 'Updates ready for processing.  ', filename, 'has ', len(data_updates), 'rows.'
-    for row, data_update in data_updates.items():
-        uri = URIRef(data_update['uri'])
-        if (uri, None, None) not in update_graph:
-
-            # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
-            # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
-            #  Since the new uri does not have triples for the columns in the spreadsheet, each will be added
-
-            uri_string = new_uri()
-            if debug:
-                print "Adding an entity for row", row, ".  Will be added at", uri_string
-            uri = URIRef(uri_string)
-            update_graph.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
-        entity_uri = uri
-
-        for column_name, column_def in column_defs.items():
-            uri = entity_uri
-
-            # When spreadsheet is empty or has the text "None", immediately pass to the leaf update.
-            # TODO: Replace this approach with one that can determine whether just one triples needs to
-            #   be removed, or a mini-graph needs to be removed.
-
-            if data_update[column_name] == '' or data_update[column_name] == 'None':
-                do_the_update(row, column_name, uri, column_def[0], column_values, vivo_objs, update_graph, debug=debug)
-                continue
-
-            #  Perhaps we handle "in order"  step 1, step 2, step last.  The update code is step last
-
-            # TODO: Refactor the path logic (including length 3) into a separate function -- difficult
-            # TODO: Test two step path to find intermediate object and use it when singular -- medium
-
-            if len(column_def) > 3:
-                raise PathLengthException(
-                    "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(len(column_def)))
-
-            if len(column_def) == 3:
-
-                # Handle first and second step of length 3 path here.  Likely that additional triples will be needed
-                # in the update graph for finding and processing.  Why do we use a first order graph for update, but
-                # a full graph for get?  Seems inconsistent, under serves update and creates additional code. Also
-                # seems likely that the path 3 logic will need the entire path for examination and processing.  Leaf
-                # actions should remain as they are.
-
-                pass
-
-            if len(column_def) == 2:
-                step_def = column_def[0]
-
-                # Find all the intermediate entity uris in VIVO and then process cases related to count and defs
-
-                step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
-
-                # Here are the cases and actions:
-                #                       Predicate Single   Predicate Multiple
-                # VIVO has 0 values     Add, do_the        Add intermediate, do_the
-                # VIVO has 1 value         do_the          Set compare through intermediate
-                # VIVO has >1 value     WARNING, do_the    Set compare through intermediate
-
-                if len(step_uris) == 0:
-
-                    # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
-
-                    step_uri = URIRef(new_uri())
-                    update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-                    update_graph.add((step_uri, RDF.type, step_def['object']['type']))
-                    if 'label' in step_def['object']:
-                        update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
-                    vivo_objs = {unicode(o): o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'],
-                                                                                    None))}
-                    column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
-                    do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug=debug)
-
-                elif step_def['predicate']['single']:
-
-                    # VIVO has 1 or more values, so we need to see if the predicate is expected to be single
-
-                    step_uri = step_uris[0]
-                    if len(step_uris) > 1:
-                        print "WARNING: Single predicate " + column_name + " has " + len(step_uris) + "values: " + \
-                            str(step_uris) + " using " + step_uri
-                    vivo_objs = {unicode(o): o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'],
-                                                                                    None))}
-                    column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
-                    do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug=debug)
-
-                else:
-                    # TODO: Implement set compare through multiple intermediate case
-                    print 'WARNING: Updating multi-step predicates not yet implemented'
-                continue  # All done with length 2 logic
-
-            # Handle single step predicate
-
-            step_def = column_def[0]
-
-            # Gather all VIVO objects for the column
-
-            vivo_objs = {}
-            for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None)):
-                vivo_objs[unicode(o)] = o
-
-            # Prepare all column values for the column
-
-            column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
-            if debug:
-                print row, column_name, column_values, uri, vivo_objs
-
-            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug=debug)
-
-    # Write out the triples to be added and subbed in n-triples format
-
-    add = update_graph - original_graph  # Triples in update that are not in original
-    sub = original_graph - update_graph  # Triples in original that are not in update
-    print datetime.now(), "Triples to add:"
-    print add.serialize(format='nt')
-    print datetime.now(), "Triples to sub:"
-    print sub.serialize(format='nt')
-    return [len(add), len(sub)]
 
 
 def load_enum():

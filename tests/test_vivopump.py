@@ -269,5 +269,14 @@ class PumpTestCase(unittest.TestCase):
         self.assertEqual(76, n_sub)
 
 
+class PumpUpdateTestCase(unittest.TestCase):
+    def test_pump_serialize(self):
+        from json import loads
+        p = Pump('data/org_def.json')
+        p.update_data = loads("{1: {u'uri': u'<http://vivo.ufl.edu/individual/n7023304>', u'overview': u'None'}}")
+        p.update()
+        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))
+
+
 if __name__ == "__main__":
     unittest.main()
