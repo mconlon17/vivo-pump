@@ -21,10 +21,16 @@ class NewUriTestCase(unittest.TestCase):
         self.assertTrue(len(uri) > 0)
 
 
-class ReadCSVKeysTestCase(unittest.TestCase):
+class ReadCSVTestCase(unittest.TestCase):
     def test_read_csv_keys(self):
-        data = read_csv("data/extension.txt")
+        data = read_csv("data/extension.txt", delimiter='\t')
+        print data
         self.assertTrue(data.keys() == range(1, 74))
+
+    def test_read_csv_minimal(self):
+        data = read_csv("data/minimal.txt", delimiter='\t')
+        data_string = "{1: {u'overview': u'None', u'uri': u'<http://vivo.ufl.edu/individual/n7023304>'}}"
+        self.assertEqual(data_string, str(data))
 
 
 class VIVOQueryTestCase(unittest.TestCase):
