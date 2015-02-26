@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.48"
+__version__ = "0.49"
 
 UPDATE_DEF = {}
 ENUM = {}
@@ -146,7 +146,6 @@ class Pump(object):
         # TODO: Support lookup by name or uri -- medium
         # TODO: Support for remove action -- medium
         # TODO: Provide a path mechanism for enum files.  Current approach assumes in directory with main -- easy
-        # TODO: Return the difference graphs.  Let somebody else process them -- very easy
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
@@ -275,15 +274,17 @@ class Pump(object):
                 do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
                               debug=self.verbose)
 
-        # Write out the triples to be added and subbed in n-triples format
+        # Return the add and sub graphs representing the changes that need to be made to the original
 
         add = self.update_graph - self.original_graph  # Triples in update that are not in original
+        if self.verbose:
+            print "Triples to add"
+            print add.serialize(format='nt')
         sub = self.original_graph - self.update_graph  # Triples in original that are not in update
-        print datetime.now(), "Triples to add:"
-        print add.serialize(format='nt')
-        print datetime.now(), "Triples to sub:"
-        print sub.serialize(format='nt')
-        return [len(add), len(sub)]
+        if self.verbose:
+            print "Triples to sub"
+            print sub.serialize(format='nt')
+        return [add, sub]
 
 
 def read_update_def(filename):

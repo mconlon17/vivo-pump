@@ -271,9 +271,9 @@ class PumpTestCase(unittest.TestCase):
 
 class PumpUpdateCallTestCase(unittest.TestCase):
     def test_default_usage(self):
-        p = Pump(verbose=True)
+        p = Pump()
         p.update()
-        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert based on summary
+        self.assertTrue("data/pump_def.json" in p.summarize())  # Using the default definition
 
     def test_no_update_file(self):
         p = Pump()
@@ -281,25 +281,51 @@ class PumpUpdateCallTestCase(unittest.TestCase):
             p.update('data/no_update_file.txt')
 
     def test_normal_inject(self):
-        p = Pump(verbose=True)
+        p = Pump()
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n8984374104', u'abbreviation': u'None'}}
         p.update()
-        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert based on summary
+        self.assertTrue("8984374104" in str(p.update_data))  # Using the injected data, not default
 
-    def test_broken_inject(self):
+    def test_missing_uri_column_inject(self):
         p = Pump()
         p.update_data = {'1': {u'overview': u'None'}}
-        p.update()
-        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert. Code should raise Exception
+        with self.assertRaises(KeyError):
+            p.update()
 
 
 class PumpUpdateDataTestCase(unittest.TestCase):
-    def test_pump_serialize(self):
-        from json import loads
-        p = Pump('data/org_def.json')
-        p.update_data = loads("{1: {u'uri': u'<http://vivo.ufl.edu/individual/n7023304>', u'overview': u'None'}}")
-        p.update()
-        self.assertTrue(p.serialize().startswith("{\"entity_def\":"))  # TODO: Fix assert based on difference graphs
+    def test_unique_one_add(self):
+        from rdflib import URIRef, Literal
+        p = Pump()
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
+                                                 URIRef("http://vivoweb.org/ontology/core#abbreviation"),
+                                                 Literal("PH9")) in add)
+
+    def test_unique_one_change(self):
+        from rdflib import URIRef, Literal, XSD
+        p = Pump()
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n111669', u'abbreviation': u'JWR2'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and (URIRef("http://vivo.ufl.edu/individual/n111669"),
+                               URIRef("http://vivoweb.org/ontology/core#abbreviation"),
+                               Literal("JWR2")) in add and
+            len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n111669"),
+                               URIRef("http://vivoweb.org/ontology/core#abbreviation"),
+                               Literal("JWRU", datatype=XSD.string)) in sub)
+
+    def test_unique_one_delete(self):
+        from rdflib import URIRef, Literal, XSD
+        p = Pump()
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n111669', u'abbreviation': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n111669"),
+                                                 URIRef("http://vivoweb.org/ontology/core#abbreviation"),
+                                                 Literal("JWRU", datatype=XSD.string)) in sub)
 
 
 if __name__ == "__main__":
