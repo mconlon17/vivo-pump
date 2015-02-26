@@ -319,13 +319,41 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
     def test_unique_one_delete(self):
         from rdflib import URIRef, Literal, XSD
-        p = Pump()
+        p = Pump(verbose=True)
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n111669', u'abbreviation': u'None'}}
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n111669"),
                                                  URIRef("http://vivoweb.org/ontology/core#abbreviation"),
                                                  Literal("JWRU", datatype=XSD.string)) in sub)
+
+    def test_unique_two_add_fullpath(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/org_def.json", verbose=True)
+
+        # Add a zip code to Lee County Extension Office.  There is no address, so a full path will need
+        # to be created
+
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n7023301', u'zip': u'32653'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 4 and len(sub) == 0 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
+                                                 Literal("32653")) in add)
+
+    def test_unique_two_add_to_existing(self):
+        from rdflib import URIRef, Literal
+
+        # Add a zip code to the provost's office at UF.  An address already exists, the zip needs to be
+        # added to the existing address
+
+        p = Pump("data/org_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n765319', u'zip': u'32653'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 0 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
+                                                 Literal("32653")) in add)
 
 
 if __name__ == "__main__":

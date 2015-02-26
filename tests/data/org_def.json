@@ -13,7 +13,8 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "type": "http://vivoweb.org/ontology/core#Address",
+                    "label": "Mailing Address",
                     "name": "address"
                 }
             }, 
@@ -46,7 +47,8 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "type": "http://vivoweb.org/ontology/core#Address",
+                    "label": "Mailing Address",
                     "name": "address"
                 }
             }, 
@@ -91,7 +93,8 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "type": "http://vivoweb.org/ontology/core#Address",
+                    "label": "Mailing Address",
                     "name": "address"
                 }
             }, 
@@ -113,7 +116,8 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "type": "http://vivoweb.org/ontology/core#Address",
+                    "label": "Mailing Address",
                     "name": "address"
                 }
             }, 
@@ -180,7 +184,8 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address", 
+                    "type": "http://vivoweb.org/ontology/core#Address",
+                    "label": "Mailing Address",
                     "name": "address"
                 }
             }, 

@@ -1,21 +1,19 @@
 ************* Module pump
 R: 50, 0: Too many instance attributes (9/7) (too-many-instance-attributes)
-W: 68, 8: Using the global statement (global-statement)
-W: 71, 8: Using the global statement (global-statement)
-E:167,72: Using variable 'column_values' before assignment (used-before-assignment)
-E:167,87: Using variable 'vivo_objs' before assignment (used-before-assignment)
-W:196,39: Unused variable 's' (unused-variable)
-W:196,42: Unused variable 'p' (unused-variable)
-W:513,31: Use of eval (eval-used)
-W:481, 4: Unused variable 'repair_email' (unused-variable)
-W:481, 4: Unused variable 'repair_phone_number' (unused-variable)
-W:481, 4: Unused variable 'improve_title' (unused-variable)
-R:522, 0: Too many branches (24/20) (too-many-branches)
+W: 69, 8: Using the global statement (global-statement)
+W: 72, 8: Using the global statement (global-statement)
+W:212,39: Unused variable 's' (unused-variable)
+W:212,42: Unused variable 'p' (unused-variable)
+W:531,31: Use of eval (eval-used)
+W:499, 4: Unused variable 'repair_email' (unused-variable)
+W:499, 4: Unused variable 'repair_phone_number' (unused-variable)
+W:499, 4: Unused variable 'improve_title' (unused-variable)
+R:540, 0: Too many branches (24/20) (too-many-branches)
 
 
 Report
 ======
-302 statements analysed.
+315 statements analysed.
 
 Statistics by type
 ------------------
@@ -27,9 +25,9 @@ Statistics by type
 +---------+-------+-----------+-----------+------------+---------+
 |class    |2      |2          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|method   |9      |8          |+1.00      |100.00      |0.00     |
+|method   |9      |9          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|function |10     |11         |-1.00      |100.00      |0.00     |
+|function |10     |10         |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
 
 
@@ -53,13 +51,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |327    |56.38 |302      |+25.00     |
+|code      |341    |57.41 |327      |+14.00     |
 +----------+-------+------+---------+-----------+
-|docstring |141    |24.31 |141      |=          |
+|docstring |141    |23.74 |141      |=          |
 +----------+-------+------+---------+-----------+
-|comment   |44     |7.59  |37       |+7.00      |
+|comment   |44     |7.41  |44       |=          |
 +----------+-------+------+---------+-----------+
-|empty     |68     |11.72 |63       |+5.00      |
+|empty     |68     |11.45 |68       |=          |
 +----------+-------+------+---------+-----------+
 
 
@@ -72,11 +70,11 @@ Messages by category
 +===========+=======+=========+===========+
 |convention |0      |0        |=          |
 +-----------+-------+---------+-----------+
-|refactor   |2      |1        |+1.00      |
+|refactor   |2      |2        |=          |
 +-----------+-------+---------+-----------+
-|warning    |8      |6        |+2.00      |
+|warning    |8      |8        |=          |
 +-----------+-------+---------+-----------+
-|error      |2      |0        |+2.00      |
+|error      |0      |2        |-2.00      |
 +-----------+-------+---------+-----------+
 
 
@@ -88,8 +86,6 @@ Messages
 |message id                   |occurrences |
 +=============================+============+
 |unused-variable              |5           |
-+-----------------------------+------------+
-|used-before-assignment       |2           |
 +-----------------------------+------------+
 |global-statement             |2           |
 +-----------------------------+------------+
@@ -104,7 +100,7 @@ Messages
 
 Global evaluation
 -----------------
-Your code has been rated at 9.34/10 (previous run: 9.75/10, -0.42)
+Your code has been rated at 9.68/10 (previous run: 9.34/10, +0.34)
 
 External dependencies
 ---------------------
