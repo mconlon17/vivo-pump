@@ -322,7 +322,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
     def test_unique_two_add_fullpath(self):
         from rdflib import URIRef, Literal
-        p = Pump("data/org_def.json", verbose=True)
+        p = Pump("data/org_def.json")
 
         # Add a zip code to Lee County Extension Office.  There is no address, so a full path will need
         # to be created
@@ -340,7 +340,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         # Add a zip code to the provost's office at UF.  An address already exists, the zip needs to be
         # added to the existing address
 
-        p = Pump("data/org_def.json", verbose=True)
+        p = Pump("data/org_def.json")
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n765319', u'zip': u'32653'}}
         [add, sub] = p.update()
         self.assertTrue(

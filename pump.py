@@ -122,7 +122,7 @@ class Pump(object):
         logging.basicConfig(level=logging.INFO)
         if filename is not None:
             self.out_filename = filename
-        self.original_graph = get_graph()  # Create the original graph from VIVO using the update_def
+        self.original_graph = get_graph(debug=self.verbose)  # Create the original graph from VIVO using the update_def
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
             self.update_graph.add((s, p, o))
@@ -349,11 +349,20 @@ def make_update_query(update_def, debug=False):
         }
     :return: a sparql query string
     """
-    front_query = 'SELECT ?uri ?p ?o\nWHERE {\n    ' + update_def['entity_def']['entity_sparql'] + '\n    ?uri ?p ?o'
+    front_query = 'SELECT ?uri ?p ?o ?p2 ?o2\n    WHERE {\n    ' + update_def['entity_def']['entity_sparql'] + '\n'
     middle_query = ''
     for name, path in update_def['column_defs'].items():
-        middle_query += 'UNION {'
-    update_query = front_query + middle_query + '}'
+        if middle_query.endswith('}'):
+            middle_query += '\n    UNION\n'
+        if len(path) == 1:
+            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ?o\n' + \
+                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?o}\n    }'
+        elif len(path) == 2:
+            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ' + \
+                '(?' + path[0]['object']['name'] + ' as ?o) (<' + path[1]['predicate']['ref'] + '> as ?p2) ?o2\n' + \
+                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?' + path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' <' + path[1]['predicate']['ref'] + '> ?o2}\n    }'
+    update_query = front_query + middle_query + '\n    }'
     if debug:
         print "Update Query\n", update_query
     return update_query
@@ -506,7 +515,7 @@ def get_graph(debug=False):
     from vivopump import vivo_query
     from rdflib import Graph, URIRef, Literal
 
-    triples = vivo_query(make_update_query(UPDATE_DEF))
+    triples = vivo_query(make_update_query(UPDATE_DEF, debug=debug), debug=debug)
     a = Graph()
     for row in triples['results']['bindings']:
         s = URIRef(row['uri']['value'])
