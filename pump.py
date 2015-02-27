@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.49"
+__version__ = "0.50"
 
 UPDATE_DEF = {}
 ENUM = {}
@@ -193,12 +193,6 @@ class Pump(object):
 
                     # TODO: Refactor the path logic (including length 3) into a separate function -- difficult
 
-                    # Handle first and second step of length 3 path here.  Likely that additional triples will be needed
-                    # in the update graph for finding and processing.  Why do we use a first order graph for update, but
-                    # a full graph for get?  Seems inconsistent, under serves update and creates additional code. Also
-                    # seems likely that the path 3 logic will need the entire path for examination and processing.  Leaf
-                    # actions should remain as they are.
-
                     continue
 
                 if len(column_def) == 2:
@@ -247,6 +241,7 @@ class Pump(object):
                         vivo_objs = {unicode(o): o for s, p, o in
                                      self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
                         column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                        print row, column_name, uri, step_def, column_values, vivo_objs
                         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
                                       debug=self.verbose)
 
@@ -322,9 +317,51 @@ def read_update_def(filename):
     return update_def
 
 
+def make_update_query(update_def, debug=False):
+    """
+
+    here's what the query looks like with obvious extension to length three paths:
+
+    select ?uri ?p ?o ?p2 ?o2
+        where {
+        ?uri a foaf:Organization .
+        ?uri a ufVivo:UFEntity .
+        ?uri a vivo:ExtensionUnit .
+        {
+            select ?uri (vivo:subOrganizationWithin as ?p) ?o
+            where { ?uri vivo:subOrganizationWithin ?o }
+        }
+        UNION
+        {
+            select ?uri (rdfs:label as ?p) ?o
+            where { ?uri rdfs:label ?o }
+        }
+        UNION
+        {
+            select ?uri (vivo:webpage as ?p) ?o
+            where { ?uri vivo:webpage ?o}
+        }
+        UNION
+        {
+            select ?uri (vivo:webpage as ?p) (?webpage as ?o) (vivo:linkURI as ?p2) ?o2
+            where { ?uri vivo:webpage ?webpage . ?webpage vivo:linkURI ?o2}
+        }
+        }
+    :return: a sparql query string
+    """
+    front_query = 'SELECT ?uri ?p ?o\nWHERE {\n    ' + update_def['entity_def']['entity_sparql'] + '\n    ?uri ?p ?o'
+    middle_query = ''
+    for name, path in update_def['column_defs'].items():
+        middle_query += 'UNION {'
+    update_query = front_query + middle_query + '}'
+    if debug:
+        print "Update Query\n", update_query
+    return update_query
+
+
 def make_get_query():
     """
-    Given and update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
+    Given an update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
     See do_get
     :return: a sparql query string
     """
@@ -469,12 +506,7 @@ def get_graph(debug=False):
     from vivopump import vivo_query
     from rdflib import Graph, URIRef, Literal
 
-    front_query = "SELECT ?uri ?p ?o\nWHERE {\n    "
-    back_query = "    ?uri ?p ?o .\n}"
-    graph_query = front_query + UPDATE_DEF['entity_def']['entity_sparql'] + back_query
-    if debug:
-        print 'Graph query\n', graph_query
-    triples = vivo_query(graph_query)
+    triples = vivo_query(make_update_query(UPDATE_DEF))
     a = Graph()
     for row in triples['results']['bindings']:
         s = URIRef(row['uri']['value'])

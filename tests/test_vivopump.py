@@ -255,18 +255,11 @@ class PumpTestCase(unittest.TestCase):
         print n_rows
         self.assertEqual(951, n_rows)
 
-    def test_pump_update_no_filename(self):
-        p = Pump("data/building_def.json")
-        with self.assertRaises(TypeError):
-            [add, sub] = p.update()
-            print add, sub
-
     def test_pump_update(self):
         p = Pump("data/building_def.json")
-        [n_add, n_sub] = p.update("data/buildings.txt")
-        print n_add, n_sub
-        self.assertEqual(106, n_add)
-        self.assertEqual(76, n_sub)
+        [add, sub] = p.update("data/buildings.txt")
+        self.assertEqual(106, len(add))
+        self.assertEqual(76, len(sub))
 
 
 class PumpUpdateCallTestCase(unittest.TestCase):
@@ -296,7 +289,7 @@ class PumpUpdateCallTestCase(unittest.TestCase):
 class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_one_add(self):
         from rdflib import URIRef, Literal
-        p = Pump()
+        p = Pump(verbose=True)
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
         [add, sub] = p.update()
         self.assertTrue(
@@ -354,6 +347,22 @@ class PumpUpdateDataTestCase(unittest.TestCase):
             len(add) == 1 and len(sub) == 0 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
                                                  Literal("32653")) in add)
+
+    def test_unique_two_change(self):
+        from rdflib import URIRef, Literal
+
+        # Change the zip code on an existing address
+
+        p = Pump("data/org_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n87597', u'zip': u'32653'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
+                                                 Literal("32653")) in add and
+                                                (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
+                                                 Literal("32611")) in sub)
 
 
 if __name__ == "__main__":
