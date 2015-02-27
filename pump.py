@@ -506,6 +506,23 @@ def do_get(filename, debug=True):
     return len(data)
 
 
+def make_rdf_term(row_term):
+    """
+    Given a row term from a JSON object returned by a SPARQL query (whew!) return a corresponding
+    rdflib term -- either a Literal or a URIRef
+    :param row_term:
+    :return: an rdf_term, either Literal or URIRef
+    """
+    from rdflib import Literal, URIRef
+
+    if row_term['type'] == 'literal' or row_term['type'] == 'typed-literal':
+        rdf_term = Literal(row_term['value'], datatype=row_term.get('datatype', None),
+                           lang=row_term.get('xml:lang', None))
+    else:
+        rdf_term = URIRef(row_term['value'])
+    return rdf_term
+
+
 def get_graph(debug=False):
     """
     Given the update def, get a graph from VIVO of the triples eligible for updating
@@ -513,19 +530,24 @@ def get_graph(debug=False):
     """
 
     from vivopump import vivo_query
-    from rdflib import Graph, URIRef, Literal
+    from rdflib import Graph, URIRef
 
     triples = vivo_query(make_update_query(UPDATE_DEF, debug=debug), debug=debug)
+    print "JSON Return object from query\n", triples
     a = Graph()
     for row in triples['results']['bindings']:
         s = URIRef(row['uri']['value'])
         p = URIRef(row['p']['value'])
-        if row['o']['type'] == 'literal' or row['o']['type'] == 'typed-literal':
-            o = Literal(row['o']['value'], datatype=row['o'].get('datatype', None),
-                        lang=row['o'].get('xml:lang', None))
-        else:
-            o = URIRef(row['o']['value'])
+        o = make_rdf_term(row['o'])
         a.add((s, p, o))
+        if 'p2' in row and 'o2' in row:
+            p2 = URIRef(row['p2']['value'])
+            o2 = make_rdf_term(row['o2'])
+            a.add((o, p2, o2))
+            if 'p3' in row and 'o3' in row:
+                p3 = URIRef(row['p3']['value'])
+                o3 = make_rdf_term(row['o3'])
+                a.add((o2, p3, o3))
     return a
 
 
