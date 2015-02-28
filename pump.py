@@ -17,19 +17,16 @@
 
 """
 
-# TODO: Continue work on UPDATE_DEF for people, pubs -- medium
+# TODO: Continue work on update_def for people, pubs -- medium
 # TODO: Control column order via update_def -- difficult
 # TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- difficult
-# TODO: Add test cases for each data scenario.  There are many -- difficult
+# TODO: Add test cases for each data scenario -- medium
 # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.50"
-
-UPDATE_DEF = {}
-ENUM = {}
+__version__ = "0.52"
 
 from datetime import datetime
 from json import dumps
@@ -59,18 +56,12 @@ class Pump(object):
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
         """
-        # TODO: Get rid of the global variables UPDATE_DEF and ENUM through proper encapsulation -- easy
         # TODO: Support graph injection to the original graph for testing -- easy
         self.update_def = read_update_def(json_def_filename)
-        self.column_defs = self.update_def['column_defs']
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
-        global UPDATE_DEF
-        UPDATE_DEF = self.update_def
-        self.enum = load_enum()
-        global ENUM
-        ENUM = self.enum
+        self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
         self.verbose = verbose
         self.out_filename = out_filename
@@ -98,9 +89,9 @@ class Pump(object):
         :rtype: basestring
         """
         result = str(datetime.now()) + " Pump Summary for " + self.json_def_filename + "\n" + \
-            str(datetime.now()) + " Enumerations\n" + dumps(ENUM, indent=4) + "\n" + \
-            str(datetime.now()) + " Update Definitions\n" + dumps(UPDATE_DEF, indent=4) + "\n" + \
-            str(datetime.now()) + " Get Query\n" + make_get_query()
+            str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
+            str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
+            str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
         return result
 
     def get(self, filename):
@@ -110,7 +101,7 @@ class Pump(object):
         :rtype: int
         """
         self.out_filename = filename
-        return do_get(self.out_filename, debug=self.verbose)
+        return do_get(self.update_def, self.enum, self.out_filename, debug=self.verbose)
 
     def update(self, filename=None):
         """
@@ -122,7 +113,7 @@ class Pump(object):
         logging.basicConfig(level=logging.INFO)
         if filename is not None:
             self.out_filename = filename
-        self.original_graph = get_graph(debug=self.verbose)  # Create the original graph from VIVO using the update_def
+        self.original_graph = get_graph(self.update_def, debug=self.verbose)  # Create the original graph from VIVO
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
             self.update_graph.add((s, p, o))
@@ -160,10 +151,10 @@ class Pump(object):
                 if self.verbose:
                     print "Adding an entity for row", row, ".  Will be added at", uri_string
                 uri = URIRef(uri_string)
-                self.update_graph.add((uri, RDF.type, UPDATE_DEF['entity_def']['type']))
+                self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
             entity_uri = uri
 
-            for column_name, column_def in self.column_defs.items():
+            for column_name, column_def in self.update_def['column_defs'].items():
                 if column_name not in data_update:
                     continue
 
@@ -179,7 +170,8 @@ class Pump(object):
                     step_def = column_def[len(column_def) - 1]
                     vivo_objs = {unicode(o): o for s, p, o in
                                  self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
-                    column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                    column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row,
+                                                          column_name)
                     do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
                                   debug=self.verbose)
                     continue
@@ -224,7 +216,8 @@ class Pump(object):
                         step_def = column_def[1]
                         vivo_objs = {unicode(o): o for s, p, o in
                                      self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
-                        column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                        column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row,
+                                                              column_name)
                         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
                                       debug=self.verbose)
 
@@ -240,7 +233,8 @@ class Pump(object):
                         step_def = column_def[1]
                         vivo_objs = {unicode(o): o for s, p, o in
                                      self.update_graph.triples((uri, step_def['predicate']['ref'], None))}
-                        column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                        column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row,
+                                                              column_name)
                         print row, column_name, uri, step_def, column_values, vivo_objs
                         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
                                       debug=self.verbose)
@@ -262,7 +256,7 @@ class Pump(object):
 
                 # Prepare all column values for the column
 
-                column_values = prepare_column_values(data_update[column_name], step_def, row, column_name)
+                column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row, column_name)
                 if self.verbose:
                     print row, column_name, column_values, uri, vivo_objs
 
@@ -317,70 +311,19 @@ def read_update_def(filename):
     return update_def
 
 
-def make_update_query(update_def, debug=False):
-    """
-
-    here's what the query looks like with obvious extension to length three paths:
-
-    select ?uri ?p ?o ?p2 ?o2
-        where {
-        ?uri a foaf:Organization .
-        ?uri a ufVivo:UFEntity .
-        ?uri a vivo:ExtensionUnit .
-        {
-            select ?uri (vivo:subOrganizationWithin as ?p) ?o
-            where { ?uri vivo:subOrganizationWithin ?o }
-        }
-        UNION
-        {
-            select ?uri (rdfs:label as ?p) ?o
-            where { ?uri rdfs:label ?o }
-        }
-        UNION
-        {
-            select ?uri (vivo:webpage as ?p) ?o
-            where { ?uri vivo:webpage ?o}
-        }
-        UNION
-        {
-            select ?uri (vivo:webpage as ?p) (?webpage as ?o) (vivo:linkURI as ?p2) ?o2
-            where { ?uri vivo:webpage ?webpage . ?webpage vivo:linkURI ?o2}
-        }
-        }
-    :return: a sparql query string
-    """
-    front_query = 'SELECT ?uri ?p ?o ?p2 ?o2\n    WHERE {\n    ' + update_def['entity_def']['entity_sparql'] + '\n'
-    middle_query = ''
-    for name, path in update_def['column_defs'].items():
-        if middle_query.endswith('}'):
-            middle_query += '\n    UNION\n'
-        if len(path) == 1:
-            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ?o\n' + \
-                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?o}\n    }'
-        elif len(path) == 2:
-            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ' + \
-                '(?' + path[0]['object']['name'] + ' as ?o) (<' + path[1]['predicate']['ref'] + '> as ?p2) ?o2\n' + \
-                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?' + path[0]['object']['name'] + ' . ?' + \
-                path[0]['object']['name'] + ' <' + path[1]['predicate']['ref'] + '> ?o2}\n    }'
-    update_query = front_query + middle_query + '\n    }'
-    if debug:
-        print "Update Query\n", update_query
-    return update_query
-
-
-def make_get_query():
+def make_get_query(update_def):
     """
     Given an update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
     See do_get
     :return: a sparql query string
     """
-    front_query = 'SELECT ?uri ?' + ' ?'.join(UPDATE_DEF['column_defs'].keys()) + '\nWHERE {\n    ' + \
-                  UPDATE_DEF['entity_def']['entity_sparql'] + '\n'
+    front_query = 'SELECT ?uri ?' + ' ?'.join(update_def['column_defs'].keys()) + '\nWHERE {\n    ' + \
+                  update_def['entity_def']['entity_sparql'] + '\n'
 
     # Fake recursion here to depth 3.  Could be replaced by real recursion to arbitrary path length
 
     middle_query = ""
-    for name, path in UPDATE_DEF['column_defs'].items():
+    for name, path in update_def['column_defs'].items():
         middle_query += '    OPTIONAL {  ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
         if len(path) == 1:
             middle_query += name + ' . }\n'
@@ -397,7 +340,7 @@ def make_get_query():
                 else:
                     raise PathLengthException('Path length >3 not supported in do_get')
 
-    back_query = '}\nORDER BY ?' + UPDATE_DEF['entity_def']['order_by']
+    back_query = '}\nORDER BY ?' + update_def['entity_def']['order_by']
     return front_query + middle_query + back_query
 
 
@@ -418,7 +361,7 @@ def unique_path(path):
     return unique
 
 
-def make_get_data(result_set):
+def make_get_data(update_def, result_set):
     """
     Given a query result set, produce a data structure with one element per uri and column values collected
     into lists.  If VIVO has multiple values for a path defined to be unique, print a WARNING to the log and
@@ -433,7 +376,7 @@ def make_get_data(result_set):
         uri = str(binding['uri']['value'])
         if uri not in data:
             data[uri] = {}
-        for name in ['uri'] + UPDATE_DEF['column_defs'].keys():
+        for name in ['uri'] + update_def['column_defs'].keys():
             if name in binding:
                 if name in data[uri]:
                     data[uri][name].add(binding[name]['value'])
@@ -442,7 +385,7 @@ def make_get_data(result_set):
     return data
 
 
-def do_get(filename, debug=True):
+def do_get(update_def, enum, filename, debug=True):
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
     editing using an editor or spreadsheet, and suitable for use by do_update.
@@ -453,17 +396,17 @@ def do_get(filename, debug=True):
     from vivopump import vivo_query
     import codecs
 
-    query = make_get_query()
+    query = make_get_query(update_def)
     if debug:
         print query
     result_set = vivo_query(query)
-    data = make_get_data(result_set)
+    data = make_get_data(update_def, result_set)
 
     # Write out the file
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
-    columns = (['uri'] + UPDATE_DEF['column_defs'].keys())
+    columns = (['uri'] + update_def['column_defs'].keys())
     outfile.write('\t'.join(columns))
     outfile.write('\n')
 
@@ -473,8 +416,8 @@ def do_get(filename, debug=True):
 
                 # Translate VIVO values via enumeration if any
 
-                if name in UPDATE_DEF['column_defs']:
-                    path = UPDATE_DEF['column_defs'][name]
+                if name in update_def['column_defs']:
+                    path = update_def['column_defs'][name]
 
                     # Warn/correct if path is unique and VIVO is not
 
@@ -489,7 +432,7 @@ def do_get(filename, debug=True):
                         enum_name = path[len(path) - 1]['object']['enum']
                         a = set()
                         for x in data[uri][name]:
-                            a.add(ENUM[enum_name]['get'].get(x, x))  # if we can't find the value in the enumeration,
+                            a.add(enum[enum_name]['get'].get(x, x))  # if we can't find the value in the enumeration,
                                 # just return the value
                         data[uri][name] = a
 
@@ -523,19 +466,19 @@ def make_rdf_term(row_term):
     return rdf_term
 
 
-def get_graph(debug=False):
+def get_graph(update_def, debug=False):
     """
     Given the update def, get a graph from VIVO of the triples eligible for updating
     :return: graph of triples
     """
 
-    from vivopump import vivo_query
+    from vivopump import vivo_query, make_update_query
     from rdflib import Graph, URIRef
 
-    triples = vivo_query(make_update_query(UPDATE_DEF, debug=debug), debug=debug)
-    print "JSON Return object from query\n", triples
+    update_query = make_update_query(update_def, debug=debug)
+    result = vivo_query(update_query, debug=debug)
     a = Graph()
-    for row in triples['results']['bindings']:
+    for row in result['results']['bindings']:
         s = URIRef(row['uri']['value'])
         p = URIRef(row['p']['value'])
         o = make_rdf_term(row['o'])
@@ -551,7 +494,7 @@ def get_graph(debug=False):
     return a
 
 
-def prepare_column_values(update_string, step_def, row, column_name, debug=False):
+def prepare_column_values(update_string, step_def, enum, row, column_name, debug=False):
     """
     Given the string of data from the update file, the step definition, the row and column name of the
     update_string in the update file, enumerations and filters, prepare the column values and return them
@@ -584,7 +527,7 @@ def prepare_column_values(update_string, step_def, row, column_name, debug=False
 
     if 'enum' in step_def['object']:
         for i in range(len(column_values)):
-            column_values[i] = ENUM[step_def['object']['enum']]['update'].get(column_values[i], column_values[i])
+            column_values[i] = enum[step_def['object']['enum']]['update'].get(column_values[i], column_values[i])
 
     # Handle filters
 
@@ -672,21 +615,21 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     return None
 
 
-def load_enum():
+def load_enum(update_def):
     """
-    Find all enumerations in the UPDATE_DEF. for each, read the corresponding enum file and build the corresponding
+    Find all enumerations in the update_def. for each, read the corresponding enum file and build the corresponding
     pair of enum dictionaries.
 
     The two columns in the tab delimited input file must be called "short" and "vivo".  "vivo" is the value to put in
     vivo (update) or get from vivo.  short is the human usable short form.
 
-    The input file name must be named enum_name + '.txt', where enum_name appears as the 'enum' value in UPDATE_DEF
+    The input file name must be named enum_name + '.txt', where enum_name appears as the 'enum' value in update_def
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
     from vivopump import read_csv
     enum = {}
-    for path in UPDATE_DEF['column_defs'].values():
+    for path in update_def['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
                 enum_name = step['object']['enum']

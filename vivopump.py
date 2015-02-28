@@ -116,6 +116,67 @@ def read_csv(filename, skip=True, delimiter="|"):
     return data
 
 
+def make_update_query(update_def, debug=False):
+    """
+    Given and update_def data structure, generate the query needed to pull the triple from VIVO that might be updated
+    Here's what the query looks like with obvious extension to length three paths:
+
+    select ?uri ?p ?o ?p2 ?o2
+        where {
+        ?uri a foaf:Organization .
+        ?uri a ufVivo:UFEntity .
+        ?uri a vivo:ExtensionUnit .
+        {
+            select ?uri (vivo:subOrganizationWithin as ?p) ?o
+            where { ?uri vivo:subOrganizationWithin ?o }
+        }
+        UNION
+        {
+            select ?uri (rdfs:label as ?p) ?o
+            where { ?uri rdfs:label ?o }
+        }
+        UNION
+        {
+            select ?uri (vivo:webpage as ?p) (?webpage as ?o) (vivo:linkURI as ?p2) ?o2
+            where { ?uri vivo:webpage ?webpage . ?webpage vivo:linkURI ?o2}
+        }
+        UNION
+        {
+            select ?uri (vivo:dateTimeInterval as ?p) (?award_period as ?o) (vivo:end as ?p2)
+                                                            (?end as ?o2) (vivo:dateTime as ?p3) ?o3
+            where { ?uri vivo:dateTimeInterval ?award_period . ?award_period vivo:end ?end . ?end vivo:dateTime ?o3}
+        }
+        }
+    :return: a sparql query string
+    """
+    import sys
+    front_query = 'SELECT ?uri ?p ?o ?p2 ?o2\n    WHERE {\n    ' + update_def['entity_def']['entity_sparql'] + '\n'
+    middle_query = ''
+    for name, path in update_def['column_defs'].items():
+        if middle_query.endswith('}'):
+            middle_query += '\n    UNION\n'
+        if len(path) == 1:
+            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ?o\n' + \
+                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?o}\n    }'
+        elif len(path) == 2:
+            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ' + \
+                '(?' + path[0]['object']['name'] + ' as ?o) (<' + path[1]['predicate']['ref'] + '> as ?p2) ?o2\n' + \
+                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?' + path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' <' + path[1]['predicate']['ref'] + '> ?o2}\n    }'
+        elif len(path) == 3:
+            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ' + \
+                '(?' + path[0]['object']['name'] + ' as ?o) (<' + path[1]['predicate']['ref'] + '> as ?p2) (?' + \
+                path[1]['object']['name'] + ' as ?o2) (<' + path[2]['predicate']['ref'] + '> as ?p3) ?o3\n' + \
+                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?' + path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' <' + path[1]['predicate']['ref'] + '> ?' + path[1]['object']['name'] + \
+                ' . ?' + path[1]['object']['name'] + ' <' + path[2]['predicate']['ref'] + '> ?o3}\n    }'
+    update_query = front_query + middle_query + '\n    }'
+    if debug:
+        print "Update Query\n", update_query
+        sys.exit()
+    return update_query
+
+
 def new_uri():
     """
     Find an unused VIVO URI with the specified VIVO_URI_PREFIX

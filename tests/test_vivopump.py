@@ -10,15 +10,23 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, vivo_query, write_update_def, repair_email, repair_phone_number, comma_space, \
-    improve_title, \
+    improve_title, make_update_query, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
-from pump import Pump
+from pump import Pump, read_update_def
 
 
 class NewUriTestCase(unittest.TestCase):
     def test_new_uri(self):
         uri = new_uri()
         self.assertTrue(len(uri) > 0)
+
+
+class MakeUpdateQueryTestCase(unittest.TestCase):
+    def test_make_query(self):
+        update_def = read_update_def('data/grant_def.json')
+        update_query = make_update_query(update_def)
+        print update_query
+        self.assertTrue(len(update_query) > 0)
 
 
 class ReadCSVTestCase(unittest.TestCase):
@@ -258,7 +266,7 @@ class PumpTestCase(unittest.TestCase):
     def test_pump_update(self):
         p = Pump("data/building_def.json")
         [add, sub] = p.update("data/buildings.txt")
-        self.assertEqual(106, len(add))
+        self.assertEqual(74, len(add))
         self.assertEqual(76, len(sub))
 
 

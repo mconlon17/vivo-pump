@@ -1,36 +1,21 @@
 ************* Module pump
-R: 50, 0: Too many instance attributes (9/7) (too-many-instance-attributes)
-W: 69, 8: Using the global statement (global-statement)
-W: 72, 8: Using the global statement (global-statement)
-W:212,39: Unused variable 's' (unused-variable)
-W:212,42: Unused variable 'p' (unused-variable)
-W:531,31: Use of eval (eval-used)
-W:499, 4: Unused variable 'repair_email' (unused-variable)
-W:499, 4: Unused variable 'repair_phone_number' (unused-variable)
-W:499, 4: Unused variable 'improve_title' (unused-variable)
-R:540, 0: Too many branches (24/20) (too-many-branches)
+R: 47, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+W:198,39: Unused variable 's' (unused-variable)
+W:198,42: Unused variable 'p' (unused-variable)
+C:487,12: Invalid variable name "p2" (invalid-name)
+C:488,12: Invalid variable name "o2" (invalid-name)
+C:491,16: Invalid variable name "p3" (invalid-name)
+C:492,16: Invalid variable name "o3" (invalid-name)
+W:537,31: Use of eval (eval-used)
+W:505, 4: Unused variable 'repair_email' (unused-variable)
+W:505, 4: Unused variable 'repair_phone_number' (unused-variable)
+W:505, 4: Unused variable 'improve_title' (unused-variable)
+R:546, 0: Too many branches (24/20) (too-many-branches)
 
 
 Report
 ======
-315 statements analysed.
-
-Statistics by type
-------------------
-
-+---------+-------+-----------+-----------+------------+---------+
-|type     |number |old number |difference |%documented |%badname |
-+=========+=======+===========+===========+============+=========+
-|module   |1      |1          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|class    |2      |2          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|method   |9      |9          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|function |10     |10         |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-
-
+317 statements analysed.
 
 Duplication
 -----------
@@ -45,19 +30,36 @@ Duplication
 
 
 
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |2      |2          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |9      |9          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |11     |10         |+1.00      |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
 Raw metrics
 -----------
 
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |341    |57.41 |327      |+14.00     |
+|code      |344    |57.33 |341      |+3.00      |
 +----------+-------+------+---------+-----------+
-|docstring |141    |23.74 |141      |=          |
+|docstring |149    |24.83 |141      |+8.00      |
 +----------+-------+------+---------+-----------+
-|comment   |44     |7.41  |44       |=          |
+|comment   |38     |6.33  |44       |-6.00      |
 +----------+-------+------+---------+-----------+
-|empty     |68     |11.45 |68       |=          |
+|empty     |69     |11.50 |68       |+1.00      |
 +----------+-------+------+---------+-----------+
 
 
@@ -68,13 +70,13 @@ Messages by category
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |0      |0        |=          |
+|convention |4      |0        |+4.00      |
 +-----------+-------+---------+-----------+
 |refactor   |2      |2        |=          |
 +-----------+-------+---------+-----------+
-|warning    |8      |8        |=          |
+|warning    |6      |8        |-2.00      |
 +-----------+-------+---------+-----------+
-|error      |0      |2        |-2.00      |
+|error      |0      |0        |=          |
 +-----------+-------+---------+-----------+
 
 
@@ -87,7 +89,7 @@ Messages
 +=============================+============+
 |unused-variable              |5           |
 +-----------------------------+------------+
-|global-statement             |2           |
+|invalid-name                 |4           |
 +-----------------------------+------------+
 |too-many-instance-attributes |1           |
 +-----------------------------+------------+
@@ -100,7 +102,7 @@ Messages
 
 Global evaluation
 -----------------
-Your code has been rated at 9.68/10 (previous run: 9.34/10, +0.34)
+Your code has been rated at 9.62/10 (previous run: 9.68/10, -0.06)
 
 External dependencies
 ---------------------

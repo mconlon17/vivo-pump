@@ -17,8 +17,6 @@
 
 """
 
-# TODO: Continue work on UPDATE_DEF for people, pubs -- medium
-# TODO: Add test cases for each data scenario.  There are many -- difficult
 # TODO: Add test cases for each command line scenario -- easy
 # TODO: Use a config file to set parameters -- medium
 
