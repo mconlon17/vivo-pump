@@ -16,7 +16,7 @@ The Pump has two major operators:
 
 # Simple VIVO
     
-A command line tool using the pump (Simple VIVO) is delivered with the pump.  Simple VIVO support data management of
+A command line tool using the pump (Simple VIVO) is delivered with the pump.  Simple VIVO supports data management of
 VIVO data from a "spreadsheet" -- a delimited file of rows and columns, and a corresponding definition file.  Simple
 VIVO supports get and update, along with some reporting operators.  For example:
 
