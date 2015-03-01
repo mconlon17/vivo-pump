@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "type": "http://vivoweb.org/ontology/core#Grant", 
-        "entity_sparql": "?uri a vivo:Grant . ?uri rdfs:label ?label . FILTER(regex(?label, \"^J\")) ", 
+        "entity_sparql": "?uri a vivo:Grant . ",
         "order_by": "title"
     }, 
     "column_defs": {

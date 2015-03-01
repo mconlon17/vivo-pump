@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.52"
+__version__ = "0.53"
 
 from datetime import datetime
 from json import dumps
@@ -56,6 +56,7 @@ class Pump(object):
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
         """
+        from vivopump import read_update_def
         # TODO: Support graph injection to the original graph for testing -- easy
         self.update_def = read_update_def(json_def_filename)
         self.update_data = None
@@ -107,7 +108,7 @@ class Pump(object):
         """
         Prepare for the update, getting graph and update_data.  Then do the update, producing triples
         """
-        from vivopump import read_csv
+        from vivopump import read_csv, get_graph
         from rdflib import Graph
         import logging
         logging.basicConfig(level=logging.INFO)
@@ -276,41 +277,6 @@ class Pump(object):
         return [add, sub]
 
 
-def read_update_def(filename):
-    """
-    Read an update_def from a file
-    :param filename: name of file to read
-    :rtype: dict
-    :return: JSON object from file
-    """
-
-    def fixit(current_object):
-        """
-        Read the def data structure and replace all string URLs with URIRef entities
-        :param current_object: the piece of the data structure to be fixed
-        :return current_object: the piece repaired in place
-        """
-        from rdflib import URIRef
-        if isinstance(current_object, dict):
-            for k, t in current_object.items():
-                if isinstance(t, basestring) and t.startswith('http://'):
-                    current_object[k] = URIRef(t)
-                else:
-                    current_object[k] = fixit(current_object[k])
-        elif isinstance(current_object, list):
-            for i in range(0, len(current_object)):
-                current_object[i] = fixit(current_object[i])
-        elif isinstance(current_object, basestring):
-            if current_object.startswith("http://"):
-                current_object = URIRef(current_object)
-        return current_object
-
-    import json
-    in_file = open(filename, "r")
-    update_def = fixit(json.load(in_file))
-    return update_def
-
-
 def make_get_query(update_def):
     """
     Given an update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
@@ -447,51 +413,6 @@ def do_get(update_def, enum, filename, debug=True):
     outfile.close()
 
     return len(data)
-
-
-def make_rdf_term(row_term):
-    """
-    Given a row term from a JSON object returned by a SPARQL query (whew!) return a corresponding
-    rdflib term -- either a Literal or a URIRef
-    :param row_term:
-    :return: an rdf_term, either Literal or URIRef
-    """
-    from rdflib import Literal, URIRef
-
-    if row_term['type'] == 'literal' or row_term['type'] == 'typed-literal':
-        rdf_term = Literal(row_term['value'], datatype=row_term.get('datatype', None),
-                           lang=row_term.get('xml:lang', None))
-    else:
-        rdf_term = URIRef(row_term['value'])
-    return rdf_term
-
-
-def get_graph(update_def, debug=False):
-    """
-    Given the update def, get a graph from VIVO of the triples eligible for updating
-    :return: graph of triples
-    """
-
-    from vivopump import vivo_query, make_update_query
-    from rdflib import Graph, URIRef
-
-    update_query = make_update_query(update_def, debug=debug)
-    result = vivo_query(update_query, debug=debug)
-    a = Graph()
-    for row in result['results']['bindings']:
-        s = URIRef(row['uri']['value'])
-        p = URIRef(row['p']['value'])
-        o = make_rdf_term(row['o'])
-        a.add((s, p, o))
-        if 'p2' in row and 'o2' in row:
-            p2 = URIRef(row['p2']['value'])
-            o2 = make_rdf_term(row['o2'])
-            a.add((o, p2, o2))
-            if 'p3' in row and 'o3' in row:
-                p3 = URIRef(row['p3']['value'])
-                o3 = make_rdf_term(row['o3'])
-                a.add((o2, p3, o3))
-    return a
 
 
 def prepare_column_values(update_string, step_def, enum, row, column_name, debug=False):

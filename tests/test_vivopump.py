@@ -10,9 +10,9 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, vivo_query, write_update_def, repair_email, repair_phone_number, comma_space, \
-    improve_title, make_update_query, \
+    improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
-from pump import Pump, read_update_def
+from pump import Pump
 
 
 class NewUriTestCase(unittest.TestCase):
@@ -21,12 +21,40 @@ class NewUriTestCase(unittest.TestCase):
         self.assertTrue(len(uri) > 0)
 
 
+class ReadUpdateDefTestCase(unittest.TestCase):
+    def test_read_normal_def(self):
+        update_def = read_update_def('data/grant_def.json')
+        print update_def
+        self.assertTrue(update_def.keys() == ['entity_def', 'column_defs'])
+
+
 class MakeUpdateQueryTestCase(unittest.TestCase):
     def test_make_query(self):
         update_def = read_update_def('data/grant_def.json')
-        update_query = make_update_query(update_def)
-        print update_query
-        self.assertTrue(len(update_query) > 0)
+        for path in update_def['column_defs'].values():
+            update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
+            print update_query
+            self.assertTrue(len(update_query) > 0)
+
+
+class MakeRdfTermTestCase(unittest.TestCase):
+    def test_uriref_case(self):
+        from rdflib import URIRef
+        input_dict = {
+            "type": "uri",
+            "value": "http://vivo.ufl.edu/individual/n531532305"
+        }
+        rdf_term = make_rdf_term(input_dict)
+        print rdf_term
+        self.assertTrue(type(rdf_term) is URIRef)
+
+
+class GetGraphTestCase(unittest.TestCase):
+    def test_normal_case(self):
+        update_def = read_update_def('data/grant_def.json')
+        a = get_graph(update_def)
+        print len(a)
+        self.assertTrue(len(a) == 241611)
 
 
 class ReadCSVTestCase(unittest.TestCase):

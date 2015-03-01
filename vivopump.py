@@ -116,65 +116,142 @@ def read_csv(filename, skip=True, delimiter="|"):
     return data
 
 
-def make_update_query(update_def, debug=False):
+def read_update_def(filename):
     """
-    Given and update_def data structure, generate the query needed to pull the triple from VIVO that might be updated
-    Here's what the query looks like with obvious extension to length three paths:
+    Read an update_def in JSON format, from a file
+    :param filename: name of file to read
+    :rtype: dict
+    :return: JSON-like object from file, replacing all URI strings with URIRef objects
+    """
 
-    select ?uri ?p ?o ?p2 ?o2
-        where {
-        ?uri a foaf:Organization .
-        ?uri a ufVivo:UFEntity .
-        ?uri a vivo:ExtensionUnit .
-        {
+    def fixit(current_object):
+        """
+        Read the def data structure and replace all string URIs with URIRef entities
+        :param current_object: the piece of the data structure to be fixed
+        :return current_object: the piece repaired in place
+        """
+        from rdflib import URIRef
+        if isinstance(current_object, dict):
+            for k, t in current_object.items():
+                if isinstance(t, basestring) and t.startswith('http://'):
+                    current_object[k] = URIRef(t)
+                else:
+                    current_object[k] = fixit(current_object[k])
+        elif isinstance(current_object, list):
+            for i in range(0, len(current_object)):
+                current_object[i] = fixit(current_object[i])
+        elif isinstance(current_object, basestring):
+            if current_object.startswith("http://"):
+                current_object = URIRef(current_object)
+        return current_object
+
+    import json
+    in_file = open(filename, "r")
+    update_def = fixit(json.load(in_file))
+    return update_def
+
+
+def make_update_query(entity_sparql, path, debug=False):
+    """
+    Given a path from an update_def data structure, generate the query needed to pull the triples from VIVO that might
+    be updated.  Here's what the queries look like by path length
+
+    Path length 1 example:
+
             select ?uri (vivo:subOrganizationWithin as ?p) ?o
-            where { ?uri vivo:subOrganizationWithin ?o }
-        }
-        UNION
-        {
-            select ?uri (rdfs:label as ?p) ?o
-            where { ?uri rdfs:label ?o }
-        }
-        UNION
-        {
+            where {
+                ... entity sparql goes here ...
+                ?uri vivo:subOrganizationWithin ?o
+            }
+
+    Path Length 2 example:
+
             select ?uri (vivo:webpage as ?p) (?webpage as ?o) (vivo:linkURI as ?p2) ?o2
-            where { ?uri vivo:webpage ?webpage . ?webpage vivo:linkURI ?o2}
-        }
-        UNION
-        {
+            where {
+                ... entity sparql goes here ...
+                ?uri vivo:webpage ?webpage . ?webpage vivo:linkURI ?o2 .
+            }
+
+    Path length 3 example:
+
             select ?uri (vivo:dateTimeInterval as ?p) (?award_period as ?o) (vivo:end as ?p2)
                                                             (?end as ?o2) (vivo:dateTime as ?p3) ?o3
-            where { ?uri vivo:dateTimeInterval ?award_period . ?award_period vivo:end ?end . ?end vivo:dateTime ?o3}
-        }
-        }
+            where {
+                ... entity sparql goes here ...
+                ?uri vivo:dateTimeInterval ?award_period . ?award_period vivo:end ?end . ?end vivo:dateTime ?o3 .
+            }
+
     :return: a sparql query string
     """
-    import sys
-    front_query = 'SELECT ?uri ?p ?o ?p2 ?o2\n    WHERE {\n    ' + update_def['entity_def']['entity_sparql'] + '\n'
-    middle_query = ''
-    for name, path in update_def['column_defs'].items():
-        if middle_query.endswith('}'):
-            middle_query += '\n    UNION\n'
-        if len(path) == 1:
-            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ?o\n' + \
-                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?o}\n    }'
-        elif len(path) == 2:
-            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ' + \
-                '(?' + path[0]['object']['name'] + ' as ?o) (<' + path[1]['predicate']['ref'] + '> as ?p2) ?o2\n' + \
-                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?' + path[0]['object']['name'] + ' . ?' + \
-                path[0]['object']['name'] + ' <' + path[1]['predicate']['ref'] + '> ?o2}\n    }'
-        elif len(path) == 3:
-            middle_query += '    {\n        select ?uri (<' + path[0]['predicate']['ref'] + '> as ?p) ' + \
-                '(?' + path[0]['object']['name'] + ' as ?o) (<' + path[1]['predicate']['ref'] + '> as ?p2) (?' + \
-                path[1]['object']['name'] + ' as ?o2) (<' + path[2]['predicate']['ref'] + '> as ?p3) ?o3\n' + \
-                '        where { ?uri <' + path[0]['predicate']['ref'] + '> ?' + path[0]['object']['name'] + ' . ?' + \
-                path[0]['object']['name'] + ' <' + path[1]['predicate']['ref'] + '> ?' + path[1]['object']['name'] + \
-                ' . ?' + path[1]['object']['name'] + ' <' + path[2]['predicate']['ref'] + '> ?o3}\n    }'
-    update_query = front_query + middle_query + '\n    }'
-    if debug:
-        print "Update Query\n", update_query
-        sys.exit()
-    return update_query
+    if len(path) == 1:
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ?o\n' + \
+            '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o\n}'
+    elif len(path) == 2:
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
+            '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(
+            path[1]['predicate']['ref']) + '> as ?p2) ?o2\n' + \
+            '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
+            path[0]['object']['name'] + ' . ?' + \
+            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2\n}'
+    elif len(path) == 3:
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
+            '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(
+            path[1]['predicate']['ref']) + '> as ?p2) (?' + \
+            path[1]['object']['name'] + ' as ?o2) (<' + str(path[2]['predicate']['ref']) + '> as ?p3) ?o3\n' + \
+            'where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
+            path[0]['object']['name'] + ' . ?' + \
+            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
+            path[1]['object']['name'] + \
+            ' . ?' + path[1]['object']['name'] + ' <' + str(
+            path[2]['predicate']['ref']) + '> ?o3\n}'
+    return query
+
+
+def make_rdf_term(row_term):
+    """
+    Given a row term from a JSON object returned by a SPARQL query (whew!) return a corresponding
+    rdflib term -- either a Literal or a URIRef
+    :param row_term:
+    :return: an rdf_term, either Literal or URIRef
+    """
+    from rdflib import Literal, URIRef
+
+    if row_term['type'] == 'literal' or row_term['type'] == 'typed-literal':
+        rdf_term = Literal(row_term['value'], datatype=row_term.get('datatype', None),
+                           lang=row_term.get('xml:lang', None))
+    else:
+        rdf_term = URIRef(row_term['value'])
+    return rdf_term
+
+
+def get_graph(update_def, debug=False):
+    """
+    Given the update def, get a graph from VIVO of the triples eligible for updating
+    :return: graph of triples
+    """
+
+    from rdflib import Graph, URIRef
+
+    a = Graph()
+    for path in update_def['column_defs'].values():
+        update_query = make_update_query(update_def['entity_def']['entity_sparql'], path, debug=debug)
+        result = vivo_query(update_query, debug=debug)
+        for row in result['results']['bindings']:
+            s = URIRef(row['uri']['value'])
+            p = URIRef(row['p']['value'])
+            o = make_rdf_term(row['o'])
+            a.add((s, p, o))
+            if 'p2' in row and 'o2' in row:
+                p2 = URIRef(row['p2']['value'])
+                o2 = make_rdf_term(row['o2'])
+                a.add((o, p2, o2))
+                if 'p3' in row and 'o3' in row:
+                    p3 = URIRef(row['p3']['value'])
+                    o3 = make_rdf_term(row['o3'])
+                    a.add((o2, p3, o3))
+        if debug:
+            print "Triples in original graph", len(a)
+    return a
 
 
 def new_uri():
