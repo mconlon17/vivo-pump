@@ -1,15 +1,27 @@
-# vivo-org-ingest
+# The VIVO Pump
 
-Manage organizations in VIVO.
+A general tool set for managing data in VIVO using data rectangles (rows and columns)
 
-Using rdflib, build command line tools for managing organizations in VIVO.
+The Pump uses a definition file in JSON format that describes the nature of the rows -- entities in VIVO -- and the 
+relationship of the columns to the graph of data in VIVO.  Each row/column intersection is an "instruction" to the Pump:
 
-# See
+* blank or empty means do nothing
+* None means remove any value found in VIVO
+* a value means replace the value in VIVO with the value in the rectangle.
 
-* [vivo-org-lib](http://github.com/mconlon17/vivo-org-lib)
+The Pump has two major operators:
 
-# Note
+1. Get -- gets values from VIVO according to the definition and returns a rectangle
+1. Update -- uses a rectangle and updates VIVO according to the definition
+    
+A command line tool using the pump (Simple VIVO) is delivered with the pump.  Simple VIVO support data management of
+VIVO data from a "spreadsheet" -- a delimited file of rows and columns, and a corresponding definition file.  Simple
+VIVO supports get and update, along with some reporting operators.  For example:
 
-This is morphing into a general input/output tool for managing VIVO data using flat, rectangular files.  This is the central concept behind Simple VIVO.  Now appears that the core software tool will be called "the Pump" and Simple VIVO will be a set of pump definitions and associated filters and tables, along with extensive documentation (a book?)
+    sv get org_def.json orgs.txt
+    
+will use the definition file org_def.json to get data from VIVO and return it in orgs.txt
 
-See the JSON files in this repository for examples of using this software to get and put data into VIVO.
+    sv update person_def.json people.txt
+    
+will use the definition file person_def.json and the data people.txt to make updates in VIVO
