@@ -13,6 +13,8 @@ The Pump has two major operators:
 
 1. Get -- gets values from VIVO according to the definition and returns a rectangle
 1. Update -- uses a rectangle and updates VIVO according to the definition
+
+# Simple VIVO
     
 A command line tool using the pump (Simple VIVO) is delivered with the pump.  Simple VIVO support data management of
 VIVO data from a "spreadsheet" -- a delimited file of rows and columns, and a corresponding definition file.  Simple
