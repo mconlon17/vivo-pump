@@ -1,21 +1,51 @@
 ************* Module pump
-R: 47, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
-W:198,39: Unused variable 's' (unused-variable)
-W:198,42: Unused variable 'p' (unused-variable)
-C:487,12: Invalid variable name "p2" (invalid-name)
-C:488,12: Invalid variable name "o2" (invalid-name)
-C:491,16: Invalid variable name "p3" (invalid-name)
-C:492,16: Invalid variable name "o3" (invalid-name)
-W:537,31: Use of eval (eval-used)
-W:505, 4: Unused variable 'repair_email' (unused-variable)
-W:505, 4: Unused variable 'repair_phone_number' (unused-variable)
-W:505, 4: Unused variable 'improve_title' (unused-variable)
-R:546, 0: Too many branches (24/20) (too-many-branches)
+W:190,23: Unused variable 'p' (unused-variable)
+W:190,20: Unused variable 's' (unused-variable)
+W:392,31: Use of eval (eval-used)
+W:360, 4: Unused variable 'repair_email' (unused-variable)
+W:360, 4: Unused variable 'repair_phone_number' (unused-variable)
+W:360, 4: Unused variable 'improve_title' (unused-variable)
+W:418,26: Unused variable 'p' (unused-variable)
+W:418,23: Unused variable 's' (unused-variable)
 
 
 Report
 ======
-317 statements analysed.
+271 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |2      |2          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |9      |9          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |8      |8          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |295    |56.62 |295      |=          |
++----------+-------+------+---------+-----------+
+|docstring |136    |26.10 |136      |=          |
++----------+-------+------+---------+-----------+
+|comment   |30     |5.76  |30       |=          |
++----------+-------+------+---------+-----------+
+|empty     |60     |11.52 |60       |=          |
++----------+-------+------+---------+-----------+
+
+
 
 Duplication
 -----------
@@ -30,51 +60,17 @@ Duplication
 
 
 
-Statistics by type
-------------------
-
-+---------+-------+-----------+-----------+------------+---------+
-|type     |number |old number |difference |%documented |%badname |
-+=========+=======+===========+===========+============+=========+
-|module   |1      |1          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|class    |2      |2          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|method   |9      |9          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|function |11     |10         |+1.00      |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-
-
-
-Raw metrics
------------
-
-+----------+-------+------+---------+-----------+
-|type      |number |%     |previous |difference |
-+==========+=======+======+=========+===========+
-|code      |344    |57.33 |341      |+3.00      |
-+----------+-------+------+---------+-----------+
-|docstring |149    |24.83 |141      |+8.00      |
-+----------+-------+------+---------+-----------+
-|comment   |38     |6.33  |44       |-6.00      |
-+----------+-------+------+---------+-----------+
-|empty     |69     |11.50 |68       |+1.00      |
-+----------+-------+------+---------+-----------+
-
-
-
 Messages by category
 --------------------
 
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |4      |0        |+4.00      |
+|convention |0      |0        |=          |
 +-----------+-------+---------+-----------+
-|refactor   |2      |2        |=          |
+|refactor   |0      |2        |-2.00      |
 +-----------+-------+---------+-----------+
-|warning    |6      |8        |-2.00      |
+|warning    |8      |8        |=          |
 +-----------+-------+---------+-----------+
 |error      |0      |0        |=          |
 +-----------+-------+---------+-----------+
@@ -84,25 +80,19 @@ Messages by category
 Messages
 --------
 
-+-----------------------------+------------+
-|message id                   |occurrences |
-+=============================+============+
-|unused-variable              |5           |
-+-----------------------------+------------+
-|invalid-name                 |4           |
-+-----------------------------+------------+
-|too-many-instance-attributes |1           |
-+-----------------------------+------------+
-|too-many-branches            |1           |
-+-----------------------------+------------+
-|eval-used                    |1           |
-+-----------------------------+------------+
++----------------+------------+
+|message id      |occurrences |
++================+============+
+|unused-variable |7           |
++----------------+------------+
+|eval-used       |1           |
++----------------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 9.62/10 (previous run: 9.68/10, -0.06)
+Your code has been rated at 9.70/10 (previous run: 9.63/10, +0.07)
 
 External dependencies
 ---------------------
