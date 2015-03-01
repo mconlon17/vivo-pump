@@ -1,6 +1,6 @@
 # The VIVO Pump
 
-A general tool set for managing data in VIVO using data rectangles (rows and columns)
+A general tool set for managing data in VIVO using data rectangles (rows and columns, including spreadsheets)
 
 The Pump uses a definition file in JSON format that describes the nature of the rows -- entities in VIVO -- and the 
 relationship of the columns to the graph of data in VIVO.  Each row/column intersection is an "instruction" to the Pump:
