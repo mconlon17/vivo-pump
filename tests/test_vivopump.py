@@ -325,7 +325,7 @@ class PumpUpdateCallTestCase(unittest.TestCase):
 class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_one_add(self):
         from rdflib import URIRef, Literal
-        p = Pump(verbose=True)
+        p = Pump()
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
         [add, sub] = p.update()
         self.assertTrue(
@@ -348,7 +348,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
     def test_unique_one_delete(self):
         from rdflib import URIRef, Literal, XSD
-        p = Pump(verbose=True)
+        p = Pump()
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n111669', u'abbreviation': u'None'}}
         [add, sub] = p.update()
         self.assertTrue(
@@ -380,25 +380,47 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n765319', u'zip': u'32653'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 0 and (None,
+            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n119803"),
                                                  URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
                                                  Literal("32653")) in add)
 
     def test_unique_two_change(self):
-        from rdflib import URIRef, Literal
+        from rdflib import URIRef, Literal, XSD
 
         # Change the zip code on an existing address
 
-        p = Pump("data/org_def.json", verbose=True)
+        p = Pump("data/org_def.json")
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n87597', u'zip': u'32653'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 1 and (None,
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n994294"),
                                                  URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
                                                  Literal("32653")) in add and
-                                                (None,
+                                                (URIRef("http://vivo.ufl.edu/individual/n994294"),
                                                  URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
-                                                 Literal("32611")) in sub)
+                                                 Literal("32611", datatype=XSD.string)) in sub)
+
+    def test_unique_two_delete(self):
+        from rdflib import URIRef, Literal, XSD
+
+        # Delete the zip code on an existing address
+
+        p = Pump("data/org_def.json")
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n87597', u'zip': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n994294"),
+                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
+                                                 Literal("32611", datatype=XSD.string)) in sub)
+
+    def test_unique_two_delete_not_found(self):
+
+        # Delete the zip code from an existing address that doesn't have a zip code.
+
+        p = Pump("data/org_def.json")
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n765319', u'zip': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 0)
 
 
 if __name__ == "__main__":
