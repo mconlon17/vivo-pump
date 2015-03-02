@@ -431,7 +431,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n51914', u'start_date': u'2015-03-01'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 4 and len(sub) == 0 and (None,
+            len(add) == 5 and len(sub) == 0 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2015-03-01")) in add)
 

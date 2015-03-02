@@ -233,6 +233,15 @@ def get_graph(update_def, debug=False):
     from rdflib import Graph, URIRef
 
     a = Graph()
+    entity_query = 'select ?uri (<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> as ?p) (<' + \
+        str(update_def['entity_def']['type']) + '> as ?o)\nwhere {\n    ' + \
+        update_def['entity_def']['entity_sparql'] + '\n}'
+    result = vivo_query(entity_query, debug=debug)
+    for row in result['results']['bindings']:
+        s = URIRef(row['uri']['value'])
+        p = URIRef(row['p']['value'])
+        o = make_rdf_term(row['o'])
+        a.add((s, p, o))
     for path in update_def['column_defs'].values():
         update_query = make_update_query(update_def['entity_def']['entity_sparql'], path, debug=debug)
         result = vivo_query(update_query, debug=debug)
