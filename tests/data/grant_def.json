@@ -82,7 +82,7 @@
                     "ref": "http://vivoweb.org/ontology/core#dateTime"
                 }, 
                 "object": {
-                    "filter": "improve_datetime", 
+                    "filter": "improve_date",
                     "literal": true
                 }
             }
@@ -209,7 +209,7 @@
                     "ref": "http://vivoweb.org/ontology/core#dateTime"
                 }, 
                 "object": {
-                    "filter": "improve_datetime", 
+                    "filter": "improve_date",
                     "literal": true
                 }
             }

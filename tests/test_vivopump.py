@@ -422,6 +422,19 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 
+    def test_unique_three_add_fullpath(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/grant_def.json", verbose=True)
+
+        # Add a start date to a grant.  There is no date time interval, so a full path will need to be created
+
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n51914', u'start_date': u'2015-03-01'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 4 and len(sub) == 0 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2015-03-01")) in add)
+
 
 if __name__ == "__main__":
     unittest.main()

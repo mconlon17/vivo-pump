@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.53"
+__version__ = "0.54"
 
 from datetime import datetime
 from json import dumps
@@ -62,7 +62,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
-        self.enum = load_enum(self.update_def)
+        self.enum = None
         self.json_def_filename = json_def_filename
         self.verbose = verbose
         self.out_filename = out_filename
@@ -111,9 +111,19 @@ class Pump(object):
         from vivopump import read_csv, get_graph
         from rdflib import Graph
         import logging
+
         logging.basicConfig(level=logging.INFO)
         if filename is not None:
             self.out_filename = filename
+
+        if self.update_data is None:  # Test for no injection
+            self.update_data = read_csv(self.out_filename, delimiter='\t')
+        new_update_columns = {}
+        for name, path in self.update_def['column_defs'].items():
+            if name in self.update_data['1'].keys():
+                new_update_columns[name] = path
+        self.update_def['column_defs'] = new_update_columns
+        self.enum = load_enum(self.update_def)
         self.original_graph = get_graph(self.update_def, debug=self.verbose)  # Create the original graph from VIVO
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
@@ -121,8 +131,6 @@ class Pump(object):
         if self.verbose:
             print datetime.now(), 'Graphs ready for processing. Original has ', len(self.original_graph), \
                 '. Update graph has', len(self.update_graph)
-        if self.update_data is None:  # Test for no injection
-            self.update_data = read_csv(self.out_filename, delimiter='\t')
         if self.verbose:
             print datetime.now(), 'Updates ready for processing. ', len(self.update_data), 'rows.'
         return self.do_update()
@@ -137,7 +145,6 @@ class Pump(object):
 
         # TODO: Support lookup by name or uri -- medium
         # TODO: Support for remove action -- medium
-        # TODO: Provide a path mechanism for enum files.  Current approach assumes in directory with main -- easy
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
@@ -157,8 +164,7 @@ class Pump(object):
 
             for column_name, column_def in self.update_def['column_defs'].items():
                 if column_name not in data_update:
-                    continue
-
+                    continue  # extra column names are allowed in the spreadsheet for annotation
                 uri = entity_uri
 
                 if data_update[column_name] == '':
@@ -168,35 +174,22 @@ class Pump(object):
                     raise PathLengthException(
                         "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
-
-                if len(column_def) == 3:
-
-                    # TODO: Implement three step path logic -- medium
-
-                    continue
-
-                if len(column_def) == 2:
+                elif len(column_def) == 3:
+                    do_three_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
+                                        debug=False)
+                elif len(column_def) == 2:
                     do_two_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
                                        debug=False)
-                    continue
-
-                # Handle single step predicate
-
-                step_def = column_def[0]
-
-                # Gather all VIVO objects for the column
-
-                vivo_objs = {}
-                for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
-                    vivo_objs[unicode(o)] = o
-
-                # Prepare all column values for the column
-
-                column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row, column_name)
-                if self.verbose:
-                    print row, column_name, column_values, uri, vivo_objs
-                do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
-                              debug=self.verbose)
+                else:
+                    step_def = column_def[0]
+                    vivo_objs = {}
+                    for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
+                        vivo_objs[unicode(o)] = o
+                    column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row, column_name)
+                    if self.verbose:
+                        print row, column_name, column_values, uri, vivo_objs
+                    do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                                  debug=self.verbose)
 
         # Return the add and sub graphs representing the changes that need to be made to the original
 
@@ -357,7 +350,8 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     :return: column_values a list of strings
     :rtype: list[str]
     """
-    from vivopump import InvalidDataException, improve_title, repair_email, repair_phone_number
+    from vivopump import InvalidDataException, improve_title, repair_email, repair_phone_number, improve_date, \
+        improve_dollar_amount, improve_sponsor_award_id, improve_deptid
 
     if step_def['predicate']['single']:
         column_values = [update_string]
@@ -396,6 +390,39 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
                         'filter'], "FILTER IMPROVED", was_string, 'to', \
                         column_values[i]
     return column_values
+
+
+def do_three_step_update(row, column_name, uri, path, data_update, enum, update_graph, debug=False):
+    """
+    Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
+    end objects as necessary to perform the requested update
+    :param row: row number of the update.  For printing
+    :param column_name: column_name of the update.  For printing
+    :param uri: uri of the entity at the head of the path
+    :param path: the column definition
+    :param data_update: the data provided for the update
+    :param enum: the enumerations
+    :param update_graph: the update graph
+    :param debug: debug status.  For printing.
+    :return: Changes in the update_graph
+    """
+    from rdflib import RDF, RDFS, Literal, URIRef
+    from vivopump import new_uri
+
+    step_def = path[0]
+    step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
+
+    if len(step_uris) == 0:
+
+        # VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
+
+        step_uri = URIRef(new_uri())
+        update_graph.add((uri, step_def['predicate']['ref'], step_uri))
+        update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+        if 'label' in step_def['object']:
+            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
+        do_two_step_update(row, column_name, step_uri, path[1:], data_update, enum, update_graph, debug=debug)
+    return None
 
 
 def do_two_step_update(row, column_name, uri, column_def, data_update, enum, update_graph, debug=False):
@@ -542,6 +569,7 @@ def load_enum(update_def):
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
+    # TODO: Provide a path mechanism for enum files.  Current approach assumes in directory with main -- easy
     from vivopump import read_csv
     enum = {}
     for path in update_def['column_defs'].values():
