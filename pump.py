@@ -411,6 +411,7 @@ def do_three_step_update(row, column_name, uri, path, data_update, enum, update_
 
     step_def = path[0]
     step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
+    print "Step_uris", step_uris
 
     if len(step_uris) == 0:
 
@@ -422,12 +423,23 @@ def do_three_step_update(row, column_name, uri, path, data_update, enum, update_
         if 'label' in step_def['object']:
             update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
         do_two_step_update(row, column_name, step_uri, path[1:], data_update, enum, update_graph, debug=debug)
+
+    elif step_def['predicate']['single']:
+
+        # VIVO has 1 or more values for first intermediate, so we need to see if the predicate is expected to be single
+
+        step_uri = step_uris[0]
+        print "found step_uri", step_uri
+        if len(step_uris) > 1:
+            print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
+                step_uris, "using", step_uri
+        do_two_step_update(row, column_name, step_uri, path[1:], data_update, enum, update_graph, debug=debug)
     return None
 
 
 def do_two_step_update(row, column_name, uri, column_def, data_update, enum, update_graph, debug=False):
     """
-    In a two step update, identify intermediate entities that might need to be created, and end path objects that might
+    In a two step update, identify intermediate entity that might need to be created, and end path objects that might
     not yet exist or might need to be created.  Cases are:
 
                           Predicate Single   Predicate Multiple
@@ -440,7 +452,7 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, enum, upd
     from vivopump import new_uri
     step_def = column_def[0]
 
-    # Find all the intermediate entity uris in VIVO and then process cases related to count and defs
+    # Find all the intermediate entities in VIVO and then process cases related to count and defs
 
     step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
 

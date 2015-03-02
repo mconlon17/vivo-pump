@@ -424,7 +424,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
     def test_unique_three_add_fullpath(self):
         from rdflib import URIRef, Literal
-        p = Pump("data/grant_def.json", verbose=True)
+        p = Pump("data/grant_def.json")
 
         # Add a start date to a grant.  There is no date time interval, so a full path will need to be created
 
@@ -434,6 +434,23 @@ class PumpUpdateDataTestCase(unittest.TestCase):
             len(add) == 5 and len(sub) == 0 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2015-03-01")) in add)
+
+    def test_unique_three_add_partial_path(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/grant_def.json", verbose=True)
+
+        # Add a start date to an existing datetime interval that does not have one.  WARNING -- not clear that this
+        # is best practice for data management.  Pump might include "no add" feature to prevent first class objects
+        # from being tampered by updates.  The same dti might be used by two grants.  When is an entity a first
+        # first class (like a datetime value?) and when is it like a blank node (vcard?) and when is it unclear (dti?)
+        # VIVO does not explicitly use blank nodes, so this information needs to be stored externally??
+
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n42774', u'start_date': u'2006-03-01'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 3 and len(sub) == 0 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2006-03-01")) in add)
 
 
 if __name__ == "__main__":
