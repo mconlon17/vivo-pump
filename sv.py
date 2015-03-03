@@ -18,7 +18,7 @@
 """
 
 # TODO: Add test cases for each command line scenario -- easy
-# TODO: Use a config file to set parameters -- medium
+# TODO: Use ConfigParser to read a config file of parameters -- medium
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"

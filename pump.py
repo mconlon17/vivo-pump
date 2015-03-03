@@ -19,7 +19,7 @@
 
 # TODO: Continue work on update_def for people, pubs -- medium
 # TODO: Control column order via update_def -- difficult
-# TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- difficult
+# TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- medium
 # TODO: Add test cases for each data scenario -- medium
 # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
