@@ -53,13 +53,30 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-                }, 
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                    "include": [
+                        "thing",
+                        "agent",
+                        "person"
+                    ]
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "people_types"
+                }
+            }
+        ],
+        "research_areas": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#hasResearchArea"
+                },
                 "object": {
                     "literal": false
                 }
             }
-        ], 
+        ],
         "name": [
             {
                 "predicate": {

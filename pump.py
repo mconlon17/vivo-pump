@@ -62,7 +62,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
-        self.enum = None
+        self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
         self.verbose = verbose
         self.out_filename = out_filename
@@ -325,8 +325,8 @@ def do_get(update_def, enum, filename, debug=True):
                         enum_name = path[len(path) - 1]['object']['enum']
                         a = set()
                         for x in data[uri][name]:
-                            a.add(enum[enum_name]['get'].get(x, x))  # if we can't find the value in the enumeration,
-                                # just return the value
+                            a.add(enum[enum_name]['get'].get(x, x))  # if we can't find the value in the
+                            # enumeration, just return the value
                         data[uri][name] = a
 
                 # Gather values into a delimited string

@@ -439,11 +439,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         from rdflib import URIRef, Literal
         p = Pump("data/grant_def.json", verbose=True)
 
-        # Add a start date to an existing datetime interval that does not have one.  WARNING -- not clear that this
-        # is best practice for data management.  Pump might include "no add" feature to prevent first class objects
-        # from being tampered by updates.  The same dti might be used by two grants.  When is an entity a first
-        # first class (like a datetime value?) and when is it like a blank node (vcard?) and when is it unclear (dti?)
-        # VIVO does not explicitly use blank nodes, so this information needs to be stored externally??
+        # WARNING.  This test passes by constructing a new datetime interval. Not clear if this is the desired result.
 
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n42774', u'start_date': u'2006-03-01'}}
         [add, sub] = p.update()

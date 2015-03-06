@@ -45,3 +45,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-03-02** 0.54 Refactor update() to remove unused columns defs from the update def prior to get_graph.  get_graph() runs in liner time based on number of columns.  Reducing the number of columns to the columns that are in common between update_def and update_data significantly speeds up the get_graph() and supports writing "large" update_defs.  Fixed bug in get_graph() -- now includes all entities as specified in the entity sparql.  _FIRST_ path length three test passed!
 * **2015-03-03** Improved testing of path 3 partial path
 * **2015-03-04** test_sv.py started for testing Simple VIVO command line scenarios
+* **2015-03-05** Improve person_def.json to include research areas.  Add people_types.txt as a enum for types.  faculty.txt is a spreadsheet of faculty resulting from an sv get
