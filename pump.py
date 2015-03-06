@@ -176,7 +176,7 @@ class Pump(object):
                             len(column_def)))
                 elif len(column_def) == 3:
                     do_three_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
-                                        debug=False)
+                                         debug=False)
                 elif len(column_def) == 2:
                     do_two_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
                                        debug=False)
@@ -185,7 +185,8 @@ class Pump(object):
                     vivo_objs = {}
                     for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
                         vivo_objs[unicode(o)] = o
-                    column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row, column_name)
+                    column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row,
+                                                          column_name)
                     if self.verbose:
                         print row, column_name, column_values, uri, vivo_objs
                     do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
@@ -350,6 +351,8 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     :return: column_values a list of strings
     :rtype: list[str]
     """
+    # TODO: How to apply filters to the get processes? -- medium
+    # TODO: How/when to apply filters to the update process -- medium
     from vivopump import InvalidDataException, improve_title, repair_email, repair_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid
 

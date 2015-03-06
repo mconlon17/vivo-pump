@@ -46,3 +46,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-03-03** Improved testing of path 3 partial path
 * **2015-03-04** test_sv.py started for testing Simple VIVO command line scenarios
 * **2015-03-05** Improve person_def.json to include research areas.  Add people_types.txt as a enum for types.  faculty.txt is a spreadsheet of faculty resulting from an sv get
+* **2015-03-06** Code formatting and TODO improvements
