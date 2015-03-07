@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.54"
+__version__ = "0.55"
 
 from datetime import datetime
 from json import dumps
@@ -386,9 +386,9 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     if 'filter' in step_def['object']:
         for i in range(len(column_values)):
             was_string = column_values[i]
-            column_values[i] = eval(step_def['object']['filter'])(column_values[i])
-            if was_string != column_values[i]:
-                if debug:
+            if was_string != '' and was_string != 'None':
+                column_values[i] = eval(step_def['object']['filter'])(column_values[i])
+                if debug and was_string != column_values[i]:
                     print row, column_name, step_def['object'][
                         'filter'], "FILTER IMPROVED", was_string, 'to', \
                         column_values[i]

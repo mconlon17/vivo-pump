@@ -448,6 +448,54 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2006-03-01")) in add)
 
+    def test_unique_three_change_no_xsd(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/grant_def.json", verbose=True)
+
+        # WARNING.  This test passes by changing the start date value on an existing datetime interval.  Not sure
+        # if this is the desired behavior.
+
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1240414034', u'start_date': u'2011-07-02'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2011-07-02")) in add and
+                                                (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2011-07-01T00:00:00")) in sub)
+
+    def test_unique_three_change_xsd(self):
+        from rdflib import URIRef, Literal, XSD
+        p = Pump("data/grant_def.json", verbose=True)
+
+        # WARNING.  This test passes by changing the start date value on an existing datetime interval.  Not sure
+        # if this is the desired behavior.
+
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n650082272', u'start_date': u'2006-03-02'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2006-03-02")) in add and
+                                                (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
+
+    def test_unique_three_delete(self):
+        from rdflib import URIRef, Literal, XSD
+
+        # WARNING: Delete start date value from existing datetime interval.  This may not be the desirable data
+        # management action
+
+        p = Pump("data/grant_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n650082272', u'start_date': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 1 and (None,
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTime"),
+                                                 Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
+
 
 if __name__ == "__main__":
     unittest.main()
