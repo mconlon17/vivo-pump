@@ -48,4 +48,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-03-05** Improve person_def.json to include research areas.  Add people_types.txt as a enum for types.  faculty.txt is a spreadsheet of faculty resulting from an sv get
 * **2015-03-06** Code formatting and TODO improvements
 * **2015-03-07** 0.55 Three new test cases for unique three length paths.  Add, Change, Delete working on three length unique paths.
-* **2015-03-11** New test case for multi-value one length path.  Add is working.
+* **2015-03-11** Four new test cases for multi-value one length path.  Add, change, change/no-op, Delete are working on multi-valued length one paths.

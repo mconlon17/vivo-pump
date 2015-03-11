@@ -511,8 +511,44 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivo.ufl.edu/individual/n2551317090")) in add and
                                                 (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
                                                  URIRef("http://vivoweb.org/ontology/core#hasResearchArea"),
-                                                 URIRef("http://vivo.ufl.edu/individual/n157098")) in add
-        )
+                                                 URIRef("http://vivo.ufl.edu/individual/n157098")) in add)
+
+    def test_multiple_one_change_nothing(self):
+
+        #  Do nothing if the multiple values specified match those in VIVO
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
+                               u'types': u'person;thing;agent;fac;uf;ufc'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 0)
+
+    def test_multiple_one_change(self):
+        from rdflib import URIRef
+
+        #  Change the set of values adding one and removing another
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
+                               u'types': u'person;thing;agent;fac;uf;pd'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 1 and len(sub) == 1 and
+                        (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
+                         URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+                         URIRef("http://vivoweb.org/ontology/core#Postdoc")) in add and
+                        (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
+                         URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+                         URIRef("http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity")) in sub)
+
+    def test_multiple_one_delete(self):
+
+        #  Empty the set of values
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n25674',
+                               u'research_areas': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 4)
 
 
 if __name__ == "__main__":
