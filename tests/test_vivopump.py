@@ -496,6 +496,24 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
 
+    def test_multiple_one_add(self):
+        from rdflib import URIRef
+
+        #  Add multiple values for an attribute to an entity that has no values for the attribute
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
+                               u'research_areas': u'http://vivo.ufl.edu/individual/n2551317090;http://vivo.ufl.edu/individual/n157098'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 2 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
+                                                 URIRef("http://vivoweb.org/ontology/core#hasResearchArea"),
+                                                 URIRef("http://vivo.ufl.edu/individual/n2551317090")) in add and
+                                                (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
+                                                 URIRef("http://vivoweb.org/ontology/core#hasResearchArea"),
+                                                 URIRef("http://vivo.ufl.edu/individual/n157098")) in add
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
