@@ -49,3 +49,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-03-06** Code formatting and TODO improvements
 * **2015-03-07** 0.55 Three new test cases for unique three length paths.  Add, Change, Delete working on three length unique paths.
 * **2015-03-11** Four new test cases for multi-value one length path.  Add, change, change/no-op, Delete are working on multi-valued length one paths.
+* **2015-03-15** 0.56 Can inject original graph to the pump.  Useful for testing.  Added test case using injected original graph

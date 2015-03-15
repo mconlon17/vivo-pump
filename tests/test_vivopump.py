@@ -321,6 +321,17 @@ class PumpUpdateCallTestCase(unittest.TestCase):
         with self.assertRaises(KeyError):
             p.update()
 
+    def test_inject_empty_original_graph(self):
+        from rdflib import Graph, URIRef
+        p = Pump(verbose=True)
+        p.original_graph = Graph()
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n8984374104', u'abbreviation': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 0 and (None,
+                                                 URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+                                                 URIRef("http://vivoweb.org/ontology/core#Building")) in add)
+
 
 class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_one_add(self):

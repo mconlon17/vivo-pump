@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.55"
+__version__ = "0.56"
 
 from datetime import datetime
 from json import dumps
@@ -46,7 +46,7 @@ class PathLengthException(Exception):
 
 class Pump(object):
     """
-    The VIVO Pump is a tool for data management using spreadsheets (delimited rectangular text files).
+    The VIVO Pump is a tool for data management using delimited rectangular text files, aka spreadsheets.
 
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
@@ -57,7 +57,6 @@ class Pump(object):
         :param json_def_filename:  File name of file containing JSON pump definition
         """
         from vivopump import read_update_def
-        # TODO: Support graph injection to the original graph for testing -- easy
         self.update_def = read_update_def(json_def_filename)
         self.update_data = None
         self.original_graph = None
@@ -116,28 +115,35 @@ class Pump(object):
         if filename is not None:
             self.out_filename = filename
 
-        if self.update_data is None:  # Test for no injection
+        if self.update_data is None:  # Test for injection
             self.update_data = read_csv(self.out_filename, delimiter='\t')
+
+        # Narrow the update_def to include only columns that appears in the update_data
+
         new_update_columns = {}
         for name, path in self.update_def['column_defs'].items():
             if name in self.update_data['1'].keys():
                 new_update_columns[name] = path
         self.update_def['column_defs'] = new_update_columns
+
         self.enum = load_enum(self.update_def)
-        self.original_graph = get_graph(self.update_def, debug=self.verbose)  # Create the original graph from VIVO
+
+        if self.original_graph is None: # Test for injection
+            self.original_graph = get_graph(self.update_def, debug=self.verbose)  # Create the original graph from VIVO
+
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
             self.update_graph.add((s, p, o))
+
         if self.verbose:
             print datetime.now(), 'Graphs ready for processing. Original has ', len(self.original_graph), \
                 '. Update graph has', len(self.update_graph)
-        if self.verbose:
             print datetime.now(), 'Updates ready for processing. ', len(self.update_data), 'rows.'
         return self.do_update()
 
     def do_update(self):
         """
-        read updates from a spreadsheet filename.  Compare to data in VIVO.  generate add and sub
+        read updates from a spreadsheet filename.  Compare to data in VIVO.  Generate add and sub
         rdf as necessary to process requested changes
         """
         from rdflib import URIRef, RDF
