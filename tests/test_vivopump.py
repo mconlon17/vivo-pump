@@ -562,5 +562,11 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         self.assertTrue(len(add) == 0 and len(sub) == 4)
 
 
+class PumpEnumTestCase(unittest.TestCase):
+    def test_normal_case(self):
+        p = Pump("data/person_def.json", verbose=True)
+        print p.summarize()
+
+
 if __name__ == "__main__":
     unittest.main()

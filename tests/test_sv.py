@@ -20,6 +20,5 @@ class ParamTestCase(unittest.TestCase):
         uri = new_uri()
         self.assertTrue(len(uri) > 0)
 
-
 if __name__ == "__main__":
     unittest.main()

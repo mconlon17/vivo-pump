@@ -62,7 +62,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "enum": "people_types"
+                    "enum": "data/people_types.txt"
                 }
             }
         ],

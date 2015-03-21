@@ -26,7 +26,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.56"
+__version__ = "0.57"
 
 from datetime import datetime
 from json import dumps
@@ -590,18 +590,19 @@ def load_enum(update_def):
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
-    # TODO: Provide a path mechanism for enum files.  Current approach assumes in directory with main -- easy
     from vivopump import read_csv
+    import os
     enum = {}
     for path in update_def['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
-                enum_name = step['object']['enum']
+                enum_filename = step['object']['enum']
+                enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
                 if enum_name not in enum:
                     enum[enum_name] = {}
                     enum[enum_name]['get'] = {}
                     enum[enum_name]['update'] = {}
-                    enum_data = read_csv(enum_name + '.txt', delimiter='\t')
+                    enum_data = read_csv(enum_filename, delimiter='\t')
                     for enum_datum in enum_data.values():
                         enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
