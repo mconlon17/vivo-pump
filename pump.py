@@ -17,10 +17,13 @@
 
 """
 
-# TODO: Continue work on update_def for people, pubs -- medium
+# TODO: Continue work on def JSON for each example -- easy
+# TODO: Create examples for 1.7 -- easy
+# TODO: Add examples for other domains: cities, dates, studies, sponsors, journals -- easy
+# TODO: Explore multi-row usages for education and positions -- medium
 # TODO: Control column order via update_def -- difficult
 # TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- medium
-# TODO: Add test cases for each data scenario -- medium
+# TODO: Add test cases for each data scenario (six to go) -- easy
 # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
 __author__ = "Michael Conlon"
@@ -357,7 +360,7 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     :return: column_values a list of strings
     :rtype: list[str]
     """
-    # TODO: How to apply filters to the get processes? -- medium
+    # TODO: How/when to apply filters to the get process -- medium
     # TODO: How/when to apply filters to the update process -- medium
     from vivopump import InvalidDataException, improve_title, repair_email, repair_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid

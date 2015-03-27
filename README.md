@@ -55,3 +55,4 @@ maintained with the names of the photographs of each building.  As buildings com
 the collection of photos in VIVO can be updated.
 1. Data clean up.  Using the get functionality, particular attributes can be retrieved from VIVO for review by a data manager,
 and/or automated improvement using filters (see Additional Features).
+1. Upgrades.  Use JSON definitions for your current version to pull data out of an old VIVO and into spreadsheets.  Use JSON definitions for the upgraded version to put data from your spreadsheets into your new VIVO.
