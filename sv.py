@@ -17,7 +17,7 @@
 
 """
 
-# TODO: Add test cases for each command line scenario -- easy
+
 # TODO: Use ConfigParser to read a config file of parameters -- medium
 
 __author__ = "Michael Conlon"

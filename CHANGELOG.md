@@ -51,4 +51,5 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-03-11** Four new test cases for multi-value one length path.  Add, change, change/no-op, Delete are working on multi-valued length one paths.
 * **2015-03-15** 0.56 Can inject original graph to the pump.  Useful for testing.  Added test case using injected original graph
 * **2015-03-21** 0.57 Enum values in update_def are now full path names to find filenames anywhere.  Root filenames become the names of the enums in the structures.
-* **2015-03-25** Improved directory structure.  Examples folder now has subfolders for each domain -- buildings, faculty, orgs, et
+* **2015-03-25** Improved directory structure.  Examples folder now has subfolders for each domain -- buildings, faculty, orgs, etc
+* **2015-03-30** TODO now relate only to the software. Test case TODOs are in test_vivopump.py.  Enhancement of examples are now issues in the GitHub repo -- if creating or working or testing these new examples results in desired software canges, these will be entered as appropriate TODOs in the appropriate software file.

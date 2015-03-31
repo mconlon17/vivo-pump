@@ -14,6 +14,9 @@ from vivopump import new_uri, read_csv, vivo_query, write_update_def, repair_ema
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 from pump import Pump
 
+# TODO: Add test cases for each data scenario (six to go) -- easy
+# TODO: Add test cases for each command line scenario in sv -- easy
+
 
 class NewUriTestCase(unittest.TestCase):
     def test_new_uri(self):
