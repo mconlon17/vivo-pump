@@ -565,6 +565,29 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         self.assertTrue(len(add) == 0 and len(sub) == 4)
 
 
+class PumpRemoveTestCase(unittest.TestCase):
+    def test_small_case(self):
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n25676',
+                               u'remove': u'True'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 28)
+
+    def test_large_case(self):
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n25674',
+                               u'remove': u'True'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 28)
+
+    def test_not_found(self):
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n12345678',
+                               u'remove': u'True'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 0)
+
+
 class PumpEnumTestCase(unittest.TestCase):
     def test_normal_case(self):
         p = Pump("data/person_def.json", verbose=True)

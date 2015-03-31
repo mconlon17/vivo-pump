@@ -19,13 +19,12 @@
 
 # TODO: Control column order via update_def -- difficult
 # TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- medium
-
 # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.57"
+__version__ = "0.58"
 
 from datetime import datetime
 from json import dumps
@@ -149,7 +148,6 @@ class Pump(object):
         from vivopump import new_uri
 
         # TODO: Support lookup by name or uri -- medium
-        # TODO: Support for remove action -- medium
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
@@ -174,6 +172,9 @@ class Pump(object):
 
                 if data_update[column_name] == '':
                     continue
+
+                if data_update[column_name].lower() == 'remove':
+                    do_remove(row, uri, data_update[column_name][0], self.update_graph, self.verbose)
 
                 if len(column_def) > 3:
                     raise PathLengthException(
@@ -208,6 +209,28 @@ class Pump(object):
             print "Triples to sub"
             print sub.serialize(format='nt')
         return [add, sub]
+
+
+def do_remove(row, uri, value, update_graph, debug=False):
+    """
+    Given the row, uri, and value of a remove instruction, find the uri in the update_graph and remove all triples
+    associated with it as either a subject or object
+    :param row: the row number in the data for the remove instruction
+    :param uri: the uri of the entity to be removed
+    :param value: the value of the remove instruction
+    :param update_graph: the update_graph to be altered
+    :param debug: boolean.  If true, diagnostic output is generate for stdout
+    :return: None  The update_graph is updated as needed to remove references to the uri
+    """
+    if value.lower() == 'true':
+        before = len(update_graph)
+        update_graph.remove((uri, None, None))
+        update_graph.remove((None, None, uri))
+        after = len(update_graph)
+        removed = before - after
+        if debug:
+            print "REMOVING", removed, "triples for ", uri, "on row", row
+    return None
 
 
 def make_get_query(update_def):
