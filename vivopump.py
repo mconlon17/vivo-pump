@@ -8,8 +8,8 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
 VIVO_URI_PREFIX = "http://vivo.ufl.edu/individual/"
-#VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
-VIVO_QUERY_URI = "http://localhost:5820/vivo/query"
+VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
+#VIVO_QUERY_URI = "http://localhost:5820/vivo/query"
 
 import csv
 import urllib
@@ -183,6 +183,7 @@ def make_update_query(entity_sparql, path, debug=False):
 
     :return: a sparql query string
     """
+    query = ""
     if len(path) == 1:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ?o\n' + \
             '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o\n}'
@@ -244,6 +245,8 @@ def get_graph(update_def, debug=False):
         a.add((s, p, o))
     for path in update_def['column_defs'].values():
         update_query = make_update_query(update_def['entity_def']['entity_sparql'], path, debug=debug)
+        if len(update_query) == 0:
+            continue
         result = vivo_query(update_query, debug=debug)
         for row in result['results']['bindings']:
             s = URIRef(row['uri']['value'])

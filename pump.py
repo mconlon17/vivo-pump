@@ -152,6 +152,12 @@ class Pump(object):
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
 
+            if 'remove' in data_update.keys():
+                print "Attempt remove", data_update['remove']
+                do_remove(row, uri, data_update['remove'][0], self.update_graph, self.verbose)
+                if data_update['remove'][0].lower() == 'true':
+                    continue
+
             if (uri, None, None) not in self.update_graph:
 
                 # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
@@ -173,8 +179,6 @@ class Pump(object):
                 if data_update[column_name] == '':
                     continue
 
-                if data_update[column_name].lower() == 'remove':
-                    do_remove(row, uri, data_update[column_name][0], self.update_graph, self.verbose)
 
                 if len(column_def) > 3:
                     raise PathLengthException(
@@ -186,7 +190,7 @@ class Pump(object):
                 elif len(column_def) == 2:
                     do_two_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
                                        debug=False)
-                else:
+                elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {}
                     for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
@@ -220,8 +224,9 @@ def do_remove(row, uri, value, update_graph, debug=False):
     :param value: the value of the remove instruction
     :param update_graph: the update_graph to be altered
     :param debug: boolean.  If true, diagnostic output is generate for stdout
-    :return: None  The update_graph is updated as needed to remove references to the uri
+    :return: int: Number of triples removed.  Must have remove =true and uri found in update_graph
     """
+    removed = 0
     if value.lower() == 'true':
         before = len(update_graph)
         update_graph.remove((uri, None, None))
@@ -230,7 +235,7 @@ def do_remove(row, uri, value, update_graph, debug=False):
         removed = before - after
         if debug:
             print "REMOVING", removed, "triples for ", uri, "on row", row
-    return None
+    return removed
 
 
 def make_get_query(update_def):
