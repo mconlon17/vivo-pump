@@ -154,8 +154,8 @@ class Pump(object):
 
             if 'remove' in data_update.keys():
                 print "Attempt remove", data_update['remove']
-                do_remove(row, uri, data_update['remove'][0], self.update_graph, self.verbose)
-                if data_update['remove'][0].lower() == 'true':
+                do_remove(row, uri, data_update['remove'], self.update_graph, self.verbose)
+                if data_update['remove'].lower() == 'true':
                     continue
 
             if (uri, None, None) not in self.update_graph:
