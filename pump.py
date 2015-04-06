@@ -18,7 +18,6 @@
 """
 
 # TODO: Control column order via update_def -- difficult
-# TODO: Handle data types and language tags in get and update -- easy
 # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
 __author__ = "Michael Conlon"
@@ -462,7 +461,9 @@ def do_three_step_update(row, column_name, uri, path, data_update, enum, update_
         update_graph.add((uri, step_def['predicate']['ref'], step_uri))
         update_graph.add((step_uri, RDF.type, step_def['object']['type']))
         if 'label' in step_def['object']:
-            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
+            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
+                                                            datatype=step_def['object'].get('datatype', None),
+                                                            lang=step_def['object'].get('lang', None))))
         do_two_step_update(row, column_name, step_uri, path[1:], data_update, enum, update_graph, debug=debug)
 
     elif step_def['predicate']['single']:
@@ -505,7 +506,9 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, enum, upd
         update_graph.add((uri, step_def['predicate']['ref'], step_uri))
         update_graph.add((step_uri, RDF.type, step_def['object']['type']))
         if 'label' in step_def['object']:
-            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'])))
+            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
+                                                            datatype=step_def['object'].get('datatype', None),
+                                                            lang=step_def['object'].get('lang', None))))
         uri = step_uri
         step_def = column_def[1]
         vivo_objs = {unicode(o): o for s, p, o in
@@ -575,7 +578,11 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
             if debug:
                 print "Adding", column_name, column_string
             if step_def['object']['literal']:
-                update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string,
+                                                                             datatype=step_def['object'].get('datatype',
+                                                                                                             None),
+                                                                             lang=step_def['object'].get('lang',
+                                                                                                         None))))
             else:
                 update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
         else:
@@ -589,7 +596,11 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
                 if step_def['object']['literal']:
                     if debug:
                         print "ADD   ", row, column_name, column_string
-                    update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string)))
+                    print step_def
+                    print "lang is ", step_def['object'].get('lang', None)
+                    update_graph.add((uri, step_def['predicate']['ref'],
+                                      Literal(column_string, datatype=step_def['object'].get('datatype', None),
+                                              lang=step_def['object'].get('lang', None))))
                 else:
                     update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
     else:
@@ -601,7 +612,9 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
         sub_values = set(vivo_objs.keys()) - set(column_values)
         for value in add_values:
             if step_def['object']['literal']:
-                update_graph.add((uri, step_def['predicate']['ref'], Literal(value)))
+                update_graph.add((uri, step_def['predicate']['ref'],
+                                  Literal(value, datatype=step_def['object'].get('datatype', None),
+                                  lang=step_def['object'].get('lang', None))))
             else:
                 update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
         for value in sub_values:

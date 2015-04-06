@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "type": "http://xmlns.com/foaf/0.1/Organization", 
-        "entity_sparql": "?uri a foaf:Organization . ?uri a ufVivo:UFEntity . ", 
+        "entity_sparql": "?uri a foaf:Organization . ?uri a ufv:UFEntity . ",
         "order_by": "name"
     }, 
     "column_defs": {
@@ -245,7 +245,7 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "enum": "org_types"
+                    "enum": "data/org_types.txt"
                 }
             }
         ], 

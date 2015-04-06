@@ -349,6 +349,48 @@ class PumpUpdateCallTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#Building")) in add)
 
 
+class PumpUpdateLiteralsTestCase(unittest.TestCase):
+    def test_with_datatype(self):
+        from rdflib import URIRef, Literal, XSD
+        p = Pump("data/building_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
+                                                 URIRef("http://vivoweb.org/ontology/core#abbreviation"),
+                                                 Literal("PH9", datatype=XSD.string)) in add)
+
+    def test_with_lang(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/building_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'name': u'Building 42'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
+                                                 URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                                                 Literal("Building 42", lang="en-US")) in add)
+
+    def test_without_datatype(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/building_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'url': u'http://a'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 2 and len(sub) == 0 and (URIRef(None),
+                                                 URIRef("http://vivoweb.org/ontology/core#linkURI"),
+                                                 Literal("http://a")) in add)
+
+    def test_without_lang(self):
+        from rdflib import URIRef, Literal
+        p = Pump("data/org_def.json", verbose=True)
+        p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n928712', u'name': u'Ad ver tising'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n928712"),
+                                                 URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                                                 Literal("Ad ver tising")) in add)
+
+
 class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_one_add(self):
         from rdflib import URIRef, Literal

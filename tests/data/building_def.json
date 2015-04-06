@@ -12,7 +12,8 @@
                     "ref": "http://vivoweb.org/ontology/core#abbreviation"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ], 
@@ -68,7 +69,8 @@
                     "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/buildingNumber"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:integer"
                 }
             }
         ], 
@@ -79,8 +81,9 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 }, 
                 "object": {
-                    "filter": "improve_title", 
-                    "literal": true
+                    "filter": "improve_title",
+                    "literal": true,
+                    "lang": "en-US"
                 }
             }
         ]
