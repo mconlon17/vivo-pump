@@ -37,13 +37,15 @@ parser.add_argument("defname", help="name of definition file", default="pump_def
 parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
                     default="pump_data.txt", nargs='?')
 parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
+parser.add_argument("-nf", "--nofilters", action="store_false", help="turn off filters")
 args = parser.parse_args()
 
 p = Pump(args.defname)
 
 print datetime.now(), "Start"
+p.verbose = args.verbose
+p.filters = args.nofilters
 if args.action == 'get':
-    p.verbose = args.verbose
     n_rows = p.get(args.filename)
     print datetime.now(), n_rows, "rows in", args.filename
 elif args.action == 'update':

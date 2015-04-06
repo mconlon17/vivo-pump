@@ -3,20 +3,20 @@ http://vivo.ufl.edu/individual/n1001011525			1228	Polyhouse #9-Ornamental Hortic
 http://vivo.ufl.edu/individual/n1010879650			843	Warehouse	
 http://vivo.ufl.edu/individual/n1020350772			166	Parking Garage 9 (Archer Rd S)	
 http://vivo.ufl.edu/individual/n1033794223			1282	Turfgrass Envirotron	
-http://vivo.ufl.edu/individual/n1036168159			1164	Restroom/Pavilion Building Site B	
+http://vivo.ufl.edu/individual/n1036168159			1164	Restroom/Pavilion Bldg Site B	
 http://vivo.ufl.edu/individual/n1049377541			1139	Fuel Cell Garage	
 http://vivo.ufl.edu/individual/n106575		http://www.harn.ufl.edu/;http://campusmap.ufl.edu/?loc=0309&zoom=17	309	Samuel P. Harn Museum of Art	800px-UF_HarnMuseum.JPG
 http://vivo.ufl.edu/individual/n1070841748			638	Nematode Plot Shelter	
 http://vivo.ufl.edu/individual/n1079183839			39	Nancy W. Yulee Hall	
-http://vivo.ufl.edu/individual/n1085243155			685	Food/Environmental Toxicology Lab	
+http://vivo.ufl.edu/individual/n1085243155			685	Food/Environ Toxicology Lab	
 http://vivo.ufl.edu/individual/n1088146681			152	Crops and Soils Field Lab	
 http://vivo.ufl.edu/individual/n1094958214			283	Corry	
 http://vivo.ufl.edu/individual/n111669	JWRU	http://www.union.ufl.edu/	686	J. Wayne Reitz Union	
-http://vivo.ufl.edu/individual/n1118833321			726	Chemical Engineer Solvent Storage	
+http://vivo.ufl.edu/individual/n1118833321			726	Chemical Eng Solvent Storage	
 http://vivo.ufl.edu/individual/n1159677718			1183	Lakeside Residential Complex	
 http://vivo.ufl.edu/individual/n1164496101			330	University Village	
 http://vivo.ufl.edu/individual/n1164617709			770	Swine Unit Barn	
-http://vivo.ufl.edu/individual/n1183361958			892	Clinical Trials Research Building	
+http://vivo.ufl.edu/individual/n1183361958			892	Clinical Trials Research Bldg	
 http://vivo.ufl.edu/individual/n1184298540			35	Computer Power Supply	
 http://vivo.ufl.edu/individual/n1189353889			246	Environmental Microbiology	
 http://vivo.ufl.edu/individual/n120161886			766	Swine Unit Methane Shed	
@@ -33,7 +33,7 @@ http://vivo.ufl.edu/individual/n129194207			1005	Keys Residential Complex
 http://vivo.ufl.edu/individual/n129237781			548	Chemical Storage	
 http://vivo.ufl.edu/individual/n130076285			388	Maguire 24	
 http://vivo.ufl.edu/individual/n1314664099			437	Fiber Hut Elmore	
-http://vivo.ufl.edu/individual/n131525657			1020	Equine Barn a	
+http://vivo.ufl.edu/individual/n131525657			1020	Equine Barn A	
 http://vivo.ufl.edu/individual/n1317668965			1161	Softball Maintenance Bldg.	
 http://vivo.ufl.edu/individual/n1320498078			441	Greenhouse, Vegetable Crops	
 http://vivo.ufl.edu/individual/n1331548281			284	Corry	
@@ -50,7 +50,7 @@ http://vivo.ufl.edu/individual/n1442262917			134	Duncan U. Fletcher Hall
 http://vivo.ufl.edu/individual/n1442584293			804	Ppd Vehicle Wash/Lube Station	
 http://vivo.ufl.edu/individual/n1453060309			153	Development and Alumni Affairs	
 http://vivo.ufl.edu/individual/n1460090775			44	Greenhouse, Grounds	
-http://vivo.ufl.edu/individual/n1463510055			109	Flmnh Pole Barn	
+http://vivo.ufl.edu/individual/n1463510055			109	FLMNH Pole Barn	
 http://vivo.ufl.edu/individual/n146404		http://www.arts.ufl.edu/venue_details.asp?venueID=14;http://campusmap.ufl.edu/?loc=0117&zoom=17	117	Music Building	music3.jpg
 http://vivo.ufl.edu/individual/n1473567931			1085	Springs Residential Complex	
 http://vivo.ufl.edu/individual/n1475751863			1364	Greenhouse	
@@ -209,7 +209,7 @@ http://vivo.ufl.edu/individual/n2901655257			206	Basic Science Building
 http://vivo.ufl.edu/individual/n2913398021			269	Fine Arts D	
 http://vivo.ufl.edu/individual/n2914889214			1210	Carport	
 http://vivo.ufl.edu/individual/n2922707967			1024	Hydrogen Research Facility	
-http://vivo.ufl.edu/individual/n2954405925			236	Florida Pool Compressor Building	
+http://vivo.ufl.edu/individual/n2954405925			236	Florida Pool Compressor Bldg	
 http://vivo.ufl.edu/individual/n2962407360			816	Distillation Building	
 http://vivo.ufl.edu/individual/n2975198837			421	Lambda Chi Alpha	
 http://vivo.ufl.edu/individual/n2976104088			67	Observatory	
@@ -247,20 +247,20 @@ http://vivo.ufl.edu/individual/n33166		http://performingarts.ufl.edu/venues/baug
 http://vivo.ufl.edu/individual/n3320277034			707	Physical Plant Garage	
 http://vivo.ufl.edu/individual/n3351848403			709	Physical Plant Storage	
 http://vivo.ufl.edu/individual/n3367132251			821	Golf Club Workshop	
-http://vivo.ufl.edu/individual/n3368595996			341	Mcguire Center for Lepidoptera Research	
-http://vivo.ufl.edu/individual/n3374390473			1054	CWP #5 McCarty Cooling Towers	
+http://vivo.ufl.edu/individual/n3368595996			341	Mcguire Ctr For Lepidoptera Research	
+http://vivo.ufl.edu/individual/n3374390473			1054	CWP #5 Mccarty Cooling Towers	
 http://vivo.ufl.edu/individual/n3390963931			1120	Lacrosse Ticket Booth	
-http://vivo.ufl.edu/individual/n3393346170			593	May A. Mann Jennings Hall a	
+http://vivo.ufl.edu/individual/n3393346170			593	May A. Mann Jennings Hall A	
 http://vivo.ufl.edu/individual/n3413814599			696	Shade House, Plant Pathology	
 http://vivo.ufl.edu/individual/n3439040189			88	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n3449212891			317	Chilled Water Plant #6	
 http://vivo.ufl.edu/individual/n34692		http://performingarts.ufl.edu/venues/phillips-center/	315	Phillips Center for the Performing Arts	
 http://vivo.ufl.edu/individual/n3479503446			619	Entomology Field Laboratory	
-http://vivo.ufl.edu/individual/n3494012269			265	Student Recreationandfitness Center	
+http://vivo.ufl.edu/individual/n3494012269			265	Student RecreationandFitness Ctr	
 http://vivo.ufl.edu/individual/n3506958112			758	Chilled Water Plant #7	
 http://vivo.ufl.edu/individual/n35233281			440	IFAS Extension Bookstore	
 http://vivo.ufl.edu/individual/n3525330596			1080	Springs Residential Complex	
-http://vivo.ufl.edu/individual/n3526284956			1091	Parking Garage 6 (SW 16Th St)	
+http://vivo.ufl.edu/individual/n3526284956			1091	Parking Garage 6 (SW 16th St)	
 http://vivo.ufl.edu/individual/n3542426664			321	University Village	
 http://vivo.ufl.edu/individual/n3551308170			182	Field Lab/Trailer, Forestry	
 http://vivo.ufl.edu/individual/n3555345684			30	Rae O. Weimer Hall	
@@ -272,9 +272,9 @@ http://vivo.ufl.edu/individual/n3583311558			1135	Materials Recycling Research
 http://vivo.ufl.edu/individual/n3600809513			1358	Entomology Shadehouse, North	
 http://vivo.ufl.edu/individual/n3615204616			471	Veterinary Science	
 http://vivo.ufl.edu/individual/n3621382708			371	Maguire 7	
-http://vivo.ufl.edu/individual/n3622110165			952	Storage Building	
+http://vivo.ufl.edu/individual/n3622110165			952	Storage Bldg	
 http://vivo.ufl.edu/individual/n3623901693			807	Physical Plant Masonry Shop	
-http://vivo.ufl.edu/individual/n363006706			956	Storage Building	
+http://vivo.ufl.edu/individual/n363006706			956	Storage Bldg	
 http://vivo.ufl.edu/individual/n36478			100	Robert C. Williamson Hall	
 http://vivo.ufl.edu/individual/n3649190932			602	ACS Storage	
 http://vivo.ufl.edu/individual/n3656275479			1266	Greenhouse, Fruit Crops	
@@ -297,12 +297,12 @@ http://vivo.ufl.edu/individual/n3771501187			1199	Housing Supply Warehouse
 http://vivo.ufl.edu/individual/n3773158185			427	Theta Chi	
 http://vivo.ufl.edu/individual/n377340595			203	Communicore	
 http://vivo.ufl.edu/individual/n3774124096			93	Florida Outdoor Pool	
-http://vivo.ufl.edu/individual/n3781869003			202	Shands Patient Services Building	
+http://vivo.ufl.edu/individual/n3781869003			202	Shands Patient Services Bldg	
 http://vivo.ufl.edu/individual/n3790888436			268	Architecture	
 http://vivo.ufl.edu/individual/n3804284341			288	Corry	
 http://vivo.ufl.edu/individual/n3804891061			151	Varsity Tennis Building	
 http://vivo.ufl.edu/individual/n3816738374			573	Sports Field House	
-http://vivo.ufl.edu/individual/n3826615683			803	McCarty Annex B	
+http://vivo.ufl.edu/individual/n3826615683			803	Mccarty Annex B	
 http://vivo.ufl.edu/individual/n3852188013			616	Agric Engineering Field Lab	
 http://vivo.ufl.edu/individual/n3856158329			464	Alcohol Storage Facility	
 http://vivo.ufl.edu/individual/n3860275934			218	Vet Med Equine Barn	
@@ -315,7 +315,7 @@ http://vivo.ufl.edu/individual/n3908930204			727	ACS Housing
 http://vivo.ufl.edu/individual/n3912510741			525	Materials Storage	
 http://vivo.ufl.edu/individual/n3933066641			587	Solar Energy Test House	
 http://vivo.ufl.edu/individual/n3934369054			369	Maguire 5	
-http://vivo.ufl.edu/individual/n3950841178			73	Rolfs Elevator Equipment Building	
+http://vivo.ufl.edu/individual/n3950841178			73	Rolfs Elevator Equipment Bldg	
 http://vivo.ufl.edu/individual/n3953528421			668	Electrical Engineering Lab	
 http://vivo.ufl.edu/individual/n3961379806			628	Animal Science Pole Barn	
 http://vivo.ufl.edu/individual/n3963147106			197	UF Substation #7	
@@ -343,7 +343,7 @@ http://vivo.ufl.edu/individual/n4125558654			1206	Greenhouse, Fruit Crops
 http://vivo.ufl.edu/individual/n4150767045			820	Greenhouse, Zoology	
 http://vivo.ufl.edu/individual/n4155560447			456	Vending Machines Shelter	
 http://vivo.ufl.edu/individual/n417980844			949	Soils/Fertilizer Storage	
-http://vivo.ufl.edu/individual/n4197237314			455	Storage Building	
+http://vivo.ufl.edu/individual/n4197237314			455	Storage Bldg	
 http://vivo.ufl.edu/individual/n420442285			1264	Fruit Crops Pole Barn	
 http://vivo.ufl.edu/individual/n4206726628			1217	Greenhouse, Ornamental Horticulture	
 http://vivo.ufl.edu/individual/n4207394527			1061	UF Substation #11	
@@ -356,7 +356,7 @@ http://vivo.ufl.edu/individual/n426763924			688	Harry H. Sisler Hall
 http://vivo.ufl.edu/individual/n4272408991			748	Archie F. Carr Hall	
 http://vivo.ufl.edu/individual/n4274060409			493	Food Science Storage	
 http://vivo.ufl.edu/individual/n4278783056			276	Corry	
-http://vivo.ufl.edu/individual/n4283347432			1100	McCarty Walkways	
+http://vivo.ufl.edu/individual/n4283347432			1100	Mccarty Walkways	
 http://vivo.ufl.edu/individual/n4288554647			1156	Ring Varsity Tennis Building	
 http://vivo.ufl.edu/individual/n4289804085			205	Dental Science	
 http://vivo.ufl.edu/individual/n4315989258			1078	Wwtp Pretreatment Structure	
@@ -381,7 +381,7 @@ http://vivo.ufl.edu/individual/n4466591295			281	Corry
 http://vivo.ufl.edu/individual/n4472225747			217	Vet Med Metabolic Building	
 http://vivo.ufl.edu/individual/n4475813164			98	O'Connell Warmup Pool Plant	
 http://vivo.ufl.edu/individual/n4478154503			940	Honey Lab	
-http://vivo.ufl.edu/individual/n4489189656			810	McCarty Annex a	
+http://vivo.ufl.edu/individual/n4489189656			810	Mccarty Annex A	
 http://vivo.ufl.edu/individual/n4489440713			1023	Vet Med Hay Barn	
 http://vivo.ufl.edu/individual/n4489559264			473	Lacy Rabon Chilled Water Plant	
 http://vivo.ufl.edu/individual/n4509373630			414	Chi Omega	
@@ -402,24 +402,24 @@ http://vivo.ufl.edu/individual/n4659323103			31	Marshall M. Criser Hall
 http://vivo.ufl.edu/individual/n4661350381			737	Research Lab	
 http://vivo.ufl.edu/individual/n4664901338			150	Wildlife Ecology	
 http://vivo.ufl.edu/individual/n4682005724			163	North End Zone Cooling Tower	
-http://vivo.ufl.edu/individual/n4683936365			169	Criser Cib	
+http://vivo.ufl.edu/individual/n4683936365			169	Criser CIB	
 http://vivo.ufl.edu/individual/n4690671413			148	Parking Garage 7 (O'Connell Center)	
 http://vivo.ufl.edu/individual/n4710568283			171	Shands Medical Plaza B	
-http://vivo.ufl.edu/individual/n471765524			154	Storage Building	
-http://vivo.ufl.edu/individual/n472016331			221	Vab Auditorium	
+http://vivo.ufl.edu/individual/n471765524			154	Storage Bldg	
+http://vivo.ufl.edu/individual/n472016331			221	VAB Auditorium	
 http://vivo.ufl.edu/individual/n4767513826			1361	Greenhouse	
 http://vivo.ufl.edu/individual/n4784405971			1371	Animal Care Extension Facility 1	
 http://vivo.ufl.edu/individual/n4815245658			469	Greenhouse, Hort Sciences	
 http://vivo.ufl.edu/individual/n4834081205			764	Martin H Levin Advocacy Center	
 http://vivo.ufl.edu/individual/n4842859864			45	Benjamin A. Tolbert Hall	
-http://vivo.ufl.edu/individual/n4847965437			802	Storage Building	
+http://vivo.ufl.edu/individual/n4847965437			802	Storage Bldg	
 http://vivo.ufl.edu/individual/n4855433164			429	Telecommunications	
 http://vivo.ufl.edu/individual/n4856999765			736	Greenhouse, Agronomy	
 http://vivo.ufl.edu/individual/n4866670591			37	S.U.S. Press	
 http://vivo.ufl.edu/individual/n4871981181			946	Entomology Implement Shed	
 http://vivo.ufl.edu/individual/n4873536506			372	Maguire 8	
 http://vivo.ufl.edu/individual/n489106227			984	UF Substation #10	
-http://vivo.ufl.edu/individual/n4909378458			1194	Attendant Booth at Soc Gated Lot	
+http://vivo.ufl.edu/individual/n4909378458			1194	Attendant Booth at SOC Gated Lot	
 http://vivo.ufl.edu/individual/n4915427447			229	UF Substation #5	
 http://vivo.ufl.edu/individual/n4928050157			1137	Mechanical Engineering Storage	
 http://vivo.ufl.edu/individual/n4934905759			847	Pesticide Information Office	
@@ -432,7 +432,7 @@ http://vivo.ufl.edu/individual/n4965120095			674	Guy Bostick Golf Clubhouse
 http://vivo.ufl.edu/individual/n4971061302			282	Corry	
 http://vivo.ufl.edu/individual/n4978387715			289	Corry	
 http://vivo.ufl.edu/individual/n4988107970			415	Kappa Delta	
-http://vivo.ufl.edu/individual/n4997103887			96	Storage Building	
+http://vivo.ufl.edu/individual/n4997103887			96	Storage Bldg	
 http://vivo.ufl.edu/individual/n5000098893			932	Greenhouse, Agronomy	
 http://vivo.ufl.edu/individual/n5001919010			211	Sanitary Lift Station L1	
 http://vivo.ufl.edu/individual/n5002450553			230	UF Substation #3	
@@ -441,7 +441,7 @@ http://vivo.ufl.edu/individual/n5042553453			17	William R. Thomas Hall
 http://vivo.ufl.edu/individual/n505619329			1749	Health Center Radio Tower	
 http://vivo.ufl.edu/individual/n5058572831			1070	Water Reclamation Administration Building	
 http://vivo.ufl.edu/individual/n5069625296			1002	Keys Residential Complex	
-http://vivo.ufl.edu/individual/n508855071			763	ACS Storage	
+http://vivo.ufl.edu/individual/n508855071			763	Acs Storage	
 http://vivo.ufl.edu/individual/n5093417089			231	UF Substation #4	
 http://vivo.ufl.edu/individual/n5116747369			26	John J. Tigert Hall	
 http://vivo.ufl.edu/individual/n5121161107			250	Microfabritech Containment Shelt	
@@ -449,14 +449,14 @@ http://vivo.ufl.edu/individual/n5137788018			496	Dan McCarty Hall B
 http://vivo.ufl.edu/individual/n5173651371			110	Steinbrenner Band Hall	
 http://vivo.ufl.edu/individual/n5175750647			376	Maguire 12	
 http://vivo.ufl.edu/individual/n5183293314			234	UF Substation #1	
-http://vivo.ufl.edu/individual/n5184619755			2014	UF Shands Ahc, Information Technology Services	
+http://vivo.ufl.edu/individual/n5184619755			2014	UF Shands AHC, IT Services	
 http://vivo.ufl.edu/individual/n5189908989			318	University Village	
 http://vivo.ufl.edu/individual/n520532699			819	Agric Engineering Field Lab	
 http://vivo.ufl.edu/individual/n5212879945			724	Alvin P. Black Hall	
 http://vivo.ufl.edu/individual/n5225941562			1360	Greenhouse	
 http://vivo.ufl.edu/individual/n5231559390			1032	UF Foundation Research	
 http://vivo.ufl.edu/individual/n5235820169			706	University Transportation	
-http://vivo.ufl.edu/individual/n5247921923			603	Animal Facility Kennel Core Building	
+http://vivo.ufl.edu/individual/n5247921923			603	Animal Facility Kennel Core Bldg	
 http://vivo.ufl.edu/individual/n5251646339			77	University Women's Club	
 http://vivo.ufl.edu/individual/n5266149865			1071	Water Reclamation Shop/Storage	
 http://vivo.ufl.edu/individual/n5275566158			594	May A. Mann Jennings Hall B	
@@ -471,7 +471,7 @@ http://vivo.ufl.edu/individual/n5312489541			387	Maguire 23
 http://vivo.ufl.edu/individual/n5318006448			280	Corry	
 http://vivo.ufl.edu/individual/n5319952922			285	Corry	
 http://vivo.ufl.edu/individual/n5321996172			0287_OLD	Corry Laundry and Maint	
-http://vivo.ufl.edu/individual/n5324322202			953	Storage Building	
+http://vivo.ufl.edu/individual/n5324322202			953	Storage Bldg	
 http://vivo.ufl.edu/individual/n5339358232			1116	Wallace Building Walkway	
 http://vivo.ufl.edu/individual/n53415			9	Leigh Hall	
 http://vivo.ufl.edu/individual/n5345147314			147	Agronomy Plant Intro Lab	
@@ -497,18 +497,18 @@ http://vivo.ufl.edu/individual/n5481589426			655	Winston W. Little Hall
 http://vivo.ufl.edu/individual/n5482887593			1200	Plant Science Facility	
 http://vivo.ufl.edu/individual/n5489147837			1160	Katie Seashole Pressly Softball Stadium	
 http://vivo.ufl.edu/individual/n5495343322			19	Farrior Hall	
-http://vivo.ufl.edu/individual/n5511124673			750	Robert Calder Beaty Towers a	
+http://vivo.ufl.edu/individual/n5511124673			750	Robert Calder Beaty Towers A	
 http://vivo.ufl.edu/individual/n5516750058			723	Chemical Engineering	
 http://vivo.ufl.edu/individual/n5538833143			618	Greenhouse, Entomology	
 http://vivo.ufl.edu/individual/n5548441601			559	Norman Mehrhof Hall	
 http://vivo.ufl.edu/individual/n5575674583			1117	IFAS Warehouse Walkway	
 http://vivo.ufl.edu/individual/n5578035427			1123	Lacrosse Locker Building	
-http://vivo.ufl.edu/individual/n5579864574			1073	Water Reclamation Blow/General/Elect	
+http://vivo.ufl.edu/individual/n5579864574			1073	Water Reclamation Blow/Gen/Elect	
 http://vivo.ufl.edu/individual/n5580734570			485	Greenhouse, Agronomy	
 http://vivo.ufl.edu/individual/n558192945			939	Greenhouse, Entomology	
 http://vivo.ufl.edu/individual/n5584608189			80	Catering Service Building	
 http://vivo.ufl.edu/individual/n5584928989			749	Psychology Building	
-http://vivo.ufl.edu/individual/n5591147777			669	Greenhouse, Plant Pathology	
+http://vivo.ufl.edu/individual/n5591147777			669	Greenhouse,Plant Pathology	
 http://vivo.ufl.edu/individual/n5600957634			1098	Vet Med Medical Gases Storage	
 http://vivo.ufl.edu/individual/n5616982477			1102	Leigh Hall Walkways	
 http://vivo.ufl.edu/individual/n5623337471			125	Scott Linder Tennis Stadium	
@@ -519,9 +519,9 @@ http://vivo.ufl.edu/individual/n5641087504			423	Delta Chi
 http://vivo.ufl.edu/individual/n5665842365			253	University Foundation Annex	
 http://vivo.ufl.edu/individual/n5665974752			586	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n5675965220			370	Maguire 6	
-http://vivo.ufl.edu/individual/n5696455138			662	Storage Building	
+http://vivo.ufl.edu/individual/n5696455138			662	Storage Bldg	
 http://vivo.ufl.edu/individual/n5704158227			78	Plant Disease Clinic	
-http://vivo.ufl.edu/individual/n5724651918			1046	Bus Shelter at Ppd Parking Lot	
+http://vivo.ufl.edu/individual/n5724651918			1046	Bus Shelter at PPD Parking Lot	
 http://vivo.ufl.edu/individual/n5729219871			719	Materials Engineering	
 http://vivo.ufl.edu/individual/n5731178511			822	Golf Club Comfort Station	
 http://vivo.ufl.edu/individual/n5739049500			769	Swine Unit Polebarn	
@@ -539,7 +539,7 @@ http://vivo.ufl.edu/individual/n5811031435			635	Racing Lab Annex
 http://vivo.ufl.edu/individual/n5814554930			844	Environmental Education, Forestry	
 http://vivo.ufl.edu/individual/n5863492899			16	Andrew Sledd Hall	
 http://vivo.ufl.edu/individual/n5868324902			20	Mary M. Reid Hall	
-http://vivo.ufl.edu/individual/n5869127270			1174	Ehandsfumigationstorage	
+http://vivo.ufl.edu/individual/n5869127270			1174	EHandSfumigationstorage	
 http://vivo.ufl.edu/individual/n587757366			643	Nematology Field Lab	
 http://vivo.ufl.edu/individual/n588116580			97	Equipment Storage	
 http://vivo.ufl.edu/individual/n59240386			7	James N. Anderson Hall	
@@ -548,14 +548,14 @@ http://vivo.ufl.edu/individual/n5929067138			199	Warehouse
 http://vivo.ufl.edu/individual/n5944144070			400	Kappa Alpha	
 http://vivo.ufl.edu/individual/n5953828348			577	Hume Hall West Residence	
 http://vivo.ufl.edu/individual/n5954127357			490	Greenhouse, Nematology	
-http://vivo.ufl.edu/individual/n5963606900			725	Mechanical and Aerospace Engineer a	
+http://vivo.ufl.edu/individual/n5963606900			725	Mechanical and Aerospace Eng A	
 http://vivo.ufl.edu/individual/n5968454272			585	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n5983957086			346	Entomology Shop	
 http://vivo.ufl.edu/individual/n5986972992			271	Shands Facilities Administration	
 http://vivo.ufl.edu/individual/n5992564033			896	Clinical and Translational Science Institute	
 http://vivo.ufl.edu/individual/n6003036597			656	Baseball Locker Room Facility	
 http://vivo.ufl.edu/individual/n6028692492			486	Greenhouse, Plant Pathology	
-http://vivo.ufl.edu/individual/n6030388564			701	Physical Plant Work Management Center	
+http://vivo.ufl.edu/individual/n6030388564			701	Physical Plant Work Mgmt Ctr	
 http://vivo.ufl.edu/individual/n6037299056			255	Gator Band Shell	
 http://vivo.ufl.edu/individual/n6038238529			1300	Vet Med Chemical Storage	
 http://vivo.ufl.edu/individual/n6041072795			551	Rawlings Plaza Annex	
@@ -572,16 +572,16 @@ http://vivo.ufl.edu/individual/n6142506855			1288	Potting Shed, Forestry
 http://vivo.ufl.edu/individual/n6153029200			1289	Nematology Shade House	
 http://vivo.ufl.edu/individual/n6158959006			851	Field Lab, Forestry	
 http://vivo.ufl.edu/individual/n6167267399			247	Solar Engineering Laboratory	
-http://vivo.ufl.edu/individual/n6168962287			955	Storage Building	
+http://vivo.ufl.edu/individual/n6168962287			955	Storage Bldg	
 http://vivo.ufl.edu/individual/n6175197872			484	Straughn Extension Professional Development Center	
-http://vivo.ufl.edu/individual/n6199353452			720	Mechanical and Aerospace Engineer B	
+http://vivo.ufl.edu/individual/n6199353452			720	Mechanical and Aerospace Eng B	
 http://vivo.ufl.edu/individual/n6202804851			209	Parking Garage 2 (Shands West)	
 http://vivo.ufl.edu/individual/n6207597173			968	Shadehouse	
-http://vivo.ufl.edu/individual/n6214620969			91	O'Connell Center Storage	
+http://vivo.ufl.edu/individual/n6214620969			91	O'Connell Ctr Storage	
 http://vivo.ufl.edu/individual/n6218042471			316	SW Recreational Sports Facility	
 http://vivo.ufl.edu/individual/n6222138923			613	Sun Shelter	
 http://vivo.ufl.edu/individual/n625025068			1126	Vetmed Basic Sciences Walkway	
-http://vivo.ufl.edu/individual/n6260353404			476	McCarty Storage	
+http://vivo.ufl.edu/individual/n6260353404			476	Mccarty Storage	
 http://vivo.ufl.edu/individual/n6263343264			227	Agricultural Engineering Shop	
 http://vivo.ufl.edu/individual/n6264283479			639	Conferences and Institutes	
 http://vivo.ufl.edu/individual/n6280390264			1378	Chilled Water Plant #10	
@@ -590,8 +590,8 @@ http://vivo.ufl.edu/individual/n6318161805			1053	Chilled Water Plant #5
 http://vivo.ufl.edu/individual/n6334851905			296	Diamond	
 http://vivo.ufl.edu/individual/n6336396559			1151	Smathers Fire Pump Building	
 http://vivo.ufl.edu/individual/n6337026765			467	Pump House (E&G)	
-http://vivo.ufl.edu/individual/n6345738048			108	Greenhouse, Flmnh	
-http://vivo.ufl.edu/individual/n635338412			1074	Water Reclamation Sludge Building	
+http://vivo.ufl.edu/individual/n6345738048			108	Greenhouse, FLMNH	
+http://vivo.ufl.edu/individual/n635338412			1074	Water Reclamation Sludge Bldg	
 http://vivo.ufl.edu/individual/n6360032590			295	Chilled Water Plant #4	
 http://vivo.ufl.edu/individual/n6364435688			90	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n6379039162			329	University Village	
@@ -627,7 +627,7 @@ http://vivo.ufl.edu/individual/n6757747295			50	North Hall
 http://vivo.ufl.edu/individual/n6765591491			1218	Greenhouse, Ornamental Horticulture	
 http://vivo.ufl.edu/individual/n6772353889			42	Computer Sciences/Engineering	
 http://vivo.ufl.edu/individual/n6790554552			970	Entomology-Nematology	
-http://vivo.ufl.edu/individual/n6828391262			349	Lepidoptera Research Center Greenhouse	
+http://vivo.ufl.edu/individual/n6828391262			349	Lepidoptera Res Ctr Greenhouse	
 http://vivo.ufl.edu/individual/n6868227425			390	Maguire 26	
 http://vivo.ufl.edu/individual/n6870868437			461	Aquatic Products Lab	
 http://vivo.ufl.edu/individual/n6872866396			81	Counseling and Wellness Center	
@@ -646,10 +646,10 @@ http://vivo.ufl.edu/individual/n7004902291			298	Diamond
 http://vivo.ufl.edu/individual/n7012164662			1269	Greenhouse, Entomology	
 http://vivo.ufl.edu/individual/n7013158066			462	Shepard Broad Building	
 http://vivo.ufl.edu/individual/n7033728131			546	Physical Plant Storage	
-http://vivo.ufl.edu/individual/n7040238435			823	University Gardens Information Center	
+http://vivo.ufl.edu/individual/n7040238435			823	University Gardens Info Ctr	
 http://vivo.ufl.edu/individual/n7042258432			645	Greenhouse, Forestry	
 http://vivo.ufl.edu/individual/n7058928420			676	Greenhouse, Agronomy	
-http://vivo.ufl.edu/individual/n7064713597			951	Storage Building	
+http://vivo.ufl.edu/individual/n7064713597			951	Storage Bldg	
 http://vivo.ufl.edu/individual/n7070282997			1162	Administration/Maintenance Building	
 http://vivo.ufl.edu/individual/n707362141			1047	Condensate Pump House	
 http://vivo.ufl.edu/individual/n7076674910			833	Pesticide Lab Annex B	
@@ -657,7 +657,7 @@ http://vivo.ufl.edu/individual/n7086790649			731	Greenhouse, Agronomy
 http://vivo.ufl.edu/individual/n7116908996			347	Rec Facilities Score Keeper	
 http://vivo.ufl.edu/individual/n7122967260			256	Gator Band Shell Restrooms	
 http://vivo.ufl.edu/individual/n7134998945			722	Merwin J. Larsen Hall	
-http://vivo.ufl.edu/individual/n7143057243			212	Health Professor, Nursing and Pharmacy	
+http://vivo.ufl.edu/individual/n7143057243			212	Health Prof, Nursing and Pharmacy	
 http://vivo.ufl.edu/individual/n7152430036			1284	Greenhouse, Turfgrass	
 http://vivo.ufl.edu/individual/n7160447010			1305	Greenhouse	
 http://vivo.ufl.edu/individual/n7161297600			323	University Village	
@@ -670,7 +670,7 @@ http://vivo.ufl.edu/individual/n7256214939			304	Diamond
 http://vivo.ufl.edu/individual/n7256230349			728	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n72699834			428	Zeta Beta Tau	
 http://vivo.ufl.edu/individual/n7278420297			982	Baughman Support Building	
-http://vivo.ufl.edu/individual/n728830685			465	Elmore Hall for Administrative Services	
+http://vivo.ufl.edu/individual/n728830685			465	Elmore Hall For Admin Services	
 http://vivo.ufl.edu/individual/n730888242			193	Agronomy Cytology Laboratory	
 http://vivo.ufl.edu/individual/n7322057858			1271	Greenhouse, Entomology	
 http://vivo.ufl.edu/individual/n7326971932			1064	Hydropneumatic Tank	
@@ -730,7 +730,7 @@ http://vivo.ufl.edu/individual/n7826332099			1103	Smathers Walkway
 http://vivo.ufl.edu/individual/n7850462082			381	Maguire 17	
 http://vivo.ufl.edu/individual/n7854769954			684	Health Center Surge #4	
 http://vivo.ufl.edu/individual/n7869504455			829	Field Storage	
-http://vivo.ufl.edu/individual/n7876227752			836	Ehands Storage	
+http://vivo.ufl.edu/individual/n7876227752			836	EHandS Storage	
 http://vivo.ufl.edu/individual/n7877941186			1057	U.F. Substation #13	
 http://vivo.ufl.edu/individual/n789145198			1076	Fiber Hut Aero	
 http://vivo.ufl.edu/individual/n7909691644			1181	Lakeside Residential Complex	
@@ -758,17 +758,17 @@ http://vivo.ufl.edu/individual/n809992187			13	Wilmon E. Newell Hall
 http://vivo.ufl.edu/individual/n8112523033			409	Alpha Delta Pi	
 http://vivo.ufl.edu/individual/n8121684927			882	Horse Barn	
 http://vivo.ufl.edu/individual/n8127671593			1304	Greenhouse	
-http://vivo.ufl.edu/individual/n8156629985			1173	Ehands Fumigation Chamber	
+http://vivo.ufl.edu/individual/n8156629985			1173	EHandS Fumigation Chamber	
 http://vivo.ufl.edu/individual/n8158665983			916	Field Support	
 http://vivo.ufl.edu/individual/n815953348			742	Comm and Neurbio Sci Surge #5	
 http://vivo.ufl.edu/individual/n8178745083			478	Animal Building	
 http://vivo.ufl.edu/individual/n8199446115			1134	Materials Recycling Research	
-http://vivo.ufl.edu/individual/n8203074938			864	Storage Building	
+http://vivo.ufl.edu/individual/n8203074938			864	Storage Bldg	
 http://vivo.ufl.edu/individual/n8207132123			389	Maguire 25	
 http://vivo.ufl.edu/individual/n8207890024			183	Mechanical and Aerospace Engineering C	
 http://vivo.ufl.edu/individual/n82169			1	University Auditorium	
-http://vivo.ufl.edu/individual/n823196381			495	Dan McCarty Hall a	
-http://vivo.ufl.edu/individual/n8242667763			1131	Upd Evidence Building	
+http://vivo.ufl.edu/individual/n823196381			495	Dan McCarty Hall A	
+http://vivo.ufl.edu/individual/n8242667763			1131	UPD Evidence Building	
 http://vivo.ufl.edu/individual/n8247717633			630	Grounds Storage Building	
 http://vivo.ufl.edu/individual/n8254652420			215	Veterinary Clinical Sciences	
 http://vivo.ufl.edu/individual/n826607521			571	Coastal Engineering Wave Tank	
@@ -795,7 +795,7 @@ http://vivo.ufl.edu/individual/n8460060621			95	Wayne and Jimmie Carse Swim/Dive
 http://vivo.ufl.edu/individual/n8460502663			1748	Police VHF Radio Tower	
 http://vivo.ufl.edu/individual/n8473470100			1004	Keys Residential Complex	
 http://vivo.ufl.edu/individual/n8484430758			103	James W. Norman Hall Addition	
-http://vivo.ufl.edu/individual/n8488706160			755	R.C. Beaty Service Building F	
+http://vivo.ufl.edu/individual/n8488706160			755	R.C. Beaty Service Bldg F	
 http://vivo.ufl.edu/individual/n8495832873			261	Emerson Alumni Hall	
 http://vivo.ufl.edu/individual/n8503362909			1086	Springs Residential Complex	
 http://vivo.ufl.edu/individual/n8524254179			658	Agronomy Plant Introduct. Lab	
@@ -810,7 +810,7 @@ http://vivo.ufl.edu/individual/n8590799132			883	Storage Building
 http://vivo.ufl.edu/individual/n8592666761			1227	Polyhouse #10	
 http://vivo.ufl.edu/individual/n8593120065			198	CNS Storage	
 http://vivo.ufl.edu/individual/n861160701			161	Pump House (Ocala Pond)	
-http://vivo.ufl.edu/individual/n8621237066			716	IFAS Mechanical Equipment Building	
+http://vivo.ufl.edu/individual/n8621237066			716	IFAS Mechanical Equipment Bldg	
 http://vivo.ufl.edu/individual/n8623055603			492	Greenhouse, Entomology	
 http://vivo.ufl.edu/individual/n8633630162			487	Greenhouse, Plant Pathology	
 http://vivo.ufl.edu/individual/n8658756426			505	Greenhouse, Agronomy	
@@ -823,7 +823,7 @@ http://vivo.ufl.edu/individual/n8723569509			1290	Nematology Potting Shed
 http://vivo.ufl.edu/individual/n8735233294			975	Greenhouse	
 http://vivo.ufl.edu/individual/n873637567			498	Dan McCarty Hall D	
 http://vivo.ufl.edu/individual/n8749007142			642	Greenhouse, Entomology	
-http://vivo.ufl.edu/individual/n8751563124			1177	Ehands Pest Control Storage	
+http://vivo.ufl.edu/individual/n8751563124			1177	EHandS Pest Control Storage	
 http://vivo.ufl.edu/individual/n8755463764			588	Harry R. Trusler Hall	
 http://vivo.ufl.edu/individual/n8792729511			1049	Baby Gator	
 http://vivo.ufl.edu/individual/n8823682902			708	Physical Plant Garage	
@@ -832,12 +832,12 @@ http://vivo.ufl.edu/individual/n8853260069			173	Parking Garage 9 (Archer Rd N)
 http://vivo.ufl.edu/individual/n8860217820			1208	Greenhouse, Vegetable Crops	
 http://vivo.ufl.edu/individual/n8867677210			432	Pi Lambda Phi	
 http://vivo.ufl.edu/individual/n8869594322			1302	Greenhouse	
-http://vivo.ufl.edu/individual/n8871164051			954	Storage Building	
+http://vivo.ufl.edu/individual/n8871164051			954	Storage Bldg	
 http://vivo.ufl.edu/individual/n8878656736			1008	Keys Residential Complex	
-http://vivo.ufl.edu/individual/n8911982815			703	Physical Plant Building Services	
-http://vivo.ufl.edu/individual/n8915000471			1344	Storage Building	
+http://vivo.ufl.edu/individual/n8911982815			703	Physical Plant Building Svcs	
+http://vivo.ufl.edu/individual/n8915000471			1344	Storage Bldg	
 http://vivo.ufl.edu/individual/n8915132961			1031	Security Guard Hut	
-http://vivo.ufl.edu/individual/n8945328746			815	Roofing Building	
+http://vivo.ufl.edu/individual/n8945328746			815	Roofing Bldg	
 http://vivo.ufl.edu/individual/n8949577543			1215	Greenhouse, Ornamental Horticulture	
 http://vivo.ufl.edu/individual/n8966484100			971	Greenhouse, Agronomy	
 http://vivo.ufl.edu/individual/n8976865923			1211	Pot Washing Building	
@@ -862,7 +862,7 @@ http://vivo.ufl.edu/individual/n9225955531			680	Carpenter Shop
 http://vivo.ufl.edu/individual/n9241045328			363	Florida Power Substation	
 http://vivo.ufl.edu/individual/n924200000			813	Warehouse	
 http://vivo.ufl.edu/individual/n9250189556			68	Research Laboratory	
-http://vivo.ufl.edu/individual/n926209246			710	Bio-Technician Lab	
+http://vivo.ufl.edu/individual/n926209246			710	Bio-Tech Lab	
 http://vivo.ufl.edu/individual/n926640221			698	Health Center Surge #2	
 http://vivo.ufl.edu/individual/n9275714176			2020	Aging Temporary Building	
 http://vivo.ufl.edu/individual/n9280996754			135	Albert A. Murphree Hall	
@@ -894,15 +894,15 @@ http://vivo.ufl.edu/individual/n9461707280			553	Marjorie K. Rawlings Hall
 http://vivo.ufl.edu/individual/n9470633987			699	Vet Science Surgery	
 http://vivo.ufl.edu/individual/n9473822680			718	Behavior Lab - Flmnh	
 http://vivo.ufl.edu/individual/n9488591362			176	Pump House (Gator Pond)	
-http://vivo.ufl.edu/individual/n9488960045			543	Agricultural Engineering Building	
+http://vivo.ufl.edu/individual/n9488960045			543	Agricultural Engineering Bldg	
 http://vivo.ufl.edu/individual/n9491466938			431	Alpha Epsilon Pi	
 http://vivo.ufl.edu/individual/n9505160955			128	Agronomy Drying Facility	
-http://vivo.ufl.edu/individual/n9521670385			38	T.W. Bryant Space Science Center	
+http://vivo.ufl.edu/individual/n9521670385			38	T.W. Bryant Space Science Ctr	
 http://vivo.ufl.edu/individual/n9522299702			772	Neurobiological Surge #6	
 http://vivo.ufl.edu/individual/n952981130			806	Building G	
 http://vivo.ufl.edu/individual/n9536099860			411	Delta Delta Delta	
 http://vivo.ufl.edu/individual/n9536858396			497	Dan McCarty Hall C	
-http://vivo.ufl.edu/individual/n9544507927			597	Fine Arts a	
+http://vivo.ufl.edu/individual/n9544507927			597	Fine Arts A	
 http://vivo.ufl.edu/individual/n9566272169			796	Natural Area Teaching Pavilion	
 http://vivo.ufl.edu/individual/n9579892290			157	Ben Hill Griffin Stadium	
 http://vivo.ufl.edu/individual/n9595647966			1169	Basketball Practice Facility	
@@ -928,7 +928,7 @@ http://vivo.ufl.edu/individual/n9783698409			378	Maguire 14
 http://vivo.ufl.edu/individual/n9800669932			1214	Laboratory Building	
 http://vivo.ufl.edu/individual/n9816670242			604	ACS Housing #2	
 http://vivo.ufl.edu/individual/n9821666128			357	Pool Maintenance Bldg-Housing	
-http://vivo.ufl.edu/individual/n9827081486			845	Storage Building	
+http://vivo.ufl.edu/individual/n9827081486			845	Storage Bldg	
 http://vivo.ufl.edu/individual/n9833090414			339	IFAS Wildlife Ecology Lab	
 http://vivo.ufl.edu/individual/n9835542896			58	IFAS Comm Services Storage	
 http://vivo.ufl.edu/individual/n9840158865			1101	Fine Arts Walkway	
@@ -936,7 +936,7 @@ http://vivo.ufl.edu/individual/n9843995362			406	Walter J. Matherly Hall
 http://vivo.ufl.edu/individual/n9865992355			1775	Attendant Booth at Orthopaedics Parking	
 http://vivo.ufl.edu/individual/n9884226513			1226	Shadehouse	
 http://vivo.ufl.edu/individual/n988751257			1124	Engineering Clock Tower	
-http://vivo.ufl.edu/individual/n9890704981			1088	Shands Heliport Office Building	
+http://vivo.ufl.edu/individual/n9890704981			1088	Shands Heliport Office Bldg	
 http://vivo.ufl.edu/individual/n9896151450			14	Kathryn Chicone Ustler Hall	
 http://vivo.ufl.edu/individual/n9898522443			576	Hume Hall Commons Building	
 http://vivo.ufl.edu/individual/n9909447235	FLMNH		308	Powell Hall	
@@ -947,6 +947,6 @@ http://vivo.ufl.edu/individual/n9933477433			258	Weed Sciences Field Building
 http://vivo.ufl.edu/individual/n9937714104			831	Waste Management Facility	
 http://vivo.ufl.edu/individual/n9965637278			561	Headhouse	
 http://vivo.ufl.edu/individual/n9967479726			131	Percy L. Reed Laboratory	
-http://vivo.ufl.edu/individual/n9988024731			620	Storage Building	
+http://vivo.ufl.edu/individual/n9988024731			620	Storage Bldg	
 http://vivo.ufl.edu/individual/n9989211894			10	B.H. Griffin - W.L. Floyd Hall	
 http://vivo.ufl.edu/individual/n9991455376			850	Physical Plant Storage #2	

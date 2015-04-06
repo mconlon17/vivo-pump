@@ -301,6 +301,19 @@ class PumpTestCase(unittest.TestCase):
         self.assertEqual(76, len(sub))
 
 
+class PumpGetTestCase(unittest.TestCase):
+    def test_get_no_filter(self):
+        p = Pump("data/building_def.json")
+        p.filter = False
+        n_rows = p.get("data/buildings_nofilter.txt")
+        self.assertEqual(951, n_rows)
+
+    def test_get_filter(self):
+        p = Pump("data/building_def.json")
+        n_rows = p.get("data/buildings_filtered.txt")
+        self.assertEqual(951, n_rows)
+
+
 class PumpUpdateCallTestCase(unittest.TestCase):
     def test_default_usage(self):
         p = Pump()

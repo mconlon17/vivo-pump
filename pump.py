@@ -18,13 +18,13 @@
 """
 
 # TODO: Control column order via update_def -- difficult
-# TODO: Determine and execute a strategy for handling datatypes and language tags in get and update -- medium
+# TODO: Handle data types and language tags in get and update -- easy
 # TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.58"
+__version__ = "0.59"
 
 from datetime import datetime
 from json import dumps
@@ -59,6 +59,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
+        self.filter = True  # default is to use the filters.  Set to False to skip the filters
         self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
         self.verbose = verbose
@@ -99,7 +100,7 @@ class Pump(object):
         :rtype: int
         """
         self.out_filename = filename
-        return do_get(self.update_def, self.enum, self.out_filename, debug=self.verbose)
+        return do_get(self.update_def, self.enum, self.out_filename, do_filter=self.filter, debug=self.verbose)
 
     def update(self, filename=None):
         """
@@ -312,16 +313,19 @@ def make_get_data(update_def, result_set):
     return data
 
 
-def do_get(update_def, enum, filename, debug=True):
+def do_get(update_def, enum, filename, do_filter=True, debug=True):
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
     editing using an editor or spreadsheet, and suitable for use by do_update.
 
     :param filename: Tab delimited file of data from VIVO
-    :return:  None.  File is written
+    :param: do_filter: boolean if True do the filters, otherwise do not apply filters
+    :return:  Number of rows of data
     """
     from vivopump import vivo_query
     import codecs
+    from vivopump import improve_title, repair_email, repair_phone_number, improve_date, \
+        improve_dollar_amount, improve_sponsor_award_id, improve_deptid
 
     query = make_get_query(update_def)
     if debug:
@@ -353,6 +357,20 @@ def do_get(update_def, enum, filename, debug=True):
                         data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from the multi-valued set
                         print data[uri][name]
 
+                    # Handle filters
+
+                    if do_filter and 'filter' in path[len(path) - 1]['object']:
+                        a = set()
+                        for x in data[uri][name]:
+                            was_string = x
+                            new_string = eval(path[len(path) - 1]['object']['filter'])(x)
+                            if debug and was_string != new_string:
+                                print uri, name, path[len(path) - 1]['object'][
+                                    'filter'], "FILTER IMPROVED", was_string, 'to', \
+                                    new_string
+                            a.add(new_string)
+                        data[uri][name] = a
+
                     # Handle enumerations
 
                     if 'enum' in path[len(path) - 1]['object']:
@@ -362,6 +380,7 @@ def do_get(update_def, enum, filename, debug=True):
                             a.add(enum[enum_name]['get'].get(x, x))  # if we can't find the value in the
                             # enumeration, just return the value
                         data[uri][name] = a
+
 
                 # Gather values into a delimited string
 
@@ -384,10 +403,7 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     :return: column_values a list of strings
     :rtype: list[str]
     """
-    # TODO: How/when to apply filters to the get process -- medium
-    # TODO: How/when to apply filters to the update process -- medium
-    from vivopump import InvalidDataException, improve_title, repair_email, repair_phone_number, improve_date, \
-        improve_dollar_amount, improve_sponsor_award_id, improve_deptid
+    from vivopump import InvalidDataException
 
     if step_def['predicate']['single']:
         column_values = [update_string]
@@ -414,17 +430,6 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
         for i in range(len(column_values)):
             column_values[i] = enum[step_def['object']['enum']]['update'].get(column_values[i], column_values[i])
 
-    # Handle filters
-
-    if 'filter' in step_def['object']:
-        for i in range(len(column_values)):
-            was_string = column_values[i]
-            if was_string != '' and was_string != 'None':
-                column_values[i] = eval(step_def['object']['filter'])(column_values[i])
-                if debug and was_string != column_values[i]:
-                    print row, column_name, step_def['object'][
-                        'filter'], "FILTER IMPROVED", was_string, 'to', \
-                        column_values[i]
     return column_values
 
 
