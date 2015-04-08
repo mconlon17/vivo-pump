@@ -17,9 +17,6 @@
 
 """
 
-# TODO: Control column order via update_def -- difficult
-# TODO: Add input/output capability to the triple store: stardog and VIVO 1.8 -- difficult
-
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
@@ -126,7 +123,7 @@ class Pump(object):
 
         self.enum = load_enum(self.update_def)
 
-        if self.original_graph is None: # Test for injection
+        if self.original_graph is None:  # Test for injection
             self.original_graph = get_graph(self.update_def, debug=self.verbose)  # Create the original graph from VIVO
 
         self.update_graph = Graph()
@@ -336,7 +333,7 @@ def do_get(update_def, enum, filename, do_filter=True, debug=True):
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
-    columns = (['uri'] + update_def['column_defs'].keys())
+    columns = ['uri'] + update_def['entity_def']['order']
     outfile.write('\t'.join(columns))
     outfile.write('\n')
 
@@ -379,7 +376,6 @@ def do_get(update_def, enum, filename, do_filter=True, debug=True):
                             a.add(enum[enum_name]['get'].get(x, x))  # if we can't find the value in the
                             # enumeration, just return the value
                         data[uri][name] = a
-
 
                 # Gather values into a delimited string
 

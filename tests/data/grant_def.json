@@ -15,7 +15,7 @@
                     "filter": "improve_deptid", 
                     "literal": true,
                     "datatype": "xsd:integer",
-                    "enum": "deptid"
+                    "enum": "data/deptid.txt"
                 }
             }
         ], 
@@ -51,7 +51,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "ufid"
+                    "enum": "data/ufid.txt"
                 }
             }
         ], 
@@ -135,7 +135,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "ufid"
+                    "enum": "data/ufid.txt"
                 }
             }
         ], 
@@ -147,7 +147,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "sponsorid"
+                    "enum": "data/sponsorid.txt"
                 }
             }
         ], 
@@ -182,7 +182,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "ufid"
+                    "enum": "data/ufid.txt"
                 }
             }
         ], 
