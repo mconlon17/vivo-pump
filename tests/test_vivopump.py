@@ -376,7 +376,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
         p.update_data = {'1': {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'url': u'http://a'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 2 and len(sub) == 0 and (URIRef(None),
+            len(add) == 4 and len(sub) == 0 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#linkURI"),
                                                  Literal("http://a")) in add)
 
