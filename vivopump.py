@@ -124,6 +124,28 @@ def read_update_def(filename):
     :return: JSON-like object from file, replacing all URI strings with URIRef objects
     """
 
+    def cast_to_rdflib(t):
+        """
+        Given a string t containing the name of an rdflib object, return the rdflib object.  For now
+        this is returns xsd data types
+
+        Will throw a KeyValue error if t is not a known data type
+
+        :param t:
+        :return: an xsd data type
+        """
+        from rdflib import XSD
+        cast_table = {
+            'xsd:integer': XSD.integer,
+            'xsd:string': XSD.string,
+            'xsd:datetime': XSD.datetime,
+            'xsd:boolean': XSD.boolean,
+            'xsd:decimal': XSD.decimal,
+            'xsd:anyURI': XSD.anyURI
+        }
+        r = cast_table[t]
+        return r
+
     def fixit(current_object):
         """
         Read the def data structure and replace all string URIs with URIRef entities
@@ -140,6 +162,8 @@ def read_update_def(filename):
         elif isinstance(current_object, basestring):
             if current_object.startswith("http://"):
                 current_object = URIRef(current_object)
+            elif current_object.startswith("xsd:"):
+                current_object = cast_to_rdflib(current_object)
         return current_object
 
     import json

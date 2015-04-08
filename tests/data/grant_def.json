@@ -13,7 +13,8 @@
                 }, 
                 "object": {
                     "filter": "improve_deptid", 
-                    "literal": true, 
+                    "literal": true,
+                    "datatype": "xsd:integer",
                     "enum": "deptid"
                 }
             }
@@ -25,7 +26,8 @@
                     "ref": "http://vivoweb.org/ontology/core#grantDirectCosts"
                 }, 
                 "object": {
-                    "filter": "improve_dollar_amount", 
+                    "filter": "improve_dollar_amount",
+                    "datatype": "xsd:decimal",
                     "literal": true
                 }
             }
@@ -48,7 +50,7 @@
                     "ref": "http://vivoweb.org/ontology/core#co-PrincipalInvestigatorRoleOf"
                 }, 
                 "object": {
-                    "literal": true, 
+                    "literal": false,
                     "enum": "ufid"
                 }
             }
@@ -83,6 +85,7 @@
                 }, 
                 "object": {
                     "filter": "improve_date",
+                    "datatype": "xsd:datetime",
                     "literal": true
                 }
             }
@@ -94,7 +97,8 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 }, 
                 "object": {
-                    "filter": "improve_title", 
+                    "filter": "improve_title",
+                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
@@ -106,7 +110,8 @@
                     "ref": "http://vivoweb.org/ontology/core#sponsorAwardId"
                 }, 
                 "object": {
-                    "filter": "improve_sponsor_award_id", 
+                    "filter": "improve_sponsor_award_id",
+                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
@@ -129,7 +134,7 @@
                     "ref": "http://vivoweb.org/ontology/core#investigatorRoleOf"
                 }, 
                 "object": {
-                    "literal": true, 
+                    "literal": false,
                     "enum": "ufid"
                 }
             }
@@ -141,7 +146,7 @@
                     "ref": "http://vivoweb.org/ontology/core#grantAwardedBy"
                 }, 
                 "object": {
-                    "literal": true, 
+                    "literal": false,
                     "enum": "sponsorid"
                 }
             }
@@ -153,7 +158,8 @@
                     "ref": "http://vivoweb.org/ontology/core#localAwardId"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ], 
@@ -175,7 +181,7 @@
                     "ref": "http://vivoweb.org/ontology/core#principalInvestigatorRoleOf"
                 }, 
                 "object": {
-                    "literal": true, 
+                    "literal": false,
                     "enum": "ufid"
                 }
             }
@@ -210,6 +216,7 @@
                 }, 
                 "object": {
                     "filter": "improve_date",
+                    "datatype": "xsd:datetime",
                     "literal": true
                 }
             }
@@ -221,7 +228,8 @@
                     "ref": "http://vivoweb.org/ontology/core#totalAwardAmount"
                 }, 
                 "object": {
-                    "filter": "improve_dollar_amount", 
+                    "filter": "improve_dollar_amount",
+                     "datatype": "xsd:decimal",
                     "literal": true
                 }
             }
