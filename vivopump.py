@@ -166,9 +166,28 @@ def read_update_def(filename):
                 current_object = cast_to_rdflib(current_object)
         return current_object
 
+    def add_order(a, b):
+        """
+        :param a: update_def
+        :param b: string of input file
+        :return a new update_def dictionary with an order list in the entity def
+        """
+        defn = a
+        loc = []
+        var_list = []
+        for var in defn['column_defs'].keys():
+            var_list.append(var)
+            loc.append(b.find(var + '":'))
+        seq = sorted(loc)
+        order = [var_list[seq.index(v)] for v in loc]
+        defn['entity_def']['order'] = order
+        return defn
+
     import json
-    in_file = open(filename, "r")
-    update_def = fixit(json.load(in_file))
+    with open(filename, "r") as my_file:
+        data = my_file.read()
+        update_def = fixit(json.loads(data))
+        update_def = add_order(update_def, data)
     return update_def
 
 

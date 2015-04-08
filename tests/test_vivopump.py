@@ -27,8 +27,11 @@ class NewUriTestCase(unittest.TestCase):
 class ReadUpdateDefTestCase(unittest.TestCase):
     def test_read_normal_def(self):
         update_def = read_update_def('data/grant_def.json')
-        print update_def
         self.assertTrue(update_def.keys() == ['entity_def', 'column_defs'])
+
+    def test_update_def_order(self):
+        update_def = read_update_def('data/grant_def.json')
+        self.assertEqual(update_def['entity_def']['order'][0:4], [u'deptid', u'direct_costs', u'cois', u'end_date'])
 
 
 class MakeUpdateQueryTestCase(unittest.TestCase):
