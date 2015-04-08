@@ -132,11 +132,8 @@ def read_update_def(filename):
         """
         from rdflib import URIRef
         if isinstance(current_object, dict):
-            for k, t in current_object.items():
-                if isinstance(t, basestring) and t.startswith('http://'):
-                    current_object[k] = URIRef(t)
-                else:
-                    current_object[k] = fixit(current_object[k])
+            for k in current_object.keys():
+                current_object[k] = fixit(current_object[k])
         elif isinstance(current_object, list):
             for i in range(0, len(current_object)):
                 current_object[i] = fixit(current_object[i])
