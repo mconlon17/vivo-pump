@@ -144,8 +144,6 @@ class Pump(object):
         from rdflib import URIRef, RDF
         from vivopump import new_uri
 
-        # TODO: Support lookup by name or uri -- medium
-
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
 
