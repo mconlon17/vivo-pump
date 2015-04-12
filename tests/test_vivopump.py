@@ -79,7 +79,7 @@ class VIVOQueryTestCase(unittest.TestCase):
     def test_vivo_query(self):
         result = vivo_query("""
         SELECT ?label
-        WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
+        WHERE { <http://vivo.school.edu/individual/n1133> rdfs:label ?label }
         """, debug=True)
         print result
         self.assertTrue(len(result) > 0)

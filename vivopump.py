@@ -8,8 +8,9 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
 VIVO_URI_PREFIX = "http://vivo.ufl.edu/individual/"
-VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
+#VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
 #VIVO_QUERY_URI = "http://localhost:5820/vivo/query"
+VIVO_QUERY_URI = 'http://localhost:8080/vivo/api/sparqlQuery'
 
 import csv
 import urllib
@@ -358,7 +359,9 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI, debug=False):
         print "after setQuery"
         print new_query
     sparql.setReturnFormat(JSON)
-    sparql.setCredentials("anonymous", "anon")
+    sparql.addParameter("email", "vivo_root@school.edu")
+    sparql.addParameter("password", "v;bisons")
+    sparql.setCredentials("vivo_root@school.edu", "v;bisons")
     results = sparql.query().convert()
     return results
 
