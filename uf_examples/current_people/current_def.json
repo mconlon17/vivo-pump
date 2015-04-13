@@ -1,0 +1,33 @@
+{
+    "entity_def": {
+        "order_by": "ufid",
+        "entity_sparql": "?uri a uf:UFEntity .",
+        "type": "http://xmlns.com/foaf/0.1/Person"
+    }, 
+    "column_defs": {
+        "ufid": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/ufid"
+                }, 
+                "object": {
+                    "literal": true
+                    "datatype": "xsd:string",
+                }
+            }
+        ],
+        "current": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "current_enum.txt"
+                }
+            }
+        ]
+    }
+}

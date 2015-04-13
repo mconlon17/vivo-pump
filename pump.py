@@ -625,7 +625,7 @@ def load_enum(update_def):
     The two columns in the tab delimited input file must be called "short" and "vivo".  "vivo" is the value to put in
     vivo (update) or get from vivo.  short is the human usable short form.
 
-    The input file name must be named enum_name + '.txt', where enum_name appears as the 'enum' value in update_def
+    The input file name appears as the 'enum' value in update_def
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
