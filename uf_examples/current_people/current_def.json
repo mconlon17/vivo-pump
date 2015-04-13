@@ -12,8 +12,8 @@
                     "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/ufid"
                 }, 
                 "object": {
-                    "literal": true
-                    "datatype": "xsd:string",
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ],
