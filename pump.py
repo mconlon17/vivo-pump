@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.60"
+__version__ = "0.61"
 
 from datetime import datetime
 from json import dumps
@@ -113,11 +113,12 @@ class Pump(object):
         if self.update_data is None:  # Test for injection
             self.update_data = read_csv(self.out_filename, delimiter='\t')
 
-        # Narrow the update_def to include only columns that appears in the update_data
+        # Narrow the update_def to include only columns that appear in the update_data
 
         new_update_columns = {}
+        print self.update_data
         for name, path in self.update_def['column_defs'].items():
-            if name in self.update_data['1'].keys():
+            if name in self.update_data[1].keys():
                 new_update_columns[name] = path
         self.update_def['column_defs'] = new_update_columns
 
@@ -324,7 +325,7 @@ def do_get(update_def, enum, filename, do_filter=True, debug=True):
     query = make_get_query(update_def)
     if debug:
         print query
-    result_set = vivo_query(query)
+    result_set = vivo_query(query, debug=debug)
     data = make_get_data(update_def, result_set)
 
     # Write out the file
@@ -410,9 +411,8 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     if step_def['predicate']['single'] and len(column_values) > 1:
         raise InvalidDataException(str(row) + str(column_name) +
                                    'Predicate is single-valued, multiple values in source.')
-    if '' in column_values and len(column_values) > 1:
-        raise InvalidDataException(str(row) + str(column_name) +
-                                   'Blank element in multi-valued predicate set')
+    while '' in column_values:
+        column_values.remove('')
     if 'None' in column_values and len(column_values) > 1:
         raise InvalidDataException(str(row) + str(column_name) +
                                    'None value in multi-valued predicate set')
@@ -630,13 +630,14 @@ def load_enum(update_def):
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
     from vivopump import read_csv
-    import os
+#    import os
     enum = {}
     for path in update_def['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
                 enum_filename = step['object']['enum']
-                enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
+                enum_name = enum_filename
+#                enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
                 if enum_name not in enum:
                     enum[enum_name] = {}
                     enum[enum_name]['get'] = {}

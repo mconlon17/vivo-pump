@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "order_by": "ufid",
-        "entity_sparql": "?uri a uf:UFEntity .",
+        "entity_sparql": "?uri a uf:UFEntity . ?uri a foaf:Person .",
         "type": "http://xmlns.com/foaf/0.1/Person"
     }, 
     "column_defs": {
@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/ufid"
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#ufid"
                 }, 
                 "object": {
                     "literal": true,
@@ -20,12 +20,12 @@
         "current": [
             {
                 "predicate": {
-                    "single": true,
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity"
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
                 },
                 "object": {
                     "literal": false,
-                    "enum": "current_enum.txt"
+                    "enum": "remove_current_enum.txt"
                 }
             }
         ]

@@ -17,7 +17,6 @@
 
 """
 
-
 # TODO: Use ConfigParser to read a config file of parameters -- medium
 
 __author__ = "Michael Conlon"
@@ -49,9 +48,8 @@ if args.action == 'get':
     n_rows = p.get(args.filename)
     print datetime.now(), n_rows, "rows in", args.filename
 elif args.action == 'update':
-    p.verbose = args.verbose
     [n_add, n_sub] = p.update(args.filename)
-    print datetime.now(), n_add, 'triples to add', n_sub, 'triples to sub'
+    print datetime.now(), len(n_add), 'triples to add', len(n_sub), 'triples to sub'
 elif args.action == 'summarize':
     print p.summarize()
 elif args.action == 'serialize':
