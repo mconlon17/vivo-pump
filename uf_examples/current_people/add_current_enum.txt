@@ -1,0 +1,2 @@
+vivo	short
+http://vivo.school.edu/ontology/uf-extension#UFEntity	http://vivo.school.edu/ontology/uf-extension#UFEntity;http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity

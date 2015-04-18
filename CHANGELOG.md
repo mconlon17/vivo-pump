@@ -58,4 +58,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-04-07** 0.60 read_update_def recursion simplified.  cast_to_rdflib added to read_update_def to support rdflib datatypes.  data type test cases pass.  Order of columns in def file is now preserved in the update_def.  New test case for update_def order checking passes.  Order now used in get.
 * **2015-04-09** Planned feature removed from the plan.  Had thought that the pump would support look-up by keys other than URI.  Now see no reason for this additional complexity.  When an update is performed with no URI, a URI is creagted and the row is added.  When get is run, URIs are fetched.  All is good.
 * **2015-04-12** vivopump.py now supports use of the VIVO API for sparql query.
-* **2015-04-18** 0.61 Null values in source data removed prior to update.  Fixed bug in enum filename.  uf_examples remove_current working as expected.
+* **2015-04-18** 0.61 Null values in source data removed prior to update.  Fixed bug in enum filename.  uf_examples remove_current working as expected.  Work in progress on add_current
