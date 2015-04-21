@@ -17,16 +17,21 @@
 
 """
 
-# TODO: Use ConfigParser to read a config file of parameters -- medium
-
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.02"
+__version__ = "0.03"
 
 from datetime import datetime
 import argparse
+import ConfigParser
 from pump import Pump
+
+config = ConfigParser.ConfigParser()
+config.read('sv.cfg')
+for section in config.sections():
+    for item, val in config.items(section):
+        print section, item, val
 
 parser = argparse.ArgumentParser()
 parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
