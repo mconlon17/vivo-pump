@@ -1,0 +1,154 @@
+{
+    "entity_def": {
+        "order_by": "ufid",
+        "entity_sparql": "?uri a uf:UFEntity . ?uri a foaf:Person . ?uri uf:ufid ?ufid .",
+        "type": "http://xmlns.com/foaf/0.1/Person"
+    }, 
+    "column_defs": {
+        "deptid": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                },
+                "object": {
+                    "filter": "improve_deptid",
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum": "deptid.txt"
+                }
+            }
+        ],
+        "ufid": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#ufid"
+                },
+                "object": {
+                    "literal": true,
+                    "filter": "improve_ufid",
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "job_code": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "add_current_enum.txt"
+                }
+            }
+        ]
+        "sal_admin_plan": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "add_current_enum.txt"
+                }
+            }
+        ],
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval",
+                    "name": "position_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#start"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://vivoweb.org/ontology/core#DateTimeValue",
+                    "name": "start"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                },
+                "object": {
+                    "filter": "improve_date",
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ],
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval",
+                    "name": "award_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#end"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://vivoweb.org/ontology/core#DateTimeValue",
+                    "name": "end"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                },
+                "object": {
+                    "filter": "improve_date",
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ],
+        "job_code_description": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "add_current_enum.txt"
+                }
+            }
+        ],
+        "hr_position": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "add_current_enum.txt"
+                }
+            }
+        ]
+    }
+}
