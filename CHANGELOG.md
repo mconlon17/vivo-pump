@@ -62,3 +62,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-04-19** Start work on ConfigParser for sv.py.  All options specified.  Too easy.
 * **2015-04-22** Begin work on person ingest.  Too hard.  Without position_data.csv
 * **2015-04-29** Work on make_person_update_data in uf_examples.
+* **2015-05-01** Add salary plan enum to uf_examples

@@ -33,12 +33,9 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.01"
+__version__ = "0.02"
 
-from datetime import datetime
-import argparse
-import ConfigParser
-from pump import Pump
+from vivopump import vivo_query, read_csv
 
 
 def report_error(s):
@@ -52,13 +49,25 @@ def report_error(s):
 
 
 def get_vivo_ufid():
-    l = []
-    return l
+    """
+    Query VIVO and return a list of all the ufid found in VIVO
+    :return: list of UFID in VIVO
+    """
+    query = "select ?uri ?ufid where {?uri uf:ufid ?ufid .}"
+    a = vivo_query(query)
+    return [x['ufid']['value'] for x in a['results']['bindings']]
 
 
-def get_pay_ufid():
-    l = []
-    return l
+def get_pay_ufid(filename, delimiter='|'):
+    """
+    Read the current position data and return a list of all the UFID found in it
+    :param filename: name of file containing position data
+    :param delimiter: delimiter used in the position data file
+    :return: list of UFID in position data
+    """
+    vivo_plans = ()
+    pay_data = read_csv(filename, delimiter=delimiter)
+    return [pay_data[x]['UFID'] for x in pay_data if pay_data[x]['SAL_ADMIN_PLAN'] in vivo_plans]
 
 
 def get_dir_ufid():
