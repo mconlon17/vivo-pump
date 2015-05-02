@@ -58,15 +58,18 @@ def get_vivo_ufid():
     return [x['ufid']['value'] for x in a['results']['bindings']]
 
 
-def get_pay_ufid(filename, delimiter='|'):
+def get_pay_ufid(filename, plan_name, delimiter='|'):
     """
     Read the current position data and return a list of all the UFID found in it
     :param filename: name of file containing position data
     :param delimiter: delimiter used in the position data file
     :return: list of UFID in position data
     """
-    vivo_plans = ()
+    plan_data = read_csv(plan_name, delimiter='\t')
+    vivo_plans = [plan_data[x]['short'] for x in plan_data if plan_data[x]['vivo'] != "None"]
+    print vivo_plans
     pay_data = read_csv(filename, delimiter=delimiter)
+    print len(pay_data)
     return [pay_data[x]['UFID'] for x in pay_data if pay_data[x]['SAL_ADMIN_PLAN'] in vivo_plans]
 
 
@@ -82,9 +85,12 @@ def get_dir_data():
 # get data from each of the three sources
 
 vivo_ufid = get_vivo_ufid()  # includes UF people with ufid
-pay_ufid = get_pay_ufid()  # includes only those who qualify for VIVO
-dir_ufid = get_dir_ufid()  # includes all people with ufid and contact data (big)
-dir_data = get_dir_data()  # includes all contact data for UF (very, very big)
+print "VIVO UFID", vivo_ufid
+pay_ufid = get_pay_ufid('position_data.csv',
+                        'salary_plan_enum.txt')  # includes only those who qualify for VIVO
+print "PAY UFID", len(pay_ufid)
+# dir_ufid = get_dir_ufid()  # includes all people with ufid and contact data (big)
+# dir_data = get_dir_data()  # includes all contact data for UF (very, very big)
 
 for ufid in vivo_ufid + pay_ufid:
     case = 7
@@ -95,7 +101,7 @@ for ufid in vivo_ufid + pay_ufid:
     if ufid not in dir_ufid:
         case -= 1
 
-    if case == 7:
+    if case == 7:#
         # Existing current person, update contact
         row = dir_data[ufid]
         row['current'] = True
@@ -118,6 +124,7 @@ for ufid in vivo_ufid + pay_ufid:
         report_error('No contact data for ' + ufid)
     else:
         pass
+    print ufid, case
 
 
 

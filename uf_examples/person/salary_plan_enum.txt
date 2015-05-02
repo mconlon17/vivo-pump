@@ -1,40 +1,41 @@
-        'CPFI': 'postdoc',
-        'CTSY': 'courtesy-faculty',
-        'FA09': 'faculty',
-        'FA9M': 'clinical-faculty',
-        'FA10': 'faculty',
-        'FA12': 'faculty',
-        'FACM': 'clinical-faculty',
-        'FAPD': 'postdoc',
-        'FASU': 'faculty',
-        'FELL': None, # Fellowship, lump sum payment only
-        'FWSP': None, # student-assistant
-        'GA09': None, # graduate-assistant
-        'GA12': None, # graduate-assistant
-        'GASU': None, # graduate-assistant
-        'HOUS': 'housestaff',
-        'ISCR': None, # Scholarship, lump sum payment only
-        'OF09': 'temp-faculty',
-        'OF12': 'temp-faculty',
-        'OFSU': 'temp-faculty',
-        'OPSE': None, # OPS
-        'OPSN': None, # OPS
-        'STAS': None, # student-assistant
-        'STBW': None, # student-assistant
-        'TA09': 'non-academic',
-        'TA10': 'non-academic',
-        'TA12': 'non-academic',
-        'TASU': 'non-academic',
-        'TU1E': 'non-academic',
-        'TU2E': 'non-academic',
-        'TU9E': 'non-academic',
-        'TUSE': 'non-academic',
-        'TU1N': None, # TEAMS Hourly
-        'TU2N': None, # TEAMS Hourly
-        'TU9N': None, # TEAMS Hourly
-        'TUSN': None, # TEAMS Hourly
-        'US1N': None, # USPS
-        'US2N': None, # USPS
-        'US9N': None, # USPS
-        'USSN': None, # USPS
-        'US2E': 'non-academic', # USPS Exempt
+short	vivo
+CPFI	http://vivoweb.org/ontology/core#Postdoc
+CTSY	http://vivo.school.edu/ontology/uf-extension#CourtesyFaculty
+FA09	http://vivoweb.org/ontology/core#FacultyMember
+FA9M	http://vivo.school.edu/ontology/ufextensions#ClinincalFaculty
+FA10	http://vivoweb.org/ontology/core#FacultyMember
+FA12	http://vivoweb.org/ontology/core#FacultyMember
+FACM	http://vivo.school.edu/ontology/ufextensions#ClinincalFaculty
+FAPD	http://vivoweb.org/ontology/core#Postdoc
+FASU	http://vivoweb.org/ontology/core#FacultyMember
+FELL	None
+FWSP	None
+GA09	None
+GA12	None
+GASU	None
+HOUS	http://vivo.school.edu/ontology/ufextensions#Housestaff
+ISCR	None
+OF09	http://vivo.school.edu/ontology/ufextensions#TemporaryFaculty
+OF12	http://vivo.school.edu/ontology/ufextensions#TemporaryFaculty
+OFSU	http://vivo.school.edu/ontology/ufextensions#TemporaryFaculty
+OPSE	None
+OPSN	None
+STAS	None
+STBW	None
+TA09	http://vivoweb.org/ontology/core#NonAcademic
+TA10	http://vivoweb.org/ontology/core#NonAcademic
+TA12	http://vivoweb.org/ontology/core#NonAcademic
+TASU	http://vivoweb.org/ontology/core#NonAcademic
+TU1E	http://vivoweb.org/ontology/core#NonAcademic
+TU2E	http://vivoweb.org/ontology/core#NonAcademic
+TU9E	http://vivoweb.org/ontology/core#NonAcademic
+TUSE	http://vivoweb.org/ontology/core#NonAcademic
+TU1N	None 
+TU2N	None 
+TU9N	None 
+TUSN	None 
+US1N	None 
+US2N	None 
+US9N	None 
+USSN	None 
+US2E	http://vivoweb.org/ontology/core#NonAcademic
