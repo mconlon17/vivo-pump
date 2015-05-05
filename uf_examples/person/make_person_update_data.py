@@ -36,6 +36,8 @@ __license__ = "New BSD License"
 __version__ = "0.02"
 
 from vivopump import vivo_query, read_csv
+import shelve
+
 
 
 def report_error(s):
@@ -73,58 +75,58 @@ def get_pay_ufid(filename, plan_name, delimiter='|'):
     return [pay_data[x]['UFID'] for x in pay_data if pay_data[x]['SAL_ADMIN_PLAN'] in vivo_plans]
 
 
-def get_dir_ufid():
-    l = []
-    return l
-
-
-def get_dir_data():
-    data = []
-    return data
-
+# Main Starts here
+#
 # get data from each of the three sources
 
+contact = shelve.open('contact.db')
+print "Contact data has ", len(contact), "entries"
+ufid = "84808900"
+if ufid in contact.keys():
+    print contact[ufid]
 vivo_ufid = get_vivo_ufid()  # includes UF people with ufid
 print "VIVO UFID", vivo_ufid
 pay_ufid = get_pay_ufid('position_data.csv',
                         'salary_plan_enum.txt')  # includes only those who qualify for VIVO
 print "PAY UFID", len(pay_ufid)
-# dir_ufid = get_dir_ufid()  # includes all people with ufid and contact data (big)
-# dir_data = get_dir_data()  # includes all contact data for UF (very, very big)
 
 for ufid in vivo_ufid + pay_ufid:
+    row = {}
     case = 7
     if ufid not in vivo_ufid:
         case -= 4
     if ufid not in pay_ufid:
         case -= 2
-    if ufid not in dir_ufid:
+    if ufid not in contact.keys():
         case -= 1
 
-    if case == 7:#
+    if case == 7:
         # Existing current person, update contact
-        row = dir_data[ufid]
+        row = contact[ufid]
         row['current'] = True
     elif case == 6:
         # report error
-        report_error('No contact data for ' + ufid)
+        report_error('Person in VIVO and pay list.  No contact data for ' + ufid)
     elif case == 5:
         # not current, update contact
-        row = dir_data[ufid]
+        row = contact[ufid]
         row['current'] = False
     elif case == 4:
         # report error
-        report_error('No contact data for ' + ufid)
+        report_error('Person in VIVO.  No contact data ' + ufid)
     elif case == 3:
         # New current person.  Add to VIVO
-        row = dir_data[ufid]
+        row = contact[ufid]
         row['current'] = True
     elif case == 2:
         # report error.
-        report_error('No contact data for ' + ufid)
+        # report_error('Person on pay list.  No contact data for ' + ufid)
+        pass
     else:
         pass
-    print ufid, case
+    if row != {}:
+        print ufid, case, row
+contact.close()
 
 
 
