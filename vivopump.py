@@ -71,18 +71,17 @@ def read_csv(filename, skip=True, delimiter="|"):
 
     CSV files read by this function follow these conventions:
     --  use delimiter as a separator. Defaults to vertical bar.
-    --  have a first row that contains column headings.  Columns headings
-        must be known to VIVO, typically in the form prefix:name
+    --  have a first row that contains column headings.
     --  all elements must have values.  To specify a missing value, use
         the string "None" or "NULL" between separators, that is |None| or |NULL|
     --  leading and trailing whitespace in values is ignored.  | The  | will be
         read as "The"
     -- if skip=True, rows with too many or too few data elements are skipped.
-       if Skip=False, a RowError is thrown
+       if skip=False, a RowError is thrown
 
     CSV files processed by read_csv will be returned as a dictionary of
-    dictionaries, one dictionary per row with a name of and an
-    integer value for the row number of data.
+    dictionaries, one dictionary per row keyed by an integer row number.  This supports
+    maintaining the order of the data input, which is important for some applications
     """
 
     class RowError(Exception):
@@ -115,6 +114,27 @@ def read_csv(filename, skip=True, delimiter="|"):
         else:
             pass  # row has wrong number of columns and skip is True
     return data
+
+
+def write_csv(filename, data, delimiter='|'):
+    """
+    Given a filename, a data structure as produced by read_csv and an optional delimiter, write a file
+    that can be read by read_csv
+
+    The data structure is a dictionary keyed by an integer of "row numbers" preserving the natural
+    order of the data.  Each element is in turn a dictionary of name value pairs.  All values are
+    strings
+
+    :param filename: name of file to write
+    :param data: data structure to be written to the file
+    :param delimiter: field delimiter.  Popular choices are '|', '\t' and ','
+    :return:
+    """
+    with open(filename, 'w') as f:
+        f.write(delimiter.join(data[1].keys()) + '\n')
+        for key in sorted(data.keys()):
+            f.write(delimiter.join(data[key].values()) + '\n')
+
 
 
 def read_update_def(filename):

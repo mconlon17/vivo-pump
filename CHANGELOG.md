@@ -65,3 +65,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-05-01** Add salary plan enum to uf_examples
 * **2015-05-02** Progress on make_person_update_data
 * **2015-05-05** make_person_update_data now using contact shelve.  All cases working as expected.
+* **2015-05-06** write_csv added to vivopump.  Test case added to test_vivopump.  

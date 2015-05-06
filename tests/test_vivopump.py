@@ -9,7 +9,8 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
 import unittest
-from vivopump import new_uri, read_csv, vivo_query, write_update_def, repair_email, repair_phone_number, comma_space, \
+from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, repair_email, repair_phone_number, \
+    comma_space, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 from pump import Pump
@@ -70,9 +71,17 @@ class ReadCSVTestCase(unittest.TestCase):
         self.assertTrue(data.keys() == range(1, 74))
 
     def test_read_csv_minimal(self):
-        data = read_csv("data/minimal.txt", delimiter='\t')
-        data_string = "{1: {u'overview': u'None', u'uri': u'<http://vivo.ufl.edu/individual/n7023304>'}}"
+        data = read_csv("data/minimal.txt", delimiter='|')
+        data_string = "{1: {u'overview': u'None', u'uri': u'http://vivo.ufl.edu/individual/n7023304'}}"
         self.assertEqual(data_string, str(data))
+
+
+class WriteCSVTestCase(unittest.TestCase):
+    def test_write_csv(self):
+        data = read_csv("data/buildings.txt", delimiter='\t')
+        write_csv("data/buildings_out.txt", data, delimiter='\t')
+        data2 = read_csv("data/buildings.txt", delimiter='\t')
+        self.assertTrue(data == data2)
 
 
 class VIVOQueryTestCase(unittest.TestCase):
