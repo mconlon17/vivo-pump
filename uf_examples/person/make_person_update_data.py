@@ -35,7 +35,7 @@ __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
-from vivopump import vivo_query, read_csv
+from vivopump import vivo_query, read_csv, write_csv
 import shelve
 
 
@@ -90,34 +90,40 @@ pay_ufid = get_pay_ufid('position_data.csv',
                         'salary_plan_enum.txt')  # includes only those who qualify for VIVO
 print "PAY UFID", len(pay_ufid)
 
+row_number = 0  # For output, count the umber of rows in the resulting update csv
+all_row = 0
+person_update_data = {}
+contact_keys = contact.keys()
+
 for ufid in vivo_ufid + pay_ufid:
+    all_row += 1
     row = {}
     case = 7
     if ufid not in vivo_ufid:
         case -= 4
     if ufid not in pay_ufid:
         case -= 2
-    if ufid not in contact.keys():
+    if ufid not in contact_keys:
         case -= 1
 
     if case == 7:
         # Existing current person, update contact
         row = contact[ufid]
-        row['current'] = True
+        row['current'] = "yes"
     elif case == 6:
         # report error
         report_error('Person in VIVO and pay list.  No contact data for ' + ufid)
     elif case == 5:
         # not current, update contact
         row = contact[ufid]
-        row['current'] = False
+        row['current'] = "no"
     elif case == 4:
         # report error
         report_error('Person in VIVO.  No contact data ' + ufid)
     elif case == 3:
         # New current person.  Add to VIVO
         row = contact[ufid]
-        row['current'] = True
+        row['current'] = "yes"
     elif case == 2:
         # report error.
         # report_error('Person on pay list.  No contact data for ' + ufid)
@@ -125,7 +131,11 @@ for ufid in vivo_ufid + pay_ufid:
     else:
         pass
     if row != {}:
-        print ufid, case, row
+        row_number += 1
+        person_update_data[row_number] = row
+    if all_row % 100 == 0:
+        print all_row, row_number, case, row
+write_csv('uf_person_data.txt', person_update_data, delimiter='\t')
 contact.close()
 
 

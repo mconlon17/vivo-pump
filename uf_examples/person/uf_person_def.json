@@ -1,0 +1,104 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a vivo:FacultyMember . ?uri a uf:UFEntity .",
+        "type": "http://xmlns.com/foaf/0.1/Person"
+    }, 
+    "column_defs": {
+        "remove": [],
+        "deptid": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/homeDept"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://xmlns.com/foaf/0.1/Organization", 
+                    "name": "homedept"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/deptID"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "photo": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
+                    "name": "photouri"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "types": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                    "include": [
+                        "thing",
+                        "agent",
+                        "person"
+                    ]
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "data/people_types.txt"
+                }
+            }
+        ],
+        "research_areas": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#hasResearchArea"
+                },
+                "object": {
+                    "literal": false
+                }
+            }
+        ],
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#preferredTitle"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

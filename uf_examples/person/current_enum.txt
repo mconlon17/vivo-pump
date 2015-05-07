@@ -1,0 +1,3 @@
+short	vivo
+yes	http://vivo.school.edu/ontology/uf-extensions#UFCurrentEntity
+no	None
