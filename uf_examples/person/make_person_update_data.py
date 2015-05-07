@@ -63,6 +63,9 @@ def get_vivo_ufid():
 def get_pay_ufid(filename, plan_name, delimiter='|'):
     """
     Read the current position data and return a list of all the UFID found in it
+        with qualifying pay plans
+        exclude lump sum payments
+
     :param filename: name of file containing position data
     :param delimiter: delimiter used in the position data file
     :return: list of UFID in position data
@@ -72,7 +75,8 @@ def get_pay_ufid(filename, plan_name, delimiter='|'):
     print vivo_plans
     pay_data = read_csv(filename, delimiter=delimiter)
     print len(pay_data)
-    return [pay_data[x]['UFID'] for x in pay_data if pay_data[x]['SAL_ADMIN_PLAN'] in vivo_plans]
+    return [pay_data[x]['UFID'] for x in pay_data if pay_data[x]['SAL_ADMIN_PLAN'] in vivo_plans and
+            pay_data[x]['JOBCODE_DESCRIPTION'] != 'ACADEMIC LUMP SUM PAYMENT']
 
 
 # Main Starts here

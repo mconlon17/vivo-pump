@@ -2,7 +2,6 @@ FIRST_NAME	LAST_NAME	MIDDLE_NAME	UFID	GATORLINK	NAME_SUFFIX	WORKINGTITLE	current
 Michael	Conlon	NULL	84808900	mconlon	NULL	Co-director	yes	29680100	mconlon@ufl.edu	CONLON,MIKE	3522738872	Dr	NULL
 Lingxiao	Zhang	NULL	86146920	lingxiao007	NULL		yes	16900000	lingxiao.zhang@ars.usda.gov	ZHANG,LINGXIAO	5619245227	Mr	NULL
 Abdol	Chini	Reza	83191930	chini	NULL	PROFESSOR	yes	15030000	chini@ufl.edu	CHINI,ABDOL REZA	3522731165	Dr	NULL
-Rick	Smith	L	87647670	rs	NULL	ASO PROFESSOR	yes	16320000	rs@ufl.edu	SMITH,RICK L	3522942334	Dr	NULL
 Tatiana	Renz	Yevgenevna	84145447	trenz	NULL	Lecturer	yes	16860100	trenz@ufl.edu	RENZ,TATIANA	3522733782	NULL	NULL
 Craig	Carroll	NULL	80959038	cecarroll	NULL		yes	23010200	craig.carroll@jou.ufl.edu	CARROLL,CRAIG	NULL	NULL	NULL
 Kristen	McMaster	M	84608450	gatorkmm	NULL	OB/GYN Resident	yes	30070000	kristen.mcmaster@jax.ufl.edu	MCMASTER,KRISTEN MARIE MD	9043938557	Dr	NULL
@@ -13,7 +12,6 @@ Martine	Horrell	Gallant	85500869	thorrell	NULL	UF Health IT Training Coordinator
 Philip	Hill	J	80015430	philhill	NULL	IT Expert	yes	19220200	philhill@ufl.edu	HILL,PHIL	3522943092	Mr	NULL
 Peggy	Myers	C	80702430	pcmyers	NULL	Stu Aff Crd - Sr Asst Dir	yes	06010000	pcmyers@ufl.edu	MYERS,PEGGY C	3522943258	Ms	NULL
 Arthur	Anker	NULL	87101469	ankerart	NULL	Researcher	yes	56021400	aanker@flmnh.ufl.edu	ANKER,ARTHUR	NULL	NULL	NULL
-Matthew	Winter	D	83068550	mdwinter	NULL	Assistant Professor	yes	28090000	mdwinter@ufl.edu	WINTER,MATTHEW D	3522944462	NULL	NULL
 Omar	Andujar	NULL	82168309	omarandujar	NULL	Director of OYCS	yes	07700100	omara@housing.ufl.edu	ANDUJAR,OMAR	3523922171	NULL	NULL
 Katherine	Casey-Sawicki	Ann	87494170	ksawicki	NULL	Editor	yes	29200000	sawick@shands.ufl.edu	CASEY-SAWICKI,KATHERINE ANN	352265068087821	NULL	NULL
 Patricia	Matias	NULL	81813491	NULL	NULL		yes	34170200	patymagi@hotmail.com	MATIAS,PATRICIA	NULL	NULL	NULL
@@ -24,38 +22,31 @@ Ying	Zhang	NULL	83464099	yingz	NULL		yes	14500000	yingz@ufl.edu	ZHANG,YING	35239
 Doosup	Kim	NULL	84831379	doosup	NULL		yes	19020000	doosup@ufl.edu	KIM,DOOSUP	NULL	NULL	NULL
 Abdulaziz	Hakeem	F	84957104	afh4000	NULL		yes	34160200	AHakeem@dental.ufl.edu	HAKEEM,ABDULAZIZ	3522222722	NULL	NULL
 Larry	Fowler	J	84441046	ljfowler	NULL	Clinical Professor	yes	29080100	ljfowler@pathology.ufl.edu	FOWLER,LARRY J	3526279240	Dr	NULL
-Jonathan	Mueller	A	89959780	jon.mueller	NULL	OPS TECHNICAL	yes	23010200	NULL	MUELLER,JONATHAN A	3528460129	NULL	NULL
 Mary	Clark	C	84332104	marycclark	NULL	Adj Leturer	yes	18080000	clarkmh@earthlink.net	CLARK,MARY C	3523920701	NULL	NULL
 Mary	Fukuyama	A	86545600	fukuyama	NULL	CLIN PROFESSOR	yes	04030000	fukuyama@ufl.edu	FUKUYAMA,MARY A	3523921575	Dr	NULL
 John	Duff	Andrew	85206180	jduff	NULL	Professor & School Director	yes	13030100	jduff@arts.ufl.edu	DUFF,JOHN A	3523928506	Dr	NULL
 Nancy	Livesay	Alice	88921481	nlivesay	NULL		yes	18050000	nlivesay@cox.net	LIVESAY,NANCY ALICE	NULL	NULL	NULL
 Fletcher	Baldwin	N	87547990	baldwinf	JR	PROFESSOR	yes	16660000	baldwin.f@law.ufl.edu	BALDWIN,FLETCHER N,JR	3522730950	Dr	NULL
-William	Tilson	L	89380250	wtropic	NULL	PROF & PRG DIR	yes	15020000	wtropic@ufl.edu	TILSON,WILLIAM L	3523924836311	Mr	NULL
 Alfred	Marrin	J	82761430	amarrin	Jr	IT Expert	yes	27010715	NULL	MARRIN,AL	3522735040	Mr	352-2735035
 Andrew	Selepak	G	84909129	aselepak	NULL		yes	23030000	aselepak@ufl.edu	SELEPAK,ANDREW G	3523921502	NULL	NULL
 Allison	Mcfaul	M	80066638	amcfaul	NULL		yes	ST010000	amcfaul@ufl.edu	MCFAUL,ALLISON M	3522735871	NULL	NULL
-Mark	Rush	NULL	80214280	markrush	NULL	PROFESSOR	yes	16030100	mark.rush@warrington.ufl.edu	RUSH,MARK	3523920318	Dr	NULL
 Lauren	Solberg	B	89676450	lbsolberg	NULL	Assistant Professor	yes	29160300	lbsolberg@ufl.edu	SOLBERG,LAUREN B	3522735142	NULL	NULL
 Stephen	Powell	Joseph	85453510	powells	NULL	PRG DIR & LECT	yes	24010300	powells@law.ufl.edu	POWELL,STEPHEN JOSEPH	3522730857	Mr	352-3921457
-Clarence	Gravlee	C	84215100	cgravlee	IV	Assistant Professor	yes	16040100	cgravlee@ufl.edu	GRAVLEE,CLARENCE C,IV	3523922253	Mr	NULL
 Vincent	Sposato	J	83117145	vsposato	NULL	IT Expert, Sr. Software Engineer	yes	32060000	vsposato@ufl.edu	SPOSATO,VINCENT J	352294527445274	Mr	NULL
 April	McLaughlin	Lelani	83512864	aprilmac	NULL		yes	30090000	april.mclaughlin@jax.ufl.edu	MCLAUGHLIN,APRIL LELANI	9046330300	NULL	NULL
 Clara	Sotelo	Eugenia	88212730	wandy	NULL	Lecturer	yes	16880000	wandy@ufl.edu	SOTELO,CLARA EUGENIA	3522733752	Ms	NULL
 Erica	Jones	J	80694040	ericajjones	NULL	CRD CLINICAL PROGAMS 2	yes	29090500	ericajjones@ufl.edu	JONES,ERICA JEAN	3523340282	NULL	NULL
 David	Suchman	I	83649570	suchman	NULL	PROFESSOR	yes	04030000	suchman@ufl.edu	SUCHMAN,DAVID I	352392157534874	Dr	NULL
 Jianga	Shang	NULL	80977763	jgshang	NULL		yes	19050000	jgshang@cug.edu.cn	SHANG,JIANGA	NULL	NULL	NULL
-Bernadette	Daniels	Belgado	88739870	belgado	NULL	CLIN AST PROF	yes	32080200	bernadette.belgado@jax.ufl.edu	DANIELS,BERNADETTE BELGADO	9042446399	Dr	NULL
 Merrill	Stass-Isern	NULL	83479626	NULL	NULL		yes	30150000	NULL	STASS-ISERN,MERRILL	9042449353	Dr	NULL
 James	Cilek	NULL	80679841	jec123123	NULL	Courstesy Faculty	yes	60140000	NULL	CILEK,JAMES	NULL	NULL	NULL
 Thomas	Gordon	Gala	84936079	tom.gordon	NULL		yes	19010400	tom.gordon@eng.ufl.edu	GORDON,THOMAS G	3523921688	NULL	NULL
 Tameray	Brazeal	S	80473940	tbrazeal	NULL	Student Services Coordinator	yes	17200300	tameray.brazeal@warrington.ufl.edu	BRAZEAL,TAMERAY S	3522733245	Mrs	NULL
 Judith	Demontmollin	B	84906160	NULL	NULL	ADJ AST PROF	yes	33070100	NULL	DEMONTMOLLIN,JUDITH B	NULL	Dr	NULL
-Jangching	Chou	NULL	84383948	jchou	NULL		yes	34080103	JChou@dental.ufl.edu	CHOU,JANG-CHING	3522766715	NULL	NULL
 Raphael	Haftka	Tuvia	82865860	haftka	NULL	DIS PROFESSOR	yes	19020000	haftka@ufl.edu	HAFTKA,RAPHAEL TUVIA	3523929595	Dr	NULL
 Maria	Paz	NULL	81879048	mpaz	NULL	Biological Scientist	yes	60180000	mpaz@ufl.edu	PAZ,MARIA	3522734522	NULL	NULL
 Kenneth	Cusi	NULL	89940159	kcusi	NULL		yes	29050700	kcusi@ufl.edu	CUSI,KENNETH	3522738662	Dr	NULL
 George	Burgess	H	89164680	galeus	JR	CRD MUS OPR 3	yes	56021102	gburgess@flmnh.ufl.edu	BURGESS,GEORGE H,JR	3523921721	Mr	NULL
-Christopher	Spankovich	NULL	82704590	cspankovich	NULL		yes	33060000	cspankovich@ufl.edu	SPANKOVICH,CHRISTOPHER	3522945101	NULL	NULL
 Jason	Bennett	P	85644373	jpb	NULL	Biological Scientist	yes	60460000	jpb@ufl.edu	BENNETT,JASON	3522733639	NULL	NULL
 Jana	Newman	M	87072876	NULL	NULL		yes	60210000	NULL	NEWMAN,JANA M	NULL	NULL	NULL
 Matthea	Gans	Lizabeth	89115300	mgans	NULL		yes	48000000	mgans@ufl.edu	GANS,MATTHEA LIZABETH	8506226044	NULL	NULL
@@ -65,7 +56,6 @@ Wei	Jian	NULL	81038753	jianwei	NULL	Biological Scientist	yes	29260100	jianwei@uf
 Matthew	Cupido	NULL	83535857	mcupido	NULL		yes	29040100	MCupido@anest.ufl.edu	CUPIDO,MATTHEW	NULL	NULL	NULL
 Alethea	Geiger	Lynn	86903251	ageiger0213	NULL	Business Admin. Specialist III	yes	16010900	ageiger0213@ufl.edu	GEIGER,ALETHEA	3522941981	Ms	NULL
 Michael	Faught	K	81007700	mfaught	NULL		yes	16040100	NULL	FAUGHT,MICHAEL K	3523922253	Dr	NULL
-Nadia	Iwanyshyn	S	89698837	nshami	NULL	Pharmacist	yes	32060300	nadia.iwanyshyn@jax.ufl.edu	IWANYSHYN,NADIA S	3522736228	NULL	NULL
 Gretchen	Ionta	Mary	83405380	gionta	NULL	GRAD ASST - R	yes	16900000	gionta@ufl.edu	IONTA,GRETCHEN MARY	3522731991	Ms	NULL
 Linda	Cowart	P	83768030	lpc	NULL	Accountant	yes	60015002	lpc@ufl.edu	COWART,LINDA P	3522943191	Mrs	NULL
 Thomas	Dehaan	C	81474640	dehaant	NULL	BIO SCI	yes	28090000	dehaant@ufl.edu	DEHAAN,THOMAS C	3522944437	Mr	NULL
@@ -73,101 +63,65 @@ Jeffrey	Fair	NULL	87489391	jeffreyfair	NULL		yes	29141300	jeffrey.fair@surgery.u
 Sonya	White	Heinz	82419440	NULL	NULL		yes	ST010000	NULL	WHITE,SONYA HEINZ	NULL	NULL	NULL
 Moshe	Doron	NULL	87668461	moshik	NULL	Biological Scientist	yes	60230000	moshik@ufl.edu	DORON,MOSHE	3522734803	NULL	NULL
 Carolyn	Kelley	A	81981671	ckelley	NULL	Graduate Student, Teaching Assistant	yes	16800100	ckelley@ufl.edu	KELLEY,CAROLYN A	3528461138	NULL	NULL
-Robert	Ahrens	NULL	81419633	rahrens	NULL	Assistant Professor	yes	60460000	rahrens@ufl.edu	AHRENS,ROBERT	3522733630	NULL	NULL
-Kathleen	Colantonio-Yurko	C	81049851	kccyurko	NULL		yes	18180400	NULL	COLANTONIO-YURKO,KATHLEEN C	7034083122	NULL	NULL
 Albert	Mayfield	NULL	83670270	NULL	NULL	CO AST PROF	yes	60460000	NULL	MAYFIELD III,ALBERT E	3523723505119	NULL	NULL
-Han	Xu	NULL	80971181	hanxu	NULL	Senior lecturer	yes	16860000	hanxu@ufl.edu	XU,HAN	3522732960	Ms	NULL
-Heather	Dean	Paige	88750950	hpd114	NULL		yes	32080200	NULL	DEAN,HEATHER PAIGE	3523925964	NULL	NULL
 Belinda	Tallman	Ann	86939893	belindatallman1	NULL		yes	30090000	belinda.tallman@jax.ufl.edu	TALLMAN,BELINDA ANN	9043607022	NULL	NULL
-Betsy	Trobaugh	A	84186450	trobauba	NULL	ASC DIR COOP 4	yes	17080200	betsy.trobaugh@warrington.ufl.edu	TROBAUGH,BETSY A	3522733292	Ms	NULL
 Michele	Vicari-Christensen	L	86644370	mvicari	NULL		yes	31010000	michele.vicari-christensen@jax.ufl.edu	VICARI-CHRISTENSEN,MICHELE	9042448924	NULL	NULL
-Kara	Dawson	Mariehopkins	87628950	kdawson	NULL	Professor	yes	18050000	dawson@coe.ufl.edu	DAWSON,KARA MARIEHOPKINS	3522734177	Dr	NULL
 Wendy	Drexler	K	86934456	wdrexler	NULL	Adj. Lecturer	yes	ST010000	wdrexler@ufl.edu	DREXLER,WENDY K	8133094090	NULL	NULL
 Diane	Lewis	T	83218370	lewisdi	NULL	Clin Ast Professor, Courtesy, SACS	yes	28090000	lewisdi@ufl.edu	LEWIS,DIANE T	3522944487	Dr	NULL
-Rafael	Munoz-Carpena	NULL	87019910	carpena	NULL	Professor	yes	60070000	carpena@ufl.edu	MUNOZ-CARPENA,RAFAEL	3523921864287	Dr	352-3924092
 Arabia	Davis	Nicole	89130249	davisa281	NULL		yes	30090000	arabia.davis@jax.ufl.edu	DAVIS,ARABIA NICOLE	90463303000321	NULL	NULL
 Andrew	Woolum	Henry	86610401	woolum	NULL		yes	17020100	woolum@ufl.edu	WOOLUM,ANDREW HENRY	3522754921	Mr	NULL
 Pamela	Soltis	S	89167530	psoltis	NULL	Distinguished Professor	yes	56021700	psoltis@ufl.edu	SOLTIS,PAMELA S	3523921721217	Dr	NULL
 Stephanie	Mullins	L	89373300	mullinssl	NULL	CRD INS/RISK 3	yes	27030000	NULL	MULLINS,STEPHANIE L	3522737006	Ms	NULL
 Christopher	Ledew	W	83328210	cledew	NULL		yes	19220300	cledew@ufl.edu	LEDEW,CHRISTOPHER W	3522731676	NULL	NULL
-Benjamin	Lok	NULL	86176556	lok	NULL	Associate Professor	yes	19140000	lok@cise.ufl.edu	LOK,BENJAMIN	3524506308	Dr	352-3921220
-Klodiana	Lanaj	NULL	81999164	klodiana	NULL	Assistant Professor of Management	yes	17020100	klodiana.lanaj@warrington.ufl.edu	LANAJ,KLODIANA	3523928128	Ms	NULL
 Tara	Dixon	Eweullyne	81481801	taraedixon	NULL	CRD CLINICAL PROGRAMS 2	yes	29090500	taraedixon@ufl.edu	DIXON,TARA EWEULLYNE	3525270921	NULL	NULL
 Clifford	Preston	M	81821100	cpresto	NULL	CRD COMP APL 4	yes	14800000	cpresto@ufl.edu	PRESTON,CLIFFORD M	3522731067	Mr	NULL
 Shanan	Smith	C	82883359	scsmith	NULL	Teams Software Engineer	yes	27010707	scsmith@ufl.edu	SMITH,SHANAN C	3522945268	NULL	NULL
 Nicholas	Cecere	S	81504646	nicholas.cecere	NULL	IT Expert	yes	14200800	nicholas.cecere@ufl.edu	CECERE,NICHOLAS S	3523922160	NULL	NULL
-Robert	Navarro	P	81515104	rpnavarro	NULL		yes	32050000	rpnavarro@ufl.edu	NAVARRO,ROBERT P	3522735526	NULL	NULL
-Duong	Tran	Tu-Hai	83100847	NULL	NULL		yes	32080400	hdt217@yahoo.com	TRAN,HAIDUONG T	4073137031	NULL	NULL
 Anthony	DeLorenzo	L	82444274	aldelorenzo	NULL	IT Expert-Web Developer	yes	14200500	aldelorenzo@ufl.edu	DELORENZO,ANTHONY L	3522940984	NULL	352-3927065
-Samantha	Bailey	A	83939590	munro	NULL	STUDENT	yes	32060300	munro@ufl.edu	BAILEY,SAMANTHA A	4078842034	NULL	NULL
 Sandra	Russo	L	82958110	srusso	NULL	ASSOC SCHOLAR	yes	20010000	srusso@ufic.ufl.edu	RUSSO,SANDRA L	3522731533	Dr	NULL
 Ian	Boze	NULL	89298112	iboze	NULL		yes	13500000	iboze@performingarts.ufl.edu	BOZE,IAN	3522732472	NULL	NULL
 Viktor	Adams	B	88590800	viktor	NULL	SR ENG TCH	yes	19070000	adams@coastal.ufl.edu	ADAMS,VIKTOR B	3523921051	NULL	NULL
 Thomas	Reno	Gerald	86826930	tomreno	NULL		yes	13010100	treno@arts.ufl.edu	RENO,TOM	3523926792	NULL	NULL
 David	Walker	A	85258840	drwalker	NULL		yes	33060000	drwalker@ufl.edu	WALKER,DAVID A	NULL	NULL	NULL
-Jayashree	Mahajan	NULL	80572970	mahajan	NULL	Lecturer	yes	17070100	mahajan@ufl.edu	MAHAJAN,JAYASHREE	3523927300	Dr	NULL
 Jessica	Inman	Joanne	84038824	jinman	NULL		yes	04080100	jessicai@studentinvolvement.ufl.edu	INMAN,JESSICA JOANNE	3522730534	NULL	NULL
-Susan	Johnson	Irene	87162364	susanijohnson	NULL	Studio Visual Arts Instructor	yes	18180500	sijohnson@pky.ufl.edu	JOHNSON,SUSAN I	3523921554	NULL	NULL
-Robert	Decker	C	88511242	rcd4n	NULL	Faculty Applicant	yes	29170000	deckerc@ortho.ufl.edu	DECKER,ROBERT	3522737001	Dr	NULL
 Jeffrey	Fair	NULL	87489391	jeffreyfair	NULL		yes	29141300	jeffrey.fair@surgery.ufl.edu	FAIR,JEFFREY	3522650111	Dr	NULL
 Sidharth	Mohan	NULL	89118416	mohan	NULL		yes	34170402	SMohan@dental.ufl.edu	MOHAN,SIDHARTH	NULL	NULL	NULL
-Christopher	James	NULL	81951600	jamesc	NULL	WILLIAM H. DIAL/SUN TRUST EMINENT SCHOLAR	yes	17060100	christopher.james@cba.ufl.edu	JAMES,CHRISTOPHER	3523923486	Dr	NULL
-Timothy	Kellison	Brandon	81005636	tkellison	NULL		yes	26020700	tkellison@ufl.edu	KELLISON,TIMOTHY BRANDON	3522944042	NULL	NULL
 Yuan	Chow	R	84536630	chow	NULL	PROFESSOR	yes	NULL	chow@cise.ufl.edu	CHOW,YUAN R	3525051582	Dr	NULL
 Lynn	Barber	A	81645338	labarber	NULL	Program County Extension Agent I, FYN	yes	60354029	labarber@ufl.edu	BARBER,LYNN A	813744551954105	NULL	NULL
 Miranda	Morris	Lillian	88250567	mlmorris	NULL	Assistant Director, Online Business Program	yes	17220300	miranda.morris@warrington.ufl.edu	MORRIS,MIRANDA L	3522730165	Ms	352-8460186
-Rochelle	McTureous	NULL	81615919	rmctureous	NULL		yes	18050000	rmctureous@coe.ufl.edu	MCTUREOUS,ROCHELLE	3525389877	Mrs	NULL
 Paul	Powell	Edwin	82217841	pep5	NULL	Program Cty Ext Agt I, Res/Com Hort	yes	60351066	pep5@ufl.edu	POWELL,EDDIE	8508928172	NULL	NULL
-Diana	Beaulieu	Joyce	83839340	dkj2	NULL	Psychologist, Associate Scholar	yes	18080000	djoyce@coe.ufl.edu	BEAULIEU,DIANA JOYCE	3522734288	Dr	NULL
 Guillermo	Black	NULL	89190934	grblack	NULL	South Central District Computer Support	yes	60410000	grblack@ufl.edu	BLACK,GUILLERMO	8635198677120	Mr	NULL
-Paul	Gader	D	82790750	pgader	NULL	PROFESSOR	yes	19140000	pgader@ufl.edu	GADER,PAUL D	3523921527	Dr	352-3921220
 Ryan	Winget	Michael	82881481	wingetr	NULL	Assistant Director of Housing	yes	07240200	ryanw@housing.ufl.edu	WINGET,RYAN	352392217110560	Mr	NULL
 Lurong	Zhang	NULL	83441167	lurongzhang	NULL	Research Professor	yes	29200000	lurongzhang@ufl.edu	ZHANG,LURONG	3522738306	NULL	NULL
 Gerald	Binczik	A	80104480	gbin	NULL	GRAD ASST - R	yes	16900000	gbin@ufl.edu	BINCZIK,GERALD A	3523921100	Mr	NULL
 Yanwen	Su	NULL	89691292	yanwen	NULL		yes	19030000	yanwen@ufl.edu	YANWEN,SU	3522833348	NULL	NULL
 Andrew	Selepak	G	84909129	aselepak	NULL		yes	23030000	aselepak@ufl.edu	SELEPAK,ANDREW G	3523921502	NULL	NULL
-James	Vincent	D	82569051	jdv	NULL		yes	17030100	jdv@ufl.edu	VINCENT,JAMES D	3522730200	NULL	NULL
 Jean	Harris	C	83394000	jharris	NULL	CRD COMP APL 4	yes	14800000	jharris@ufl.edu	HARRIS,JEAN C	3522731435	Ms	NULL
-Patricia	Louzon	R	88712290	plouzon	NULL		yes	32060000	NULL	LOUZON,PATRICIA R	3522736228	NULL	NULL
 Henry	Mauney	Max	87819200	hmmauney	NULL	Assistant Director	yes	06010000	hmmauney@ufl.edu	MAUNEY,H MAX	3522943268	Mr	NULL
-Rhonda	Dehoff	Marsha	85067340	rmdehoff	NULL	Associate Professor	yes	32060000	dehoff@cop.ufl.edu	COOPER-DEHOFF,RHONDA M	3522736184	Ms	NULL
-Kathryn	Williams	R	80616230	krwchem	NULL	Scholar Emerita	yes	16120100	krw@chem.ufl.edu	WILLIAMS,KATHRYN R	3523920281	Dr	NULL
 Rebekah	Cordova	Anne	80705130	rifka	NULL	STUDENT	yes	18300000	NULL	CORDOVA,REBEKAH A	3522734103	NULL	NULL
 Melissa	Curry	S	86879900	mmayer	NULL	Director, Human Resources	yes	62010300	melissa-curry@ufl.edu	CURRY,MELISSA-HR	3522731735	Ms	NULL
 Martin	Ruiz Moreno	Javier	86612035	ruizm001	NULL		yes	60770000	ruizm001@ufl.edu	RUIZ MORENO,MARTIN	8503949124113	NULL	NULL
-Mark	Rush	NULL	80214280	markrush	NULL	PROFESSOR	yes	16030100	mark.rush@warrington.ufl.edu	RUSH,MARK	3523920318	Dr	NULL
-Michael	Taylor	D	84751270	mdtaylor	NULL		yes	32050000	taylor.michael@gene.com	TAYLOR,MICHAEL D	3522736248	Mr	NULL
 Sharon	Plotkin	NULL	84118476	splotkin	NULL		yes	29080100	slplotkin@bellsouth.net	PLOTKIN,SHARON	3058918111	NULL	NULL
-Lynn	Sollenberger	E	85039540	lesollen	NULL	PROFESSOR	yes	60080000	lesollen@ufl.edu	SOLLENBERGER,LYNN E	3522733420	Dr	NULL
 Phillip	Klepacki	J	83960163	klepacki	NULL	Assistant Director of Distance Ed	yes	13010100	pklepacki@arts.ufl.edu	KLEPACKI,PHILLIP J	3528463425	Mr	NULL
 Amy	Meyer	Pietrodangelo	80419650	meyerap	NULL	Insurance and Risk Coordinator	yes	27030000	meyerap@ufl.edu	MEYER,AMY P	9042449070	Ms	NULL
-Muthusami	Kumaran	NULL	83875720	kumaran	NULL		yes	60320000	kumaran@ufl.edu	KUMARAN,MUTHUSAMI	3522733524	NULL	NULL
 Meredith	Holloway	G	82230110	mereholl	NULL	ADJ LECTURER	yes	13040100	mereholl@ufl.edu	FARNUM,MEREDITH G	3522730522	Ms	NULL
 Joan	Brewer	Elizabeth	88087912	joanebrewer	NULL		yes	29090700	joanebrewer@ufl.edu	BREWER,JOAN ELIZABETH	3522738554	NULL	352-2948088
 Diane	Gallian	NULL	86915142	NULL	NULL		yes	32060300	NULL	GALLIAN,DIANE	NULL	NULL	NULL
-Bradley	Mayo	R	80131523	NULL	NULL		yes	32080200	bradleyrmayo@aol.com	MAYO,BRADLEY R	NULL	NULL	NULL
 Jacqueline	Miller	Y	84122800	jymiller	NULL	CURATOR	yes	56021300	jmiller@flmnh.ufl.edu	MILLER,JACQUELINE Y	3522732016	Dr	NULL
 Marc	Branch	N	82443360	branch	NULL	PROFESSOR	yes	16400100	branch@ufl.edu	BRANCH,MARC N	3522732173	Dr	NULL
-Joyce	Bono	NULL	80131111	joyce.bono	NULL	Professor	yes	17020100	joyce.bono@ufl.edu	BONO,JOYCE	3528460507	NULL	NULL
 Larry	Fowler	J	84441046	ljfowler	NULL	Clinical Professor	yes	29080100	ljfowler@pathology.ufl.edu	FOWLER,LARRY J	3526279240	Dr	NULL
 Solomon	Abraham	NULL	82303760	kassa	NULL	sr bio sci	yes	34160200	kassa@ufl.edu	ABRAHAM,SOLOMON	3522736682	Mr	NULL
-Christopher	Kuppler	NULL	89019718	ckuppler	NULL		yes	29140401	ckuppler@ufl.edu	KUPPLER,CHRISTOPHER	3148533222	NULL	NULL
-Colin	Sumners	NULL	89074670	csumners	NULL	PROF & PRG DIR	yes	29110000	csumners@ufl.edu	SUMNERS,COLIN	3523924485	Dr	NULL
-Jinhong	Xie	NULL	80961040	xiej	NULL	J.C. PENNEY PROFESSOR OF MARKETING	yes	17080100	xiej@ufl.edu	XIE,JINHONG	35239201611233	Dr	NULL
 Lester	Muralles	M	86095376	lesterm	NULL	Program Cty Ext Agt I, Com/Res Hort	yes	60351020	lesterm@ufl.edu	MURALLES,LESTER M	8508757255	Mr	NULL
 Marion	Daniels	Harry	80148540	harryd	NULL	Professor	yes	18070000	harryd@ufl.edu	DANIELS,MARION HARRY	3522734321	Dr	NULL
 Robert	Guenther	Thomas	85627030	rguenthe	NULL	CLIN PROF	yes	33070000	rguenthe@phhp.ufl.edu	GUENTHER,ROBERT THOMAS	3522735268	Dr	NULL
 Eric	Sobel	S	86591120	esobel	NULL	ASO PROF& PRDIR	yes	29050300	eric.sobel@medicine.ufl.edu	SOBEL,ERIC SCOTT	3522650139	Dr	NULL
 Adam	Allen	Wade	81181891	adamwallen	NULL		yes	14200500	adamwallen@ufl.edu	ALLEN,ADAM WADE	3522734923	NULL	NULL
 Patrick	Aaronson	M	85808160	g8rshark	NULL	OPS TECHNICAL	yes	32080500	aaronson@poison.ufl.edu	AARONSON,PATRICK M	9042444465	Mr	NULL
-Helena	Detar	G	83219116	detar001	NULL	DVM	yes	28090000	detar001@ufl.edu	DETAR,LENA G	NULL	NULL	NULL
 Katelyn	Parham	A	89387816	willis07	NULL		yes	33060000	willis07@ufl.edu	PARHAM,KATELYN	3522736166	NULL	NULL
 Fiona	Miller	D	88121780	flama	NULL	Adjunct Lecturer	yes	16309001	fiona.lama@sfcollege.edu	MILLER LAMA,FIONA D	3523923354	Ms	NULL
 Christopher	Stetter	L	84279610	cstetter	NULL	IT Analyst II	yes	14800000	cstetter@ufl.edu	STETTER,CHRISTOPHER L	3522731440	Mr	NULL
-Paul	Madsen	NULL	89269842	paulmadsen	NULL	Assistant Professor	yes	17030100	paulmadsen@ufl.edu	MADSEN,PAUL	3522730221	Mr	NULL
 Patricia	Grosz	Lynn	87314998	pgrosz	NULL		yes	29092200	pgrosz@iycwcf.org	GROSZ,PATRICIA LYNN	NULL	NULL	NULL
 Andrew	Selepak	G	84909129	aselepak	NULL		yes	23030000	aselepak@ufl.edu	SELEPAK,ANDREW G	3523921502	NULL	NULL
-Jaclyn	Otero	Lisa	83551380	jackie0	NULL	Assistant Professor	yes	29091200	jackie0@ufl.edu	OTERO,JACLYN LISA	3525947337	NULL	NULL
 Amanda	Billy	C	86559596	amandabilly	NULL		yes	23010200	NULL	BILLY,AMANDA C	NULL	NULL	NULL
 Heather	Jim	NULL	84799075	NULL	NULL	Courtesy Assistant Professor	yes	29240000	NULL	JIM,HEATHER	NULL	Dr	NULL
 Ramakant	Srivastava	NULL	88598850	rsriv	NULL	PROFESSOR EMERITUS	yes	19050000	rsriv@ece.ufl.edu	SRIVASTAVA,RAMAKANT	3523924961	Dr	NULL
@@ -175,71 +129,46 @@ Sonja	Crawford	Crews	83173900	sycr	NULL	Extesnion Agent III, 4-H Youth Developme
 I-Chun	Peir	NULL	89512310	ipeir	NULL	Lecturer	yes	16860100	ipeir@ufl.edu	PEIR,I-CHUN	3523927143	Ms	NULL
 Mary	Derrick	L	80030946	mderrick	NULL	Program Cty Ext Agt I, Environmental Hort	yes	60351057	mderrick@ufl.edu	DERRICK,MARY L	8506233868	NULL	850-6236151
 William	Hawkins	T	88903540	wthomas	NULL	OPS OFFICE/CLER	yes	24010000	NULL	HAWKINS,WILLIAM T	3523720926	Mr	NULL
-Arthur	Wharton	Emrie	83487840	wharton	NULL	CLNASOPRF&PRDIR	yes	32080500	wharton@cop.ufl.edu	WHARTON,ARTHUR EMRIE	3522736275	Mr	NULL
 Henry	Frierson	T	81938343	hfrierson	NULL	Dean - Graduate School	yes	12010000	hfrierson@ufl.edu	FRIERSON,HENRY T	3523926622	NULL	NULL
 Scott	Wasdo	C	80202220	swasdo	NULL	Research Assistant Professor	yes	29040100	SWasdo@anest.ufl.edu	WASDO,SCOTT C	3528461355	Mr	NULL
-Melanie	Harris	Mills	85828580	melaniemharris	NULL	INSTRUCTOR/PKY	yes	18180500	NULL	HARRIS,MELANIE MILLS	3523921554291	Ms	NULL
 Eddie	Daniels	NULL	81883421	edaniels	Jr	Executive Director, J. Wayne Reitz Union	yes	05250000	edaniels@union.ufl.edu	DANIELS JR,EDDIE	3523921643	Mr	NULL
 Susan	Newman	NULL	88274930	snew91	NULL		yes	60210000	snew91@ufl.edu	NEWMAN,SUSAN	5616826608	NULL	NULL
-Donald	Pemberton	Patterson	85882420	pemberto	NULL	ACTPROGDIR&LECT	yes	18300000	dpemberton@coe.ufl.edu	PEMBERTON,DONALD PATTERSON	3522734108	Dr	NULL
 Billy	Smith	I	80531900	NULL	NULL	Ctsy Ast Prof	yes	28040000	NULL	SMITH,BILLY IRVIN	3523924700	Mr	NULL
-Stanley	Latimer	Steve	89568750	latimer	NULL	Assistant In	yes	15060000	latimer@geoplan.ufl.edu	LATIMER,STANLEY	3523920997434	Mr	NULL
 Robert	Navarro	P	81515104	rpnavarro	NULL		yes	32050000	rpnavarro@ufl.edu	NAVARRO,ROBERT P	3522735526	NULL	NULL
-Anuj	Kumar	NULL	83260333	akumar1	NULL		yes	17070100	akumar1@ufl.edu	KUMAR,ANUJ	3522730587	NULL	NULL
 Adrienne	Eisner	R	82954465	eisner	NULL	Psychiatry Housestaff	yes	29120000	eisner@ufl.edu	EISNER,ADRIENNE	9415272099	NULL	NULL
-Jeffrey	Cook	NULL	88911609	cook.439	NULL		yes	ST010000	cook.439@ufl.edu	COOK,JEFFREY	NULL	NULL	NULL
-Rajiv	Singh	K	82198010	rksingh	NULL	PROFESSOR	yes	19090000	rsing@mse.ufl.edu	SINGH,RAJIV K	3523921032	Dr	NULL
 Shasha	Shi	NULL	81306663	shashas	NULL		yes	19070000	shashas1982@gmail.com	SHI,SHASHA	NULL	NULL	NULL
 Curtis	Nagle	A	88130480	cnagle	NULL	BIO SCIENTIST	yes	60754000	cnagle@ufl.edu	NAGLE,CURTIS A	81363341223120	Mr	NULL
 Natasha	Restuccia	G	87215348	natburk	NULL		yes	60180000	natburk@ufl.edu	RESTUCCIA,NATASHA G	3528460400	NULL	NULL
 Michele	Bell-Badger	NULL	88186121	finesse16	NULL		yes	30090000	NULL	BELL-BADGER,MICHELE	9046330754	NULL	NULL
 Sarah	Chavez	Y	81113946	sarahchavez	NULL		yes	57720000	sarahchavez@ufl.edu	CHAVEZ,SARAH YNEZ	3526279094	NULL	NULL
-Lauren	McIntyre	M	86602187	mcintyre	NULL	Professor	yes	29060000	mcintyre@ufl.edu	MCINTYRE,LAUREN MICHAELA	3522738024	Dr	NULL
-Herbert	Maisenbacher	W	81476800	maisenbacherh	III	Lecturer	yes	28090000	NULL	MAISENBACHER,HERBERT	7576051610	Dr	NULL
 Jonathan	Mueller	A	89959780	jon.mueller	NULL	OPS TECHNICAL	yes	23010200	NULL	MUELLER,JONATHAN A	3528460129	NULL	NULL
 Natalie	Lamneck	J	84504780	wilbevet	NULL	STUDENT	yes	28040000	wilbevet@ufl.edu	LAMNECK,NATALIE J	NULL	NULL	NULL
 Wendy	Devito	T	88795080	wtaylor	NULL	CRD ED/TRAIN 1	yes	60095000	wtaylor@ufl.edu	DEVITO,WENDY T	3523921912	Ms	NULL
-Phillip	Klepacki	J	83960163	klepacki	NULL	Assistant Director of Distance Ed	yes	13010100	pklepacki@arts.ufl.edu	KLEPACKI,PHILLIP J	3528463425	Mr	NULL
 Laura	Tipton	S	89106020	tiptols	NULL	PHARMACY MGR/CLINICAL ASS PROF PHM PRACTICE	yes	35040200	tiptols@ufl.edu	TIPTON,LAURA S	3523921161	Ms	NULL
-Eric	Rosenberg	I	83224270	eir	NULL	Associate Professor & Div Chief	yes	29051000	eir@ufl.edu	ROSENBERG,ERIC I	3522650651	Dr	NULL
 James	Radtke	Thomas	84944113	jradtke	NULL	Assistant Professor of Naval Science	yes	25050000	jradtke@ufl.edu	RADTKE,JAMES THOMAS	3522940713	Mr	NULL
-Juan	Blum Guzman	Pablo	89193935	jpblum	NULL		yes	30050000	Juan.Blum-Guzman@jax.ufl.edu	BLUM-GUZMAN,JUAN PABLO	9046330797	NULL	NULL
 Tina	Smith	NULL	89958378	tinasmith	NULL		yes	30090000	tina.smith@jax.ufl.edu	SMITH,TINA	9042443050	NULL	NULL
 Dorothee	Bohle	NULL	83369000	dorobohle	NULL		yes	16660000	bohled@ceu.hu	BOHLE,DOROTHEE	3522947152	NULL	352-3928966
-Elizabeth	Washington	Anne	83225330	eyeager	NULL	Professor	yes	18050000	ewashington@coe.ufl.edu	WASHINGTON,ELIZABETH ANNE	3522734236	Dr	NULL
 John	Polefko	W	82635700	jpole	NULL	Crd. , Education and Training Programs	yes	29120000	jpole@ufl.edu	POLEFKO,JOHN W	3522730582	Mr	NULL
-John	Cech	O	88371910	jcech	NULL	Professor	yes	16200000	jcech@ufl.edu	CECH,JOHN O	3522942861	Dr	NULL
 Lori	Deitte	A	82765460	ldeitte	NULL	CLIN ASO PROF	yes	29130000	NULL	DEITTE,LORI A	3522650291	Dr	NULL
-Mary	Fukuyama	A	86545600	fukuyama	NULL	CLIN PROFESSOR	yes	04030000	fukuyama@ufl.edu	FUKUYAMA,MARY A	3523921575	Dr	NULL
 Andrew	Selepak	G	84909129	aselepak	NULL		yes	23030000	aselepak@ufl.edu	SELEPAK,ANDREW G	3523921502	NULL	NULL
 George	Gower	Jeffrey	82207489	jgower	NULL	Adjunct Lecturer	yes	NULL	jgower@ufl.edu	GOWER,GEORGE JEFFREY	3523922155	NULL	NULL
 Michelle	Rogers	NULL	84896641	mrogersrph	NULL		yes	32060300	NULL	ROGERS,MICHELLE	NULL	NULL	NULL
 Holly	Moses	T	80205200	hmtuf	NULL	Undergraduate Academic Advisor	yes	26050100	hmoses@hhp.ufl.edu	MOSES,HOLLY T	3522941804	NULL	NULL
 Ferdinand	Lewis	NULL	81143325	fslewis	NULL		yes	15060000	fslewis@ufl.edu	LEWIS,FERDINAND	3523920997471	NULL	NULL
 Sarah	Whitfield	E	84987314	solara	NULL		yes	60330000	solara@ufl.edu	WHITFIELD,SARAH E	3527592288	NULL	NULL
-Rochelle	McTureous	NULL	81615919	rmctureous	NULL		yes	18050000	rmctureous@coe.ufl.edu	MCTUREOUS,ROCHELLE	3525389877	Mrs	NULL
-Ilir	Bejleri	NULL	86064870	ilir	NULL	Associate Professor	yes	15060000	ilir@ufl.edu	BEJLERI,ILIR	3523920997432	Dr	NULL
 Lynn	Bennett	W	84547663	NULL	NULL		yes	32060300	NULL	BENNETT,LYNN W	NULL	NULL	NULL
 Anju	Davidson	NULL	88010134	akdavidson	NULL	CSRRR Assistant Director	yes	24130000	davidson@law.ufl.edu	DAVIDSON,ANJU KADUVETTOOR	3522730614	NULL	NULL
 Mohammed	Felemban	Fareed	82138329	dr.mfhf	NULL		yes	34130103	MFelemban@dental.ufl.edu	FELEMBAN,MOHAMMED FAREED	NULL	NULL	NULL
 Paul	Kubilis	S	89240110	pkubilis	NULL	Statistical Research Coordinator	yes	32050000	pkubilis@ufl.edu	KUBILIS,PAUL S	3522736246	Mr	NULL
-Debra	Gale	A	89135146	dgale	NULL		yes	32080500	dgale@ufl.edu	GALE,DEBRA A	NULL	NULL	NULL
-Christopher	Jankowski	A	89783639	cjankowski	NULL		yes	32080200	christopher.jankowski@jax.ufl.edu	JANKOWSKI,CHRISTOPHER	NULL	NULL	NULL
 C	Miller	D	85591000	c.d.miller	NULL	PROFESSOR	yes	24010300	miller@law.ufl.edu	MILLER,C D	3522730917	Dr	NULL
-Maria	Gurucharri	Christina	83927890	guruch	NULL	ASO PROFESSOR	yes	15040000	guruch@ufl.edu	GURUCHARRI,MARIA CHRISTINA	3523926098328	Ms	NULL
 Lisa	Leslie	Masino	80106310	lmleslie	NULL	Program Cty Ext Agt III, Financial Mgt	yes	60354029	lmleslie@ufl.edu	LESLIE,LISA MASINO	8137445519143	Ms	NULL
 Paul	Bardunias	M	80840390	paulmb	NULL	Student	yes	60850000	paulmb@ufl.edu	BARDUNIAS,PAUL M	9545776351	Mr	NULL
 Elizabeth	Bolles	R	83252150	bbolles	NULL	EXT AGT III	yes	60351017	bbolles@ufl.edu	BOLLES,ELIZABETH R	8504755230	Ms	NULL
 Rochelle	McTureous	NULL	81615919	rmctureous	NULL		yes	18050000	rmctureous@coe.ufl.edu	MCTUREOUS,ROCHELLE	3525389877	Mrs	NULL
-Scott	Arceneaux	NULL	81181758	sarceneaux	NULL	OMFS Resident	yes	34080103	NULL	ARCENEAUX,SCOTT	2736750	NULL	392-6909
-Mohammad	Nomani	Sedigh	84114071	mnomani	NULL	Resident	yes	52010000	mnomani@dental.ufl.edu	NOMANI,MOHAMMAD	3522736746	Dr	NULL
-Kathryn	Clark	Amanda	85067600	mandyc	NULL	Pharm D	yes	32080200	mandyc@ufl.edu	CLARK,KATHRYN AMANDA	9042449590	NULL	NULL
-Paul	Madsen	NULL	89269842	paulmadsen	NULL	Assistant Professor	yes	17030100	paulmadsen@ufl.edu	MADSEN,PAUL	3522730221	Mr	NULL
 Philippe	Moullier	NULL	81143342	moullier	NULL	Short-term Scholar	yes	29060000	moullier@ufl.edu	MOULLIER,PHILIPPE	NULL	NULL	NULL
 Oleg	Matveev	NULL	84564750	oleg	NULL	Senior Teaching Lab Specialist	yes	16120100	oleg@chem.ufl.edu	MATVEEV,OLEG	3528460840	Dr	NULL
 Thomas	Beaver	M	81868160	beavetm	NULL	Professor and Chief	yes	29141700	thomas.beaver@surgery.ufl.edu	BEAVER,THOMAS M	3522735501	Dr	NULL
 Peggy	Pfeifer	I	81150662	ppfeifer	NULL		yes	48011000	ppfeifer@flvc.org	PFEIFER,PEGGY I	8509226044	NULL	NULL
-Robert	Hatch	L	86763470	hatch	NULL	Professor	yes	29160602	hatch@ufl.edu	HATCH,ROB	5325420068	Dr	NULL
 Kathleen	Tallmadge	Ann	89733321	NULL	NULL		yes	32060300	katmandoos@aol.com	TALLMADGE,KATHLEEN ANN	3522736228	NULL	NULL
 James	Fondriest	NULL	88666889	NULL	NULL		yes	34010702	NULL	FONDRIEST,JAMES	NULL	NULL	NULL
 Angela	Perry	L	88516340	perryal	NULL	Manager, IT Operations	yes	17210100	perryal@ufl.edu	PERRY,ANGELA L	3522731616	Mrs	NULL
@@ -250,33 +179,24 @@ James	Tulenko	S	87975490	tulenko	NULL	Professor	yes	19090100	tulenko@ufl.edu	TUL
 Michael	Lane	Aron	87158111	malane	NULL	Research Assistant Professor	yes	29020000	malane@ufl.edu	LANE,MICHAEL ARON	3523593420	NULL	NULL
 Randy	Graff	A	84339350	rgraff	NULL	Director of Educational Technology	yes	27010711	NULL	GRAFF,RANDY A	3522735018	Dr	352-2735035
 Elizabeth	Felter	A	86675270	lfelter	NULL	EA III	yes	60353048	Lfelter@ufl.edu	FELTER,ELIZABETH A MS	4072549203	Ms	NULL
-Efe	Eworuke	NULL	81110199	efe1odia	NULL		yes	32050000	efe1odia@ufl.edu	EWORUKE,EFE	3528465158	NULL	NULL
-Eric	Rosenberg	I	83224270	eir	NULL	Associate Professor & Div Chief	yes	29051000	eir@ufl.edu	ROSENBERG,ERIC I	3522650651	Dr	NULL
 Kerry	Bader	M	81811671	baderk26	NULL	IT Analyst 1	yes	14800000	baderk26@ufl.edu	BADER,KERRY M	3522942176	NULL	NULL
 Christopher	Raye	M	88721296	craye	NULL		yes	18080000	craye@ufl.edu	RAYE,CHRISTOPHER	3523921554	NULL	NULL
 Kelly	Jamison	NULL	85856960	keljs	NULL		yes	62060100	keljs@ufl.edu	JAMISON,KELLY	3523922330	NULL	NULL
 Jameel	Mohammed	NULL	88668770	meelypop	NULL	Adjunct Faculty	yes	11210000	NULL	MOHAMMED,JAMEEL	35237616114792	NULL	NULL
 Mary	Fukuyama	A	86545600	fukuyama	NULL	CLIN PROFESSOR	yes	04030000	fukuyama@ufl.edu	FUKUYAMA,MARY A	3523921575	Dr	NULL
 James	Cilek	NULL	80679841	jec123123	NULL	Courstesy Faculty	yes	60140000	NULL	CILEK,JAMES	NULL	NULL	NULL
-Barbara	Klingensmith	Lynn	86459300	bklingen	NULL		yes	15030000	NULL	KLINGENSMITH,BARBARA LYNN PHD	8133129675	Dr	NULL
 Pamela	Soltis	S	89167530	psoltis	NULL	Distinguished Professor	yes	56021700	psoltis@ufl.edu	SOLTIS,PAMELA S	3523921721217	Dr	NULL
 Todd	Barnash	A	80302540	barnash	NULL	IT Expert	yes	29011700	barnash@ufl.edu	BARNASH,TODD A	3522735088	Mr	NULL
 Joshua	Coleman	Vaughn	83056350	joshua69	NULL	Network Administrator	yes	07700100	joshuac@housing.ufl.edu	COLEMAN,JOSHUA VAUGHN	352392217112053	Mr	NULL
-James	Vincent	D	82569051	jdv	NULL		yes	17030100	jdv@ufl.edu	VINCENT,JAMES D	3522730200	NULL	NULL
 Ronald	Wayne	Robert	85333718	rwayne	NULL	Coordinator, Info/Pub Services	yes	10020000	rwayne@ufl.edu	WAYNE,RONALD ROBERT	3523920186470	Mr	NULL
 Do	Kim	Young	81964016	dykim11	NULL	Research Scientist	yes	19090000	dykim11@ufl.edu	KIM,DO YOUNG	3522730184	Mr	NULL
-Jennifer	Giangrande	L	89162513	jgiangrande	NULL		yes	32030000	jgiangrande@ufl.edu	GIANGRANDE,JENNIFER L	3363392548	NULL	NULL
-William	Tilson	L	89380250	wtropic	NULL	PROF & PRG DIR	yes	15020000	wtropic@ufl.edu	TILSON,WILLIAM L	3523924836311	Mr	NULL
 Laurie	Hurner	A	85931000	lhurner	NULL	Extension Agent III, Fruit Crops	yes	60354028	NULL	HURNER,LAURIE ANN	8634026540	Ms	NULL
 John	Kranzler	H	83111420	kranzler	NULL	Professor & Interim Associate Dean	yes	18080000	jkranzler@coe.ufl.edu	KRANZLER,JOHN H	3522734119	Dr	NULL
 Deborah	Spiceland	R	85560960	dspiceland	NULL	BIOLOGICAL SCIENTIST	yes	60190000	NULL	SPICELAND,DEBORAH R	3522734669	Ms	NULL
-Brian	Ray	D	88313310	drray	NULL	Associate Dean, School of Business	yes	17220100	DrRay@ufl.edu	RAY,BRIAN D	3522730165	Mr	NULL
-Kraig	Schell	NULL	83033185	schellkg	NULL		yes	32050000	schellkg@ufl.edu	SCHELL,KRAIG	3522736268	NULL	NULL
 Sarah	Robinson	E	88945211	sarah.robinson	NULL		yes	33030000	sar.robinson2@gmail.com	ROBINSON,SARAH E	3522739673	NULL	NULL
 Spencer	Cason	C	80117760	casonsc	Jr	IT SR	yes	14800000	casonsc@ufl.edu	CASON,SPENCER C JR	3522731075	Mr	NULL
 Eva	Egensteiner	B	80387630	eegenst	NULL	Video & Communications Specialist	yes	23030000	NULL	EGENSTEINER,EVA B	3522787263	NULL	352-3929220
 Anthony	Bavry	A	80150510	bavrya	NULL		yes	29050400	bavryaa@medicine.ufl.edu	BAVRY,ANTHONY A	3522739075	Dr	NULL
-David	Hall	J	81389578	halldj	NULL	Surgery Resident	yes	29140401	halldj@ufl.edu	HALL,DAVID J	9542578563	NULL	NULL
 Vani	Simmons	Nath	85793120	NULL	NULL	Courtesy Assistant Professor	yes	29240000	NULL	SIMMONS,VANI NATH	NULL	NULL	NULL
 Kevin	Berry	J	83179300	kjbuf97	NULL	Adj. Lecturer	yes	18050000	kjbuf97@ufl.edu	BERRY,KEVIN J	3523929191	Mr	NULL
 Richard	Christensen	C	86997440	rchris	NULL	Psychiatry Clinical Assistant Professor	yes	29120000	rchris@ufl.edu	CHRISTENSEN,RICHARD C	9043498068	Dr	NULL
@@ -288,28 +208,21 @@ Stephen	Walsh	J	85971370	sjwalsh	NULL	Dr.	yes	16900000	sjwalsh@ufl.edu	WALSH,STE
 Johanny	Zabala	NULL	81433714	jzabala	NULL		yes	60751000	jzabala@ufl.edu	ZABALA,JOHANNY	8136334116	NULL	NULL
 Burton	Singer	H	84101743	bhsinger	NULL	Courtesy Faculty	yes	11900000	bhsinger@epi.ufl.edu	SINGER,BURTON H	3522739572	NULL	NULL
 Simon	Lopez D'Sola	NULL	84260989	simonlopez	NULL		yes	16120100	simonlopez@chem.ufl.edu	LOPEZ D'SOLA,SIMON ENRIQUE	NULL	NULL	NULL
-Jeanna	Marraffa	NULL	82654121	jmmarraffa	NULL		yes	32080500	marraffj@upstate.edu	MARRAFFA,JEANNA	3154647076	NULL	NULL
 Diana	Beaulieu	Joyce	83839340	dkj2	NULL	Psychologist, Associate Scholar	yes	18080000	djoyce@coe.ufl.edu	BEAULIEU,DIANA JOYCE	3522734288	Dr	NULL
 Patricia	Schauweker	S	83455660	pschauw	NULL	Business Manager	yes	20010000	pschauw@ufic.ufl.edu	SCHAUWEKER,PAT	3522731534	Ms	NULL
 Elaine	Moldawer	M	84996770	emoldawe	NULL	HEALTH EDUCATOR	yes	29070603	emoldawe@ufl.edu	MOLDAWER,ELAINE M	3523924491	Mrs	NULL
 Tennille	Herron	L	80758441	therron	NULL	WEB MANAGER	yes	60440000	therron@ufl.edu	HERRON,TENNILLE L	3522943310	Ms	NULL
-Jonathan	Dain	L	81672060	jdain	NULL	Lecturer	yes	57140100	jdain@ufl.edu	DAIN,JONATHAN L	3522734713	Mr	NULL
 Timothy	Killian	NULL	88816106	tkillian	NULL	Clinical Asst Lecturer	yes	32060300	NULL	KILLIAN,TIMOTHY	NULL	NULL	NULL
 Peter	Ganio	Anthony	89191861	NULL	Jr		yes	32060300	pganio@hotmailcom	GANIO,PETER ANTHONY	3522736228	NULL	NULL
 Joo	Lee	Hyun	81613490	joohlee	NULL	OPS TECHNICAL	yes	26020100	joohyunlee@yahoo.com	LEE,JOO HYUN	3523924042	Ms	NULL
 Brian	Cleaver	D	80780390	bcleaver	NULL	Associate Program Director	yes	29340000	brian.cleaver@urology.ufl.edu	CLEAVER,BRIAN D	3522737610	Mr	NULL
 David	Reed	Lee	81871410	dlreed	NULL	Mammals Curator	yes	56020000	dreed@flmnh.ufl.edu	REED,DAVID LEE	3523921721	NULL	NULL
-John	Duff	Andrew	85206180	jduff	NULL	Professor & School Director	yes	13030100	jduff@arts.ufl.edu	DUFF,JOHN A	3523928506	Dr	NULL
-David	Gibson	W	86248010	dgibs	NULL	ASO PROF EMERITUS	yes	60460000	dgibs@ifas.ufl.edu	GIBSON,DAVID W	3523924995	Mr	NULL
 Shannon	Sumerlin	Eileen	81315870	ssumerlin	NULL	Sr. Dir of Constituent Engagement	yes	50010000	ssumerlin@ufalumni.ufl.edu	SUMERLIN,SHANNON E	3523929252	NULL	NULL
 Lori	Wiggins	C	86885930	lwiggins	NULL	Extension Agent III, FCS	yes	60351062	lwiggins@ufl.edu	WIGGINS,LORI C	8508383508	NULL	NULL
-Kelly	Barrett	J	82994426	canabk1	NULL	INSTRUCTOR/PKY	yes	18180400	kbarrett@pky.ufl.edu	BARRETT,KELLY J	3523921554264	NULL	NULL
-Katherine	Polak	C	88996171	polakk	NULL		yes	52020100	polakk@ufl.edu	POLAK,KATHERINE C	6303904300	NULL	NULL
 John	Dunckelman	W	83601574	jdunck	NULL	Coord., Research Progs. and Servs.	yes	60910000	jdunck@ufl.edu	DUNCKELMAN,JOHN	23965834213421	Dr	NULL
 Catherine	Cramp	Elizabeth	88491404	ccramp	NULL	Associate Director	yes	04020000	ccramp@ufl.edu	CRAMP,CATHERINE CAT	3522732423	Ms	NULL
 Tiffany	Pineda	D	81203590	tiffany.danielle	NULL	Education Coordinator	yes	11210000	tiffany.danielle@ufl.edu	PINEDA,TIFFANY DANIELLE CHISHO	3522739604	Mrs	NULL
 Maria	Nunes	Cecilia	84744070	nunes	NULL	Assistant Scientist	yes	60150000	nunes@ufl.edu	NUNES,MARIA CECILIA DN	3523921978401	Dr	NULL
-Lyle	Brenner	A	88360970	lbrenner	NULL	Associate Professor	yes	17080100	lbrenner@ufl.edu	BRENNER,LYLE A	3522733272	Dr	NULL
 Samantha	Hilber	A	87138335	sahilber	NULL		yes	16900000	sahilber@ufl.edu	HILBER,SAMANTHA A	3523921685	NULL	NULL
 Roger	Creswell	Leroy	82909640	creswell	NULL	EXT AGT III	yes	57202000	creswell@ufl.edu	CRESWELL,ROGER LEROY	7724683922149	Mr	NULL
 Adrian	Gritz	Michael	80355030	adrian.gritz	NULL	STAFF	yes	14800000	adrian.gritz@ufl.edu	GRITZ,ADRIAN MICHAEL	3522731602	NULL	NULL
@@ -319,12 +232,10 @@ Mark	Mitchell	L	86480670	mlmitche	NULL	Managing Editor, SUBTROPICS	yes	16200000	
 Thomas	Beaver	M	81868160	beavetm	NULL	Professor and Chief	yes	29141700	thomas.beaver@surgery.ufl.edu	BEAVER,THOMAS M	3522735501	Dr	NULL
 Jerome	Gropper	M	89289849	gropjm	NULL	Courtesy Associate Professor	yes	29120000	gropjm@shands.ufl.edu	GROPPER,JEROME M	3522657981	Dr	NULL
 Eric	Sobel	S	86591120	esobel	NULL	ASO PROF& PRDIR	yes	29050300	eric.sobel@medicine.ufl.edu	SOBEL,ERIC SCOTT	3522650139	Dr	NULL
-Holly	Wall	Elizabeth	89270952	mitchem7	NULL	Instructor	yes	18180600	NULL	WALL,HOLLY ELIZABETH	3523921554	NULL	NULL
 Ann	Tsung	Hanyi	81886903	tsungann	NULL		yes	29290100	tsungann@ufl.edu	TSUNG,ANN H	3522655911	NULL	NULL
 Carlton	Davis	G	80843520	cgdavis	NULL	DIS SERV PROF	yes	57140100	cgdavis@ufl.edu	DAVIS,CARLTON G	3523921881313	Dr	NULL
 Barbara	Klingensmith	Lynn	86459300	bklingen	NULL		yes	15030000	NULL	KLINGENSMITH,BARBARA LYNN PHD	8133129675	Dr	NULL
 Song	Mao	NULL	87542343	smao	NULL	Resident in AEGD program	yes	34060500	smao@dental.ufl.edu	MAO,SONG	3056945400	NULL	NULL
-Joe	Spillane	P	87781814	jspillane	NULL		yes	32060300	NULL	SPILLANE,JOE P	NULL	NULL	NULL
 Kevin	Fennelly	Patrick	88479359	kpfennelly	NULL	Associate Professor of Medicine	yes	29051700	Kevin.Fennelly@medicine.ufl.edu	FENNELLY,KEVIN PATRICK	3522737682	NULL	NULL
 Yafa	Levanon	NULL	88511079	NULL	NULL		yes	33030000	yafil@post.tau.ac.il	LEVANON,YAFA	3522736817	NULL	NULL
 Jerry	Sartain	B	82281330	sartain	NULL	PROFESSOR EMERITUS	yes	60210000	sartain@ufl.edu	SARTAIN,JERRY B	3522943111	Dr	NULL
@@ -332,37 +243,27 @@ Emoke	Bodis	NULL	88354570	e.bodis	NULL		yes	29050300	emoke.bodis@aok.pte.hu	BODI
 Debra	Clements	Marie	89606620	dsc1954	NULL	Extension Agent III, 4-H Youth Development	yes	60354047	dsc1954@ufl.edu	CLEMENTS,DEBRA MARIE SELLERS	8637636469	Ms	NULL
 Christopher	Haines	A	89734048	hainesc	NULL	Database Administrator/Data Analyst	yes	07700100	chrisha@housing.ufl.edu	HAINES,CHRIS	352392217111018	NULL	NULL
 Sharon	Tan	Cheng	88158489	sharontan	NULL		yes	11600108	sharontan@ufl.edu	TAN,SHARON C	3522738036	NULL	NULL
-Kristen	Stoner	Lia	84319440	kstoner	NULL	Associate Professor	yes	13030100	kstoner@arts.ufl.edu	STONER,KRISTEN LIA	3522733191	Dr	NULL
 Kathryn	Ivey	Beaty	88491998	kbeaty	NULL		yes	60320000	kbeaty@ufl.edu	IVEY,KATHRYN BEATY	3523922201	NULL	NULL
-Christopher	Richter	E	81869150	crichter	NULL	SHANDS STAFF	yes	32060300	NULL	RICHTER,CHRISTOPHER E	NULL	NULL	NULL
 Bradley	Newman	W	80931105	NULL	NULL		yes	28040000	NULL	NEWMAN,BRADLEY W	NULL	NULL	NULL
 Christa	Zweig	L	87686000	czweig	NULL	OPS PROFESSIONL	yes	60470000	czweig@ufl.edu	ZWEIG,CHRISTA L	3528460639	Ms	NULL
-Betsy	Trobaugh	A	84186450	trobauba	NULL	ASC DIR COOP 4	yes	17080200	betsy.trobaugh@warrington.ufl.edu	TROBAUGH,BETSY A	3522733292	Ms	NULL
 Maria	Nunes	Cecilia	84744070	nunes	NULL	Assistant Scientist	yes	60150000	nunes@ufl.edu	NUNES,MARIA CECILIA DN	3523921978401	Dr	NULL
 Laura	Cash	Rebecca	86539443	lcash	NULL	Program Cty Ext Agt I, 4-H Youth Developmen	yes	60353064	lcash@ufl.edu	CASH,LAURA REBECCA	38682257785409	NULL	NULL
 Denisse	Cancel	NULL	87481940	dcancel	NULL	Coordinator 4, Operations Manager	yes	11800000	dcancel@ufl.edu	CANCEL,DENISSE	3522738265	NULL	NULL
-James	Vincent	D	82569051	jdv	NULL		yes	17030100	jdv@ufl.edu	VINCENT,JAMES D	3522730200	NULL	NULL
 Sunshine	Moss	Day	84869850	sun	NULL	STUDENT	yes	18080000	sun@ufl.edu	MOSS,SUNSHINE DAY	3523920788	NULL	NULL
 Michael	Chang	David	81965301	michaeldchang	NULL	Resident	yes	29080100	NULL	CHANG,MICHAEL	3522650680	Dr	NULL
-Ann	Tsung	Hanyi	81886903	tsungann	NULL		yes	29290100	tsungann@ufl.edu	TSUNG,ANN H	3522655911	NULL	NULL
 Angela	Mcdonough	M	86105770	amcdonough	NULL		yes	13040100	amcdonough@ufl.edu	MCDONOUGH,ANGELA M	3522730500	NULL	NULL
-William	Tilson	L	89380250	wtropic	NULL	PROF & PRG DIR	yes	15020000	wtropic@ufl.edu	TILSON,WILLIAM L	3523924836311	Mr	NULL
-Allison	O'Kell	L	81112363	aokell	NULL	Locum, SAIM	yes	28090000	aokell@ufl.edu	O'KELL,ALLISON L	NULL	NULL	NULL
 Donald	Pemberton	Patterson	85882420	pemberto	NULL	ACTPROGDIR&LECT	yes	18300000	dpemberton@coe.ufl.edu	PEMBERTON,DONALD PATTERSON	3522734108	Dr	NULL
 Elsa	Arellano	C	80899980	NULL	NULL	OPS TECHNICAL	yes	28040000	crissya@ufl.edu	ARELLANO,ELSA C	3523924700	Ms	NULL
 Mark	Stetter	D	85156771	NULL	NULL	Ctsy Ast Prof	yes	28090000	NULL	STETTER,MARK DAVID	NULL	NULL	NULL
 Kevin	Fennelly	Patrick	88479359	kpfennelly	NULL	Associate Professor of Medicine	yes	29051700	Kevin.Fennelly@medicine.ufl.edu	FENNELLY,KEVIN PATRICK	3522737682	NULL	NULL
-Adrienne	Deberry	D	81198168	adri06	NULL		yes	32080200	adri06@ufl.edu	DEBERRY,ADRIENNE D	NULL	NULL	NULL
 Kelsey	Cearley	Rose	88479291	kcearley	NULL		yes	60754100	kelseyc@mail.usf.edu	CEARLEY,KELSEY ROSE	8136340000	NULL	NULL
 Roy	Sweeb	D	80263010	rds	NULL	SR ENG TCH	yes	60733000	rds@ufl.edu	SWEEB,ROY D	8639568712	Mr	863-9564631
-Patricia	Louzon	R	88712290	plouzon	NULL		yes	32060000	NULL	LOUZON,PATRICIA R	3522736228	NULL	NULL
 Bhumi	Rawal	B	85111175	NULL	NULL		yes	29130000	NULL	RAWAL,BHUMI	NULL	NULL	NULL
 Mildred	Maldonado Molina	Merisa	84064608	mmmm	NULL		yes	29240000	mmmm@ufl.edu	MALDONADO-MOLINA,MILDRED M	3522658035	Dr	NULL
 Lauren	Solberg	B	89676450	lbsolberg	NULL	Assistant Professor	yes	29160300	lbsolberg@ufl.edu	SOLBERG,LAUREN B	3522735142	NULL	NULL
 Stephen	Marsh	D	84194720	mars7017	NULL		yes	29200000	mars7017@ufl.edu	MARSH,STEPHEN D	3522739525	NULL	NULL
 Victor	Prima	NULL	80032230	vprima	NULL	Sr. Scientist	yes	29340000	Victor.Prima@urology.ufl.edu	PRIMA,VICTOR	3522738240	Dr	NULL
 Lori	Deitte	A	82765460	ldeitte	NULL	CLIN ASO PROF	yes	29130000	NULL	DEITTE,LORI A	3522650291	Dr	NULL
-Maria	Kelly	Natividad	89925340	mnkelly	NULL	Aso Prg Dir & Clinical Assistant Professor	yes	29091200	kellymn@peds.ufl.edu	KELLY,MARIA NATIVIDAD	3523341340	Dr	NULL
 Erica	Lacher	M	89684410	NULL	NULL	STUDENT ASST	yes	28040000	emlach@ufl.edu	LACHER,ERICA M	3924700	NULL	NULL
 Kerry	Nagee	NULL	81390911	knagee	NULL		yes	30080000	Kerry.Nagee@jax.ufl.edu	NAGEE,KERRY	9042445521	Dr	NULL
 Jane	Keeler	Elizabeth	86152710	jane.keeler	NULL		yes	16309001	jane.keeler@yahoo.com	KEELER,JANE ELIZABETH	NULL	NULL	NULL
@@ -375,24 +276,17 @@ Ka	Wang	W	83028990	kwang	NULL	Psychiatry Faculty	yes	29120000	kwang@ufl.edu	WANG
 Domenico	Santoro	NULL	89989713	dsantoro	NULL	Post Doctoral Associate, Dermatology	yes	28090000	dsantoro@ufl.edu	SANTORO,DOMENICO	3522944782	NULL	352-3926125
 Kristy	Strength	Karen	86296550	kalebkyl	NULL		yes	30090000	NULL	STRENGTH,KRISTY KAREN	9043607022	NULL	NULL
 Albert	Kirby Iii	T	80067200	akirby	NULL	CRD COMP APL 2	yes	10020000	akirby@ufl.edu	KIRBY III,ALBERT T	3528463903	Mr	NULL
-John	Freeman	Glenn	86476370	freemanj	NULL	ASO PROFESSOR	yes	23040000	jfreeman@jou.ufl.edu	FREEMAN,JOHN GLENN	3523920430	Mr	NULL
 Lora	Azzarello Thompson	M	86698440	lazzarel	NULL	INTERN	yes	29240000	lazzarel@ufl.edu	AZZARELLO,LORA M	3522650490	Ms	NULL
-Soraya	Kanakis	J	84411461	skanakis	NULL		yes	32080500	NULL	KANAKIS,SORAYA J	4252814116	NULL	NULL
-Robert	Navarro	P	81515104	rpnavarro	NULL		yes	32050000	rpnavarro@ufl.edu	NAVARRO,ROBERT P	3522735526	NULL	NULL
 Amy	Tobler	L	86108410	amytobler	NULL		yes	29240101	amytobler@gmail.com	TOBLER,AMY L	3522652560	Mrs	NULL
 Tamara	Warner	D	83297930	tamarad	NULL	Research Assistant Professor	yes	29091700	NULL	WARNER,TAMARA D	3523341653	Dr	352-8463937
-Mark	Rush	NULL	80214280	markrush	NULL	PROFESSOR	yes	16030100	mark.rush@warrington.ufl.edu	RUSH,MARK	3523920318	Dr	NULL
 Kathryn	Birmingham	NULL	81540000	kathrynbirmingha	NULL	Lecturer	yes	18070000	kathrynbirmingha@ufl.edu	BIRMINGHAM,KATHRYN M DR	3523922391	Ms	NULL
 Mary	Clark	C	84332104	marycclark	NULL	Adj Leturer	yes	18080000	clarkmh@earthlink.net	CLARK,MARY C	3523920701	NULL	NULL
-Karen	Sando	Renee	89177320	sandok03	NULL		yes	32060000	ksando@cop.ufl.edu	SANDO,KAREN RENEE	3522736224	NULL	NULL
 Sarah	Beachboard	E	85451680	sebeach	NULL	Biological Scientist	yes	28100000	sebeach@ufl.edu	BEACHBOARD,SARAH E	3522944106	Ms	NULL
-Kate	Fogarty	NULL	89836959	kfogarty	NULL	Associate Professor	yes	60320000	kfogarty@ufl.edu	FOGARTY,KATE	3522733527	NULL	NULL
 Stephen	Powell	Joseph	85453510	powells	NULL	PRG DIR & LECT	yes	24010300	powells@law.ufl.edu	POWELL,STEPHEN JOSEPH	3522730857	Mr	352-3921457
 Carol	Fountain	J	86099450	cf1	NULL	EDITOR	yes	60060000	cf1@ufl.edu	FOUNTAIN,CAROL	3522947668	Ms	NULL
 Christopher	Hughes	John	81630160	hughescj	NULL	Systems Architect	yes	29010500	hughescj@ufl.edu	HUGHES,CHRIS	3522658017	Mr	NULL
 Micah	Johnson	NULL	80610338	micahj	NULL	IT EXPERT	yes	24010650	micahj@mail.ufl.edu	JOHNSON,MICAH	3522730758	NULL	NULL
 Benjamin	Weber	NULL	83901465	benjaminweber	NULL		yes	32020000	NULL	WEBER,BENJAMIN	3522737858	NULL	NULL
-Patrick	Aaronson	M	85808160	g8rshark	NULL	OPS TECHNICAL	yes	32080500	aaronson@poison.ufl.edu	AARONSON,PATRICK M	9042444465	Mr	NULL
 Margaret	Hendryx	D	86372390	mhendryx	NULL	Exec. Dir. Dev. & Ext. Affairs	yes	19011700	mhendryx@ufl.edu	HENDRYX,MARGARET D	3523926795	Mrs	NULL
 Sarah	Friedl	Elizabeth	85142388	sefriedl	NULL		yes	60770000	sefriedl@ufl.edu	FRIEDL,SARAH	85087571530	Ms	NULL
 Matthew	Davis	A	83289730	matdavis	NULL	LAW ENF OFF	yes	73030000	matdavis@ufl.edu	DAVIS,MATTHEW A	3523925447	NULL	NULL
