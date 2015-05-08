@@ -67,3 +67,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-05-05** make_person_update_data now using contact shelve.  All cases working as expected.
 * **2015-05-06** write_csv added to vivopump.  Test case added to test_vivopump.
 * **2015-05-07** Now making UF Person Data from source
+* **2015-05-08** Change approach in uf_examples to a chain of filters to get from uf source data to a pump update file

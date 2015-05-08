@@ -29,6 +29,7 @@
     See CHANGELOG.md for history
 
 """
+# TODO: Rewrite as a series of filters.  Then chain the filters from positions_data.csv to uf_person_update.txt
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
@@ -37,7 +38,6 @@ __version__ = "0.02"
 
 from vivopump import vivo_query, read_csv, write_csv
 import shelve
-
 
 
 def report_error(s):
@@ -94,7 +94,7 @@ pay_ufid = get_pay_ufid('position_data.csv',
                         'salary_plan_enum.txt')  # includes only those who qualify for VIVO
 print "PAY UFID", len(pay_ufid)
 
-row_number = 0  # For output, count the umber of rows in the resulting update csv
+row_number = 0  # For output, count the number of rows in the resulting update csv
 all_row = 0
 person_update_data = {}
 contact_keys = contact.keys()
