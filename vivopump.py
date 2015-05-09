@@ -123,6 +123,11 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
     return data
 
 
+def write_csv_fp(fp, data, delimiter='|'):
+    fp.write(delimiter.join(data[1].keys()) + '\n')
+    for key in sorted(data.keys()):
+        fp.write(delimiter.join(data[key].values()) + '\n')
+
 def write_csv(filename, data, delimiter='|'):
     """
     Given a filename, a data structure as produced by read_csv and an optional delimiter, write a file

@@ -26,4 +26,9 @@ The steps below ingest data into UF VIVO
     1.  ufid_exceptions.txt -- ufids that are exempt from automatic update
     1.  uri_exceptions.txt -- uris that are exempt from automatic update
 1. Run create_shelves to update the shelve versions of these files
-1. Additional steps to come
+1. Run the chain of filters to prepare data for the pump
+
+    cat position_data.csv | python ufid_exception_filter.py >smaller_data.txt
+    
+1. Inspect the uf_person_data.txt
+1. Run the pump

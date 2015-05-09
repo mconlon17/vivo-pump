@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, repair_email, repair_phone_number, \
-    comma_space, read_csv_fp, \
+    comma_space, read_csv_fp, write_csv_fp, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 from pump import Pump
@@ -87,6 +87,14 @@ class WriteCSVTestCase(unittest.TestCase):
     def test_write_csv(self):
         data = read_csv("data/buildings.txt", delimiter='\t')
         write_csv("data/buildings_out.txt", data, delimiter='\t')
+        data2 = read_csv("data/buildings.txt", delimiter='\t')
+        self.assertTrue(data == data2)
+
+    def test_write_csv_fp(self):
+        data = read_csv("data/buildings.txt", delimiter='\t')
+        fp = open('data/buildings_out.txt', 'w')
+        write_csv_fp(fp, data, delimiter='\t')
+        fp.close()
         data2 = read_csv("data/buildings.txt", delimiter='\t')
         self.assertTrue(data == data2)
 
