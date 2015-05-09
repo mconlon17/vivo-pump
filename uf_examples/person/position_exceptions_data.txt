@@ -1,0 +1,3 @@
+position_title|comment
+Academic Lump Sum Payment|Not a position
+Ops Lump Sum Payment|Not a position

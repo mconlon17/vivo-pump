@@ -1,0 +1,3 @@
+deptid_pattern|comment
+^73|Police Department
+^1180|Animal Care Services
