@@ -68,4 +68,4 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-05-06** write_csv added to vivopump.  Test case added to test_vivopump.
 * **2015-05-07** Now making UF Person Data from source
 * **2015-05-08** Change approach in uf_examples to a chain of filters to get from uf source data to a pump update file
-* **2015-05-09** Add all shelve files to uf_examples/person. Add read_csv_fp and write_csv_fp, and test cases, for reading and writing csv files from a file pointers rather than a filename.  Supports reading and writing from stdin and stdout.
+* **2015-05-09** Add all shelve files to uf_examples/person. Add read_csv_fp and write_csv_fp, and test cases, for reading and writing csv files from a file pointers rather than a filename.  Supports reading and writing from stdin and stdout. ufid_exception_filter added to uf_examples/person -- removes ufid on an exception list from the data to be processed by the pump
