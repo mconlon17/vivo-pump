@@ -149,6 +149,18 @@ def write_csv(filename, data, delimiter='|'):
             f.write(delimiter.join(data[key].values()) + '\n')
 
 
+def get_vivo_ufid():
+    """
+    Query VIVO and return a list of all the ufid found in VIVO
+    :return: dictionary of uri keyed by ufid
+    """
+    query = "select ?uri ?ufid where {?uri uf:ufid ?ufid .}"
+    a = vivo_query(query)
+    ufid = [x['ufid']['value'] for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(ufid, uri))
+
+
 def read_update_def(filename):
     """
     Read an update_def in JSON format, from a file

@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, repair_email, repair_phone_number, \
-    comma_space, read_csv_fp, write_csv_fp, \
+    comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 from pump import Pump
@@ -116,6 +116,12 @@ class VIVOQueryTestCase(unittest.TestCase):
             WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
             """, debug=True)
             print result
+
+
+class VIVOGetUFIDTestCase(unittest.TestCase):
+    def test_vivo_get_ufid(self):
+        result = get_vivo_ufid()
+        self.assertTrue(len(result) > 0)
 
 
 class WriteUpdateDefTestCase(unittest.TestCase):
