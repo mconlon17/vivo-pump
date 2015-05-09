@@ -64,7 +64,14 @@ class UnicodeDictReader(csv.DictReader):
         self.reader = UnicodeCsvReader(f, encoding=encoding, **kwds)
 
 
-def read_csv(filename, skip=True, delimiter="|"):
+def read_csv(filename, skip=True, delimiter='|'):
+    fp = open(filename, 'rU')
+    data = read_csv_fp(fp, skip, delimiter)
+    fp.close()
+    return data
+
+
+def read_csv_fp(fp, skip=True, delimiter="|"):
     """
     Given a filename, read the CSV file with that name.  We use "|" as a
     separator in CSV files to allow commas to appear in values.
@@ -90,7 +97,7 @@ def read_csv(filename, skip=True, delimiter="|"):
     heading = []
     row_number = 0
     data = {}
-    for row in UnicodeCsvReader(open(filename, 'rU'), delimiter=delimiter):
+    for row in UnicodeCsvReader(fp, delimiter=delimiter):
         i = 0
         for r in row:
             # remove white space fore and aft
@@ -134,7 +141,6 @@ def write_csv(filename, data, delimiter='|'):
         f.write(delimiter.join(data[1].keys()) + '\n')
         for key in sorted(data.keys()):
             f.write(delimiter.join(data[key].values()) + '\n')
-
 
 
 def read_update_def(filename):

@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, repair_email, repair_phone_number, \
-    comma_space, \
+    comma_space, read_csv_fp, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id
 from pump import Pump
@@ -72,6 +72,13 @@ class ReadCSVTestCase(unittest.TestCase):
 
     def test_read_csv_minimal(self):
         data = read_csv("data/minimal.txt", delimiter='|')
+        data_string = "{1: {u'overview': u'None', u'uri': u'http://vivo.ufl.edu/individual/n7023304'}}"
+        self.assertEqual(data_string, str(data))
+
+    def test_read_csv_fp(self):
+        fp = open("data/minimal.txt", 'rU')
+        data = read_csv_fp(fp, delimiter='|')
+        fp.close()
         data_string = "{1: {u'overview': u'None', u'uri': u'http://vivo.ufl.edu/individual/n7023304'}}"
         self.assertEqual(data_string, str(data))
 
