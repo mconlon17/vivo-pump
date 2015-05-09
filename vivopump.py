@@ -124,9 +124,10 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
 
 
 def write_csv_fp(fp, data, delimiter='|'):
-    fp.write(delimiter.join(data[1].keys()) + '\n')
+    fp.write(delimiter.join(data[data.keys()[1]].keys()) + '\n')
     for key in sorted(data.keys()):
         fp.write(delimiter.join(data[key].values()) + '\n')
+
 
 def write_csv(filename, data, delimiter='|'):
     """
@@ -143,7 +144,7 @@ def write_csv(filename, data, delimiter='|'):
     :return:
     """
     with open(filename, 'w') as f:
-        f.write(delimiter.join(data[1].keys()) + '\n')
+        f.write(delimiter.join(data[data.keys()[1]].keys()) + '\n')
         for key in sorted(data.keys()):
             f.write(delimiter.join(data[key].values()) + '\n')
 

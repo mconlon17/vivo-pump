@@ -22,8 +22,8 @@ The steps below ingest data into UF VIVO
     1.  contact_data.txt -- UF directory data for all UFIDs.  2M records
     1.  deptid_exceptions.txt -- patterns of excluding deptids.
     1.  position_exceptions.txt -- these positions will not be included in VIVO.
-    1.  privacy_data.txt -- UF directory privacy flag data for all UFIDs.  2M records
-    1.  ufid_exceptions.txt -- ufids that are exempt from automatic update
+    1.  *privacy_data.txt* -- UF directory privacy flag data for all UFIDs.  2M records
+    1.  *ufid_exceptions.txt* -- ufids that are exempt from automatic update
     1.  uri_exceptions.txt -- uris that are exempt from automatic update
 1. Run create_shelves to update the shelve versions of these files
 1. Run the chain of filters to prepare data for the pump
