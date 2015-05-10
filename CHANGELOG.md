@@ -80,4 +80,5 @@ in VIVO as well as the addition of new people from source.
 * **2015-05-10** merge_filter adds uri and current columns only.  No extraneous columns.  manage_columns_filter.py to 
 add and remove columns added to uf_examples/person.  ufid_exception_filter now marks people as remove.  This will apply
 not only to people in the source, but people in VIVO if the merge filter is run first.  contact_filter.py added to 
-uf_examples/person to add contact data to the pump input file. uri_exception_filter.py added to uf_examples/person.
+uf_examples/person to add contact data to the pump input file. uri_exception_filter.py added to uf_examples/person. Add
+salary_plan_filter to uf_examples/person

@@ -19,30 +19,35 @@ The steps below ingest data into UF VIVO
 
 1. Review and update the following input files
     1.  *position_data.csv* -- the weekly pay list from UF.  All people paid by the university.  Abut 40K records
-    1.  contact_data.txt -- UF directory data for all UFIDs.  2M records
-    1.  deptid_exceptions.txt -- patterns of excluding deptids.
-    1.  position_exceptions.txt -- these positions will not be included in VIVO
-    1.  salary_plan_exception_filter.txt -- salary plans not on this list are excluded from VIVO
+    1.  *contact_data.txt* -- UF directory data for all UFIDs.  2M records
+    1.  *deptid_exceptions.txt* -- patterns of excluding deptids.
+    1.  *salary_plan_enum.txt* -- salary plans indicate the type of person. People must have qualifying
+salary plans to be included.
     1.  *privacy_data.txt* -- UF directory privacy flag data for all UFIDs.  2M records
     1.  *ufid_exceptions.txt* -- ufids that are exempt from automatic update
-    1.  uri_exceptions.txt -- uris that are exempt from automatic update
+    1.  *uri_exceptions.txt* -- uris that are exempt from automatic update
 1. Run create_shelves to update the shelve versions of these files
 1. Run the chain of filters to prepare data for the pump
 
-    cat position_data.csv | manage_columns_filter.py | python merge_filter.py | python ufid_exception_filter.py | 
-    python privacy_exception_filter.py | python contact_filter.py >smaller_data.txt
+    cat position_data.csv | python salary_plan_filter.py | python manage_columns_filter.py | python merge_filter.py | 
+    python privacy_exception_filter.py | python contact_filter.py | python ufid_exception_filter.py |
+    python uri_exception_filter.py >person_update_data.txt
     
 1. Inspect the uf_person_data.txt
 1. Run the pump
 
 ## Filters used
 
-1. Manage_columns_filter -- remove columns in the source that will not be used by the pump.  Add columns to the source
-that will be used.
-1. merge_filter -- merge results from VIVO and Source to gather all UF people and apply source updates to people
+1. salary_plan_filter -- only people having salary plans in the salary_plan_enum.txt file can be added to VIVO
+1. manage_columns_filter -- remove columns in the source that will not be used by the pump.  Add columns to the source
+that will be used
+1. merge_filter -- merge results from VIVO and source to gather all UF people and apply source updates to people
 already in VIVO.  Assigns a uri to source people in VIVO.  Adds values to the current column to indicate whether a 
-particular person is in the source (current) or not.
-1. ufid_exception filter -- marks people as remove
+particular person is in the source (current) or not
+1. privacy_exception_filter.py  -- if privacy flags are set, new person will not be added
+1. contact_filter.py -- contact data columns are added for all ufids found in the contact data
+1. ufid_exception filter -- blanks the data of people on the exception list.  These people will not be updated
+1. uri_exception filter -- blanks the data of people on the exception list.  These people will not be updated
 
 ## Handlers needed
 
