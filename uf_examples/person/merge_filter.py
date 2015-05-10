@@ -47,8 +47,8 @@ for row, data in data_in.items():
         data_out[row]['remove'] = ''
 
 # Some ufids are in VIVO and not in the source data (mostly people who have left the university and are
-# no longer being paid.  These people need to be in the update data so that their contact data and other
-# attributes can be checked and updated.  Their data starts as blank -- no update.  But may gain values
+# no longer being paid).  These people need to be in the update data so that their contact data and other
+# attributes can be checked and updated.  Their data starts as blank -- no update.  But they may gain values
 # through additional filtering operations
 
 
