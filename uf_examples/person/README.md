@@ -30,7 +30,7 @@ The steps below ingest data into UF VIVO
 1. Run the chain of filters to prepare data for the pump
 
     cat position_data.csv | manage_columns_filter.py | python merge_filter.py | python ufid_exception_filter.py | 
-    python privacy_exception_filter.py >smaller_data.txt
+    python privacy_exception_filter.py | python contact_filter.py >smaller_data.txt
     
 1. Inspect the uf_person_data.txt
 1. Run the pump

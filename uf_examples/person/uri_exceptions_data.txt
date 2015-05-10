@@ -1,5 +1,5 @@
 uri|comment
-http://vivo.ufl.edu/individual/n4452|Test A Record in Vagrant.  In UF production, this is a faculty position URI
+http://vivo.school.edu/individual/n4452|Test A Record in Vagrant.  In UF production, this is a faculty position URI
 http://vivo.ufl.edu/individual/n101258|Excluded Department
 http://vivo.ufl.edu/individual/n1058383343|Excluded Department
 http://vivo.ufl.edu/individual/n10732|Excluded Department
