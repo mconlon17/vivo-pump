@@ -16,12 +16,17 @@ import sys
 ufid_exception_shelve = shelve.open('ufid_exceptions.db')
 ufid_exceptions = set(ufid_exception_shelve.keys())  # a set of ufids that will not be in the output
 data_in = read_csv_fp(sys.stdin)
-print >>sys.stderr, len(data_in)
 data_out = {}
+remove_count = 0
 for row, data in data_in.items():
-    if data['UFID'] not in ufid_exceptions:
-        data_out[row] = data
-print >>sys.stderr, len(data_out)
+    new_data = dict(data)
+    if new_data['UFID'] in ufid_exceptions:
+        new_data['remove'] = 'remove'
+        remove_count += 1
+    else:
+        new_data['remove'] = ''
+    data_out[row] = new_data
+print >>sys.stderr, 'Remove count', remove_count
 write_csv_fp(sys.stdout, data_out)
 ufid_exception_shelve.close()
 

@@ -12,12 +12,10 @@
     See CHANGELOG.md for history
 """
 
-# TODO: move the remove column manipulation to another filter.  This filter is about merges.  Remove is not.
-
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.01"
+__version__ = "0.02"
 
 from vivopump import read_csv_fp, write_csv_fp, get_vivo_ufid
 import sys
@@ -39,12 +37,10 @@ for row, data in data_in.items():
         data_out[row] = data
         data_out[row]['uri'] = vivo_ufid[ufid]
         data_out[row]['current'] = 'yes'
-        data_out[row]['remove'] = ''
     else:  # ufid is in source, not in vivo
         data_out[row] = data
         data_out[row]['uri'] = ''
         data_out[row]['current'] = 'yes'
-        data_out[row]['remove'] = ''
 
 # Some ufids are in VIVO and not in the source data (mostly people who have left the university and are
 # no longer being paid).  These people need to be in the update data so that their contact data and other

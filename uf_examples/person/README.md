@@ -29,11 +29,31 @@ The steps below ingest data into UF VIVO
 1. Run create_shelves to update the shelve versions of these files
 1. Run the chain of filters to prepare data for the pump
 
-    cat position_data.csv | python merge_filter.py | python ufid_exception_filter.py | 
+    cat position_data.csv | manage_columns_filter.py | python merge_filter.py | python ufid_exception_filter.py | 
     python privacy_exception_filter.py >smaller_data.txt
     
 1. Inspect the uf_person_data.txt
 1. Run the pump
+
+## Filters used
+
+1. Manage_columns_filter -- remove columns in the source that will not be used by the pump.  Add columns to the source
+that will be used.
+1. merge_filter -- merge results from VIVO and Source to gather all UF people and apply source updates to people
+already in VIVO.  Assigns a uri to source people in VIVO.  Adds values to the current column to indicate whether a 
+particular person is in the source (current) or not.
+1. ufid_exception filter -- marks people as remove
+
+## Handlers needed
+
+Handlers perform tasks complex tasks and provide a way to customize the operation of the Pump.  The UF person ingest
+uses two handlers:
+
+1. deptid_handler -- some deptids are protected from disclosure.  No person may be listed as having such a deptid as 
+their home department, nor may any position appear in these departments.  The handler reads a set of deptid
+patterns, reassigns home departments to parent orgs.
+1. closeout_handler -- when a person has UFCurrentEntity removed, they are closed out by this handler.  Working title
+and contact data are removed and UF positions acquire end dates.
 
 ## How it works
 
@@ -46,4 +66,4 @@ uf.  There are three cases:
     1. The ufid is not in VIVO, is in the source.  Person will be added to VIVO with a new uri.  Person will be marked 
     UFCurrentEntity
 1. Subsequent filters apply to all people, not just those in the current source.  This ensures that if people change
-their privacy flags, they are removed or added to VIVO as needed.
+their privacy flags, or end up on an improved exception list, they are removed or added to VIVO as needed.
