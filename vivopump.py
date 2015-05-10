@@ -124,9 +124,10 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
 
 
 def write_csv_fp(fp, data, delimiter='|'):
-    fp.write(delimiter.join(data[data.keys()[1]].keys()) + '\n')
+    var_names = data[data.keys()[1]].keys()  # create a list of var_names from the first row
+    fp.write(delimiter.join(var_names) + '\n')
     for key in sorted(data.keys()):
-        fp.write(delimiter.join(data[key].values()) + '\n')
+        fp.write(delimiter.join([data[key][x] for x in var_names]) + '\n')
 
 
 def write_csv(filename, data, delimiter='|'):

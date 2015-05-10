@@ -29,7 +29,21 @@ The steps below ingest data into UF VIVO
 1. Run create_shelves to update the shelve versions of these files
 1. Run the chain of filters to prepare data for the pump
 
-    cat position_data.csv | python ufid_exception_filter.py >smaller_data.txt
+    cat position_data.csv | python merge_filter.py | python ufid_exception_filter.py | 
+    python privacy_exception_filter.py >smaller_data.txt
     
 1. Inspect the uf_person_data.txt
 1. Run the pump
+
+## How it works
+
+Several filters shape the data from what UF provides to what is needed for the pump.
+
+1. merge_filter.py extracts the ufid and their uri from VIVO.  These are match-merged to the data coming from
+uf.  There are three cases:
+    1. The ufid is in VIVO and the source.  Data will be updated in VIVO, the person will be marked UFCurrentEntity
+    1. The ufid is in VIVO, but not in the source.  UFCurrentEntity will be removed
+    1. The ufid is not in VIVO, is in the source.  Person will be added to VIVO with a new uri.  Person will be marked 
+    UFCurrentEntity
+1. Subsequent filters apply to all people, not just those in the current source.  This ensures that if people change
+their privacy flags, they are removed or added to VIVO as needed.
