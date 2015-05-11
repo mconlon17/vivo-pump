@@ -6,6 +6,9 @@ Intended to be a weekly process to update information in VIVO about UF People.  
 should be represented.  Some rules (to be expanded)
     1. Qualifying type of person
     1. Does not have privacy flags that would prevent inclusion
+    1. Is in a protected department.  People in these departments need to be shown in their parent departments
+    1. Is not a person protected from edit.  Some people are protected from edit.  They can be indicated by uid or
+uri.  These people are untouched by the person ingest.
 1. The status of people -- UFCurrentEntity asserted if the person has a current relationship with VIVO.  The assertion 
 is removed if the person is not associated with UF.  If the assertion is removed, contact information and preferred
 title is also removed.
@@ -20,7 +23,8 @@ The steps below ingest data into UF VIVO
 1. Review and update the following input files
     1.  *position_data.csv* -- the weekly pay list from UF.  All people paid by the university.  Abut 40K records
     1.  *contact_data.txt* -- UF directory data for all UFIDs.  2M records
-    1.  *deptid_exceptions.txt* -- patterns of excluding deptids.
+    1.  *deptid_exceptions.txt* -- patterns of reassigned deptids.  People with home departments matching these patterns
+re reassigned to home departments as indicated in the file
     1.  *salary_plan_enum.txt* -- salary plans indicate the type of person. People must have qualifying
 salary plans to be included.
     1.  *privacy_data.txt* -- UF directory privacy flag data for all UFIDs.  2M records
@@ -30,10 +34,10 @@ salary plans to be included.
 1. Run the chain of filters to prepare data for the pump
 
     cat position_data.csv | python salary_plan_filter.py | python manage_columns_filter.py | python merge_filter.py | 
-    python privacy_exception_filter.py | python contact_filter.py | python ufid_exception_filter.py |
-    python uri_exception_filter.py >person_update_data.txt
+    python privacy_exception_filter.py | python contact_filter.py | python homedept_assignment_filter.py | 
+    python ufid_exception_filter.py | python uri_exception_filter.py  >person_update_data.txt
     
-1. Inspect the uf_person_data.txt
+1. Inspect the person_update_data.txt
 1. Run the pump
 
 ## Filters used
@@ -46,17 +50,17 @@ already in VIVO.  Assigns a uri to source people in VIVO.  Adds values to the cu
 particular person is in the source (current) or not
 1. privacy_exception_filter.py  -- if privacy flags are set, new person will not be added
 1. contact_filter.py -- contact data columns are added for all ufids found in the contact data
+1. homedept_assignment_filter -- for homedepts matching patterns in the input file, assign to corresponding home
+departments.
 1. ufid_exception filter -- blanks the data of people on the exception list.  These people will not be updated
 1. uri_exception filter -- blanks the data of people on the exception list.  These people will not be updated
+
 
 ## Handlers needed
 
 Handlers perform tasks complex tasks and provide a way to customize the operation of the Pump.  The UF person ingest
-uses two handlers:
+uses one handler:
 
-1. deptid_handler -- some deptids are protected from disclosure.  No person may be listed as having such a deptid as 
-their home department, nor may any position appear in these departments.  The handler reads a set of deptid
-patterns, reassigns home departments to parent orgs.
 1. closeout_handler -- when a person has UFCurrentEntity removed, they are closed out by this handler.  Working title
 and contact data are removed and UF positions acquire end dates.
 

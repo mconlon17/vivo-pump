@@ -82,3 +82,6 @@ add and remove columns added to uf_examples/person.  ufid_exception_filter now m
 not only to people in the source, but people in VIVO if the merge filter is run first.  contact_filter.py added to 
 uf_examples/person to add contact data to the pump input file. uri_exception_filter.py added to uf_examples/person. Add
 salary_plan_filter to uf_examples/person
+* **2015-05-11** Add homedept_assignment_filter.py to uf_examples/person to handle privacy issues resulting from people
+having home departments in restricted in departments.  update the manage_columns_filter to remove vars related to
+positions.

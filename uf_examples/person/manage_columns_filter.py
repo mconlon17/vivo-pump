@@ -21,6 +21,11 @@ for row, data in data_in.items():
     new_data =dict(data)
     del new_data['JOBCODE']
     del new_data['HR_POSITION']
+    del new_data['DEPTID']
+    del new_data['SAL_ADMIN_PLAN']
+    del new_data['START_DATE']
+    del new_data['END_DATE']
+    del new_data['JOBCODE_DESCRIPTION']
     new_data['remove'] = ''
     new_data['uri'] = ''
     new_data['current'] = ''
