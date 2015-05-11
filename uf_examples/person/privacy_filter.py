@@ -15,20 +15,26 @@ import sys
 
 privacy_shelve = shelve.open('privacy.db')
 privacy_ufids = set(privacy_shelve.keys())  # a set of ufids that have privacy information
-print len(privacy_ufids)
 data_in = read_csv_fp(sys.stdin)
-print >>sys.stderr, len(data_in)
+print >>sys.stderr, "Privacy start", len(data_in)
+okay = 0
+protected = 0
+not_found = 0
 data_out = {}
 for row, data in data_in.items():
     if data['UFID'] in privacy_ufids:  # must have privacy information
         if privacy_shelve[data['UFID']]['UF_SECURITY_FLG'] == 'N' and privacy_shelve[data['UFID']][
                 'UF_PROTECT_FLG'] == 'N':
             data_out[row] = data
+            okay += 1
         else:
-            print >>sys.stderr, data['UFID'], 'protected.  Will not be added to VIVO'
+            protected += 1
     else:
-        print >>sys.stderr, data['UFID'], 'not found in privacy data.  Will not be added to VIVO'
-print >>sys.stderr, len(data_out)
+        not_found +=1
+print >>sys.stderr, "Okay", okay
+print >>sys.stderr, "Protected", protected
+print >>sys.stderr, "Not Found", not_found
+print >>sys.stderr, "Privacy End", len(data_out)
 write_csv_fp(sys.stdout, data_out)
 privacy_shelve.close()
 

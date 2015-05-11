@@ -34,8 +34,9 @@ salary plans to be included.
 1. Run the chain of filters to prepare data for the pump
 
     cat position_data.csv | python salary_plan_filter.py | python manage_columns_filter.py | python merge_filter.py | 
-    python privacy_exception_filter.py | python contact_filter.py | python homedept_assignment_filter.py | 
-    python ufid_exception_filter.py | python uri_exception_filter.py  >person_update_data.txt
+    python privacy_filter.py | python contact_filter.py | python homedept_assignment_filter.py | 
+    python not_current_filter.py | python ufid_exception_filter.py | 
+    python uri_exception_filter.py  >person_update_data.txt
     
 1. Inspect the person_update_data.txt
 1. Run the pump
@@ -52,17 +53,15 @@ particular person is in the source (current) or not
 1. contact_filter.py -- contact data columns are added for all ufids found in the contact data
 1. homedept_assignment_filter -- for homedepts matching patterns in the input file, assign to corresponding home
 departments.
+1. not_current_filter -- for people no longer at UF, set their working title and UF contact info to None
 1. ufid_exception filter -- blanks the data of people on the exception list.  These people will not be updated
 1. uri_exception filter -- blanks the data of people on the exception list.  These people will not be updated
 
 
 ## Handlers needed
 
-Handlers perform tasks complex tasks and provide a way to customize the operation of the Pump.  The UF person ingest
-uses one handler:
-
-1. closeout_handler -- when a person has UFCurrentEntity removed, they are closed out by this handler.  Working title
-and contact data are removed and UF positions acquire end dates.
+None.  All data management is performed by the filters.  The resulting file is ready for the pump.  The pump handles 
+all adds, changes and deletes of people and their contact information based on its processing of person_update_data.txt
 
 ## How it works
 
@@ -76,3 +75,6 @@ uf.  There are three cases:
     UFCurrentEntity
 1. Subsequent filters apply to all people, not just those in the current source.  This ensures that if people change
 their privacy flags, or end up on an improved exception list, they are removed or added to VIVO as needed.
+1. Final filters handle people excluded from editing, setting all their values to blank.  This insures that these
+people are not edited by the pump.  We leave them in the person_update_data so that data managers can see them
+and apply manual edits to these records if needed.
