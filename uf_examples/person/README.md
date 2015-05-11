@@ -18,6 +18,7 @@ In previous UF ingests, positions were handled in a single ingest along with peo
 focused on people and a separate ingest focused on positions.
 
 ## Process
+
 The steps below ingest data into UF VIVO
 
 1. Review and update the following input files
