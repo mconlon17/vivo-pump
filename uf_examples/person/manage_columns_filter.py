@@ -19,6 +19,9 @@ print >>sys.stderr, "Columns in", var_names
 data_out = {}
 for row, data in data_in.items():
     new_data =dict(data)
+
+    # Delete these columns
+
     del new_data['JOBCODE']
     del new_data['HR_POSITION']
     del new_data['DEPTID']
@@ -26,6 +29,9 @@ for row, data in data_in.items():
     del new_data['START_DATE']
     del new_data['END_DATE']
     del new_data['JOBCODE_DESCRIPTION']
+
+    # Add these columns
+
     new_data['remove'] = ''
     new_data['uri'] = ''
     new_data['current'] = ''
