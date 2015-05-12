@@ -85,4 +85,5 @@ salary_plan_filter to uf_examples/person
 * **2015-05-11** Add homedept_assignment_filter.py to uf_examples/person to handle privacy issues resulting from people
 having home departments in restricted in departments.  update the manage_columns_filter to remove vars related to
 positions.
-* **2015-05-12** person_update_data.txt added to uf_examples/person. Clean-up unused files from uf_examples/person
+* **2015-05-12** person_update_data.txt added to uf_examples/person. Clean-up unused files from uf_examples/person. 
+Start work on uf_examples/person/person_def.json

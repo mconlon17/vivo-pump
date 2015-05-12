@@ -5,10 +5,10 @@
         "type": "http://xmlns.com/foaf/0.1/Person"
     }, 
     "column_defs": {
-        "deptid": [
+        "first_name": [
             {
                 "predicate": {
-                    "single": true, 
+                    "single": true,
                     "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
                 },
                 "object": {
@@ -16,6 +16,70 @@
                     "literal": true,
                     "datatype": "xsd:integer",
                     "enum": "deptid.txt"
+                }
+            }
+        ],
+        "last_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                },
+                "object": {
+                    "filter": "improve_deptid",
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum": "deptid.txt"
+                }
+            }
+        ],
+        "display_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                },
+                "object": {
+                    "filter": "improve_deptid",
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum": "deptid.txt"
+                }
+            }
+        ],
+        "gatorlink": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#gatorlink"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "uf_business_fax": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#gatorlink"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "middle_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#gatorlink"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ],
@@ -32,113 +96,86 @@
                 }
             }
         ],
-        "job_code": [
+        "uf_business_email": [
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#ufid"
                 },
                 "object": {
-                    "literal": false,
-                    "enum": "add_current_enum.txt"
+                    "literal": true,
+                    "filter": "improve_ufid",
+                    "datatype": "xsd:string"
                 }
             }
-        ]
-        "sal_admin_plan": [
+        ],
+        "name_suffix": [
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#ufid"
                 },
                 "object": {
-                    "literal": false,
-                    "enum": "add_current_enum.txt"
+                    "literal": true,
+                    "filter": "improve_ufid",
+                    "datatype": "xsd:string"
                 }
             }
         ],
-        "start_date": [
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval",
-                    "name": "position_period"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#start"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#DateTimeValue",
-                    "name": "start"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTime"
-                },
-                "object": {
-                    "filter": "improve_date",
-                    "datatype": "xsd:datetime",
-                    "literal": true
-                }
-            }
+        "remove": [
         ],
-        "end_date": [
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval",
-                    "name": "award_period"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#end"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#DateTimeValue",
-                    "name": "end"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTime"
-                },
-                "object": {
-                    "filter": "improve_date",
-                    "datatype": "xsd:datetime",
-                    "literal": true
-                }
-            }
-        ],
-        "job_code_description": [
+        "workingtitle": [
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#ufid"
                 },
                 "object": {
-                    "literal": false,
-                    "enum": "add_current_enum.txt"
+                    "literal": true,
+                    "filter": "improve_ufid",
+                    "datatype": "xsd:string"
                 }
             }
         ],
-        "hr_position": [
+        "current": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#UFCUrrentEntity"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "current_enum.txt"
+                }
+            }
+        ],
+        "home_dept": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                },
+                "object": {
+                    "filter": "improve_deptid",
+                    "literal": false,
+                    "enum": "deptid_enum.txt"
+                }
+            }
+        ],
+        "uf_business_phone": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                },
+                "object": {
+                    "filter": "improve_deptid",
+                    "literal": false,
+                    "enum": "deptid_enum.txt"
+                }
+            }
+        ],
+        "name_prefix": [
             {
                 "predicate": {
                     "single": false,
