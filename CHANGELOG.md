@@ -89,3 +89,4 @@ positions.
 Start work on uf_examples/person/person_def.json
 * **2015-05-13** Start work on uf_examples/positions.  Three filters.
 * **2015-05-14** merge_filter added to uf_examples/positions.
+* **2015-05-15** Remove the current_people example from uf_examples.  This is now handled by uf_examples/person.
