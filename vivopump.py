@@ -162,6 +162,31 @@ def get_vivo_ufid():
     return dict(zip(ufid, uri))
 
 
+def get_vivo_positions():
+    """
+    Query VIVO and return a list of all the positions found in VIVO
+    :return: dictionary of position uri keyed by ufid, deptid, hr_title, start_date
+    """
+    query = """
+    select ?uri ?ufid ?deptid ?hr_title ?start_date
+    where {
+      ?uri a vivo:Position .
+      ?uri vivo:relates ?x . ?x uf:ufid ?ufid .
+      ?uri vivo:relates ?y . ?y uf:deptid ?deptid .
+      ?uri uf:hrTitle ?hr_title .
+      ?uri vivo:dateTimeInterval ?dti . ?dti vivo:start ?start . ?start vivo:dateTimeValue ?start_date .
+    }
+    """
+    a = vivo_query(query)
+    ufids = [x['ufid']['value'] for x in a['results']['bindings']]
+    deptids = [x['deptid']['value'] for x in a['results']['bindings']]
+    hr_titles = [x['hr_title']['value'] for x in a['results']['bindings']]
+    start_dates = [x['start_date']['value'] for x in a['results']['bindings']]
+    keys = [';'.join(x) for x in zip(ufids, deptids, hr_titles, start_dates)]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(keys, uri))
+
+
 def read_update_def(filename):
     """
     Read an update_def in JSON format, from a file
