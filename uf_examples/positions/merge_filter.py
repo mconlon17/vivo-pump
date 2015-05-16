@@ -31,7 +31,7 @@ vivo_positions = get_vivo_positions()  # get dictionary of position uri keyed by
 print >>sys.stderr, 'VIVO positions', len(vivo_positions)
 
 for row, data in data_in.items():
-    key = ';'.join([data['ufid'], data['deptid'], data['hr_title'], data['start_date']])
+    key = ';'.join([data['UFID'], data['DEPTID'], data['hr_title'], data['START_DATE']])
     data_out[row] = data
     if key in vivo_positions:  # ufid is in vivo and source
         data_out[row]['uri'] = vivo_positions[key]

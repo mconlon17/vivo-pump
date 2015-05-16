@@ -11,11 +11,12 @@ to the pump.  The pump uses the data to make the appropriate add, update and clo
 
 1. salary_admin_filter.py limits the data to those salary_admin_plans in salary_plan_enum.txt.  Only these
 positions will  be put in VIVO.
+1. position_exception_filter.py remove positions whose JOBCODE_DESCRIPTIONS are in position_exceptions_data.txt
 1. manage_columns_filter adds, removes and renames columns
 1. merge_filter looks up each position in VIVO.  Found positions will be updated.  New positions will be added.
 
-cat position_data.csv | python salary_plan_filter.txt | python manage_columns_filter.py | 
-python merge_filter.py > position_update_data.txt 
+    cat position_data.csv | python salary_plan_filter.py | python position_exception_filter.py | 
+    python manage_columns_filter.py | python merge_filter.py > position_update_data.txt 
 
 ## Data
 

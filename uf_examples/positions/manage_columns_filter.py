@@ -9,8 +9,7 @@ __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp
-import shelve
+from vivopump import read_csv_fp, write_csv_fp, improve_jobcode_description
 import sys
 
 data_in = read_csv_fp(sys.stdin)
@@ -20,18 +19,19 @@ data_out = {}
 for row, data in data_in.items():
     new_data =dict(data)
 
-    # Delete these columns
-
-    del new_data['JOBCODE']
-    del new_data['HR_POSITION']
-    del new_data['SAL_ADMIN_PLAN']
-
     # Add these columns
 
     new_data['remove'] = ''
     new_data['uri'] = ''
-    new_data['current'] = ''
-    new_data['title'] = new_data['JOBCODE_DESCRIPTION']
+    new_data['title'] = improve_jobcode_description(new_data['JOBCODE_DESCRIPTION'])
+    new_data['hr_title'] = new_data['JOBCODE_DESCRIPTION']
+
+    # Delete these columns
+
+    del new_data['JOBCODE']
+    del new_data['SAL_ADMIN_PLAN']
+    del new_data['HR_POSITION']
+
     data_out[row] = new_data
 var_names = data_out[data_out.keys()[1]].keys()  # create a list of var_names from the first row
 print >>sys.stderr, "Columns out", var_names
