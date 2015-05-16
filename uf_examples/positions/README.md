@@ -14,7 +14,7 @@ positions will  be put in VIVO.
 1. manage_columns_filter adds, removes and renames columns
 1. merge_filter looks up each position in VIVO.  Found positions will be updated.  New positions will be added.
 
-cat position_data.csv | python salary_admin_filter.txt | python manage_columns_filter.py | 
+cat position_data.csv | python salary_plan_filter.txt | python manage_columns_filter.py | 
 python merge_filter.py > position_update_data.txt 
 
 ## Data

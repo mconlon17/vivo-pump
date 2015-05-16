@@ -164,7 +164,8 @@ def get_vivo_ufid():
 
 def get_vivo_positions():
     """
-    Query VIVO and return a list of all the positions found in VIVO
+    Query VIVO and return a list of all the UF positions found in VIVO.  UF positions will
+    have an hrTitle.  Non UF positions will not have this property
     :return: dictionary of position uri keyed by ufid, deptid, hr_title, start_date
     """
     query = """
@@ -619,6 +620,145 @@ def comma_space(s):
     if -1 < k < len(s) - 1 and s[k+1] != " ":
         s = s[0:k] + ', ' + comma_space(s[k+1:])
     return s
+
+
+def improve_jobcode_description(s):
+    """
+    HR uses a series of abbreviations to fit job titles into limited text
+    strings.
+    Here we attempt to reverse the process -- a short title is turned into a
+    longer one for use in position labels
+    """
+
+    s = s.lower()  # convert to lower
+    s = s.title()  # uppercase each word
+    s += ' '       # add a trailing space so we can find these abbreviated
+                   # words throughout the string
+    t = s.replace(", ,", ",")
+    t = t.replace("  ", " ")
+    t = t.replace("/", " @")
+    t = t.replace("/", " @") # might be two slashes in the input
+    t = t.replace(",", " !")
+    t = t.replace("-", " #")
+    t = t.replace("Aca ", "Academic ")
+    t = t.replace("Act ", "Acting ")
+    t = t.replace("Advanc ", "Advanced ")
+    t = t.replace("Adv ", "Advisory ")
+    t = t.replace("Agric ", "Agricultural ")
+    t = t.replace("Alumn Aff ", "Alumni Affairs ")
+    t = t.replace("Anal  ", "Analyst ")
+    t = t.replace("Asst ", "Assistant ")
+    t = t.replace("Ast #R ", "Research Assistant ")
+    t = t.replace("Ast #G ", "Grading Assistant ")
+    t = t.replace("Ast #T ", "Teaching Assistant ")
+    t = t.replace("Ast ", "Assistant ")
+    t = t.replace("Affl ", "Affiliate ")
+    t = t.replace("Aso ", "Associate ")
+    t = t.replace("Asoc ", "Associate ")
+    t = t.replace("Assoc ", "Associate ")
+    t = t.replace("Bio ", "Biological ")
+    t = t.replace("Prof ", "Professor ")
+    t = t.replace("Mstr ", "Master ")
+    t = t.replace("Couns ", "Counselor ")
+    t = t.replace("Adj ", "Adjunct ")
+    t = t.replace("Dist ", "Distinguished ")
+    t = t.replace("Chem", "Chemist")
+    t = t.replace("Chr ", "Chair ")
+    t = t.replace("Cio ", "Chief Information Officer ")
+    t = t.replace("Comm", "Communications")
+    t = t.replace("Coo ", "Chief Operating Officer ")
+    t = t.replace("Coord ", "Coordinator ")
+    t = t.replace("Co ", "Courtesy ")
+    t = t.replace("Clin ", "Clinical ")
+    t = t.replace("Clrk", "Clerk")
+    t = t.replace("Dn ", "Dean ")
+    t = t.replace("Fin", "Financial")
+    t = t.replace("Finan ", "Financial ")
+    t = t.replace("Stu ", "Student ")
+    t = t.replace("Prg ", "Program ")
+    t = t.replace("Dev ", "Development ")
+    t = t.replace("Aff ", "Affiliate ")
+    t = t.replace("Svcs ", "Services ")
+    t = t.replace("Devel ", "Development ")
+    t = t.replace("Tech ", "Technician ")
+    t = t.replace("Progs ", "Programs ")
+    t = t.replace("Facil ", "Facility ")
+    t = t.replace("Hlt", "Health")
+    t = t.replace("Hlth ", "Health ")
+    t = t.replace("Int ", "Interim ")
+    t = t.replace("Sctst ", "Scientist ")
+    t = t.replace("Supp ", "Support ")
+    t = t.replace("Cty ", "County ")
+    t = t.replace("Ext ", "Extension ")
+    t = t.replace("Emer ", "Emeritus ")
+    t = t.replace("Enforce ", "Enforcement ")
+    t = t.replace("Environ ", "Environmental ")
+    t = t.replace("Gen ", "General ")
+    t = t.replace("Grd", "Graduate")
+    t = t.replace("Jnt ", "Joint ")
+    t = t.replace("Jr", "Junior")
+    t = t.replace("Eng ", "Engineer ")
+    t = t.replace("Ctr ", "Center ")
+    t = t.replace("Opr ", "Operator ")
+    t = t.replace("Admin ", "Administrative ")
+    t = t.replace("Dis ", "Distinguished ")
+    t = t.replace("Ser ", "Service ")
+    t = t.replace("Rep ", "Representative ")
+    t = t.replace("Radiol ", "Radiology ")
+    t = t.replace("Technol ", "Technologist ")
+    t = t.replace("Pres ", "President ")
+    t = t.replace("Pres5 ", "President 5 ")
+    t = t.replace("Pres6 ", "President 6 ")
+    t = t.replace("Emin ", "Eminent ")
+    t = t.replace("Cfo ", "Chief Financial Officer ")
+    t = t.replace("Prov ", "Provisional ")
+    t = t.replace("Adm ", "Administrator ")
+    t = t.replace("Info ", "Information ")
+    t = t.replace("It ", "Information Technology ")
+    t = t.replace("Mgr ", "Manager ")
+    t = t.replace("Mgt ", "Management ")
+    t = t.replace("Vis ", "Visiting ")
+    t = t.replace("Phas ", "Phased ")
+    t = t.replace("Prog ", "Programmer ")
+    t = t.replace("Pract ", "Practitioner ")
+    t = t.replace("Registr ", "Registration ")
+    t = t.replace("Rsch ", "Research ")
+    t = t.replace("Rsrh ", "Research ")
+    t = t.replace("Ret ", "Retirement ")
+    t = t.replace("Sch ", "School ")
+    t = t.replace("Sci ", "Scientist ")
+    t = t.replace("Svcs ", "Services ")
+    t = t.replace("Serv ", "Service ")
+    t = t.replace("Tch ", "Teaching ")
+    t = t.replace("Tele ", "Telecommunications ")
+    t = t.replace("Tv ", "TV ")
+    t = t.replace("Univ ", "University ")
+    t = t.replace("Educ ", "Education ")
+    t = t.replace("Crd ", "Coordinator ")
+    t = t.replace("Res ", "Research ")
+    t = t.replace("Dir ", "Director ")
+    t = t.replace("Pky ", "PK Yonge ")
+    t = t.replace("Rcv ", "Receiving ")
+    t = t.replace("Sr ", "Senior ")
+    t = t.replace("Spec ", "Specialist ")
+    t = t.replace("Spc ", "Specialist ")
+    t = t.replace("Spv ", "Supervisor ")
+    t = t.replace("Supv ", "Supervisor ")
+    t = t.replace("Supt ", "Superintendant ")
+    t = t.replace("Stud", "Student")
+    t = t.replace("Pky ", "P. K. Yonge ")
+    t = t.replace("Ii ", "II ")
+    t = t.replace("Iii ", "III ")
+    t = t.replace("Iv ", "IV ")
+    t = t.replace("Communic ", "Communications ")
+    t = t.replace("Postdoc ", "Postdoctoral ")
+    t = t.replace("Tech ", "Technician ")
+    t = t.replace("Vp ", "Vice President ")
+    t = t.replace(" @", "/") # restore /
+    t = t.replace(" @", "/")
+    t = t.replace(" !", ",") # restore ,
+    t = t.replace(" #", "-") # restore -
+    return t[:-1] # Take off the trailing space
 
 
 def improve_title(s):
