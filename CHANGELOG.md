@@ -92,3 +92,4 @@ Start work on uf_examples/person/person_def.json
 * **2015-05-15** Remove the current_people example from uf_examples.  This is now handled by uf_examples/person.
 * **2015-05-16** Add improve_jobcode_description to vivopump.py and three test cases to test_vivopump.py.  Add 
 position_exception_filter.py to uf_examples/positions to handle positions that do not qualify for VIVO.
+* **2015-05-17** Add positions_def.json to uf_examples/positions
