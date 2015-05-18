@@ -1,11 +1,11 @@
 {
     "entity_def": {
         "order_by": "ufid",
-        "entity_sparql": "?uri a uf:UFEntity . ?uri a foaf:Person . ?uri uf:ufid ?ufid .",
-        "type": "http://xmlns.com/foaf/0.1/Person"
+        "entity_sparql": "?uri a vivo:Position . ",
+        "type": "http://vivo.school.edu/ontology/core#"
     }, 
     "column_defs": {
-        "first_name": [
+        "UFID": [
             {
                 "predicate": {
                     "single": true,
@@ -19,7 +19,7 @@
                 }
             }
         ],
-        "last_name": [
+        "DEPTID": [
             {
                 "predicate": {
                     "single": true,
