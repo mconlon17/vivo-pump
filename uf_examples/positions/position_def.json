@@ -9,13 +9,11 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                    "ref": "http://vivo.school.edu/ontology/positionForPerson"
                 },
                 "object": {
-                    "filter": "improve_deptid",
-                    "literal": true,
-                    "datatype": "xsd:integer",
-                    "enum": "deptid.txt"
+                    "literal": false,
+                    "enum": "ufid.txt"
                 }
             }
         ],
@@ -23,12 +21,10 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#homeDept"
+                    "ref": "http://vivo.school.edu/ontology/positionInOrg"
                 },
                 "object": {
-                    "filter": "improve_deptid",
-                    "literal": true,
-                    "datatype": "xsd:integer",
+                    "literal": false,
                     "enum": "deptid.txt"
                 }
             }
@@ -103,7 +99,7 @@
                 }
             }
         ],
-        "hr_title": [
+        "title": [
             {
                 "predicate": {
                     "single": true, 
@@ -118,7 +114,7 @@
         ],
         "remove": [
         ],
-        "JOBCODE_DESCRIPTION": [
+        "hr_title": [
             {
                 "predicate": {
                     "single": true, 

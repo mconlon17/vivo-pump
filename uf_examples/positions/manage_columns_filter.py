@@ -31,6 +31,7 @@ for row, data in data_in.items():
     del new_data['JOBCODE']
     del new_data['SAL_ADMIN_PLAN']
     del new_data['HR_POSITION']
+    del new_data['JOBCODE_DESCRIPTION']
 
     data_out[row] = new_data
 var_names = data_out[data_out.keys()[1]].keys()  # create a list of var_names from the first row
