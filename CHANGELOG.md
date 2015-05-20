@@ -93,4 +93,5 @@ Start work on uf_examples/person/person_def.json
 * **2015-05-16** Add improve_jobcode_description to vivopump.py and three test cases to test_vivopump.py.  Add 
 position_exception_filter.py to uf_examples/positions to handle positions that do not qualify for VIVO.
 * **2015-05-17** Add positions_def.json to uf_examples/positions.
-* **2015-05-18** Additional work on positions_def.json.  Check 1.8
+* **2015-05-18** Additional work on position_def.json.  Check 1.8
+* **2015-05-19** Add position enum -- ufid and deptid -- to uf_examples/positions
