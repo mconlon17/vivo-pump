@@ -1,55 +1,59 @@
 {
     "entity_def": {
         "order_by": "name", 
-        "entity_sparql": "?uri a vivo:FacultyMember . ?uri a uf:UFEntity .",
+        "entity_sparql": "?uri a uf:UFEntity . ?uri a foaf:Person .",
         "type": "http://xmlns.com/foaf/0.1/Person"
     }, 
     "column_defs": {
-        "remove": [],
-        "deptid": [
+        "FIRST_NAME": [
+        ],
+        "LAST_NAME": [
+        ],
+        "DISPLAY_NAME": [
+        ],
+        "GATORLINK": [
+        ],
+        "UF_BUSINESS_FAX": [
+        ],
+        "MIDDLE_NAME": [
+        ],
+        "UFID": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/ufid"
+                },
+                "object": {
+                    "literal": true,
+                    "filter": "improve_ufid",
+                    "datatype": "string"
+                }
+            }
+        ],
+        "UF_BUSINESS_EMAIL": [
+        ],
+        "NAME_SUFFIX": [
+        ],
+        "uri": [
+        ],
+        "remove": [
+        ],
+        "WORKING_TITLE": [
+        ],
+        "current": [
+        ],
+        "HOME_DEPT": [
             {
                 "predicate": {
                     "single": true, 
                     "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/homeDept"
                 }, 
                 "object": {
-                    "literal": false, 
-                    "type": "http://xmlns.com/foaf/0.1/Organization", 
-                    "name": "homedept"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/deptID"
-                }, 
-                "object": {
-                    "literal": true
+                    "literal": false,
+                    "enum": "deptid.txt"
                 }
             }
-        ], 
-        "photo": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
-                    "name": "photouri"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
+        ],
         "types": [
             {
                 "predicate": {
@@ -63,42 +67,13 @@
                 },
                 "object": {
                     "literal": false,
-                    "enum": "data/people_types.txt"
+                    "enum": "people_types.txt"
                 }
             }
         ],
-        "research_areas": [
-            {
-                "predicate": {
-                    "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#hasResearchArea"
-                },
-                "object": {
-                    "literal": false
-                }
-            }
-        ],
-        "name": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
+        "UF_BUSINESS_PHONE": [
         ], 
-        "title": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#preferredTitle"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
+        "NAME_PREFIX": [
         ]
     }
 }
