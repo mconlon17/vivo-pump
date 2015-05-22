@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/positionForPerson"
+                    "ref": "http://vivo.school.edu/ontology/relates"
                 },
                 "object": {
                     "literal": false,
@@ -21,7 +21,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/positionInOrg"
+                    "ref": "http://vivo.school.edu/ontology/relates"
                 },
                 "object": {
                     "literal": false,
@@ -106,7 +106,6 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 }, 
                 "object": {
-                    "filter": "improve_title",
                     "datatype": "xsd:string",
                     "literal": true
                 }
