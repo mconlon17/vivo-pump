@@ -97,3 +97,4 @@ position_exception_filter.py to uf_examples/positions to handle positions that d
 * **2015-05-19** Add position enum -- ufid and deptid -- to uf_examples/positions
 * **2015-05-21** Complete draft of positions_def.json in uf_examples/positions
 * **2015-05-22** people_types.txt, improve person_update_data.txt, improved person_def.json added to uf_examples/person
+* **2015-05-23** Add orgs to uf_examples
