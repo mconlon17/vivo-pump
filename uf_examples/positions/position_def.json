@@ -29,6 +29,18 @@
                 }
             }
         ],
+        "SAL_ADMIN_PLAN": [
+                    {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "salary_plan_enum.txt"
+                }
+            }
+        ]
         "START_DATE": [
             {
                 "predicate": {

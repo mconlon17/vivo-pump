@@ -80,3 +80,5 @@ their privacy flags, or end up on an improved exception list, they are removed o
 people are not edited by the pump.  We leave them in the person_update_data so that data managers can see them
 and apply manual edits to these records if needed.
 1. The pump makes the changes requested in person_update_data.txt
+
+# TODO: Add person type

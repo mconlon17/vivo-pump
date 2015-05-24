@@ -29,7 +29,6 @@ for row, data in data_in.items():
     # Delete these columns
 
     del new_data['JOBCODE']
-    del new_data['SAL_ADMIN_PLAN']
     del new_data['HR_POSITION']
     del new_data['JOBCODE_DESCRIPTION']
 

@@ -24,7 +24,7 @@ Simple list with "ameru" tag.  Name and web address only.
 
 
 # TODO: Update all def files to VIVO 1.6 ontology
-# TODO: Create separate defs for maintaining "all", "uf", "publishers" and "american universities"
+# TODO: Create separate defs for maintaining "all," "uf," "publishers," and "american universities"
 # TODO: Add rdf:type for american universities to UF VIVO
 # TODO: Add python script for producing american universities web insert
 

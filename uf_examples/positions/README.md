@@ -30,3 +30,5 @@ Six data fields are needed:
 1. hr job title -- un edited description.  This is kept in a uf extension.  It is used as a primary key to
 match positions data in the source to positions in vivo
 
+# TODO: Add position type
+
