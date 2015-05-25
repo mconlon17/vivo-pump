@@ -162,6 +162,18 @@ def get_vivo_ufid():
     return dict(zip(ufid, uri))
 
 
+def get_vivo_ccn():
+    """
+    Query VIVO and return a list of all the ccn found in VIVO
+    :return: dictionary of uri keyed by ccn
+    """
+    query = "select ?uri ?ccn where {?uri uf:ccn ?ccn .}"
+    a = vivo_query(query)
+    ccn = [x['ccn']['value'] for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(ccn, uri))
+
+
 def get_vivo_positions():
     """
     Query VIVO and return a list of all the UF positions found in VIVO.  UF positions will
@@ -620,6 +632,53 @@ def comma_space(s):
     if -1 < k < len(s) - 1 and s[k+1] != " ":
         s = s[0:k] + ', ' + comma_space(s[k+1:])
     return s
+
+
+def improve_course_title(s):
+    """
+    The Office of the University Registrar at UF uses a series of abbreviations to fit course titles into limited text
+    strings.
+    Here we attempt to reverse the process -- a short title is turned into a
+    longer one for use in labels
+    """
+
+    s = s.lower()  # convert to lower
+    s = s.title()  # uppercase each word
+    s += ' '       # add a trailing space so we can find these abbreviated
+                   # words throughout the string
+    t = s.replace(", ,", ",")
+    t = t.replace("  ", " ")
+    t = t.replace("/", " @")
+    t = t.replace("/", " @")  # might be two slashes in the input
+    t = t.replace(",", " !")
+    t = t.replace("-", " #")
+    t = t.replace("Adv ", "Advanced ")
+    t = t.replace("Const ", "Construction ")
+    t = t.replace("Des ", "Design ")
+    t = t.replace("Ed ", "Education ")
+    t = t.replace("Educ ", "Education ")
+    t = t.replace("Hist ", "History ")
+    t = t.replace("Hlthcare ", "Healthcare ")
+    t = t.replace("In ", "in ")
+    t = t.replace("Intermed ", "Intermediate ")
+    t = t.replace("Intro ", "Introduction ")
+    t = t.replace("Meth ", "Methods ")
+    t = t.replace("Res ", "Research ")
+    t = t.replace("Stat ", "Statistics ")
+    t = t.replace("Of ", "of ")
+    t = t.replace("Prac ", "Practice ")
+    t = t.replace("Prin ", "Principles ")
+    t = t.replace("Princ ", "Principles ")
+    t = t.replace("Spec ", "Special ")
+    t = t.replace("To ", "to ")
+    t = t.replace("Top ", "Topics ")
+    t = t.replace(" @", "/")  # restore /
+    t = t.replace(" @", "/")  # restore /
+    t = t.replace(" !", ",")  # restore ,
+    t = t.replace(" !", ",")  # restore ,
+    t = t.replace(" #", "-")  # restore -
+    t = comma_space(t.strip())
+    return t[0].upper() + t[1:]
 
 
 def improve_jobcode_description(s):

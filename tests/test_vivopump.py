@@ -13,7 +13,7 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
-    improve_jobcode_description
+    improve_jobcode_description, improve_course_title
 from pump import Pump
 
 # TODO: Add test cases for each data scenario (six to go) -- easy
@@ -190,6 +190,26 @@ class ImproveJobCodeDescriptionTestCase(unittest.TestCase):
         out_title = improve_jobcode_description(in_title)
         print out_title
         self.assertEqual(u"Coordinator Technician Program 2", out_title)
+
+
+class ImproveCourseTitleTestCase(unittest.TestCase):
+    def test_simple_substitution(self):
+        in_title = "INTRO TO STAT"
+        out_title = improve_course_title(in_title)
+        print out_title
+        self.assertEqual("Introduction to Statistics", out_title)
+
+    def test_substitution_at_end(self):
+        in_title = "HIST OF HLTHCARE"
+        out_title = improve_course_title(in_title)
+        print out_title
+        self.assertEqual("History of Healthcare", out_title)
+
+    def test_preserve_unicode(self):
+        in_title = u"SPEC TOP IN PRAC"
+        out_title = improve_course_title(in_title)
+        print out_title
+        self.assertEqual(u"Special Topics in Practice", out_title)
 
 class ImproveTitleTestCase(unittest.TestCase):
     def test_simple_substitution(self):

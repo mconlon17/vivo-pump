@@ -1,0 +1,33 @@
+{
+    "entity_def": {
+        "order_by": "ccn",
+        "entity_sparql": "?uri a vivo:Course . ",
+        "type": "http://vivo.school.edu/ontology/core#Course"
+    },
+    "column_defs": {
+        "ccn": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#ccn"
+                },
+                "object": {
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ],
+        "title": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

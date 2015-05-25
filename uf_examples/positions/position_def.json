@@ -2,7 +2,7 @@
     "entity_def": {
         "order_by": "ufid",
         "entity_sparql": "?uri a vivo:Position . ",
-        "type": "http://vivo.school.edu/ontology/core#"
+        "type": "http://vivo.school.edu/ontology/core#Position"
     }, 
     "column_defs": {
         "UFID": [

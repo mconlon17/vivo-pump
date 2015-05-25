@@ -99,3 +99,8 @@ position_exception_filter.py to uf_examples/positions to handle positions that d
 * **2015-05-22** people_types.txt, improve person_update_data.txt, improved person_def.json added to uf_examples/person
 * **2015-05-23** Add orgs to uf_examples
 * **2015-05-24** Improve README and TODO.  Improve uf_examples/position_def.json
+* **2015-05-25** Support for courses.  See uf_examples/courses.  Three new filters -- manage_columns_filter, 
+unique_ccn_filter, merge_filter.  One new vivopump function get_vivo_ccn for finding courses by common course number 
+(UF primary key).  One new text improvement function -- improve_course_title for improving abbreviations in course 
+titles.  New test cases for improve_course_title.  Course data, course_def.json, README added to uf_examples/courses.  
+Filters work as expected.  Ready for upload test to VIVO.
