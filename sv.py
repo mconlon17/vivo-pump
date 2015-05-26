@@ -17,34 +17,41 @@
 
 """
 
-#TODO: Fully implement sv.cfg.  All parms available on command line or cfg.  specify cfg name as parm
+
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
-__version__ = "0.03"
+__version__ = "0.04"
 
 from datetime import datetime
 import argparse
 import ConfigParser
 from pump import Pump
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-a", "--action", help="desired action.  get = get data from VIVO.  update = update VIVO "
+                    "data from a spreadsheet. summarize = show def summary. serialize = serial version of the pump",
+                    default="summarize", nargs='?')
+parser.add_argument("-d", "--defname", help="name of definition file", default="pump_def.json", nargs="?")
+
+parser.add_argument("-f", "--filename", help="name of file containing data to be updated in VIVO",
+                    default="pump_data.txt", nargs='?')
+parser.add_argument("-c", "--config", help="name of file containing config data.  Config data overrides program defaults. "
+                    "Command line overrides config file values.",
+                    default="sv.cfg", nargs='?')
+parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
+parser.add_argument("-nf", "--nofilters", action="store_false", help="turn off filters")
+args = parser.parse_args()
+print args
+
 config = ConfigParser.ConfigParser()
-config.read('sv.cfg')
+config.read(args.config)
 for section in config.sections():
     for item, val in config.items(section):
         print section, item, val
 
-parser = argparse.ArgumentParser()
-parser.add_argument("action", help="desired action.  get = get data from VIVO.  update = update VIVO "
-                                   "data from a spreadsheet", default="summarize", nargs='?')
-parser.add_argument("defname", help="name of definition file", default="pump_def.json", nargs="?")
-
-parser.add_argument("filename", help="name of spreadsheet containing data to be updated in VIVO",
-                    default="pump_data.txt", nargs='?')
-parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
-parser.add_argument("-nf", "--nofilters", action="store_false", help="turn off filters")
-args = parser.parse_args()
+#TODO: Fully implement sv.cfg.  All parms available on command line or cfg.  specify cfg name as parm
 
 p = Pump(args.defname)
 

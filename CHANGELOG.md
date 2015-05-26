@@ -104,3 +104,4 @@ unique_ccn_filter, merge_filter.  One new vivopump function get_vivo_ccn for fin
 (UF primary key).  One new text improvement function -- improve_course_title for improving abbreviations in course 
 titles.  New test cases for improve_course_title.  Course data, course_def.json, README added to uf_examples/courses.  
 Filters work as expected.  Ready for upload test to VIVO.
+* **2015-05-26** sv 0.4 all command line parameters are keyword.  No positional parameters.
