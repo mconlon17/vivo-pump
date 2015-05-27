@@ -105,3 +105,4 @@ unique_ccn_filter, merge_filter.  One new vivopump function get_vivo_ccn for fin
 titles.  New test cases for improve_course_title.  Course data, course_def.json, README added to uf_examples/courses.  
 Filters work as expected.  Ready for upload test to VIVO.
 * **2015-05-26** sv 0.4 all command line parameters are keyword.  No positional parameters.
+* **2015-05-27** sv 0.5 Reconcile config and command line.  Set defaults via dict.
