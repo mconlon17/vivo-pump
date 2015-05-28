@@ -39,6 +39,7 @@ from pump import Pump
 #  and a third parameter's value might come from the config file, overwriting the program default and left unspecified
 #  on the command line
 
+print datetime.now(), "Start"
 program_defaults = {
     'action': 'summarize',
     'defn': 'pump_def.json',
@@ -72,26 +73,37 @@ parser.add_argument("-c", "--config", help="name of file containing config data.
 parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
 parser.add_argument("-n", "--nofilters", action="store_true", help="turn off filters")
 args = parser.parse_args()
-print vars(args)
 
 if args.config is None:
     args.config = program_defaults['config']
+
+# Config file values overwrite program defaults
 
 config = ConfigParser.ConfigParser()
 conf = {}
 config.read(args.config)  # Read the config file from the config file specified in the command line args
 for section in config.sections():
     for name, val in config.items(section):
-        print section, name, val
-        conf[name] = val
+        program_defaults[name] = val
 
+# Non null command line values overwrite the config file values
 
-#TODO: Fully implement sv.cfg.  All parms available on command line or cfg.  specify cfg name as parm
+for name, val in vars(args).items():
+    if val is not None:
+        program_defaults[name] = val
 
-p = Pump(args.defn)
+# And put the final values back in args
 
-print datetime.now(), "Start"
+for name, val in program_defaults.items():
+    vars(args)[name] = val
+
+#TODO: Fully implement sv.cfg. args values used throughout the software
+
+p = Pump(args.defn, args.src, args.verbose, args.nofilters)
+
 p.verbose = args.verbose
+if args.verbose:
+    print datetime.now(), "Arguments\n", vars(args)
 p.filters = args.nofilters
 if args.action == 'get':
     n_rows = p.get(args.src)

@@ -106,3 +106,6 @@ titles.  New test cases for improve_course_title.  Course data, course_def.json,
 Filters work as expected.  Ready for upload test to VIVO.
 * **2015-05-26** sv 0.4 all command line parameters are keyword.  No positional parameters.
 * **2015-05-27** sv 0.5 Reconcile config and command line.  Set defaults via dict.
+* **2015-05-28** sv 0.6 All arguments are now defaulted in the software, can be supplied via the cofig, which
+overwrites software defaults, and finally on the command line which overwrites both.  Each argument can be set in
+any of these three ways.  Six arguments are currently implemented.  Six arguments to be implemented.

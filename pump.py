@@ -45,7 +45,8 @@ class Pump(object):
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
 
-    def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False):
+    def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False,
+                 nofilters=False):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
@@ -55,7 +56,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
-        self.filter = True  # default is to use the filters.  Set to False to skip the filters
+        self.filter = not nofilters
         self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
         self.verbose = verbose
