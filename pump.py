@@ -46,7 +46,7 @@ class Pump(object):
     """
 
     def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False,
-                 nofilters=False):
+                 nofilters=False, inter='\t', intra=';'):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
@@ -60,6 +60,8 @@ class Pump(object):
         self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
         self.verbose = verbose
+        self.intra = intra
+        self.inter = inter
         self.out_filename = out_filename
 
     def __str__(self):
@@ -90,16 +92,17 @@ class Pump(object):
             str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
         return result
 
-    def get(self, filename):
+    def get(self, filename, inter='\t', intra=';'):
         """
         :param filename: Name of the file to write.
         :return: count of the number of rows in the table
         :rtype: int
         """
         self.out_filename = filename
-        return do_get(self.update_def, self.enum, self.out_filename, do_filter=self.filter, debug=self.verbose)
+        return do_get(self.update_def, self.enum, self.out_filename, inter, intra, do_filter=self.filter,
+                      debug=self.verbose)
 
-    def update(self, filename=None):
+    def update(self, filename=None, inter='\t', intra=';'):
         """
         Prepare for the update, getting graph and update_data.  Then do the update, producing triples
         """
@@ -107,12 +110,15 @@ class Pump(object):
         from rdflib import Graph
         import logging
 
+        self.intra = intra
+        self.inter = inter
+
         logging.basicConfig(level=logging.INFO)
         if filename is not None:
             self.out_filename = filename
 
         if self.update_data is None:  # Test for injection
-            self.update_data = read_csv(self.out_filename, delimiter='\t')
+            self.update_data = read_csv(self.out_filename, delimiter=inter)
 
         # Narrow the update_def to include only columns that appear in the update_data
 
@@ -192,7 +198,7 @@ class Pump(object):
                     vivo_objs = {}
                     for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
                         vivo_objs[unicode(o)] = o
-                    column_values = prepare_column_values(data_update[column_name], step_def, self.enum, row,
+                    column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
                                                           column_name)
                     if self.verbose:
                         print row, column_name, column_values, uri, vivo_objs
@@ -309,7 +315,7 @@ def make_get_data(update_def, result_set):
     return data
 
 
-def do_get(update_def, enum, filename, do_filter=True, debug=True):
+def do_get(update_def, enum, filename, inter='\t', intra=';', do_filter=True, debug=True):
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
     editing using an editor or spreadsheet, and suitable for use by do_update.
@@ -334,7 +340,7 @@ def do_get(update_def, enum, filename, do_filter=True, debug=True):
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
     columns = ['uri'] + update_def['entity_def']['order']
-    outfile.write('\t'.join(columns))
+    outfile.write(inter.join(columns))
     outfile.write('\n')
 
     for uri in sorted(data.keys()):
@@ -379,10 +385,10 @@ def do_get(update_def, enum, filename, do_filter=True, debug=True):
 
                 # Gather values into a delimited string
 
-                val = ';'.join(data[uri][name])
+                val = intra.join(data[uri][name])
                 outfile.write(val.replace('\r', ' ').replace('\n', ' ').replace('\t', ' '))
             if name != columns[len(columns) - 1]:
-                outfile.write('\t')
+                outfile.write(inter)
         outfile.write('\n')
 
     outfile.close()
@@ -390,7 +396,7 @@ def do_get(update_def, enum, filename, do_filter=True, debug=True):
     return len(data)
 
 
-def prepare_column_values(update_string, step_def, enum, row, column_name, debug=False):
+def prepare_column_values(update_string, intra, step_def, enum, row, column_name, debug=False):
     """
     Given the string of data from the update file, the step definition, the row and column name of the
     update_string in the update file, enumerations and filters, prepare the column values and return them
@@ -403,7 +409,7 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     if step_def['predicate']['single']:
         column_values = [update_string]
     else:
-        column_values = update_string.split(';')
+        column_values = update_string.split(intra)
         if 'include' in step_def['predicate']:
             column_values += step_def['predicate']['include']
 
@@ -427,7 +433,7 @@ def prepare_column_values(update_string, step_def, enum, row, column_name, debug
     return column_values
 
 
-def do_three_step_update(row, column_name, uri, path, data_update, enum, update_graph, debug=False):
+def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, update_graph, debug=False):
     """
     Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
     end objects as necessary to perform the requested update
@@ -459,7 +465,7 @@ def do_three_step_update(row, column_name, uri, path, data_update, enum, update_
             update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
                                                             datatype=step_def['object'].get('datatype', None),
                                                             lang=step_def['object'].get('lang', None))))
-        do_two_step_update(row, column_name, step_uri, path[1:], data_update, enum, update_graph, debug=debug)
+        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph, debug=debug)
 
     elif step_def['predicate']['single']:
 
@@ -470,11 +476,11 @@ def do_three_step_update(row, column_name, uri, path, data_update, enum, update_
         if len(step_uris) > 1:
             print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
                 step_uris, "using", step_uri
-        do_two_step_update(row, column_name, step_uri, path[1:], data_update, enum, update_graph, debug=debug)
+        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph, debug=debug)
     return None
 
 
-def do_two_step_update(row, column_name, uri, column_def, data_update, enum, update_graph, debug=False):
+def do_two_step_update(row, column_name, uri, column_def, data_update, intra, enum, update_graph, debug=False):
     """
     In a two step update, identify intermediate entity that might need to be created, and end path objects that might
     not yet exist or might need to be created.  Cases are:
@@ -508,7 +514,7 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, enum, upd
         step_def = column_def[1]
         vivo_objs = {unicode(o): o for s, p, o in
                      update_graph.triples((uri, step_def['predicate']['ref'], None))}
-        column_values = prepare_column_values(data_update[column_name], step_def, enum, row,
+        column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
                       debug=debug)
@@ -525,7 +531,7 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, enum, upd
         step_def = column_def[1]
         vivo_objs = {unicode(o): o for s, p, o in
                      update_graph.triples((uri, step_def['predicate']['ref'], None))}
-        column_values = prepare_column_values(data_update[column_name], step_def, enum, row,
+        column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
                       debug=debug)
@@ -630,6 +636,7 @@ def load_enum(update_def):
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
+    #TODO: Add support for inter argument
     from vivopump import read_csv
 #    import os
     enum = {}

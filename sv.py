@@ -106,10 +106,10 @@ if args.verbose:
     print datetime.now(), "Arguments\n", vars(args)
 p.filters = args.nofilters
 if args.action == 'get':
-    n_rows = p.get(args.src)
+    n_rows = p.get(args.src, args.inter, args.intra)
     print datetime.now(), n_rows, "rows in", args.filename
 elif args.action == 'update':
-    [n_add, n_sub] = p.update(args.src)
+    [n_add, n_sub] = p.update(args.src, args.inter, args.intra)
     print datetime.now(), len(n_add), 'triples to add', len(n_sub), 'triples to sub'
 elif args.action == 'summarize':
     print p.summarize()

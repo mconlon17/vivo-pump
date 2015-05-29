@@ -109,3 +109,4 @@ Filters work as expected.  Ready for upload test to VIVO.
 * **2015-05-28** sv 0.6 All arguments are now defaulted in the software, can be supplied via the cofig, which
 overwrites software defaults, and finally on the command line which overwrites both.  Each argument can be set in
 any of these three ways.  Six arguments are currently implemented.  Six arguments to be implemented.
+* **2015-05-29** args inter and intra are fed through the pump to get and update to read_csv and do_get
