@@ -99,7 +99,9 @@ for name, val in program_defaults.items():
 
 #TODO: Fully implement sv.cfg. args values used throughout the software
 
-p = Pump(args.defn, args.src, args.verbose, args.nofilters)
+p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'query_uri': args.queryuri,
+                                                                         'username': args.pwd, 'password': args.pwd},
+         uri_prefix=args.uriprefix)
 
 p.verbose = args.verbose
 if args.verbose:

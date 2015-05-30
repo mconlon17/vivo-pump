@@ -21,9 +21,15 @@ from pump import Pump
 
 
 class NewUriTestCase(unittest.TestCase):
-    def test_new_uri(self):
+    def test_new_uri_default(self):
         uri = new_uri()
+        print uri
         self.assertTrue(len(uri) > 0)
+
+    def test_new_uri_prefix(self):
+        uri = new_uri(uri_prefix='http://my.vivo.edu/individual/')
+        print uri
+        self.assertTrue(uri.startswith('http://my.vivo.edu'))
 
 
 class ReadUpdateDefTestCase(unittest.TestCase):

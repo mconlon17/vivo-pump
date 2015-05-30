@@ -46,7 +46,10 @@ class Pump(object):
     """
 
     def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False,
-                 nofilters=False, inter='\t', intra=';'):
+                 nofilters=False, inter='\t', intra=';',
+                 query_parms={'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery',
+                              'username': 'vivo_root@school.edu', 'password': 'v;bisons'},
+                 uri_prefix='http://vivo.school.edu/individual/'):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
@@ -63,6 +66,8 @@ class Pump(object):
         self.intra = intra
         self.inter = inter
         self.out_filename = out_filename
+        self.query_parms = query_parms
+        self.uri_prefix = uri_prefix
 
     def __str__(self):
         """
@@ -167,7 +172,7 @@ class Pump(object):
                 # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
                 # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
-                uri_string = new_uri()
+                uri_string = new_uri(self.uri_prefix)
                 if self.verbose:
                     print "Adding an entity for row", row, ".  Will be added at", uri_string
                 uri = URIRef(uri_string)
@@ -188,10 +193,10 @@ class Pump(object):
                         "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
-                    do_three_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
+                    do_three_step_update(row, column_name, uri, self.uri_prefix, data_update, self.enum, self.update_graph,
                                          debug=False)
                 elif len(column_def) == 2:
-                    do_two_step_update(row, column_name, uri, column_def, data_update, self.enum, self.update_graph,
+                    do_two_step_update(row, column_name, uri, self.uri_prefix, data_update, self.enum, self.update_graph,
                                        debug=False)
                 elif len(column_def) == 1:
                     step_def = column_def[0]
@@ -433,7 +438,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_values
 
 
-def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, update_graph, debug=False):
+def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, intra, enum, update_graph, debug=False):
     """
     Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
     end objects as necessary to perform the requested update
@@ -458,14 +463,15 @@ def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, 
 
         # VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
 
-        step_uri = URIRef(new_uri())
+        step_uri = URIRef(new_uri(uri_prefix))
         update_graph.add((uri, step_def['predicate']['ref'], step_uri))
         update_graph.add((step_uri, RDF.type, step_def['object']['type']))
         if 'label' in step_def['object']:
             update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
                                                             datatype=step_def['object'].get('datatype', None),
                                                             lang=step_def['object'].get('lang', None))))
-        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph, debug=debug)
+        do_two_step_update(row, column_name, step_uri, uri_prefix, path[1:], data_update, intra, enum, update_graph,
+                           debug=debug)
 
     elif step_def['predicate']['single']:
 
@@ -476,11 +482,13 @@ def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, 
         if len(step_uris) > 1:
             print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
                 step_uris, "using", step_uri
-        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph, debug=debug)
+        do_two_step_update(row, column_name, step_uri, uri_prefix, path[1:], data_update, intra, enum, update_graph,
+                           debug=debug)
     return None
 
 
-def do_two_step_update(row, column_name, uri, column_def, data_update, intra, enum, update_graph, debug=False):
+def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_update, intra, enum, update_graph,
+                       debug=False):
     """
     In a two step update, identify intermediate entity that might need to be created, and end path objects that might
     not yet exist or might need to be created.  Cases are:
@@ -503,7 +511,7 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, intra, en
 
         # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
 
-        step_uri = URIRef(new_uri())
+        step_uri = URIRef(new_uri(uri_prefix))
         update_graph.add((uri, step_def['predicate']['ref'], step_uri))
         update_graph.add((step_uri, RDF.type, step_def['object']['type']))
         if 'label' in step_def['object']:

@@ -5,12 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "BSD 3-Clause license"
-__version__ = "1.00"
-
-VIVO_URI_PREFIX = "http://vivo.ufl.edu/individual/"
-#VIVO_QUERY_URI = "http://sparql.vivo.ufl.edu/VIVO/sparql"
-#VIVO_QUERY_URI = "http://localhost:5820/vivo/query"
-VIVO_QUERY_URI = 'http://localhost:8080/vivo/api/sparqlQuery'
+__version__ = "1.01"
 
 import csv
 import urllib
@@ -390,13 +385,13 @@ def get_graph(update_def, debug=False):
     return a
 
 
-def new_uri():
+def new_uri(uri_prefix='http://vivo.school.edu/individual/'):
     """
     Find an unused VIVO URI with the specified VIVO_URI_PREFIX
     """
     test_uri = ""
     while True:
-        test_uri = VIVO_URI_PREFIX + str(random.randint(1, 9999999999))
+        test_uri = uri_prefix + str(random.randint(1, 9999999999))
         query = """
             SELECT (COUNT(?z) AS ?count) WHERE {
             <""" + test_uri + """> ?y ?z
@@ -407,7 +402,8 @@ def new_uri():
     return test_uri
 
 
-def vivo_query(query, baseurl=VIVO_QUERY_URI, debug=False):
+def vivo_query(query, parms={'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery',
+               'username': 'vivo_root@school.edu', 'password': 'v;bisons'}, debug=False):
     """
     A new VIVO query function using SparqlWrapper.  Tested with Stardog, UF VIVO and Dbpedia
     :param query: SPARQL query.  VIVO PREFIX will be added
@@ -433,89 +429,20 @@ def vivo_query(query, baseurl=VIVO_QUERY_URI, debug=False):
     from SPARQLWrapper import SPARQLWrapper, JSON
     if debug:
         print "In vivo_query"
-        print baseurl
+        print parms['query_uri']
         print query
-    sparql = SPARQLWrapper(baseurl)
+    sparql = SPARQLWrapper(parms['query_uri'])
     new_query = prefix + query
     sparql.setQuery(new_query)
     if debug:
         print "after setQuery"
         print new_query
     sparql.setReturnFormat(JSON)
-    sparql.addParameter("email", "vivo_root@school.edu")
-    sparql.addParameter("password", "v;bisons")
-    sparql.setCredentials("vivo_root@school.edu", "v;bisons")
+    sparql.addParameter("email", parms['username'])
+    sparql.addParameter("password", parms['password'])
+    sparql.setCredentials(parms['username'], parms['password'])
     results = sparql.query().convert()
     return results
-
-
-def old_vivo_query(query, baseurl=VIVO_QUERY_URI,
-               return_format="application/sparql-results+json", debug=False):
-    """
-    Given a SPARQL query string return result set of the SPARQL query.  Default
-    is to call the UF VIVO SPARQL endpoint and receive results in JSON format
-    """
-
-    prefix = """
-    PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-    PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-    PREFIX swrl:  <http://www.w3.org/2003/11/swrl#>
-    PREFIX swrlb: <http://www.w3.org/2003/11/swrlb#>
-    PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-    PREFIX bibo: <http://purl.org/ontology/bibo/>
-    PREFIX c4o: <http://purl.org/spar/c4o/>
-    PREFIX cito: <http://purl.org/spar/cito/>
-    PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-    PREFIX fabio: <http://purl.org/spar/fabio/>
-    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX geo: <http://aims.fao.org/aos/geopolitical.owl#>
-    PREFIX obo: <http://purl.obolibrary.org/obo/>
-    PREFIX ocrer: <http://purl.org/net/OCRe/research.owl#>
-    PREFIX ocresd: <http://purl.org/net/OCRe/study_design.owl#>
-    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    PREFIX ufVivo: <http://vivo.ufl.edu/ontology/vivo-ufl/>
-    PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
-    PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-    PREFIX vivo: <http://vivoweb.org/ontology/core#>
-    PREFIX scires: <http://vivoweb.org/ontology/scientific-research#>
-    """
-    params = {
-        "default-graph": "",
-        "should-sponge": "soft",
-        "query": prefix + query,
-        "debug": "on",
-        "timeout": "7000",  # 7 seconds
-        "format": return_format,
-        "save": "display",
-        "fname": ""
-    }
-    query_part = urllib.urlencode(params)
-    response = ""
-    if debug:
-        print "Base URL", baseurl
-        print "Query:", query_part
-    start = 2.0
-    retries = 10
-    count = 0
-    while True:
-        try:
-            response = urllib.urlopen(baseurl, query_part).read()
-            break
-        except KeyError:
-            count += 1
-            if count > retries:
-                break
-            sleep_seconds = start ** count
-            print "<!-- Failed query. Count = " + str(count) + \
-                  " Will sleep now for " + str(sleep_seconds) + \
-                  " seconds and retry -->"
-            time.sleep(sleep_seconds)  # increase the wait time with each retry
-    try:
-        return json.loads(response)
-    except KeyError:
-        return None
 
 
 def write_update_def(update_def, filename):
