@@ -113,3 +113,4 @@ any of these three ways.  Six arguments are currently implemented.  Six argument
 * **2015-05-30** Removed old_vivo_query from vivompump.py.  Replaced use of global variables with passed parameters.
 new_uri() updated to use parms.  Test cases updated.  vivo_query() updated to use parms.  Test cases updated.  
 query_parms passed through the pump.  uri_prefix passes through the pump.  All parms now passed to all consumers.
+* **2016-06-01** Running sv on uf_examples/orgs

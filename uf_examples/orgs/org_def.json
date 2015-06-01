@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "type": "http://xmlns.com/foaf/0.1/Organization", 
-        "entity_sparql": "?uri a foaf:Organization . ?uri a ufVivo:UFEntity . ", 
+        "entity_sparql": "?uri a foaf:Organization . ?uri a uf:UFEntity . ",
         "order_by": "name"
     }, 
     "column_defs": {
@@ -146,7 +146,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/isni"
+                    "ref": "http://vivo.school.edu/ontology/uf-extensions#isni"
                 }, 
                 "object": {
                     "literal": true
@@ -245,7 +245,7 @@
                 }, 
                 "object": {
                     "literal": false, 
-                    "enum": "org_types"
+                    "enum": "org_types.txt"
                 }
             }
         ], 

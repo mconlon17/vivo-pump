@@ -97,19 +97,17 @@ for name, val in vars(args).items():
 for name, val in program_defaults.items():
     vars(args)[name] = val
 
-#TODO: Fully implement sv.cfg. args values used throughout the software
+if args.verbose:
+    print datetime.now(), "Arguments\n", vars(args)
 
 p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'query_uri': args.queryuri,
                                                                          'username': args.pwd, 'password': args.pwd},
          uri_prefix=args.uriprefix)
 
-p.verbose = args.verbose
-if args.verbose:
-    print datetime.now(), "Arguments\n", vars(args)
 p.filters = args.nofilters
 if args.action == 'get':
     n_rows = p.get(args.src, args.inter, args.intra)
-    print datetime.now(), n_rows, "rows in", args.filename
+    print datetime.now(), n_rows, "rows in", args.src
 elif args.action == 'update':
     [n_add, n_sub] = p.update(args.src, args.inter, args.intra)
     print datetime.now(), len(n_add), 'triples to add', len(n_sub), 'triples to sub'
