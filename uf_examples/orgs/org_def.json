@@ -135,7 +135,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#subOrganizationWithin"
+                    "ref": "http://purl.obolibrary.org/obo/BFO_0000050"
                 }, 
                 "object": {
                     "literal": false
@@ -146,7 +146,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivo.school.edu/ontology/uf-extensions#isni"
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#isni"
                 }, 
                 "object": {
                     "literal": true
@@ -265,7 +265,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#hasSuccessorOrg"
+                    "ref": "http://vivoweb.org/ontology/core#hasSuccessorOrganization"
                 }, 
                 "object": {
                     "literal": false

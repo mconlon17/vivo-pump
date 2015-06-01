@@ -1,2 +1,5 @@
 uri	type	city	name	zip	home_page	address1	address2	within	isni	abbreviation	phone	state	photo	overview	email	successor
-http://vivo.school.edu/individual/n8013	http://purl.obolibrary.org/obo/BFO_0000002;http://purl.obolibrary.org/obo/BFO_0000001;http://purl.obolibrary.org/obo/BFO_0000004;university;agent;thing;http://vivo.school.edu/ontology/uf-extension#UFEntity;org		University of Florida													
+http://vivo.school.edu/individual/n2232	uf;center;agent;thing;bfo1;org;bfo2;bfo4		Center for Instructional and Research Computing Activities							CIRCA						http://vivo.school.edu/individual/n2596
+http://vivo.school.edu/individual/n2596	uf;thing;agent;department;bfo1;org;bfo2;bfo4		Academic Technology													
+http://vivo.school.edu/individual/n6310	uf;institute;agent;thing;bfo1;org;bfo2;bfo4		Clinical and Translational Science Institute					http://vivo.school.edu/individual/n8013	1111 2222 3333 4444	CTSI			IMG_2663.jpg	The CTSI is a big research institute at UF doing lots of important things.		
+http://vivo.school.edu/individual/n8013	uf;university;agent;thing;bfo1;org;bfo2;bfo4		University of Florida						0000 0004 1936 8091							
