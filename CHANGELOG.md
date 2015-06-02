@@ -110,7 +110,7 @@ Filters work as expected.  Ready for upload test to VIVO.
 overwrites software defaults, and finally on the command line which overwrites both.  Each argument can be set in
 any of these three ways.  Six arguments are currently implemented.  Six arguments to be implemented.
 * **2015-05-29** args inter and intra are fed through the pump to get and update to read_csv and do_get
-* **2015-05-30** Removed old_vivo_query from vivompump.py.  Replaced use of global variables with passed parameters.
+* **2015-05-30** Removed old_vivo_query from vivopump.py.  Replaced use of global variables with passed parameters.
 new_uri() updated to use parms.  Test cases updated.  vivo_query() updated to use parms.  Test cases updated.  
 query_parms passed through the pump.  uri_prefix passes through the pump.  All parms now passed to all consumers.
-* **2016-06-01** Running sv on uf_examples/orgs. Begin converting orgs_def to VIVO-ISF 1.6
+* **2016-06-01** Running sv on uf_examples/orgs. orgs_def to VIVO-ISF 1.6 (all but phone numbers)

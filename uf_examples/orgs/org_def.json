@@ -9,25 +9,70 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address",
-                    "label": "Mailing Address",
-                    "name": "address"
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#addressCity"
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#locality"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
-        ], 
+        ],
+        "zip": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#postalCode"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
         "name": [
             {
                 "predicate": {
@@ -38,99 +83,110 @@
                     "literal": true
                 }
             }
-        ], 
-        "zip": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address",
-                    "label": "Mailing Address",
-                    "name": "address"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#addressPostalCode"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
+        ],
         "home_page": [
             {
                 "predicate": {
-                    "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#webpage"
-                }, 
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
                 "object": {
-                    "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#URLLink", 
-                    "name": "weburi", 
-                    "label": "Home Page"
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
                 }
-            }, 
+            },
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#linkURI"
-                }, 
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasURL"
+                },
                 "object": {
-                    "literal": true
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#URL",
+                    "label": "Home Page",
+                    "name": "url"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#url"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
-        ], 
-        "address1": [
+        ],
+        "email": [
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
-                }, 
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
                 "object": {
-                    "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address",
-                    "label": "Mailing Address",
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasEmail"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Email",
+                    "name": "vcardemail"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#email"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "street_address": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Address",
                     "name": "address"
                 }
-            }, 
+            },
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#address1"
-                }, 
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#streetAddress"
+                },
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
-        ], 
-        "address2": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address",
-                    "label": "Mailing Address",
-                    "name": "address"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#address2"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
+        ],
         "within": [
             {
                 "predicate": {
@@ -163,42 +219,143 @@
                     "literal": true
                 }
             }
-        ], 
+        ],
         "phone": [
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#primaryPhone"
-                }, 
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
                 "object": {
-                    "filter": "repair_phone_number", 
-                    "literal": true
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasTelephone"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Telephone",
+                    "name": "telephone_number"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#telephone"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
-        ], 
+        ],
+        "fax": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasTelephone"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Fax",
+                    "name": "fax_number"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#telephone"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
         "state": [
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#mailingAddress"
-                }, 
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
                 "object": {
-                    "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#Address",
-                    "label": "Mailing Address",
-                    "name": "address"
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
                 }
-            }, 
+            },
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#addressState"
-                }, 
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                },
                 "object": {
-                    "literal": true
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#region"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
-        ], 
+        ],
+        "country": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#country"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
         "photo": [
             {
                 "predicate": {
@@ -248,19 +405,7 @@
                     "enum": "org_types.txt"
                 }
             }
-        ], 
-        "email": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#primaryEmail"
-                }, 
-                "object": {
-                    "filter": "repair_email", 
-                    "literal": true
-                }
-            }
-        ], 
+        ],
         "successor": [
             {
                 "predicate": {
