@@ -114,3 +114,5 @@ any of these three ways.  Six arguments are currently implemented.  Six argument
 new_uri() updated to use parms.  Test cases updated.  vivo_query() updated to use parms.  Test cases updated.  
 query_parms passed through the pump.  uri_prefix passes through the pump.  All parms now passed to all consumers.
 * **2016-06-01** Running sv on uf_examples/orgs. orgs_def to VIVO-ISF 1.6 (all but phone numbers)
+* **2016-06-02** Investigating minor surgery needed to add a type assertion to the get query to isolate types of phone
+numbers and create a unique path to value

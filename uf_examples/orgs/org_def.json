@@ -268,7 +268,7 @@
             },
             {
                 "predicate": {
-                    "single": false,
+                    "single": single,
                     "ref": "http://www.w3.org/2006/vcard/ns#hasTelephone"
                 },
                 "object": {
