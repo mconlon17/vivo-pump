@@ -239,7 +239,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Telephone",
+                    "qualifier": "NOT EXISTS { ?telephone_number a <http://www.w3.org/2006/vcard/ns#Code> }",
                     "name": "telephone_number"
                 }
             },
@@ -268,12 +268,12 @@
             },
             {
                 "predicate": {
-                    "single": single,
+                    "single": false,
                     "ref": "http://www.w3.org/2006/vcard/ns#hasTelephone"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Fax",
+                    "qualifier": "?fax_number a <http://www.w3.org/2006/vcard/ns#Fax> .",
                     "name": "fax_number"
                 }
             },

@@ -116,3 +116,7 @@ query_parms passed through the pump.  uri_prefix passes through the pump.  All p
 * **2016-06-01** Running sv on uf_examples/orgs. orgs_def to VIVO-ISF 1.6 (all but phone numbers)
 * **2016-06-02** Investigating minor surgery needed to add a type assertion to the get query to isolate types of phone
 numbers and create a unique path to value
+* **2016-06-06** Support "qualifier", a new attribute in step definitions.  In some situations the path from the entity 
+to the value may not be uniquely defined through a predicate path unless additional qualification is provided.
+qualifiers are SPARQL statements which can be inserted to qualify any "object" in a path.  See 
+uf_examples/orgs/org_def.json

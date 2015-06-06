@@ -252,6 +252,10 @@ def make_get_query(update_def):
     See do_get
     :return: a sparql query string
     """
+
+    def add_qualifiers(input_path):
+        return ' '.join([x['object'].get('qualifier', '') for x in input_path])
+
     front_query = 'SELECT ?uri ?' + ' ?'.join(update_def['column_defs'].keys()) + '\nWHERE {\n    ' + \
                   update_def['entity_def']['entity_sparql'] + '\n'
 
@@ -261,17 +265,17 @@ def make_get_query(update_def):
     for name, path in update_def['column_defs'].items():
         middle_query += '    OPTIONAL {  ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
         if len(path) == 1:
-            middle_query += name + ' . }\n'
+            middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
         else:
             middle_query += path[0]['object']['name'] + ' . ?' +\
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
             if len(path) == 2:
-                middle_query += name + ' . }\n'
+                middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
             else:
                 middle_query += path[1]['object']['name'] + ' . ?' +\
                     path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
                 if len(path) == 3:
-                    middle_query += name + ' . }\n'
+                    middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
                 else:
                     raise PathLengthException('Path length >3 not supported in do_get')
 
