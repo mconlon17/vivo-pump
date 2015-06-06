@@ -572,6 +572,9 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     :param update_graph: rdflib graph of the triples in the update set
     :return: None
     """
+
+    # TODO: Use qualifiers to identify triples to be updated
+
     from rdflib import Literal, URIRef
 
     # Compare VIVO to Input and update as indicated
@@ -648,7 +651,6 @@ def load_enum(update_def):
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
-    #TODO: Add support for inter argument
     from vivopump import read_csv
 #    import os
     enum = {}
