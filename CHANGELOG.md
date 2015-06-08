@@ -113,10 +113,11 @@ any of these three ways.  Six arguments are currently implemented.  Six argument
 * **2015-05-30** Removed old_vivo_query from vivopump.py.  Replaced use of global variables with passed parameters.
 new_uri() updated to use parms.  Test cases updated.  vivo_query() updated to use parms.  Test cases updated.  
 query_parms passed through the pump.  uri_prefix passes through the pump.  All parms now passed to all consumers.
-* **2016-06-01** Running sv on uf_examples/orgs. orgs_def to VIVO-ISF 1.6 (all but phone numbers)
-* **2016-06-02** Investigating minor surgery needed to add a type assertion to the get query to isolate types of phone
+* **2015-06-01** Running sv on uf_examples/orgs. orgs_def to VIVO-ISF 1.6 (all but phone numbers)
+* **2015-06-02** Investigating minor surgery needed to add a type assertion to the get query to isolate types of phone
 numbers and create a unique path to value
-* **2016-06-06** Support "qualifier", a new attribute in step definitions.  In some situations the path from the entity 
+* **2015-06-06** Support "qualifier", a new attribute in step definitions.  In some situations the path from the entity 
 to the value may not be uniquely defined through a predicate path unless additional qualification is provided.
 qualifiers are SPARQL statements which can be inserted to qualify any "object" in a path.  See 
 uf_examples/orgs/org_def.json
+* **2015-06-08** Repair calling sequences for do_two and do_three step updates

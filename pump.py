@@ -193,10 +193,11 @@ class Pump(object):
                         "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
-                    do_three_step_update(row, column_name, uri, self.uri_prefix, data_update, self.enum, self.update_graph,
-                                         debug=False)
+                    do_three_step_update(row, column_name, uri, self.uri_prefix, column_def, data_update, self.intra,
+                                         self.enum, self.update_graph, debug=False)
                 elif len(column_def) == 2:
-                    do_two_step_update(row, column_name, uri, self.uri_prefix, data_update, self.enum, self.update_graph,
+                    do_two_step_update(row, column_name, uri, self.uri_prefix, column_def, data_update, self.intra,
+                                       self.enum, self.update_graph,
                                        debug=False)
                 elif len(column_def) == 1:
                     step_def = column_def[0]
