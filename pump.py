@@ -128,7 +128,6 @@ class Pump(object):
         # Narrow the update_def to include only columns that appear in the update_data
 
         new_update_columns = {}
-        print self.update_data
         for name, path in self.update_def['column_defs'].items():
             if name in self.update_data[1].keys():
                 new_update_columns[name] = path
@@ -462,7 +461,6 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
 
     step_def = path[0]
     step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
-    print "Step_uris", step_uris
 
     if len(step_uris) == 0:
 
@@ -483,7 +481,6 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
         # VIVO has 1 or more values for first intermediate, so we need to see if the predicate is expected to be single
 
         step_uri = step_uris[0]
-        print "found step_uri", step_uri
         if len(step_uris) > 1:
             print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
                 step_uris, "using", step_uri
@@ -551,7 +548,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
 
     else:
         # TODO: Implement set compare through multiple intermediate case -- medium
-        print 'WARNING: Updating multi-step predicates not yet implemented'
+        print 'WARNING: Updating multi-valued multi-step predicates not yet implemented'
     return None
 
 

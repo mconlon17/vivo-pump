@@ -120,4 +120,4 @@ numbers and create a unique path to value
 to the value may not be uniquely defined through a predicate path unless additional qualification is provided.
 qualifiers are SPARQL statements which can be inserted to qualify any "object" in a path.  See 
 uf_examples/orgs/org_def.json
-* **2015-06-08** Repair calling sequences for do_two and do_three step updates
+* **2015-06-08** Repair calling sequences for do_two and do_three step updates. Remove extraneous prints.
