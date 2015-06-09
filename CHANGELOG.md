@@ -121,3 +121,4 @@ to the value may not be uniquely defined through a predicate path unless additio
 qualifiers are SPARQL statements which can be inserted to qualify any "object" in a path.  See 
 uf_examples/orgs/org_def.json
 * **2015-06-08** Repair calling sequences for do_two and do_three step updates. Remove extraneous prints.
+* **2015-06-09** Minor update to org_def for testing.  Will need to use qualifiers in update to identify specific URI
