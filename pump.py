@@ -442,6 +442,18 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_values
 
 
+def get_step_triples(update_graph, uri, step_def):
+    """
+    Return the triples matching the criteria defined in the current step of an update
+    :param update_graph: the update graph
+    :param uri: uri of the entity currently the subject of an update
+    :param step_def: step definition from update_def
+    :return:  Graph containing one or more triples that match the criteria for the step
+    """
+    g = update_graph.triples((uri, step_def['predicate']['ref'], None))
+    return g
+
+
 def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, intra, enum, update_graph, debug=False):
     """
     Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
@@ -460,7 +472,7 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
     from vivopump import new_uri
 
     step_def = path[0]
-    step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def)]
 
     if len(step_uris) == 0:
 
@@ -507,7 +519,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
 
     # Find all the intermediate entities in VIVO and then process cases related to count and defs
 
-    step_uris = [o for s, p, o in update_graph.triples((uri, step_def['predicate']['ref'], None))]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def)]
 
     if len(step_uris) == 0:
 
@@ -522,8 +534,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
                                                             lang=step_def['object'].get('lang', None))))
         uri = step_uri
         step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in
-                     update_graph.triples((uri, step_def['predicate']['ref'], None))}
+        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def)}
         column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
@@ -539,8 +550,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
                 step_uris, "using", step_uri
         uri = step_uri
         step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in
-                     update_graph.triples((uri, step_def['predicate']['ref'], None))}
+        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def)}
         column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,

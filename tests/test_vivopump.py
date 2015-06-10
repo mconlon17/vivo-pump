@@ -18,6 +18,7 @@ from pump import Pump
 
 # TODO: Add test cases for each data scenario (six to go) -- easy
 # TODO: Add test cases for each command line scenario in sv -- easy
+# TODO: Use params to the Pump() to set for test VIVO scenario -- medium
 
 
 class NewUriTestCase(unittest.TestCase):
@@ -216,6 +217,7 @@ class ImproveCourseTitleTestCase(unittest.TestCase):
         out_title = improve_course_title(in_title)
         print out_title
         self.assertEqual(u"Special Topics in Practice", out_title)
+
 
 class ImproveTitleTestCase(unittest.TestCase):
     def test_simple_substitution(self):
