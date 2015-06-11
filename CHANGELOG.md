@@ -123,3 +123,5 @@ uf_examples/orgs/org_def.json
 * **2015-06-08** Repair calling sequences for do_two and do_three step updates. Remove extraneous prints.
 * **2015-06-09** Minor update to org_def for testing.  Will need to use qualifiers in update to identify specific URI
 * **2015-06-10** get_step_triples() used in update to get the triples corresponding to the current step.
+* **2015-06-11** Some preliminary code in get_step_triples for qualifiers.  WIll need more triples in the update graph
+to process qualifiers -- the update graph currently does not containt the triples needed to make the step queries.

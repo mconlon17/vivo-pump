@@ -450,7 +450,17 @@ def get_step_triples(update_graph, uri, step_def):
     :param step_def: step definition from update_def
     :return:  Graph containing one or more triples that match the criteria for the step
     """
+    from rdflib import Graph
     g = update_graph.triples((uri, step_def['predicate']['ref'], None))
+    # if 'qualifier' in step_def['predicate']:
+    #     result = g.query("""
+    #     CONSTRUCT ?s ?p ?o
+    #     WHERE {
+    #     }
+    #     """)
+    #     g = Graph()
+    #     for (s, p, o) in result:
+    #         g.add((s, p, o))
     return g
 
 
