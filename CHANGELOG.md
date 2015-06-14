@@ -125,4 +125,5 @@ uf_examples/orgs/org_def.json
 * **2015-06-10** get_step_triples() used in update to get the triples corresponding to the current step.
 * **2015-06-11** Some preliminary code in get_step_triples for qualifiers.  WIll need more triples in the update graph
 to process qualifiers -- the update graph currently does not contain the triples needed to make the step queries.
-* **2015-06-12** Start work on cities examples.  Data and README.  
+* **2015-06-12** Start work on cities examples.  Data and README.
+* **2015-06-13** Draft cities_def.json and states_enum.txt

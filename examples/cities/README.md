@@ -19,6 +19,5 @@ your VIVO.  See [World Geodetic System](https://en.wikipedia.org/wiki/World_Geod
 ## To Do
 
 1. Create a states_enum.txt for getting states.
-1. Create a merge filter to look up cities.
 1. Write cities_def.son for round tripping the data using the pump.
 1. Add the code and data to Simple VIVO as one of the delivered data packages.
