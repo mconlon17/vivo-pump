@@ -110,6 +110,9 @@ if args.action == 'get':
     print datetime.now(), n_rows, "rows in", args.src
 elif args.action == 'update':
     [n_add, n_sub] = p.update(args.src, args.inter, args.intra)
+
+    # TODO: Put the add and sub graphs in files based on a new command line parameter value -- easy
+
     print datetime.now(), len(n_add), 'triples to add', len(n_sub), 'triples to sub'
 elif args.action == 'summarize':
     print p.summarize()

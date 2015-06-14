@@ -111,6 +111,8 @@ class Pump(object):
         """
         Prepare for the update, getting graph and update_data.  Then do the update, producing triples
         """
+        # TODO: Return the Add and Sub graphs -- easy
+
         from vivopump import read_csv, get_graph
         from rdflib import Graph
         import logging
