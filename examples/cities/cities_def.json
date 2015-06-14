@@ -12,7 +12,7 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 },
                 "object": {
-                    "literal": true
+                    "literal": true,
                     "lang": "en-US"
                 }
             }
