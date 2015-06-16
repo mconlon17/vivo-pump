@@ -128,3 +128,4 @@ to process qualifiers -- the update graph currently does not contain the triples
 * **2015-06-12** Start work on cities examples.  Data and README.
 * **2015-06-13** Draft cities_def.json and states_enum.txt
 * **2015-06-14** Dc and Pr added to cities data.  Generating RDF.
+* **2015-06-15** cities.rdf
