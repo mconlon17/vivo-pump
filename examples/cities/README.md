@@ -23,7 +23,7 @@ your VIVO.  See [World Geodetic System](https://en.wikipedia.org/wiki/World_Geod
 1. Add District of Columbia to your VIVO as a State or Province.  Add to state_enum.txt
 1. Add Puerto Rico to your VIVO as a State of Province.  Add to state_enum.txt
 1. Add the cities to your VIVO using an sv update as shown below:
-    python ../../sv.py -v -a update -s cities.txt  -d cities_def.json
+    python ../../sv.py -v -a update -s cities.txt -r cities -d cities_def.json
 1. Add the resulting RDF to VIVO
 1. To see your city data and manage it in the future, you can do an sv get (optional):
-        python ../../sv.py -v -a update -s mycities.txt  -d cities_def.json
+        python ../../sv.py -v -a get -s mycities.txt  -d cities_def.json
