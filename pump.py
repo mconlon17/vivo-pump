@@ -111,7 +111,6 @@ class Pump(object):
         """
         Prepare for the update, getting graph and update_data.  Then do the update, producing triples
         """
-        # TODO: Return the Add and Sub graphs -- easy
 
         from vivopump import read_csv, get_graph
         from rdflib import Graph
@@ -593,7 +592,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     :return: None
     """
 
-    # TODO: Use qualifiers to identify triples to be updated
+    # TODO: Use qualifiers to identify triples to be updated -- difficult
 
     from rdflib import Literal, URIRef
 

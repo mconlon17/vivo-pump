@@ -47,6 +47,7 @@ program_defaults = {
     'intra': ';',
     'username': 'vivo_root@school.edu',
     'pwd': 'password',
+    'rdfprefix': 'pump',
     'queryuri': 'http://localhost:80/vivo/api/sparql_query',
     'uriprefix': 'http://vivo.school.edu/individual/',
     'src': 'pump_data.txt',
@@ -66,6 +67,7 @@ parser.add_argument("-j", "--intra", help="intrafield delimiter", nargs="?")
 parser.add_argument("-u", "--username", help="username for API", nargs="?")
 parser.add_argument("-p", "--pwd", help="password for API", nargs="?")
 parser.add_argument("-q", "--queryuri", help="URI for API", nargs="?")
+parser.add_argument("-r", "--rdfprefix", help="RDF prefix", nargs="?")
 parser.add_argument("-x", "--uriprefix", help="URI prefix", nargs="?")
 parser.add_argument("-s", "--src", help="name of source file containing data to be updated in VIVO", nargs='?')
 parser.add_argument("-c", "--config", help="name of file containing config data.  Config data overrides program"
@@ -109,11 +111,15 @@ if args.action == 'get':
     n_rows = p.get(args.src, args.inter, args.intra)
     print datetime.now(), n_rows, "rows in", args.src
 elif args.action == 'update':
-    [n_add, n_sub] = p.update(args.src, args.inter, args.intra)
+    [add_graph, sub_graph] = p.update(args.src, args.inter, args.intra)
+    add_file = open(args.rdfprefix + '_add.rdf', 'w')
+    print >>add_file, add_graph.serialize(format='nt')
+    add_file.close()
+    sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
+    print >>sub_file, sub_graph.serialize(format='nt')
+    sub_file.close()
 
-    # TODO: Put the add and sub graphs in files based on a new command line parameter value -- easy
-
-    print datetime.now(), len(n_add), 'triples to add', len(n_sub), 'triples to sub'
+    print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
 elif args.action == 'summarize':
     print p.summarize()
 elif args.action == 'serialize':
