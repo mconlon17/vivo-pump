@@ -17,7 +17,7 @@ a single, opaque, random, eight digit number.
 ## Positions
 
 UF updates positions for people each week.  Positions are linked to people by UFID, and to UF organizations by
-DEPTID (see below).
+deptid (see above).
 
 ## Grants
 
