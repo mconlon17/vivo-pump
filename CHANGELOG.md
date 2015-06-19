@@ -131,3 +131,4 @@ to process qualifiers -- the update graph currently does not contain the triples
 * **2015-06-15** cities.rdf looks good
 * **2015-06-16** rdfprefix.  add and sub output files
 * **2015-06-17** cities example is complete.  mycities.txt is the output of the get, demonstrating round tripping.
+* **2015-06-18** More work on orgs
