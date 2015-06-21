@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "type": "http://xmlns.com/foaf/0.1/Organization", 
-        "entity_sparql": "?uri a foaf:Organization . ?uri a uf:UFEntity . ",
+        "entity_sparql": "?uri a foaf:Organization .",
         "order_by": "name"
     }, 
     "column_defs": {
