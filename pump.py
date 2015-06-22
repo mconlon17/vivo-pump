@@ -593,6 +593,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     """
 
     # TODO: Use qualifiers to identify triples to be updated -- difficult
+    # TODO: Add label as a qualifier -- medium
 
     from rdflib import Literal, URIRef
 
