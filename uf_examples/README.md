@@ -17,19 +17,45 @@ a single, opaque, random, eight digit number.
 ## Positions
 
 UF updates positions for people each week.  Positions are linked to people by UFID, and to UF organizations by
-deptid (see above).
+deptid (see above).  Data from the university enterprise data warehouse is replicated and used to update both people
+and positions.
 
 ## Grants
 
+Grant award data are added to VIVO each week from files created from Division of Sponsored Research data resources. All
+grants are reviewed and updated each week.  Titles, award amounts and investigator lists (PI list, Co-Inv list,
+Investigator list) are updated as necessary.  UF does not record total award amounts -- only amount received.  This
+means that award amounts in VIVO may start at zero and be updated as funds are made available by the sponsor.
+
 Coming soon
 
-## Publications 
+## Publications
+
+Publications are entered from BibTex files produced from Thomson Reuters Web of Knowledge.  The BibTex file is produced
+each week.  Disambiguation algorithms attempt to match the name of each UF author to UF people in VIVO.  When unique
+match cn not be achieved, reports are produced for manual review and finishing.  If the paper is indexed in PubMed,
+PubMed is accessed and MeSH terms, abstract and link to on-line version are added to the paper's representation in
+VIVO.
 
 Coming soon
 
 ## Courses
 
-Coming Soon
+Teaching data from the Office of the University Registrar is used to maintain a list of courses and data regarding
+the teaching of those courses via "course sections."  VIVO does not currently recognize the course concept, only
+ the course section concept -- the teaching of a course.  See below regarding Course Sections.  A UF extension
+ to VIVO-ISF includes ufc:Course -- the abstract entity which participates in course catalogues and prerequisites.
+ 
+ Course data is updated 4-6 months after each term.  The data provided by the OUR is replicated and used to load
+ both courses and course data.
+
+## Course Sections
+
+Course sections (VIVO calls these courses) are instances of courses.  Course sections have a term, an instructor and
+and relate to a specific course.  Course sections have section numbers.  Courses have course numbers such as Economics
+101.
+
+Course section data is updated 4-6 months after each term.
 
  
 

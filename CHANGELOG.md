@@ -133,3 +133,5 @@ to process qualifiers -- the update graph currently does not contain the triples
 * **2015-06-17** cities example is complete.  mycities.txt is the output of the get, demonstrating round tripping.
 * **2015-06-18** More work on orgs
 * **2015-06-22** Improve descriptions of course and course section in uf_examples
+* **2015-06-23** New folders and README.md files now for all uf_examples to be created.  sections, sponsors,
+grants, publications all still to come.
