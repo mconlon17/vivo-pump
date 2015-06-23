@@ -98,7 +98,7 @@ position_exception_filter.py to uf_examples/positions to handle positions that d
 * **2015-05-21** Complete draft of positions_def.json in uf_examples/positions
 * **2015-05-22** people_types.txt, improve person_update_data.txt, improved person_def.json added to uf_examples/person
 * **2015-05-23** Add orgs to uf_examples
-* **2015-05-24** Improve README and TODO.  Improve uf_examples/position_def.json
+* **2015-05-24** Improve README and TO DO.  Improve uf_examples/position_def.json
 * **2015-05-25** Support for courses.  See uf_examples/courses.  Three new filters -- manage_columns_filter, 
 unique_ccn_filter, merge_filter.  One new vivopump function get_vivo_ccn for finding courses by common course number 
 (UF primary key).  One new text improvement function -- improve_course_title for improving abbreviations in course 
@@ -132,3 +132,4 @@ to process qualifiers -- the update graph currently does not contain the triples
 * **2015-06-16** rdfprefix.  add and sub output files
 * **2015-06-17** cities example is complete.  mycities.txt is the output of the get, demonstrating round tripping.
 * **2015-06-18** More work on orgs
+* **2015-06-22** Improve descriptions of course and course section in uf_examples
