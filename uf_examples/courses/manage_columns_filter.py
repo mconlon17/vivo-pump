@@ -25,7 +25,6 @@ for row, data in data_in.items():
     new_data['uri'] = ''
     new_data['title'] = improve_course_title(new_data['UF_COURSE_TITLE'])
     new_data['ccn'] = new_data['UF_COURSE_CD']
-    new_data['uri'] = ''
 
     # Delete all the upper case column names
 

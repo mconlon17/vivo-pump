@@ -9,7 +9,7 @@ __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, improve_course_title
+from vivopump import read_csv_fp, write_csv_fp, improve_title
 import sys
 
 data_in = read_csv_fp(sys.stdin)
@@ -21,16 +21,16 @@ for row, data in data_in.items():
 
     # Add these columns
 
+    new_data['uri'] = ''
     new_data['remove'] = ''
-    new_data['uri'] = ''
-    new_data['title'] = improve_course_title(new_data['UF_COURSE_TITLE'])
-    new_data['ccn'] = new_data['UF_COURSE_CD']
-    new_data['uri'] = ''
+    new_data['type'] = 'org;funder'
+    new_data['name'] = improve_title(new_data['SponsorName'])
+    new_data['sponsorid'] = new_data['Sponsor_ID']
 
     # Delete all the upper case column names
 
     for name in new_data.keys():
-        if name == name.upper():
+        if name[0] == name[0].upper():
             del new_data[name]
 
     data_out[row] = new_data

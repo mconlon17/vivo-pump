@@ -135,4 +135,4 @@ to process qualifiers -- the update graph currently does not contain the triples
 * **2015-06-22** Improve descriptions of course and course section in uf_examples
 * **2015-06-23** New folders and README.md files now for all uf_examples to be created.  sections, sponsors,
 grants, publications all still to come.
-* **2015-06-24** Add raw code to uf_examples/sponsors.  Add sponsors.txt
+* **2015-06-24** Add raw code to uf_examples/sponsors.  Add sponsors.txt. manage_column_filters for sponsors

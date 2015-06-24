@@ -7,7 +7,7 @@ uf	http://vivo.school.edu/ontology/uf-extension#UFEntity
 bfo2	http://purl.obolibrary.org/obo/BFO_0000002
 bfo1	http://purl.obolibrary.org/obo/BFO_0000001
 bfo4	http://purl.obolibrary.org/obo/BFO_0000004
-fundingorganization	http://vivoweb.org/ontology/core#FundingOrganization
+funder	http://vivoweb.org/ontology/core#FundingOrganization
 company	http://vivoweb.org/ontology/core#Company
 publisher	http://vivoweb.org/ontology/core#Publisher
 university	http://vivoweb.org/ontology/core#University

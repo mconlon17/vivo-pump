@@ -17,6 +17,23 @@
                 }
             }
         ],
+        "type": [
+            {
+                "predicate": {
+                    "single": false,
+                    "include": [
+                        "thing",
+                        "agent",
+                        "org"
+                    ],
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "org_types"
+                }
+            }
+        ],
         "name": [
             {
                 "predicate": {
