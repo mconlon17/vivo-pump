@@ -19,4 +19,6 @@ Three attributes are managed
 1. localSponsorID
 1. type
 
+    cat grants.txt | python manage_columns_filter.py | python unique_sponsorid_filter.py | 
+    python merge_filter.py > sponsor_update_data.txt
 
