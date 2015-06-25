@@ -240,6 +240,7 @@
                 "object": {
                     "literal": false,
                     "qualifier": "NOT EXISTS { ?telephone_number a <http://www.w3.org/2006/vcard/ns#Code> }",
+                    "type": "http://www.w3.org/2006/vcard/ns#Telephone",
                     "name": "telephone_number"
                 }
             },
@@ -274,6 +275,7 @@
                 "object": {
                     "literal": false,
                     "qualifier": "?fax_number a <http://www.w3.org/2006/vcard/ns#Fax> .",
+                    "type": "http://www.w3.org/2006/vcard/ns#Fax",
                     "name": "fax_number"
                 }
             },
