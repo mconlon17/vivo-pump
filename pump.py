@@ -160,11 +160,9 @@ class Pump(object):
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
 
-            if 'remove' in data_update.keys():
-                print "Attempt remove", data_update['remove']
-                do_remove(row, uri, data_update['remove'], self.update_graph, self.verbose)
-                if data_update['remove'].lower() == 'true':
-                    continue
+            if 'remove' in data_update.keys() and data_update['remove'].lower() == 'true':
+                do_remove(row, uri, self.update_graph, self.verbose)
+                continue
 
             if (uri, None, None) not in self.update_graph:
 
@@ -224,26 +222,23 @@ class Pump(object):
         return [add, sub]
 
 
-def do_remove(row, uri, value, update_graph, debug=False):
+def do_remove(row, uri, update_graph, debug=False):
     """
     Given the row, uri, and value of a remove instruction, find the uri in the update_graph and remove all triples
     associated with it as either a subject or object
     :param row: the row number in the data for the remove instruction
     :param uri: the uri of the entity to be removed
-    :param value: the value of the remove instruction
     :param update_graph: the update_graph to be altered
     :param debug: boolean.  If true, diagnostic output is generate for stdout
     :return: int: Number of triples removed.  Must have remove =true and uri found in update_graph
     """
-    removed = 0
-    if value.lower() == 'true':
-        before = len(update_graph)
-        update_graph.remove((uri, None, None))
-        update_graph.remove((None, None, uri))
-        after = len(update_graph)
-        removed = before - after
-        if debug:
-            print "REMOVING", removed, "triples for ", uri, "on row", row
+    before = len(update_graph)
+    update_graph.remove((uri, None, None))
+    update_graph.remove((None, None, uri))
+    after = len(update_graph)
+    removed = before - after
+    if debug:
+        print "REMOVING", removed, "triples for ", uri, "on row", row
     return removed
 
 

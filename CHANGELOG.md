@@ -137,3 +137,5 @@ to process qualifiers -- the update graph currently does not contain the triples
 grants, publications all still to come.
 * **2015-06-24** Add raw code to uf_examples/sponsors.  Add sponsors.txt. manage_column_filters for sponsors
 * **2015-06-25** Add Type assertions to uf_examples/org_def.json
+* **2015-06-26** Refactor do_remove.  merge_filter for sponsors.  Sponsor_def.json improvements.  Add get_vivo_sponsorid
+to vivopump.py.  sv.cfg for sponsors

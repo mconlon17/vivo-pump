@@ -169,6 +169,18 @@ def get_vivo_ccn():
     return dict(zip(ccn, uri))
 
 
+def get_vivo_sponsorid():
+    """
+    Query VIVO and return a list of all the sponsorid found in VIVO
+    :return: dictionary of uri keyed by sponsorid
+    """
+    query = "select ?uri ?sponsorid where {?uri uf:sponsorid ?sponsorid .}"
+    a = vivo_query(query)
+    sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(sponsorid, uri))
+
+
 def get_vivo_positions():
     """
     Query VIVO and return a list of all the UF positions found in VIVO.  UF positions will

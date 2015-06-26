@@ -21,4 +21,3 @@ Three attributes are managed
 
     cat sponsors.txt | python manage_columns_filter.py | python unique_sponsorid_filter.py | 
     python merge_filter.py > sponsor_update_data.txt
-

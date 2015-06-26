@@ -1,11 +1,11 @@
 #!/usr/bin/env/python
 
 """
-    unique_ccn_filter.py -- remove duplicate ccn
+    unique_sponsorid_filter.py -- remove duplicate sponsorid
 """
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015, University of Florida"
+__copyright__ = "Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
@@ -15,12 +15,12 @@ import sys
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, "Input rows", len(data_in)
 data_out = {}
-ccn_out = set()
+sponsors_out = set()
 for row, data in data_in.items():
     new_data = dict(data)
-    if data['ccn'] not in ccn_out:
+    if data['sponsorid'] not in sponsors_out:
         data_out[row] = new_data
-        ccn_out.add(data['ccn'])
+        sponsors_out.add(data['sponsorid'])
 print >>sys.stderr, "Output rows", len(data_out)
 write_csv_fp(sys.stdout, data_out)
 

@@ -30,7 +30,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "enum": "org_types"
+                    "enum": "org_types.txt"
                 }
             }
         ],
