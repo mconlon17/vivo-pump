@@ -5,19 +5,25 @@ Given a file of sponsors, update or add sponsors to VIVO
 ## Method
 
 Use filters to transform the sponsors.txt data into an input file
-for updating the sponsor data in VIVO.  Sponsor data is limited -- label and SponsorID only.
+for updating the sponsor data in VIVO.  UF sponsor data is limited -- label and SponsorID only.
 
 ## Filters
 
-TBA
+1. Manage_columns_filter.py -- replace all columns with columns needed for ingest.  Improve the sponsor organization
+name (UF supplies all upper case and abbreviations).  Add uri, remove and type as columns to facilitate data
+management
+1. unique_sponsorid_flter.py -- remove rows that dupilcated sponsorid.  sponsorid should be unique prior to ingest.
+1. merge_filter.py -- look up each sponsorid in VIVO and add the uri to the input file
 
-## Attributes
+## Columns in the source data
 
-Three attributes are managed
+Five columns result from the filters:
 
 1. name
-1. localSponsorID
+1. sponsorid
 1. type
+1. uri
+1. remove
 
     cat sponsors.txt | python manage_columns_filter.py | python unique_sponsorid_filter.py | 
     python merge_filter.py > sponsor_update_data.txt
