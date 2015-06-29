@@ -282,7 +282,16 @@ def read_update_def(filename):
     return update_def
 
 
-def make_update_query(entity_sparql, path, debug=False):
+def add_qualifiers(input_path):
+    """
+    Given an update_def input_path, generate the SPARQL fragment to express the qualifiers in the path, if any
+    :param input_path:
+    :return:
+    """
+    return ' '.join([x['object'].get('qualifier', '') for x in input_path])
+
+
+def make_update_query(entity_sparql, path):
     """
     Given a path from an update_def data structure, generate the query needed to pull the triples from VIVO that might
     be updated.  Here's what the queries look like by path length
@@ -317,14 +326,16 @@ def make_update_query(entity_sparql, path, debug=False):
     query = ""
     if len(path) == 1:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ?o\n' + \
-            '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o\n}'
+            '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o' + \
+            ' . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 2:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
             '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(
             path[1]['predicate']['ref']) + '> as ?p2) ?o2\n' + \
             '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
             path[0]['object']['name'] + ' . ?' + \
-            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2\n}'
+            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2' + \
+            ' . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 3:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
             '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(
@@ -335,7 +346,7 @@ def make_update_query(entity_sparql, path, debug=False):
             path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
             path[1]['object']['name'] + \
             ' . ?' + path[1]['object']['name'] + ' <' + str(
-            path[2]['predicate']['ref']) + '> ?o3\n}'
+            path[2]['predicate']['ref']) + '> ?o3' + ' . ' + add_qualifiers(path) + ' \n}'
     return query
 
 
@@ -375,7 +386,7 @@ def get_graph(update_def, debug=False):
         o = make_rdf_term(row['o'])
         a.add((s, p, o))
     for path in update_def['column_defs'].values():
-        update_query = make_update_query(update_def['entity_def']['entity_sparql'], path, debug=debug)
+        update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
             continue
         result = vivo_query(update_query, debug=debug)

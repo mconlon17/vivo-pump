@@ -45,20 +45,43 @@ from fuseki. Remove temp file processing for loading og graph -- load directly. 
 * **2015-03-02** 0.54 Refactor update() to remove unused columns defs from the update def prior to get_graph.  get_graph() runs in liner time based on number of columns.  Reducing the number of columns to the columns that are in common between update_def and update_data significantly speeds up the get_graph() and supports writing "large" update_defs.  Fixed bug in get_graph() -- now includes all entities as specified in the entity sparql.  _FIRST_ path length three test passed!
 * **2015-03-03** Improved testing of path 3 partial path
 * **2015-03-04** test_sv.py started for testing Simple VIVO command line scenarios
-* **2015-03-05** Improve person_def.json to include research areas.  Add people_types.txt as a enum for types.  faculty.txt is a spreadsheet of faculty resulting from an sv get
+* **2015-03-05** Improve person_def.json to include research areas.  Add people_types.txt as a enum for types.  
+faculty.txt is a spreadsheet of faculty resulting from an sv get
 * **2015-03-06** Code formatting and to do improvements
-* **2015-03-07** 0.55 Three new test cases for unique three length paths.  Add, Change, Delete working on three length unique paths.
-* **2015-03-11** Four new test cases for multi-value one length path.  Add, change, change/no-op, Delete are working on multi-valued length one paths.
-* **2015-03-15** 0.56 Can inject original graph to the pump.  Useful for testing.  Added test case using injected original graph
-* **2015-03-21** 0.57 Enum values in update_def are now full path names to find filenames anywhere.  Root filenames become the names of the enums in the structures.
-* **2015-03-25** Improved directory structure.  Examples folder now has subfolders for each domain -- buildings, faculty, orgs, etc
-* **2015-03-30** 0.58 Remove feature added.  A column named "remove" may appear in the update spreadsheet.  If the value in the remove column is "True" or "true", then the pump will remove all triples related to the uri as either subject or object. To do now relate only to the software. Test case to dos are in test_vivopump.py.  Test cases added to test_vivopump.py.  *UNTESTED* Enhancement of examples are now issues in the GitHub repo -- if creating or working or testing these new examples results in desired software changes, these will be entered as appropriate to dos in the appropriate software file.
-* **2015-04-01** Remove works as designed.  Perhaps not as expected.  It removes triples available to the update.  We might have thought it removed all triples associated with entity.
-* **2015-04-06** 0.59 Add no filters option to command line in sv.  get -nf shows VIVO data "as is".  get shows data with filters as defined in update_def. do_get now works with our without filters.  Without filters you can see what VIVO has.  With filters you can get a spreadsheet ready for update.  Filters done before enumerations, so an improved value may be enumerated.  Filtering removed from update. File minimal.txt removed.  New test class for testing get scenarios.  Two new test cases for get -- with and without filters.  Added support for lang parameters.  If a literal has a lang attribute in the update_def, it will be used to add triples. Support for dataype has also been added, but additional work is needed.  So consider this *UNTESTED*
-* **2015-04-07** 0.60 read_update_def recursion simplified.  cast_to_rdflib added to read_update_def to support rdflib datatypes.  data type test cases pass.  Order of columns in def file is now preserved in the update_def.  New test case for update_def order checking passes.  Order now used in get.
-* **2015-04-09** Planned feature removed from the plan.  Had thought that the pump would support look-up by keys other than URI.  Now see no reason for this additional complexity.  When an update is performed with no URI, a URI is creagted and the row is added.  When get is run, URIs are fetched.  All is good.
+* **2015-03-07** 0.55 Three new test cases for unique three length paths.  Add, Change, Delete working on three length 
+unique paths.
+* **2015-03-11** Four new test cases for multi-value one length path.  Add, change, change/no-op, Delete are working 
+on multi-valued length one paths.
+* **2015-03-15** 0.56 Can inject original graph to the pump.  Useful for testing.  Added test case using injected 
+original graph
+* **2015-03-21** 0.57 Enum values in update_def are now full path names to find filenames anywhere.  Root filenames 
+become the names of the enums in the structures.
+* **2015-03-25** Improved directory structure.  Examples folder now has subfolders for each domain -- buildings, 
+faculty, orgs, etc
+* **2015-03-30** 0.58 Remove feature added.  A column named "remove" may appear in the update spreadsheet.  If the 
+value in the remove column is "True" or "true", then the pump will remove all triples related to the uri as either 
+subject or object. To do now relate only to the software. Test case to dos are in test_vivopump.py.  Test cases added 
+to test_vivopump.py.  *UNTESTED* Enhancement of examples are now issues in the GitHub repo -- if creating or working 
+or testing these new examples results in desired software changes, these will be entered as appropriate to dos in the 
+appropriate software file.
+* **2015-04-01** Remove works as designed.  Perhaps not as expected.  It removes triples available to the update.  We 
+might have thought it removed all triples associated with entity.
+* **2015-04-06** 0.59 Add no filters option to command line in sv.  get -nf shows VIVO data "as is".  get shows data 
+with filters as defined in update_def. do_get now works with our without filters.  Without filters you can see what 
+VIVO has.  With filters you can get a spreadsheet ready for update.  Filters done before enumerations, so an improved 
+value may be enumerated.  Filtering removed from update. File minimal.txt removed.  New test class for testing get 
+scenarios.  Two new test cases for get -- with and without filters.  Added support for lang parameters.  If a literal 
+has a lang attribute in the update_def, it will be used to add triples. Support for dataype has also been added, but 
+additional work is needed.  So consider this *UNTESTED*
+* **2015-04-07** 0.60 read_update_def recursion simplified.  cast_to_rdflib added to read_update_def to support rdflib 
+datatypes.  data type test cases pass.  Order of columns in def file is now preserved in the update_def.  New test case 
+for update_def order checking passes.  Order now used in get.
+* **2015-04-09** Planned feature removed from the plan.  Had thought that the pump would support look-up by keys other 
+than URI.  Now see no reason for this additional complexity.  When an update is performed with no URI, a URI is creat
+and the row is added.  When get is run, URIs are fetched.  All is good.
 * **2015-04-12** vivopump.py now supports use of the VIVO API for sparql query.
-* **2015-04-18** 0.61 Null values in source data removed prior to update.  Fixed bug in enum filename.  uf_examples remove_current working as expected.  Work in progress on add_current
+* **2015-04-18** 0.61 Null values in source data removed prior to update.  Fixed bug in enum filename.  uf_examples 
+remove_current working as expected.  Work in progress on add_current
 * **2015-04-19** Start work on ConfigParser for sv.py.  All options specified.  Too easy.
 * **2015-04-22** Begin work on person ingest.  Too hard.  Without position_data.csv
 * **2015-04-29** Work on make_person_update_data in uf_examples.
@@ -141,4 +164,5 @@ grants, publications all still to come.
 to vivopump.py.  sv.cfg for sponsors
 * **2015-06-27** Sponsor example is complete.  add and sub rdf for UF sponsor data.
 * **2015-06-28** Begin uf_examples/grants.  Data and json.
-* **2015-06-29** Improve grant_def.json, add sv.cfg
+* **2015-06-29** Improve grant_def.json, add sv.cfg. Add qualifiers to make_update_query.  Begin to test various
+qualifier scenarios.  Add qualifier to URL in orgs_def.json to select home page by label.

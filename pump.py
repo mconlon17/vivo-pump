@@ -248,9 +248,7 @@ def make_get_query(update_def):
     See do_get
     :return: a sparql query string
     """
-
-    def add_qualifiers(input_path):
-        return ' '.join([x['object'].get('qualifier', '') for x in input_path])
+    from vivopump import add_qualifiers
 
     front_query = 'SELECT ?uri ?' + ' ?'.join(update_def['column_defs'].keys()) + '\nWHERE {\n    ' + \
                   update_def['entity_def']['entity_sparql'] + '\n'
