@@ -165,4 +165,5 @@ to vivopump.py.  sv.cfg for sponsors
 * **2015-06-27** Sponsor example is complete.  add and sub rdf for UF sponsor data.
 * **2015-06-28** Begin uf_examples/grants.  Data and json.
 * **2015-06-29** Improve grant_def.json, add sv.cfg. Add qualifiers to make_update_query.  Begin to test various
-qualifier scenarios.  Add qualifier to URL in orgs_def.json to select home page by label.
+qualifier scenarios.  Add qualifier to URL in orgs_def.json to select home page by label.  New get_step_triples with
+qualifiers.  Passing first tests.

@@ -436,7 +436,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_values
 
 
-def get_step_triples(update_graph, uri, step_def):
+def get_step_triples(update_graph, uri, step_def, debug=True):
     """
     Return the triples matching the criteria defined in the current step of an update
     :param update_graph: the update graph
@@ -445,16 +445,22 @@ def get_step_triples(update_graph, uri, step_def):
     :return:  Graph containing one or more triples that match the criteria for the step
     """
     from rdflib import Graph
-    g = update_graph.triples((uri, step_def['predicate']['ref'], None))
-    # if 'qualifier' in step_def['predicate']:
-    #     result = g.query("""
-    #     CONSTRUCT ?s ?p ?o
-    #     WHERE {
-    #     }
-    #     """)
-    #     g = Graph()
-    #     for (s, p, o) in result:
-    #         g.add((s, p, o))
+    from vivopump import vivo_query, add_qualifiers, make_rdf_term
+    if 'qualifier' not in step_def['object']:
+        g = update_graph.triples((uri, step_def['predicate']['ref'], None))
+    else:
+        q = 'select (?' + step_def['object']['name'] +' as ?o) where { <' + str(uri) + '> <' + \
+            str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
+            add_qualifiers([step_def]) + ' }\n'
+        if debug:
+            print "\nStep Triples Query\n", q
+        result_set = vivo_query(q)
+        g = Graph()
+        for binding in result_set['results']['bindings']:
+            o = make_rdf_term(binding['o'])
+            g.add((uri, step_def['predicate']['ref'], o))
+        if debug:
+            print "Step Triples", len(g)
     return g
 
 
@@ -469,14 +475,14 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
     :param data_update: the data provided for the update
     :param enum: the enumerations
     :param update_graph: the update graph
-    :param debug: debug status.  For printing.
+    :param debug: debug status. For printing.
     :return: Changes in the update_graph
     """
     from rdflib import RDF, RDFS, Literal, URIRef
     from vivopump import new_uri
 
     step_def = path[0]
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def)]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, debug)]
 
     if len(step_uris) == 0:
 
@@ -523,7 +529,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
 
     # Find all the intermediate entities in VIVO and then process cases related to count and defs
 
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def)]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, debug)]
 
     if len(step_uris) == 0:
 
