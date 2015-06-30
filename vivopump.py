@@ -579,7 +579,7 @@ def comma_space(s):
     :rtype: basestring
     """
     k = s.find(',')
-    if -1 < k < len(s) - 1 and s[k+1] != " ":
+    if -1 < k < len(s) - 1 and s[k + 1] != " ":
         s = s[0:k] + ', ' + comma_space(s[k+1:])
     return s
 

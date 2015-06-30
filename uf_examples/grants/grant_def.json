@@ -5,16 +5,25 @@
         "order_by": "title"
     }, 
     "column_defs": {
-        "deptid": [
+        "admin_dept": [
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#administeredBy"
-                }, 
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#relates"
+                },
                 "object": {
-                    "filter": "improve_deptid", 
-                    "literal": true,
-                    "datatype": "xsd:integer",
+                    "literal": false,
+                    "type": "http://vivoweb.org/ontology/core#adminRole",
+                    "name": "adminrole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/RO_0000052"
+                },
+                "object": {
+                    "literal": false,
                     "enum": "deptid.txt"
                 }
             }
@@ -36,7 +45,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#relatedRole"
+                    "ref": "http://vivoweb.org/ontology/core#relates"
                 }, 
                 "object": {
                     "literal": false, 
@@ -47,7 +56,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#co-PrincipalInvestigatorRoleOf"
+                    "ref": "http://purl.obolibrary.org/obo/RO_0000052"
                 }, 
                 "object": {
                     "literal": false,
@@ -120,7 +129,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#relatedRole"
+                    "ref": "http://vivoweb.org/ontology/core#relates"
                 }, 
                 "object": {
                     "literal": false, 
@@ -131,7 +140,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#investigatorRoleOf"
+                    "ref": "http://purl.obolibrary.org/obo/RO_0000052"
                 }, 
                 "object": {
                     "literal": false,
@@ -143,7 +152,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#grantAwardedBy"
+                    "ref": "http://vivoweb.org/ontology/core#assignedBy"
                 }, 
                 "object": {
                     "literal": false,
@@ -167,7 +176,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#relatedRole"
+                    "ref": "http://vivoweb.org/ontology/core#relates"
                 }, 
                 "object": {
                     "literal": false, 
@@ -178,7 +187,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#principalInvestigatorRoleOf"
+                    "ref": "http://purl.obolibrary.org/obo/RO_0000052"
                 }, 
                 "object": {
                     "literal": false,

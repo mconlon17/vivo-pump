@@ -206,3 +206,4 @@ to vivopump.py.  sv.cfg for sponsors
 * **2015-06-29** Improve grant_def.json, add sv.cfg. Add qualifiers to make_update_query.  Begin to test various
 qualifier scenarios.  Add qualifier to URL in orgs_def.json to select home page by label.  New get_step_triples with
 qualifiers.  Passing first tests.
+* **2015-06-30** Complete draft uf_examples/grants/grants_def.json
