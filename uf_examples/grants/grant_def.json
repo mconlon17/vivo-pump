@@ -115,7 +115,7 @@
         "sponsor_award_id": [
             {
                 "predicate": {
-                    "single": true, 
+                    "single": false,
                     "ref": "http://vivoweb.org/ontology/core#sponsorAwardId"
                 }, 
                 "object": {

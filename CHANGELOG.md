@@ -207,3 +207,4 @@ to vivopump.py.  sv.cfg for sponsors
 qualifier scenarios.  Add qualifier to URL in orgs_def.json to select home page by label.  New get_step_triples with
 qualifiers.  Passing first tests.
 * **2015-06-30** Complete draft uf_examples/grants/grants_def.json
+* **2015-07-01** Add enums to uf_examples/grants
