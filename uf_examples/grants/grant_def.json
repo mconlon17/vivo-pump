@@ -5,7 +5,7 @@
         "order_by": "title"
     }, 
     "column_defs": {
-        "admin_dept": [
+        "DeptID": [
             {
                 "predicate": {
                     "single": false,
@@ -28,7 +28,7 @@
                 }
             }
         ],
-        "direct_costs": [
+        "DirectCosts": [
             {
                 "predicate": {
                     "single": true, 
@@ -41,7 +41,7 @@
                 }
             }
         ], 
-        "cois": [
+        "CoPI": [
             {
                 "predicate": {
                     "single": false, 
@@ -64,7 +64,7 @@
                 }
             }
         ], 
-        "end_date": [
+        "EndDate": [
             {
                 "predicate": {
                     "single": true, 
@@ -99,7 +99,7 @@
                 }
             }
         ], 
-        "title": [
+        "Title": [
             {
                 "predicate": {
                     "single": true, 
@@ -112,7 +112,7 @@
                 }
             }
         ], 
-        "sponsor_award_id": [
+        "SponsorAwardID": [
             {
                 "predicate": {
                     "single": false,
@@ -125,7 +125,7 @@
                 }
             }
         ], 
-        "invs": [
+        "Inv": [
             {
                 "predicate": {
                     "single": false, 
@@ -148,7 +148,7 @@
                 }
             }
         ], 
-        "sponsorid": [
+        "SponsorID": [
             {
                 "predicate": {
                     "single": true, 
@@ -160,7 +160,7 @@
                 }
             }
         ], 
-        "award_id": [
+        "AwardID": [
             {
                 "predicate": {
                     "single": true, 
@@ -172,7 +172,7 @@
                 }
             }
         ], 
-        "pis": [
+        "PI": [
             {
                 "predicate": {
                     "single": false, 
@@ -195,7 +195,7 @@
                 }
             }
         ], 
-        "start_date": [
+        "StartDate": [
             {
                 "predicate": {
                     "single": true, 
@@ -230,7 +230,7 @@
                 }
             }
         ], 
-        "total_award": [
+        "TotalAwarded": [
             {
                 "predicate": {
                     "single": true, 
