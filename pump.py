@@ -568,7 +568,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
 
     else:
         # TODO: Implement set compare through multiple intermediate case -- medium
-        print 'WARNING: Updating multi-valued multi-step predicates not yet implemented'
+        print "WARNING: Updating multi-valued multi-step predicates such as ", column_name, " not yet implemented"
     return None
 
 

@@ -1,0 +1,56 @@
+<http://vivo.school.edu/individual/299360804> <http://vivoweb.org/ontology/core#dateTime> "09/27/2013"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#localAwardId> "00113451"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/84970248> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/4971148807> .
+<http://vivo.school.edu/individual/1588787587> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/7459644497> .
+<http://vivo.school.edu/individual/8790134073> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Grant> .
+<http://vivo.school.edu/individual/2321761469> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/1159597682> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Grant> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.ufl.edu/individual/n1122631517> .
+<http://vivo.school.edu/individual/1159597682> <http://www.w3.org/2000/01/rdf-schema#label> "A DOUBLE-BLIND, RANDOMIZED, PARALLEL-ARM, MULTICENTER STUDY TO DETERMINE THE DOSE RESPONSE OF METHOTREXATE (MTX) . . ."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/2218326500> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#grantDirectCosts> "79624.00"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/850036422> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/84970248> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/2321761469> .
+<http://vivo.school.edu/individual/6058994571> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/7752805135> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#grantDirectCosts> "24326.24"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.ufl.edu/individual/n1122631517> .
+<http://vivo.school.edu/individual/2218326500> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#adminRole> .
+<http://vivo.school.edu/individual/6058994571> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/850036422> <http://vivoweb.org/ontology/core#dateTime> "02/03/2014"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/1435098641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#adminRole> .
+<http://vivo.school.edu/individual/1588787587> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/7752805135> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/1435098641> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#sponsorAwardId> "NULL"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#sponsorAwardId> "NULL"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1588787587> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/850036422> .
+<http://vivo.school.edu/individual/299360804> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#totalAwardAmount> "30407.80"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/6058994571> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/4376280730> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/1588787587> .
+<http://vivo.school.edu/individual/4376280730> <http://vivoweb.org/ontology/core#dateTime> "12/20/2013"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/84970248> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/299360804> .
+<http://vivo.school.edu/individual/4376280730> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/4971148807> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.ufl.edu/individual/n116517> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/6058994571> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#sponsorAwardId> "NULL"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#localAwardId> "00094719"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7752805135> <http://vivoweb.org/ontology/core#dateTime> "12/19/2016"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8790134073> <http://www.w3.org/2000/01/rdf-schema#label> "A RANDOMIZED DOUBLE-BLIND PLACEBO CONTROLLED MULTI-CENTER STUDY TO EVALUATE THE SAFETY AND EFFICACY OF ECULIZUMAB....."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8790134073> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.ufl.edu/individual/n1296613299> .
+<http://vivo.school.edu/individual/2321761469> <http://vivoweb.org/ontology/core#dateTime> "01/19/2011"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/7178668719> <http://www.w3.org/2000/01/rdf-schema#label> "A MULTICENTER, DOUBLE-BLIND, RANDOMIZED PARALLEL-ARM STUDY TO DETERMINE THE EFFECT OF METHOTREXATE DOSE ON CLINICAL...."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#localAwardId> "00092696"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/84970248> .
+<http://vivo.school.edu/individual/2218326500> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.ufl.edu/individual/n230011> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#totalAwardAmount> "35194.50"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/7178668719> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Grant> .
+<http://vivo.school.edu/individual/7459644497> <http://vivoweb.org/ontology/core#dateTime> "02/03/2011"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/7178668719> <http://vivoweb.org/ontology/core#totalAwardAmount> "99530.00"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/1435098641> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.ufl.edu/individual/n230011> .
+<http://vivo.school.edu/individual/1159597682> <http://vivoweb.org/ontology/core#grantDirectCosts> "28155.60"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/4971148807> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#adminRole> .
+<http://vivo.school.edu/individual/7459644497> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+
+
