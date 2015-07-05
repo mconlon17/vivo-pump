@@ -209,4 +209,8 @@ qualifiers.  Passing first tests.
 * **2015-06-30** Complete draft uf_examples/grants/grants_def.json
 * **2015-07-01** Add enums to uf_examples/grants
 * **2015-07-02** Add uf_examples/grants/vivo_grants.txt, the UF enterprise data for grants
-* **2015-07-04** grants_add and grants_sub from runs on small_grants.  Need multi-step, multi-value update for investigators.
+* **2015-07-04** grants_add and grants_sub from runs on small_grants.  Need multi-step, multi-value update for 
+investigators.
+* **2015-07-05** Prep the uf_examples/publications area with recent code for pubmed ingest.  This code contains new
+disambiguation code, Entrez fetch for pubMed, plus all mapping for pubmed to VIVO.  Expect to use this code as a
+foundation for future ingest from DOI as well as ingest from PMID.
