@@ -1,0 +1,68 @@
+{
+    "entity_def": {
+        "type": "http://vivoweb.org/ontology/core#InformationResource", 
+        "entity_sparql": "?uri a vivo:InformationResource .", 
+        "order_by": "title"
+    }, 
+    "column_defs": {
+        "full_text_url": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasURL"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#URL",
+                    "qualifier": "?url rdfs:label \"Full Text\" .",
+                    "label": "Full Text",
+                    "name": "url"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#url"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ], 
+        "doi": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://purl.org/ontology/bibo/doi"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ], 
+        "title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "filter": "improve_title", 
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

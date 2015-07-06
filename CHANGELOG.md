@@ -214,3 +214,4 @@ investigators.
 * **2015-07-05** Prep the uf_examples/publications area with recent code for pubmed ingest.  This code contains new
 disambiguation code, Entrez fetch for pubMed, plus all mapping for pubmed to VIVO.  Expect to use this code as a
 foundation for future ingest from DOI as well as ingest from PMID.
+* **2015-07-06** Start uf_examples/publications/pub_def.json
