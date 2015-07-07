@@ -8,9 +8,6 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.01"
 
 import csv
-import urllib
-import json
-import time
 import string
 import random
 import re
