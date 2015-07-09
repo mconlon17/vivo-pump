@@ -1,7 +1,3 @@
-class NotFound(Exception):
-    pass
-
-
 class TimeOut(Exception):
     pass
 
@@ -14,6 +10,8 @@ def get_entrez_record(pmid):
     """
     Given a pmid, use Entrez to get first record from PubMed
     """
+    from Bio import Entrez
+    from time import sleep
     Entrez.email = 'mconlon@ufl.edu'
 
     # Get record(s) from Entrez.  Retry if Entrez does not respond
@@ -29,14 +27,14 @@ def get_entrez_record(pmid):
                 pass
             break
         except IOError:
-            count = count + 1
+            count += 1
             if count > retries:
-                raise Timeout
-            sleep_seconds = start**count
-            print "<!-- Failed Entrez query. Count = "+str(count)+ \
-                " Will sleep now for "+str(sleep_seconds)+ \
-                " seconds and retry -->"
-            sleep(sleep_seconds) # increase the wait time with each retry
+                raise TimeOut
+            sleep_seconds = start ** count
+            print "<!-- Failed Entrez query. Count = " + str(count) + \
+                  " Will sleep now for " + str(sleep_seconds) + \
+                  " seconds and retry -->"
+            sleep(sleep_seconds)  # increase the wait time with each retry
     return record
 
 
@@ -81,7 +79,7 @@ def author_case(author):
         return 1
     elif len(fn) == 0 and len(mn) == 0:
         return 0
-    return case
+    return None
 
 
 def author_queries(case, author):
@@ -92,12 +90,12 @@ def author_queries(case, author):
     query_set = {
         "0": [],
         "1": [1],
-        "2": [4,1],
-        "3": [2,1],
-        "4": [3,2,1],
-        "5": [5,4,3,2,1],
-        "6": [6,5,4,3,2,1]
-        }
+        "2": [4, 1],
+        "3": [2, 1],
+        "4": [3, 2, 1],
+        "5": [5, 4, 3, 2, 1],
+        "6": [6, 5, 4, 3, 2, 1]
+    }
     qs = query_set[str(case)]
     query_list = []
     for q in qs:
@@ -175,7 +173,7 @@ def author_case_query(qn, author):
         """
         query = query.replace('{{ln}}', author['last'])
         query = query.replace('{{fn}}', author['first'])
-        query = query.replace('{{mni}}', author['middle'][0]) 
+        query = query.replace('{{mni}}', author['middle'][0])
     elif qn == 6:
         query = """
         SELECT ?uri
@@ -196,19 +194,20 @@ def find_author(author):
     """
     Given an author object with name parts, return the smallest set of uris
     that match the author in VIVO.  Could be an empty set, could be a singleton,
-    could be a clutch requiring further disambiguation
+    could be a set requiring further disambiguation
     """
+    from vivopump import vivo_query
     case = author_case(author)
     queries = author_queries(case, author)
     author_uri_set = set([])
     for query in queries:
-        result = vivo_sparql_query(query.encode('utf-8'))
+        result = vivo_query(query.encode('utf-8'))
         count = len(result['results']['bindings'])
         if count == 1:
-            author_uri_set = set([result['results']['bindings'][0]\
-                                  ['uri']['value']])
+            author_uri_set = set([result['results']['bindings'][0] \
+                                      ['uri']['value']])
             break
-        elif count > 1 and count < len(author_uri_set):
+        elif 1 < count < len(author_uri_set):
             author_uri_set = set([])
             for row in result['results']['bindings']:
                 author_uri_set.add(row['uri']['value'])
@@ -221,71 +220,25 @@ def make_authorship_rdf(pub_uri, author_uri, rank, corresponding=False):
     """
     ardf = ""
     authorship_uri = get_vivo_uri()
-    add = assert_resource_property(authorship_uri, "rdf:type", 
-        untag_predicate("owl:Thing"))
+    add = assert_resource_property(authorship_uri, "rdf:type",
+                                   untag_predicate("owl:Thing"))
     ardf = ardf + add
     add = assert_resource_property(authorship_uri, "rdf:type",
-        untag_predicate("vivo:Authorship"))
+                                   untag_predicate("vivo:Authorship"))
     ardf = ardf + add
     add = assert_resource_property(authorship_uri,
-        "vivo:linkedAuthor", author_uri)
+                                   "vivo:linkedAuthor", author_uri)
     ardf = ardf + add
     add = assert_resource_property(authorship_uri,
-        "vivo:linkedInformationResource", pub_uri)
+                                   "vivo:linkedInformationResource", pub_uri)
     ardf = ardf + add
     add = assert_data_property(authorship_uri,
-        "vivo:authorRank", rank)
+                               "vivo:authorRank", rank)
     ardf = ardf + add
     add = assert_data_property(authorship_uri,
-        "vivo:isCorrespondingAuthor", str(corresponding).lower())
+                               "vivo:isCorrespondingAuthor", str(corresponding).lower())
     ardf = ardf + add
     return [ardf, authorship_uri]
-
-
-def make_journal_rdf(name, issn):
-    """
-    Given a journal name and an issn, create the RDF for the journal
-    """
-    ardf = ""
-    journal_uri = get_vivo_uri()
-    add = assert_resource_property(journal_uri, "rdf:type", 
-        untag_predicate("owl:Thing"))
-    ardf = ardf + add
-    add = assert_resource_property(journal_uri, "rdf:type",
-        untag_predicate("bibo:Journal"))
-    ardf = ardf + add
-    add = assert_data_property(journal_uri, "rdfs:label", name)
-    ardf = ardf + add
-    add = assert_data_property(journal_uri, "bibo:issn", issn)
-    ardf = ardf + add
-    return [ardf, journal_uri]
-
-
-def make_author_rdf(author):
-    """
-    Given an author structure, make a foaf:Person
-    """
-    ardf = ""
-    author_uri = get_vivo_uri()
-    add = assert_resource_property(author_uri, "rdf:type", 
-        untag_predicate("owl:Thing"))
-    ardf = ardf + add
-    add = assert_resource_property(author_uri, "rdf:type",
-        untag_predicate("foaf:Person"))
-    ardf = ardf + add
-    name = author['last'] + ', ' + author['first']
-    if author.get('middle', None) is not None and len(author['middle']) > 0:
-        name = name + ' ' + author['middle']
-        add = assert_data_property(author_uri, "bibo:middleName",
-                                   author['middle'])
-        ardf = ardf + add
-    add = assert_data_property(author_uri, "rdfs:label", name)
-    ardf = ardf + add
-    add = assert_data_property(author_uri, "foaf:lastName", author['last'])
-    ardf = ardf + add
-    add = assert_data_property(author_uri, "foaf:firstName", author['first'])
-    ardf = ardf + add
-    return [ardf, author_uri]
 
 
 def make_pub_rdf(pub):
@@ -305,35 +258,35 @@ def make_pub_rdf(pub):
                  'date_uri': 'vivo:dateTimeValue'}
     ardf = ""
     pub_uri = pub['pub_uri']
-    add = assert_resource_property(pub_uri, "rdf:type", 
-        untag_predicate("owl:Thing"))
+    add = assert_resource_property(pub_uri, "rdf:type",
+                                   untag_predicate("owl:Thing"))
     ardf = ardf + add
     add = assert_resource_property(pub_uri, "rdf:type",
-        untag_predicate("bibo:AcademicArticle"))
+                                   untag_predicate("bibo:AcademicArticle"))
     ardf = ardf + add
 
     for property in sorted(properties.keys()):
         if property in pub:
             add = assert_data_property(pub_uri,
-                properties[property],
-                pub[property])
+                                       properties[property],
+                                       pub[property])
             ardf = ardf + add
     for resource in sorted(resources.keys()):
         if resource in pub:
             add = assert_resource_property(pub_uri,
-                resources[resource],
-                pub[resource])
+                                           resources[resource],
+                                           pub[resource])
             ardf = ardf + add
 
     for authorship_uri in pub['authorship_uris']:
         add = assert_resource_property(pub_uri,
-            "vivo:informationResourceInAuthorship", authorship_uri)
+                                       "vivo:informationResourceInAuthorship", authorship_uri)
         ardf = ardf + add
-     
+
     return [ardf, pub_uri]
 
 
-def get_pubmed(pmid, author_uris = None):
+def get_pubmed(pmid, author_uris=None):
     """
     Given a pubmid identifer, return a structure containing the elements
     of the publication of interest to VIVO. Optionally, provide a set of
@@ -354,15 +307,15 @@ def get_pubmed(pmid, author_uris = None):
         pub['date']['day'] = '1'
     pub['pub_uri'] = get_vivo_uri()
     pub['date_harvested'] = str(datetime.now())
-    pub['harvested_by'] = "Python PubMed Add "+__version__
+    pub['harvested_by'] = "Python PubMed Add " + __version__
     journal_uri = find_vivo_uri("bibo:issn", pub['issn'])
     if journal_uri is None:
         [add, journal_uri] = make_journal_rdf(pub['journal'], pub['issn'])
         ardf = ardf + add
     pub['journal_uri'] = journal_uri
 
-    pub_date = datetime.strptime(pub['date']['month']+'/'+pub['date']['day']+\
-                                 '/'+pub['date']['year'], "%m/%d/%Y")
+    pub_date = datetime.strptime(pub['date']['month'] + '/' + pub['date']['day'] + \
+                                 '/' + pub['date']['year'], "%m/%d/%Y")
     if pub_date in date_dictionary:
         pub['date_uri'] = date_dictionary[pub_date]
     else:
@@ -370,11 +323,11 @@ def get_pubmed(pmid, author_uris = None):
         date_dictionary[pub_date] = pub_date_uri
         pub['date_uri'] = pub_date_uri
         ardf = ardf + add
-        
-#   Turn each author into a URI reference to an authorship
+
+    # Turn each author into a URI reference to an authorship
 
     pub['authorship_uris'] = []
-    for key, author in sorted(pub['authors'].items(),key=lambda x:x[0]):
+    for key, author in sorted(pub['authors'].items(), key=lambda x: x[0]):
         try:
             author_uri_set = find_author(author)
         except:
@@ -404,40 +357,10 @@ def get_pubmed(pmid, author_uris = None):
             print "  Possible authors in VIVO", author_uri_set
             print "  Possible authors in Source", author_uris
             print "  Selected author", author_uri
-                    
+
         [add, authorship_uri] = make_authorship_rdf(pub['pub_uri'], author_uri,
                                                     key, corresponding=False)
         pub['authorship_uris'].append(authorship_uri)
         ardf = ardf + add
-    
+
     return [ardf, pub]
-
-
-def prepare_pubs(path_name):
-    """
-    Read the list of pubs to add.  For each, process the ufid field into a
-    set of VIVO uris.  The ufid field is optionally a semi-colon delimited
-    list of either ufids or uris.  The result will be a set of uris.  These
-    uris are compared to uris in disambiguation sets to select authors.
-    """
-    add_pubs = read_csv(path_name)
-    for key, row in add_pubs.items():
-        row['author_uris'] = set([])
-        ids = row['ufid'].split(';')
-        print "ids=", ids
-        for id in ids:
-            print "Processing id=", id
-            if id[0] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
-                author_uri = find_vivo_uri('ufVivo:ufid', id)
-                if author_uri is None:
-                    print >>exc_file, id, "UFID not found in VIVO"
-                    continue
-                else:
-                    row['author_uris'].add(author_uri)
-            elif id[0] == 'h':
-                row['author_uris'].add(id)
-            else:
-                print >>exc_file, row['ufid'], "Unknown identifier in UFID"
-            print id, row
-        add_pubs[key] = row
-    return add_pubs
