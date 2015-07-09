@@ -1,58 +1,14 @@
-"""
-    add-pubmed.py -- given identifers in a csv file, add the corresponding
-    papers to VIVO
-
-    Version 0.0 MC 2014-05-12
-    --  Getting started.  This code has never been run.
-    Version 0.1 MC 2014-05-19
-    --  Process all elements.  Still needs author finding
-    Version 0.2 MC 2014-06-03
-    --  Complete version with new author finding logic and update_pubmed
-    Version 0.3 MC 2014-06-04
-    --  Handle Unicode, list actions to be taken for each author, run
-        from command line.  Two complete examples. Improve logging
-
-    To Do
-    --  Load to staging.
-    --  Can PubMed tell you who is the corresponding author?  If so,
-        document_from_pubmed needs improvement
-"""
-
-__author__ = "Michael Conlon"
-__copyright__ = "Copyright 2014, University of Florida"
-__license__ = "BSD 3-Clause license"
-__version__ = "0.3"
-
-from vivotools import rdf_header
-from vivotools import rdf_footer
-from vivotools import update_pubmed
-from vivotools import read_csv
-from vivotools import get_vivo_uri
-from vivotools import find_vivo_uri
-from vivotools import document_from_pubmed
-from vivotools import make_concept_dictionary
-from vivotools import make_date_dictionary
-from vivotools import make_datetime_rdf
-from vivotools import assert_resource_property
-from vivotools import assert_data_property
-from vivotools import untag_predicate
-from vivotools import vivo_sparql_query
-import vivotools as vt
-from datetime import datetime
-import sys
-import os
-import codecs
-from Bio import Entrez
-from time import sleep
-
 class NotFound(Exception):
     pass
+
 
 class TimeOut(Exception):
     pass
 
+
 class NoLastNameForAuthor(Exception):
     pass
+
 
 def get_entrez_record(pmid):
     """
@@ -82,6 +38,7 @@ def get_entrez_record(pmid):
                 " seconds and retry -->"
             sleep(sleep_seconds) # increase the wait time with each retry
     return record
+
 
 def author_case(author):
     """
@@ -126,6 +83,7 @@ def author_case(author):
         return 0
     return case
 
+
 def author_queries(case, author):
     """
     Given a case number and an author, return a list of queries to try
@@ -145,6 +103,7 @@ def author_queries(case, author):
     for q in qs:
         query_list.append(author_case_query(q, author))
     return query_list
+
 
 def author_case_query(qn, author):
     """
@@ -232,6 +191,7 @@ def author_case_query(qn, author):
         query = query.replace('{{mn}}', author['middle'])
     return query
 
+
 def find_author(author):
     """
     Given an author object with name parts, return the smallest set of uris
@@ -253,6 +213,7 @@ def find_author(author):
             for row in result['results']['bindings']:
                 author_uri_set.add(row['uri']['value'])
     return author_uri_set
+
 
 def make_authorship_rdf(pub_uri, author_uri, rank, corresponding=False):
     """
@@ -280,6 +241,7 @@ def make_authorship_rdf(pub_uri, author_uri, rank, corresponding=False):
     ardf = ardf + add
     return [ardf, authorship_uri]
 
+
 def make_journal_rdf(name, issn):
     """
     Given a journal name and an issn, create the RDF for the journal
@@ -297,6 +259,7 @@ def make_journal_rdf(name, issn):
     add = assert_data_property(journal_uri, "bibo:issn", issn)
     ardf = ardf + add
     return [ardf, journal_uri]
+
 
 def make_author_rdf(author):
     """
@@ -324,21 +287,22 @@ def make_author_rdf(author):
     ardf = ardf + add
     return [ardf, author_uri]
 
+
 def make_pub_rdf(pub):
     """
     Given a pub structure, make VIVO RDF for the publication
     """
-    properties = {'title':'rdfs:label',
-                  'volume':'bibo:volume',
-                  'issue':'bibo:number',
-                  'pmid':'bibo:pmid',
-                  'doi':'bibo:doi',
-                  'page_start':'bibo:pageStart',
-                  'page_end':'bibo:pageEnd',
-                  'date_harvested':'ufVivo:dateHarvested',
-                  'harvested_by':'ufVivo:harvestedBy'}
-    resources = {'journal_uri':'vivo:hasPublicationVenue',
-                 'date_uri':'vivo:dateTimeValue'}
+    properties = {'title': 'rdfs:label',
+                  'volume': 'bibo:volume',
+                  'issue': 'bibo:number',
+                  'pmid': 'bibo:pmid',
+                  'doi': 'bibo:doi',
+                  'page_start': 'bibo:pageStart',
+                  'page_end': 'bibo:pageEnd',
+                  'date_harvested': 'ufVivo:dateHarvested',
+                  'harvested_by': 'ufVivo:harvestedBy'}
+    resources = {'journal_uri': 'vivo:hasPublicationVenue',
+                 'date_uri': 'vivo:dateTimeValue'}
     ardf = ""
     pub_uri = pub['pub_uri']
     add = assert_resource_property(pub_uri, "rdf:type", 
@@ -367,6 +331,7 @@ def make_pub_rdf(pub):
         ardf = ardf + add
      
     return [ardf, pub_uri]
+
 
 def get_pubmed(pmid, author_uris = None):
     """
@@ -447,6 +412,7 @@ def get_pubmed(pmid, author_uris = None):
     
     return [ardf, pub]
 
+
 def prepare_pubs(path_name):
     """
     Read the list of pubs to add.  For each, process the ufid field into a
@@ -475,91 +441,3 @@ def prepare_pubs(path_name):
             print id, row
         add_pubs[key] = row
     return add_pubs
-
-#  Start Here
-
-srdf = rdf_header()
-ardf = rdf_header()
-
-if len(sys.argv) > 1:
-    path_name = str(sys.argv[1])
-else:
-    path_name = "pubs.txt"
-file_name, file_extension = os.path.splitext(path_name)
-
-add_file = codecs.open(file_name+"_add.rdf", mode='w', encoding='ascii',
-                       errors='xmlcharrefreplace')
-sub_file = codecs.open(file_name+"_sub.rdf", mode='w', encoding='ascii',
-                       errors='xmlcharrefreplace')
-log_file = codecs.open(file_name+"_log.txt", mode='w', encoding='ascii',
-                       errors='xmlcharrefreplace')
-exc_file = codecs.open(file_name+"_exc.txt", mode='w', encoding='ascii',
-                       errors='xmlcharrefreplace')
-
-print >>log_file, datetime.now(), "Start"
-print >>log_file, datetime.now(), "Add PubMed Version", __version__
-print >>log_file, datetime.now(), "VIVO Tools Version", vt.__version__
-print >>log_file, datetime.now(), "Making concept dictionary"
-make_concept_dictionary()
-print >>log_file, datetime.now(), "Concept dictionary has", \
-        len(vt.concept_dictionary), "entries"
-print >>log_file, datetime.now(), "Making date dictionary"
-date_dictionary = make_date_dictionary()
-print >>log_file, datetime.now(), "Date dictionary has", \
-        len(date_dictionary), "entries"
-print >>log_file, datetime.now(), "Reading pub list"
-add_pubs = prepare_pubs(path_name)
-print >>log_file, datetime.now(), "Pub list has", len(add_pubs), "entries"
-
-for n, row in add_pubs.items():
-
-#   Check the request to add
-
-    pmid = row['pmid']
-
-    pub_uri = find_vivo_uri('bibo:pmid', pmid)
-    if pub_uri is not None:
-        print >>exc_file, "PubMed ID", pmid, "found in VIVO at", pub_uri
-        continue
-
-#   get the paper from pubmed
-
-    try:
-        [add, pub] = get_pubmed(pmid, row['author_uris'])
-        ardf = ardf + add
-    except NotFound:
-        print >>exc_file, "PubMed ID", pmid, "not found in PubMed"
-        continue
-    except TimeOut:
-        print >>exc_file, "Entrez timed out for ", pmid
-        continue
-
-#   Add the paper to VIVO
-
-    [add, pub_uri] = make_pub_rdf(pub)
-    ardf = ardf + add
-
-#   Update the paper with additional pubmed elements
-
-    try:
-        [add,sub] = update_pubmed(pub_uri, pmid=pmid, inVivo=False)
-        ardf = ardf + add
-        srdf = srdf + sub
-    except:
-        print >>log_file, "Exception in update_pubmed for", pmid
-        continue
-
-    print >>log_file, "Paper", pmid, "added at", pub_uri
-
-ardf = ardf + rdf_footer()
-print >>add_file,ardf
-add_file.close()
-
-srdf = srdf + rdf_footer()
-print >>sub_file,srdf
-sub_file.close()
-
-print >>log_file, datetime.now(), "Finish"
-log_file.close()
-exc_file.close()
-
