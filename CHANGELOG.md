@@ -217,3 +217,4 @@ foundation for future ingest from DOI as well as ingest from PMID.
 * **2015-07-06** Start uf_examples/publications/pub_def.json
 * **2015-07-07** Additional publication prep
 * **2015-07-08** Begin merging add_pubmed code
+* **2015-07-10** bib2csv_filter, sample data in uf_examples/publications

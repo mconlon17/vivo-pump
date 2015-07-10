@@ -218,8 +218,9 @@ def make_authorship_rdf(pub_uri, author_uri, rank, corresponding=False):
     """
     Given data values, create the RDF for an authorship
     """
+    from vivopump import new_uri
     ardf = ""
-    authorship_uri = get_vivo_uri()
+    authorship_uri = new_uri()
     add = assert_resource_property(authorship_uri, "rdf:type",
                                    untag_predicate("owl:Thing"))
     ardf = ardf + add
@@ -294,6 +295,7 @@ def get_pubmed(pmid, author_uris=None):
     set of size > 1, the author_uris will be examined for matches to
     assist with disambiguation.
     """
+    from vivopump import new_uri
     ardf = ""
     record = get_entrez_record(pmid)
     if record is None:
@@ -305,7 +307,7 @@ def get_pubmed(pmid, author_uris=None):
         pub['date']['month'] = '1'
     if pub['date']['day'] == '':
         pub['date']['day'] = '1'
-    pub['pub_uri'] = get_vivo_uri()
+    pub['pub_uri'] = new_uri()
     pub['date_harvested'] = str(datetime.now())
     pub['harvested_by'] = "Python PubMed Add " + __version__
     journal_uri = find_vivo_uri("bibo:issn", pub['issn'])
