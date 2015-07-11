@@ -19,12 +19,8 @@ for line in sys.stdin:
 bib_data = bibtexparser.loads(bib_str)
 print >>sys.stderr, "Entries", len(bib_data.entries)
 
-key_names = set()
-for x in bib_data.entries:
-    for y in x.keys():
-        if y not in key_names:
-            key_names.add(y)
-print key_names
+col_names = set(y for x in bib_data.entries for y in x.keys())
+print len(col_names), col_names
 
 
 
