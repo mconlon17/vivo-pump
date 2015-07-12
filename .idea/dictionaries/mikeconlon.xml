@@ -3,6 +3,8 @@
     <words>
       <w>ardf</w>
       <w>baseurl</w>
+      <w>bibtexcol</w>
+      <w>bibtexparser</w>
       <w>börner</w>
       <w>dbpedia</w>
       <w>defn</w>
@@ -31,6 +33,7 @@
       <w>uriref</w>
       <w>vcardemail</w>
       <w>vivopump</w>
+      <w>vivotools</w>
     </words>
   </dictionary>
 </component>
