@@ -40,6 +40,16 @@ Disambiguation handler
     cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
     python unique_name_filter.py | python match_publishers_filter.py > publisher_update_data.txt
     
+    Then
+    
+    sv -c sv_publishers.cfg
+    
+    Then
+    
+    Verify publisher_sub.rdf is zero length
+    
+    Add publisher_add.rdf to VIVO
+    
 1. Add journals not currently in VIVO
 1. Add people not currently in VIVO
 1. Add publications to VIVO

@@ -1,0 +1,257 @@
+<http://vivo.school.edu/individual/8819583841> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6400509136> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/808246138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2039026148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5959295206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7955311017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/3078468132> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/808246138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5712299532> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2039026148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2861618782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3078468132> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6073791348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2890023176> <http://www.w3.org/2000/01/rdf-schema#label> "Associate Agrometerologists" .
+<http://vivo.school.edu/individual/5372219425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6803555245> <http://www.w3.org/2000/01/rdf-schema#label> "Springer Wien" .
+<http://vivo.school.edu/individual/4573006492> <http://www.w3.org/2000/01/rdf-schema#label> "Society for General Microbiology" .
+<http://vivo.school.edu/individual/808246138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5712299532> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6322884147> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/7528056673> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2452615916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/9503174253> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6570940562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/4573006492> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/579798291> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/7778390509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/8927598519> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6803555245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2876276734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6803555245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5959295206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/1262418774> <http://www.w3.org/2000/01/rdf-schema#label> "Pergamon-Elsevier Science Ltd" .
+<http://vivo.school.edu/individual/6090981341> <http://www.w3.org/2000/01/rdf-schema#label> "Routledge Journals, Taylor and Francis Ltd" .
+<http://vivo.school.edu/individual/1262418774> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/7778390509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6090981341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/3183956001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8304753284> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7536546195> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6523482799> <http://www.w3.org/2000/01/rdf-schema#label> "Amer Academic Psychiatry and Law" .
+<http://vivo.school.edu/individual/5263045653> <http://www.w3.org/2000/01/rdf-schema#label> "Elsevier Science Bv" .
+<http://vivo.school.edu/individual/3133666771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/7528056673> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/9892501736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/4631594332> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/9892501736> <http://www.w3.org/2000/01/rdf-schema#label> "Amer Physical Soc" .
+<http://vivo.school.edu/individual/8906018323> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3133666771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/7778390509> <http://www.w3.org/2000/01/rdf-schema#label> "American Medical Association" .
+<http://vivo.school.edu/individual/2648923388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8304753284> <http://www.w3.org/2000/01/rdf-schema#label> "Institute of Electrical and Electronics Engineers" .
+<http://vivo.school.edu/individual/2452615916> <http://www.w3.org/2000/01/rdf-schema#label> "Frontiers Research Foundation" .
+<http://vivo.school.edu/individual/3606655043> <http://www.w3.org/2000/01/rdf-schema#label> "Iop Publishing Ltd" .
+<http://vivo.school.edu/individual/3420608710> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/7117619394> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3606655043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/4631594332> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6523482799> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2545363369> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/1262418774> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2616530794> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6069911807> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6069911807> <http://www.w3.org/2000/01/rdf-schema#label> "Adis International Limited" .
+<http://vivo.school.edu/individual/6090981341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6570940562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/9503174253> <http://www.w3.org/2000/01/rdf-schema#label> "Johns Hopkins University Press" .
+<http://vivo.school.edu/individual/2890023176> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7955311017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6069911807> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/2861618782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/8304753284> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/808246138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/1187206425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5263045653> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/5372219425> <http://www.w3.org/2000/01/rdf-schema#label> "Brill Academic Publishers" .
+<http://vivo.school.edu/individual/2039026148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2876276734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/306939458> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6570940562> <http://www.w3.org/2000/01/rdf-schema#label> "Optical Society of America" .
+<http://vivo.school.edu/individual/9173838161> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/7778390509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/8927598519> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/8819583841> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8534978181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5343638410> <http://www.w3.org/2000/01/rdf-schema#label> "Hindawi Publishing Corporation" .
+<http://vivo.school.edu/individual/5549093671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/8534978181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/306939458> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6400509136> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2616530794> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/306939458> <http://www.w3.org/2000/01/rdf-schema#label> "West Virginia University Press" .
+<http://vivo.school.edu/individual/7528056673> <http://www.w3.org/2000/01/rdf-schema#label> "Elsevier Sci Ltd" .
+<http://vivo.school.edu/individual/2545363369> <http://www.w3.org/2000/01/rdf-schema#label> "Elsevier Science Sa" .
+<http://vivo.school.edu/individual/66425636> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6822897130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2545363369> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/3133666771> <http://www.w3.org/2000/01/rdf-schema#label> "Amer Nuclear Soc" .
+<http://vivo.school.edu/individual/6322884147> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6400509136> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8278308499> <http://www.w3.org/2000/01/rdf-schema#label> "Entomological Society of Washington" .
+<http://vivo.school.edu/individual/8278308499> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8304753284> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6069911807> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5549093671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/1187206425> <http://www.w3.org/2000/01/rdf-schema#label> "Sci Printers and Publ Inc" .
+<http://vivo.school.edu/individual/7528056673> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8906018323> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2616530794> <http://www.w3.org/2000/01/rdf-schema#label> "Federation of American Societies for Experimental Biology" .
+<http://vivo.school.edu/individual/6822897130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5343638410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/8906018323> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/3420608710> <http://www.w3.org/2000/01/rdf-schema#label> "American Association of Zoo Veterinarians" .
+<http://vivo.school.edu/individual/5714535433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6803555245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2876276734> <http://www.w3.org/2000/01/rdf-schema#label> "University of Chicago Press" .
+<http://vivo.school.edu/individual/7117619394> <http://www.w3.org/2000/01/rdf-schema#label> "American Chemical Society" .
+<http://vivo.school.edu/individual/7117619394> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7536546195> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/3133666771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2876276734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3183956001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/8304753284> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6523482799> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6570940562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7117619394> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8927598519> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3078468132> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6322884147> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/9892501736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8278308499> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2545363369> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/579798291> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/808246138> <http://www.w3.org/2000/01/rdf-schema#label> "American College of Physicians" .
+<http://vivo.school.edu/individual/2452615916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/5372219425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6073791348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/7528056673> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8819583841> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/66425636> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/1187206425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2890023176> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/9173838161> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/3420608710> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/9503174253> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/4573006492> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/2452615916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6073791348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/1262418774> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/8819583841> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5549093671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2039026148> <http://www.w3.org/2000/01/rdf-schema#label> "American Institute of Physics" .
+<http://vivo.school.edu/individual/9503174253> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5959295206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/579798291> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3133666771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/5343638410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/306939458> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/3078468132> <http://www.w3.org/2000/01/rdf-schema#label> "Mosby-Elsevier" .
+<http://vivo.school.edu/individual/9892501736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5714535433> <http://www.w3.org/2000/01/rdf-schema#label> "National Academy of Sciences" .
+<http://vivo.school.edu/individual/5549093671> <http://www.w3.org/2000/01/rdf-schema#label> "American Society of Clinical Oncology" .
+<http://vivo.school.edu/individual/9173838161> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/2039026148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/8534978181> <http://www.w3.org/2000/01/rdf-schema#label> "Elsevier Science Inc" .
+<http://vivo.school.edu/individual/7536546195> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/7955311017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/66425636> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/5372219425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5714535433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6322884147> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6570940562> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2648923388> <http://www.w3.org/2000/01/rdf-schema#label> "Walter De Gruyter Gmbh" .
+<http://vivo.school.edu/individual/6090981341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/5549093671> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/5714535433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6822897130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/4573006492> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8906018323> <http://www.w3.org/2000/01/rdf-schema#label> "Public Library of Science" .
+<http://vivo.school.edu/individual/6073791348> <http://www.w3.org/2000/01/rdf-schema#label> "Wiley-V C H Verlag Gmbh" .
+<http://vivo.school.edu/individual/3606655043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5959295206> <http://www.w3.org/2000/01/rdf-schema#label> "Springer Heidelberg" .
+<http://vivo.school.edu/individual/579798291> <http://www.w3.org/2000/01/rdf-schema#label> "Academic Press Inc Elsevier Science" .
+<http://vivo.school.edu/individual/5343638410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8906018323> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8278308499> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/7536546195> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/2876276734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8819583841> <http://www.w3.org/2000/01/rdf-schema#label> "Royal Society of Chemistry" .
+<http://vivo.school.edu/individual/3078468132> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/4631594332> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/5712299532> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/5263045653> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2616530794> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8927598519> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/66425636> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/9892501736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/7955311017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7955311017> <http://www.w3.org/2000/01/rdf-schema#label> "Annual Reviews" .
+<http://vivo.school.edu/individual/306939458> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/3606655043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5712299532> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/2452615916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5372219425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7778390509> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/66425636> <http://www.w3.org/2000/01/rdf-schema#label> "American Society for Microbiology" .
+<http://vivo.school.edu/individual/3420608710> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5959295206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/8927598519> <http://www.w3.org/2000/01/rdf-schema#label> "American Physiological Association" .
+<http://vivo.school.edu/individual/2890023176> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/3420608710> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/9503174253> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/1187206425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/8534978181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2861618782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/5714535433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/1262418774> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/5712299532> <http://www.w3.org/2000/01/rdf-schema#label> "W B Saunders Co-Elsevier Inc" .
+<http://vivo.school.edu/individual/6400509136> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/2861618782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6322884147> <http://www.w3.org/2000/01/rdf-schema#label> "Biomed Central Ltd" .
+<http://vivo.school.edu/individual/5263045653> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/1187206425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/579798291> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6073791348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/2616530794> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/5343638410> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/9173838161> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/3183956001> <http://www.w3.org/2000/01/rdf-schema#label> "American Society for Horticultural Science" .
+<http://vivo.school.edu/individual/2861618782> <http://www.w3.org/2000/01/rdf-schema#label> "Cambridge University Press" .
+<http://vivo.school.edu/individual/5263045653> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/9173838161> <http://www.w3.org/2000/01/rdf-schema#label> "Taylor and Francis Inc" .
+<http://vivo.school.edu/individual/2648923388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6822897130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/3183956001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6400509136> <http://www.w3.org/2000/01/rdf-schema#label> "Wiley-Blackwell" .
+<http://vivo.school.edu/individual/7536546195> <http://www.w3.org/2000/01/rdf-schema#label> "Alphamed Press" .
+<http://vivo.school.edu/individual/3606655043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/6803555245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6822897130> <http://www.w3.org/2000/01/rdf-schema#label> "American Physiological Society" .
+<http://vivo.school.edu/individual/4631594332> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6523482799> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2648923388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6069911807> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/2545363369> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/4631594332> <http://www.w3.org/2000/01/rdf-schema#label> "Amer Oriental Soc" .
+<http://vivo.school.edu/individual/2648923388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/6523482799> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6090981341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/3183956001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8278308499> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/2890023176> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/4573006492> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/8534978181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.school.edu/individual/7117619394> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+
+
