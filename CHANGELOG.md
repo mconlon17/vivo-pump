@@ -218,4 +218,5 @@ foundation for future ingest from DOI as well as ingest from PMID.
 * **2015-07-07** Additional publication prep
 * **2015-07-08** Begin merging add_pubmed code
 * **2015-07-10** bib2csv_filter, sample data in uf_examples/publications
-* **2015-07-11** Refactored bib2csv using list comprehension.  Completed bib2csv_filter.  Working as designed.
+* **2015-07-11** Refactored bib2csv using list comprehension.  Completed bib2csv_filter.  Working as designed. Add
+tr_csv.txt as sample output from bib2csv
