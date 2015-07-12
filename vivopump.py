@@ -142,6 +142,19 @@ def write_csv(filename, data, delimiter='|'):
             f.write(delimiter.join(data[key].values()) + '\n')
 
 
+def key_string(s):
+    """
+    Given a string s, return a string with a bunch of punctuation and special
+    characters removed and then everything lower cased.  Useful for matching
+    strings in which case, punctuation and special characters should not be
+    considered in the match
+    """
+    k = s.encode("utf-8", "ignore").translate(None,
+                                              """ \t\n\r\f!@#$%^&*()_+:"<>?-=[]\\;',./""")
+    k = k.lower()
+    return k
+
+
 def get_vivo_ufid():
     """
     Query VIVO and return a list of all the ufid found in VIVO
@@ -152,6 +165,18 @@ def get_vivo_ufid():
     ufid = [x['ufid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(ufid, uri))
+
+
+def get_vivo_publishers():
+    """
+    Query VIVO and return a list of all the publishers found in VIVO
+    :return: dictionary of uri keyed by simplified publisher name
+    """
+    query = "select ?uri ?label where {?uri a vivo:Publisher . ?uri rdfs:label ?label .}"
+    a = vivo_query(query)
+    label = [key_string(x['label']['value']) for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(label, uri))
 
 
 def get_vivo_ccn():

@@ -70,7 +70,7 @@ parser.add_argument("-q", "--queryuri", help="URI for API", nargs="?")
 parser.add_argument("-r", "--rdfprefix", help="RDF prefix", nargs="?")
 parser.add_argument("-x", "--uriprefix", help="URI prefix", nargs="?")
 parser.add_argument("-s", "--src", help="name of source file containing data to be updated in VIVO", nargs='?')
-parser.add_argument("-c", "--config", help="name of file containing config data.  Config data overrides program"
+parser.add_argument("-c", "--config", help="name of file containing config data.  Config data overrides program "
                     "defaults. Command line overrides config file values", nargs='?')
 parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
 parser.add_argument("-n", "--nofilters", action="store_true", help="turn off filters")

@@ -1,0 +1,52 @@
+type|name|remove|uri
+publisher|Elsevier Sci Ltd||
+publisher|Elsevier Science Bv||
+publisher|Taylor and Francis Inc||
+publisher|Pergamon-Elsevier Science Ltd||
+publisher|Academic Press Inc Elsevier Science||
+publisher|Routledge Journals, Taylor and Francis Ltd||
+publisher|American Society for Microbiology||
+publisher|Cambridge University Press||
+publisher|Elsevier Science Inc||
+publisher|Federation of American Societies for Experimental Biology||
+publisher|Mosby-Elsevier||
+publisher|Springer Wien||
+publisher|Wiley-Blackwell||
+publisher|Wiley-V C H Verlag Gmbh||
+publisher|American Physiological Society||
+publisher|Optical Society of America||
+publisher|Biomed Central Ltd||
+publisher|Amer Physical Soc||
+publisher|American Chemical Society||
+publisher|Public Library of Science||
+publisher|National Academy of Sciences||
+publisher|American Institute of Physics||
+publisher|Frontiers Research Foundation||
+publisher|Adis International Limited||
+publisher|Institute of Electrical and Electronics Engineers||
+publisher|American Medical Association||
+publisher|Associate Agrometerologists||
+publisher|University of Chicago Press||
+publisher|Amer Academic Psychiatry and Law||
+publisher|American Association of Zoo Veterinarians||
+publisher|Amer Nuclear Soc||
+publisher|American Physiological Association||
+publisher|Alphamed Press||
+publisher|Springer Heidelberg||
+publisher|West Virginia University Press||
+publisher|American Society for Horticultural Science||
+publisher|Iop Publishing Ltd||
+publisher|Sci Printers and Publ Inc||
+publisher|Elsevier Science Sa||
+publisher|Johns Hopkins University Press||
+publisher|American Society of Clinical Oncology||
+publisher|W B Saunders Co-Elsevier Inc||
+publisher|Society for General Microbiology||
+publisher|Entomological Society of Washington||
+publisher|American College of Physicians||
+publisher|Annual Reviews||
+publisher|Brill Academic Publishers||
+publisher|Hindawi Publishing Corporation||
+publisher|Amer Oriental Soc||
+publisher|Royal Society of Chemistry||
+publisher|Walter De Gruyter Gmbh||

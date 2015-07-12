@@ -15,7 +15,11 @@ added as stubs
 
 ## Filters
 
-TBA
+1. bib2csv_filter.py -- read a bibtex file and output a CSV.  No edits to the bibtex.
+1. publish_columns_filter.py -- results in the columns needed for the publisher update
+1. unique_name_filter.py -- remove duplicate publisher names
+1. match_publishers.py -- matches publishers in source to publishers in VIVO.  Matches are discarded.  Only
+new publishers make it through the filter.
 
 ## Handlers
 
@@ -32,6 +36,10 @@ Disambiguation handler
 1. Run the filters to produce the required input file.  The same input file is used for all five ingests:
 1. Add concepts not currently in VIVO
 1. Add publishers not currently in VIVO
+
+    cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
+    python unique_name_filter.py | python match_publishers_filter.py > publisher_update_data.txt
+    
 1. Add journals not currently in VIVO
 1. Add people not currently in VIVO
 1. Add publications to VIVO

@@ -1,0 +1,37 @@
+{
+    "entity_def": {
+        "type": "http://xmlns.com/foaf/0.1/Organization", 
+        "entity_sparql": "?uri a vivo:Publisher .",
+        "order_by": "name"
+    }, 
+    "column_defs": {
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "type": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "include": [
+                        "thing", 
+                        "agent", 
+                        "org"
+                    ], 
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "enum": "org_types.txt"
+                }
+            }
+        ]
+    }
+}

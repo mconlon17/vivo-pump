@@ -219,4 +219,6 @@ foundation for future ingest from DOI as well as ingest from PMID.
 * **2015-07-08** Begin merging add_pubmed code
 * **2015-07-10** bib2csv_filter, sample data in uf_examples/publications
 * **2015-07-11** Refactored bib2csv using list comprehension.  Completed bib2csv_filter.  Working as designed. Add
-tr_csv.txt as sample output from bib2csv
+tr_csv.txt as sample output from bib2csv.  Add publisher_column_filter.py. Add publisher_columns_filter.py. Add
+publisher_update_data.txt.  Add unique_name_filter.txt. Add match_publishers_filter.py. Add publisher_def.json.
+Add org_types to uf_examples/publications for adding publishers.  Add sv_publishers.cfg
