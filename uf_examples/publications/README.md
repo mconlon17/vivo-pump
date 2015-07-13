@@ -48,7 +48,7 @@ Disambiguation handler
         
    Then
    
-   Verify concept_sub.rdf is zero length
+   Verify concept_sub.rdf is zero length.  No concepts are subtracted by updating publications.
    
    Add concept_add.rdf to VIVO
         
