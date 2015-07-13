@@ -1,0 +1,381 @@
+<http://vivo.school.edu/individual/5824808869> <http://purl.org/bibo/ontology/issn> "2157-6564"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2095035579> <http://purl.org/bibo/ontology/issn> "1475-7516"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1282745482> <http://purl.org/bibo/ontology/issn> "2168-6165"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8751746920> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6119428544> <http://www.w3.org/2000/01/rdf-schema#label> "European Journal of Human Genetics" .
+<http://vivo.school.edu/individual/1102715248> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/9391446840> <http://purl.org/bibo/ontology/issn> "0883-7694"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6534119418> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6119428544> <http://purl.org/bibo/ontology/eissn> "1476-5438"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1584516569> <http://www.w3.org/2000/01/rdf-schema#label> "Applied Psycholinguistics" .
+<http://vivo.school.edu/individual/5462502353> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/9063592966> <http://purl.org/bibo/ontology/eissn> "1943-3565"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4804889146> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8677673191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/640880093> <http://purl.org/bibo/ontology/issn> "1878-5352"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n565> <http://www.w3.org/2000/01/rdf-schema#label> "Nuclear Technology" .
+<http://vivo.school.edu/individual/8534773125> <http://www.w3.org/2000/01/rdf-schema#label> "Field Crops Research" .
+<http://vivo.school.edu/individual/4939621902> <http://purl.org/bibo/ontology/issn> "1369-3786"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8858146747> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Chemical Physics" .
+<http://vivo.school.edu/individual/5684468> <http://www.w3.org/2000/01/rdf-schema#label> "Applied Physics Letters" .
+<http://vivo.school.edu/individual/1394546724> <http://www.w3.org/2000/01/rdf-schema#label> "Theatre Journal" .
+<http://vivo.school.edu/individual/2221456906> <http://purl.org/bibo/ontology/eissn> "1467-9809"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9528096146> <http://purl.org/bibo/ontology/eissn> "1532-4109"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9874561591> <http://www.w3.org/2000/01/rdf-schema#label> "Frontiers in Human Neuroscience" .
+<http://vivo.school.edu/individual/1664519530> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural Brain Research" .
+<http://vivo.school.edu/individual/13726173> <http://www.w3.org/2000/01/rdf-schema#label> "Veterinary Journal" .
+<http://vivo.school.edu/individual/2986834857> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4770770453> <http://www.w3.org/2000/01/rdf-schema#label> "Carcinogenesis" .
+<http://vivo.school.edu/individual/2986834857> <http://purl.org/bibo/ontology/eissn> "1523-6838"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8751746920> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Hazardous Materials" .
+<http://vivo.school.edu/individual/1584516569> <http://purl.org/bibo/ontology/issn> "0142-7164"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8230784627> <http://purl.org/bibo/ontology/issn> "0003-2700"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7061286703> <http://purl.org/bibo/ontology/eissn> "1573-5052"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7440792048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4415944336> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4415944336> <http://www.w3.org/2000/01/rdf-schema#label> "Paleobiology" .
+<http://vivo.school.edu/individual/7626544588> <http://purl.org/bibo/ontology/issn> "0960-894X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5698180444> <http://purl.org/bibo/ontology/issn> "2090-004X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4704717679> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/810904834> <http://purl.org/bibo/ontology/issn> "0022-2801"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6485804237> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3825449349> <http://purl.org/bibo/ontology/eissn> "1613-6829"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6119428544> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6944278760> <http://purl.org/bibo/ontology/issn> "0002-7863"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8085355012> <http://purl.org/bibo/ontology/eissn> "1522-1466"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2559622247> <http://www.w3.org/2000/01/rdf-schema#label> "Tree Genetics and Genomes" .
+<http://vivo.school.edu/individual/7440792048> <http://purl.org/bibo/ontology/eissn> "1876-7184"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2374150296> <http://purl.org/bibo/ontology/eissn> "1943-3662"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7822622864> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Medical Microbiology" .
+<http://vivo.school.edu/individual/7971392186> <http://purl.org/bibo/ontology/eissn> "1522-1555"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9528096146> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Environmental Science and Health Part B-Pesticides Food Contaminants and Agricultural Wastes" .
+<http://vivo.school.edu/individual/2994181941> <http://purl.org/bibo/ontology/issn> "0363-6119"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/640880093> <http://purl.org/bibo/ontology/eissn> "1878-5379"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5908132173> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/2095035579> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Cosmology and Astroparticle Physics" .
+<http://vivo.school.edu/individual/1282745482> <http://www.w3.org/2000/01/rdf-schema#label> "Jama Ophthalmology" .
+<http://vivo.school.edu/individual/8677673191> <http://purl.org/bibo/ontology/issn> "1098-0121"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/635905604> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7763495134> <http://purl.org/bibo/ontology/issn> "1477-0520"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4804889146> <http://purl.org/bibo/ontology/issn> "0002-7820"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1394546724> <http://purl.org/bibo/ontology/issn> "0192-2882"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5712447715> <http://www.w3.org/2000/01/rdf-schema#label> "Dysphagia" .
+<http://vivo.school.edu/individual/9158894827> <http://purl.org/bibo/ontology/issn> "0013-8797"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/892705713> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Inflammation-London" .
+<http://vivo.school.edu/individual/6739962770> <http://purl.org/bibo/ontology/eissn> "1520-4804"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2699614372> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Applied Physics" .
+<http://vivo.school.edu/individual/4939621902> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Mycology" .
+<http://vivo.school.edu/individual/6534046810> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1355193607> <http://purl.org/bibo/ontology/eissn> "1434-4475"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6816456383> <http://purl.org/bibo/ontology/issn> "0003-0279"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n565> <http://purl.org/bibo/ontology/issn> "0029-5450"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/700438164> <http://purl.org/bibo/ontology/issn> "0261-4189"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1394546724> <http://purl.org/bibo/ontology/eissn> "1086-332X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5908132173> <http://purl.org/bibo/ontology/eissn> "1873-4596"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6115331610> <http://purl.org/bibo/ontology/eissn> "1939-9375"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6816456383> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7694956204> <http://www.w3.org/2000/01/rdf-schema#label> "Drugs" .
+<http://vivo.school.edu/individual/2994181941> <http://www.w3.org/2000/01/rdf-schema#label> "American Journal of Physiology-Regulatory Integrative and Comparative Physiology" .
+<http://vivo.school.edu/individual/n1802> <http://purl.org/bibo/ontology/issn> "0018-5345"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7061286703> <http://purl.org/bibo/ontology/issn> "1385-0237"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6534046810> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of the Neurological Sciences" .
+<http://vivo.school.edu/individual/8858146747> <http://purl.org/bibo/ontology/issn> "0021-9606"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4247596032> <http://purl.org/bibo/ontology/eissn> "1879-3193"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2559622247> <http://purl.org/bibo/ontology/eissn> "1614-2950"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4939621902> <http://purl.org/bibo/ontology/eissn> "1460-2709"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3458704406> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5044084450> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3038629089> <http://purl.org/bibo/ontology/eissn> "1878-8769"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4804889146> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of the American Ceramic Society" .
+<http://vivo.school.edu/individual/6115331610> <http://purl.org/bibo/ontology/issn> "0093-3813"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2374150296> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/356331947> <http://purl.org/bibo/ontology/eissn> "2157-5665"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3049897203> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3558280865> <http://purl.org/bibo/ontology/issn> "0167-9236"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1226569006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1355193607> <http://purl.org/bibo/ontology/issn> "0026-9247"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/700438164> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3558280865> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3034964104> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Leukocyte Biology" .
+<http://vivo.school.edu/individual/6470062798> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1612178482> <http://purl.org/bibo/ontology/eissn> "1522-9645"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8459093488> <http://purl.org/bibo/ontology/issn> "0278-4319"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7425201536> <http://www.w3.org/2000/01/rdf-schema#label> "Education and Treatment of Children" .
+<http://vivo.school.edu/individual/2986834857> <http://purl.org/bibo/ontology/issn> "0272-6386"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5358496444> <http://purl.org/bibo/ontology/eissn> "2294-1932"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9063592966> <http://purl.org/bibo/ontology/issn> "0024-7758"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2002749879> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/2699614372> <http://purl.org/bibo/ontology/eissn> "1089-7550"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2254823225> <http://purl.org/bibo/ontology/issn> "0167-6369"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1226569006> <http://purl.org/bibo/ontology/issn> "1743-923X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1569433946> <http://purl.org/bibo/ontology/issn> "0891-5245"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6739962770> <http://purl.org/bibo/ontology/issn> "0022-2623"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5221958580> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4939621902> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8751746920> <http://purl.org/bibo/ontology/eissn> "1873-3336"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8459093488> <http://www.w3.org/2000/01/rdf-schema#label> "International Journal of Hospitality Management" .
+<http://vivo.school.edu/individual/1569433946> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6115331610> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6470062798> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Tissue Engineering and Regenerative Medicine" .
+<http://vivo.school.edu/individual/8620772106> <http://purl.org/bibo/ontology/eissn> "1558-187X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8175847353> <http://purl.org/bibo/ontology/eissn> "1469-8986"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3825449349> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6534119418> <http://purl.org/bibo/ontology/eissn> "1873-3239"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2374150296> <http://purl.org/bibo/ontology/issn> "1093-6793"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4906666402> <http://purl.org/bibo/ontology/issn> "1471-2164"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7822622864> <http://purl.org/bibo/ontology/eissn> "1473-5644"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9158894827> <http://www.w3.org/2000/01/rdf-schema#label> "Proceedings of the Entomological Society of Washington" .
+<http://vivo.school.edu/individual/9528096146> <http://purl.org/bibo/ontology/issn> "0360-1234"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/810904834> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Modern History" .
+<http://vivo.school.edu/individual/399832296> <http://purl.org/bibo/ontology/eissn> "1939-134X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8085355012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/892705713> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/399832296> <http://www.w3.org/2000/01/rdf-schema#label> "Psychological Assessment" .
+<http://vivo.school.edu/individual/5044084450> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Zoo and Wildlife Medicine" .
+<http://vivo.school.edu/individual/892705713> <http://purl.org/bibo/ontology/issn> "1476-9255"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8620772106> <http://www.w3.org/2000/01/rdf-schema#label> "IEEE Transactions on Electromagnetic Compatibility" .
+<http://vivo.school.edu/individual/2002749879> <http://purl.org/bibo/ontology/eissn> "1434-6052"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3558280865> <http://purl.org/bibo/ontology/eissn> "1873-5797"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7240645229> <http://purl.org/bibo/ontology/issn> "1475-2875"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2559622247> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1282745482> <http://purl.org/bibo/ontology/eissn> "2168-6173"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9528096146> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/399832296> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3038629089> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6386971614> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6386971614> <http://www.w3.org/2000/01/rdf-schema#label> "Scientific Reports" .
+<http://vivo.school.edu/individual/9063592966> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Reproductive Medicine" .
+<http://vivo.school.edu/individual/635905604> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Shoulder and Elbow Surgery" .
+<http://vivo.school.edu/individual/4770770453> <http://purl.org/bibo/ontology/issn> "0143-3334"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2254823225> <http://purl.org/bibo/ontology/eissn> "1573-2959"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1554119755> <http://www.w3.org/2000/01/rdf-schema#label> "IEEE Transactions on Microwave Theory and Techniques" .
+<http://vivo.school.edu/individual/369394363> <http://www.w3.org/2000/01/rdf-schema#label> "Proceedings of the National Academy of Sciences of the United States of America" .
+<http://vivo.school.edu/individual/1664519530> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3115709188> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5789377978> <http://purl.org/bibo/ontology/issn> "1932-6203"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6470062798> <http://purl.org/bibo/ontology/eissn> "1932-7005"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1394546724> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/2095035579> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6534119418> <http://purl.org/bibo/ontology/issn> "0169-7439"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3458704406> <http://purl.org/bibo/ontology/issn> "0029-5493"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2254823225> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Monitoring and Assessment" .
+<http://vivo.school.edu/individual/4770770453> <http://purl.org/bibo/ontology/eissn> "1460-2180"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/640880093> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/2374150296> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of the American Academy of Psychiatry and the Law" .
+<http://vivo.school.edu/individual/8534773125> <http://purl.org/bibo/ontology/eissn> "1872-6852"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1988696042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7433932036> <http://purl.org/bibo/ontology/eissn> "1938-3703"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n1802> <http://purl.org/bibo/ontology/eissn> "2327-9834"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n565> <http://purl.org/bibo/ontology/eissn> "1943-7471"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/885853968> <http://www.w3.org/2000/01/rdf-schema#label> "Optics Letters" .
+<http://vivo.school.edu/individual/1226569006> <http://www.w3.org/2000/01/rdf-schema#label> "Politics and Gender" .
+<http://vivo.school.edu/individual/2254823225> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/9874561591> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3985008676> <http://www.w3.org/2000/01/rdf-schema#label> "Advanced Materials" .
+<http://vivo.school.edu/individual/9158894827> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8677673191> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Review B" .
+<http://vivo.school.edu/individual/3825449349> <http://purl.org/bibo/ontology/issn> "1613-6810"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5698180444> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4704717679> <http://purl.org/bibo/ontology/issn> "0084-6597"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3034964104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4247596032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1554119755> <http://purl.org/bibo/ontology/issn> "0018-9480"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9921370578> <http://purl.org/bibo/ontology/issn> "1053-8119"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3115709188> <http://purl.org/bibo/ontology/issn> "0882-5963"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2221456906> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Religious History" .
+<http://vivo.school.edu/individual/4549200342> <http://purl.org/bibo/ontology/issn> "0012-821X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5221958580> <http://www.w3.org/2000/01/rdf-schema#label> "Pesticide Biochemistry and Physiology" .
+<http://vivo.school.edu/individual/5221958580> <http://purl.org/bibo/ontology/issn> "0048-3575"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7626544588> <http://www.w3.org/2000/01/rdf-schema#label> "Bioorganic and Medicinal Chemistry Letters" .
+<http://vivo.school.edu/individual/4415944336> <http://purl.org/bibo/ontology/issn> "0094-8373"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1282745482> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/13726173> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/356331947> <http://www.w3.org/2000/01/rdf-schema#label> "Entrepreneurship Research Journal" .
+<http://vivo.school.edu/individual/8230784627> <http://www.w3.org/2000/01/rdf-schema#label> "Analytical Chemistry" .
+<http://vivo.school.edu/individual/8085355012> <http://purl.org/bibo/ontology/issn> "1931-857X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2986834857> <http://www.w3.org/2000/01/rdf-schema#label> "American Journal of Kidney Diseases" .
+<http://vivo.school.edu/individual/810904834> <http://purl.org/bibo/ontology/eissn> "1537-5358"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5712447715> <http://purl.org/bibo/ontology/eissn> "1432-0460"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/675523459> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Clinical Oncology" .
+<http://vivo.school.edu/individual/8175847353> <http://purl.org/bibo/ontology/issn> "0048-5772"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6739962770> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8534773125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7694956204> <http://purl.org/bibo/ontology/eissn> "1179-1950"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3985008676> <http://purl.org/bibo/ontology/eissn> "1521-4095"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1102715248> <http://purl.org/bibo/ontology/issn> "1063-6692"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8085355012> <http://www.w3.org/2000/01/rdf-schema#label> "American Journal of Physiology-Renal Physiology" .
+<http://vivo.school.edu/individual/4662223958> <http://www.w3.org/2000/01/rdf-schema#label> "Frontiers in Microbiology" .
+<http://vivo.school.edu/individual/4415944336> <http://purl.org/bibo/ontology/eissn> "1938-5331"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5684468> <http://purl.org/bibo/ontology/eissn> "1077-3118"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9349655962> <http://purl.org/bibo/ontology/issn> "1935-861X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5712447715> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5698180444> <http://purl.org/bibo/ontology/eissn> "2090-0058"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5712447715> <http://purl.org/bibo/ontology/issn> "0179-051X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4951888258> <http://purl.org/bibo/ontology/eissn> "1539-3704"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/13726173> <http://purl.org/bibo/ontology/eissn> "1532-2971"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2699614372> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3558280865> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Support Systems" .
+<http://vivo.school.edu/individual/5462502353> <http://purl.org/bibo/ontology/eissn> "1476-5497"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8175847353> <http://www.w3.org/2000/01/rdf-schema#label> "Psychophysiology" .
+<http://vivo.school.edu/individual/5358496444> <http://purl.org/bibo/ontology/issn> "0928-1541"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/369394363> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6485804237> <http://purl.org/bibo/ontology/eissn> "1469-929X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/13726173> <http://purl.org/bibo/ontology/issn> "1090-0233"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8858146747> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3038629089> <http://www.w3.org/2000/01/rdf-schema#label> "World Neurosurgery" .
+<http://vivo.school.edu/individual/5789377978> <http://www.w3.org/2000/01/rdf-schema#label> "Plos One" .
+<http://vivo.school.edu/individual/7240645229> <http://www.w3.org/2000/01/rdf-schema#label> "Malaria Journal" .
+<http://vivo.school.edu/individual/3985008676> <http://purl.org/bibo/ontology/issn> "0935-9648"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5684468> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7425201536> <http://purl.org/bibo/ontology/issn> "0748-8491"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1102715248> <http://www.w3.org/2000/01/rdf-schema#label> "Ieee-Acm Transactions on Networking" .
+<http://vivo.school.edu/individual/6470062798> <http://purl.org/bibo/ontology/issn> "1932-6254"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9063592966> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1569433946> <http://purl.org/bibo/ontology/eissn> "1532-656X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8615719821> <http://www.w3.org/2000/01/rdf-schema#label> "Epilepsia" .
+<http://vivo.school.edu/individual/31345443> <http://purl.org/bibo/ontology/issn> "0099-2240"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3825449349> <http://www.w3.org/2000/01/rdf-schema#label> "Small" .
+<http://vivo.school.edu/individual/1355193607> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/31345443> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8615719821> <http://purl.org/bibo/ontology/eissn> "1528-1167"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9921370578> <http://www.w3.org/2000/01/rdf-schema#label> "Neuroimage" .
+<http://vivo.school.edu/individual/2221456906> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4951888258> <http://www.w3.org/2000/01/rdf-schema#label> "Annals of Internal Medicine" .
+<http://vivo.school.edu/individual/3115709188> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Pediatric Nursing-Nursing Care of Children and Families" .
+<http://vivo.school.edu/individual/7694956204> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7763495134> <http://www.w3.org/2000/01/rdf-schema#label> "Organic and Biomolecular Chemistry" .
+<http://vivo.school.edu/individual/885853968> <http://purl.org/bibo/ontology/issn> "0146-9592"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7763495134> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5044084450> <http://purl.org/bibo/ontology/issn> "1042-7260"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9349655962> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5221958580> <http://purl.org/bibo/ontology/eissn> "1095-9939"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1664519530> <http://purl.org/bibo/ontology/issn> "0166-4328"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/700438164> <http://www.w3.org/2000/01/rdf-schema#label> "Embo Journal" .
+<http://vivo.school.edu/individual/3049897203> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Agrometeorology" .
+<http://vivo.school.edu/individual/4770770453> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6115331610> <http://www.w3.org/2000/01/rdf-schema#label> "IEEE Transactions on Plasma Science" .
+<http://vivo.school.edu/individual/5964709148> <http://purl.org/bibo/ontology/issn> "0043-1354"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3034964104> <http://purl.org/bibo/ontology/issn> "0741-5400"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3038629089> <http://purl.org/bibo/ontology/issn> "1878-8750"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/675523459> <http://purl.org/bibo/ontology/eissn> "1527-7755"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5824808869> <http://purl.org/bibo/ontology/eissn> "2157-6580"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7440792048> <http://purl.org/bibo/ontology/issn> "0334-2123"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9391446840> <http://www.w3.org/2000/01/rdf-schema#label> "Mrs Bulletin" .
+<http://vivo.school.edu/individual/1554119755> <http://purl.org/bibo/ontology/eissn> "1557-9670"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/700438164> <http://purl.org/bibo/ontology/eissn> "1460-2075"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6386971614> <http://purl.org/bibo/ontology/issn> "2045-2322"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7440792048> <http://www.w3.org/2000/01/rdf-schema#label> "Phytoparasitica" .
+<http://vivo.school.edu/individual/6816456383> <http://purl.org/bibo/ontology/eissn> "2169-2289"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8751746920> <http://purl.org/bibo/ontology/issn> "0304-3894"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7433932036> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Applied Behavior Analysis" .
+<http://vivo.school.edu/individual/7626544588> <http://purl.org/bibo/ontology/eissn> "1464-3405"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/31345443> <http://purl.org/bibo/ontology/eissn> "1098-5336"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2699614372> <http://purl.org/bibo/ontology/issn> "0021-8979"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8230784627> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4549200342> <http://www.w3.org/2000/01/rdf-schema#label> "Earth and Planetary Science Letters" .
+<http://vivo.school.edu/individual/1988696042> <http://www.w3.org/2000/01/rdf-schema#label> "International Journal of Food Microbiology" .
+<http://vivo.school.edu/individual/4906666402> <http://www.w3.org/2000/01/rdf-schema#label> "Bmc Genomics" .
+<http://vivo.school.edu/individual/810904834> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/2559622247> <http://purl.org/bibo/ontology/issn> "1614-2942"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2002749879> <http://purl.org/bibo/ontology/issn> "1434-6044"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/640880093> <http://www.w3.org/2000/01/rdf-schema#label> "Arabian Journal of Chemistry" .
+<http://vivo.school.edu/individual/6485804237> <http://www.w3.org/2000/01/rdf-schema#label> "Interventions-International Journal of Postcolonial Studies" .
+<http://vivo.school.edu/individual/7971392186> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7971392186> <http://purl.org/bibo/ontology/issn> "0193-1849"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1584516569> <http://purl.org/bibo/ontology/eissn> "1469-1817"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7433932036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/635905604> <http://purl.org/bibo/ontology/issn> "1058-2746"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2221456906> <http://purl.org/bibo/ontology/issn> "0022-4227"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/369394363> <http://purl.org/bibo/ontology/issn> "0027-8424"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7763495134> <http://purl.org/bibo/ontology/eissn> "1477-0539"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8615719821> <http://purl.org/bibo/ontology/issn> "0013-9580"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5358496444> <http://www.w3.org/2000/01/rdf-schema#label> "Iawa Journal" .
+<http://vivo.school.edu/individual/9391446840> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3034964104> <http://purl.org/bibo/ontology/eissn> "1938-3673"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8459093488> <http://purl.org/bibo/ontology/eissn> "1873-4693"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6119428544> <http://purl.org/bibo/ontology/issn> "1018-4813"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1612178482> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4951888258> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1554119755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7425201536> <http://purl.org/bibo/ontology/eissn> "1934-8924"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6534046810> <http://purl.org/bibo/ontology/issn> "0022-510X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5824808869> <http://www.w3.org/2000/01/rdf-schema#label> "Stem Cells Translational Medicine" .
+<http://vivo.school.edu/individual/1102715248> <http://purl.org/bibo/ontology/eissn> "1558-2566"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/675523459> <http://purl.org/bibo/ontology/issn> "0732-183X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2994181941> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5964709148> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5462502353> <http://www.w3.org/2000/01/rdf-schema#label> "International Journal of Obesity" .
+<http://vivo.school.edu/individual/4951888258> <http://purl.org/bibo/ontology/issn> "0003-4819"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4804889146> <http://purl.org/bibo/ontology/eissn> "1551-2916"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5964709148> <http://www.w3.org/2000/01/rdf-schema#label> "Water Research" .
+<http://vivo.school.edu/individual/5358496444> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/6944278760> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8459093488> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8620772106> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/2994181941> <http://purl.org/bibo/ontology/eissn> "1522-1490"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6534119418> <http://www.w3.org/2000/01/rdf-schema#label> "Chemometrics and Intelligent Laboratory Systems" .
+<http://vivo.school.edu/individual/1355193607> <http://www.w3.org/2000/01/rdf-schema#label> "Monatshefte Fur Chemie" .
+<http://vivo.school.edu/individual/4247596032> <http://www.w3.org/2000/01/rdf-schema#label> "Tourism Management" .
+<http://vivo.school.edu/individual/9349655962> <http://www.w3.org/2000/01/rdf-schema#label> "Brain Stimulation" .
+<http://vivo.school.edu/individual/7061286703> <http://www.w3.org/2000/01/rdf-schema#label> "Plant Ecology" .
+<http://vivo.school.edu/individual/5698180444> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Ophthalmology" .
+<http://vivo.school.edu/individual/3049897203> <http://purl.org/bibo/ontology/issn> "0972-1665"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/885853968> <http://purl.org/bibo/ontology/eissn> "1539-4794"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/31345443> <http://www.w3.org/2000/01/rdf-schema#label> "Applied and Environmental Microbiology" .
+<http://vivo.school.edu/individual/8677673191> <http://purl.org/bibo/ontology/eissn> "1550-235X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9921370578> <http://purl.org/bibo/ontology/eissn> "1095-9572"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6816456383> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of the American Oriental Society" .
+<http://vivo.school.edu/individual/9349655962> <http://purl.org/bibo/ontology/eissn> "1876-4754"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5684468> <http://purl.org/bibo/ontology/issn> "0003-6951"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9874561591> <http://purl.org/bibo/ontology/issn> "1662-5161"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6534046810> <http://purl.org/bibo/ontology/eissn> "1878-5883"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4549200342> <http://purl.org/bibo/ontology/eissn> "1385-013X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5824808869> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7433932036> <http://purl.org/bibo/ontology/issn> "0021-8855"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7822622864> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7240645229> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4906666402> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1612178482> <http://purl.org/bibo/ontology/issn> "0195-668X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1664519530> <http://purl.org/bibo/ontology/eissn> "1872-7549"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8230784627> <http://purl.org/bibo/ontology/eissn> "1520-6882"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1612178482> <http://www.w3.org/2000/01/rdf-schema#label> "European Heart Journal" .
+<http://vivo.school.edu/individual/5462502353> <http://purl.org/bibo/ontology/issn> "0307-0565"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8858146747> <http://purl.org/bibo/ontology/eissn> "1089-7690"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6739962770> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Medicinal Chemistry" .
+<http://vivo.school.edu/individual/356331947> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1226569006> <http://purl.org/bibo/ontology/eissn> "1743-9248"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/2002749879> <http://www.w3.org/2000/01/rdf-schema#label> "European Physical Journal C" .
+<http://vivo.school.edu/individual/1569433946> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of Pediatric Health Care" .
+<http://vivo.school.edu/individual/5908132173> <http://purl.org/bibo/ontology/issn> "0891-5849"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1988696042> <http://purl.org/bibo/ontology/eissn> "1879-3460"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8175847353> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8534773125> <http://purl.org/bibo/ontology/issn> "0378-4290"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4662223958> <http://purl.org/bibo/ontology/issn> "1664-302X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7822622864> <http://purl.org/bibo/ontology/issn> "0022-2615"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/885853968> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7626544588> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/675523459> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7061286703> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/9391446840> <http://purl.org/bibo/ontology/eissn> "1938-1425"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/3458704406> <http://www.w3.org/2000/01/rdf-schema#label> "Nuclear Engineering and Design" .
+<http://vivo.school.edu/individual/4662223958> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/399832296> <http://purl.org/bibo/ontology/issn> "1040-3590"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/356331947> <http://purl.org/bibo/ontology/issn> "2194-6175"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1584516569> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/8615719821> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4247596032> <http://purl.org/bibo/ontology/issn> "0261-5177"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5908132173> <http://www.w3.org/2000/01/rdf-schema#label> "Free Radical Biology and Medicine" .
+<http://vivo.school.edu/individual/5789377978> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/7694956204> <http://purl.org/bibo/ontology/issn> "0012-6667"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/7971392186> <http://www.w3.org/2000/01/rdf-schema#label> "American Journal of Physiology-Endocrinology and Metabolism" .
+<http://vivo.school.edu/individual/6485804237> <http://purl.org/bibo/ontology/issn> "1369-801X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6944278760> <http://www.w3.org/2000/01/rdf-schema#label> "Journal of the American Chemical Society" .
+<http://vivo.school.edu/individual/7425201536> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/4549200342> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/1988696042> <http://purl.org/bibo/ontology/issn> "0168-1605"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/8620772106> <http://purl.org/bibo/ontology/issn> "0018-9375"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/9921370578> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/3985008676> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/bibo/ontology/Journal> .
+<http://vivo.school.edu/individual/5044084450> <http://purl.org/bibo/ontology/eissn> "1937-2825"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+

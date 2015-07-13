@@ -67,8 +67,6 @@ Disambiguation handler
     
 1. Add people not currently in VIVO
 1. Add publications to VIVO
-1. Run the pump to create add and sub RDF
-1. Add the add RDF and subtract the sub 
 1. Inspect the disambiguation report and manually determine which changes must be made and make them in VIVO using
 the web interface.  A UF weekly ingest typically involves 120 papers, 360 UF authors, and 20 disambiguations to 
 be resolved manually.  Typically takes about an hour.
