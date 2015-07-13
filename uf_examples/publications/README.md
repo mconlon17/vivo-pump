@@ -19,7 +19,10 @@ added as stubs
 1. publish_columns_filter.py -- results in the columns needed for the publisher update
 1. unique_name_filter.py -- remove duplicate publisher names
 1. match_publishers.py -- matches publishers in source to publishers in VIVO.  Matches are discarded.  Only
-new publishers make it through the filter.
+new publishers make it through the filter
+1. journal_columns_filter.py -- columns needed to manage journals
+1. unique_issn_filter.py -- remove duplicate issn
+1. match_journals.py -- match the journals in the source to the journals in VIVO
 
 ## Handlers
 
@@ -37,12 +40,12 @@ Disambiguation handler
 1. Add concepts not currently in VIVO
 1. Add publishers not currently in VIVO
 
-    cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
-    python unique_name_filter.py | python match_publishers_filter.py > publisher_update_data.txt
+        cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
+        python unique_name_filter.py | python match_publishers_filter.py > publisher_update_data.txt
     
     Then
     
-    sv -c sv_publishers.cfg
+        sv -c sv_publishers.cfg
     
     Then
     
@@ -51,6 +54,17 @@ Disambiguation handler
     Add publisher_add.rdf to VIVO
     
 1. Add journals not currently in VIVO
+
+        cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python journal_columns_filter.py | 
+        python unique_issn_filter.py | python match_journals_filter.py > journal_update_data.txt
+        
+   Then
+   
+       sv -c sv_journals.cfg
+       
+   Add journal_add.rdf to VIVO
+   Sub journal_sub.rdf from VIVO
+    
 1. Add people not currently in VIVO
 1. Add publications to VIVO
 1. Run the pump to create add and sub RDF

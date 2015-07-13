@@ -223,3 +223,4 @@ tr_csv.txt as sample output from bib2csv.  Add publisher_column_filter.py. Add p
 publisher_update_data.txt.  Add unique_name_filter.txt. Add match_publishers_filter.py. Add publisher_def.json.
 Add org_types to uf_examples/publications for adding publishers.  Add sv_publishers.cfg.  Add publisher_add.rdf and
 publisher_sub.rdf.  Publisher work is complete in uf_examples/publications.  On to journals.
+** *2015-07-12** Update uf_examples/README.md to document processes for journals
