@@ -1,0 +1,124 @@
+name|eissn|sjr|issn|uri|remove
+Tourism Management|1879-3193||0261-5177||
+Journal of Hazardous Materials|1873-3336||0304-3894||
+Journal of Hazardous Materials|1873-3336||0304-3894||
+Journal of Environmental Science and Health Part B-Pesticides Food Contaminants and Agricultural Wastes|1532-4109||0360-1234||
+Behavioural Brain Research|1872-7549||0166-4328||
+Bioorganic and Medicinal Chemistry Letters|1464-3405||0960-894X||
+Earth and Planetary Science Letters|1385-013X||0012-821X||
+Water Research|||0043-1354||
+International Journal of Food Microbiology|1879-3460||0168-1605||
+Chemometrics and Intelligent Laboratory Systems|1873-3239||0169-7439||
+Neuroimage|1095-9572||1053-8119||
+Interventions-International Journal of Postcolonial Studies|1469-929X||1369-801X||
+Applied and Environmental Microbiology|1098-5336||0099-2240||
+Applied Psycholinguistics|1469-1817||0142-7164||
+Arabian Journal of Chemistry|1878-5379||1878-5352||
+European Journal of Human Genetics|1476-5438||1018-4813||
+Field Crops Research|1872-6852||0378-4290||
+Free Radical Biology and Medicine|1873-4596||0891-5849||
+Journal of Leukocyte Biology|1938-3673||0741-5400||
+Journal of Pediatric Nursing-Nursing Care of Children and Families|||0882-5963||
+Journal of Shoulder and Elbow Surgery|||1058-2746||
+Monatshefte Fur Chemie|1434-4475||0026-9247||
+Phytoparasitica|1876-7184||0334-2123||
+Psychophysiology|1469-8986||0048-5772||
+World Neurosurgery|1878-8769||1878-8750||
+Advanced Materials|1521-4095||0935-9648||
+American Journal of Physiology-Endocrinology and Metabolism|1522-1555||0193-1849||
+American Journal of Physiology-Renal Physiology|1522-1466||1931-857X||
+Journal of the Neurological Sciences|1878-5883||0022-510X||
+Optics Letters|1539-4794||0146-9592||
+Embo Journal|1460-2075||0261-4189||
+Journal of Inflammation-London|||1476-9255||
+Physical Review B|1550-235X||1098-0121||
+Journal of Medicinal Chemistry|1520-4804||0022-2623||
+Plos One|||1932-6203||
+Scientific Reports|||2045-2322||
+Scientific Reports|||2045-2322||
+Small|1613-6829||1613-6810||
+Bmc Genomics|||1471-2164||
+European Physical Journal C|1434-6052||1434-6044||
+Proceedings of the National Academy of Sciences of the United States of America|||0027-8424||
+Plos One|||1932-6203||
+Journal of Applied Physics|1089-7550||0021-8979||
+Malaria Journal|||1475-2875||
+Plos One|||1932-6203||
+Plos One|||1932-6203||
+Frontiers in Microbiology|||1664-302X||
+Journal of the American Chemical Society|||0002-7863||
+Plos One|||1932-6203||
+Analytical Chemistry|1520-6882||0003-2700||
+Analytical Chemistry|1520-6882||0003-2700||
+Proceedings of the National Academy of Sciences of the United States of America|||0027-8424||
+American Journal of Physiology-Regulatory Integrative and Comparative Physiology|1522-1490||0363-6119||
+Applied Physics Letters|1077-3118||0003-6951||
+Carcinogenesis|1460-2180||0143-3334||
+Decision Support Systems|1873-5797||0167-9236||
+Drugs|1179-1950||0012-6667||
+Dysphagia|1432-0460||0179-051X||
+Epilepsia|1528-1167||0013-9580||
+Ieee-Acm Transactions on Networking|1558-2566||1063-6692||
+IEEE Transactions on Electromagnetic Compatibility|1558-187X||0018-9375||
+IEEE Transactions on Electromagnetic Compatibility|1558-187X||0018-9375||
+IEEE Transactions on Electromagnetic Compatibility|1558-187X||0018-9375||
+IEEE Transactions on Microwave Theory and Techniques|1557-9670||0018-9480||
+IEEE Transactions on Plasma Science|1939-9375||0093-3813||
+International Journal of Obesity|1476-5497||0307-0565||
+Jama Ophthalmology|2168-6173||2168-6165||
+Journal of Agrometeorology|||0972-1665||
+Journal of Applied Behavior Analysis|1938-3703||0021-8855||
+Journal of Modern History|1537-5358||0022-2801||
+Journal of Modern History|1537-5358||0022-2801||
+Journal of Religious History|1467-9809||0022-4227||
+Journal of the American Academy of Psychiatry and the Law|1943-3662||1093-6793||
+Journal of the American Ceramic Society|1551-2916||0002-7820||
+Journal of Tissue Engineering and Regenerative Medicine|1932-7005||1932-6254||
+Journal of Zoo and Wildlife Medicine|1937-2825||1042-7260||
+Journal of Zoo and Wildlife Medicine|1937-2825||1042-7260||
+Journal of Zoo and Wildlife Medicine|1937-2825||1042-7260||
+Medical Mycology|1460-2709||1369-3786||
+Mrs Bulletin|1938-1425||0883-7694||
+Nuclear Technology|1943-7471||0029-5450||
+Paleobiology|1938-5331||0094-8373||
+Pesticide Biochemistry and Physiology|1095-9939||0048-3575||
+Plant Ecology|1573-5052||1385-0237||
+Politics and Gender|1743-9248||1743-923X||
+Psychological Assessment|1939-134X||1040-3590||
+Stem Cells Translational Medicine|2157-6580||2157-6564||
+Tree Genetics and Genomes|1614-2950||1614-2942||
+Tree Genetics and Genomes|1614-2950||1614-2942||
+Journal of Chemical Physics|1089-7690||0021-9606||
+European Heart Journal|1522-9645||0195-668X||
+European Physical Journal C|1434-6052||1434-6044||
+European Physical Journal C|1434-6052||1434-6044||
+Frontiers in Microbiology|||1664-302X||
+Frontiers in Human Neuroscience|||1662-5161||
+Brain Stimulation|1876-4754||1935-861X||
+Education and Treatment of Children|1934-8924||0748-8491||
+Environmental Monitoring and Assessment|1573-2959||0167-6369||
+European Physical Journal C|1434-6052||1434-6044||
+Hortscience|2327-9834||0018-5345||
+International Journal of Hospitality Management|1873-4693||0278-4319||
+International Journal of Hospitality Management|1873-4693||0278-4319||
+Journal of Cosmology and Astroparticle Physics|||1475-7516||
+Journal of Pediatric Health Care|1532-656X||0891-5245||
+Journal of Reproductive Medicine|1943-3565||0024-7758||
+Nuclear Engineering and Design|||0029-5493||
+Theatre Journal|1086-332X||0192-2882||
+Veterinary Journal|1532-2971||1090-0233||
+Journal of Clinical Oncology|1527-7755||0732-183X||
+European Physical Journal C|1434-6052||1434-6044||
+European Physical Journal C|1434-6052||1434-6044||
+American Journal of Kidney Diseases|1523-6838||0272-6386||
+American Journal of Kidney Diseases|1523-6838||0272-6386||
+Journal of Medical Microbiology|1473-5644||0022-2615||
+Proceedings of the Entomological Society of Washington|||0013-8797||
+Annals of Internal Medicine|1539-3704||0003-4819||
+|||0084-6597||
+Iawa Journal|2294-1932||0928-1541||
+Iawa Journal|2294-1932||0928-1541||
+Journal of Ophthalmology|2090-0058||2090-004X||
+Journal of the American Oriental Society|2169-2289||0003-0279||
+Organic and Biomolecular Chemistry|1477-0539||1477-0520||
+Entrepreneurship Research Journal|2157-5665||2194-6175||
