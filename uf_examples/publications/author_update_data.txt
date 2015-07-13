@@ -1,124 +1,1058 @@
-display_name|corresponding|title|last|middle|uri|remove|uf|first
-||estimatingvalueinbaltimoremarylandanattractionsnetworkanalysis||||||
-||leadbioaccessibilityin12contaminatedsoilsfromchinacorrelationtoleadrelativebioavailabilityandleadindifferentfractions||||||
-||arsenicbioaccessibilityincontaminatedsoilscouplinginvitroassayswithsequentialandhno3extraction||||||
-||effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||
-||agerelateddifferencesinconditionedpainmodulationofsensitizinganddesensitizingtrendsduringresponsedependentstimulation||||||
-||synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||
-||postfoldingmagnetizationofthetriassicrocksfromwesternguizhouandsouthernyunnanprovincesnewevidenceforlargeclockwiserotationsinthesimaoterrane||||||
-||lifecyclecomparisonofcentralizedwastewatertreatmentandurinesourceseparationwithstruviteprecipitationfocusonurinenutrientmanagement||||||
-||acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||
-||varianceconstrainedpartialleastsquares||||||
-||3dcorticalelectrophysiologyofballisticupperlimbmovementinhumans||||||
-||imperialambivalencegenderdiscourseandempireinearlytwentiethcenturywomenstravelnarrativesofthephilippines||||||
-||distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||
-||effectsofreadingspeedonsecondlanguagesentenceprocessing||||||
-||effectofcarbonmicrofibermaterialsonsensitivityofadenosineandhydroxyadenineatcarbonmicrofibersensors||||||
-||detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||
-||investigationandsynthesisofsweetsorghumcropresponsestonitrogenandpotassiumfertilization||||||
-||prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||
-||editorialpassiveaggressiveavoidanceofsamhd1restrictionbyhiv1||||||
-||becomingtheparentofachildwithlifethreateningfoodallergies||||||
-||scapulohumeralrhythminshoulderswithreverseshoulderarthroplasty||||||
-||functionalprecisionpolymersviaadmetpolymerization||||||
-||tropicalrace4ofpanamadiseaseinthemiddleeast||||||
-||massedanddistributedrepetitionofnaturalscenesbrainpotentialsandoscillatoryactivity||||||
-||effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||
-||chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||
-||injectionoftestosteronemaybesaferandmoreeffectivethantransdermaladministrationforcombatinglossofmuscleandboneinoldermen||||||
-||effectofdietaryproteinrestrictiononrenalammoniametabolism||||||
-||hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||
-||miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||
-||thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||
-||delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||
-||firstprinciplessimulationsofagraphenebasedfieldeffecttransistor||||||
-||discoveryofabetahairpinoctapeptidec{}proargphephedapalaphedpromimeticofagoutirelatedprotein87132{}agrp87132withequipotentmousemelanocortin4receptormmc4rantagonistpharmacology||||||
-||developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||
-||investigationofthesubcellulararchitectureofl7neuronsofaplysiacalifornicausingmagneticresonancemicroscopymrmat78microns||||||
-||temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||
-||afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||
-||anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||
-||searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||
-||largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||
-||capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||
-||interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||
-||malariaeliminationinhaitibytheyear2020anachievablegoal||||||
-||usingtournamentanglerdatatorapidlyassesstheinvasionstatusofaliensportfishesmicropterussppinsouthernafrica||||||
-||differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||
-||phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||
-||evolutionoffunctionalsixnucleotidedna||||||
-||circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||
-||localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||
-||c13nmrmetabolomicsinadequatenetworkanalysis||||||
-||angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||
-||pregnantratstreatedwithahighfatprooxidantwesterndietwithangiiandtnfalphaareresistanttoelevationsinbloodpressureandrenaloxidativestress||||||
-||highlyalignedarraysofhighaspectratiobariumtitanatenanowiresviahydrothermalsynthesis||||||
-||moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||
-||dodecisionmakingstructureandsequenceexistinhealthonlinesocialnetworks||||||
-||managementstrategiesforclopidogrelhypersensitivity||||||
-||foodstickinginmythroatvideofluoroscopicevaluationofacommonsymptom||||||
-||lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||
-||networkunderjointnodeandlinkattacksvulnerabilityassessmentmethodsandanalysis||||||
-||currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||
-||fdtdcomputationoflightninginducedvoltagesonmulticonductorlineswithsurgearrestersandpoletransformers||||||
-||investigatingaguardtraceringtosuppressthecrosstalkduetoaclocktraceonapowerelectronicsdspcontrolboard||||||
-||concurrentdetectionofvibrationanddistanceusingunmodulatedcwdopplervibrationradarwithanadaptivebeamsteeringantenna||||||
-||hyperjetfocusedinjectiontaperedcapillaryplasmasourceconcept||||||
-||associationsofurinaryphthalateswithbodymassindexwaistcircumferenceandserumlipidsamongfemalesnationalhealthandnutritionexaminationsurvey19992004||||||
-||bilateralchoroidaldetachmentinwaldenstrommacroglobulinemia||||||
-||studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||
-||comparisonofedibleandleisurereinforcers||||||
-||therepublicanarmyinthespanishcivilwar19361939||||||
-||allendullestheossandnaziwarcriminalsthedynamicsofselectiveprosecution||||||
-||incorporatingthekingsnewsubjectsaccommodationandanticatholicisminthebritishempire17631815||||||
-||hallvfloridacapitalpunishmentiqandpersonswithintellectualdisabilities||||||
-||interactionofindentationinducedcracksonsinglecrystalsiliconcarbide||||||
-||aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||
-||thenutrientcompositionofthedietofbottlenosedolphinstursiopstruncatusisbetterassessedrelativetometabolizableenergythandrymatter||||||
-||establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||
-||cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||
-||phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||
-||mcnairscholarsprogrampreparesstudentsforthephdprograminmaterialsresearch||||||
-||modificationofscwrassemblydesignswithcoupledmcnp5scamethodstopromotesaferoperation||||||
-||bodysizetrendsoftheextinctgiantsharkcarcharoclesmegalodonadeeptimeperspectiveonmarineapexpredators||||||
-||carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||
-||regionalvariationincaribbeandryforesttreespeciescomposition||||||
-||fromunitytodivergenceandbackagainsecurityandeconomyinfeministinternationalrelations||||||
-||relationsbetweenresponsetrajectoriesonthecontinuousperformancetestandteacherratedproblembehaviorsinpreschoolers||||||
-||adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||
-||genomewidechangesinhistoneh3lysine27trimethylationassociatedwithbuddormancyreleaseinpeach||||||
-||comparisonofbreedingvaluesestimatedbetweensingletreeandmultipletreeplotsforaslashpinepopulation||||||
-||thebenzeneradicalanionacomputationallydemandingprototypeforaromaticanions||||||
-||isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||
-||measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||
-||precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||
-||maximizingefficiencyofrumenmicrobialproteinproduction||||||
-||automaticityofwalkingfunctionalsignificancemechanismsmeasurementandrehabilitationstrategies||||||
-||effectsofelectrodedriftintranscranialdirectcurrentstimulation||||||
-||examiningtheeffectsofteacherdirectedopportunitiestorespondonstudentoutcomesasystematicreviewoftheliterature||||||
-||classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||
-||measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||
-||diverseresponsesoflettucecultivarsandgermplasmlinestoinfectionsofthreeisolatesofxanthomonascampestrispvvitians||||||
-||hotellocationevaluationacombinationofmachinelearningtoolsandwebgis||||||
-||respondingtothebedbugcrisisinsocialmedia||||||
-||mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||
-||adolescentwithfeverhypotensionandrespiratorydistress||||||
-||theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||
-||moderndesignandsafetyanalysisoftheuniversityoffloridatrainingreactor||||||
-||foreignaffairsfestival||||||
-||effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||
-||intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||
-||searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||
-||measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||
-||minimalchangediseaseontopoflupusnephritisclassii||||||
-||ancanegativepauciimmunecrescenticglomerulonephritislinkedwithnonsmallcellcarcinomaofthelung||||||
-||characterizationofsiphoviridaephagezandstudyingitsefficacyagainstmultidrugresistantklebsiellapneumoniaeplanktoniccellsandbiofilm||||||
-||twonewspeciesoftorodorameyricklepidopteralecithoceridaeandtwospeciesnewtotaiwan||||||
-||patientswithpolymyalgiarheumaticahada26foldincreasedriskforvasculareventsatamedian78years||||||
-||conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||
-||circularorsphericalvesselsinthefossilrecord||||||
-||welkoetoxylonmultiseriatumfossilmoraceouswoodfromtheeocenegreenriverformationwyomingusa||||||
-||histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||
-||thecauseofdevotioningaudiyavaisnavatheologydevotionbhaktiastheresultofspontaneouslyyadrcchayameetingadevoteesadhusanga||||||
-||rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||
-||buildingblocksforthedevelopmentofuniversitywideentrepreneurship||||||
+display_name|last|title|uri|remove|middle|corresponding|uf|first
+Stienmetz, Jason L.|Stienmetz|estimatingvalueinbaltimoremarylandanattractionsnetworkanalysis||||||Jason
+Fesenmaier, Daniel R.|Fesenmaier|estimatingvalueinbaltimoremarylandanattractionsnetworkanalysis||||||Daniel
+Li, Jie|Li|leadbioaccessibilityin12contaminatedsoilsfromchinacorrelationtoleadrelativebioavailabilityandleadindifferentfractions||||||Jie
+Li, Kan|Li|leadbioaccessibilityin12contaminatedsoilsfromchinacorrelationtoleadrelativebioavailabilityandleadindifferentfractions||||||Kan
+Cave, Mark|Cave|leadbioaccessibilityin12contaminatedsoilsfromchinacorrelationtoleadrelativebioavailabilityandleadindifferentfractions||||||Mark
+Li, Hong-Bo|Li|leadbioaccessibilityin12contaminatedsoilsfromchinacorrelationtoleadrelativebioavailabilityandleadindifferentfractions||||||Hong-Bo
+Ma, Lena Q.|Ma|leadbioaccessibilityin12contaminatedsoilsfromchinacorrelationtoleadrelativebioavailabilityandleadindifferentfractions||||||Lena
+Li, Shi-Wei|Li|arsenicbioaccessibilityincontaminatedsoilscouplinginvitroassayswithsequentialandhno3extraction||||||Shi-Wei
+Li, Jie|Li|arsenicbioaccessibilityincontaminatedsoilscouplinginvitroassayswithsequentialandhno3extraction||||||Jie
+Li, Hong-Bo|Li|arsenicbioaccessibilityincontaminatedsoilscouplinginvitroassayswithsequentialandhno3extraction||||||Hong-Bo
+Naidu, Ravi|Naidu|arsenicbioaccessibilityincontaminatedsoilscouplinginvitroassayswithsequentialandhno3extraction||||||Ravi
+Ma, L. Q.|Ma|arsenicbioaccessibilityincontaminatedsoilscouplinginvitroassayswithsequentialandhno3extraction||||||L.
+Morris, J. Bradley|Morris|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||J.
+Chase, Carlene|Chase|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||Carlene
+Treadwell, Danielle|Treadwell|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||Danielle
+Koenig, Rosie|Koenig|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||Rosie
+Cho, Alyssa|Cho|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||Alyssa
+Morales-Payan, Jose Pable|Morales-Payan|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||Jose
+Murphy, Tim|Murphy|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||Tim
+Antonious, George F.|Antonious|effectofsunnhempcrotalariajuncealcuttingdateandplantingdensityonweedsuppressioningeorgiausa||||||George
+Naugle, Kelly M.|Naugle|agerelateddifferencesinconditionedpainmodulationofsensitizinganddesensitizingtrendsduringresponsedependentstimulation||||||Kelly
+Cruz-Almeida, Yenisei|Cruz-Almeida|agerelateddifferencesinconditionedpainmodulationofsensitizinganddesensitizingtrendsduringresponsedependentstimulation||||||Yenisei
+Vierck, Charles J.|Vierck|agerelateddifferencesinconditionedpainmodulationofsensitizinganddesensitizingtrendsduringresponsedependentstimulation||||||Charles
+Mauderli, Andre P.|Mauderli|agerelateddifferencesinconditionedpainmodulationofsensitizinganddesensitizingtrendsduringresponsedependentstimulation||||||Andre
+Riley, III, Joseph L.|Riley|agerelateddifferencesinconditionedpainmodulationofsensitizinganddesensitizingtrendsduringresponsedependentstimulation||||||III,
+Jabeen, Farukh|Jabeen|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||Farukh
+Panda, Siva S.|Panda|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||Siva
+Kondratyuk, Tamara P.|Kondratyuk|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||Tamara
+Park, Eun-Jung|Park|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||Eun-Jung
+Pezzuto, John M.|Pezzuto|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||John
+Ihsan-ul-Haq|Ihsan-ul-Haq|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||
+Hall, C. Dennis|Hall|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||C.
+Katritzky, Alan R.|Katritzky|synthesismoleculardockingandanticancerstudiesofpeptidesandisopeptides||||||Alan
+Huang, Kainian|Huang|postfoldingmagnetizationofthetriassicrocksfromwesternguizhouandsouthernyunnanprovincesnewevidenceforlargeclockwiserotationsinthesimaoterrane||||||Kainian
+Opdyke, Neil D.|Opdyke|postfoldingmagnetizationofthetriassicrocksfromwesternguizhouandsouthernyunnanprovincesnewevidenceforlargeclockwiserotationsinthesimaoterrane||||||Neil
+Ishii, Stephanie K. L.|Ishii|lifecyclecomparisonofcentralizedwastewatertreatmentandurinesourceseparationwithstruviteprecipitationfocusonurinenutrientmanagement||||||Stephanie
+Boyer, Treavor H.|Boyer|lifecyclecomparisonofcentralizedwastewatertreatmentandurinesourceseparationwithstruviteprecipitationfocusonurinenutrientmanagement||||||Treavor
+Pacholewicz, Ewa|Pacholewicz|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Ewa
+Swart, Arno|Swart|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Arno
+Schipper, Maarten|Schipper|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Maarten
+Gortemaker, Betty G. M.|Gortemaker|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Betty
+Wagenaar, Jaap A.|Wagenaar|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Jaap
+Havelaar, Arie H.|Havelaar|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Arie
+Lipman, Len J. A.|Lipman|acomparisonoffluctuationsofcampylobacterandescherichiacoliconcentrationsonbroilerchickencarcassesduringprocessingintwoslaughterhouses||||||Len
+Jiang, Xiubao|Jiang|varianceconstrainedpartialleastsquares||||||Xiubao
+You, Xinge|You|varianceconstrainedpartialleastsquares||||||Xinge
+Yu, Shujian|Yu|varianceconstrainedpartialleastsquares||||||Shujian
+Tao, Dacheng|Tao|varianceconstrainedpartialleastsquares||||||Dacheng
+Chen, C. L. Philip|Chen|varianceconstrainedpartialleastsquares||||||C.
+Cheung, Yiu-ming|Cheung|varianceconstrainedpartialleastsquares||||||Yiu-ming
+Ofori, Edward|Ofori|3dcorticalelectrophysiologyofballisticupperlimbmovementinhumans||||||Edward
+Coombes, Stephen A.|Coombes|3dcorticalelectrophysiologyofballisticupperlimbmovementinhumans||||||Stephen
+Vaillancourt, David E.|Vaillancourt|3dcorticalelectrophysiologyofballisticupperlimbmovementinhumans||||||David
+Lawrimore, David Keoni|Lawrimore|imperialambivalencegenderdiscourseandempireinearlytwentiethcenturywomenstravelnarrativesofthephilippines||||||David
+Luo, Zhiyao|Luo|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Zhiyao
+Gu, Ganyu|Gu|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Ganyu
+Ginn, Amber|Ginn|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Amber
+Giurcanu, Mihai C.|Giurcanu|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Mihai
+Adams, Paige|Adams|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Paige
+Vellidis, George|Vellidis|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||George
+van Bruggen, Ariena H. C.|van Bruggen|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Ariena
+Danyluk, Michelle D.|Danyluk|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Michelle
+Wright, Anita C.|Wright|distributionandcharacterizationofsalmonellaentericaisolatesfromirrigationpondsinthesoutheasternunitedstates||||||Anita
+Kaan, Edith|Kaan|effectsofreadingspeedonsecondlanguagesentenceprocessing||||||Edith
+Ballantyne, Jocelyn C.|Ballantyne|effectsofreadingspeedonsecondlanguagesentenceprocessing||||||Jocelyn
+Wijnen, Frank|Wijnen|effectsofreadingspeedonsecondlanguagesentenceprocessing||||||Frank
+Abou El-Nour, K. M. M.|Abou El-Nour|effectofcarbonmicrofibermaterialsonsensitivityofadenosineandhydroxyadenineatcarbonmicrofibersensors||||||K.
+Nectoux, Juliette|Nectoux|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Juliette
+de Cid, Rafael|de Cid|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Rafael
+Baulande, Sylvain|Baulande|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Sylvain
+Leturcq, France|Leturcq|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||France
+Urtizberea, Jon Andoni|Urtizberea|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Jon
+Penisson-Besnier, Isabelle|Penisson-Besnier|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Isabelle
+Nadaj-Pakleza, Aleksandra|Nadaj-Pakleza|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Aleksandra
+Roudaut, Carinne|Roudaut|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Carinne
+Criqui, Audrey|Criqui|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Audrey
+Orhant, Lucie|Orhant|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Lucie
+Peyroulan, Delphine|Peyroulan|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Delphine
+Ben Yaou, Raba|Ben Yaou|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Raba
+Nelson, Isabelle|Nelson|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Isabelle
+Cobo, Anna Maria|Cobo|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Anna
+Arne-Bes, Marie-Christine|Arne-Bes|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Marie-Christine
+Uro-Coste, Emmanuelle|Uro-Coste|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Emmanuelle
+Nitschke, Patrick|Nitschke|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Patrick
+Claustres, Mireille|Claustres|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Mireille
+Bonne, Gisele|Bonne|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Gisele
+Levy, Nicolas|Levy|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Nicolas
+Chelly, Jamel|Chelly|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Jamel
+Richard, Isabelle|Richard|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Isabelle
+Cossee, Mireille|Cossee|detectionoftrim32deletionsinlgmdpatientsanalyzedbyacombinedstrategyofcgharrayandmassivelyparallelsequencing||||||Mireille
+Adams, Curtis B.|Adams|investigationandsynthesisofsweetsorghumcropresponsestonitrogenandpotassiumfertilization||||||Curtis
+Erickson, John E.|Erickson|investigationandsynthesisofsweetsorghumcropresponsestonitrogenandpotassiumfertilization||||||John
+Singh, Maninder P.|Singh|investigationandsynthesisofsweetsorghumcropresponsestonitrogenandpotassiumfertilization||||||Maninder
+Tripathi, Ajai K.|Tripathi|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Ajai
+Haldar, Swati|Haldar|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Swati
+Qian, Juan|Qian|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Juan
+Beserra, Amber|Beserra|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Amber
+Suda, Srinivas|Suda|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Srinivas
+Singh, Ajay|Singh|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Ajay
+Hopfer, Ulrich|Hopfer|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Ulrich
+Chen, Shu G.|Chen|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Shu
+Garrick, Michael D.|Garrick|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Michael
+Turner, Jerrold R.|Turner|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Jerrold
+Knutson, Mitchell D.|Knutson|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Mitchell
+Singh, Neena|Singh|prionproteinfunctionsasaferrireductasepartnerforzip14anddmt1||||||Neena
+Appelberg, K. Sofia|Appelberg|editorialpassiveaggressiveavoidanceofsamhd1restrictionbyhiv1||||||K.
+Goodenow, Maureen M.|Goodenow|editorialpassiveaggressiveavoidanceofsamhd1restrictionbyhiv1||||||Maureen
+Broome, Susan Brantlee|Broome|becomingtheparentofachildwithlifethreateningfoodallergies||||||Susan
+Lutz, Barbara J.|Lutz|becomingtheparentofachildwithlifethreateningfoodallergies||||||Barbara
+Cook, Christa|Cook|becomingtheparentofachildwithlifethreateningfoodallergies||||||Christa
+Walker, David|Walker|scapulohumeralrhythminshoulderswithreverseshoulderarthroplasty||||||David
+Matsuki, Keisuke|Matsuki|scapulohumeralrhythminshoulderswithreverseshoulderarthroplasty||||||Keisuke
+Struk, Aimee M.|Struk|scapulohumeralrhythminshoulderswithreverseshoulderarthroplasty||||||Aimee
+Wright, Thomas W.|Wright|scapulohumeralrhythminshoulderswithreverseshoulderarthroplasty||||||Thomas
+Banks, Scott A.|Banks|scapulohumeralrhythminshoulderswithreverseshoulderarthroplasty||||||Scott
+Bachler, Patricia R.|Bachler|functionalprecisionpolymersviaadmetpolymerization||||||Patricia
+Wagener, Kenneth B.|Wagener|functionalprecisionpolymersviaadmetpolymerization||||||Kenneth
+Ploetz, Randy|Ploetz|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Randy
+Freeman, Stanley|Freeman|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Stanley
+Konkol, Joshua|Konkol|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Joshua
+Al-Abed, Adel|Al-Abed|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Adel
+Naser, Ziad|Naser|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Ziad
+Shalan, Khalaf|Shalan|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Khalaf
+Barakat, Radwan|Barakat|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Radwan
+Israeli, Yair|Israeli|tropicalrace4ofpanamadiseaseinthemiddleeast||||||Yair
+Ferrari, Vera|Ferrari|massedanddistributedrepetitionofnaturalscenesbrainpotentialsandoscillatoryactivity||||||Vera
+Bradley, Margaret M.|Bradley|massedanddistributedrepetitionofnaturalscenesbrainpotentialsandoscillatoryactivity||||||Margaret
+Codispoti, Maurizio|Codispoti|massedanddistributedrepetitionofnaturalscenesbrainpotentialsandoscillatoryactivity||||||Maurizio
+Lang, Peter J.|Lang|massedanddistributedrepetitionofnaturalscenesbrainpotentialsandoscillatoryactivity||||||Peter
+Rahman, Maryam|Rahman|effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||Maryam
+Donnangelo, Lauren L.|Donnangelo|effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||Lauren
+Neal, Dan|Neal|effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||Dan
+Mogali, Kiran|Mogali|effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||Kiran
+Decker, Matthew|Decker|effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||Matthew
+Ahmed, Mustafa M.|Ahmed|effectsofperioperativeacetylsalicylicacidonclinicaloutcomesinpatientsundergoingcraniotomyforbraintumor||||||Mustafa
+Fang, Yin|Fang|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Yin
+Ni, Yongliang|Ni|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Yongliang
+Choi, Baeck|Choi|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Baeck
+Leo, Sin-Yen|Leo|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Sin-Yen
+Gao, Jian|Gao|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Jian
+Ge, Beverly|Ge|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Beverly
+Taylor, Curtis|Taylor|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Curtis
+Basile, Vito|Basile|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Vito
+Jiang, Peng|Jiang|chromogenicphotoniccrystalsenabledbynovelvaporresponsiveshapememorypolymers||||||Peng
+Borst, Stephen E.|Borst|injectionoftestosteronemaybesaferandmoreeffectivethantransdermaladministrationforcombatinglossofmuscleandboneinoldermen||||||Stephen
+Yarrow, Joshua F.|Yarrow|injectionoftestosteronemaybesaferandmoreeffectivethantransdermaladministrationforcombatinglossofmuscleandboneinoldermen||||||Joshua
+Lee, Hyun-Wook|Lee|effectofdietaryproteinrestrictiononrenalammoniametabolism||||||Hyun-Wook
+Osis, Gunars|Osis|effectofdietaryproteinrestrictiononrenalammoniametabolism||||||Gunars
+Handlogten, Mary E.|Handlogten|effectofdietaryproteinrestrictiononrenalammoniametabolism||||||Mary
+Guo, Hui|Guo|effectofdietaryproteinrestrictiononrenalammoniametabolism||||||Hui
+Verlander, Jill W.|Verlander|effectofdietaryproteinrestrictiononrenalammoniametabolism||||||Jill
+Weiner, I. David|Weiner|effectofdietaryproteinrestrictiononrenalammoniametabolism||||||I.
+Rastogi, Vaibhav|Rastogi|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Vaibhav
+Lamb, Damon G.|Lamb|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Damon
+Williamson, John B.|Williamson|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||John
+Stead, Thor S.|Stead|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Thor
+Penumudi, Rachel|Penumudi|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Rachel
+Bidari, Sharathchandra|Bidari|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Sharathchandra
+Ganti, Latha|Ganti|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Latha
+Heilman, Kenneth M.|Heilman|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Kenneth
+Hedna, Vishnumurthy S.|Hedna|hemisphericdifferencesinmalignantmiddlecerebralarterystroke||||||Vishnumurthy
+Dai, Xianjin|Dai|miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||Xianjin
+Xi, Lei|Xi|miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||Lei
+Duan, Can|Duan|miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||Can
+Yang, Hao|Yang|miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||Hao
+Xie, Huikai|Xie|miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||Huikai
+Jiang, Huabei|Jiang|miniatureprobeintegratingopticalresolutionphotoacousticmicroscopyopticalcoherencetomographyandultrasoundimagingproofofconcept||||||Huabei
+Park, Hyo-Jin|Park|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Hyo-Jin
+Ran, Yong|Ran|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Yong
+Jung, Joo In|Jung|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Joo
+Holmes, Oliver|Holmes|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Oliver
+Price, Ashleigh R.|Price|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Ashleigh
+Smithson, Lisa|Smithson|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Lisa
+Ceballos-Diaz, Carolina|Ceballos-Diaz|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Carolina
+Han, Chul|Han|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Chul
+Wolfe, Michael S.|Wolfe|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Michael
+Daaka, Yehia|Daaka|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Yehia
+Ryabinin, Andrey E.|Ryabinin|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Andrey
+Kim, Seong-Hun|Kim|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Seong-Hun
+Hauger, Richard L.|Hauger|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Richard
+Golde, Todd E.|Golde|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Todd
+Felsenstein, Kevin M.|Felsenstein|thestressresponseneuropeptidecrfincreasesamyloidbetaproductionbyregulatinggammasecretaseactivity||||||Kevin
+Williams, Julie C.|Williams|delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||Julie
+Klein, Thomas W.|Klein|delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||Thomas
+Goldberger, Bruce A.|Goldberger|delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||Bruce
+Sleasman, John W.|Sleasman|delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||John
+Mackman, Nigel|Mackman|delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||Nigel
+Goodenow, Maureen M.|Goodenow|delta9tetrahydrocannabinolthcenhanceslipopolysaccharidestimulatedtissuefactorinhumanmonocytesandmonocytederivedmicrovesicles||||||Maureen
+Wang, Yun-Peng|Wang|firstprinciplessimulationsofagraphenebasedfieldeffecttransistor||||||Yun-Peng
+Cheng, Hai-Ping|Cheng|firstprinciplessimulationsofagraphenebasedfieldeffecttransistor||||||Hai-Ping
+Ericson, Mark D.|Ericson|discoveryofabetahairpinoctapeptidec{}proargphephedapalaphedpromimeticofagoutirelatedprotein87132{}agrp87132withequipotentmousemelanocortin4receptormmc4rantagonistpharmacology||||||Mark
+Wilczynski, Andrzej|Wilczynski|discoveryofabetahairpinoctapeptidec{}proargphephedapalaphedpromimeticofagoutirelatedprotein87132{}agrp87132withequipotentmousemelanocortin4receptormmc4rantagonistpharmacology||||||Andrzej
+Sorensen, Nicholas B.|Sorensen|discoveryofabetahairpinoctapeptidec{}proargphephedapalaphedpromimeticofagoutirelatedprotein87132{}agrp87132withequipotentmousemelanocortin4receptormmc4rantagonistpharmacology||||||Nicholas
+Xiang, Zhimin|Xiang|discoveryofabetahairpinoctapeptidec{}proargphephedapalaphedpromimeticofagoutirelatedprotein87132{}agrp87132withequipotentmousemelanocortin4receptormmc4rantagonistpharmacology||||||Zhimin
+Haskell-Luevano, Carrie|Haskell-Luevano|discoveryofabetahairpinoctapeptidec{}proargphephedapalaphedpromimeticofagoutirelatedprotein87132{}agrp87132withequipotentmousemelanocortin4receptormmc4rantagonistpharmacology||||||Carrie
+Maurya, Devendra Kumar|Maurya|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Devendra
+Henriques, Tiago|Henriques|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Tiago
+Marini, Monica|Marini|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Monica
+Pedemonte, Nicoletta|Pedemonte|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Nicoletta
+Galietta, Luis J. V.|Galietta|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Luis
+Rock, Jason R.|Rock|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Jason
+Harfe, Brian D.|Harfe|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Brian
+Menini, Anna|Menini|developmentoftheolfactoryepitheliumandnasalglandsintmem16aandtmem16amice||||||Anna
+Lee, Choong H.|Lee|investigationofthesubcellulararchitectureofl7neuronsofaplysiacalifornicausingmagneticresonancemicroscopymrmat78microns||||||Choong
+Flint, Jeremy J.|Flint|investigationofthesubcellulararchitectureofl7neuronsofaplysiacalifornicausingmagneticresonancemicroscopymrmat78microns||||||Jeremy
+Hansen, Brian|Hansen|investigationofthesubcellulararchitectureofl7neuronsofaplysiacalifornicausingmagneticresonancemicroscopymrmat78microns||||||Brian
+Blackband, Stephen J.|Blackband|investigationofthesubcellulararchitectureofl7neuronsofaplysiacalifornicausingmagneticresonancemicroscopymrmat78microns||||||Stephen
+Yang, Zhihui|Yang|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Zhihui
+Wang, Ping|Wang|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Ping
+Morgan, Drake|Morgan|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Drake
+Lin, Dan|Lin|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Dan
+Pan, Jianchun|Pan|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Jianchun
+Lin, Fan|Lin|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Fan
+Strang, Kevin H.|Strang|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Kevin
+Selig, Tyler M.|Selig|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Tyler
+Perez, Pablo D.|Perez|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Pablo
+Febo, Marcelo|Febo|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Marcelo
+Chang, Binggong|Chang|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Binggong
+Rubenstein, Richard|Rubenstein|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Richard
+Wang, Kevin K. W.|Wang|temporalmricharacterizationneurobiochemicalandneurobehavioralchangesinamouserepetitiveconcussiveheadinjurymodel||||||Kevin
+Ooi, Frances|Ooi|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Frances
+DuChene, Joseph S.|DuChene|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Joseph
+Qiu, Jingjing|Qiu|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Jingjing
+Graham, Jeremy O.|Graham|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Jeremy
+Engelhard, Mark H.|Engelhard|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Mark
+Cao, Guixin|Cao|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Guixin
+Gai, Zheng|Gai|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Zheng
+Wei, Wei David|Wei|afacilesolvothermalsynthesisofoctahedralfe3o4nanoparticles||||||Wei
+Dickey, Aaron M.|Dickey|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||Aaron
+Kumar, Vivek|Kumar|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||Vivek
+Morgan, J. Kent|Morgan|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||J.
+Jara-Cavieres, Antonella|Jara-Cavieres|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||Antonella
+Shatters, Jr., Robert G.|Shatters|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||Jr.,
+McKenzie, Cindy L.|McKenzie|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||Cindy
+Osborne, Lance S.|Osborne|anovelmitochondrialgenomearchitectureinthripsinsectathysanopteraextremesizeasymmetryamongchromosomesandpossiblerecentcontrolregionduplication||||||Lance
+Khachatryan, V.|Khachatryan|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||V.
+Sirunyan, A. M.|Sirunyan|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||A.
+Tumasyan, A.|Tumasyan|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||A.
+Adam, W.|Adam|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||W.
+Bergauer, T.|Bergauer|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||T.
+Dragicevic, M.|Dragicevic|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||M.
+Eroe, J.|Eroe|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||J.
+Friedl, M.|Friedl|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||M.
+Fruehwirth, R.|Fruehwirth|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||R.
+Ghete, V. M.|Ghete|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||V.
+Hartl, C.|Hartl|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||C.
+Hoermann, N.|Hoermann|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||N.
+Hrubec, J.|Hrubec|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||J.
+Jeitler, M.|Jeitler|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||M.
+Kiesenhofer, W.|Kiesenhofer|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||W.
+Knuenz, V.|Knuenz|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||V.
+Krammer, M.|Krammer|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||M.
+Kraetschmer, I.|Kraetschmer|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||I.
+Liko, D.|Liko|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||D.
+Mikulec, I.|Mikulec|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||I.
+Rabady, D.|Rabady|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||D.
+Rahbaran, B.|Rahbaran|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||B.
+Rohringer, H.|Rohringer|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||H.
+Schoefbeck, R.|Schoefbeck|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||R.
+Strauss, J.|Strauss|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||J.
+Treberer-Treberspurg, W.|Treberer-Treberspurg|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||W.
+Waltenberger, W.|Waltenberger|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||W.
+Wulz, C. -E.|Wulz|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||C.
+Mossolov, V.|Mossolov|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||V.
+Shumeiko, N.|Shumeiko|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||N.
+Gonzalez, J. Suarez|Gonzalez|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||J.
+Alderweireldt, S.|Alderweireldt|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||S.
+Bansal, S.|Bansal|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||S.
+Cornelis, T.|Cornelis|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||T.
+De Wolf, E. A.|De Wolf|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||E.
+Janssen, X.|Janssen|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||X.
+Knutsson, A.|Knutsson|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||A.
+Lauwers, J.|Lauwers|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||J.
+Luyckx, S.|Luyckx|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||S.
+Ochesanu, S.|Ochesanu|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||S.
+Rougny, R.|Rougny|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||R.
+Van De Klundert, M.|Van De Klundert|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||M.
+Van Haevermaet, H.|Van Haevermaet|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||H.
+Van Mechelen, P.|Van Mechelen|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||P.
+Van Remortel, N.|Van Remortel|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||N.
+Van Spilbeeck, A.|Van Spilbeeck|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||A.
+Blekman, F.|Blekman|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||F.
+Blyweert, S.|Blyweert|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||S.
+D'Hondt, J.|D'Hondt|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||J.
+Daci, N.|Daci|searchforastandardmodelhiggsbosonproducedinassociationwithatopquarkpairanddecayingtobottomquarksusingamatrixelementmethod||||||N.
+Hathout, Yetrib|Hathout|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Yetrib
+Brody, Edward|Brody|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Edward
+Clemens, Paula R.|Clemens|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Paula
+Cripe, Linda|Cripe|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Linda
+DeLisle, Robert Kirk|DeLisle|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Robert
+Furlong, Pat|Furlong|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Pat
+Gordish-Dressman, Heather|Gordish-Dressman|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Heather
+Hache, Lauren|Hache|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Lauren
+Henricson, Erik|Henricson|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Erik
+Hoffman, Eric P.|Hoffman|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Eric
+Kobayashi, Yvonne Monique|Kobayashi|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Yvonne
+Lorts, Angela|Lorts|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Angela
+Mah, Jean K.|Mah|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Jean
+McDonald, Craig|McDonald|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Craig
+Mehler, Bob|Mehler|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Bob
+Nelson, Sally|Nelson|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Sally
+Nikrad, Malti|Nikrad|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Malti
+Singer, Britta|Singer|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Britta
+Steele, Fintan|Steele|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Fintan
+Sterling, David|Sterling|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||David
+Sweeney, H. Lee|Sweeney|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||H.
+Williams, Steve|Williams|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Steve
+Gold, Larry|Gold|largescaleserumproteinbiomarkerdiscoveryinduchennemusculardystrophy||||||Larry
+Bogner, Barbara|Bogner|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Barbara
+Boye, Sanford L.|Boye|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Sanford
+Min, Seok Hong|Min|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Seok
+Peterson, James J.|Peterson|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||James
+Ruan, Qing|Ruan|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Qing
+Zhang, Zhonghong|Zhang|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Zhonghong
+Reitsamer, Herbert A.|Reitsamer|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Herbert
+Hauswirth, William W.|Hauswirth|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||William
+Boye, Shannon E.|Boye|capsidmutatedadenoassociatedvirusdeliveredtotheanteriorchamberresultsinefficienttransductionoftrabecularmeshworkinmouseandrat||||||Shannon
+Kasturiarachchi, T.|Kasturiarachchi|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||T.
+Saha, D.|Saha|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||D.
+Pan, X.|Pan|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||X.
+Sanders, G. D.|Sanders|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||G.
+Edirisooriya, M.|Edirisooriya|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||M.
+Mishima, T. D.|Mishima|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||T.
+Doezema, R. E.|Doezema|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||R.
+Stanton, C. J.|Stanton|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||C.
+Santos, M. B.|Santos|interbandmagnetospectroscopyininsbsquareandparabolicquantumwells||||||M.
+Boncy, Paul Jacques|Boncy|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Paul
+Adrien, Paul|Adrien|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Paul
+Lemoine, Jean Frantz|Lemoine|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Jean
+Existe, Alexandre|Existe|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Alexandre
+Henry, Patricia Jean|Henry|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Patricia
+Raccurt, Christian|Raccurt|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Christian
+Brasseur, Philippe|Brasseur|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Philippe
+Fenelon, Natael|Fenelon|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Natael
+Dame, John B.|Dame|malariaeliminationinhaitibytheyear2020anachievablegoal||||||John
+Okech, Bernard A.|Okech|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Bernard
+Kaljee, Linda|Kaljee|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Linda
+Baxa, Dwayne|Baxa|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Dwayne
+Prieur, Eric|Prieur|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Eric
+El Badry, Maha A.|El Badry|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Maha
+Tagliamonte, Massimiliano S.|Tagliamonte|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Massimiliano
+Mulligan, Connie J.|Mulligan|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Connie
+Carter, Tamar E.|Carter|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Tamar
+de Rochars, V. Madsen Beau|de Rochars|malariaeliminationinhaitibytheyear2020anachievablegoal||||||V.
+Lutz, Chelsea|Lutz|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Chelsea
+Parke, Dana M.|Parke|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Dana
+Zervos, Marcus J.|Zervos|malariaeliminationinhaitibytheyear2020anachievablegoal||||||Marcus
+Hargrove, John S.|Hargrove|usingtournamentanglerdatatorapidlyassesstheinvasionstatusofaliensportfishesmicropterussppinsouthernafrica||||||John
+Weyl, Olaf L. F.|Weyl|usingtournamentanglerdatatorapidlyassesstheinvasionstatusofaliensportfishesmicropterussppinsouthernafrica||||||Olaf
+Allen, Micheal S.|Allen|usingtournamentanglerdatatorapidlyassesstheinvasionstatusofaliensportfishesmicropterussppinsouthernafrica||||||Micheal
+Deacon, Neil R.|Deacon|usingtournamentanglerdatatorapidlyassesstheinvasionstatusofaliensportfishesmicropterussppinsouthernafrica||||||Neil
+Ran, Yong|Ran|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Yong
+Ladd, Gabriela Z.|Ladd|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Gabriela
+Ceballos-Diaz, Carolina|Ceballos-Diaz|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Carolina
+Jung, Joo In|Jung|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Joo
+Greenbaum, Doron|Greenbaum|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Doron
+Felsenstein, Kevin M.|Felsenstein|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Kevin
+Golde, Todd E.|Golde|differentialinhibitionofsignalpeptidepeptidasefamilymembersbyestablishedgammasecretaseinhibitors||||||Todd
+Schwartzt, Allison R.|Schwartzt|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Allison
+Potnist, Neha|Potnist|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Neha
+Milsina, Sujan|Milsina|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Sujan
+Wilson, Mark|Wilson|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Mark
+Patane, Jose|Patane|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Jose
+Martins, Jr., Joaquim|Martins|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Jr.,
+Minsavage, Gerald V.|Minsavage|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Gerald
+Dahlbeck, Douglas|Dahlbeck|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Douglas
+Akhunova, Alina|Akhunova|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Alina
+Almeida, Nalvo|Almeida|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Nalvo
+Vallad, Gary E.|Vallad|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Gary
+Barak, Jeri D.|Barak|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Jeri
+White, Frank F.|White|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Frank
+Miller, Sally A.|Miller|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Sally
+Ritchie, David|Ritchie|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||David
+Goss, Erica|Goss|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Erica
+Bart, Rebecca S.|Bart|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Rebecca
+Setubal, Joao C.|Setubal|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Joao
+Jones, Jeffrey B.|Jones|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Jeffrey
+Staskawicz, Brian J.|Staskawicz|phylogenomicsofxanthomonasfieldstrainsinfectingpepperandtomatorevealsdiversityineffectorrepertoiresandidentifiesdeterminantsofhostspecificity||||||Brian
+Zhang, Liqin|Zhang|evolutionoffunctionalsixnucleotidedna||||||Liqin
+Yang, Zunyi|Yang|evolutionoffunctionalsixnucleotidedna||||||Zunyi
+Sefah, Kwame|Sefah|evolutionoffunctionalsixnucleotidedna||||||Kwame
+Bradley, Kevin M.|Bradley|evolutionoffunctionalsixnucleotidedna||||||Kevin
+Hoshika, Shuichi|Hoshika|evolutionoffunctionalsixnucleotidedna||||||Shuichi
+Kim, Myong-Jung|Kim|evolutionoffunctionalsixnucleotidedna||||||Myong-Jung
+Kim, Hyo-Joong|Kim|evolutionoffunctionalsixnucleotidedna||||||Hyo-Joong
+Zhu, Guizhi|Zhu|evolutionoffunctionalsixnucleotidedna||||||Guizhi
+Jimenez, Elizabeth|Jimenez|evolutionoffunctionalsixnucleotidedna||||||Elizabeth
+Cansiz, Sena|Cansiz|evolutionoffunctionalsixnucleotidedna||||||Sena
+Teng, I-Ting|Teng|evolutionoffunctionalsixnucleotidedna||||||I-Ting
+Champanhac, Carole|Champanhac|evolutionoffunctionalsixnucleotidedna||||||Carole
+McLendon, Christopher|McLendon|evolutionoffunctionalsixnucleotidedna||||||Christopher
+Liu, Chen|Liu|evolutionoffunctionalsixnucleotidedna||||||Chen
+Zhang, Wen|Zhang|evolutionoffunctionalsixnucleotidedna||||||Wen
+Gerloff, Dietlind L.|Gerloff|evolutionoffunctionalsixnucleotidedna||||||Dietlind
+Huang, Zhen|Huang|evolutionoffunctionalsixnucleotidedna||||||Zhen
+Tan, Weihong|Tan|evolutionoffunctionalsixnucleotidedna||||||Weihong
+Benner, Steven A.|Benner|evolutionoffunctionalsixnucleotidedna||||||Steven
+Skeie, Eli|Skeie|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Eli
+Strand, Elin|Strand|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Elin
+Pedersen, Eva R.|Pedersen|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Eva
+Bjorndal, Bodil|Bjorndal|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Bodil
+Bohov, Pavol|Bohov|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Pavol
+Berge, Rolf K.|Berge|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Rolf
+Svingen, Gard F. T.|Svingen|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Gard
+Seifert, Reinhard|Seifert|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Reinhard
+Ueland, Per M.|Ueland|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Per
+Midttun, Oivind|Midttun|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Oivind
+Ulvik, Arve|Ulvik|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Arve
+Hustad, Steinar|Hustad|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Steinar
+Drevon, Christian A.|Drevon|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Christian
+Gregory, Jesse F.|Gregory|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Jesse
+Nygard, Ottar|Nygard|circulatingbvitaminsandsmokinghabitsareassociatedwithserumpolyunsaturatedfattyacidsinpatientswithsuspectedcoronaryheartdiseaseacrosssectionalstudy||||||Ottar
+Zhou, Liyi|Zhou|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Liyi
+Zhang, Xiaobing|Zhang|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Xiaobing
+Lv, Yifan|Lv|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Yifan
+Yang, Chao|Yang|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Chao
+Lu, Danqing|Lu|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Danqing
+Wu, Yuan|Wu|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Yuan
+Chen, Zhuo|Chen|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Zhuo
+Liu, Qiaoling|Liu|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Qiaoling
+Tan, Weihong|Tan|localizableandphotoactivatablefluorophoreforspatiotemporaltwophotonbioimaging||||||Weihong
+Clendinen, Chaevien S.|Clendinen|c13nmrmetabolomicsinadequatenetworkanalysis||||||Chaevien
+Pasquel, Christian|Pasquel|c13nmrmetabolomicsinadequatenetworkanalysis||||||Christian
+Ajredini, Ramadan|Ajredini|c13nmrmetabolomicsinadequatenetworkanalysis||||||Ramadan
+Edison, Arthur S.|Edison|c13nmrmetabolomicsinadequatenetworkanalysis||||||Arthur
+Lewis, Michael W.|Lewis|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||Michael
+Brant, Jason O.|Brant|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||Jason
+Kramer, Joseph M.|Kramer|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||Joseph
+Moss, James I.|Moss|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||James
+Yang, Thomas P.|Yang|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||Thomas
+Hansen, Peter J.|Hansen|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||Peter
+Williams, R. Stan|Williams|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||R.
+Resnick, James L.|Resnick|angelmansyndromeimprintingcenterencodesatranscriptionalpromoter||||||James
+Cunningham, Jr., Mark W.|Cunningham|pregnantratstreatedwithahighfatprooxidantwesterndietwithangiiandtnfalphaareresistanttoelevationsinbloodpressureandrenaloxidativestress||||||Jr.,
+West, Crystal A.|West|pregnantratstreatedwithahighfatprooxidantwesterndietwithangiiandtnfalphaareresistanttoelevationsinbloodpressureandrenaloxidativestress||||||Crystal
+Wen, Xuerong|Wen|pregnantratstreatedwithahighfatprooxidantwesterndietwithangiiandtnfalphaareresistanttoelevationsinbloodpressureandrenaloxidativestress||||||Xuerong
+Deng, Aihua|Deng|pregnantratstreatedwithahighfatprooxidantwesterndietwithangiiandtnfalphaareresistanttoelevationsinbloodpressureandrenaloxidativestress||||||Aihua
+Baylis, Chris|Baylis|pregnantratstreatedwithahighfatprooxidantwesterndietwithangiiandtnfalphaareresistanttoelevationsinbloodpressureandrenaloxidativestress||||||Chris
+Bowland, Christopher C.|Bowland|highlyalignedarraysofhighaspectratiobariumtitanatenanowiresviahydrothermalsynthesis||||||Christopher
+Malakooti, Mohammad H.|Malakooti|highlyalignedarraysofhighaspectratiobariumtitanatenanowiresviahydrothermalsynthesis||||||Mohammad
+Zhou, Zhi|Zhou|highlyalignedarraysofhighaspectratiobariumtitanatenanowiresviahydrothermalsynthesis||||||Zhi
+Sodano, Henry A.|Sodano|highlyalignedarraysofhighaspectratiobariumtitanatenanowiresviahydrothermalsynthesis||||||Henry
+Sinnott, Jennifer A.|Sinnott|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Jennifer
+Rider, Jennifer R.|Rider|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Jennifer
+Carlsson, Jessica|Carlsson|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Jessica
+Gerke, Travis|Gerke|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Travis
+Tyekucheva, Svitlana|Tyekucheva|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Svitlana
+Penney, Kathryn L.|Penney|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Kathryn
+Sesso, Howard D.|Sesso|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Howard
+Loda, Massimo|Loda|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Massimo
+Fall, Katja|Fall|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Katja
+Stampfer, Meir J.|Stampfer|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Meir
+Mucci, Lorelei A.|Mucci|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Lorelei
+Pawitan, Yudi|Pawitan|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Yudi
+Andersson, Sven-Olof|Andersson|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Sven-Olof
+Andren, Ove|Andren|moleculardifferencesintransitionzoneandperipheralzoneprostatetumors||||||Ove
+Sadovykh, Valeria|Sadovykh|dodecisionmakingstructureandsequenceexistinhealthonlinesocialnetworks||||||Valeria
+Sundaram, David|Sundaram|dodecisionmakingstructureandsequenceexistinhealthonlinesocialnetworks||||||David
+Piramuthu, Selwyn|Piramuthu|dodecisionmakingstructureandsequenceexistinhealthonlinesocialnetworks||||||Selwyn
+Beavers, Craig J.|Beavers|managementstrategiesforclopidogrelhypersensitivity||||||Craig
+Carris, Nicolas W.|Carris|managementstrategiesforclopidogrelhypersensitivity||||||Nicolas
+Ruf, Kathryn M.|Ruf|managementstrategiesforclopidogrelhypersensitivity||||||Kathryn
+Madhavan, Aarthi|Madhavan|foodstickinginmythroatvideofluoroscopicevaluationofacommonsymptom||||||Aarthi
+Carnaby, Giselle D.|Carnaby|foodstickinginmythroatvideofluoroscopicevaluationofacommonsymptom||||||Giselle
+Crary, Michael A.|Crary|foodstickinginmythroatvideofluoroscopicevaluationofacommonsymptom||||||Michael
+King-Stephens, David|King-Stephens|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||David
+Mirro, Emily|Mirro|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Emily
+Weber, Peter B.|Weber|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Peter
+Laxer, Kenneth D.|Laxer|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Kenneth
+Van Ness, Paul C.|Van Ness|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Paul
+Salanova, Vicenta|Salanova|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Vicenta
+Spencer, David C.|Spencer|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||David
+Heck, Christianne N.|Heck|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Christianne
+Goldman, Alica|Goldman|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Alica
+Jobst, Barbara|Jobst|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Barbara
+Shields, Donald C.|Shields|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Donald
+Bergey, Gregory K.|Bergey|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Gregory
+Eisenschenk, Stephan|Eisenschenk|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Stephan
+Worrell, Gregory A.|Worrell|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Gregory
+Rossi, Marvin A.|Rossi|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Marvin
+Gross, Robert E.|Gross|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Robert
+Cole, Andrew J.|Cole|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Andrew
+Sperling, Michael R.|Sperling|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Michael
+Nair, Dileep R.|Nair|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Dileep
+Gwinn, Ryder P.|Gwinn|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Ryder
+Park, Yong D.|Park|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Yong
+Rutecki, Paul A.|Rutecki|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Paul
+Fountain, Nathan B.|Fountain|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Nathan
+Wharen, Robert E.|Wharen|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Robert
+Hirsch, Lawrence J.|Hirsch|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Lawrence
+Miller, Ian O.|Miller|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Ian
+Barkley, Gregory L.|Barkley|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Gregory
+Edwards, Jonathan C.|Edwards|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Jonathan
+Geller, Eric B.|Geller|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Eric
+Berg, Michel J.|Berg|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Michel
+Sadler, Toni L.|Sadler|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Toni
+Sun, Felice T.|Sun|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Felice
+Morrell, Martha J.|Morrell|lateralizationofmesialtemporallobeepilepsywithchronicambulatoryelectrocorticography||||||Martha
+Dinh, Thang N.|Dinh|networkunderjointnodeandlinkattacksvulnerabilityassessmentmethodsandanalysis||||||Thang
+Thai, My T.|Thai|networkunderjointnodeandlinkattacksvulnerabilityassessmentmethodsandanalysis||||||My
+Maslowski, Grzegorz|Maslowski|currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||Grzegorz
+Rakov, Vladimir A.|Rakov|currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||Vladimir
+Wyderka, Stanislaw|Wyderka|currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||Stanislaw
+Ziemba, Robert|Ziemba|currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||Robert
+Karnas, Grzegorz|Karnas|currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||Grzegorz
+Filik, Kamil|Filik|currentimpulsesinthelightningprotectionsystemofatesthouseinpoland||||||Kamil
+Tran Huu Thang|Tran Huu Thang|fdtdcomputationoflightninginducedvoltagesonmulticonductorlineswithsurgearrestersandpoletransformers||||||
+Baba, Yoshihiro|Baba|fdtdcomputationoflightninginducedvoltagesonmulticonductorlineswithsurgearrestersandpoletransformers||||||Yoshihiro
+Rakov, Vladimir A.|Rakov|fdtdcomputationoflightninginducedvoltagesonmulticonductorlineswithsurgearrestersandpoletransformers||||||Vladimir
+Piantini, Alexandre|Piantini|fdtdcomputationoflightninginducedvoltagesonmulticonductorlineswithsurgearrestersandpoletransformers||||||Alexandre
+Xu, Jun|Xu|investigatingaguardtraceringtosuppressthecrosstalkduetoaclocktraceonapowerelectronicsdspcontrolboard||||||Jun
+Wang, Shuo|Wang|investigatingaguardtraceringtosuppressthecrosstalkduetoaclocktraceonapowerelectronicsdspcontrolboard||||||Shuo
+Nieh, Chien-Ming|Nieh|concurrentdetectionofvibrationanddistanceusingunmodulatedcwdopplervibrationradarwithanadaptivebeamsteeringantenna||||||Chien-Ming
+Wei, Changyu|Wei|concurrentdetectionofvibrationanddistanceusingunmodulatedcwdopplervibrationradarwithanadaptivebeamsteeringantenna||||||Changyu
+Lin, Jenshan|Lin|concurrentdetectionofvibrationanddistanceusingunmodulatedcwdopplervibrationradarwithanadaptivebeamsteeringantenna||||||Jenshan
+Winfrey, A. Leigh|Winfrey|hyperjetfocusedinjectiontaperedcapillaryplasmasourceconcept||||||A.
+Mittal, Shawn|Mittal|hyperjetfocusedinjectiontaperedcapillaryplasmasourceconcept||||||Shawn
+Abd Al-Halim, Mohamed A.|Abd Al-Halim|hyperjetfocusedinjectiontaperedcapillaryplasmasourceconcept||||||Mohamed
+Yaghjyan, L.|Yaghjyan|associationsofurinaryphthalateswithbodymassindexwaistcircumferenceandserumlipidsamongfemalesnationalhealthandnutritionexaminationsurvey19992004||||||L.
+Sites, S.|Sites|associationsofurinaryphthalateswithbodymassindexwaistcircumferenceandserumlipidsamongfemalesnationalhealthandnutritionexaminationsurvey19992004||||||S.
+Ruan, Y.|Ruan|associationsofurinaryphthalateswithbodymassindexwaistcircumferenceandserumlipidsamongfemalesnationalhealthandnutritionexaminationsurvey19992004||||||Y.
+Chang, S-H|Chang|associationsofurinaryphthalateswithbodymassindexwaistcircumferenceandserumlipidsamongfemalesnationalhealthandnutritionexaminationsurvey19992004||||||S-H
+Li, Wenhua|Li|bilateralchoroidaldetachmentinwaldenstrommacroglobulinemia||||||Wenhua
+Chalam, Kakarla V.|Chalam|bilateralchoroidaldetachmentinwaldenstrommacroglobulinemia||||||Kakarla
+Grover, Sandeep|Grover|bilateralchoroidaldetachmentinwaldenstrommacroglobulinemia||||||Sandeep
+Kadiyala, M. D. M.|Kadiyala|studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||M.
+Jones, James. W.|Jones|studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||James.
+Mylavarapu, R. S.|Mylavarapu|studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||R.
+Li, Y. C.|Li|studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||Y.
+Reddy, M. D.|Reddy|studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||M.
+Umadevi, M.|Umadevi|studyofspatialwaterrequirementsofriceundervariouscropestablishmentmethodsusinggisandcropmodels||||||M.
+Fahmie, Tara A.|Fahmie|comparisonofedibleandleisurereinforcers||||||Tara
+Iwata, Brian A.|Iwata|comparisonofedibleandleisurereinforcers||||||Brian
+Jann, Kathryn E.|Jann|comparisonofedibleandleisurereinforcers||||||Kathryn
+Esenwein, George|Esenwein|therepublicanarmyinthespanishcivilwar19361939||||||George
+Goda, Norman J. W.|Goda|allendullestheossandnaziwarcriminalsthedynamicsofselectiveprosecution||||||Norman
+Harland-Jacobs, Jessica L.|Harland-Jacobs|incorporatingthekingsnewsubjectsaccommodationandanticatholicisminthebritishempire17631815||||||Jessica
+Cooke, Brian K.|Cooke|hallvfloridacapitalpunishmentiqandpersonswithintellectualdisabilities||||||Brian
+Delalot, Dominque|Delalot|hallvfloridacapitalpunishmentiqandpersonswithintellectualdisabilities||||||Dominque
+Werner, Tonia L.|Werner|hallvfloridacapitalpunishmentiqandpersonswithintellectualdisabilities||||||Tonia
+Kunka, Cody|Kunka|interactionofindentationinducedcracksonsinglecrystalsiliconcarbide||||||Cody
+Trachet, Alison|Trachet|interactionofindentationinducedcracksonsinglecrystalsiliconcarbide||||||Alison
+Subhash, Ghatu|Subhash|interactionofindentationinducedcracksonsinglecrystalsiliconcarbide||||||Ghatu
+El Haj, Alicia J.|El Haj|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Alicia
+Glossop, John R.|Glossop|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||John
+Sura, Harpal S.|Sura|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Harpal
+Lees, Martin R.|Lees|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Martin
+Hu, Bin|Hu|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Bin
+Wolbank, Susanne|Wolbank|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Susanne
+van Griensven, Martijn|van Griensven|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Martijn
+Redl, Heinz|Redl|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Heinz
+Dobson, Jon|Dobson|aninvitromodelofmesenchymalstemcelltargetingusingmagneticparticlelabelling||||||Jon
+Ardente, Amanda J.|Ardente|thenutrientcompositionofthedietofbottlenosedolphinstursiopstruncatusisbetterassessedrelativetometabolizableenergythandrymatter||||||Amanda
+Hill, Richard C.|Hill|thenutrientcompositionofthedietofbottlenosedolphinstursiopstruncatusisbetterassessedrelativetometabolizableenergythandrymatter||||||Richard
+Gerlach, Trevor J.|Gerlach|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Trevor
+Estrada, Amara H.|Estrada|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Amara
+Sosa, Ivan S.|Sosa|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Ivan
+Powell, Melanie|Powell|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Melanie
+Lamb, Kenneth E.|Lamb|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Kenneth
+Ball, Ray L.|Ball|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Ray
+de Wit, Martine|de Wit|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Martine
+Walsh, Mike T.|Walsh|establishmentofechocardiographicparametersofclinicallyhealthyfloridamanateestrichechusmanatuslatirostris||||||Mike
+Coelho de Moura, Charlys Rhands|Coelho de Moura|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Charlys
+Diniz, Anaemilia das Neves|Diniz|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Anaemilia
+Moura, Laecio da Silva|Moura|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Laecio
+Araujo Sousa, Francisco das Chagas|Araujo Sousa|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Francisco
+Baltazar, Pollyana Irene|Baltazar|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Pollyana
+Freire, Larisse Danielle|Freire|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Larisse
+Guerra, Porfirio Candanedo|Guerra|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Porfirio
+de Sousa, Joao Macedo|de Sousa|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Joao
+Giglio, Robson Fortes|Giglio|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Robson
+Pessoa, Gerson Tavares|Pessoa|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Gerson
+de Sa, Renan Paraguassu|de Sa|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Renan
+Alves, Flavio Ribeiro|Alves|cardiothoracicratioandvertebralheartscaleinclinicallynormalblackrumpedagoutisdasyproctaprymnolophawagler1831||||||Flavio
+McCarty, Todd P.|McCarty|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Todd
+Baddley, John W.|Baddley|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||John
+Walsh, Thomas J.|Walsh|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Thomas
+Alexander, Barbara D.|Alexander|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Barbara
+Kontoyiannis, Dimitrios P.|Kontoyiannis|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Dimitrios
+Perl, Trish M.|Perl|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Trish
+Walker, Randall|Walker|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Randall
+Patterson, Thomas F.|Patterson|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Thomas
+Schuster, Mindy G.|Schuster|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Mindy
+Lyon, G. Marshall|Lyon|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||G.
+Wingard, John R.|Wingard|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||John
+Andes, David R.|Andes|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||David
+Park, Benjamin J.|Park|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Benjamin
+Brandt, Mary E.|Brandt|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Mary
+Pappas, Peter G.|Pappas|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||Peter
+TRANSNET Investigators|TRANSNET Investigators|phaeohyphomycosisintransplantrecipientsresultsfromthetransplantassociatedinfectionsurveillancenetworktransnet||||||
+Barnes, Samesha R.|Barnes|mcnairscholarsprogrampreparesstudentsforthephdprograminmaterialsresearch||||||Samesha
+Hughes, Christopher R.|Hughes|modificationofscwrassemblydesignswithcoupledmcnp5scamethodstopromotesaferoperation||||||Christopher
+Pelaez, Oswaldo|Pelaez|modificationofscwrassemblydesignswithcoupledmcnp5scamethodstopromotesaferoperation||||||Oswaldo
+Schubring, Duwayne|Schubring|modificationofscwrassemblydesignswithcoupledmcnp5scamethodstopromotesaferoperation||||||Duwayne
+Jordan, Kelly A.|Jordan|modificationofscwrassemblydesignswithcoupledmcnp5scamethodstopromotesaferoperation||||||Kelly
+Pimiento, Catalina|Pimiento|bodysizetrendsoftheextinctgiantsharkcarcharoclesmegalodonadeeptimeperspectiveonmarineapexpredators||||||Catalina
+Balk, Meghan A.|Balk|bodysizetrendsoftheextinctgiantsharkcarcharoclesmegalodonadeeptimeperspectiveonmarineapexpredators||||||Meghan
+Mutunga, James M.|Mutunga|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||James
+Anderson, Troy D.|Anderson|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Troy
+Craft, Derek T.|Craft|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Derek
+Gross, Aaron D.|Gross|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Aaron
+Swale, Daniel R.|Swale|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Daniel
+Tong, Fan|Tong|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Fan
+Wong, Dawn M.|Wong|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Dawn
+Carlier, Paul R.|Carlier|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Paul
+Bloomquist, Jeffrey R.|Bloomquist|carbamateandpyrethroidresistanceintheakronstrainofanophelesgambiae||||||Jeffrey
+Franklin, Janet|Franklin|regionalvariationincaribbeandryforesttreespeciescomposition||||||Janet
+Ripplinger, Julie|Ripplinger|regionalvariationincaribbeandryforesttreespeciescomposition||||||Julie
+Freid, Ethan H.|Freid|regionalvariationincaribbeandryforesttreespeciescomposition||||||Ethan
+Marcano-Vega, Humfredo|Marcano-Vega|regionalvariationincaribbeandryforesttreespeciescomposition||||||Humfredo
+Steadman, David W.|Steadman|regionalvariationincaribbeandryforesttreespeciescomposition||||||David
+Sjoberg, Laura|Sjoberg|fromunitytodivergenceandbackagainsecurityandeconomyinfeministinternationalrelations||||||Laura
+Allan, Darcey M.|Allan|relationsbetweenresponsetrajectoriesonthecontinuousperformancetestandteacherratedproblembehaviorsinpreschoolers||||||Darcey
+Lonigan, Christopher J.|Lonigan|relationsbetweenresponsetrajectoriesonthecontinuousperformancetestandteacherratedproblembehaviorsinpreschoolers||||||Christopher
+Strong, Amy L.|Strong|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Amy
+Bowles, Annie C.|Bowles|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Annie
+MacCrimmon, Connor P.|MacCrimmon|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Connor
+Frazier, Trivia P.|Frazier|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Trivia
+Lee, Stephen J.|Lee|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Stephen
+Wu, Xiying|Wu|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Xiying
+Katz, Adam J.|Katz|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Adam
+Gawronska-Kozak, Barbara|Gawronska-Kozak|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Barbara
+Bunnell, Bruce A.|Bunnell|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Bruce
+Gimble, Jeffrey M.|Gimble|adiposestromalcellsrepairpressureulcersinbothyoungandelderlymicepotentialroleofadipogenesisinskinrepair||||||Jeffrey
+de la Fuente, Lorena|de la Fuente|genomewidechangesinhistoneh3lysine27trimethylationassociatedwithbuddormancyreleaseinpeach||||||Lorena
+Conesa, Ana|Conesa|genomewidechangesinhistoneh3lysine27trimethylationassociatedwithbuddormancyreleaseinpeach||||||Ana
+Lloret, Alba|Lloret|genomewidechangesinhistoneh3lysine27trimethylationassociatedwithbuddormancyreleaseinpeach||||||Alba
+Luisa Badenes, Maria|Luisa Badenes|genomewidechangesinhistoneh3lysine27trimethylationassociatedwithbuddormancyreleaseinpeach||||||Maria
+Rios, Gabino|Rios|genomewidechangesinhistoneh3lysine27trimethylationassociatedwithbuddormancyreleaseinpeach||||||Gabino
+Zhang, Jianxing|Zhang|comparisonofbreedingvaluesestimatedbetweensingletreeandmultipletreeplotsforaslashpinepopulation||||||Jianxing
+Peter, Gary F.|Peter|comparisonofbreedingvaluesestimatedbetweensingletreeandmultipletreeplotsforaslashpinepopulation||||||Gary
+Powell, Gregory L.|Powell|comparisonofbreedingvaluesestimatedbetweensingletreeandmultipletreeplotsforaslashpinepopulation||||||Gregory
+White, Timothy L.|White|comparisonofbreedingvaluesestimatedbetweensingletreeandmultipletreeplotsforaslashpinepopulation||||||Timothy
+Gezan, Salvador A.|Gezan|comparisonofbreedingvaluesestimatedbetweensingletreeandmultipletreeplotsforaslashpinepopulation||||||Salvador
+Bazante, Alexandre P.|Bazante|thebenzeneradicalanionacomputationallydemandingprototypeforaromaticanions||||||Alexandre
+Davidson, E. R.|Davidson|thebenzeneradicalanionacomputationallydemandingprototypeforaromaticanions||||||E.
+Bartlett, Rodney J.|Bartlett|thebenzeneradicalanionacomputationallydemandingprototypeforaromaticanions||||||Rodney
+Schulz-Schuepke, Stefanie|Schulz-Schuepke|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Stefanie
+Byrne, Robert A.|Byrne|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Robert
+ten Berg, Jurrien M.|ten Berg|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Jurrien
+Neumann, Franz-Josef|Neumann|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Franz-Josef
+Han, Yaling|Han|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Yaling
+Adriaenssens, Tom|Adriaenssens|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Tom
+Toelg, Ralph|Toelg|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Ralph
+Seyfarth, Melchior|Seyfarth|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Melchior
+Maeng, Michael|Maeng|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Michael
+Zrenner, Bernhard|Zrenner|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Bernhard
+Jacobshagen, Claudius|Jacobshagen|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Claudius
+Mudra, Harald|Mudra|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Harald
+von Hodenberg, Eberhard|von Hodenberg|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Eberhard
+Woehrle, Jochen|Woehrle|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Jochen
+Angiolillo, Dominick J.|Angiolillo|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Dominick
+von Merzljak, Barbara|von Merzljak|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Barbara
+Rifatov, Nonglag|Rifatov|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Nonglag
+Kufner, Sebastian|Kufner|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Sebastian
+Morath, Tanja|Morath|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Tanja
+Feuchtenberger, Antonia|Feuchtenberger|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Antonia
+Ibrahim, Tareq|Ibrahim|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Tareq
+Janssen, Paul W. A.|Janssen|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Paul
+Valina, Christian|Valina|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Christian
+Li, Yi|Li|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Yi
+Desmet, Walter|Desmet|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Walter
+Abdel-Wahab, Mohamed|Abdel-Wahab|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Mohamed
+Tiroch, Klaus|Tiroch|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Klaus
+Hengstenberg, Christian|Hengstenberg|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Christian
+Bernlochner, Isabell|Bernlochner|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Isabell
+Fischer, Marcus|Fischer|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Marcus
+Schunkert, Heribert|Schunkert|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Heribert
+Laugwitz, Karl-Ludwig|Laugwitz|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Karl-Ludwig
+Schoemig, Albert|Schoemig|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Albert
+Mehilli, Julinda|Mehilli|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Julinda
+Kastrati, Adnan|Kastrati|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||Adnan
+Intracoronary Stenting Antithrombo|Intracoronary Stenting Antithrombo|isarsafearandomizeddoubleblindplacebocontrolledtrialof6vs12monthsofclopidogreltherapyafterdrugelutingstenting||||||
+Chatrchyan, S.|Chatrchyan|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||S.
+Khachatryan, V.|Khachatryan|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||V.
+Sirunyan, A. M.|Sirunyan|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||A.
+Tumasyan, A.|Tumasyan|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||A.
+Adam, W.|Adam|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||W.
+Bergauer, T.|Bergauer|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||T.
+Dragicevic, M.|Dragicevic|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||M.
+Eroe, J.|Eroe|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||J.
+Fabjan, C.|Fabjan|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||C.
+Friedl, M.|Friedl|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||M.
+Fruehwirth, R.|Fruehwirth|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||R.
+Ghete, V. M.|Ghete|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||V.
+Hartl, C.|Hartl|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||C.
+Hoermann, N.|Hoermann|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||N.
+Hrubec, J.|Hrubec|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||J.
+Jeitler, M.|Jeitler|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||M.
+Kiesenhofer, W.|Kiesenhofer|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||W.
+Knuenz, V.|Knuenz|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||V.
+Krammer, M.|Krammer|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||M.
+Kraetschmer, I.|Kraetschmer|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||I.
+Liko, D.|Liko|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||D.
+Mikulec, I.|Mikulec|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||I.
+Rabady, D.|Rabady|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||D.
+Rahbaran, B.|Rahbaran|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||B.
+Rohringer, H.|Rohringer|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||H.
+Schoefbeck, R.|Schoefbeck|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||R.
+Strauss, J.|Strauss|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||J.
+Taurok, A.|Taurok|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||A.
+Treberer-Treberspurg, W.|Treberer-Treberspurg|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||W.
+Waltenberger, W.|Waltenberger|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||W.
+Wulz, C. -E.|Wulz|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||C.
+Mossolov, V.|Mossolov|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||V.
+Shumeiko, N.|Shumeiko|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||N.
+Gonzalez, J. Suarez|Gonzalez|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||J.
+Alderweireldt, S.|Alderweireldt|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||S.
+Bansal, M.|Bansal|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||M.
+Bansal, S.|Bansal|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||S.
+Cornelis, T.|Cornelis|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||T.
+De Wolf, E. A.|De Wolf|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||E.
+Janssen, X.|Janssen|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||X.
+Knutsson, A.|Knutsson|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||A.
+Luyckx, S.|Luyckx|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||S.
+Ochesanu, S.|Ochesanu|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||S.
+Roland, B.|Roland|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||B.
+Rougny, R.|Rougny|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||R.
+Van Haevermaet, H.|Van Haevermaet|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||H.
+Van Mechelen, P.|Van Mechelen|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||P.
+Van Remortel, N.|Van Remortel|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||N.
+Van Spilbeeck, A.|Van Spilbeeck|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||A.
+Blekman, F.|Blekman|measurementofjetmultiplicitydistributionsinttoverbarproductioninppcollisionsatroots7tevvol7430142014||||||F.
+Khachatryan, V.|Khachatryan|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||V.
+Sirunyan, A. M.|Sirunyan|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||A.
+Tumasyan, A.|Tumasyan|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||A.
+Adam, W.|Adam|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||W.
+Bergauer, T.|Bergauer|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||T.
+Dragicevic, M.|Dragicevic|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||M.
+Eroe, J.|Eroe|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||J.
+Friedl, M.|Friedl|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||M.
+Fruehwirth, R.|Fruehwirth|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||R.
+Ghete, V. M.|Ghete|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||V.
+Hartl, C.|Hartl|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||C.
+Hoermann, N.|Hoermann|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||N.
+Hrubec, J.|Hrubec|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||J.
+Jeitler, M.|Jeitler|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||M.
+Kiesenhofer, W.|Kiesenhofer|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||W.
+Knuenz, V.|Knuenz|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||V.
+Krammer, M.|Krammer|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||M.
+Kraetschmer, I.|Kraetschmer|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||I.
+Liko, D.|Liko|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||D.
+Mikulec, I.|Mikulec|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||I.
+Rabady, D.|Rabady|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||D.
+Rahbaran, B.|Rahbaran|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||B.
+Rohringer, H.|Rohringer|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||H.
+Schoefbeck, R.|Schoefbeck|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||R.
+Strauss, J.|Strauss|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||J.
+Treberer-Treberspurg, W.|Treberer-Treberspurg|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||W.
+Waltenberger, W.|Waltenberger|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||W.
+Wulz, C-E|Wulz|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||C-E
+Mossolov, V.|Mossolov|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||V.
+Shumeiko, N.|Shumeiko|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||N.
+Gonzalez, J. Suarez|Gonzalez|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||J.
+Alderweireldt, S.|Alderweireldt|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||S.
+Bansal, S.|Bansal|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||S.
+Cornelis, T.|Cornelis|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||T.
+De Wolf, E. A.|De Wolf|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||E.
+Janssen, X.|Janssen|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||X.
+Knutsson, A.|Knutsson|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||A.
+Lauwers, J.|Lauwers|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||J.
+Luyckx, S.|Luyckx|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||S.
+Ochesanu, S.|Ochesanu|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||S.
+Rougny, R.|Rougny|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||R.
+Van De Klundert, M.|Van De Klundert|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||M.
+Van Haevermaet, H.|Van Haevermaet|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||H.
+Van Mechelen, P.|Van Mechelen|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||P.
+Van Remortel, N.|Van Remortel|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||N.
+Van Spilbeeck, A.|Van Spilbeeck|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||A.
+Blekman, F.|Blekman|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||F.
+Blyweert, S.|Blyweert|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||S.
+D'Hondt, J.|D'Hondt|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||J.
+Daci, N.|Daci|precisedeterminationofthemassofthehiggsbosonandtestsofcompatibilityofitscouplingswiththestandardmodelpredictionsusingprotoncollisionsat7and8tev||||||N.
+Hackmann, Timothy J.|Hackmann|maximizingefficiencyofrumenmicrobialproteinproduction||||||Timothy
+Firkins, Jeffrey L.|Firkins|maximizingefficiencyofrumenmicrobialproteinproduction||||||Jeffrey
+Clark, David J.|Clark|automaticityofwalkingfunctionalsignificancemechanismsmeasurementandrehabilitationstrategies||||||David
+Woods, Adam J.|Woods|effectsofelectrodedriftintranscranialdirectcurrentstimulation||||||Adam
+Bryant, Vaughn|Bryant|effectsofelectrodedriftintranscranialdirectcurrentstimulation||||||Vaughn
+Sacchetti, Daniela|Sacchetti|effectsofelectrodedriftintranscranialdirectcurrentstimulation||||||Daniela
+Gervits, Felix|Gervits|effectsofelectrodedriftintranscranialdirectcurrentstimulation||||||Felix
+Hamilton, Roy|Hamilton|effectsofelectrodedriftintranscranialdirectcurrentstimulation||||||Roy
+MacSuga-Gage, Ashley S.|MacSuga-Gage|examiningtheeffectsofteacherdirectedopportunitiestorespondonstudentoutcomesasystematicreviewoftheliterature||||||Ashley
+Simonsen, Brandi|Simonsen|examiningtheeffectsofteacherdirectedopportunitiestorespondonstudentoutcomesasystematicreviewoftheliterature||||||Brandi
+Szantoi, Zoltan|Szantoi|classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||Zoltan
+Escobedo, Francisco J.|Escobedo|classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||Francisco
+Abd-Elrahman, Amr|Abd-Elrahman|classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||Amr
+Pearlstine, Leonard|Pearlstine|classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||Leonard
+Dewitt, Bon|Dewitt|classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||Bon
+Smith, Scot|Smith|classifyingspatiallyheterogeneouswetlandcommunitiesusingmachinelearningalgorithmsandspectralandtexturalfeatures||||||Scot
+Khachatryan, V.|Khachatryan|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||V.
+Sirunyan, A. M.|Sirunyan|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||A.
+Tumasyan, A.|Tumasyan|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||A.
+Adam, W.|Adam|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||W.
+Bergauer, T.|Bergauer|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||T.
+Dragicevic, M.|Dragicevic|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||M.
+Eroe, J.|Eroe|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||J.
+Fabjan, C.|Fabjan|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||C.
+Friedl, M.|Friedl|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||M.
+Fruehwirth, R.|Fruehwirth|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||R.
+Ghete, V. M.|Ghete|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||V.
+Hartl, C.|Hartl|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||C.
+Hoermann, N.|Hoermann|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||N.
+Hrubec, J.|Hrubec|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||J.
+Jeitler, M.|Jeitler|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||M.
+Kiesenhofer, W.|Kiesenhofer|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||W.
+Knuenz, V.|Knuenz|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||V.
+Krammer, M.|Krammer|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||M.
+Kraetschmer, I.|Kraetschmer|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||I.
+Liko, D.|Liko|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||D.
+Mikulec, I.|Mikulec|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||I.
+Rabady, D.|Rabady|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||D.
+Rahbaran, B.|Rahbaran|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||B.
+Rohringer, H.|Rohringer|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||H.
+Schoefbeck, R.|Schoefbeck|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||R.
+Strauss, J.|Strauss|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||J.
+Taurok, A.|Taurok|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||A.
+Treberer-Treberspurg, W.|Treberer-Treberspurg|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||W.
+Waltenberger, W.|Waltenberger|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||W.
+Wulz, C. -E.|Wulz|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||C.
+Mossolov, V.|Mossolov|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||V.
+Shumeiko, N.|Shumeiko|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||N.
+Gonzalez, J. Suarez|Gonzalez|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||J.
+Alderweireldt, S.|Alderweireldt|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||S.
+Bansal, M.|Bansal|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||M.
+Bansal, S.|Bansal|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||S.
+Cornelis, T.|Cornelis|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||T.
+De Wolf, E. A.|De Wolf|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||E.
+Janssen, X.|Janssen|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||X.
+Knutsson, A.|Knutsson|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||A.
+Luyckx, S.|Luyckx|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||S.
+Ochesanu, S.|Ochesanu|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||S.
+Rougny, R.|Rougny|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||R.
+Van De Klundert, M.|Van De Klundert|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||M.
+Van Haevermaet, H.|Van Haevermaet|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||H.
+Van Mechelen, P.|Van Mechelen|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||P.
+Van Remortel, N.|Van Remortel|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||N.
+Van Spilbeeck, A.|Van Spilbeeck|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||A.
+Blekman, F.|Blekman|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||F.
+Blyweert, S.|Blyweert|measurementoftheinclusive3jetproductiondifferentialcrosssectioninprotonprotoncollisionsat7tevanddeterminationofthestrongcouplingconstantinthetevrange||||||S.
+Wang, Yunwen|Wang|diverseresponsesoflettucecultivarsandgermplasmlinestoinfectionsofthreeisolatesofxanthomonascampestrispvvitians||||||Yunwen
+Lu, Huangjun|Lu|diverseresponsesoflettucecultivarsandgermplasmlinestoinfectionsofthreeisolatesofxanthomonascampestrispvvitians||||||Huangjun
+Raid, Richard N.|Raid|diverseresponsesoflettucecultivarsandgermplasmlinestoinfectionsofthreeisolatesofxanthomonascampestrispvvitians||||||Richard
+Nuessly, Gregg S.|Nuessly|diverseresponsesoflettucecultivarsandgermplasmlinestoinfectionsofthreeisolatesofxanthomonascampestrispvvitians||||||Gregg
+Faroutine, Georgy|Faroutine|diverseresponsesoflettucecultivarsandgermplasmlinestoinfectionsofthreeisolatesofxanthomonascampestrispvvitians||||||Georgy
+Yang, Yang|Yang|hotellocationevaluationacombinationofmachinelearningtoolsandwebgis||||||Yang
+Tang, Jingyin|Tang|hotellocationevaluationacombinationofmachinelearningtoolsandwebgis||||||Jingyin
+Luo, Hao|Luo|hotellocationevaluationacombinationofmachinelearningtoolsandwebgis||||||Hao
+Law, Rob|Law|hotellocationevaluationacombinationofmachinelearningtoolsandwebgis||||||Rob
+Liu, Bingjie|Liu|respondingtothebedbugcrisisinsocialmedia||||||Bingjie
+Kim, Hany|Kim|respondingtothebedbugcrisisinsocialmedia||||||Hany
+Pennington-Gray, Lori|Pennington-Gray|respondingtothebedbugcrisisinsocialmedia||||||Lori
+Bautista, Julian E.|Bautista|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Julian
+Bailey, Stephen|Bailey|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Stephen
+Font-Ribera, Andreu|Font-Ribera|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Andreu
+Pieri, Matthew M.|Pieri|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Matthew
+Busca, Nicolas G.|Busca|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Nicolas
+Miralda-Escude, Jordi|Miralda-Escude|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Jordi
+Palanque-Delabrouille, Nathalie|Palanque-Delabrouille|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Nathalie
+Rich, James|Rich|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||James
+Dawson, Kyle|Dawson|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Kyle
+Feng, Yu|Feng|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Yu
+Ge, Jian|Ge|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Jian
+Gontcho, Satya A. Gontcho|Gontcho|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Satya
+Ho, Shirley|Ho|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Shirley
+Le Goff, Jean Marc|Le Goff|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Jean
+Noterdaeme, Pasquier|Noterdaeme|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Pasquier
+Paris, Isabelle|Paris|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Isabelle
+Rossi, Graziano|Rossi|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||Graziano
+Schlegel, David|Schlegel|mockquasarlymanalphaforestdatasetsforthesdssiiibaryonoscillationspectroscopicsurvey||||||David
+Udassi, Sharda|Udassi|adolescentwithfeverhypotensionandrespiratorydistress||||||Sharda
+Tuli, Sanjeev Y.|Tuli|adolescentwithfeverhypotensionandrespiratorydistress||||||Sanjeev
+Giordano, Beverly P.|Giordano|adolescentwithfeverhypotensionandrespiratorydistress||||||Beverly
+Udassi, Jai|Udassi|adolescentwithfeverhypotensionandrespiratorydistress||||||Jai
+Lamvu, Georgine|Lamvu|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Georgine
+Nguyen, Ruby H. N.|Nguyen|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Ruby
+Burrows, Lara J.|Burrows|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Lara
+Rapkin, Andrea|Rapkin|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Andrea
+Witzeman, Kathryn|Witzeman|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Kathryn
+Marvel, Richard P.|Marvel|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Richard
+Hutchins, David|Hutchins|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||David
+Witkin, Steven S.|Witkin|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Steven
+Veasley, Christin|Veasley|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Christin
+Fillingim, Roger|Fillingim|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Roger
+Zolnoun, Denniz|Zolnoun|theevidencebasedvulvodyniaassessmentprojectanationalregistryforthestudyofvulvodynia||||||Denniz
+Jordan, M. A.|Jordan|moderndesignandsafetyanalysisoftheuniversityoffloridatrainingreactor||||||M.
+Springfels, D.|Springfels|moderndesignandsafetyanalysisoftheuniversityoffloridatrainingreactor||||||D.
+Schubring, D.|Schubring|moderndesignandsafetyanalysisoftheuniversityoffloridatrainingreactor||||||D.
+Remshardt, Ralf|Remshardt|foreignaffairsfestival||||||Ralf
+Benzaquen, M.|Benzaquen|effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||M.
+Galvao, K. N.|Galvao|effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||K.
+Coleman, A. E.|Coleman|effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||A.
+Santos, J. E. P.|Santos|effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||J.
+Goff, J. P.|Goff|effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||J.
+Risco, C. A.|Risco|effectoforalmineralandenergysupplementationonbloodmineralconcentrationsenergeticandinflammatoryprofileandmilkyieldindairycowsaffectedwithdystocia||||||C.
+Pogue-Geile, Katherine L.|Pogue-Geile|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Katherine
+Song, Nan|Song|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Nan
+Jeong, Jong-Hyeon|Jeong|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Jong-Hyeon
+Gavin, Patrick G.|Gavin|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Patrick
+Kim, Seong-Rim|Kim|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Seong-Rim
+Blackmon, Nicole L.|Blackmon|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Nicole
+Finnigan, Melanie|Finnigan|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Melanie
+Rastogi, Priya|Rastogi|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Priya
+Fehrenbacher, Louis|Fehrenbacher|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Louis
+Mamounas, Eleftherios P.|Mamounas|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Eleftherios
+Swain, Sandra M.|Swain|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Sandra
+Wickerham, D. Lawrence|Wickerham|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||D.
+Geyer, Jr., Charles E.|Geyer|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Jr.,
+Costantino, Joseph P.|Costantino|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Joseph
+Wolmark, Norman|Wolmark|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Norman
+Paik, Soonmyung|Paik|intrinsicsubtypespik3camutationandthedegreeofbenefitfromadjuvanttrastuzumabinthensabpb31trial||||||Soonmyung
+Khachatryan, V.|Khachatryan|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||V.
+Sirunyan, A. M.|Sirunyan|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||A.
+Tumasyan, A.|Tumasyan|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||A.
+Adam, W.|Adam|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||W.
+Bergauer, T.|Bergauer|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||T.
+Dragicevic, M.|Dragicevic|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||M.
+Eroe, J.|Eroe|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||J.
+Friedl, M.|Friedl|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||M.
+Fruehwirth, R.|Fruehwirth|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||R.
+Ghete, V. M.|Ghete|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||V.
+Hartl, C.|Hartl|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||C.
+Hoermann, N.|Hoermann|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||N.
+Hrubec, J.|Hrubec|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||J.
+Jeitler, M.|Jeitler|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||M.
+Kiesenhofer, W.|Kiesenhofer|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||W.
+Knuenz, V.|Knuenz|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||V.
+Krammer, M.|Krammer|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||M.
+Kraetschmer, I.|Kraetschmer|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||I.
+Liko, D.|Liko|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||D.
+Mikulec, I.|Mikulec|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||I.
+Rabady, D.|Rabady|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||D.
+Rahbaran, B.|Rahbaran|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||B.
+Rohringer, H.|Rohringer|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||H.
+Schoefbeck, R.|Schoefbeck|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||R.
+Strauss, J.|Strauss|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||J.
+Treberer-Treberspurg, W.|Treberer-Treberspurg|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||W.
+Waltenberger, W.|Waltenberger|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||W.
+Wulz, C. -E.|Wulz|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||C.
+Mossolov, V.|Mossolov|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||V.
+Shumeiko, N.|Shumeiko|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||N.
+Gonzalez, J. Suarez|Gonzalez|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||J.
+Alderweireldt, S.|Alderweireldt|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||S.
+Bansal, S.|Bansal|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||S.
+Cornelis, T.|Cornelis|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||T.
+De Wolf, E. A.|De Wolf|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||E.
+Janssen, X.|Janssen|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||X.
+Knutsson, A.|Knutsson|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||A.
+Lauwers, J.|Lauwers|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||J.
+Luyckx, S.|Luyckx|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||S.
+Ochesanu, S.|Ochesanu|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||S.
+Rougny, R.|Rougny|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||R.
+De Klundert, M. Van|De Klundert|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||M.
+Van Haevermaet, H.|Van Haevermaet|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||H.
+Van Mechelen, P.|Van Mechelen|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||P.
+Van Remortel, N.|Van Remortel|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||N.
+Van Spilbeeck, A.|Van Spilbeeck|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||A.
+Blekman, F.|Blekman|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||F.
+Blyweert, S.|Blyweert|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||S.
+D'Hondt, J.|D'Hondt|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||J.
+Daci, N.|Daci|searchfordecaysofstoppedlonglivedparticlesproducedinprotonprotoncollisionsatroots8tev||||||N.
+Khachatryan, V.|Khachatryan|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||V.
+Sirunyan, A. M.|Sirunyan|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||A.
+Tumasyan, A.|Tumasyan|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||A.
+Adam, W.|Adam|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||W.
+Bergauer, T.|Bergauer|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||T.
+Dragicevic, M.|Dragicevic|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||M.
+Eroe, J.|Eroe|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||J.
+Friedl, M.|Friedl|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||M.
+Fruehwirth, R.|Fruehwirth|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||R.
+Ghete, V. M.|Ghete|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||V.
+Hartl, C.|Hartl|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||C.
+Hoermann, N.|Hoermann|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||N.
+Hrubec, J.|Hrubec|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||J.
+Jeitler, M.|Jeitler|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||M.
+Kiesenhofer, W.|Kiesenhofer|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||W.
+Knuenz, V.|Knuenz|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||V.
+Krammer, M.|Krammer|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||M.
+Kraetschmer, I.|Kraetschmer|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||I.
+Liko, D.|Liko|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||D.
+Mikulec, I.|Mikulec|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||I.
+Rabady, D.|Rabady|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||D.
+Rahbaran, B.|Rahbaran|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||B.
+Rohringer, H.|Rohringer|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||H.
+Schoefbeck, R.|Schoefbeck|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||R.
+Strauss, J.|Strauss|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||J.
+Treberer-Treberspurg, W.|Treberer-Treberspurg|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||W.
+Waltenberger, W.|Waltenberger|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||W.
+Wulz, C. -E.|Wulz|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||C.
+Mossolov, V.|Mossolov|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||V.
+Shumeiko, N.|Shumeiko|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||N.
+Gonzalez, J. Suarez|Gonzalez|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||J.
+Alderweireldt, S.|Alderweireldt|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||S.
+Bansal, S.|Bansal|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||S.
+Cornelis, T.|Cornelis|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||T.
+De Wolf, E. A.|De Wolf|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||E.
+Janssen, X.|Janssen|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||X.
+Knutsson, A.|Knutsson|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||A.
+Lauwers, J.|Lauwers|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||J.
+Luyckx, S.|Luyckx|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||S.
+Ochesanu, S.|Ochesanu|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||S.
+Rougny, R.|Rougny|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||R.
+Van de Klundert, M.|Van de Klundert|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||M.
+Van Haevermaet, H.|Van Haevermaet|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||H.
+Van Mechelen, P.|Van Mechelen|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||P.
+Van Remortel, N.|Van Remortel|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||N.
+Van Spilbeeck, A.|Van Spilbeeck|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||A.
+Blekman, F.|Blekman|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||F.
+Blyweert, S.|Blyweert|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||S.
+D'Hondt, J.|D'Hondt|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||J.
+Daci, N.|Daci|measurementsofdifferentialanddoubledifferentialdrellyancrosssectionsinprotonprotoncollisionsatroots8tev||||||N.
+Adam-Eldien, Rabie|Adam-Eldien|minimalchangediseaseontopoflupusnephritisclassii||||||Rabie
+Baldeo, Candice|Baldeo|minimalchangediseaseontopoflupusnephritisclassii||||||Candice
+Heilig, Charles|Heilig|minimalchangediseaseontopoflupusnephritisclassii||||||Charles
+Baldeo, Candice|Baldeo|ancanegativepauciimmunecrescenticglomerulonephritislinkedwithnonsmallcellcarcinomaofthelung||||||Candice
+Ali, Robert|Ali|ancanegativepauciimmunecrescenticglomerulonephritislinkedwithnonsmallcellcarcinomaofthelung||||||Robert
+Hritani, Abdulwahab|Hritani|ancanegativepauciimmunecrescenticglomerulonephritislinkedwithnonsmallcellcarcinomaofthelung||||||Abdulwahab
+Poenariu, Andreea|Poenariu|ancanegativepauciimmunecrescenticglomerulonephritislinkedwithnonsmallcellcarcinomaofthelung||||||Andreea
+Jamal, Muhsin|Jamal|characterizationofsiphoviridaephagezandstudyingitsefficacyagainstmultidrugresistantklebsiellapneumoniaeplanktoniccellsandbiofilm||||||Muhsin
+Hussain, Tahir|Hussain|characterizationofsiphoviridaephagezandstudyingitsefficacyagainstmultidrugresistantklebsiellapneumoniaeplanktoniccellsandbiofilm||||||Tahir
+Das, Chythanya Rajanna|Das|characterizationofsiphoviridaephagezandstudyingitsefficacyagainstmultidrugresistantklebsiellapneumoniaeplanktoniccellsandbiofilm||||||Chythanya
+Andleeb, Saadia|Andleeb|characterizationofsiphoviridaephagezandstudyingitsefficacyagainstmultidrugresistantklebsiellapneumoniaeplanktoniccellsandbiofilm||||||Saadia
+Park, Kyu-Tek|Park|twonewspeciesoftorodorameyricklepidopteralecithoceridaeandtwospeciesnewtotaiwan||||||Kyu-Tek
+Heppner, John B.|Heppner|twonewspeciesoftorodorameyricklepidopteralecithoceridaeandtwospeciesnewtotaiwan||||||John
+Bae, Yang-Seop|Bae|twonewspeciesoftorodorameyricklepidopteralecithoceridaeandtwospeciesnewtotaiwan||||||Yang-Seop
+Staud, Roland|Staud|patientswithpolymyalgiarheumaticahada26foldincreasedriskforvasculareventsatamedian78years||||||Roland
+Dietl, Gregory P.|Dietl|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||Gregory
+Kidwell, Susan M.|Kidwell|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||Susan
+Brenner, Mark|Brenner|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||Mark
+Burney, David A.|Burney|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||David
+Flessa, Karl W.|Flessa|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||Karl
+Jackson, Stephen T.|Jackson|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||Stephen
+Koch, Paul L.|Koch|conservationpaleobiologyleveragingknowledgeofthepasttoinformconservationandrestoration||||||Paul
+Baas, Pieter|Baas|circularorsphericalvesselsinthefossilrecord||||||Pieter
+Srivastava, Rashmi|Srivastava|circularorsphericalvesselsinthefossilrecord||||||Rashmi
+Manchester, Steven R.|Manchester|circularorsphericalvesselsinthefossilrecord||||||Steven
+Wheeler, Elisabeth A.|Wheeler|circularorsphericalvesselsinthefossilrecord||||||Elisabeth
+Boonchai, Nareerat|Boonchai|welkoetoxylonmultiseriatumfossilmoraceouswoodfromtheeocenegreenriverformationwyomingusa||||||Nareerat
+Manchester, Steven R.|Manchester|welkoetoxylonmultiseriatumfossilmoraceouswoodfromtheeocenegreenriverformationwyomingusa||||||Steven
+Wheeler, Elisabeth A.|Wheeler|welkoetoxylonmultiseriatumfossilmoraceouswoodfromtheeocenegreenriverformationwyomingusa||||||Elisabeth
+Zhang, Hua|Zhang|histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||Hua
+Dai, Xufeng|Dai|histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||Xufeng
+Qi, Yan|Qi|histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||Yan
+He, Ying|He|histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||Ying
+Du, Wei|Du|histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||Wei
+Pang, Ji-jing|Pang|histonedeacetylasesinhibitorsinthetreatmentofretinaldegenerativediseasesoverviewandperspectives||||||Ji-jing
+Edelmann, Jonathan|Edelmann|thecauseofdevotioningaudiyavaisnavatheologydevotionbhaktiastheresultofspontaneouslyyadrcchayameetingadevoteesadhusanga||||||Jonathan
+Girgis, Adel S.|Girgis|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Adel
+Panda, Siva S.|Panda|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Siva
+Srour, Aladdin M.|Srour|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Aladdin
+Farag, Hanaa|Farag|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Hanaa
+Ismail, Nasser S. M.|Ismail|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Nasser
+Elgendy, Mohamed|Elgendy|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Mohamed
+Abdel-Aziz, Amal K.|Abdel-Aziz|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Amal
+Katritzky, Alan R.|Katritzky|rationaldesignsynthesisandmolecularmodelingstudiesofnovelantioncologicalalkaloidsagainstmelanoma||||||Alan
+Morris, N. Michael|Morris|buildingblocksforthedevelopmentofuniversitywideentrepreneurship||||||N.
+Kuratko, Donald F.|Kuratko|buildingblocksforthedevelopmentofuniversitywideentrepreneurship||||||Donald
+Pryor, Christopher G.|Pryor|buildingblocksforthedevelopmentofuniversitywideentrepreneurship||||||Christopher
