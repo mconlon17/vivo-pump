@@ -43,7 +43,7 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
     :param author_data:
     :param affiliation_data:
     :param max_list_length: Author list maximum length.  To prevent Physics papers from swamping the process
-    :return: author_list.  A list of authors.  Each author is a dict with six elements.
+    :return: author_list.  A list of authors.  Each author is a dict with seven elements.
     """
     author_list = []
     author_names = author_data.split(' and ')
@@ -52,23 +52,55 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
         list_length += 1
         if list_length > max_list_length:
             break
-        author_dict = {'display_name': display_name}
+        display_name = display_name.replace(' -', ' ')  # occasional leading '-' before some initials
+        author_dict = {'display_name': display_name, 'suffix': '', 'corresponding': 'false', 'uf': 'false'}
+        if ' Jr.,' in display_name:
+            author_dict['suffix'] = 'Jr.'
+            display_name = display_name.replace(' Jr.,', '')
+        if ' III,' in display_name:
+            author_dict['suffix'] = 'III'
+            display_name = display_name.replace(' III,', '')
         if ',' in display_name:
             k = display_name.find(',')
             author_dict['last'] = display_name[0:k]
             remainder = display_name[k + 2:]
             if ' ' in remainder:
                 k = remainder.find(' ')
-                author_dict['first'] = remainder[0:k]
+                author_dict['first'] = remainder[0:k].replace('.', '')
+                if ' ' in remainder:
+                    k = remainder.find(' ')
+                    author_dict['first'] = remainder[0:k].replace('.', '')
+                    author_dict['middle'] = remainder[k + 1:].replace('.', '')
             else:
-                author_dict['first'] = remainder
+                author_dict['first'] = remainder.replace('.', '')
                 author_dict['middle'] = ''
         else:
             author_dict['last'] = display_name
             author_dict['first'] = ''
             author_dict['middle'] = ''
         author_list.append(author_dict)
-    print >>sys.stderr, author_list
+
+    # If there is only one author, they must be UF and Corresponding
+
+    if len(author_list) == 1:
+        author_list[0]['corresponding'] = 'true'
+        author_list[0]['uf'] = 'true'
+        return author_list
+
+    # Now find the Corresponding Author
+
+    k = affiliation_data.find('(Reprint Author)')
+    if k > 0:
+        reprint_name = affiliation_data[0:k - 1]
+        k = reprint_name.find(' ')
+        reprint_last = reprint_name[0:k - 1]
+        reprint_fi = reprint_name[k + 1:k + 2]
+        for author_dict in author_list:
+            if author_dict['last'] == reprint_last and author_dict['first'][0] == reprint_fi:
+                author_dict['corresponding'] = 'true'
+
+    # Now find the UF authors.  Could there be a more arcane format for the affiliations (bunched, etc, etc)
+
     return author_list
 
 data_in = read_csv_fp(sys.stdin)
@@ -76,7 +108,7 @@ var_names = data_in[data_in.keys()[1]].keys()  # create a list of var_names from
 print >>sys.stderr, "Columns in", var_names
 data_out = {}
 row_out = 0
-keep_names = set(['remove', 'uri', 'title', 'display_name', 'first', 'last', 'middle', 'corresponding', 'uf'])
+keep_names = set(['remove', 'uri', 'title', 'display_name', 'suffix', 'first', 'last', 'middle', 'corresponding', 'uf'])
 for row, data in data_in.items():
     new_data =dict(data)
 
@@ -91,6 +123,7 @@ for row, data in data_in.items():
     new_data['first'] = ''
     new_data['last'] = ''
     new_data['middle'] = ''
+    new_data['suffix'] = ''
     new_data['corresponding'] = ''
     new_data['uf'] = ''
 

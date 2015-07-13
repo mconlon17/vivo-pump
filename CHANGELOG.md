@@ -228,4 +228,5 @@ journal_update_data.py. PEP-8 improvement to unique_ccn_filter.py. Add unique_is
 Add match_journal_filter.py. Add sv_journal.cfg.  Add journal_def.json.  Add journal_add.rdf.  Add journal_sub.rdf.
 On to concepts.
 ** *2015-07-13** Update uf_examples/publications/README.md to document the four ingests.  We do not ingest concepts
-from TR as they are proprietary.  Add author_prep_filter.py.  Add author_update_data.txt
+from TR as they are proprietary.  Add author_prep_filter.py.  Add author_update_data.txt.  Author name parts working.
+Corresponding author working.  Still need to find UF authors.
