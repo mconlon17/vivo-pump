@@ -227,4 +227,5 @@ publisher_sub.rdf.  Publisher work is complete in uf_examples/publications.  On 
 journal_update_data.py. PEP-8 improvement to unique_ccn_filter.py. Add unique_issn_filter.py. 
 Add match_journal_filter.py. Add sv_journal.cfg.  Add journal_def.json.  Add journal_add.rdf.  Add journal_sub.rdf.
 On to concepts.
-** *2015-07-13** Update uf_examples/publications/README.md to document the process for concepts.
+** *2015-07-13** Update uf_examples/publications/README.md to document the four ingests.  We do not ingest concepts
+from TR as they are proprietary

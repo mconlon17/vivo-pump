@@ -3,10 +3,9 @@
 Publications are ingested from a bibtex file each week.  The bibtex file is the result of a query to Thomson
 Reuters Web of Knowledge for publications of UF authors over the past seven days.
 
-Five ingests are run from the same input file.  In each case, filters extract the appropriate columns, perform
+Four ingests are run from the same input file.  In each case, filters extract the appropriate columns, perform
 a match, generate a source file suitable for an update.
 
-1.  Concepts are matched by name
 1.  Publishers are matched by name
 1.  Journals are matched by ISSN
 1.  People are matched using a disambiguation handler.  UF people are matched by name.  Non-UF people are always 
@@ -34,24 +33,7 @@ Disambiguation handler
 
 ## Process
 
-1. Obtain a current pubs.bib from TR Web of Knowledge
-1. Run bib2csv to create a raw file
-1. Run the filters to produce the required input file.  The same input file is used for all five ingests:
-1. Add concepts not currently in VIVO
-
-        cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python concept_transpose_filter.py | 
-        python unique_name_filter.py | python match_concepts_filter.py > concept_update_data.txt
-        
-   Then
-   
-        sv -c sv_concepts.cfg
-        
-   Then
-   
-   Verify concept_sub.rdf is zero length.  No concepts are subtracted by updating publications.
-   
-   Add concept_add.rdf to VIVO
-        
+1. Obtain a current bib from TR Web of Knowledge     
 1. Add publishers not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
