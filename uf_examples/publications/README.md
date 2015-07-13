@@ -38,6 +38,20 @@ Disambiguation handler
 1. Run bib2csv to create a raw file
 1. Run the filters to produce the required input file.  The same input file is used for all five ingests:
 1. Add concepts not currently in VIVO
+
+        cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python concept_transpose_filter.py | 
+        python unique_name_filter.py | python match_concepts_filter.py > concept_update_data.txt
+        
+   Then
+   
+        sv -c sv_concepts.cfg
+        
+   Then
+   
+   Verify concept_sub.rdf is zero length
+   
+   Add concept_add.rdf to VIVO
+        
 1. Add publishers not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
