@@ -179,6 +179,18 @@ def get_vivo_publishers():
     return dict(zip(label, uri))
 
 
+def get_vivo_journals():
+    """
+    Query VIVO and return a list of all the journals found in VIVO
+    :return: dictionary of uri keyed by ISSN
+    """
+    query = "select ?uri ?issn where {?uri bibo:issn ?issn .}"
+    a = vivo_query(query)
+    issn = [x['issn']['value'] for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(issn, uri))
+
+
 def get_vivo_ccn():
     """
     Query VIVO and return a list of all the ccn found in VIVO
