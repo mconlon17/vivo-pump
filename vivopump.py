@@ -150,7 +150,7 @@ def key_string(s):
     considered in the match
     """
     k = s.encode("utf-8", "ignore").translate(None,
-                                              """ \t\n\r\f!@#$%^&*()_+:"<>?-=[]\\;',./""")
+                                              """ \t\n\r\f!@#$%^&*()_+:"<>?-=[]\\;'`~,./""")
     k = k.lower()
     return k
 
