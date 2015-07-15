@@ -45,6 +45,7 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
     :param max_list_length: Author list maximum length.  To prevent Physics papers from swamping the process
     :return: author_list.  A list of authors.  Each author is a dict with seven elements.
     """
+    from vivopump import replace_initials
     author_list = []
     author_names = author_data.split(' and ')
     list_length = 0
@@ -99,10 +100,33 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
             if author_dict['last'] == reprint_last and author_dict['first'][0] == reprint_fi:
                 author_dict['corresponding'] = 'true'
 
-    # Now find the UF authors.  Could there be a more arcane format for the affiliations (bunched, etc, etc)
+    # Now find the UF authors.  Could there be a more arcane format for the affiliations (bunched, etc, etc),
+    # So first thing we do is build a structure that can identify who is a UF author
 
+    affiliation_data = replace_initials(affiliation_data)  # periods are used for ending initials in names. Remove these
+    affiliation_list = affiliation_data.split('.')  # Now periods demarc the groups of authors with like affiliation
+    affiliations = []
+    for affiliation_string in affiliation_list:
+        affiliation = {'affiliation_string': affiliation_string}
+        if 'Univ Florida' in affiliation_string:
+            affiliation['uf'] = 'true'
+        else:
+            affiliation['uf'] = 'false'
+    affiliations.append(affiliation)
+    print >>sys.stderr, affiliations
 
+    # Now we are ready to look for affiliations by name.  Messy business.
 
+    for author_dict in author_list:
+        if author_dict['first'] == '':
+            continue  # corporate authors can not be UF authors
+        find_string = author_dict['last'] + ', ' + author_dict['first'][0]
+        for affiliation in affiliations:  # look in each affiliation group
+            if affiliation['affiliation_string'].find(find_string) > -1:
+                author_dict['uf'] = affiliation['uf']  # if you find the author, use the affiliation of the group
+                continue                               # and don't look further.  If you don't find the author
+                                                       # the default affiliation is uf false
+    print >>sys.stderr, author_list
     return author_list
 
 data_in = read_csv_fp(sys.stdin)

@@ -43,7 +43,6 @@ improve_dollar_amount, and comma_space to vivopump.  Test cases for each added t
 enumerations added.
 * **2015-02-10** Improve formatting of get query. Improve comments. Update for buildings as test case.
 * **2015-02-11** 0.42 Improve make_get_query to avoid nested optionals.  Handle value in VIVO not in enumeration table. 
-
 Improve def files.  Now have person, section, pub, grant and building.  All run in Jena, but not all run in Fuseki.
 * **2015-02-14** 0.43 -v option for verbose output.  Move write_update_def to vivopump.  Add test case.
 * **2015-02-15** 0.44 Using sparqlwrapper in new vivo_query.  Using stardog SPARQL endpoint.  Add pystardog to repo.  
@@ -223,11 +222,12 @@ tr_csv.txt as sample output from bib2csv.  Add publisher_column_filter.py. Add p
 publisher_update_data.txt.  Add unique_name_filter.txt. Add match_publishers_filter.py. Add publisher_def.json.
 Add org_types to uf_examples/publications for adding publishers.  Add sv_publishers.cfg.  Add publisher_add.rdf and
 publisher_sub.rdf.  Publisher work is complete in uf_examples/publications.  On to journals.
-** *2015-07-12** Update uf_examples/README.md to document processes for journals. Add journal_columns_filter.py.  Add
+* **2015-07-12** Update uf_examples/README.md to document processes for journals. Add journal_columns_filter.py.  Add
 journal_update_data.py. PEP-8 improvement to unique_ccn_filter.py. Add unique_issn_filter.py. 
 Add match_journal_filter.py. Add sv_journal.cfg.  Add journal_def.json.  Add journal_add.rdf.  Add journal_sub.rdf.
 On to concepts.
-** *2015-07-13** Update uf_examples/publications/README.md to document the four ingests.  We do not ingest concepts
+* **2015-07-13** Update uf_examples/publications/README.md to document the four ingests.  We do not ingest concepts
 from TR as they are proprietary.  Add author_prep_filter.py.  Add author_update_data.txt.  Author name parts working.
 Corresponding author working.  Still need to find UF authors.
-** *2015-07-14** Add replace_initials to vivo_pump.  Add Four test cases to test_vivo_pump.
+* **2015-07-14** Add replace_initials to vivo_pump.  Add four test cases to test_vivo_pump.  author_prep_filter
+identifies UF authors.
