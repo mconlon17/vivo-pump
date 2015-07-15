@@ -13,12 +13,30 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
-    improve_jobcode_description, improve_course_title
+    improve_jobcode_description, improve_course_title, replace_initials
 from pump import Pump
 
 # TODO: Add test cases for each data scenario (six to go) -- easy
 # TODO: Add test cases for each command line scenario in sv -- easy
 # TODO: Use params to the Pump() to set for test VIVO scenario -- medium
+
+
+class ReplaceInitialsCase(unittest.TestCase):
+    def test_replace_initials_default(self):
+        t = replace_initials('This is A. test')
+        self.assertEqual(t, 'This is A test')
+
+    def test_replace_initials_two(self):
+        t = replace_initials('This is A. B. test')
+        self.assertEqual(t, 'This is A B test')
+
+    def test_replace_initials_consecutive_dots(self):
+        t = replace_initials('This is A.. B. test')
+        self.assertEqual(t, 'This is A. B test')
+
+    def test_replace_initials_consecutive_initials(self):
+        t = replace_initials('This is A.B. test')
+        self.assertEqual(t, 'This is AB test')
 
 
 class NewUriTestCase(unittest.TestCase):

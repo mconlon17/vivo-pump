@@ -230,3 +230,4 @@ On to concepts.
 ** *2015-07-13** Update uf_examples/publications/README.md to document the four ingests.  We do not ingest concepts
 from TR as they are proprietary.  Add author_prep_filter.py.  Add author_update_data.txt.  Author name parts working.
 Corresponding author working.  Still need to find UF authors.
+** *2015-07-14** Add replace_initials to vivo_pump.  Add Four test cases to test_vivo_pump.

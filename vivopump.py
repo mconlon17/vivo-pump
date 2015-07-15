@@ -142,6 +142,21 @@ def write_csv(filename, data, delimiter='|'):
             f.write(delimiter.join(data[key].values()) + '\n')
 
 
+def replace_initials(s):
+    """
+    For a string s, find all occurrences of A. B. etc and replace them with A B etc
+    :param s:
+    :return: string with replacements made
+    """
+    import re
+
+    def repl_function(m):
+        return m.group(0)[0]
+
+    t = re.sub('[A-Z]\.', repl_function, s)
+    return t
+
+
 def key_string(s):
     """
     Given a string s, return a string with a bunch of punctuation and special

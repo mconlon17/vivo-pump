@@ -101,6 +101,8 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
 
     # Now find the UF authors.  Could there be a more arcane format for the affiliations (bunched, etc, etc)
 
+
+
     return author_list
 
 data_in = read_csv_fp(sys.stdin)
