@@ -25,10 +25,9 @@ new publishers make it through the filter
 
 ## Handlers
 
-Disambiguation handler takes and author list and generates authorships for UF authors.  Authors that can not be
+1. Disambiguation handler takes and author list and generates authorships for UF authors.  Authors that can not be
 uniquely identified are listed in a disambiguation report
-
-PubMed handler takes a PubMed ID and supplies the RDF needed to add the paper to VIVO.  The PubMed handler calls the
+1. PubMed handler takes a PubMed ID and supplies the RDF needed to add the paper to VIVO.  The PubMed handler calls the
 Disambiguation handler
 
 ## Process
@@ -54,19 +53,38 @@ Disambiguation handler
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python journal_columns_filter.py | 
         python unique_issn_filter.py | python match_journals_filter.py > journal_update_data.txt
         
-   Then
+    Then
    
        sv -c sv_journals.cfg
        
-   Add journal_add.rdf to VIVO
-   Sub journal_sub.rdf from VIVO
+    Add journal_add.rdf to VIVO
+    Sub journal_sub.rdf from VIVO
     
 1. Add people not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python author_prep_filter.py | 
         python match_authors_filter.py > author_update_data.txt
+        
+    Then
+   
+        sv -c sv_authors.cfg
+        
+    Add author_add.rdf to VIVO
+    Sub author_sub.rdf from VIVO
 
 1. Add publications to VIVO
+
+        cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python pub_columns_filter.py | 
+        python match_pubs_filter.py > pub_update_data.txt
+        
+           
+    Then
+   
+        sv -c sv_pubs.cfg
+        
+    Add pub_add.rdf to VIVO
+    Sub pub_sub.rdf from VIVO
+
 1. Inspect the disambiguation report and manually determine which changes must be made and make them in VIVO using
 the web interface.  A UF weekly ingest typically involves 120 papers, 360 UF authors, and 20 disambiguations to 
 be resolved manually.  Typically takes about an hour.
