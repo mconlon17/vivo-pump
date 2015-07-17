@@ -45,7 +45,7 @@ def disambiguate_author(author, vivo_authors=get_vivo_authors()):
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_authors = get_vivo_authors()  # get dictionary of journal uri keyed by simplified  name
+vivo_authors = get_vivo_authors()  # get dictionaries of authors keyed by name parts
 print >>sys.stderr, 'VIVO authors', len(vivo_authors)
 print >>sys.stderr, vivo_authors
 
