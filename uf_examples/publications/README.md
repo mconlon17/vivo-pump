@@ -63,7 +63,7 @@ Disambiguation handler
 1. Add people not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python author_prep_filter.py | 
-        python match_authors_filter.py > author_update_data.txt
+        python author_match_filter.py > author_update_data.txt
         
     Then
    

@@ -231,3 +231,4 @@ from TR as they are proprietary.  Add author_prep_filter.py.  Add author_update_
 Corresponding author working.  Still need to find UF authors.
 * **2015-07-14** Add replace_initials to vivo_pump.  Add four test cases to test_vivo_pump.  author_prep_filter
 identifies UF authors.
+* **2015-07-15** Start on author_match_filter
