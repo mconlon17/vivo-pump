@@ -30,6 +30,7 @@ __version__ = "0.01"
 
 from vivopump import read_csv_fp, write_csv_fp, get_vivo_authors
 import sys
+from random import randint
 
 
 def disambiguate_author(author, vivo_authors=get_vivo_authors()):
@@ -59,6 +60,11 @@ for row, data in data_in.items():
             data_out['uri'] = ''
         elif len(author_uris) == 1:
             data_out['uri'] = [author_uris][0]
+        else:
+            data_out['uri'] = [author_uris][randint(0, len(author_uris))]  # Pick a uri at random
+            print >>sys.stderr, 'Disambiguation for ', data['display_name']
+            for author_uri in author_uris:
+                print >>sys.stderr, '\t', author_uri, "Additional info will display here"
 
 print >>sys.stderr, 'data out', len(data_out)
 write_csv_fp(sys.stdout, data_out)
