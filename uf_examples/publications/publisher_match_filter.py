@@ -1,7 +1,7 @@
 #!/usr/bin/env/python
 
 """
-    match_publishers_filter.py -- find the publishers in VIVO, and match them by name to the publishers
+    publisher_match_filter.py -- find the publishers in VIVO, and match them by name to the publishers
     in the source.
 
     There are two inputs:

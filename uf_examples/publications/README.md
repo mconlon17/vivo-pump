@@ -36,7 +36,7 @@ Disambiguation handler
 1. Add publishers not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
-        python unique_name_filter.py | python match_publishers_filter.py > publisher_update_data.txt
+        python unique_name_filter.py | python publisher_match_filter.py > publisher_update_data.txt
     
     Then
     
@@ -51,7 +51,7 @@ Disambiguation handler
 1. Add journals not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python journal_columns_filter.py | 
-        python unique_issn_filter.py | python match_journals_filter.py > journal_update_data.txt
+        python unique_issn_filter.py | python journal_match_filter.py > journal_update_data.txt
         
     Then
    

@@ -1,7 +1,7 @@
 #!/usr/bin/env/python
 
 """
-    match_journals_filter.py -- find the journals in VIVO, and match them by issn to the journals
+    journal_match_filter.py -- find the journals in VIVO, and match them by issn to the journals
     in the source.
 
     There are two inputs:

@@ -5,8 +5,8 @@
     in the source.  This is often called disambiguation.
 
     There are two inputs:
-    1. authors in VIVO.  Keyed by ISSN
-    1. authors in the source.  Keyed by ISSN
+    1. authors in VIVO. Keyed by name parts
+    1. authors in the source.  Keyed by name parts
 
     There are two cases:
 
@@ -30,7 +30,6 @@ __version__ = "0.01"
 
 from vivopump import read_csv_fp, write_csv_fp, get_vivo_authors
 import sys
-from random import randint
 
 
 def disambiguate_author(author, vivo_authors=get_vivo_authors()):
@@ -45,29 +44,26 @@ def disambiguate_author(author, vivo_authors=get_vivo_authors()):
 
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
-data_out = {}
-vivo_authors = get_vivo_authors()  # get dictionaries of authors keyed by name parts
-print >>sys.stderr, 'VIVO authors', len(vivo_authors)
-print >>sys.stderr, vivo_authors
-
-for row, data in data_in.items():
-    data_out[row] = data
-    if data['uf'] == 'false':
-        data_out[row]['uri'] = ''
-    else:
-        author_uris = disambiguate_author(data, vivo_authors)
-        if len(author_uris) == 0:
-            data_out['uri'] = ''
-        elif len(author_uris) == 1:
-            data_out['uri'] = [author_uris][0]
-        else:
-            data_out['uri'] = [author_uris][randint(0, len(author_uris))]  # Pick a uri at random
-            print >>sys.stderr, 'Disambiguation for ', data['display_name']
-            for author_uri in author_uris:
-                print >>sys.stderr, '\t', author_uri, "Additional info will display here"
-
-print >>sys.stderr, 'data out', len(data_out)
-write_csv_fp(sys.stdout, data_out)
+# vivo_authors = get_vivo_authors()  # get dictionaries of authors keyed by name parts
+# print >>sys.stderr, 'VIVO authors', len(vivo_authors)
+# print >>sys.stderr, vivo_authors
+# data_out = {}
+# row_out = 0
+#
+# for row, data in data_in.items():
+#     if data['uf'] == 'false':    # Always put in the non-UF author as new
+#         row_out += 1
+#         data_out[row_out] = data
+#         data_out[row_out]['uri'] = ''
+#     else:
+#         author_uris = disambiguate_author(data, vivo_authors)
+#         if len(author_uris) == 0:    # Only put in a new UF author if no one at UF matches
+#             row_out += 1
+#             data_out[row_out] = data
+#             data_out[row_out]['uri'] = ''
+#
+# print >>sys.stderr, 'data out', len(data_out)
+# write_csv_fp(sys.stdout, data_out)
 
 
 
