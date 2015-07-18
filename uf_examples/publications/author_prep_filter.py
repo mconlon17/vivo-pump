@@ -30,7 +30,7 @@ __copyright__ = "Copyright 2015"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, key_string
+from vivopump import read_csv_fp, write_csv_fp
 import sys
 
 
@@ -134,7 +134,7 @@ var_names = data_in[data_in.keys()[1]].keys()  # create a list of var_names from
 print >>sys.stderr, "Columns in", var_names
 data_out = {}
 row_out = 0
-keep_names = set(['remove', 'uri', 'title', 'display_name', 'suffix', 'first', 'last', 'middle', 'corresponding', 'uf'])
+keep_names = set(['remove', 'uri', 'display_name', 'suffix', 'first', 'last', 'middle', 'corresponding', 'uf'])
 for row, data in data_in.items():
     new_data =dict(data)
 
@@ -144,7 +144,6 @@ for row, data in data_in.items():
 
     new_data['remove'] = ''
     new_data['uri'] = ''
-    new_data['title'] = key_string(new_data['title'])
     new_data['display_name'] = ''
     new_data['first'] = ''
     new_data['last'] = ''
