@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, repair_email, repair_phone_number, \
-    comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, \
+    comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
     improve_jobcode_description, improve_course_title, replace_initials
@@ -147,6 +147,12 @@ class VIVOQueryTestCase(unittest.TestCase):
 class VIVOGetUFIDTestCase(unittest.TestCase):
     def test_vivo_get_ufid(self):
         result = get_vivo_ufid()
+        self.assertTrue(len(result) > 0)
+
+
+class VIVOGetAuthorsTestCase(unittest.TestCase):
+    def test_vivo_get_authors(self):
+        result = get_vivo_authors()
         self.assertTrue(len(result) > 0)
 
 

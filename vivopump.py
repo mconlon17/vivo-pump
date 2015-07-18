@@ -230,6 +230,31 @@ def get_vivo_sponsorid():
     return dict(zip(sponsorid, uri))
 
 
+def get_vivo_authors():
+    """
+    Query VIVO and return a list of all the authors found in VIVO.  Authors are people connected to
+    publications through authorships
+    :return: dictionary of author uri keyed by display_name (that won't work!)
+    """
+    query = """
+    SELECT ?uri ?display_name
+    WHERE
+    {
+        ?art a bibo:AcademicArticle .
+        ?art bibo:doi ?doi .
+        ?art vivo:relatedBy ?a .
+        ?a a vivo:Authorship .
+        ?a vivo:relates ?author .
+        ?uri a foaf:Person .
+        ?uri rdfs:label ?display_name .
+    }
+    """
+    a = vivo_query(query)
+    display_name = [x['display_name']['value'] for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(display_name, uri))
+
+
 def get_vivo_positions():
     """
     Query VIVO and return a list of all the UF positions found in VIVO.  UF positions will

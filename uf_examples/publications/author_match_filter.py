@@ -44,26 +44,26 @@ def disambiguate_author(author, vivo_authors=get_vivo_authors()):
 
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
-# vivo_authors = get_vivo_authors()  # get dictionaries of authors keyed by name parts
-# print >>sys.stderr, 'VIVO authors', len(vivo_authors)
-# print >>sys.stderr, vivo_authors
-# data_out = {}
-# row_out = 0
-#
-# for row, data in data_in.items():
-#     if data['uf'] == 'false':    # Always put in the non-UF author as new
-#         row_out += 1
-#         data_out[row_out] = data
-#         data_out[row_out]['uri'] = ''
-#     else:
-#         author_uris = disambiguate_author(data, vivo_authors)
-#         if len(author_uris) == 0:    # Only put in a new UF author if no one at UF matches
-#             row_out += 1
-#             data_out[row_out] = data
-#             data_out[row_out]['uri'] = ''
-#
-# print >>sys.stderr, 'data out', len(data_out)
-# write_csv_fp(sys.stdout, data_out)
+vivo_authors = get_vivo_authors()  # get dictionaries of authors keyed by name parts
+print >>sys.stderr, 'VIVO authors', len(vivo_authors)
+print >>sys.stderr, vivo_authors
+data_out = {}
+row_out = 0
+
+for row, data in data_in.items():
+    if data['uf'] == 'false':    # Always put in the non-UF author as new
+        row_out += 1
+        data_out[row_out] = data
+        data_out[row_out]['uri'] = ''
+    else:
+        author_uris = disambiguate_author(data, vivo_authors)
+        if len(author_uris) == 0:    # Only put in a new UF author if no one at UF matches
+            row_out += 1
+            data_out[row_out] = data
+            data_out[row_out]['uri'] = ''
+
+print >>sys.stderr, 'data out', len(data_out)
+write_csv_fp(sys.stdout, data_out)
 
 
 

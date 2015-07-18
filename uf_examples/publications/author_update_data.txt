@@ -1,1058 +1,1058 @@
-display_name|suffix|first|uri|remove|middle|corresponding|uf|last
-Stienmetz, Jason L.||Jason|||L|true|true|Stienmetz
-Fesenmaier, Daniel R.||Daniel|||R|false|true|Fesenmaier
-Li, Jie||Jie||||false|false|Li
-Li, Kan||Kan||||false|false|Li
-Cave, Mark||Mark||||false|false|Cave
-Li, Hong-Bo||Hong-Bo||||true|false|Li
-Ma, Lena Q.||Lena|||Q|false|true|Ma
-Li, Shi-Wei||Shi-Wei||||false|false|Li
-Li, Jie||Jie||||false|false|Li
-Li, Hong-Bo||Hong-Bo||||false|false|Li
-Naidu, Ravi||Ravi||||false|false|Naidu
-Ma, L. Q.||L|||Q|true|true|Ma
-Morris, J. Bradley||J|||Bradley|true|true|Morris
-Chase, Carlene||Carlene||||false|true|Chase
-Treadwell, Danielle||Danielle||||false|true|Treadwell
-Koenig, Rosie||Rosie||||false|true|Koenig
-Cho, Alyssa||Alyssa||||false|true|Cho
-Morales-Payan, Jose Pable||Jose|||Pable|false|true|Morales-Payan
-Murphy, Tim||Tim||||false|true|Murphy
-Antonious, George F.||George|||F|false|true|Antonious
-Naugle, Kelly M.||Kelly|||M|true|true|Naugle
-Cruz-Almeida, Yenisei||Yenisei||||false|true|Cruz-Almeida
-Vierck, Charles J.||Charles|||J|false|true|Vierck
-Mauderli, Andre P.||Andre|||P|false|true|Mauderli
-Riley, III, Joseph L.|III|Joseph|||L|false|true|Riley
-Jabeen, Farukh||Farukh||||false|false|Jabeen
-Panda, Siva S.||Siva|||S|true|false|Panda
-Kondratyuk, Tamara P.||Tamara|||P|false|false|Kondratyuk
-Park, Eun-Jung||Eun-Jung||||false|false|Park
-Pezzuto, John M.||John|||M|false|false|Pezzuto
-Ihsan-ul-Haq||||||false|false|Ihsan-ul-Haq
-Hall, C. Dennis||C|||Dennis|false|false|Hall
-Katritzky, Alan R.||Alan|||R|false|false|Katritzky
-Huang, Kainian||Kainian||||true|true|Huang
-Opdyke, Neil D.||Neil|||D|false|true|Opdyke
-Ishii, Stephanie K. L.||Stephanie|||K L|true|true|Ishii
-Boyer, Treavor H.||Treavor|||H|false|true|Boyer
-Pacholewicz, Ewa||Ewa||||true|false|Pacholewicz
-Swart, Arno||Arno||||false|false|Swart
-Schipper, Maarten||Maarten||||false|false|Schipper
-Gortemaker, Betty G. M.||Betty|||G M|false|false|Gortemaker
-Wagenaar, Jaap A.||Jaap|||A|false|false|Wagenaar
-Havelaar, Arie H.||Arie|||H|false|true|Havelaar
-Lipman, Len J. A.||Len|||J A|false|false|Lipman
-Jiang, Xiubao||Xiubao||||false|false|Jiang
-You, Xinge||Xinge||||true|false|You
-Yu, Shujian||Shujian||||false|false|Yu
-Tao, Dacheng||Dacheng||||false|false|Tao
-Chen, C. L. Philip||C|||L Philip|false|false|Chen
-Cheung, Yiu-ming||Yiu-ming||||false|false|Cheung
-Ofori, Edward||Edward||||false|true|Ofori
-Coombes, Stephen A.||Stephen|||A|false|true|Coombes
-Vaillancourt, David E.||David|||E|true|true|Vaillancourt
-Lawrimore, David Keoni||David|||Keoni|true|true|Lawrimore
-Luo, Zhiyao||Zhiyao||||false|true|Luo
-Gu, Ganyu||Ganyu||||false|true|Gu
-Ginn, Amber||Amber||||false|true|Ginn
-Giurcanu, Mihai C.||Mihai|||C|false|true|Giurcanu
-Adams, Paige||Paige||||false|true|Adams
-Vellidis, George||George||||false|true|Vellidis
-van Bruggen, Ariena H. C.||Ariena|||H C|false|true|van Bruggen
-Danyluk, Michelle D.||Michelle|||D|false|true|Danyluk
-Wright, Anita C.||Anita|||C|true|true|Wright
-Kaan, Edith||Edith||||true|false|Kaan
-Ballantyne, Jocelyn C.||Jocelyn|||C|false|false|Ballantyne
-Wijnen, Frank||Frank||||false|false|Wijnen
-Abou El-Nour, K. M. M.||K|||M M|true|true|Abou El-Nour
-Nectoux, Juliette||Juliette||||false|false|Nectoux
-de Cid, Rafael||Rafael||||false|false|de Cid
-Baulande, Sylvain||Sylvain||||false|false|Baulande
-Leturcq, France||France||||false|false|Leturcq
-Urtizberea, Jon Andoni||Jon|||Andoni|false|false|Urtizberea
-Penisson-Besnier, Isabelle||Isabelle||||false|false|Penisson-Besnier
-Nadaj-Pakleza, Aleksandra||Aleksandra||||false|false|Nadaj-Pakleza
-Roudaut, Carinne||Carinne||||false|false|Roudaut
-Criqui, Audrey||Audrey||||false|false|Criqui
-Orhant, Lucie||Lucie||||false|false|Orhant
-Peyroulan, Delphine||Delphine||||false|false|Peyroulan
-Ben Yaou, Raba||Raba||||false|false|Ben Yaou
-Nelson, Isabelle||Isabelle||||false|false|Nelson
-Cobo, Anna Maria||Anna|||Maria|false|false|Cobo
-Arne-Bes, Marie-Christine||Marie-Christine||||false|false|Arne-Bes
-Uro-Coste, Emmanuelle||Emmanuelle||||false|false|Uro-Coste
-Nitschke, Patrick||Patrick||||false|false|Nitschke
-Claustres, Mireille||Mireille||||false|false|Claustres
-Bonne, Gisele||Gisele||||false|false|Bonne
-Levy, Nicolas||Nicolas||||false|false|Levy
-Chelly, Jamel||Jamel||||false|false|Chelly
-Richard, Isabelle||Isabelle||||false|false|Richard
-Cossee, Mireille||Mireille||||true|false|Cossee
-Adams, Curtis B.||Curtis|||B|true|true|Adams
-Erickson, John E.||John|||E|false|true|Erickson
-Singh, Maninder P.||Maninder|||P|false|true|Singh
-Tripathi, Ajai K.||Ajai|||K|false|true|Tripathi
-Haldar, Swati||Swati||||false|true|Haldar
-Qian, Juan||Juan||||false|true|Qian
-Beserra, Amber||Amber||||false|true|Beserra
-Suda, Srinivas||Srinivas||||false|true|Suda
-Singh, Ajay||Ajay||||false|true|Singh
-Hopfer, Ulrich||Ulrich||||false|true|Hopfer
-Chen, Shu G.||Shu|||G|false|true|Chen
-Garrick, Michael D.||Michael|||D|false|true|Garrick
-Turner, Jerrold R.||Jerrold|||R|false|true|Turner
-Knutson, Mitchell D.||Mitchell|||D|false|true|Knutson
-Singh, Neena||Neena||||true|true|Singh
-Appelberg, K. Sofia||K|||Sofia|false|true|Appelberg
-Goodenow, Maureen M.||Maureen|||M|true|true|Goodenow
-Broome, Susan Brantlee||Susan|||Brantlee|true|true|Broome
-Lutz, Barbara J.||Barbara|||J|false|true|Lutz
-Cook, Christa||Christa||||false|true|Cook
-Walker, David||David||||false|false|Walker
-Matsuki, Keisuke||Keisuke||||false|false|Matsuki
-Struk, Aimee M.||Aimee|||M|false|true|Struk
-Wright, Thomas W.||Thomas|||W|true|true|Wright
-Banks, Scott A.||Scott|||A|false|false|Banks
-Bachler, Patricia R.||Patricia|||R|false|true|Bachler
-Wagener, Kenneth B.||Kenneth|||B|true|true|Wagener
-Ploetz, Randy||Randy||||true|false|Ploetz
-Freeman, Stanley||Stanley||||false|false|Freeman
-Konkol, Joshua||Joshua||||false|false|Konkol
-Al-Abed, Adel||Adel||||false|false|Al-Abed
-Naser, Ziad||Ziad||||false|false|Naser
-Shalan, Khalaf||Khalaf||||false|false|Shalan
-Barakat, Radwan||Radwan||||false|false|Barakat
-Israeli, Yair||Yair||||false|false|Israeli
-Ferrari, Vera||Vera||||true|false|Ferrari
-Bradley, Margaret M.||Margaret|||M|false|false|Bradley
-Codispoti, Maurizio||Maurizio||||false|false|Codispoti
-Lang, Peter J.||Peter|||J|false|false|Lang
-Rahman, Maryam||Maryam||||true|true|Rahman
-Donnangelo, Lauren L.||Lauren|||L|false|true|Donnangelo
-Neal, Dan||Dan||||false|true|Neal
-Mogali, Kiran||Kiran||||false|true|Mogali
-Decker, Matthew||Matthew||||false|true|Decker
-Ahmed, Mustafa M.||Mustafa|||M|false|true|Ahmed
-Fang, Yin||Yin||||false|false|Fang
-Ni, Yongliang||Yongliang||||false|false|Ni
-Choi, Baeck||Baeck||||false|false|Choi
-Leo, Sin-Yen||Sin-Yen||||false|false|Leo
-Gao, Jian||Jian||||false|false|Gao
-Ge, Beverly||Beverly||||false|false|Ge
-Taylor, Curtis||Curtis||||false|false|Taylor
-Basile, Vito||Vito||||false|false|Basile
-Jiang, Peng||Peng||||true|false|Jiang
-Borst, Stephen E.||Stephen|||E|true|true|Borst
-Yarrow, Joshua F.||Joshua|||F|false|true|Yarrow
-Lee, Hyun-Wook||Hyun-Wook||||false|false|Lee
-Osis, Gunars||Gunars||||false|false|Osis
-Handlogten, Mary E.||Mary|||E|false|false|Handlogten
-Guo, Hui||Hui||||false|false|Guo
-Verlander, Jill W.||Jill|||W|false|false|Verlander
-Weiner, I. David||I|||David|true|false|Weiner
-Rastogi, Vaibhav||Vaibhav||||false|true|Rastogi
-Lamb, Damon G.||Damon|||G|false|true|Lamb
-Williamson, John B.||John|||B|false|true|Williamson
-Stead, Thor S.||Thor|||S|false|true|Stead
-Penumudi, Rachel||Rachel||||false|true|Penumudi
-Bidari, Sharathchandra||Sharathchandra||||false|true|Bidari
-Ganti, Latha||Latha||||false|true|Ganti
-Heilman, Kenneth M.||Kenneth|||M|false|true|Heilman
-Hedna, Vishnumurthy S.||Vishnumurthy|||S|true|true|Hedna
-Dai, Xianjin||Xianjin||||false|false|Dai
-Xi, Lei||Lei||||false|false|Xi
-Duan, Can||Can||||false|false|Duan
-Yang, Hao||Hao||||false|false|Yang
-Xie, Huikai||Huikai||||false|false|Xie
-Jiang, Huabei||Huabei||||true|false|Jiang
-Park, Hyo-Jin||Hyo-Jin||||false|true|Park
-Ran, Yong||Yong||||false|true|Ran
-Jung, Joo In||Joo|||In|false|true|Jung
-Holmes, Oliver||Oliver||||false|true|Holmes
-Price, Ashleigh R.||Ashleigh|||R|false|true|Price
-Smithson, Lisa||Lisa||||false|true|Smithson
-Ceballos-Diaz, Carolina||Carolina||||false|true|Ceballos-Diaz
-Han, Chul||Chul||||false|true|Han
-Wolfe, Michael S.||Michael|||S|false|true|Wolfe
-Daaka, Yehia||Yehia||||false|true|Daaka
-Ryabinin, Andrey E.||Andrey|||E|false|true|Ryabinin
-Kim, Seong-Hun||Seong-Hun||||false|true|Kim
-Hauger, Richard L.||Richard|||L|false|true|Hauger
-Golde, Todd E.||Todd|||E|true|true|Golde
-Felsenstein, Kevin M.||Kevin|||M|false|true|Felsenstein
-Williams, Julie C.||Julie|||C|false|true|Williams
-Klein, Thomas W.||Thomas|||W|false|true|Klein
-Goldberger, Bruce A.||Bruce|||A|false|true|Goldberger
-Sleasman, John W.||John|||W|false|true|Sleasman
-Mackman, Nigel||Nigel||||false|true|Mackman
-Goodenow, Maureen M.||Maureen|||M|true|true|Goodenow
-Wang, Yun-Peng||Yun-Peng||||false|true|Wang
-Cheng, Hai-Ping||Hai-Ping||||true|true|Cheng
-Ericson, Mark D.||Mark|||D|false|true|Ericson
-Wilczynski, Andrzej||Andrzej||||false|true|Wilczynski
-Sorensen, Nicholas B.||Nicholas|||B|false|true|Sorensen
-Xiang, Zhimin||Zhimin||||false|true|Xiang
-Haskell-Luevano, Carrie||Carrie||||true|true|Haskell-Luevano
-Maurya, Devendra Kumar||Devendra|||Kumar|false|false|Maurya
-Henriques, Tiago||Tiago||||false|false|Henriques
-Marini, Monica||Monica||||false|false|Marini
-Pedemonte, Nicoletta||Nicoletta||||false|false|Pedemonte
-Galietta, Luis J. V.||Luis|||J V|false|false|Galietta
-Rock, Jason R.||Jason|||R|false|true|Rock
-Harfe, Brian D.||Brian|||D|false|true|Harfe
-Menini, Anna||Anna||||true|false|Menini
-Lee, Choong H.||Choong|||H|true|false|Lee
-Flint, Jeremy J.||Jeremy|||J|false|false|Flint
-Hansen, Brian||Brian||||false|false|Hansen
-Blackband, Stephen J.||Stephen|||J|false|false|Blackband
-Yang, Zhihui||Zhihui||||true|false|Yang
-Wang, Ping||Ping||||false|false|Wang
-Morgan, Drake||Drake||||false|true|Morgan
-Lin, Dan||Dan||||false|false|Lin
-Pan, Jianchun||Jianchun||||false|false|Pan
-Lin, Fan||Fan||||false|false|Lin
-Strang, Kevin H.||Kevin|||H|false|false|Strang
-Selig, Tyler M.||Tyler|||M|false|false|Selig
-Perez, Pablo D.||Pablo|||D|false|true|Perez
-Febo, Marcelo||Marcelo||||false|true|Febo
-Chang, Binggong||Binggong||||false|true|Chang
-Rubenstein, Richard||Richard||||false|true|Rubenstein
-Wang, Kevin K. W.||Kevin|||K W|false|false|Wang
-Ooi, Frances||Frances||||false|true|Ooi
-DuChene, Joseph S.||Joseph|||S|false|true|DuChene
-Qiu, Jingjing||Jingjing||||false|true|Qiu
-Graham, Jeremy O.||Jeremy|||O|false|true|Graham
-Engelhard, Mark H.||Mark|||H|false|true|Engelhard
-Cao, Guixin||Guixin||||false|true|Cao
-Gai, Zheng||Zheng||||false|true|Gai
+display_name|suffix|last|uri|remove|middle|corresponding|uf|first
+Stienmetz, Jason L.||Stienmetz|||L|true|true|Jason
+Fesenmaier, Daniel R.||Fesenmaier|||R|false|true|Daniel
+Li, Jie||Li||||false|false|Jie
+Li, Kan||Li||||false|false|Kan
+Cave, Mark||Cave||||false|false|Mark
+Li, Hong-Bo||Li||||true|false|Hong-Bo
+Ma, Lena Q.||Ma|||Q|false|true|Lena
+Li, Shi-Wei||Li||||false|false|Shi-Wei
+Li, Jie||Li||||false|false|Jie
+Li, Hong-Bo||Li||||false|false|Hong-Bo
+Naidu, Ravi||Naidu||||false|false|Ravi
+Ma, L. Q.||Ma|||Q|true|true|L
+Morris, J. Bradley||Morris|||Bradley|true|true|J
+Chase, Carlene||Chase||||false|true|Carlene
+Treadwell, Danielle||Treadwell||||false|true|Danielle
+Koenig, Rosie||Koenig||||false|true|Rosie
+Cho, Alyssa||Cho||||false|true|Alyssa
+Morales-Payan, Jose Pable||Morales-Payan|||Pable|false|true|Jose
+Murphy, Tim||Murphy||||false|true|Tim
+Antonious, George F.||Antonious|||F|false|true|George
+Naugle, Kelly M.||Naugle|||M|true|true|Kelly
+Cruz-Almeida, Yenisei||Cruz-Almeida||||false|true|Yenisei
+Vierck, Charles J.||Vierck|||J|false|true|Charles
+Mauderli, Andre P.||Mauderli|||P|false|true|Andre
+Riley, III, Joseph L.|III|Riley|||L|false|true|Joseph
+Jabeen, Farukh||Jabeen||||false|false|Farukh
+Panda, Siva S.||Panda|||S|true|false|Siva
+Kondratyuk, Tamara P.||Kondratyuk|||P|false|false|Tamara
+Park, Eun-Jung||Park||||false|false|Eun-Jung
+Pezzuto, John M.||Pezzuto|||M|false|false|John
+Ihsan-ul-Haq||Ihsan-ul-Haq||||false|false|
+Hall, C. Dennis||Hall|||Dennis|false|false|C
+Katritzky, Alan R.||Katritzky|||R|false|false|Alan
+Huang, Kainian||Huang||||true|true|Kainian
+Opdyke, Neil D.||Opdyke|||D|false|true|Neil
+Ishii, Stephanie K. L.||Ishii|||K L|true|true|Stephanie
+Boyer, Treavor H.||Boyer|||H|false|true|Treavor
+Pacholewicz, Ewa||Pacholewicz||||true|false|Ewa
+Swart, Arno||Swart||||false|false|Arno
+Schipper, Maarten||Schipper||||false|false|Maarten
+Gortemaker, Betty G. M.||Gortemaker|||G M|false|false|Betty
+Wagenaar, Jaap A.||Wagenaar|||A|false|false|Jaap
+Havelaar, Arie H.||Havelaar|||H|false|true|Arie
+Lipman, Len J. A.||Lipman|||J A|false|false|Len
+Jiang, Xiubao||Jiang||||false|false|Xiubao
+You, Xinge||You||||true|false|Xinge
+Yu, Shujian||Yu||||false|false|Shujian
+Tao, Dacheng||Tao||||false|false|Dacheng
+Chen, C. L. Philip||Chen|||L Philip|false|false|C
+Cheung, Yiu-ming||Cheung||||false|false|Yiu-ming
+Ofori, Edward||Ofori||||false|true|Edward
+Coombes, Stephen A.||Coombes|||A|false|true|Stephen
+Vaillancourt, David E.||Vaillancourt|||E|true|true|David
+Lawrimore, David Keoni||Lawrimore|||Keoni|true|true|David
+Luo, Zhiyao||Luo||||false|true|Zhiyao
+Gu, Ganyu||Gu||||false|true|Ganyu
+Ginn, Amber||Ginn||||false|true|Amber
+Giurcanu, Mihai C.||Giurcanu|||C|false|true|Mihai
+Adams, Paige||Adams||||false|true|Paige
+Vellidis, George||Vellidis||||false|true|George
+van Bruggen, Ariena H. C.||van Bruggen|||H C|false|true|Ariena
+Danyluk, Michelle D.||Danyluk|||D|false|true|Michelle
+Wright, Anita C.||Wright|||C|true|true|Anita
+Kaan, Edith||Kaan||||true|false|Edith
+Ballantyne, Jocelyn C.||Ballantyne|||C|false|false|Jocelyn
+Wijnen, Frank||Wijnen||||false|false|Frank
+Abou El-Nour, K. M. M.||Abou El-Nour|||M M|true|true|K
+Nectoux, Juliette||Nectoux||||false|false|Juliette
+de Cid, Rafael||de Cid||||false|false|Rafael
+Baulande, Sylvain||Baulande||||false|false|Sylvain
+Leturcq, France||Leturcq||||false|false|France
+Urtizberea, Jon Andoni||Urtizberea|||Andoni|false|false|Jon
+Penisson-Besnier, Isabelle||Penisson-Besnier||||false|false|Isabelle
+Nadaj-Pakleza, Aleksandra||Nadaj-Pakleza||||false|false|Aleksandra
+Roudaut, Carinne||Roudaut||||false|false|Carinne
+Criqui, Audrey||Criqui||||false|false|Audrey
+Orhant, Lucie||Orhant||||false|false|Lucie
+Peyroulan, Delphine||Peyroulan||||false|false|Delphine
+Ben Yaou, Raba||Ben Yaou||||false|false|Raba
+Nelson, Isabelle||Nelson||||false|false|Isabelle
+Cobo, Anna Maria||Cobo|||Maria|false|false|Anna
+Arne-Bes, Marie-Christine||Arne-Bes||||false|false|Marie-Christine
+Uro-Coste, Emmanuelle||Uro-Coste||||false|false|Emmanuelle
+Nitschke, Patrick||Nitschke||||false|false|Patrick
+Claustres, Mireille||Claustres||||false|false|Mireille
+Bonne, Gisele||Bonne||||false|false|Gisele
+Levy, Nicolas||Levy||||false|false|Nicolas
+Chelly, Jamel||Chelly||||false|false|Jamel
+Richard, Isabelle||Richard||||false|false|Isabelle
+Cossee, Mireille||Cossee||||true|false|Mireille
+Adams, Curtis B.||Adams|||B|true|true|Curtis
+Erickson, John E.||Erickson|||E|false|true|John
+Singh, Maninder P.||Singh|||P|false|true|Maninder
+Tripathi, Ajai K.||Tripathi|||K|false|true|Ajai
+Haldar, Swati||Haldar||||false|true|Swati
+Qian, Juan||Qian||||false|true|Juan
+Beserra, Amber||Beserra||||false|true|Amber
+Suda, Srinivas||Suda||||false|true|Srinivas
+Singh, Ajay||Singh||||false|true|Ajay
+Hopfer, Ulrich||Hopfer||||false|true|Ulrich
+Chen, Shu G.||Chen|||G|false|true|Shu
+Garrick, Michael D.||Garrick|||D|false|true|Michael
+Turner, Jerrold R.||Turner|||R|false|true|Jerrold
+Knutson, Mitchell D.||Knutson|||D|false|true|Mitchell
+Singh, Neena||Singh||||true|true|Neena
+Appelberg, K. Sofia||Appelberg|||Sofia|false|true|K
+Goodenow, Maureen M.||Goodenow|||M|true|true|Maureen
+Broome, Susan Brantlee||Broome|||Brantlee|true|true|Susan
+Lutz, Barbara J.||Lutz|||J|false|true|Barbara
+Cook, Christa||Cook||||false|true|Christa
+Walker, David||Walker||||false|false|David
+Matsuki, Keisuke||Matsuki||||false|false|Keisuke
+Struk, Aimee M.||Struk|||M|false|true|Aimee
+Wright, Thomas W.||Wright|||W|true|true|Thomas
+Banks, Scott A.||Banks|||A|false|false|Scott
+Bachler, Patricia R.||Bachler|||R|false|true|Patricia
+Wagener, Kenneth B.||Wagener|||B|true|true|Kenneth
+Ploetz, Randy||Ploetz||||true|false|Randy
+Freeman, Stanley||Freeman||||false|false|Stanley
+Konkol, Joshua||Konkol||||false|false|Joshua
+Al-Abed, Adel||Al-Abed||||false|false|Adel
+Naser, Ziad||Naser||||false|false|Ziad
+Shalan, Khalaf||Shalan||||false|false|Khalaf
+Barakat, Radwan||Barakat||||false|false|Radwan
+Israeli, Yair||Israeli||||false|false|Yair
+Ferrari, Vera||Ferrari||||true|false|Vera
+Bradley, Margaret M.||Bradley|||M|false|false|Margaret
+Codispoti, Maurizio||Codispoti||||false|false|Maurizio
+Lang, Peter J.||Lang|||J|false|false|Peter
+Rahman, Maryam||Rahman||||true|true|Maryam
+Donnangelo, Lauren L.||Donnangelo|||L|false|true|Lauren
+Neal, Dan||Neal||||false|true|Dan
+Mogali, Kiran||Mogali||||false|true|Kiran
+Decker, Matthew||Decker||||false|true|Matthew
+Ahmed, Mustafa M.||Ahmed|||M|false|true|Mustafa
+Fang, Yin||Fang||||false|false|Yin
+Ni, Yongliang||Ni||||false|false|Yongliang
+Choi, Baeck||Choi||||false|false|Baeck
+Leo, Sin-Yen||Leo||||false|false|Sin-Yen
+Gao, Jian||Gao||||false|false|Jian
+Ge, Beverly||Ge||||false|false|Beverly
+Taylor, Curtis||Taylor||||false|false|Curtis
+Basile, Vito||Basile||||false|false|Vito
+Jiang, Peng||Jiang||||true|false|Peng
+Borst, Stephen E.||Borst|||E|true|true|Stephen
+Yarrow, Joshua F.||Yarrow|||F|false|true|Joshua
+Lee, Hyun-Wook||Lee||||false|false|Hyun-Wook
+Osis, Gunars||Osis||||false|false|Gunars
+Handlogten, Mary E.||Handlogten|||E|false|false|Mary
+Guo, Hui||Guo||||false|false|Hui
+Verlander, Jill W.||Verlander|||W|false|false|Jill
+Weiner, I. David||Weiner|||David|true|false|I
+Rastogi, Vaibhav||Rastogi||||false|true|Vaibhav
+Lamb, Damon G.||Lamb|||G|false|true|Damon
+Williamson, John B.||Williamson|||B|false|true|John
+Stead, Thor S.||Stead|||S|false|true|Thor
+Penumudi, Rachel||Penumudi||||false|true|Rachel
+Bidari, Sharathchandra||Bidari||||false|true|Sharathchandra
+Ganti, Latha||Ganti||||false|true|Latha
+Heilman, Kenneth M.||Heilman|||M|false|true|Kenneth
+Hedna, Vishnumurthy S.||Hedna|||S|true|true|Vishnumurthy
+Dai, Xianjin||Dai||||false|false|Xianjin
+Xi, Lei||Xi||||false|false|Lei
+Duan, Can||Duan||||false|false|Can
+Yang, Hao||Yang||||false|false|Hao
+Xie, Huikai||Xie||||false|false|Huikai
+Jiang, Huabei||Jiang||||true|false|Huabei
+Park, Hyo-Jin||Park||||false|true|Hyo-Jin
+Ran, Yong||Ran||||false|true|Yong
+Jung, Joo In||Jung|||In|false|true|Joo
+Holmes, Oliver||Holmes||||false|true|Oliver
+Price, Ashleigh R.||Price|||R|false|true|Ashleigh
+Smithson, Lisa||Smithson||||false|true|Lisa
+Ceballos-Diaz, Carolina||Ceballos-Diaz||||false|true|Carolina
+Han, Chul||Han||||false|true|Chul
+Wolfe, Michael S.||Wolfe|||S|false|true|Michael
+Daaka, Yehia||Daaka||||false|true|Yehia
+Ryabinin, Andrey E.||Ryabinin|||E|false|true|Andrey
+Kim, Seong-Hun||Kim||||false|true|Seong-Hun
+Hauger, Richard L.||Hauger|||L|false|true|Richard
+Golde, Todd E.||Golde|||E|true|true|Todd
+Felsenstein, Kevin M.||Felsenstein|||M|false|true|Kevin
+Williams, Julie C.||Williams|||C|false|true|Julie
+Klein, Thomas W.||Klein|||W|false|true|Thomas
+Goldberger, Bruce A.||Goldberger|||A|false|true|Bruce
+Sleasman, John W.||Sleasman|||W|false|true|John
+Mackman, Nigel||Mackman||||false|true|Nigel
+Goodenow, Maureen M.||Goodenow|||M|true|true|Maureen
+Wang, Yun-Peng||Wang||||false|true|Yun-Peng
+Cheng, Hai-Ping||Cheng||||true|true|Hai-Ping
+Ericson, Mark D.||Ericson|||D|false|true|Mark
+Wilczynski, Andrzej||Wilczynski||||false|true|Andrzej
+Sorensen, Nicholas B.||Sorensen|||B|false|true|Nicholas
+Xiang, Zhimin||Xiang||||false|true|Zhimin
+Haskell-Luevano, Carrie||Haskell-Luevano||||true|true|Carrie
+Maurya, Devendra Kumar||Maurya|||Kumar|false|false|Devendra
+Henriques, Tiago||Henriques||||false|false|Tiago
+Marini, Monica||Marini||||false|false|Monica
+Pedemonte, Nicoletta||Pedemonte||||false|false|Nicoletta
+Galietta, Luis J. V.||Galietta|||J V|false|false|Luis
+Rock, Jason R.||Rock|||R|false|true|Jason
+Harfe, Brian D.||Harfe|||D|false|true|Brian
+Menini, Anna||Menini||||true|false|Anna
+Lee, Choong H.||Lee|||H|true|false|Choong
+Flint, Jeremy J.||Flint|||J|false|false|Jeremy
+Hansen, Brian||Hansen||||false|false|Brian
+Blackband, Stephen J.||Blackband|||J|false|false|Stephen
+Yang, Zhihui||Yang||||true|false|Zhihui
+Wang, Ping||Wang||||false|false|Ping
+Morgan, Drake||Morgan||||false|true|Drake
+Lin, Dan||Lin||||false|false|Dan
+Pan, Jianchun||Pan||||false|false|Jianchun
+Lin, Fan||Lin||||false|false|Fan
+Strang, Kevin H.||Strang|||H|false|false|Kevin
+Selig, Tyler M.||Selig|||M|false|false|Tyler
+Perez, Pablo D.||Perez|||D|false|true|Pablo
+Febo, Marcelo||Febo||||false|true|Marcelo
+Chang, Binggong||Chang||||false|true|Binggong
+Rubenstein, Richard||Rubenstein||||false|true|Richard
+Wang, Kevin K. W.||Wang|||K W|false|false|Kevin
+Ooi, Frances||Ooi||||false|true|Frances
+DuChene, Joseph S.||DuChene|||S|false|true|Joseph
+Qiu, Jingjing||Qiu||||false|true|Jingjing
+Graham, Jeremy O.||Graham|||O|false|true|Jeremy
+Engelhard, Mark H.||Engelhard|||H|false|true|Mark
+Cao, Guixin||Cao||||false|true|Guixin
+Gai, Zheng||Gai||||false|true|Zheng
 Wei, Wei David||Wei|||David|true|true|Wei
-Dickey, Aaron M.||Aaron|||M|true|false|Dickey
-Kumar, Vivek||Vivek||||false|false|Kumar
-Morgan, J. Kent||J|||Kent|false|false|Morgan
-Jara-Cavieres, Antonella||Antonella||||false|false|Jara-Cavieres
-Shatters, Jr., Robert G.|Jr.|Robert|||G|false|false|Shatters
-McKenzie, Cindy L.||Cindy|||L|false|false|McKenzie
-Osborne, Lance S.||Lance|||S|false|false|Osborne
-Khachatryan, V.||V||||true|false|Khachatryan
-Sirunyan, A. M.||A|||M|false|false|Sirunyan
-Tumasyan, A.||A||||false|false|Tumasyan
-Adam, W.||W||||false|false|Adam
-Bergauer, T.||T||||false|false|Bergauer
-Dragicevic, M.||M||||false|false|Dragicevic
-Eroe, J.||J||||false|false|Eroe
-Friedl, M.||M||||false|false|Friedl
-Fruehwirth, R.||R||||false|false|Fruehwirth
-Ghete, V. M.||V|||M|false|false|Ghete
-Hartl, C.||C||||false|false|Hartl
-Hoermann, N.||N||||false|false|Hoermann
-Hrubec, J.||J||||false|false|Hrubec
-Jeitler, M.||M||||false|false|Jeitler
-Kiesenhofer, W.||W||||false|false|Kiesenhofer
-Knuenz, V.||V||||false|false|Knuenz
-Krammer, M.||M||||false|false|Krammer
-Kraetschmer, I.||I||||false|false|Kraetschmer
-Liko, D.||D||||false|false|Liko
-Mikulec, I.||I||||false|false|Mikulec
-Rabady, D.||D||||false|false|Rabady
-Rahbaran, B.||B||||false|false|Rahbaran
-Rohringer, H.||H||||false|false|Rohringer
-Schoefbeck, R.||R||||false|false|Schoefbeck
-Strauss, J.||J||||false|false|Strauss
-Treberer-Treberspurg, W.||W||||false|false|Treberer-Treberspurg
-Waltenberger, W.||W||||false|false|Waltenberger
-Wulz, C. E.||C|||E|false|false|Wulz
-Mossolov, V.||V||||false|false|Mossolov
-Shumeiko, N.||N||||false|false|Shumeiko
-Gonzalez, J. Suarez||J|||Suarez|false|false|Gonzalez
-Alderweireldt, S.||S||||false|false|Alderweireldt
-Bansal, S.||S||||false|false|Bansal
-Cornelis, T.||T||||false|false|Cornelis
-De Wolf, E. A.||E|||A|false|false|De Wolf
-Janssen, X.||X||||false|false|Janssen
-Knutsson, A.||A||||false|false|Knutsson
-Lauwers, J.||J||||false|false|Lauwers
-Luyckx, S.||S||||false|false|Luyckx
-Ochesanu, S.||S||||false|false|Ochesanu
-Rougny, R.||R||||false|false|Rougny
-Van De Klundert, M.||M||||false|false|Van De Klundert
-Van Haevermaet, H.||H||||false|false|Van Haevermaet
-Van Mechelen, P.||P||||false|false|Van Mechelen
-Van Remortel, N.||N||||false|false|Van Remortel
-Van Spilbeeck, A.||A||||false|false|Van Spilbeeck
-Blekman, F.||F||||false|false|Blekman
-Blyweert, S.||S||||false|false|Blyweert
-D'Hondt, J.||J||||false|false|D'Hondt
-Daci, N.||N||||false|false|Daci
-Hathout, Yetrib||Yetrib||||false|false|Hathout
-Brody, Edward||Edward||||false|false|Brody
-Clemens, Paula R.||Paula|||R|false|false|Clemens
-Cripe, Linda||Linda||||false|false|Cripe
-DeLisle, Robert Kirk||Robert|||Kirk|false|false|DeLisle
-Furlong, Pat||Pat||||false|false|Furlong
-Gordish-Dressman, Heather||Heather||||false|false|Gordish-Dressman
-Hache, Lauren||Lauren||||false|false|Hache
-Henricson, Erik||Erik||||false|false|Henricson
-Hoffman, Eric P.||Eric|||P|false|false|Hoffman
-Kobayashi, Yvonne Monique||Yvonne|||Monique|false|false|Kobayashi
-Lorts, Angela||Angela||||false|false|Lorts
-Mah, Jean K.||Jean|||K|false|false|Mah
-McDonald, Craig||Craig||||false|false|McDonald
-Mehler, Bob||Bob||||false|false|Mehler
-Nelson, Sally||Sally||||false|true|Nelson
-Nikrad, Malti||Malti||||false|false|Nikrad
-Singer, Britta||Britta||||false|false|Singer
-Steele, Fintan||Fintan||||false|false|Steele
-Sterling, David||David||||false|false|Sterling
-Sweeney, H. Lee||H|||Lee|false|true|Sweeney
-Williams, Steve||Steve||||false|false|Williams
-Gold, Larry||Larry||||true|false|Gold
-Bogner, Barbara||Barbara||||false|false|Bogner
-Boye, Sanford L.||Sanford|||L|true|true|Boye
-Min, Seok Hong||Seok|||Hong|false|true|Min
-Peterson, James J.||James|||J|false|true|Peterson
-Ruan, Qing||Qing||||false|true|Ruan
-Zhang, Zhonghong||Zhonghong||||false|false|Zhang
-Reitsamer, Herbert A.||Herbert|||A|false|false|Reitsamer
-Hauswirth, William W.||William|||W|false|true|Hauswirth
-Boye, Shannon E.||Shannon|||E|true|true|Boye
-Kasturiarachchi, T.||T||||true|true|Kasturiarachchi
-Saha, D.||D||||false|true|Saha
-Pan, X.||X||||false|true|Pan
-Sanders, G. D.||G|||D|false|true|Sanders
-Edirisooriya, M.||M||||false|true|Edirisooriya
-Mishima, T. D.||T|||D|false|true|Mishima
-Doezema, R. E.||R|||E|false|true|Doezema
-Stanton, C. J.||C|||J|false|true|Stanton
-Santos, M. B.||M|||B|false|true|Santos
-Boncy, Paul Jacques||Paul|||Jacques|false|false|Boncy
-Adrien, Paul||Paul||||false|false|Adrien
-Lemoine, Jean Frantz||Jean|||Frantz|false|false|Lemoine
-Existe, Alexandre||Alexandre||||false|false|Existe
-Henry, Patricia Jean||Patricia|||Jean|false|false|Henry
-Raccurt, Christian||Christian||||false|false|Raccurt
-Brasseur, Philippe||Philippe||||false|false|Brasseur
-Fenelon, Natael||Natael||||false|false|Fenelon
-Dame, John B.||John|||B|false|false|Dame
-Okech, Bernard A.||Bernard|||A|false|false|Okech
-Kaljee, Linda||Linda||||false|false|Kaljee
-Baxa, Dwayne||Dwayne||||false|false|Baxa
-Prieur, Eric||Eric||||false|false|Prieur
-El Badry, Maha A.||Maha|||A|false|false|El Badry
-Tagliamonte, Massimiliano S.||Massimiliano|||S|false|false|Tagliamonte
-Mulligan, Connie J.||Connie|||J|false|false|Mulligan
-Carter, Tamar E.||Tamar|||E|false|false|Carter
-de Rochars, V. Madsen Beau||V|||Madsen Beau|false|false|de Rochars
-Lutz, Chelsea||Chelsea||||false|false|Lutz
-Parke, Dana M.||Dana|||M|false|false|Parke
-Zervos, Marcus J.||Marcus|||J|true|false|Zervos
-Hargrove, John S.||John|||S|true|false|Hargrove
-Weyl, Olaf L. F.||Olaf|||L F|false|false|Weyl
-Allen, Micheal S.||Micheal|||S|false|true|Allen
-Deacon, Neil R.||Neil|||R|false|false|Deacon
-Ran, Yong||Yong||||true|true|Ran
-Ladd, Gabriela Z.||Gabriela|||Z|false|true|Ladd
-Ceballos-Diaz, Carolina||Carolina||||false|true|Ceballos-Diaz
-Jung, Joo In||Joo|||In|false|true|Jung
-Greenbaum, Doron||Doron||||false|true|Greenbaum
-Felsenstein, Kevin M.||Kevin|||M|false|true|Felsenstein
-Golde, Todd E.||Todd|||E|false|true|Golde
-Schwartzt, Allison R.||Allison|||R|false|false|Schwartzt
-Potnist, Neha||Neha||||false|false|Potnist
-Milsina, Sujan||Sujan||||false|false|Milsina
-Wilson, Mark||Mark||||false|false|Wilson
-Patane, Jose||Jose||||false|false|Patane
-Martins, Jr., Joaquim|Jr.|Joaquim||||false|false|Martins
-Minsavage, Gerald V.||Gerald|||V|false|false|Minsavage
-Dahlbeck, Douglas||Douglas||||false|false|Dahlbeck
-Akhunova, Alina||Alina||||false|false|Akhunova
-Almeida, Nalvo||Nalvo||||false|false|Almeida
-Vallad, Gary E.||Gary|||E|false|true|Vallad
-Barak, Jeri D.||Jeri|||D|false|true|Barak
-White, Frank F.||Frank|||F|false|false|White
-Miller, Sally A.||Sally|||A|false|true|Miller
-Ritchie, David||David||||false|true|Ritchie
-Goss, Erica||Erica||||false|false|Goss
-Bart, Rebecca S.||Rebecca|||S|false|false|Bart
-Setubal, Joao C.||Joao|||C|false|true|Setubal
-Jones, Jeffrey B.||Jeffrey|||B|false|false|Jones
-Staskawicz, Brian J.||Brian|||J|true|false|Staskawicz
-Zhang, Liqin||Liqin||||false|false|Zhang
-Yang, Zunyi||Zunyi||||false|false|Yang
-Sefah, Kwame||Kwame||||false|false|Sefah
-Bradley, Kevin M.||Kevin|||M|false|false|Bradley
-Hoshika, Shuichi||Shuichi||||false|false|Hoshika
-Kim, Myong-Jung||Myong-Jung||||false|false|Kim
-Kim, Hyo-Joong||Hyo-Joong||||false|false|Kim
-Zhu, Guizhi||Guizhi||||false|false|Zhu
-Jimenez, Elizabeth||Elizabeth||||false|false|Jimenez
-Cansiz, Sena||Sena||||false|false|Cansiz
-Teng, I-Ting||I-Ting||||false|false|Teng
-Champanhac, Carole||Carole||||false|false|Champanhac
-McLendon, Christopher||Christopher||||false|false|McLendon
-Liu, Chen||Chen||||false|true|Liu
-Zhang, Wen||Wen||||false|true|Zhang
-Gerloff, Dietlind L.||Dietlind|||L|false|false|Gerloff
-Huang, Zhen||Zhen||||true|true|Huang
-Tan, Weihong||Weihong||||false|false|Tan
-Benner, Steven A.||Steven|||A|false|false|Benner
-Skeie, Eli||Eli||||true|false|Skeie
-Strand, Elin||Elin||||false|false|Strand
-Pedersen, Eva R.||Eva|||R|false|false|Pedersen
-Bjorndal, Bodil||Bodil||||false|false|Bjorndal
-Bohov, Pavol||Pavol||||false|false|Bohov
-Berge, Rolf K.||Rolf|||K|false|false|Berge
-Svingen, Gard F. T.||Gard|||F T|false|false|Svingen
-Seifert, Reinhard||Reinhard||||false|false|Seifert
-Ueland, Per M.||Per|||M|false|false|Ueland
-Midttun, Oivind||Oivind||||false|false|Midttun
-Ulvik, Arve||Arve||||false|false|Ulvik
-Hustad, Steinar||Steinar||||false|false|Hustad
-Drevon, Christian A.||Christian|||A|false|false|Drevon
-Gregory, Jesse F.||Jesse|||F|false|true|Gregory
-Nygard, Ottar||Ottar||||false|false|Nygard
-Zhou, Liyi||Liyi||||false|false|Zhou
-Zhang, Xiaobing||Xiaobing||||true|false|Zhang
-Lv, Yifan||Yifan||||false|false|Lv
-Yang, Chao||Chao||||false|false|Yang
-Lu, Danqing||Danqing||||false|false|Lu
-Wu, Yuan||Yuan||||false|true|Wu
-Chen, Zhuo||Zhuo||||false|false|Chen
-Liu, Qiaoling||Qiaoling||||false|false|Liu
-Tan, Weihong||Weihong||||false|true|Tan
-Clendinen, Chaevien S.||Chaevien|||S|false|false|Clendinen
-Pasquel, Christian||Christian||||false|false|Pasquel
-Ajredini, Ramadan||Ramadan||||false|false|Ajredini
-Edison, Arthur S.||Arthur|||S|true|false|Edison
-Lewis, Michael W.||Michael|||W|false|true|Lewis
-Brant, Jason O.||Jason|||O|false|true|Brant
-Kramer, Joseph M.||Joseph|||M|false|true|Kramer
-Moss, James I.||James|||I|false|true|Moss
-Yang, Thomas P.||Thomas|||P|false|true|Yang
-Hansen, Peter J.||Peter|||J|false|true|Hansen
-Williams, R. Stan||R|||Stan|false|true|Williams
-Resnick, James L.||James|||L|true|true|Resnick
-Cunningham, Jr., Mark W.|Jr.|Mark|||W|true|false|Cunningham
-West, Crystal A.||Crystal|||A|false|true|West
-Wen, Xuerong||Xuerong||||false|true|Wen
-Deng, Aihua||Aihua||||false|true|Deng
-Baylis, Chris||Chris||||false|true|Baylis
-Bowland, Christopher C.||Christopher|||C|false|true|Bowland
-Malakooti, Mohammad H.||Mohammad|||H|false|true|Malakooti
-Zhou, Zhi||Zhi||||false|true|Zhou
-Sodano, Henry A.||Henry|||A|true|true|Sodano
-Sinnott, Jennifer A.||Jennifer|||A|false|false|Sinnott
-Rider, Jennifer R.||Jennifer|||R|true|false|Rider
-Carlsson, Jessica||Jessica||||false|false|Carlsson
-Gerke, Travis||Travis||||false|false|Gerke
-Tyekucheva, Svitlana||Svitlana||||false|false|Tyekucheva
-Penney, Kathryn L.||Kathryn|||L|false|false|Penney
-Sesso, Howard D.||Howard|||D|false|false|Sesso
-Loda, Massimo||Massimo||||false|false|Loda
-Fall, Katja||Katja||||false|false|Fall
-Stampfer, Meir J.||Meir|||J|false|false|Stampfer
-Mucci, Lorelei A.||Lorelei|||A|false|false|Mucci
-Pawitan, Yudi||Yudi||||false|false|Pawitan
-Andersson, Sven-Olof||Sven-Olof||||false|false|Andersson
-Andren, Ove||Ove||||false|false|Andren
-Sadovykh, Valeria||Valeria||||false|false|Sadovykh
-Sundaram, David||David||||false|false|Sundaram
-Piramuthu, Selwyn||Selwyn||||true|false|Piramuthu
-Beavers, Craig J.||Craig|||J|true|true|Beavers
-Carris, Nicolas W.||Nicolas|||W|false|true|Carris
-Ruf, Kathryn M.||Kathryn|||M|false|true|Ruf
-Madhavan, Aarthi||Aarthi||||true|true|Madhavan
-Carnaby, Giselle D.||Giselle|||D|false|true|Carnaby
-Crary, Michael A.||Michael|||A|false|true|Crary
-King-Stephens, David||David||||false|true|King-Stephens
-Mirro, Emily||Emily||||false|true|Mirro
-Weber, Peter B.||Peter|||B|false|true|Weber
-Laxer, Kenneth D.||Kenneth|||D|false|true|Laxer
-Van Ness, Paul C.||Paul|||C|false|true|Van Ness
-Salanova, Vicenta||Vicenta||||false|true|Salanova
-Spencer, David C.||David|||C|false|true|Spencer
-Heck, Christianne N.||Christianne|||N|false|true|Heck
-Goldman, Alica||Alica||||false|true|Goldman
-Jobst, Barbara||Barbara||||false|true|Jobst
-Shields, Donald C.||Donald|||C|false|true|Shields
-Bergey, Gregory K.||Gregory|||K|false|true|Bergey
-Eisenschenk, Stephan||Stephan||||false|true|Eisenschenk
-Worrell, Gregory A.||Gregory|||A|false|true|Worrell
-Rossi, Marvin A.||Marvin|||A|false|true|Rossi
-Gross, Robert E.||Robert|||E|false|true|Gross
-Cole, Andrew J.||Andrew|||J|false|true|Cole
-Sperling, Michael R.||Michael|||R|false|true|Sperling
-Nair, Dileep R.||Dileep|||R|false|true|Nair
-Gwinn, Ryder P.||Ryder|||P|false|true|Gwinn
-Park, Yong D.||Yong|||D|false|true|Park
-Rutecki, Paul A.||Paul|||A|false|true|Rutecki
-Fountain, Nathan B.||Nathan|||B|false|true|Fountain
-Wharen, Robert E.||Robert|||E|false|true|Wharen
-Hirsch, Lawrence J.||Lawrence|||J|false|true|Hirsch
-Miller, Ian O.||Ian|||O|false|true|Miller
-Barkley, Gregory L.||Gregory|||L|false|true|Barkley
-Edwards, Jonathan C.||Jonathan|||C|false|true|Edwards
-Geller, Eric B.||Eric|||B|false|true|Geller
-Berg, Michel J.||Michel|||J|false|true|Berg
-Sadler, Toni L.||Toni|||L|false|true|Sadler
-Sun, Felice T.||Felice|||T|false|true|Sun
-Morrell, Martha J.||Martha|||J|true|true|Morrell
-Dinh, Thang N.||Thang|||N|true|true|Dinh
-Thai, My T.||My|||T|false|true|Thai
-Maslowski, Grzegorz||Grzegorz||||true|false|Maslowski
-Rakov, Vladimir A.||Vladimir|||A|false|true|Rakov
-Wyderka, Stanislaw||Stanislaw||||false|false|Wyderka
-Ziemba, Robert||Robert||||false|false|Ziemba
-Karnas, Grzegorz||Grzegorz||||false|false|Karnas
-Filik, Kamil||Kamil||||false|false|Filik
-Tran Huu Thang||||||false|false|Tran Huu Thang
-Baba, Yoshihiro||Yoshihiro||||false|false|Baba
-Rakov, Vladimir A.||Vladimir|||A|false|false|Rakov
-Piantini, Alexandre||Alexandre||||false|false|Piantini
-Xu, Jun||Jun||||true|true|Xu
-Wang, Shuo||Shuo||||false|true|Wang
-Nieh, Chien-Ming||Chien-Ming||||true|true|Nieh
-Wei, Changyu||Changyu||||false|true|Wei
-Lin, Jenshan||Jenshan||||false|true|Lin
-Winfrey, A. Leigh||A|||Leigh|true|false|Winfrey
-Mittal, Shawn||Shawn||||false|false|Mittal
-Abd Al-Halim, Mohamed A.||Mohamed|||A|false|false|Abd Al-Halim
-Yaghjyan, L.||L||||true|true|Yaghjyan
-Sites, S.||S||||false|true|Sites
-Ruan, Y.||Y||||false|true|Ruan
-Chang, S-H||S-H||||false|true|Chang
-Li, Wenhua||Wenhua||||false|false|Li
-Chalam, Kakarla V.||Kakarla|||V|false|true|Chalam
-Grover, Sandeep||Sandeep||||true|true|Grover
-Kadiyala, M. D. M.||M|||D M|true|false|Kadiyala
-Jones, James. W.||James|||W|false|false|Jones
-Mylavarapu, R. S.||R|||S|false|false|Mylavarapu
-Li, Y. C.||Y|||C|false|false|Li
-Reddy, M. D.||M|||D|false|false|Reddy
-Umadevi, M.||M||||false|false|Umadevi
-Fahmie, Tara A.||Tara|||A|true|true|Fahmie
-Iwata, Brian A.||Brian|||A|false|true|Iwata
-Jann, Kathryn E.||Kathryn|||E|false|true|Jann
-Esenwein, George||George||||true|true|Esenwein
-Goda, Norman J. W.||Norman|||J W|true|true|Goda
-Harland-Jacobs, Jessica L.||Jessica|||L|true|true|Harland-Jacobs
-Cooke, Brian K.||Brian|||K|true|true|Cooke
-Delalot, Dominque||Dominque||||false|true|Delalot
-Werner, Tonia L.||Tonia|||L|false|true|Werner
-Kunka, Cody||Cody||||false|true|Kunka
-Trachet, Alison||Alison||||false|true|Trachet
-Subhash, Ghatu||Ghatu||||true|true|Subhash
-El Haj, Alicia J.||Alicia|||J|false|false|El Haj
-Glossop, John R.||John|||R|false|false|Glossop
-Sura, Harpal S.||Harpal|||S|false|false|Sura
-Lees, Martin R.||Martin|||R|false|false|Lees
-Hu, Bin||Bin||||false|false|Hu
-Wolbank, Susanne||Susanne||||false|false|Wolbank
-van Griensven, Martijn||Martijn||||false|false|van Griensven
-Redl, Heinz||Heinz||||false|false|Redl
-Dobson, Jon||Jon||||false|true|Dobson
-Ardente, Amanda J.||Amanda|||J|true|true|Ardente
-Hill, Richard C.||Richard|||C|false|true|Hill
-Gerlach, Trevor J.||Trevor|||J|true|true|Gerlach
-Estrada, Amara H.||Amara|||H|false|true|Estrada
-Sosa, Ivan S.||Ivan|||S|false|true|Sosa
-Powell, Melanie||Melanie||||false|true|Powell
-Lamb, Kenneth E.||Kenneth|||E|false|true|Lamb
-Ball, Ray L.||Ray|||L|false|true|Ball
-de Wit, Martine||Martine||||false|true|de Wit
-Walsh, Mike T.||Mike|||T|false|true|Walsh
-Coelho de Moura, Charlys Rhands||Charlys|||Rhands|false|false|Coelho de Moura
-Diniz, Anaemilia das Neves||Anaemilia|||das Neves|false|false|Diniz
-Moura, Laecio da Silva||Laecio|||da Silva|false|false|Moura
-Araujo Sousa, Francisco das Chagas||Francisco|||das Chagas|false|false|Araujo Sousa
-Baltazar, Pollyana Irene||Pollyana|||Irene|false|false|Baltazar
-Freire, Larisse Danielle||Larisse|||Danielle|false|false|Freire
-Guerra, Porfirio Candanedo||Porfirio|||Candanedo|false|false|Guerra
-de Sousa, Joao Macedo||Joao|||Macedo|false|false|de Sousa
-Giglio, Robson Fortes||Robson|||Fortes|false|true|Giglio
-Pessoa, Gerson Tavares||Gerson|||Tavares|false|false|Pessoa
-de Sa, Renan Paraguassu||Renan|||Paraguassu|false|false|de Sa
-Alves, Flavio Ribeiro||Flavio|||Ribeiro|true|false|Alves
-McCarty, Todd P.||Todd|||P|true|true|McCarty
-Baddley, John W.||John|||W|false|true|Baddley
-Walsh, Thomas J.||Thomas|||J|false|true|Walsh
-Alexander, Barbara D.||Barbara|||D|false|true|Alexander
-Kontoyiannis, Dimitrios P.||Dimitrios|||P|false|true|Kontoyiannis
-Perl, Trish M.||Trish|||M|false|true|Perl
-Walker, Randall||Randall||||false|true|Walker
-Patterson, Thomas F.||Thomas|||F|false|true|Patterson
-Schuster, Mindy G.||Mindy|||G|false|true|Schuster
-Lyon, G. Marshall||G|||Marshall|false|true|Lyon
-Wingard, John R.||John|||R|false|true|Wingard
-Andes, David R.||David|||R|false|true|Andes
-Park, Benjamin J.||Benjamin|||J|false|true|Park
-Brandt, Mary E.||Mary|||E|false|true|Brandt
-Pappas, Peter G.||Peter|||G|false|true|Pappas
-TRANSNET Investigators||||||false|false|TRANSNET Investigators
-Barnes, Samesha R.||Samesha|||R|true|true|Barnes
-Hughes, Christopher R.||Christopher|||R|true|true|Hughes
-Pelaez, Oswaldo||Oswaldo||||false|true|Pelaez
-Schubring, Duwayne||Duwayne||||false|true|Schubring
-Jordan, Kelly A.||Kelly|||A|false|true|Jordan
-Pimiento, Catalina||Catalina||||true|false|Pimiento
-Balk, Meghan A.||Meghan|||A|false|false|Balk
-Mutunga, James M.||James|||M|false|true|Mutunga
-Anderson, Troy D.||Troy|||D|false|true|Anderson
-Craft, Derek T.||Derek|||T|false|true|Craft
-Gross, Aaron D.||Aaron|||D|false|true|Gross
-Swale, Daniel R.||Daniel|||R|false|true|Swale
-Tong, Fan||Fan||||false|true|Tong
-Wong, Dawn M.||Dawn|||M|false|true|Wong
-Carlier, Paul R.||Paul|||R|false|true|Carlier
-Bloomquist, Jeffrey R.||Jeffrey|||R|true|true|Bloomquist
-Franklin, Janet||Janet||||true|false|Franklin
-Ripplinger, Julie||Julie||||false|false|Ripplinger
-Freid, Ethan H.||Ethan|||H|false|false|Freid
-Marcano-Vega, Humfredo||Humfredo||||false|true|Marcano-Vega
-Steadman, David W.||David|||W|false|true|Steadman
-Sjoberg, Laura||Laura||||true|true|Sjoberg
-Allan, Darcey M.||Darcey|||M|true|false|Allan
-Lonigan, Christopher J.||Christopher|||J|false|false|Lonigan
-Strong, Amy L.||Amy|||L|false|false|Strong
-Bowles, Annie C.||Annie|||C|false|false|Bowles
-MacCrimmon, Connor P.||Connor|||P|false|false|MacCrimmon
-Frazier, Trivia P.||Trivia|||P|false|false|Frazier
-Lee, Stephen J.||Stephen|||J|false|false|Lee
-Wu, Xiying||Xiying||||false|false|Wu
-Katz, Adam J.||Adam|||J|false|false|Katz
-Gawronska-Kozak, Barbara||Barbara||||false|false|Gawronska-Kozak
-Bunnell, Bruce A.||Bruce|||A|false|false|Bunnell
-Gimble, Jeffrey M.||Jeffrey|||M|true|false|Gimble
-de la Fuente, Lorena||Lorena||||false|false|de la Fuente
-Conesa, Ana||Ana||||false|true|Conesa
-Lloret, Alba||Alba||||false|false|Lloret
-Luisa Badenes, Maria||Maria||||false|false|Luisa Badenes
-Rios, Gabino||Gabino||||true|false|Rios
-Zhang, Jianxing||Jianxing||||false|true|Zhang
-Peter, Gary F.||Gary|||F|false|true|Peter
-Powell, Gregory L.||Gregory|||L|false|true|Powell
-White, Timothy L.||Timothy|||L|false|true|White
-Gezan, Salvador A.||Salvador|||A|true|true|Gezan
-Bazante, Alexandre P.||Alexandre|||P|true|true|Bazante
-Davidson, E. R.||E|||R|false|true|Davidson
-Bartlett, Rodney J.||Rodney|||J|false|true|Bartlett
-Schulz-Schuepke, Stefanie||Stefanie||||false|false|Schulz-Schuepke
-Byrne, Robert A.||Robert|||A|false|false|Byrne
-ten Berg, Jurrien M.||Jurrien|||M|false|false|ten Berg
-Neumann, Franz-Josef||Franz-Josef||||false|false|Neumann
-Han, Yaling||Yaling||||false|false|Han
-Adriaenssens, Tom||Tom||||false|false|Adriaenssens
-Toelg, Ralph||Ralph||||false|false|Toelg
-Seyfarth, Melchior||Melchior||||false|false|Seyfarth
-Maeng, Michael||Michael||||false|false|Maeng
-Zrenner, Bernhard||Bernhard||||false|false|Zrenner
-Jacobshagen, Claudius||Claudius||||false|false|Jacobshagen
-Mudra, Harald||Harald||||false|false|Mudra
-von Hodenberg, Eberhard||Eberhard||||false|false|von Hodenberg
-Woehrle, Jochen||Jochen||||false|false|Woehrle
-Angiolillo, Dominick J.||Dominick|||J|false|false|Angiolillo
-von Merzljak, Barbara||Barbara||||false|false|von Merzljak
-Rifatov, Nonglag||Nonglag||||false|false|Rifatov
-Kufner, Sebastian||Sebastian||||false|false|Kufner
-Morath, Tanja||Tanja||||false|false|Morath
-Feuchtenberger, Antonia||Antonia||||false|false|Feuchtenberger
-Ibrahim, Tareq||Tareq||||false|false|Ibrahim
-Janssen, Paul W. A.||Paul|||W A|false|false|Janssen
-Valina, Christian||Christian||||false|false|Valina
-Li, Yi||Yi||||false|false|Li
-Desmet, Walter||Walter||||false|false|Desmet
-Abdel-Wahab, Mohamed||Mohamed||||false|false|Abdel-Wahab
-Tiroch, Klaus||Klaus||||false|false|Tiroch
-Hengstenberg, Christian||Christian||||false|false|Hengstenberg
-Bernlochner, Isabell||Isabell||||false|false|Bernlochner
-Fischer, Marcus||Marcus||||false|false|Fischer
-Schunkert, Heribert||Heribert||||false|false|Schunkert
-Laugwitz, Karl-Ludwig||Karl-Ludwig||||false|false|Laugwitz
-Schoemig, Albert||Albert||||false|false|Schoemig
-Mehilli, Julinda||Julinda||||false|false|Mehilli
-Kastrati, Adnan||Adnan||||false|false|Kastrati
-Intracoronary Stenting Antithrombo||||||false|false|Intracoronary Stenting Antithrombo
-Chatrchyan, S.||S||||true|false|Chatrchyan
-Khachatryan, V.||V||||false|false|Khachatryan
-Sirunyan, A. M.||A|||M|false|false|Sirunyan
-Tumasyan, A.||A||||false|false|Tumasyan
-Adam, W.||W||||false|false|Adam
-Bergauer, T.||T||||false|false|Bergauer
-Dragicevic, M.||M||||false|false|Dragicevic
-Eroe, J.||J||||false|false|Eroe
-Fabjan, C.||C||||false|false|Fabjan
-Friedl, M.||M||||false|false|Friedl
-Fruehwirth, R.||R||||false|false|Fruehwirth
-Ghete, V. M.||V|||M|false|false|Ghete
-Hartl, C.||C||||false|false|Hartl
-Hoermann, N.||N||||false|false|Hoermann
-Hrubec, J.||J||||false|false|Hrubec
-Jeitler, M.||M||||false|false|Jeitler
-Kiesenhofer, W.||W||||false|false|Kiesenhofer
-Knuenz, V.||V||||false|false|Knuenz
-Krammer, M.||M||||false|false|Krammer
-Kraetschmer, I.||I||||false|false|Kraetschmer
-Liko, D.||D||||false|false|Liko
-Mikulec, I.||I||||false|false|Mikulec
-Rabady, D.||D||||false|false|Rabady
-Rahbaran, B.||B||||false|false|Rahbaran
-Rohringer, H.||H||||false|false|Rohringer
-Schoefbeck, R.||R||||false|false|Schoefbeck
-Strauss, J.||J||||false|false|Strauss
-Taurok, A.||A||||false|false|Taurok
-Treberer-Treberspurg, W.||W||||false|false|Treberer-Treberspurg
-Waltenberger, W.||W||||false|false|Waltenberger
-Wulz, C. E.||C|||E|false|false|Wulz
-Mossolov, V.||V||||false|false|Mossolov
-Shumeiko, N.||N||||false|false|Shumeiko
-Gonzalez, J. Suarez||J|||Suarez|false|false|Gonzalez
-Alderweireldt, S.||S||||false|false|Alderweireldt
-Bansal, M.||M||||false|false|Bansal
-Bansal, S.||S||||false|false|Bansal
-Cornelis, T.||T||||false|false|Cornelis
-De Wolf, E. A.||E|||A|false|false|De Wolf
-Janssen, X.||X||||false|false|Janssen
-Knutsson, A.||A||||false|false|Knutsson
-Luyckx, S.||S||||false|false|Luyckx
-Ochesanu, S.||S||||false|false|Ochesanu
-Roland, B.||B||||false|false|Roland
-Rougny, R.||R||||false|false|Rougny
-Van Haevermaet, H.||H||||false|false|Van Haevermaet
-Van Mechelen, P.||P||||false|false|Van Mechelen
-Van Remortel, N.||N||||false|false|Van Remortel
-Van Spilbeeck, A.||A||||false|false|Van Spilbeeck
-Blekman, F.||F||||false|false|Blekman
-Khachatryan, V.||V||||true|false|Khachatryan
-Sirunyan, A. M.||A|||M|false|false|Sirunyan
-Tumasyan, A.||A||||false|false|Tumasyan
-Adam, W.||W||||false|false|Adam
-Bergauer, T.||T||||false|false|Bergauer
-Dragicevic, M.||M||||false|false|Dragicevic
-Eroe, J.||J||||false|false|Eroe
-Friedl, M.||M||||false|false|Friedl
-Fruehwirth, R.||R||||false|false|Fruehwirth
-Ghete, V. M.||V|||M|false|false|Ghete
-Hartl, C.||C||||false|false|Hartl
-Hoermann, N.||N||||false|false|Hoermann
-Hrubec, J.||J||||false|false|Hrubec
-Jeitler, M.||M||||false|false|Jeitler
-Kiesenhofer, W.||W||||false|false|Kiesenhofer
-Knuenz, V.||V||||false|false|Knuenz
-Krammer, M.||M||||false|false|Krammer
-Kraetschmer, I.||I||||false|false|Kraetschmer
-Liko, D.||D||||false|false|Liko
-Mikulec, I.||I||||false|false|Mikulec
-Rabady, D.||D||||false|false|Rabady
-Rahbaran, B.||B||||false|false|Rahbaran
-Rohringer, H.||H||||false|false|Rohringer
-Schoefbeck, R.||R||||false|false|Schoefbeck
-Strauss, J.||J||||false|false|Strauss
-Treberer-Treberspurg, W.||W||||false|false|Treberer-Treberspurg
-Waltenberger, W.||W||||false|false|Waltenberger
-Wulz, C-E||C-E||||false|false|Wulz
-Mossolov, V.||V||||false|false|Mossolov
-Shumeiko, N.||N||||false|false|Shumeiko
-Gonzalez, J. Suarez||J|||Suarez|false|false|Gonzalez
-Alderweireldt, S.||S||||false|false|Alderweireldt
-Bansal, S.||S||||false|false|Bansal
-Cornelis, T.||T||||false|false|Cornelis
-De Wolf, E. A.||E|||A|false|false|De Wolf
-Janssen, X.||X||||false|false|Janssen
-Knutsson, A.||A||||false|false|Knutsson
-Lauwers, J.||J||||false|false|Lauwers
-Luyckx, S.||S||||false|false|Luyckx
-Ochesanu, S.||S||||false|false|Ochesanu
-Rougny, R.||R||||false|false|Rougny
-Van De Klundert, M.||M||||false|false|Van De Klundert
-Van Haevermaet, H.||H||||false|false|Van Haevermaet
-Van Mechelen, P.||P||||false|false|Van Mechelen
-Van Remortel, N.||N||||false|false|Van Remortel
-Van Spilbeeck, A.||A||||false|false|Van Spilbeeck
-Blekman, F.||F||||false|false|Blekman
-Blyweert, S.||S||||false|false|Blyweert
-D'Hondt, J.||J||||false|false|D'Hondt
-Daci, N.||N||||false|false|Daci
-Hackmann, Timothy J.||Timothy|||J|true|true|Hackmann
-Firkins, Jeffrey L.||Jeffrey|||L|false|true|Firkins
-Clark, David J.||David|||J|true|true|Clark
-Woods, Adam J.||Adam|||J|true|true|Woods
-Bryant, Vaughn||Vaughn||||false|true|Bryant
-Sacchetti, Daniela||Daniela||||false|true|Sacchetti
-Gervits, Felix||Felix||||false|true|Gervits
-Hamilton, Roy||Roy||||false|true|Hamilton
-MacSuga-Gage, Ashley S.||Ashley|||S|true|true|MacSuga-Gage
-Simonsen, Brandi||Brandi||||false|true|Simonsen
-Szantoi, Zoltan||Zoltan||||true|false|Szantoi
-Escobedo, Francisco J.||Francisco|||J|false|true|Escobedo
-Abd-Elrahman, Amr||Amr||||false|true|Abd-Elrahman
-Pearlstine, Leonard||Leonard||||false|true|Pearlstine
-Dewitt, Bon||Bon||||false|true|Dewitt
-Smith, Scot||Scot||||false|true|Smith
-Khachatryan, V.||V||||true|false|Khachatryan
-Sirunyan, A. M.||A|||M|false|false|Sirunyan
-Tumasyan, A.||A||||false|false|Tumasyan
-Adam, W.||W||||false|false|Adam
-Bergauer, T.||T||||false|false|Bergauer
-Dragicevic, M.||M||||false|false|Dragicevic
-Eroe, J.||J||||false|false|Eroe
-Fabjan, C.||C||||false|false|Fabjan
-Friedl, M.||M||||false|false|Friedl
-Fruehwirth, R.||R||||false|false|Fruehwirth
-Ghete, V. M.||V|||M|false|false|Ghete
-Hartl, C.||C||||false|false|Hartl
-Hoermann, N.||N||||false|false|Hoermann
-Hrubec, J.||J||||false|false|Hrubec
-Jeitler, M.||M||||false|false|Jeitler
-Kiesenhofer, W.||W||||false|false|Kiesenhofer
-Knuenz, V.||V||||false|false|Knuenz
-Krammer, M.||M||||false|false|Krammer
-Kraetschmer, I.||I||||false|false|Kraetschmer
-Liko, D.||D||||false|false|Liko
-Mikulec, I.||I||||false|false|Mikulec
-Rabady, D.||D||||false|false|Rabady
-Rahbaran, B.||B||||false|false|Rahbaran
-Rohringer, H.||H||||false|false|Rohringer
-Schoefbeck, R.||R||||false|false|Schoefbeck
-Strauss, J.||J||||false|false|Strauss
-Taurok, A.||A||||false|false|Taurok
-Treberer-Treberspurg, W.||W||||false|false|Treberer-Treberspurg
-Waltenberger, W.||W||||false|false|Waltenberger
-Wulz, C. E.||C|||E|false|false|Wulz
-Mossolov, V.||V||||false|false|Mossolov
-Shumeiko, N.||N||||false|false|Shumeiko
-Gonzalez, J. Suarez||J|||Suarez|false|false|Gonzalez
-Alderweireldt, S.||S||||false|false|Alderweireldt
-Bansal, M.||M||||false|false|Bansal
-Bansal, S.||S||||false|false|Bansal
-Cornelis, T.||T||||false|false|Cornelis
-De Wolf, E. A.||E|||A|false|false|De Wolf
-Janssen, X.||X||||false|false|Janssen
-Knutsson, A.||A||||false|false|Knutsson
-Luyckx, S.||S||||false|false|Luyckx
-Ochesanu, S.||S||||false|false|Ochesanu
-Rougny, R.||R||||false|false|Rougny
-Van De Klundert, M.||M||||false|false|Van De Klundert
-Van Haevermaet, H.||H||||false|false|Van Haevermaet
-Van Mechelen, P.||P||||false|false|Van Mechelen
-Van Remortel, N.||N||||false|false|Van Remortel
-Van Spilbeeck, A.||A||||false|false|Van Spilbeeck
-Blekman, F.||F||||false|false|Blekman
-Blyweert, S.||S||||false|false|Blyweert
-Wang, Yunwen||Yunwen||||false|true|Wang
-Lu, Huangjun||Huangjun||||true|true|Lu
-Raid, Richard N.||Richard|||N|false|true|Raid
-Nuessly, Gregg S.||Gregg|||S|false|true|Nuessly
-Faroutine, Georgy||Georgy||||false|true|Faroutine
+Dickey, Aaron M.||Dickey|||M|true|false|Aaron
+Kumar, Vivek||Kumar||||false|false|Vivek
+Morgan, J. Kent||Morgan|||Kent|false|false|J
+Jara-Cavieres, Antonella||Jara-Cavieres||||false|false|Antonella
+Shatters, Jr., Robert G.|Jr.|Shatters|||G|false|false|Robert
+McKenzie, Cindy L.||McKenzie|||L|false|false|Cindy
+Osborne, Lance S.||Osborne|||S|false|false|Lance
+Khachatryan, V.||Khachatryan||||true|false|V
+Sirunyan, A. M.||Sirunyan|||M|false|false|A
+Tumasyan, A.||Tumasyan||||false|false|A
+Adam, W.||Adam||||false|false|W
+Bergauer, T.||Bergauer||||false|false|T
+Dragicevic, M.||Dragicevic||||false|false|M
+Eroe, J.||Eroe||||false|false|J
+Friedl, M.||Friedl||||false|false|M
+Fruehwirth, R.||Fruehwirth||||false|false|R
+Ghete, V. M.||Ghete|||M|false|false|V
+Hartl, C.||Hartl||||false|false|C
+Hoermann, N.||Hoermann||||false|false|N
+Hrubec, J.||Hrubec||||false|false|J
+Jeitler, M.||Jeitler||||false|false|M
+Kiesenhofer, W.||Kiesenhofer||||false|false|W
+Knuenz, V.||Knuenz||||false|false|V
+Krammer, M.||Krammer||||false|false|M
+Kraetschmer, I.||Kraetschmer||||false|false|I
+Liko, D.||Liko||||false|false|D
+Mikulec, I.||Mikulec||||false|false|I
+Rabady, D.||Rabady||||false|false|D
+Rahbaran, B.||Rahbaran||||false|false|B
+Rohringer, H.||Rohringer||||false|false|H
+Schoefbeck, R.||Schoefbeck||||false|false|R
+Strauss, J.||Strauss||||false|false|J
+Treberer-Treberspurg, W.||Treberer-Treberspurg||||false|false|W
+Waltenberger, W.||Waltenberger||||false|false|W
+Wulz, C. E.||Wulz|||E|false|false|C
+Mossolov, V.||Mossolov||||false|false|V
+Shumeiko, N.||Shumeiko||||false|false|N
+Gonzalez, J. Suarez||Gonzalez|||Suarez|false|false|J
+Alderweireldt, S.||Alderweireldt||||false|false|S
+Bansal, S.||Bansal||||false|false|S
+Cornelis, T.||Cornelis||||false|false|T
+De Wolf, E. A.||De Wolf|||A|false|false|E
+Janssen, X.||Janssen||||false|false|X
+Knutsson, A.||Knutsson||||false|false|A
+Lauwers, J.||Lauwers||||false|false|J
+Luyckx, S.||Luyckx||||false|false|S
+Ochesanu, S.||Ochesanu||||false|false|S
+Rougny, R.||Rougny||||false|false|R
+Van De Klundert, M.||Van De Klundert||||false|false|M
+Van Haevermaet, H.||Van Haevermaet||||false|false|H
+Van Mechelen, P.||Van Mechelen||||false|false|P
+Van Remortel, N.||Van Remortel||||false|false|N
+Van Spilbeeck, A.||Van Spilbeeck||||false|false|A
+Blekman, F.||Blekman||||false|false|F
+Blyweert, S.||Blyweert||||false|false|S
+D'Hondt, J.||D'Hondt||||false|false|J
+Daci, N.||Daci||||false|false|N
+Hathout, Yetrib||Hathout||||false|false|Yetrib
+Brody, Edward||Brody||||false|false|Edward
+Clemens, Paula R.||Clemens|||R|false|false|Paula
+Cripe, Linda||Cripe||||false|false|Linda
+DeLisle, Robert Kirk||DeLisle|||Kirk|false|false|Robert
+Furlong, Pat||Furlong||||false|false|Pat
+Gordish-Dressman, Heather||Gordish-Dressman||||false|false|Heather
+Hache, Lauren||Hache||||false|false|Lauren
+Henricson, Erik||Henricson||||false|false|Erik
+Hoffman, Eric P.||Hoffman|||P|false|false|Eric
+Kobayashi, Yvonne Monique||Kobayashi|||Monique|false|false|Yvonne
+Lorts, Angela||Lorts||||false|false|Angela
+Mah, Jean K.||Mah|||K|false|false|Jean
+McDonald, Craig||McDonald||||false|false|Craig
+Mehler, Bob||Mehler||||false|false|Bob
+Nelson, Sally||Nelson||||false|true|Sally
+Nikrad, Malti||Nikrad||||false|false|Malti
+Singer, Britta||Singer||||false|false|Britta
+Steele, Fintan||Steele||||false|false|Fintan
+Sterling, David||Sterling||||false|false|David
+Sweeney, H. Lee||Sweeney|||Lee|false|true|H
+Williams, Steve||Williams||||false|false|Steve
+Gold, Larry||Gold||||true|false|Larry
+Bogner, Barbara||Bogner||||false|false|Barbara
+Boye, Sanford L.||Boye|||L|true|true|Sanford
+Min, Seok Hong||Min|||Hong|false|true|Seok
+Peterson, James J.||Peterson|||J|false|true|James
+Ruan, Qing||Ruan||||false|true|Qing
+Zhang, Zhonghong||Zhang||||false|false|Zhonghong
+Reitsamer, Herbert A.||Reitsamer|||A|false|false|Herbert
+Hauswirth, William W.||Hauswirth|||W|false|true|William
+Boye, Shannon E.||Boye|||E|true|true|Shannon
+Kasturiarachchi, T.||Kasturiarachchi||||true|true|T
+Saha, D.||Saha||||false|true|D
+Pan, X.||Pan||||false|true|X
+Sanders, G. D.||Sanders|||D|false|true|G
+Edirisooriya, M.||Edirisooriya||||false|true|M
+Mishima, T. D.||Mishima|||D|false|true|T
+Doezema, R. E.||Doezema|||E|false|true|R
+Stanton, C. J.||Stanton|||J|false|true|C
+Santos, M. B.||Santos|||B|false|true|M
+Boncy, Paul Jacques||Boncy|||Jacques|false|false|Paul
+Adrien, Paul||Adrien||||false|false|Paul
+Lemoine, Jean Frantz||Lemoine|||Frantz|false|false|Jean
+Existe, Alexandre||Existe||||false|false|Alexandre
+Henry, Patricia Jean||Henry|||Jean|false|false|Patricia
+Raccurt, Christian||Raccurt||||false|false|Christian
+Brasseur, Philippe||Brasseur||||false|false|Philippe
+Fenelon, Natael||Fenelon||||false|false|Natael
+Dame, John B.||Dame|||B|false|false|John
+Okech, Bernard A.||Okech|||A|false|false|Bernard
+Kaljee, Linda||Kaljee||||false|false|Linda
+Baxa, Dwayne||Baxa||||false|false|Dwayne
+Prieur, Eric||Prieur||||false|false|Eric
+El Badry, Maha A.||El Badry|||A|false|false|Maha
+Tagliamonte, Massimiliano S.||Tagliamonte|||S|false|false|Massimiliano
+Mulligan, Connie J.||Mulligan|||J|false|false|Connie
+Carter, Tamar E.||Carter|||E|false|false|Tamar
+de Rochars, V. Madsen Beau||de Rochars|||Madsen Beau|false|false|V
+Lutz, Chelsea||Lutz||||false|false|Chelsea
+Parke, Dana M.||Parke|||M|false|false|Dana
+Zervos, Marcus J.||Zervos|||J|true|false|Marcus
+Hargrove, John S.||Hargrove|||S|true|false|John
+Weyl, Olaf L. F.||Weyl|||L F|false|false|Olaf
+Allen, Micheal S.||Allen|||S|false|true|Micheal
+Deacon, Neil R.||Deacon|||R|false|false|Neil
+Ran, Yong||Ran||||true|true|Yong
+Ladd, Gabriela Z.||Ladd|||Z|false|true|Gabriela
+Ceballos-Diaz, Carolina||Ceballos-Diaz||||false|true|Carolina
+Jung, Joo In||Jung|||In|false|true|Joo
+Greenbaum, Doron||Greenbaum||||false|true|Doron
+Felsenstein, Kevin M.||Felsenstein|||M|false|true|Kevin
+Golde, Todd E.||Golde|||E|false|true|Todd
+Schwartzt, Allison R.||Schwartzt|||R|false|false|Allison
+Potnist, Neha||Potnist||||false|false|Neha
+Milsina, Sujan||Milsina||||false|false|Sujan
+Wilson, Mark||Wilson||||false|false|Mark
+Patane, Jose||Patane||||false|false|Jose
+Martins, Jr., Joaquim|Jr.|Martins||||false|false|Joaquim
+Minsavage, Gerald V.||Minsavage|||V|false|false|Gerald
+Dahlbeck, Douglas||Dahlbeck||||false|false|Douglas
+Akhunova, Alina||Akhunova||||false|false|Alina
+Almeida, Nalvo||Almeida||||false|false|Nalvo
+Vallad, Gary E.||Vallad|||E|false|true|Gary
+Barak, Jeri D.||Barak|||D|false|true|Jeri
+White, Frank F.||White|||F|false|false|Frank
+Miller, Sally A.||Miller|||A|false|true|Sally
+Ritchie, David||Ritchie||||false|true|David
+Goss, Erica||Goss||||false|false|Erica
+Bart, Rebecca S.||Bart|||S|false|false|Rebecca
+Setubal, Joao C.||Setubal|||C|false|true|Joao
+Jones, Jeffrey B.||Jones|||B|false|false|Jeffrey
+Staskawicz, Brian J.||Staskawicz|||J|true|false|Brian
+Zhang, Liqin||Zhang||||false|false|Liqin
+Yang, Zunyi||Yang||||false|false|Zunyi
+Sefah, Kwame||Sefah||||false|false|Kwame
+Bradley, Kevin M.||Bradley|||M|false|false|Kevin
+Hoshika, Shuichi||Hoshika||||false|false|Shuichi
+Kim, Myong-Jung||Kim||||false|false|Myong-Jung
+Kim, Hyo-Joong||Kim||||false|false|Hyo-Joong
+Zhu, Guizhi||Zhu||||false|false|Guizhi
+Jimenez, Elizabeth||Jimenez||||false|false|Elizabeth
+Cansiz, Sena||Cansiz||||false|false|Sena
+Teng, I-Ting||Teng||||false|false|I-Ting
+Champanhac, Carole||Champanhac||||false|false|Carole
+McLendon, Christopher||McLendon||||false|false|Christopher
+Liu, Chen||Liu||||false|true|Chen
+Zhang, Wen||Zhang||||false|true|Wen
+Gerloff, Dietlind L.||Gerloff|||L|false|false|Dietlind
+Huang, Zhen||Huang||||true|true|Zhen
+Tan, Weihong||Tan||||false|false|Weihong
+Benner, Steven A.||Benner|||A|false|false|Steven
+Skeie, Eli||Skeie||||true|false|Eli
+Strand, Elin||Strand||||false|false|Elin
+Pedersen, Eva R.||Pedersen|||R|false|false|Eva
+Bjorndal, Bodil||Bjorndal||||false|false|Bodil
+Bohov, Pavol||Bohov||||false|false|Pavol
+Berge, Rolf K.||Berge|||K|false|false|Rolf
+Svingen, Gard F. T.||Svingen|||F T|false|false|Gard
+Seifert, Reinhard||Seifert||||false|false|Reinhard
+Ueland, Per M.||Ueland|||M|false|false|Per
+Midttun, Oivind||Midttun||||false|false|Oivind
+Ulvik, Arve||Ulvik||||false|false|Arve
+Hustad, Steinar||Hustad||||false|false|Steinar
+Drevon, Christian A.||Drevon|||A|false|false|Christian
+Gregory, Jesse F.||Gregory|||F|false|true|Jesse
+Nygard, Ottar||Nygard||||false|false|Ottar
+Zhou, Liyi||Zhou||||false|false|Liyi
+Zhang, Xiaobing||Zhang||||true|false|Xiaobing
+Lv, Yifan||Lv||||false|false|Yifan
+Yang, Chao||Yang||||false|false|Chao
+Lu, Danqing||Lu||||false|false|Danqing
+Wu, Yuan||Wu||||false|true|Yuan
+Chen, Zhuo||Chen||||false|false|Zhuo
+Liu, Qiaoling||Liu||||false|false|Qiaoling
+Tan, Weihong||Tan||||false|true|Weihong
+Clendinen, Chaevien S.||Clendinen|||S|false|false|Chaevien
+Pasquel, Christian||Pasquel||||false|false|Christian
+Ajredini, Ramadan||Ajredini||||false|false|Ramadan
+Edison, Arthur S.||Edison|||S|true|false|Arthur
+Lewis, Michael W.||Lewis|||W|false|true|Michael
+Brant, Jason O.||Brant|||O|false|true|Jason
+Kramer, Joseph M.||Kramer|||M|false|true|Joseph
+Moss, James I.||Moss|||I|false|true|James
+Yang, Thomas P.||Yang|||P|false|true|Thomas
+Hansen, Peter J.||Hansen|||J|false|true|Peter
+Williams, R. Stan||Williams|||Stan|false|true|R
+Resnick, James L.||Resnick|||L|true|true|James
+Cunningham, Jr., Mark W.|Jr.|Cunningham|||W|true|false|Mark
+West, Crystal A.||West|||A|false|true|Crystal
+Wen, Xuerong||Wen||||false|true|Xuerong
+Deng, Aihua||Deng||||false|true|Aihua
+Baylis, Chris||Baylis||||false|true|Chris
+Bowland, Christopher C.||Bowland|||C|false|true|Christopher
+Malakooti, Mohammad H.||Malakooti|||H|false|true|Mohammad
+Zhou, Zhi||Zhou||||false|true|Zhi
+Sodano, Henry A.||Sodano|||A|true|true|Henry
+Sinnott, Jennifer A.||Sinnott|||A|false|false|Jennifer
+Rider, Jennifer R.||Rider|||R|true|false|Jennifer
+Carlsson, Jessica||Carlsson||||false|false|Jessica
+Gerke, Travis||Gerke||||false|false|Travis
+Tyekucheva, Svitlana||Tyekucheva||||false|false|Svitlana
+Penney, Kathryn L.||Penney|||L|false|false|Kathryn
+Sesso, Howard D.||Sesso|||D|false|false|Howard
+Loda, Massimo||Loda||||false|false|Massimo
+Fall, Katja||Fall||||false|false|Katja
+Stampfer, Meir J.||Stampfer|||J|false|false|Meir
+Mucci, Lorelei A.||Mucci|||A|false|false|Lorelei
+Pawitan, Yudi||Pawitan||||false|false|Yudi
+Andersson, Sven-Olof||Andersson||||false|false|Sven-Olof
+Andren, Ove||Andren||||false|false|Ove
+Sadovykh, Valeria||Sadovykh||||false|false|Valeria
+Sundaram, David||Sundaram||||false|false|David
+Piramuthu, Selwyn||Piramuthu||||true|false|Selwyn
+Beavers, Craig J.||Beavers|||J|true|true|Craig
+Carris, Nicolas W.||Carris|||W|false|true|Nicolas
+Ruf, Kathryn M.||Ruf|||M|false|true|Kathryn
+Madhavan, Aarthi||Madhavan||||true|true|Aarthi
+Carnaby, Giselle D.||Carnaby|||D|false|true|Giselle
+Crary, Michael A.||Crary|||A|false|true|Michael
+King-Stephens, David||King-Stephens||||false|true|David
+Mirro, Emily||Mirro||||false|true|Emily
+Weber, Peter B.||Weber|||B|false|true|Peter
+Laxer, Kenneth D.||Laxer|||D|false|true|Kenneth
+Van Ness, Paul C.||Van Ness|||C|false|true|Paul
+Salanova, Vicenta||Salanova||||false|true|Vicenta
+Spencer, David C.||Spencer|||C|false|true|David
+Heck, Christianne N.||Heck|||N|false|true|Christianne
+Goldman, Alica||Goldman||||false|true|Alica
+Jobst, Barbara||Jobst||||false|true|Barbara
+Shields, Donald C.||Shields|||C|false|true|Donald
+Bergey, Gregory K.||Bergey|||K|false|true|Gregory
+Eisenschenk, Stephan||Eisenschenk||||false|true|Stephan
+Worrell, Gregory A.||Worrell|||A|false|true|Gregory
+Rossi, Marvin A.||Rossi|||A|false|true|Marvin
+Gross, Robert E.||Gross|||E|false|true|Robert
+Cole, Andrew J.||Cole|||J|false|true|Andrew
+Sperling, Michael R.||Sperling|||R|false|true|Michael
+Nair, Dileep R.||Nair|||R|false|true|Dileep
+Gwinn, Ryder P.||Gwinn|||P|false|true|Ryder
+Park, Yong D.||Park|||D|false|true|Yong
+Rutecki, Paul A.||Rutecki|||A|false|true|Paul
+Fountain, Nathan B.||Fountain|||B|false|true|Nathan
+Wharen, Robert E.||Wharen|||E|false|true|Robert
+Hirsch, Lawrence J.||Hirsch|||J|false|true|Lawrence
+Miller, Ian O.||Miller|||O|false|true|Ian
+Barkley, Gregory L.||Barkley|||L|false|true|Gregory
+Edwards, Jonathan C.||Edwards|||C|false|true|Jonathan
+Geller, Eric B.||Geller|||B|false|true|Eric
+Berg, Michel J.||Berg|||J|false|true|Michel
+Sadler, Toni L.||Sadler|||L|false|true|Toni
+Sun, Felice T.||Sun|||T|false|true|Felice
+Morrell, Martha J.||Morrell|||J|true|true|Martha
+Dinh, Thang N.||Dinh|||N|true|true|Thang
+Thai, My T.||Thai|||T|false|true|My
+Maslowski, Grzegorz||Maslowski||||true|false|Grzegorz
+Rakov, Vladimir A.||Rakov|||A|false|true|Vladimir
+Wyderka, Stanislaw||Wyderka||||false|false|Stanislaw
+Ziemba, Robert||Ziemba||||false|false|Robert
+Karnas, Grzegorz||Karnas||||false|false|Grzegorz
+Filik, Kamil||Filik||||false|false|Kamil
+Tran Huu Thang||Tran Huu Thang||||false|false|
+Baba, Yoshihiro||Baba||||false|false|Yoshihiro
+Rakov, Vladimir A.||Rakov|||A|false|false|Vladimir
+Piantini, Alexandre||Piantini||||false|false|Alexandre
+Xu, Jun||Xu||||true|true|Jun
+Wang, Shuo||Wang||||false|true|Shuo
+Nieh, Chien-Ming||Nieh||||true|true|Chien-Ming
+Wei, Changyu||Wei||||false|true|Changyu
+Lin, Jenshan||Lin||||false|true|Jenshan
+Winfrey, A. Leigh||Winfrey|||Leigh|true|false|A
+Mittal, Shawn||Mittal||||false|false|Shawn
+Abd Al-Halim, Mohamed A.||Abd Al-Halim|||A|false|false|Mohamed
+Yaghjyan, L.||Yaghjyan||||true|true|L
+Sites, S.||Sites||||false|true|S
+Ruan, Y.||Ruan||||false|true|Y
+Chang, S-H||Chang||||false|true|S-H
+Li, Wenhua||Li||||false|false|Wenhua
+Chalam, Kakarla V.||Chalam|||V|false|true|Kakarla
+Grover, Sandeep||Grover||||true|true|Sandeep
+Kadiyala, M. D. M.||Kadiyala|||D M|true|false|M
+Jones, James. W.||Jones|||W|false|false|James
+Mylavarapu, R. S.||Mylavarapu|||S|false|false|R
+Li, Y. C.||Li|||C|false|false|Y
+Reddy, M. D.||Reddy|||D|false|false|M
+Umadevi, M.||Umadevi||||false|false|M
+Fahmie, Tara A.||Fahmie|||A|true|true|Tara
+Iwata, Brian A.||Iwata|||A|false|true|Brian
+Jann, Kathryn E.||Jann|||E|false|true|Kathryn
+Esenwein, George||Esenwein||||true|true|George
+Goda, Norman J. W.||Goda|||J W|true|true|Norman
+Harland-Jacobs, Jessica L.||Harland-Jacobs|||L|true|true|Jessica
+Cooke, Brian K.||Cooke|||K|true|true|Brian
+Delalot, Dominque||Delalot||||false|true|Dominque
+Werner, Tonia L.||Werner|||L|false|true|Tonia
+Kunka, Cody||Kunka||||false|true|Cody
+Trachet, Alison||Trachet||||false|true|Alison
+Subhash, Ghatu||Subhash||||true|true|Ghatu
+El Haj, Alicia J.||El Haj|||J|false|false|Alicia
+Glossop, John R.||Glossop|||R|false|false|John
+Sura, Harpal S.||Sura|||S|false|false|Harpal
+Lees, Martin R.||Lees|||R|false|false|Martin
+Hu, Bin||Hu||||false|false|Bin
+Wolbank, Susanne||Wolbank||||false|false|Susanne
+van Griensven, Martijn||van Griensven||||false|false|Martijn
+Redl, Heinz||Redl||||false|false|Heinz
+Dobson, Jon||Dobson||||false|true|Jon
+Ardente, Amanda J.||Ardente|||J|true|true|Amanda
+Hill, Richard C.||Hill|||C|false|true|Richard
+Gerlach, Trevor J.||Gerlach|||J|true|true|Trevor
+Estrada, Amara H.||Estrada|||H|false|true|Amara
+Sosa, Ivan S.||Sosa|||S|false|true|Ivan
+Powell, Melanie||Powell||||false|true|Melanie
+Lamb, Kenneth E.||Lamb|||E|false|true|Kenneth
+Ball, Ray L.||Ball|||L|false|true|Ray
+de Wit, Martine||de Wit||||false|true|Martine
+Walsh, Mike T.||Walsh|||T|false|true|Mike
+Coelho de Moura, Charlys Rhands||Coelho de Moura|||Rhands|false|false|Charlys
+Diniz, Anaemilia das Neves||Diniz|||das Neves|false|false|Anaemilia
+Moura, Laecio da Silva||Moura|||da Silva|false|false|Laecio
+Araujo Sousa, Francisco das Chagas||Araujo Sousa|||das Chagas|false|false|Francisco
+Baltazar, Pollyana Irene||Baltazar|||Irene|false|false|Pollyana
+Freire, Larisse Danielle||Freire|||Danielle|false|false|Larisse
+Guerra, Porfirio Candanedo||Guerra|||Candanedo|false|false|Porfirio
+de Sousa, Joao Macedo||de Sousa|||Macedo|false|false|Joao
+Giglio, Robson Fortes||Giglio|||Fortes|false|true|Robson
+Pessoa, Gerson Tavares||Pessoa|||Tavares|false|false|Gerson
+de Sa, Renan Paraguassu||de Sa|||Paraguassu|false|false|Renan
+Alves, Flavio Ribeiro||Alves|||Ribeiro|true|false|Flavio
+McCarty, Todd P.||McCarty|||P|true|true|Todd
+Baddley, John W.||Baddley|||W|false|true|John
+Walsh, Thomas J.||Walsh|||J|false|true|Thomas
+Alexander, Barbara D.||Alexander|||D|false|true|Barbara
+Kontoyiannis, Dimitrios P.||Kontoyiannis|||P|false|true|Dimitrios
+Perl, Trish M.||Perl|||M|false|true|Trish
+Walker, Randall||Walker||||false|true|Randall
+Patterson, Thomas F.||Patterson|||F|false|true|Thomas
+Schuster, Mindy G.||Schuster|||G|false|true|Mindy
+Lyon, G. Marshall||Lyon|||Marshall|false|true|G
+Wingard, John R.||Wingard|||R|false|true|John
+Andes, David R.||Andes|||R|false|true|David
+Park, Benjamin J.||Park|||J|false|true|Benjamin
+Brandt, Mary E.||Brandt|||E|false|true|Mary
+Pappas, Peter G.||Pappas|||G|false|true|Peter
+TRANSNET Investigators||TRANSNET Investigators||||false|false|
+Barnes, Samesha R.||Barnes|||R|true|true|Samesha
+Hughes, Christopher R.||Hughes|||R|true|true|Christopher
+Pelaez, Oswaldo||Pelaez||||false|true|Oswaldo
+Schubring, Duwayne||Schubring||||false|true|Duwayne
+Jordan, Kelly A.||Jordan|||A|false|true|Kelly
+Pimiento, Catalina||Pimiento||||true|false|Catalina
+Balk, Meghan A.||Balk|||A|false|false|Meghan
+Mutunga, James M.||Mutunga|||M|false|true|James
+Anderson, Troy D.||Anderson|||D|false|true|Troy
+Craft, Derek T.||Craft|||T|false|true|Derek
+Gross, Aaron D.||Gross|||D|false|true|Aaron
+Swale, Daniel R.||Swale|||R|false|true|Daniel
+Tong, Fan||Tong||||false|true|Fan
+Wong, Dawn M.||Wong|||M|false|true|Dawn
+Carlier, Paul R.||Carlier|||R|false|true|Paul
+Bloomquist, Jeffrey R.||Bloomquist|||R|true|true|Jeffrey
+Franklin, Janet||Franklin||||true|false|Janet
+Ripplinger, Julie||Ripplinger||||false|false|Julie
+Freid, Ethan H.||Freid|||H|false|false|Ethan
+Marcano-Vega, Humfredo||Marcano-Vega||||false|true|Humfredo
+Steadman, David W.||Steadman|||W|false|true|David
+Sjoberg, Laura||Sjoberg||||true|true|Laura
+Allan, Darcey M.||Allan|||M|true|false|Darcey
+Lonigan, Christopher J.||Lonigan|||J|false|false|Christopher
+Strong, Amy L.||Strong|||L|false|false|Amy
+Bowles, Annie C.||Bowles|||C|false|false|Annie
+MacCrimmon, Connor P.||MacCrimmon|||P|false|false|Connor
+Frazier, Trivia P.||Frazier|||P|false|false|Trivia
+Lee, Stephen J.||Lee|||J|false|false|Stephen
+Wu, Xiying||Wu||||false|false|Xiying
+Katz, Adam J.||Katz|||J|false|false|Adam
+Gawronska-Kozak, Barbara||Gawronska-Kozak||||false|false|Barbara
+Bunnell, Bruce A.||Bunnell|||A|false|false|Bruce
+Gimble, Jeffrey M.||Gimble|||M|true|false|Jeffrey
+de la Fuente, Lorena||de la Fuente||||false|false|Lorena
+Conesa, Ana||Conesa||||false|true|Ana
+Lloret, Alba||Lloret||||false|false|Alba
+Luisa Badenes, Maria||Luisa Badenes||||false|false|Maria
+Rios, Gabino||Rios||||true|false|Gabino
+Zhang, Jianxing||Zhang||||false|true|Jianxing
+Peter, Gary F.||Peter|||F|false|true|Gary
+Powell, Gregory L.||Powell|||L|false|true|Gregory
+White, Timothy L.||White|||L|false|true|Timothy
+Gezan, Salvador A.||Gezan|||A|true|true|Salvador
+Bazante, Alexandre P.||Bazante|||P|true|true|Alexandre
+Davidson, E. R.||Davidson|||R|false|true|E
+Bartlett, Rodney J.||Bartlett|||J|false|true|Rodney
+Schulz-Schuepke, Stefanie||Schulz-Schuepke||||false|false|Stefanie
+Byrne, Robert A.||Byrne|||A|false|false|Robert
+ten Berg, Jurrien M.||ten Berg|||M|false|false|Jurrien
+Neumann, Franz-Josef||Neumann||||false|false|Franz-Josef
+Han, Yaling||Han||||false|false|Yaling
+Adriaenssens, Tom||Adriaenssens||||false|false|Tom
+Toelg, Ralph||Toelg||||false|false|Ralph
+Seyfarth, Melchior||Seyfarth||||false|false|Melchior
+Maeng, Michael||Maeng||||false|false|Michael
+Zrenner, Bernhard||Zrenner||||false|false|Bernhard
+Jacobshagen, Claudius||Jacobshagen||||false|false|Claudius
+Mudra, Harald||Mudra||||false|false|Harald
+von Hodenberg, Eberhard||von Hodenberg||||false|false|Eberhard
+Woehrle, Jochen||Woehrle||||false|false|Jochen
+Angiolillo, Dominick J.||Angiolillo|||J|false|false|Dominick
+von Merzljak, Barbara||von Merzljak||||false|false|Barbara
+Rifatov, Nonglag||Rifatov||||false|false|Nonglag
+Kufner, Sebastian||Kufner||||false|false|Sebastian
+Morath, Tanja||Morath||||false|false|Tanja
+Feuchtenberger, Antonia||Feuchtenberger||||false|false|Antonia
+Ibrahim, Tareq||Ibrahim||||false|false|Tareq
+Janssen, Paul W. A.||Janssen|||W A|false|false|Paul
+Valina, Christian||Valina||||false|false|Christian
+Li, Yi||Li||||false|false|Yi
+Desmet, Walter||Desmet||||false|false|Walter
+Abdel-Wahab, Mohamed||Abdel-Wahab||||false|false|Mohamed
+Tiroch, Klaus||Tiroch||||false|false|Klaus
+Hengstenberg, Christian||Hengstenberg||||false|false|Christian
+Bernlochner, Isabell||Bernlochner||||false|false|Isabell
+Fischer, Marcus||Fischer||||false|false|Marcus
+Schunkert, Heribert||Schunkert||||false|false|Heribert
+Laugwitz, Karl-Ludwig||Laugwitz||||false|false|Karl-Ludwig
+Schoemig, Albert||Schoemig||||false|false|Albert
+Mehilli, Julinda||Mehilli||||false|false|Julinda
+Kastrati, Adnan||Kastrati||||false|false|Adnan
+Intracoronary Stenting Antithrombo||Intracoronary Stenting Antithrombo||||false|false|
+Chatrchyan, S.||Chatrchyan||||true|false|S
+Khachatryan, V.||Khachatryan||||false|false|V
+Sirunyan, A. M.||Sirunyan|||M|false|false|A
+Tumasyan, A.||Tumasyan||||false|false|A
+Adam, W.||Adam||||false|false|W
+Bergauer, T.||Bergauer||||false|false|T
+Dragicevic, M.||Dragicevic||||false|false|M
+Eroe, J.||Eroe||||false|false|J
+Fabjan, C.||Fabjan||||false|false|C
+Friedl, M.||Friedl||||false|false|M
+Fruehwirth, R.||Fruehwirth||||false|false|R
+Ghete, V. M.||Ghete|||M|false|false|V
+Hartl, C.||Hartl||||false|false|C
+Hoermann, N.||Hoermann||||false|false|N
+Hrubec, J.||Hrubec||||false|false|J
+Jeitler, M.||Jeitler||||false|false|M
+Kiesenhofer, W.||Kiesenhofer||||false|false|W
+Knuenz, V.||Knuenz||||false|false|V
+Krammer, M.||Krammer||||false|false|M
+Kraetschmer, I.||Kraetschmer||||false|false|I
+Liko, D.||Liko||||false|false|D
+Mikulec, I.||Mikulec||||false|false|I
+Rabady, D.||Rabady||||false|false|D
+Rahbaran, B.||Rahbaran||||false|false|B
+Rohringer, H.||Rohringer||||false|false|H
+Schoefbeck, R.||Schoefbeck||||false|false|R
+Strauss, J.||Strauss||||false|false|J
+Taurok, A.||Taurok||||false|false|A
+Treberer-Treberspurg, W.||Treberer-Treberspurg||||false|false|W
+Waltenberger, W.||Waltenberger||||false|false|W
+Wulz, C. E.||Wulz|||E|false|false|C
+Mossolov, V.||Mossolov||||false|false|V
+Shumeiko, N.||Shumeiko||||false|false|N
+Gonzalez, J. Suarez||Gonzalez|||Suarez|false|false|J
+Alderweireldt, S.||Alderweireldt||||false|false|S
+Bansal, M.||Bansal||||false|false|M
+Bansal, S.||Bansal||||false|false|S
+Cornelis, T.||Cornelis||||false|false|T
+De Wolf, E. A.||De Wolf|||A|false|false|E
+Janssen, X.||Janssen||||false|false|X
+Knutsson, A.||Knutsson||||false|false|A
+Luyckx, S.||Luyckx||||false|false|S
+Ochesanu, S.||Ochesanu||||false|false|S
+Roland, B.||Roland||||false|false|B
+Rougny, R.||Rougny||||false|false|R
+Van Haevermaet, H.||Van Haevermaet||||false|false|H
+Van Mechelen, P.||Van Mechelen||||false|false|P
+Van Remortel, N.||Van Remortel||||false|false|N
+Van Spilbeeck, A.||Van Spilbeeck||||false|false|A
+Blekman, F.||Blekman||||false|false|F
+Khachatryan, V.||Khachatryan||||true|false|V
+Sirunyan, A. M.||Sirunyan|||M|false|false|A
+Tumasyan, A.||Tumasyan||||false|false|A
+Adam, W.||Adam||||false|false|W
+Bergauer, T.||Bergauer||||false|false|T
+Dragicevic, M.||Dragicevic||||false|false|M
+Eroe, J.||Eroe||||false|false|J
+Friedl, M.||Friedl||||false|false|M
+Fruehwirth, R.||Fruehwirth||||false|false|R
+Ghete, V. M.||Ghete|||M|false|false|V
+Hartl, C.||Hartl||||false|false|C
+Hoermann, N.||Hoermann||||false|false|N
+Hrubec, J.||Hrubec||||false|false|J
+Jeitler, M.||Jeitler||||false|false|M
+Kiesenhofer, W.||Kiesenhofer||||false|false|W
+Knuenz, V.||Knuenz||||false|false|V
+Krammer, M.||Krammer||||false|false|M
+Kraetschmer, I.||Kraetschmer||||false|false|I
+Liko, D.||Liko||||false|false|D
+Mikulec, I.||Mikulec||||false|false|I
+Rabady, D.||Rabady||||false|false|D
+Rahbaran, B.||Rahbaran||||false|false|B
+Rohringer, H.||Rohringer||||false|false|H
+Schoefbeck, R.||Schoefbeck||||false|false|R
+Strauss, J.||Strauss||||false|false|J
+Treberer-Treberspurg, W.||Treberer-Treberspurg||||false|false|W
+Waltenberger, W.||Waltenberger||||false|false|W
+Wulz, C-E||Wulz||||false|false|C-E
+Mossolov, V.||Mossolov||||false|false|V
+Shumeiko, N.||Shumeiko||||false|false|N
+Gonzalez, J. Suarez||Gonzalez|||Suarez|false|false|J
+Alderweireldt, S.||Alderweireldt||||false|false|S
+Bansal, S.||Bansal||||false|false|S
+Cornelis, T.||Cornelis||||false|false|T
+De Wolf, E. A.||De Wolf|||A|false|false|E
+Janssen, X.||Janssen||||false|false|X
+Knutsson, A.||Knutsson||||false|false|A
+Lauwers, J.||Lauwers||||false|false|J
+Luyckx, S.||Luyckx||||false|false|S
+Ochesanu, S.||Ochesanu||||false|false|S
+Rougny, R.||Rougny||||false|false|R
+Van De Klundert, M.||Van De Klundert||||false|false|M
+Van Haevermaet, H.||Van Haevermaet||||false|false|H
+Van Mechelen, P.||Van Mechelen||||false|false|P
+Van Remortel, N.||Van Remortel||||false|false|N
+Van Spilbeeck, A.||Van Spilbeeck||||false|false|A
+Blekman, F.||Blekman||||false|false|F
+Blyweert, S.||Blyweert||||false|false|S
+D'Hondt, J.||D'Hondt||||false|false|J
+Daci, N.||Daci||||false|false|N
+Hackmann, Timothy J.||Hackmann|||J|true|true|Timothy
+Firkins, Jeffrey L.||Firkins|||L|false|true|Jeffrey
+Clark, David J.||Clark|||J|true|true|David
+Woods, Adam J.||Woods|||J|true|true|Adam
+Bryant, Vaughn||Bryant||||false|true|Vaughn
+Sacchetti, Daniela||Sacchetti||||false|true|Daniela
+Gervits, Felix||Gervits||||false|true|Felix
+Hamilton, Roy||Hamilton||||false|true|Roy
+MacSuga-Gage, Ashley S.||MacSuga-Gage|||S|true|true|Ashley
+Simonsen, Brandi||Simonsen||||false|true|Brandi
+Szantoi, Zoltan||Szantoi||||true|false|Zoltan
+Escobedo, Francisco J.||Escobedo|||J|false|true|Francisco
+Abd-Elrahman, Amr||Abd-Elrahman||||false|true|Amr
+Pearlstine, Leonard||Pearlstine||||false|true|Leonard
+Dewitt, Bon||Dewitt||||false|true|Bon
+Smith, Scot||Smith||||false|true|Scot
+Khachatryan, V.||Khachatryan||||true|false|V
+Sirunyan, A. M.||Sirunyan|||M|false|false|A
+Tumasyan, A.||Tumasyan||||false|false|A
+Adam, W.||Adam||||false|false|W
+Bergauer, T.||Bergauer||||false|false|T
+Dragicevic, M.||Dragicevic||||false|false|M
+Eroe, J.||Eroe||||false|false|J
+Fabjan, C.||Fabjan||||false|false|C
+Friedl, M.||Friedl||||false|false|M
+Fruehwirth, R.||Fruehwirth||||false|false|R
+Ghete, V. M.||Ghete|||M|false|false|V
+Hartl, C.||Hartl||||false|false|C
+Hoermann, N.||Hoermann||||false|false|N
+Hrubec, J.||Hrubec||||false|false|J
+Jeitler, M.||Jeitler||||false|false|M
+Kiesenhofer, W.||Kiesenhofer||||false|false|W
+Knuenz, V.||Knuenz||||false|false|V
+Krammer, M.||Krammer||||false|false|M
+Kraetschmer, I.||Kraetschmer||||false|false|I
+Liko, D.||Liko||||false|false|D
+Mikulec, I.||Mikulec||||false|false|I
+Rabady, D.||Rabady||||false|false|D
+Rahbaran, B.||Rahbaran||||false|false|B
+Rohringer, H.||Rohringer||||false|false|H
+Schoefbeck, R.||Schoefbeck||||false|false|R
+Strauss, J.||Strauss||||false|false|J
+Taurok, A.||Taurok||||false|false|A
+Treberer-Treberspurg, W.||Treberer-Treberspurg||||false|false|W
+Waltenberger, W.||Waltenberger||||false|false|W
+Wulz, C. E.||Wulz|||E|false|false|C
+Mossolov, V.||Mossolov||||false|false|V
+Shumeiko, N.||Shumeiko||||false|false|N
+Gonzalez, J. Suarez||Gonzalez|||Suarez|false|false|J
+Alderweireldt, S.||Alderweireldt||||false|false|S
+Bansal, M.||Bansal||||false|false|M
+Bansal, S.||Bansal||||false|false|S
+Cornelis, T.||Cornelis||||false|false|T
+De Wolf, E. A.||De Wolf|||A|false|false|E
+Janssen, X.||Janssen||||false|false|X
+Knutsson, A.||Knutsson||||false|false|A
+Luyckx, S.||Luyckx||||false|false|S
+Ochesanu, S.||Ochesanu||||false|false|S
+Rougny, R.||Rougny||||false|false|R
+Van De Klundert, M.||Van De Klundert||||false|false|M
+Van Haevermaet, H.||Van Haevermaet||||false|false|H
+Van Mechelen, P.||Van Mechelen||||false|false|P
+Van Remortel, N.||Van Remortel||||false|false|N
+Van Spilbeeck, A.||Van Spilbeeck||||false|false|A
+Blekman, F.||Blekman||||false|false|F
+Blyweert, S.||Blyweert||||false|false|S
+Wang, Yunwen||Wang||||false|true|Yunwen
+Lu, Huangjun||Lu||||true|true|Huangjun
+Raid, Richard N.||Raid|||N|false|true|Richard
+Nuessly, Gregg S.||Nuessly|||S|false|true|Gregg
+Faroutine, Georgy||Faroutine||||false|true|Georgy
 Yang, Yang||Yang||||false|false|Yang
-Tang, Jingyin||Jingyin||||false|false|Tang
-Luo, Hao||Hao||||true|false|Luo
-Law, Rob||Rob||||false|false|Law
-Liu, Bingjie||Bingjie||||true|true|Liu
-Kim, Hany||Hany||||false|true|Kim
-Pennington-Gray, Lori||Lori||||false|true|Pennington-Gray
-Bautista, Julian E.||Julian|||E|true|false|Bautista
-Bailey, Stephen||Stephen||||false|false|Bailey
-Font-Ribera, Andreu||Andreu||||false|false|Font-Ribera
-Pieri, Matthew M.||Matthew|||M|false|false|Pieri
-Busca, Nicolas G.||Nicolas|||G|false|false|Busca
-Miralda-Escude, Jordi||Jordi||||false|false|Miralda-Escude
-Palanque-Delabrouille, Nathalie||Nathalie||||false|false|Palanque-Delabrouille
-Rich, James||James||||false|false|Rich
-Dawson, Kyle||Kyle||||false|false|Dawson
-Feng, Yu||Yu||||false|false|Feng
-Ge, Jian||Jian||||false|false|Ge
-Gontcho, Satya A. Gontcho||Satya|||A Gontcho|false|false|Gontcho
-Ho, Shirley||Shirley||||false|false|Ho
-Le Goff, Jean Marc||Jean|||Marc|false|false|Le Goff
-Noterdaeme, Pasquier||Pasquier||||false|false|Noterdaeme
-Paris, Isabelle||Isabelle||||false|false|Paris
-Rossi, Graziano||Graziano||||false|false|Rossi
-Schlegel, David||David||||false|false|Schlegel
-Udassi, Sharda||Sharda||||false|true|Udassi
-Tuli, Sanjeev Y.||Sanjeev|||Y|false|true|Tuli
-Giordano, Beverly P.||Beverly|||P|true|true|Giordano
-Udassi, Jai||Jai||||false|true|Udassi
-Lamvu, Georgine||Georgine||||true|true|Lamvu
-Nguyen, Ruby H. N.||Ruby|||H N|false|false|Nguyen
-Burrows, Lara J.||Lara|||J|false|false|Burrows
-Rapkin, Andrea||Andrea||||false|false|Rapkin
-Witzeman, Kathryn||Kathryn||||false|false|Witzeman
-Marvel, Richard P.||Richard|||P|false|false|Marvel
-Hutchins, David||David||||false|false|Hutchins
-Witkin, Steven S.||Steven|||S|false|false|Witkin
-Veasley, Christin||Christin||||false|false|Veasley
-Fillingim, Roger||Roger||||false|false|Fillingim
-Zolnoun, Denniz||Denniz||||false|false|Zolnoun
-Jordan, M. A.||M|||A|true|true|Jordan
-Springfels, D.||D||||false|true|Springfels
-Schubring, D.||D||||false|true|Schubring
-Remshardt, Ralf||Ralf||||true|true|Remshardt
-Benzaquen, M.||M||||false|true|Benzaquen
-Galvao, K. N.||K|||N|true|true|Galvao
-Coleman, A. E.||A|||E|false|true|Coleman
-Santos, J. E. P.||J|||E P|false|true|Santos
-Goff, J. P.||J|||P|false|true|Goff
-Risco, C. A.||C|||A|false|true|Risco
-Pogue-Geile, Katherine L.||Katherine|||L|false|false|Pogue-Geile
-Song, Nan||Nan||||false|false|Song
-Jeong, Jong-Hyeon||Jong-Hyeon||||false|false|Jeong
-Gavin, Patrick G.||Patrick|||G|false|false|Gavin
-Kim, Seong-Rim||Seong-Rim||||false|false|Kim
-Blackmon, Nicole L.||Nicole|||L|false|false|Blackmon
-Finnigan, Melanie||Melanie||||false|false|Finnigan
-Rastogi, Priya||Priya||||false|false|Rastogi
-Fehrenbacher, Louis||Louis||||false|false|Fehrenbacher
-Mamounas, Eleftherios P.||Eleftherios|||P|false|false|Mamounas
-Swain, Sandra M.||Sandra|||M|false|false|Swain
-Wickerham, D. Lawrence||D|||Lawrence|false|false|Wickerham
-Geyer, Jr., Charles E.|Jr.|Charles|||E|false|false|Geyer
-Costantino, Joseph P.||Joseph|||P|false|false|Costantino
-Wolmark, Norman||Norman||||false|false|Wolmark
-Paik, Soonmyung||Soonmyung||||true|false|Paik
-Khachatryan, V.||V||||true|false|Khachatryan
-Sirunyan, A. M.||A|||M|false|false|Sirunyan
-Tumasyan, A.||A||||false|false|Tumasyan
-Adam, W.||W||||false|false|Adam
-Bergauer, T.||T||||false|false|Bergauer
-Dragicevic, M.||M||||false|false|Dragicevic
-Eroe, J.||J||||false|false|Eroe
-Friedl, M.||M||||false|false|Friedl
-Fruehwirth, R.||R||||false|false|Fruehwirth
-Ghete, V. M.||V|||M|false|false|Ghete
-Hartl, C.||C||||false|false|Hartl
-Hoermann, N.||N||||false|false|Hoermann
-Hrubec, J.||J||||false|false|Hrubec
-Jeitler, M.||M||||false|false|Jeitler
-Kiesenhofer, W.||W||||false|false|Kiesenhofer
-Knuenz, V.||V||||false|false|Knuenz
-Krammer, M.||M||||false|false|Krammer
-Kraetschmer, I.||I||||false|false|Kraetschmer
-Liko, D.||D||||false|false|Liko
-Mikulec, I.||I||||false|false|Mikulec
-Rabady, D.||D||||false|false|Rabady
-Rahbaran, B.||B||||false|false|Rahbaran
-Rohringer, H.||H||||false|false|Rohringer
-Schoefbeck, R.||R||||false|false|Schoefbeck
-Strauss, J.||J||||false|false|Strauss
-Treberer-Treberspurg, W.||W||||false|false|Treberer-Treberspurg
-Waltenberger, W.||W||||false|false|Waltenberger
-Wulz, C. E.||C|||E|false|false|Wulz
-Mossolov, V.||V||||false|false|Mossolov
-Shumeiko, N.||N||||false|false|Shumeiko
-Gonzalez, J. Suarez||J|||Suarez|false|false|Gonzalez
-Alderweireldt, S.||S||||false|false|Alderweireldt
-Bansal, S.||S||||false|false|Bansal
-Cornelis, T.||T||||false|false|Cornelis
-De Wolf, E. A.||E|||A|false|false|De Wolf
-Janssen, X.||X||||false|false|Janssen
-Knutsson, A.||A||||false|false|Knutsson
-Lauwers, J.||J||||false|false|Lauwers
-Luyckx, S.||S||||false|false|Luyckx
-Ochesanu, S.||S||||false|false|Ochesanu
-Rougny, R.||R||||false|false|Rougny
-De Klundert, M. Van||M|||Van|false|false|De Klundert
-Van Haevermaet, H.||H||||false|false|Van Haevermaet
-Van Mechelen, P.||P||||false|false|Van Mechelen
-Van Remortel, N.||N||||false|false|Van Remortel
-Van Spilbeeck, A.||A||||false|false|Van Spilbeeck
-Blekman, F.||F||||false|false|Blekman
-Blyweert, S.||S||||false|false|Blyweert
-D'Hondt, J.||J||||false|false|D'Hondt
-Daci, N.||N||||false|false|Daci
-Khachatryan, V.||V||||true|false|Khachatryan
-Sirunyan, A. M.||A|||M|false|false|Sirunyan
-Tumasyan, A.||A||||false|false|Tumasyan
-Adam, W.||W||||false|false|Adam
-Bergauer, T.||T||||false|false|Bergauer
-Dragicevic, M.||M||||false|false|Dragicevic
-Eroe, J.||J||||false|false|Eroe
-Friedl, M.||M||||false|false|Friedl
-Fruehwirth, R.||R||||false|false|Fruehwirth
-Ghete, V. M.||V|||M|false|false|Ghete
-Hartl, C.||C||||false|false|Hartl
-Hoermann, N.||N||||false|false|Hoermann
-Hrubec, J.||J||||false|false|Hrubec
-Jeitler, M.||M||||false|false|Jeitler
-Kiesenhofer, W.||W||||false|false|Kiesenhofer
-Knuenz, V.||V||||false|false|Knuenz
-Krammer, M.||M||||false|false|Krammer
-Kraetschmer, I.||I||||false|false|Kraetschmer
-Liko, D.||D||||false|false|Liko
-Mikulec, I.||I||||false|false|Mikulec
-Rabady, D.||D||||false|false|Rabady
-Rahbaran, B.||B||||false|false|Rahbaran
-Rohringer, H.||H||||false|false|Rohringer
-Schoefbeck, R.||R||||false|false|Schoefbeck
-Strauss, J.||J||||false|false|Strauss
-Treberer-Treberspurg, W.||W||||false|false|Treberer-Treberspurg
-Waltenberger, W.||W||||false|false|Waltenberger
-Wulz, C. E.||C|||E|false|false|Wulz
-Mossolov, V.||V||||false|false|Mossolov
-Shumeiko, N.||N||||false|false|Shumeiko
-Gonzalez, J. Suarez||J|||Suarez|false|false|Gonzalez
-Alderweireldt, S.||S||||false|false|Alderweireldt
-Bansal, S.||S||||false|false|Bansal
-Cornelis, T.||T||||false|false|Cornelis
-De Wolf, E. A.||E|||A|false|false|De Wolf
-Janssen, X.||X||||false|false|Janssen
-Knutsson, A.||A||||false|false|Knutsson
-Lauwers, J.||J||||false|false|Lauwers
-Luyckx, S.||S||||false|false|Luyckx
-Ochesanu, S.||S||||false|false|Ochesanu
-Rougny, R.||R||||false|false|Rougny
-Van de Klundert, M.||M||||false|false|Van de Klundert
-Van Haevermaet, H.||H||||false|false|Van Haevermaet
-Van Mechelen, P.||P||||false|false|Van Mechelen
-Van Remortel, N.||N||||false|false|Van Remortel
-Van Spilbeeck, A.||A||||false|false|Van Spilbeeck
-Blekman, F.||F||||false|false|Blekman
-Blyweert, S.||S||||false|false|Blyweert
-D'Hondt, J.||J||||false|false|D'Hondt
-Daci, N.||N||||false|false|Daci
-Adam-Eldien, Rabie||Rabie||||false|true|Adam-Eldien
-Baldeo, Candice||Candice||||false|true|Baldeo
-Heilig, Charles||Charles||||false|true|Heilig
-Baldeo, Candice||Candice||||false|true|Baldeo
-Ali, Robert||Robert||||false|true|Ali
-Hritani, Abdulwahab||Abdulwahab||||false|true|Hritani
-Poenariu, Andreea||Andreea||||false|true|Poenariu
-Jamal, Muhsin||Muhsin||||false|true|Jamal
-Hussain, Tahir||Tahir||||false|false|Hussain
-Das, Chythanya Rajanna||Chythanya|||Rajanna|false|true|Das
-Andleeb, Saadia||Saadia||||true|false|Andleeb
-Park, Kyu-Tek||Kyu-Tek||||true|false|Park
-Heppner, John B.||John|||B|false|false|Heppner
-Bae, Yang-Seop||Yang-Seop||||false|false|Bae
-Staud, Roland||Roland||||true|true|Staud
-Dietl, Gregory P.||Gregory|||P|true|true|Dietl
-Kidwell, Susan M.||Susan|||M|false|true|Kidwell
-Brenner, Mark||Mark||||false|true|Brenner
-Burney, David A.||David|||A|false|true|Burney
-Flessa, Karl W.||Karl|||W|false|true|Flessa
-Jackson, Stephen T.||Stephen|||T|false|true|Jackson
-Koch, Paul L.||Paul|||L|false|true|Koch
-Baas, Pieter||Pieter||||true|false|Baas
-Srivastava, Rashmi||Rashmi||||false|false|Srivastava
-Manchester, Steven R.||Steven|||R|false|true|Manchester
-Wheeler, Elisabeth A.||Elisabeth|||A|false|true|Wheeler
-Boonchai, Nareerat||Nareerat||||true|false|Boonchai
-Manchester, Steven R.||Steven|||R|false|true|Manchester
-Wheeler, Elisabeth A.||Elisabeth|||A|false|true|Wheeler
-Zhang, Hua||Hua||||false|false|Zhang
-Dai, Xufeng||Xufeng||||false|false|Dai
-Qi, Yan||Yan||||false|false|Qi
-He, Ying||Ying||||false|false|He
-Du, Wei||Wei||||false|true|Du
-Pang, Ji-jing||Ji-jing||||true|true|Pang
-Edelmann, Jonathan||Jonathan||||true|true|Edelmann
-Girgis, Adel S.||Adel|||S|true|false|Girgis
-Panda, Siva S.||Siva|||S|false|false|Panda
-Srour, Aladdin M.||Aladdin|||M|false|false|Srour
-Farag, Hanaa||Hanaa||||false|false|Farag
-Ismail, Nasser S. M.||Nasser|||S M|false|false|Ismail
-Elgendy, Mohamed||Mohamed||||false|false|Elgendy
-Abdel-Aziz, Amal K.||Amal|||K|false|false|Abdel-Aziz
-Katritzky, Alan R.||Alan|||R|false|false|Katritzky
-Morris, N. Michael||N|||Michael|true|true|Morris
-Kuratko, Donald F.||Donald|||F|false|true|Kuratko
-Pryor, Christopher G.||Christopher|||G|false|true|Pryor
+Tang, Jingyin||Tang||||false|false|Jingyin
+Luo, Hao||Luo||||true|false|Hao
+Law, Rob||Law||||false|false|Rob
+Liu, Bingjie||Liu||||true|true|Bingjie
+Kim, Hany||Kim||||false|true|Hany
+Pennington-Gray, Lori||Pennington-Gray||||false|true|Lori
+Bautista, Julian E.||Bautista|||E|true|false|Julian
+Bailey, Stephen||Bailey||||false|false|Stephen
+Font-Ribera, Andreu||Font-Ribera||||false|false|Andreu
+Pieri, Matthew M.||Pieri|||M|false|false|Matthew
+Busca, Nicolas G.||Busca|||G|false|false|Nicolas
+Miralda-Escude, Jordi||Miralda-Escude||||false|false|Jordi
+Palanque-Delabrouille, Nathalie||Palanque-Delabrouille||||false|false|Nathalie
+Rich, James||Rich||||false|false|James
+Dawson, Kyle||Dawson||||false|false|Kyle
+Feng, Yu||Feng||||false|false|Yu
+Ge, Jian||Ge||||false|false|Jian
+Gontcho, Satya A. Gontcho||Gontcho|||A Gontcho|false|false|Satya
+Ho, Shirley||Ho||||false|false|Shirley
+Le Goff, Jean Marc||Le Goff|||Marc|false|false|Jean
+Noterdaeme, Pasquier||Noterdaeme||||false|false|Pasquier
+Paris, Isabelle||Paris||||false|false|Isabelle
+Rossi, Graziano||Rossi||||false|false|Graziano
+Schlegel, David||Schlegel||||false|false|David
+Udassi, Sharda||Udassi||||false|true|Sharda
+Tuli, Sanjeev Y.||Tuli|||Y|false|true|Sanjeev
+Giordano, Beverly P.||Giordano|||P|true|true|Beverly
+Udassi, Jai||Udassi||||false|true|Jai
+Lamvu, Georgine||Lamvu||||true|true|Georgine
+Nguyen, Ruby H. N.||Nguyen|||H N|false|false|Ruby
+Burrows, Lara J.||Burrows|||J|false|false|Lara
+Rapkin, Andrea||Rapkin||||false|false|Andrea
+Witzeman, Kathryn||Witzeman||||false|false|Kathryn
+Marvel, Richard P.||Marvel|||P|false|false|Richard
+Hutchins, David||Hutchins||||false|false|David
+Witkin, Steven S.||Witkin|||S|false|false|Steven
+Veasley, Christin||Veasley||||false|false|Christin
+Fillingim, Roger||Fillingim||||false|false|Roger
+Zolnoun, Denniz||Zolnoun||||false|false|Denniz
+Jordan, M. A.||Jordan|||A|true|true|M
+Springfels, D.||Springfels||||false|true|D
+Schubring, D.||Schubring||||false|true|D
+Remshardt, Ralf||Remshardt||||true|true|Ralf
+Benzaquen, M.||Benzaquen||||false|true|M
+Galvao, K. N.||Galvao|||N|true|true|K
+Coleman, A. E.||Coleman|||E|false|true|A
+Santos, J. E. P.||Santos|||E P|false|true|J
+Goff, J. P.||Goff|||P|false|true|J
+Risco, C. A.||Risco|||A|false|true|C
+Pogue-Geile, Katherine L.||Pogue-Geile|||L|false|false|Katherine
+Song, Nan||Song||||false|false|Nan
+Jeong, Jong-Hyeon||Jeong||||false|false|Jong-Hyeon
+Gavin, Patrick G.||Gavin|||G|false|false|Patrick
+Kim, Seong-Rim||Kim||||false|false|Seong-Rim
+Blackmon, Nicole L.||Blackmon|||L|false|false|Nicole
+Finnigan, Melanie||Finnigan||||false|false|Melanie
+Rastogi, Priya||Rastogi||||false|false|Priya
+Fehrenbacher, Louis||Fehrenbacher||||false|false|Louis
+Mamounas, Eleftherios P.||Mamounas|||P|false|false|Eleftherios
+Swain, Sandra M.||Swain|||M|false|false|Sandra
+Wickerham, D. Lawrence||Wickerham|||Lawrence|false|false|D
+Geyer, Jr., Charles E.|Jr.|Geyer|||E|false|false|Charles
+Costantino, Joseph P.||Costantino|||P|false|false|Joseph
+Wolmark, Norman||Wolmark||||false|false|Norman
+Paik, Soonmyung||Paik||||true|false|Soonmyung
+Khachatryan, V.||Khachatryan||||true|false|V
+Sirunyan, A. M.||Sirunyan|||M|false|false|A
+Tumasyan, A.||Tumasyan||||false|false|A
+Adam, W.||Adam||||false|false|W
+Bergauer, T.||Bergauer||||false|false|T
+Dragicevic, M.||Dragicevic||||false|false|M
+Eroe, J.||Eroe||||false|false|J
+Friedl, M.||Friedl||||false|false|M
+Fruehwirth, R.||Fruehwirth||||false|false|R
+Ghete, V. M.||Ghete|||M|false|false|V
+Hartl, C.||Hartl||||false|false|C
+Hoermann, N.||Hoermann||||false|false|N
+Hrubec, J.||Hrubec||||false|false|J
+Jeitler, M.||Jeitler||||false|false|M
+Kiesenhofer, W.||Kiesenhofer||||false|false|W
+Knuenz, V.||Knuenz||||false|false|V
+Krammer, M.||Krammer||||false|false|M
+Kraetschmer, I.||Kraetschmer||||false|false|I
+Liko, D.||Liko||||false|false|D
+Mikulec, I.||Mikulec||||false|false|I
+Rabady, D.||Rabady||||false|false|D
+Rahbaran, B.||Rahbaran||||false|false|B
+Rohringer, H.||Rohringer||||false|false|H
+Schoefbeck, R.||Schoefbeck||||false|false|R
+Strauss, J.||Strauss||||false|false|J
+Treberer-Treberspurg, W.||Treberer-Treberspurg||||false|false|W
+Waltenberger, W.||Waltenberger||||false|false|W
+Wulz, C. E.||Wulz|||E|false|false|C
+Mossolov, V.||Mossolov||||false|false|V
+Shumeiko, N.||Shumeiko||||false|false|N
+Gonzalez, J. Suarez||Gonzalez|||Suarez|false|false|J
+Alderweireldt, S.||Alderweireldt||||false|false|S
+Bansal, S.||Bansal||||false|false|S
+Cornelis, T.||Cornelis||||false|false|T
+De Wolf, E. A.||De Wolf|||A|false|false|E
+Janssen, X.||Janssen||||false|false|X
+Knutsson, A.||Knutsson||||false|false|A
+Lauwers, J.||Lauwers||||false|false|J
+Luyckx, S.||Luyckx||||false|false|S
+Ochesanu, S.||Ochesanu||||false|false|S
+Rougny, R.||Rougny||||false|false|R
+De Klundert, M. Van||De Klundert|||Van|false|false|M
+Van Haevermaet, H.||Van Haevermaet||||false|false|H
+Van Mechelen, P.||Van Mechelen||||false|false|P
+Van Remortel, N.||Van Remortel||||false|false|N
+Van Spilbeeck, A.||Van Spilbeeck||||false|false|A
+Blekman, F.||Blekman||||false|false|F
+Blyweert, S.||Blyweert||||false|false|S
+D'Hondt, J.||D'Hondt||||false|false|J
+Daci, N.||Daci||||false|false|N
+Khachatryan, V.||Khachatryan||||true|false|V
+Sirunyan, A. M.||Sirunyan|||M|false|false|A
+Tumasyan, A.||Tumasyan||||false|false|A
+Adam, W.||Adam||||false|false|W
+Bergauer, T.||Bergauer||||false|false|T
+Dragicevic, M.||Dragicevic||||false|false|M
+Eroe, J.||Eroe||||false|false|J
+Friedl, M.||Friedl||||false|false|M
+Fruehwirth, R.||Fruehwirth||||false|false|R
+Ghete, V. M.||Ghete|||M|false|false|V
+Hartl, C.||Hartl||||false|false|C
+Hoermann, N.||Hoermann||||false|false|N
+Hrubec, J.||Hrubec||||false|false|J
+Jeitler, M.||Jeitler||||false|false|M
+Kiesenhofer, W.||Kiesenhofer||||false|false|W
+Knuenz, V.||Knuenz||||false|false|V
+Krammer, M.||Krammer||||false|false|M
+Kraetschmer, I.||Kraetschmer||||false|false|I
+Liko, D.||Liko||||false|false|D
+Mikulec, I.||Mikulec||||false|false|I
+Rabady, D.||Rabady||||false|false|D
+Rahbaran, B.||Rahbaran||||false|false|B
+Rohringer, H.||Rohringer||||false|false|H
+Schoefbeck, R.||Schoefbeck||||false|false|R
+Strauss, J.||Strauss||||false|false|J
+Treberer-Treberspurg, W.||Treberer-Treberspurg||||false|false|W
+Waltenberger, W.||Waltenberger||||false|false|W
+Wulz, C. E.||Wulz|||E|false|false|C
+Mossolov, V.||Mossolov||||false|false|V
+Shumeiko, N.||Shumeiko||||false|false|N
+Gonzalez, J. Suarez||Gonzalez|||Suarez|false|false|J
+Alderweireldt, S.||Alderweireldt||||false|false|S
+Bansal, S.||Bansal||||false|false|S
+Cornelis, T.||Cornelis||||false|false|T
+De Wolf, E. A.||De Wolf|||A|false|false|E
+Janssen, X.||Janssen||||false|false|X
+Knutsson, A.||Knutsson||||false|false|A
+Lauwers, J.||Lauwers||||false|false|J
+Luyckx, S.||Luyckx||||false|false|S
+Ochesanu, S.||Ochesanu||||false|false|S
+Rougny, R.||Rougny||||false|false|R
+Van de Klundert, M.||Van de Klundert||||false|false|M
+Van Haevermaet, H.||Van Haevermaet||||false|false|H
+Van Mechelen, P.||Van Mechelen||||false|false|P
+Van Remortel, N.||Van Remortel||||false|false|N
+Van Spilbeeck, A.||Van Spilbeeck||||false|false|A
+Blekman, F.||Blekman||||false|false|F
+Blyweert, S.||Blyweert||||false|false|S
+D'Hondt, J.||D'Hondt||||false|false|J
+Daci, N.||Daci||||false|false|N
+Adam-Eldien, Rabie||Adam-Eldien||||false|true|Rabie
+Baldeo, Candice||Baldeo||||false|true|Candice
+Heilig, Charles||Heilig||||false|true|Charles
+Baldeo, Candice||Baldeo||||false|true|Candice
+Ali, Robert||Ali||||false|true|Robert
+Hritani, Abdulwahab||Hritani||||false|true|Abdulwahab
+Poenariu, Andreea||Poenariu||||false|true|Andreea
+Jamal, Muhsin||Jamal||||false|true|Muhsin
+Hussain, Tahir||Hussain||||false|false|Tahir
+Das, Chythanya Rajanna||Das|||Rajanna|false|true|Chythanya
+Andleeb, Saadia||Andleeb||||true|false|Saadia
+Park, Kyu-Tek||Park||||true|false|Kyu-Tek
+Heppner, John B.||Heppner|||B|false|false|John
+Bae, Yang-Seop||Bae||||false|false|Yang-Seop
+Staud, Roland||Staud||||true|true|Roland
+Dietl, Gregory P.||Dietl|||P|true|true|Gregory
+Kidwell, Susan M.||Kidwell|||M|false|true|Susan
+Brenner, Mark||Brenner||||false|true|Mark
+Burney, David A.||Burney|||A|false|true|David
+Flessa, Karl W.||Flessa|||W|false|true|Karl
+Jackson, Stephen T.||Jackson|||T|false|true|Stephen
+Koch, Paul L.||Koch|||L|false|true|Paul
+Baas, Pieter||Baas||||true|false|Pieter
+Srivastava, Rashmi||Srivastava||||false|false|Rashmi
+Manchester, Steven R.||Manchester|||R|false|true|Steven
+Wheeler, Elisabeth A.||Wheeler|||A|false|true|Elisabeth
+Boonchai, Nareerat||Boonchai||||true|false|Nareerat
+Manchester, Steven R.||Manchester|||R|false|true|Steven
+Wheeler, Elisabeth A.||Wheeler|||A|false|true|Elisabeth
+Zhang, Hua||Zhang||||false|false|Hua
+Dai, Xufeng||Dai||||false|false|Xufeng
+Qi, Yan||Qi||||false|false|Yan
+He, Ying||He||||false|false|Ying
+Du, Wei||Du||||false|true|Wei
+Pang, Ji-jing||Pang||||true|true|Ji-jing
+Edelmann, Jonathan||Edelmann||||true|true|Jonathan
+Girgis, Adel S.||Girgis|||S|true|false|Adel
+Panda, Siva S.||Panda|||S|false|false|Siva
+Srour, Aladdin M.||Srour|||M|false|false|Aladdin
+Farag, Hanaa||Farag||||false|false|Hanaa
+Ismail, Nasser S. M.||Ismail|||S M|false|false|Nasser
+Elgendy, Mohamed||Elgendy||||false|false|Mohamed
+Abdel-Aziz, Amal K.||Abdel-Aziz|||K|false|false|Amal
+Katritzky, Alan R.||Katritzky|||R|false|false|Alan
+Morris, N. Michael||Morris|||Michael|true|true|N
+Kuratko, Donald F.||Kuratko|||F|false|true|Donald
+Pryor, Christopher G.||Pryor|||G|false|true|Christopher

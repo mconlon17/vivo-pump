@@ -232,3 +232,6 @@ Corresponding author working.  Still need to find UF authors.
 * **2015-07-14** Add replace_initials to vivo_pump.  Add four test cases to test_vivo_pump.  author_prep_filter
 identifies UF authors.
 * **2015-07-15** Start on author_match_filter
+* **2015-07-18** vivo_get_authors added to vivopump.py.  Test case added to test_vivopump.py.  Keys on display name.  
+Needs something better.  Rename match filters to put entity first, match second.  Example journal_match_filter.py.
+ author_match_flter.py runs as expected.  Needs better tests.
