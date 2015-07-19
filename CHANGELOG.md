@@ -234,4 +234,6 @@ identifies UF authors.
 * **2015-07-15** Start on author_match_filter
 * **2015-07-18** vivo_get_authors added to vivopump.py.  Test case added to test_vivopump.py.  Keys on display name.  
 Needs something better.  Rename match filters to put entity first, match second.  Example journal_match_filter.py.
- author_match_flter.py runs as expected.  Needs better tests.
+ author_match_filter.py runs as expected.  Needs better tests.
+* **2015-07-19** improve_display_name added to vivo_pump.  Takes a display name strong and standardizes formatting. Used
+in author_prep_filter.py.

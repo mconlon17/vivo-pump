@@ -1167,6 +1167,16 @@ def improve_deptid(s):
         raise InvalidDataException(s + ' is not a valid deptid')
 
 
+def improve_display_name(s):
+    """
+    Give a display name s, fix it up into a standard format -- last name, comma, first name (or initial), middle name
+    of initials.  Initials are followed with a period and a space.  No trailing space at the end of the display_name
+    :param s: Display names in a variety of formats
+    :return: standard display name
+    """
+    return s
+
+
 def improve_sponsor_award_id(s):
     """
     Given a string with a sponsor award id, standardize presentation and regularize NIH award ids

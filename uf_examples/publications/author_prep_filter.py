@@ -30,7 +30,7 @@ __copyright__ = "Copyright 2015"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp
+from vivopump import read_csv_fp, write_csv_fp, improve_display_name
 import sys
 
 
@@ -163,6 +163,8 @@ for row, data in data_in.items():
         data_out[row_out] = dict(new_data)
         for key in author.keys():
             data_out[row_out][key] = author[key]
+            if key == 'display_name':
+                data_out[row_out][key] = improve_display_name(author[key])
 var_names = data_out[data_out.keys()[1]].keys()  # create a list of var_names from the first row
 print >>sys.stderr, "Columns out", var_names
 write_csv_fp(sys.stdout, data_out)
