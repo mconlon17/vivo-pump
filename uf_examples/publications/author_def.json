@@ -1,0 +1,177 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a foaf:Person .",
+        "type": "http://xmlns.com/foaf/0.1/Person"
+    }, 
+    "column_defs": {
+        "uri": [
+        ],
+        "remove": [
+        ],
+        "display_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "first": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "name": "vcardname"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#givenName"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "middle": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "name": "vcardname"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#additionalName"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "last": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "name": "vcardname"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#familyName"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "suffix": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "name": "vcardname"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2006/vcard/ns#honorificSuffix"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "corresponding": [
+            {
+                "comment": "corresponding is a property of authorships.  Not authors. Not processed here."
+            }
+        ],
+        "uf": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "author_types.txt"
+                }
+            }
+        ]
+    }
+}

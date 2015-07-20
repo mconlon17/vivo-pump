@@ -1174,6 +1174,9 @@ def improve_display_name(s):
     :param s: Display names in a variety of formats
     :return: standard display name
     """
+    # TODO: Write the guts of improve_display_name
+    # TODO: Add unit tests for improve_display_name
+    s = s.strip()
     return s
 
 

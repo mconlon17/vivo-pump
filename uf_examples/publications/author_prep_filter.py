@@ -22,8 +22,9 @@
     title2  author2 corresponding2  uf2
 
     etc.
-
 """
+# TODO: Add ORCID when available in the data source.  Currently no ORCID data is being provided.  When ORCID
+# data is provided, use it to match authors and then disambiguate the rest.
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015"
