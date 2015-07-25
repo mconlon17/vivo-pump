@@ -22,6 +22,10 @@ new publishers make it through the filter
 1. journal_columns_filter.py -- columns needed to manage journals
 1. unique_issn_filter.py -- remove duplicate issn
 1. match_journals.py -- match the journals in the source to the journals in VIVO
+1. author_prep_filter.py -- prepare columns for authors
+1. author_match_filter.py -- for uf authors, find uri, for non-uf authors, assume add
+1. pub_columns_filter.py -- select the columns for the publications ingest
+1. pub_match_filter.py -- match publications to existing pubs in VIVO.  Match authors.  Match journals.
 
 ## Handlers
 
