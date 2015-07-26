@@ -10,11 +10,11 @@ a match, generate a source file suitable for an update.
 1.  Journals are matched by ISSN
 1.  People are matched using a disambiguation handler.  UF people are matched by name.  Non-UF people are always 
 added as stubs
-1.  Publications are matched by PMID, DOI or title.
+1.  Publications are matched by PMID, DOI or title
 
 ## Filters
 
-1. bib2csv_filter.py -- read a bibtex file and output a CSV.  No edits to the bibtex.
+1. bib2csv_filter.py -- read a bibtex file and output a CSV.  No edits to the bibtex
 1. publish_columns_filter.py -- results in the columns needed for the publisher update
 1. unique_name_filter.py -- remove duplicate publisher names
 1. match_publishers.py -- matches publishers in source to publishers in VIVO.  Matches are discarded.  Only
@@ -25,7 +25,7 @@ new publishers make it through the filter
 1. author_prep_filter.py -- prepare columns for authors
 1. author_match_filter.py -- for uf authors, find uri, for non-uf authors, assume add
 1. pub_columns_filter.py -- select the columns for the publications ingest
-1. pub_match_filter.py -- match publications to existing pubs in VIVO.  Match authors.  Match journals.
+1. pub_match_filter.py -- match publications to existing pubs in VIVO.  Match authors.  Match journals
 
 ## Handlers
 
@@ -91,5 +91,5 @@ Disambiguation handler
 
 1. Inspect the disambiguation report and manually determine which changes must be made and make them in VIVO using
 the web interface.  A UF weekly ingest typically involves 120 papers, 360 UF authors, and 20 disambiguations to 
-be resolved manually.  Typically takes about an hour.
+be resolved manually.  Typically takes about an hour
 1. Update appropriate documentation regarding actions and results
