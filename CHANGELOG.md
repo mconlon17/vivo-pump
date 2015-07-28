@@ -239,4 +239,5 @@ Needs something better.  Rename match filters to put entity first, match second.
 * **2015-07-19** improve_display_name added to vivo_pump.  Takes a display name strong and standardizes formatting. Used
 in author_prep_filter.py.
 * **2015-07-20** Add TODOs. Begin uf_examples/publications/author_def.json.  Add author_types.json
-* **2015-07-21** Add sv_author.cfg 
+* **2015-07-21** Add sv_author.cfg
+* **2015-07-26** Start pub_columns_filter.py.  Add pub_update_data.txt
