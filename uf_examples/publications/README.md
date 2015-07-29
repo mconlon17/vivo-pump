@@ -25,6 +25,8 @@ new publishers make it through the filter
 1. author_prep_filter.py -- prepare columns for authors
 1. author_match_filter.py -- for uf authors, find uri, for non-uf authors, assume add
 1. pub_columns_filter.py -- select the columns for the publications ingest
+1. pubmed_match_filter.py -- find publications in pubmed and add pubmed attributes (pubmed central link, abstract,
+keywords, nihmsid, pmcid
 1. pub_match_filter.py -- match publications to existing pubs in VIVO.  Match authors.  Match journals
 
 ## Handlers
@@ -79,7 +81,7 @@ Disambiguation handler
 1. Add publications to VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python pub_columns_filter.py | 
-        python match_pubs_filter.py > pub_update_data.txt
+        python pubmed_match_filter.py | python pub_match_filter.py > pub_update_data.txt
         
            
     Then
