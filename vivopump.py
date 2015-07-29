@@ -1195,3 +1195,19 @@ def improve_sponsor_award_id(s):
         return match_object.group(1).upper() + match_object.group(2).upper()
     else:
         return s
+
+
+def parse_pages(pages):
+    """
+    Give a string possibly containing a start and end page, return the start and end page if any
+    :param pages:
+    :return: list with start and end pages
+    """
+    if '-' in pages:
+        k = pages.find('-')
+        start = pages[0:k]
+        end = pages[k:]
+    else:
+        start = pages
+        end = ''
+    return [start, end]

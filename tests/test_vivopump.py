@@ -13,7 +13,7 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
-    improve_jobcode_description, improve_course_title, replace_initials
+    improve_jobcode_description, improve_course_title, replace_initials, parse_pages
 from pump import Pump
 
 # TODO: Add test cases for each data scenario (six to go) -- easy
@@ -37,6 +37,14 @@ class ReplaceInitialsCase(unittest.TestCase):
     def test_replace_initials_consecutive_initials(self):
         t = replace_initials('This is A.B. test')
         self.assertEqual(t, 'This is AB test')
+
+
+class ParsePagesCase(unittest.TestCase):
+    def test_parse_pages_default(self):
+        [a, b] = parse_pages('30-55')
+        print a, b
+        self.assertEqual(a, '30')
+        self.assertEqual(b, '55')
 
 
 class NewUriTestCase(unittest.TestCase):
