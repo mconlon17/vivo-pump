@@ -46,6 +46,12 @@ class ParsePagesCase(unittest.TestCase):
         self.assertEqual(a, '30')
         self.assertEqual(b, '55')
 
+    def test_parse_pages_no_end(self):
+        [a, b] = parse_pages('30')
+        print a, b
+        self.assertEqual(a, '30')
+        self.assertEqual(b, '')
+
 
 class NewUriTestCase(unittest.TestCase):
     def test_new_uri_default(self):

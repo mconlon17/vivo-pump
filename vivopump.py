@@ -1206,7 +1206,7 @@ def parse_pages(pages):
     if '-' in pages:
         k = pages.find('-')
         start = pages[0:k]
-        end = pages[k:]
+        end = pages[k+1:]
     else:
         start = pages
         end = ''
