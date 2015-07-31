@@ -13,7 +13,7 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
-    improve_jobcode_description, improve_course_title, replace_initials, parse_pages
+    improve_jobcode_description, improve_course_title, replace_initials, parse_pages, parse_date_parts
 from pump import Pump
 
 # TODO: Add test cases for each data scenario (six to go) -- easy
@@ -51,6 +51,23 @@ class ParsePagesCase(unittest.TestCase):
         print a, b
         self.assertEqual(a, '30')
         self.assertEqual(b, '')
+
+
+class ParseDatePartsCase(unittest.TestCase):
+    def test_parse_date_parts_default(self):
+        date = parse_date_parts('AUG', '2014')
+        print date
+        self.assertEqual(date, '2014-08-01T00:00:00')
+
+    def test_parse_date_parts_with_day(self):
+        date = parse_date_parts('AUG 15', '2014')
+        print date
+        self.assertEqual(date, '2014-08-15T00:00:00')
+
+    def test_parse_date_parts_with_months(self):
+        date = parse_date_parts('JUL-AUG', '2014')
+        print date
+        self.assertEqual(date, '2014-07-01T00:00:00')
 
 
 class NewUriTestCase(unittest.TestCase):

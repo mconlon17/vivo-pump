@@ -244,3 +244,5 @@ in author_prep_filter.py.
 * **2015-07-28** Add sv_pub.cfg.  Start pub_match_filter.py.  Improve uf_examples/publications/README.md
 * **2015-07-29** Add parse_pages to vivopump.py with test cases in testvivopump.py. Update pub_columns_filter to 
 create start_page and end_page in pub_update_data.txt
+* **2015-07-30** Add parse_date_parts to vivopump.py and test cases in testvivopump.py.  Update pub_columns_filter to
+create date in pub_update_data.txt

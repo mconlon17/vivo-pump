@@ -1211,3 +1211,31 @@ def parse_pages(pages):
         start = pages
         end = ''
     return [start, end]
+
+
+def parse_date_parts(month, year):
+    """
+    Given a mont string and a year string from publisher data, parse apart the month, day and year and create
+    a standard date string that can be used as input to VIVO
+    :param month: string from publisher data.  May be text such as 'JUN' or 'Jun 15' with day number included
+    :param year: string of year such as '2015'
+    :return: date string in isoformat
+    """
+    month_numbers = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6,
+                     'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12,
+                     'SUM': 6, 'FAL': 9, 'WIN': 12, 'SPR': 3, '': 1}
+    from datetime import datetime
+    if ' ' in month:
+        k = month.find(' ')
+        month_name = month[0:k]
+        month_day = month[k + 1:]
+    elif '-' in month:
+        k = month.find('-')
+        month_name = month[0:k]
+        month_day = '1'
+    else:
+        month_name = month
+        month_day = '1'
+    month_number = month_numbers[month_name.upper()]
+    date_value = datetime(int(year), month_number, int(month_day))
+    return date_value.isoformat()
