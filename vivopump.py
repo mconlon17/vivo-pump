@@ -537,8 +537,9 @@ def vivo_query(query, parms={'query_uri': 'http://localhost:8080/vivo/api/sparql
     sparql.setReturnFormat(JSON)
     sparql.addParameter("email", parms['username'])
     sparql.addParameter("password", parms['password'])
-    sparql.setCredentials(parms['username'], parms['password'])
-    results = sparql.query().convert()
+    # sparql.setCredentials(parms['username'], parms['password'])
+    results = sparql.query()
+    results = results.convert()
     return results
 
 

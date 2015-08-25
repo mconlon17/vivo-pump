@@ -246,3 +246,4 @@ in author_prep_filter.py.
 create start_page and end_page in pub_update_data.txt
 * **2015-07-30** Add parse_date_parts to vivopump.py and test cases in testvivopump.py.  Update pub_columns_filter to
 create date in pub_update_data.txt
+* **2015-08-24** Removed sparql.setCredentials from vivo_query.  
