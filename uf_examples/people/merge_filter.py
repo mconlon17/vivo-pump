@@ -47,7 +47,6 @@ for row, data in data_in.items():
 # attributes can be checked and updated.  Their data starts as blank -- no update.  But they may gain values
 # through additional filtering operations
 
-
 row_number = max(data_in.keys())  # vivo will continue numbering rows from here
 blank_data = blank_data = dict(zip(vivo_data.keys(), ['' for x in vivo_data.keys()]))
 print >>sys.stderr, blank_data

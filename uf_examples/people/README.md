@@ -4,8 +4,9 @@ Intended to be a weekly process to update information in VIVO about UF People.  
 
 1. The population of people.  All UF business rules are followed regarding who should be in VIVO and how they 
 should be represented.  Some rules (to be expanded)
-    1. Qualifying type of person
+    1. Qualifying type of person.  Type of person is derived from type of current position
     1. Does not have privacy flags that would prevent inclusion
+    1. Has opted in.  These people are included
     1. Is in a protected department.  People in these departments need to be shown in their parent departments
     1. Is not a person protected from edit.  Some people are protected from edit.  They can be indicated by uid or
 uri.  These people are untouched by the person ingest.
@@ -24,14 +25,14 @@ The steps below ingest data into UF VIVO
 1. Review and update the following input files
     1.  *position_data.csv* -- the weekly pay list from UF.  All people paid by the university.  Abut 40K records
     1.  *contact_data.txt* -- UF directory data for all UFIDs.  2M records
-    1.  *deptid_exceptions.txt* -- patterns of reassigned deptids.  People with home departments matching these patterns
-re reassigned to home departments as indicated in the file
+    1.  *deptid_exceptions_data.txt* -- patterns of deptids with exceptions.  People with home departments matching these 
+    patterns re reassigned to home departments as indicated in the deptid_exceptions_data file
     1.  *salary_plan_enum.txt* -- salary plans indicate the type of person. People must have qualifying
 salary plans to be included.
     1.  *privacy_data.txt* -- UF directory privacy flag data for all UFIDs.  2M records
-    1.  *ufid_exceptions.txt* -- ufids that are exempt from automatic update
-    1.  *uri_exceptions.txt* -- uris that are exempt from automatic update
-1. Run create_shelves to update the shelve versions of these files
+    1.  *ufid_exceptions_data.txt* -- ufids that are exempt from automatic update
+    1.  *uri_exceptions_data.txt* -- uris that are exempt from automatic update
+1. Run create_shelves to update the shelve versions of these files.  Shelves are used for rapid keyed access
 1. Run the chain of filters to prepare data for the pump
 
     cat position_data.csv | python salary_plan_filter.py | python manage_columns_filter.py | python merge_filter.py | 
@@ -79,6 +80,6 @@ their privacy flags, or end up on an improved exception list, they are removed o
 1. Final filters handle people excluded from editing, setting all their values to blank.  This insures that these
 people are not edited by the pump.  We leave them in the person_update_data so that data managers can see them
 and apply manual edits to these records if needed.
-1. The pump makes the changes requested in person_update_data.txt
+1. The pump makes the changes requested in person_update_data.txt, creating add and sub rdf
 
 # TODO: Add person type
