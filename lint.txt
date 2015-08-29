@@ -1,11 +1,4 @@
 ************* Module vivopump
 W:183, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
 W:1129, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-C: 74, 4: Invalid variable name "fp" (invalid-name)
-C: 80, 0: Invalid argument name "fp" (invalid-name)
-C:135, 0: Invalid argument name "fp" (invalid-name)
-C:499,16: Invalid variable name "p2" (invalid-name)
-C:500,16: Invalid variable name "o2" (invalid-name)
-C:503,20: Invalid variable name "p3" (invalid-name)
-C:504,20: Invalid variable name "o3" (invalid-name)
-W:528, 0: Dangerous default value {'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery', 'username': 'vivo_root@school.edu', 'password': 'v;bisons'} as argument (dangerous-default-value)
+W:528, 0: Dangerous default value {} as argument (dangerous-default-value)
