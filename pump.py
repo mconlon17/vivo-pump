@@ -202,8 +202,8 @@ class Pump(object):
                     vivo_objs = {}
                     for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
                         vivo_objs[unicode(o)] = o
-                    column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
-                                                          column_name)
+                    column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
+                                                          row, column_name)
                     if self.verbose:
                         print row, column_name, column_values, uri, vivo_objs
                     do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
@@ -329,7 +329,7 @@ def do_get(update_def, enum, filename, inter='\t', intra=';', do_filter=True, de
     """
     from vivopump import vivo_query
     import codecs
-    from vivopump import improve_title, repair_email, repair_phone_number, improve_date, \
+    from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid
 
     query = make_get_query(update_def)
@@ -399,7 +399,7 @@ def do_get(update_def, enum, filename, inter='\t', intra=';', do_filter=True, de
     return len(data)
 
 
-def prepare_column_values(update_string, intra, step_def, enum, row, column_name, debug=False):
+def prepare_column_values(update_string, intra, step_def, enum, row, column_name):
     """
     Given the string of data from the update file, the step definition, the row and column name of the
     update_string in the update file, enumerations and filters, prepare the column values and return them
@@ -649,7 +649,7 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
             if step_def['object']['literal']:
                 update_graph.add((uri, step_def['predicate']['ref'],
                                   Literal(value, datatype=step_def['object'].get('datatype', None),
-                                  lang=step_def['object'].get('lang', None))))
+                                          lang=step_def['object'].get('lang', None))))
             else:
                 update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
         for value in sub_values:

@@ -1,105 +1,11 @@
-************* Module pump
-W:190,23: Unused variable 'p' (unused-variable)
-W:190,20: Unused variable 's' (unused-variable)
-W:392,31: Use of eval (eval-used)
-W:360, 4: Unused variable 'repair_email' (unused-variable)
-W:360, 4: Unused variable 'repair_phone_number' (unused-variable)
-W:360, 4: Unused variable 'improve_title' (unused-variable)
-W:418,26: Unused variable 'p' (unused-variable)
-W:418,23: Unused variable 's' (unused-variable)
-
-
-Report
-======
-271 statements analysed.
-
-Statistics by type
-------------------
-
-+---------+-------+-----------+-----------+------------+---------+
-|type     |number |old number |difference |%documented |%badname |
-+=========+=======+===========+===========+============+=========+
-|module   |1      |1          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|class    |2      |2          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|method   |9      |9          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-|function |8      |8          |=          |100.00      |0.00     |
-+---------+-------+-----------+-----------+------------+---------+
-
-
-
-Raw metrics
------------
-
-+----------+-------+------+---------+-----------+
-|type      |number |%     |previous |difference |
-+==========+=======+======+=========+===========+
-|code      |295    |56.62 |295      |=          |
-+----------+-------+------+---------+-----------+
-|docstring |136    |26.10 |136      |=          |
-+----------+-------+------+---------+-----------+
-|comment   |30     |5.76  |30       |=          |
-+----------+-------+------+---------+-----------+
-|empty     |60     |11.52 |60       |=          |
-+----------+-------+------+---------+-----------+
-
-
-
-Duplication
------------
-
-+-------------------------+------+---------+-----------+
-|                         |now   |previous |difference |
-+=========================+======+=========+===========+
-|nb duplicated lines      |0     |0        |=          |
-+-------------------------+------+---------+-----------+
-|percent duplicated lines |0.000 |0.000    |=          |
-+-------------------------+------+---------+-----------+
-
-
-
-Messages by category
---------------------
-
-+-----------+-------+---------+-----------+
-|type       |number |previous |difference |
-+===========+=======+=========+===========+
-|convention |0      |0        |=          |
-+-----------+-------+---------+-----------+
-|refactor   |0      |2        |-2.00      |
-+-----------+-------+---------+-----------+
-|warning    |8      |8        |=          |
-+-----------+-------+---------+-----------+
-|error      |0      |0        |=          |
-+-----------+-------+---------+-----------+
-
-
-
-Messages
---------
-
-+----------------+------------+
-|message id      |occurrences |
-+================+============+
-|unused-variable |7           |
-+----------------+------------+
-|eval-used       |1           |
-+----------------+------------+
-
-
-
-Global evaluation
------------------
-Your code has been rated at 9.70/10 (previous run: 9.63/10, +0.07)
-
-External dependencies
----------------------
-::
-
-    rdflib (pump)
-    vivopump (pump)
-
-
-
+************* Module vivopump
+W:183, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:1129, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+C: 74, 4: Invalid variable name "fp" (invalid-name)
+C: 80, 0: Invalid argument name "fp" (invalid-name)
+C:135, 0: Invalid argument name "fp" (invalid-name)
+C:499,16: Invalid variable name "p2" (invalid-name)
+C:500,16: Invalid variable name "o2" (invalid-name)
+C:503,20: Invalid variable name "p3" (invalid-name)
+C:504,20: Invalid variable name "o3" (invalid-name)
+W:528, 0: Dangerous default value {'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery', 'username': 'vivo_root@school.edu', 'password': 'v;bisons'} as argument (dangerous-default-value)

@@ -14,7 +14,6 @@
     Outputs:  spreadsheet with current state.  VIVO state changes. stdout with date times and messages.
 
     See CHANGELOG.md for history
-
 """
 
 __author__ = "Michael Conlon"
@@ -27,17 +26,17 @@ import argparse
 import ConfigParser
 from pump import Pump
 
-# Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
-# is used
-# 1. Defaults in the code.  These defaults are coded for each parameter in the add_argument calls below
-# 2. Values in the config file.  sv.py will read a config file and set the values of the parameters
-# 3. Command line parameters
+#   Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
+#   is used
+#   1. Defaults in the code.  These defaults are coded for each parameter in the add_argument calls below
+#   2. Values in the config file.  sv.py will read a config file and set the values of the parameters
+#   3. Command line parameters
 #
-#  Program defaults are overwritten by config file values which are overwritten by command line parameters.  Each
-#  parameter is handled independently of the others.  So one parameter might be set by the command line, another
-#  by program defaults (because it was unspecified on the command line and was not specified in the config file)
-#  and a third parameter's value might come from the config file, overwriting the program default and left unspecified
-#  on the command line
+#   Program defaults are overwritten by config file values which are overwritten by command line parameters.  Each
+#   parameter is handled independently of the others.  So one parameter might be set by the command line, another
+#   by program defaults (because it was unspecified on the command line and was not specified in the config file)
+#   and a third parameter's value might come from the config file, overwriting the program default and left unspecified
+#   on the command line
 
 print datetime.now(), "Start"
 program_defaults = {
@@ -79,22 +78,22 @@ args = parser.parse_args()
 if args.config is None:
     args.config = program_defaults['config']
 
-# Config file values overwrite program defaults
+#   Config file values overwrite program defaults
 
 config = ConfigParser.ConfigParser()
 conf = {}
-config.read(args.config)  # Read the config file from the config file specified in the command line args
+config.read(args.config)  # Read the config file from the config filename specified in the command line args
 for section in config.sections():
     for name, val in config.items(section):
         program_defaults[name] = val
 
-# Non null command line values overwrite the config file values
+#   Non null command line values overwrite the config file values
 
 for name, val in vars(args).items():
     if val is not None:
         program_defaults[name] = val
 
-# And put the final values back in args
+#   Put the final values back in args
 
 for name, val in program_defaults.items():
     vars(args)[name] = val
@@ -102,11 +101,11 @@ for name, val in program_defaults.items():
 if args.verbose:
     print datetime.now(), "Arguments\n", vars(args)
 
+#   Create a Pump and use it to perform the requested actions based on arguments
+
 p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'query_uri': args.queryuri,
                                                                          'username': args.pwd, 'password': args.pwd},
          uri_prefix=args.uriprefix)
-
-p.filters = args.nofilters
 if args.action == 'get':
     n_rows = p.get(args.src, args.inter, args.intra)
     print datetime.now(), n_rows, "rows in", args.src
@@ -118,7 +117,6 @@ elif args.action == 'update':
     sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
     print >>sub_file, sub_graph.serialize(format='nt')
     sub_file.close()
-
     print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
 elif args.action == 'summarize':
     print p.summarize()

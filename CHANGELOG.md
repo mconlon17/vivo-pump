@@ -248,4 +248,5 @@ create start_page and end_page in pub_update_data.txt
 create date in pub_update_data.txt
 * **2015-08-24** Removed sparql.setCredentials from vivo_query.
 * **2015-08-28** Finally! A complete, realistic, draft of the UF person_def.json  Whew.
-* **2015-08-29** Improve README and copyright notices
+* **2015-08-29** Improve README and copyright notices. Pylint and PEP code improvements for sv.py, pump.py and
+vivopump.py

@@ -19,7 +19,10 @@
       <w>fullpath</w>
       <w>fuseki</w>
       <w>healthcare</w>
+      <w>interfield</w>
       <w>intra</w>
+      <w>intrafield</w>
+      <w>isoformat</w>
       <w>mycities</w>
       <w>nofilter</w>
       <w>nofilters</w>
@@ -27,16 +30,21 @@
       <w>obolibrary</w>
       <w>parms</w>
       <w>pyunit</w>
+      <w>queryuri</w>
+      <w>rdfprefix</w>
       <w>repl</w>
       <w>sewect</w>
       <w>sponsorid</w>
       <w>stardog</w>
       <w>stdout</w>
       <w>tising</w>
+      <w>ufrf</w>
+      <w>uriprefix</w>
       <w>uriref</w>
       <w>vcardemail</w>
       <w>vivopump</w>
       <w>vivotools</w>
+      <w>wuft</w>
     </words>
   </dictionary>
 </component>

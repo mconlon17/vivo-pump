@@ -3,14 +3,13 @@
 """
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015, University of Florida"
+__copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "BSD 3-Clause license"
 __version__ = "1.01"
 
 import csv
 import string
 import random
-import re
 
 
 class InvalidDataException(Exception):
@@ -40,23 +39,38 @@ class UnicodeCsvReader(object):
         return self
 
     def next(self):
-        # read and split the csv row into fields
+        """
+        Read and split the csv row into fields
+        """
         row = self.csv_reader.next()
         # now decode
         return [unicode(cell, self.encoding, errors='ignore') for cell in row]
 
     @property
     def line_num(self):
+        """
+        Return line number
+        """
         return self.csv_reader.line_num
 
 
 class UnicodeDictReader(csv.DictReader):
+    """
+    A Unicode CSV Reader
+    """
     def __init__(self, f, encoding="utf-8", fieldnames=None, **kwds):
         csv.DictReader.__init__(self, f, fieldnames=fieldnames, **kwds)
         self.reader = UnicodeCsvReader(f, encoding=encoding, **kwds)
 
 
 def read_csv(filename, skip=True, delimiter='|'):
+    """
+    Read a CSV file, return dictionary object
+    :param filename: name of file to read
+    :param skip: should lines with invalid number of columns be skipped?  False=Throw Exception
+    :param delimiter: The delimiter for CSV files
+    :return: Dictionary object
+    """
     fp = open(filename, 'rU')
     data = read_csv_fp(fp, skip, delimiter)
     fp.close()
@@ -84,6 +98,9 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
     """
 
     class RowError(Exception):
+        """
+        Thrown when the number of data elements on a row in a CSV is not equal to the number of header elements
+        """
         pass
 
     heading = []
@@ -116,6 +133,13 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
 
 
 def write_csv_fp(fp, data, delimiter='|'):
+    """
+    Write a CSV to a file pointer.  Used to support stdout.
+    :param fp: File pointer.  Could be stdout.
+    :param data: data to be written
+    :param delimiter: field delimiter for output
+    :return:
+    """
     var_names = data[data.keys()[1]].keys()  # create a list of var_names from the first row
     fp.write(delimiter.join(var_names) + '\n')
     for key in sorted(data.keys()):
@@ -151,6 +175,9 @@ def replace_initials(s):
     import re
 
     def repl_function(m):
+        """
+        Helper function for re.sub
+        """
         return m.group(0)[0]
 
     t = re.sub('[A-Z]\.', repl_function, s)
@@ -400,27 +427,26 @@ def make_update_query(entity_sparql, path):
     query = ""
     if len(path) == 1:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ?o\n' + \
-            '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o' + \
-            ' . ' + add_qualifiers(path) + ' \n}'
+                '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o' + \
+                ' . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 2:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
-            '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(
-            path[1]['predicate']['ref']) + '> as ?p2) ?o2\n' + \
-            '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
-            path[0]['object']['name'] + ' . ?' + \
-            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2' + \
-            ' . ' + add_qualifiers(path) + ' \n}'
+                '(?' + path[0]['object']['name'] + ' as ?o) (<' + \
+                str(path[1]['predicate']['ref']) + '> as ?p2) ?o2\n' + \
+                '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
+                path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2' + \
+                ' . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 3:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
-            '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(
-            path[1]['predicate']['ref']) + '> as ?p2) (?' + \
-            path[1]['object']['name'] + ' as ?o2) (<' + str(path[2]['predicate']['ref']) + '> as ?p3) ?o3\n' + \
-            'where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
-            path[0]['object']['name'] + ' . ?' + \
-            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
-            path[1]['object']['name'] + \
-            ' . ?' + path[1]['object']['name'] + ' <' + str(
-            path[2]['predicate']['ref']) + '> ?o3' + ' . ' + add_qualifiers(path) + ' \n}'
+                '(?' + path[0]['object']['name'] + ' as ?o) (<' + str(path[1]['predicate']['ref']) + '> as ?p2) (?' + \
+                path[1]['object']['name'] + ' as ?o2) (<' + str(path[2]['predicate']['ref']) + '> as ?p3) ?o3\n' + \
+                'where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
+                path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
+                path[1]['object']['name'] + \
+                ' . ?' + path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?o3' + \
+                ' . ' + add_qualifiers(path) + ' \n}'
     return query
 
 
@@ -500,7 +526,7 @@ def new_uri(uri_prefix='http://vivo.school.edu/individual/'):
 
 
 def vivo_query(query, parms={'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery',
-               'username': 'vivo_root@school.edu', 'password': 'v;bisons'}, debug=False):
+                             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}, debug=False):
     """
     A new VIVO query function using SparqlWrapper.  Tested with Stardog, UF VIVO and Dbpedia
     :param query: SPARQL query.  VIVO PREFIX will be added
@@ -556,10 +582,12 @@ def write_update_def(update_def, filename):
     return
 
 
-def repair_email(email, exp=re.compile(r'\w+\.*\w+@\w+\.(\w+\.*)*\w+')):
+def improve_email(email):
     """
     Given an email string, fix it
     """
+    import re
+    exp = re.compile(r'\w+\.*\w+@\w+\.(\w+\.*)*\w+')
     s = exp.search(email)
     if s is None:
         return ""
@@ -569,7 +597,7 @@ def repair_email(email, exp=re.compile(r'\w+\.*\w+@\w+\.(\w+\.*)*\w+')):
         return ""
 
 
-def repair_phone_number(phone, debug=False):
+def improve_phone_number(phone, debug=False):
     """
     Given an arbitrary string that attempts to represent a phone number,
     return a best attempt to format the phone number according to ITU standards
@@ -613,7 +641,7 @@ def repair_phone_number(phone, debug=False):
             for c in list(extension):
                 if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
                     extension_digits.append(c)
-            digits = []  # recalc the digits
+            digits = []  # recalculate the digits
             for c in list(phone_text[:i + 1]):
                 if c in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
                     digits.append(c)
@@ -655,7 +683,7 @@ def comma_space(s):
     """
     k = s.find(',')
     if -1 < k < len(s) - 1 and s[k + 1] != " ":
-        s = s[0:k] + ', ' + comma_space(s[k+1:])
+        s = s[0:k] + ', ' + comma_space(s[k + 1:])
     return s
 
 
@@ -721,7 +749,7 @@ def improve_jobcode_description(s):
     t = s.replace(", ,", ",")
     t = t.replace("  ", " ")
     t = t.replace("/", " @")
-    t = t.replace("/", " @") # might be two slashes in the input
+    t = t.replace("/", " @")  # might be two slashes in the input
     t = t.replace(",", " !")
     t = t.replace("-", " #")
     t = t.replace("Aca ", "Academic ")
@@ -838,11 +866,11 @@ def improve_jobcode_description(s):
     t = t.replace("Postdoc ", "Postdoctoral ")
     t = t.replace("Tech ", "Technician ")
     t = t.replace("Vp ", "Vice President ")
-    t = t.replace(" @", "/") # restore /
+    t = t.replace(" @", "/")  # restore /
     t = t.replace(" @", "/")
-    t = t.replace(" !", ",") # restore ,
-    t = t.replace(" #", "-") # restore -
-    return t[:-1] # Take off the trailing space
+    t = t.replace(" !", ",")  # restore ,
+    t = t.replace(" #", "-")  # restore -
+    return t[:-1]  # Take off the trailing space
 
 
 def improve_title(s):
@@ -857,10 +885,10 @@ def improve_title(s):
     """
     if s == "":
         return s
-    if s[len(s)-1] == ',':
-        s = s[0:len(s)-1]
-    if s[len(s)-1] == ',':
-        s = s[0:len(s)-1]
+    if s[len(s) - 1] == ',':
+        s = s[0:len(s) - 1]
+    if s[len(s) - 1] == ',':
+        s = s[0:len(s) - 1]
     s = s.lower()  # convert to lower
     s = s.title()  # uppercase each word
     s += ' '    # add a trailing space so we can find these abbreviated words throughout the string
@@ -1207,7 +1235,7 @@ def parse_pages(pages):
     if '-' in pages:
         k = pages.find('-')
         start = pages[0:k]
-        end = pages[k+1:]
+        end = pages[k + 1:]
     else:
         start = pages
         end = ''

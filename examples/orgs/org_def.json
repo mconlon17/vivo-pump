@@ -171,7 +171,7 @@
                     "ref": "http://vivoweb.org/ontology/core#primaryPhone"
                 }, 
                 "object": {
-                    "filter": "repair_phone_number", 
+                    "filter": "improve_phone_number",
                     "literal": true
                 }
             }
@@ -256,7 +256,7 @@
                     "ref": "http://vivoweb.org/ontology/core#primaryEmail"
                 }, 
                 "object": {
-                    "filter": "repair_email", 
+                    "filter": "improve_email",
                     "literal": true
                 }
             }

@@ -224,6 +224,7 @@
                 },
                 "object": {
                     "literal": true,
+                    "filter": "improve_phone",
                     "datatype": "xsd:string"
                 }
             }
@@ -259,6 +260,7 @@
                 },
                 "object": {
                     "literal": true,
+                    "filter": "improve_phone",
                     "datatype": "xsd:string"
                 }
             }
@@ -291,7 +293,8 @@
                     "ref": "http://www.w3.org/2006/vcard/ns#email"
                 },
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "filter": "improve_email"
                 }
             }
         ],

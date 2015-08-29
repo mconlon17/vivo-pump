@@ -9,7 +9,7 @@ __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
 import unittest
-from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, repair_email, repair_phone_number, \
+from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, improve_email, improve_phone_number, \
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
@@ -201,19 +201,19 @@ class WriteUpdateDefTestCase(unittest.TestCase):
 class RepairEmailTestCase(unittest.TestCase):
     def test_no_op(self):
         in_email = "mconlon@ufl.edu"
-        out_email = repair_email(in_email)
+        out_email = improve_email(in_email)
         self.assertEqual(in_email, out_email)
 
 
 class RepairPhoneNumberTestCase(unittest.TestCase):
     def test_no_op(self):
         in_phone = "(352) 273-8700"
-        out_phone = repair_phone_number(in_phone)
+        out_phone = improve_phone_number(in_phone)
         self.assertEqual(in_phone, out_phone)
 
     def test_uf_special(self):
         in_phone = "3-8700"
-        out_phone = repair_phone_number(in_phone)
+        out_phone = improve_phone_number(in_phone)
         self.assertEqual("(352) 273-8700", out_phone)
 
 
