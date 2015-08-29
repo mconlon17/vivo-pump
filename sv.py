@@ -15,10 +15,10 @@
 
     See CHANGELOG.md for history
 
-"""
+"""Improve READ
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015, University of Florida"
+__copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.05"
 

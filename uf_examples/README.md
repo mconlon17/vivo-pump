@@ -17,19 +17,19 @@ someone refers to the organization on their profile.  All colleges, departments,
 UF adds people to its VIVO each week, based on a feed of position data from HR.  UF employees are identified by UFID,
 a single, opaque, random, eight digit number.  Professional staff, faculty, postdocs, consultants and others are added.  
 Students are not added unless they ask to be added.  Graduate students are not currently added, but would be added with
-a simple change in the pump scripts.  People are marked UFCurrentEntity is they appear in the position file for the 
+a simple change in the pump scripts.  People are marked UFCurrentEntity if they appear in the position file for the 
 week. 
 
 ## Positions
 
 UF updates positions for people each week.  Positions are linked to people by UFID, and to UF organizations by
-deptid (see above).  Data from the university enterprise data warehouse is replicated and used to update both people
-and positions.  Some positions disclose sensitive information and are not entered by rule.  UF uses "positions" for
-non employment purposes and these records are filtered and not added to VIVO.
+deptid (see above).  Data from the university enterprise data warehouse is extracted and used to update both people
+and positions.  Some positions disclose sensitive information and are not entered by rule.  UF uses positions for
+some non employment purposes and these records are filtered and not added to VIVO.
 
 ## Grants
 
-Grant award data are added to VIVO each week from files created from Division of Sponsored Research data resources. All
+Grant award data are added to VIVO each week from files created from Division of Sponsored Programs data resources. All
 grants are reviewed and updated each week.  Titles, award amounts and investigator lists (PI list, Co-Inv list,
 Investigator list) are updated as necessary.  UF does not record total award amounts -- only amount received.  This
 means that award amounts in VIVO may start at zero and be updated as funds are made available by the sponsor.
