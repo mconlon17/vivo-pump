@@ -15,7 +15,7 @@
 
     See CHANGELOG.md for history
 
-"""Improve READ
+"""
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
