@@ -23,6 +23,7 @@ for row, data in data_in.items():
     new_data = dict(data)
     if new_data['SAL_ADMIN_PLAN'] in vivo_plans:
         qualify += 1
+        new_data['types'] = new_data['SAL_ADMIN_PLAN']
         data_out[row] = new_data
     else:
         do_not_qualify += 1

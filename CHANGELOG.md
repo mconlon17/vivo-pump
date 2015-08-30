@@ -250,3 +250,5 @@ create date in pub_update_data.txt
 * **2015-08-28** Finally! A complete, realistic, draft of the UF person_def.json  Whew.
 * **2015-08-29** Improve README and copyright notices. Pylint and PEP code improvements for sv.py, pump.py and
 vivopump.py
+* **2015-08-30** Begin work in uf_examples/people to support person type update.  merge_filter, manage_columns,
+salary_plan_filter updated.

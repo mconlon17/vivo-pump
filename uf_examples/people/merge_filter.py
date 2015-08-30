@@ -4,7 +4,6 @@
     merge_filter.py -- merge the position data with the data in VIVO.  Oh my.  Add a column for uri, add a
     column for uf current, add a column for remove
 
-
     There are two inputs:
     1. UF people in VIVO, keyed by UFID
     2. UF people on the pay list.  Keyed by UFID
@@ -31,6 +30,8 @@ print >>sys.stderr, 'Source ufid', len(source_ufid)
 
 vivo_data = data_in[data_in.keys()[1]]  # Grab a row, any row
 
+#   Process ufid in VIVO and in Source
+
 for row, data in data_in.items():
     ufid = data['UFID']
     if ufid in vivo_ufids:  # ufid is in vivo and source
@@ -42,10 +43,10 @@ for row, data in data_in.items():
         data_out[row]['uri'] = ''
         data_out[row]['current'] = 'yes'
 
-# Some ufids are in VIVO and not in the source data (mostly people who have left the university and are
-# no longer being paid).  These people need to be in the update data so that their contact data and other
-# attributes can be checked and updated.  Their data starts as blank -- no update.  But they may gain values
-# through additional filtering operations
+#   Some ufids are in VIVO and not in the source data (mostly people who have left the university and are
+#   no longer being paid).  These people need to be in the update data so that their contact data and other
+#   attributes can be checked and updated.  Their data starts as blank -- no update.  But they may gain values
+#   through additional filtering operations
 
 row_number = max(data_in.keys())  # vivo will continue numbering rows from here
 blank_data = blank_data = dict(zip(vivo_data.keys(), ['' for x in vivo_data.keys()]))
