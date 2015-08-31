@@ -9,7 +9,8 @@ __copyright__ = "Copyright 2015, University of Florida"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, improve_phone_number, improve_display_name
+from vivopump import read_csv_fp, write_csv_fp, improve_phone_number, improve_display_name, \
+    improve_jobcode_description
 import shelve
 import sys
 
@@ -31,6 +32,7 @@ for row, data in data_in.items():
         new_data['UF_BUSINESS_FAX'] = improve_phone_number(new_data['UF_BUSINESS_FAX'])
         new_data['UF_BUSINESS_PHONE'] = improve_phone_number(new_data['UF_BUSINESS_PHONE'])
         new_data['DISPLAY_NAME'] = improve_display_name(new_data['DISPLAY_NAME'])
+        new_data['WORKINGTITLE'] = improve_jobcode_description(new_data['WORKINGTITLE'])
     else:
         not_found += 1
         for name in contact_names:

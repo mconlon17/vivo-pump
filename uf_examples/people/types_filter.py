@@ -40,9 +40,6 @@ for row, data in data_in.items():
     if src_type in plan_enum:
         src_type = type_enum[plan_enum[src_type]]
 
-    if new_data['uri'] in vivo_types:
-        print >>sys.stderr, src_type, new_data['uri'], vivo_types[new_data['uri']]
-
     #   Prepare the types column with values from VIVO, if any
 
     if new_data['uri'] in vivo_types:
@@ -52,8 +49,6 @@ for row, data in data_in.items():
             if type_uri in type_enum:
                 enum_list.append(type_enum[type_uri])
         types = ';'.join(enum_list)
-
-        print >>sys.stderr, new_data['uri'], types
     else:
         types = 'uf'
 
@@ -66,8 +61,6 @@ for row, data in data_in.items():
         types += ';ufc'
     elif new_data['current'] == 'no' and types.find('ufc') > -1:
         types = types.replace('ufc', '')
-
-    print >>sys.stderr, new_data['uri'], types, src_type
 
     #   All done.  Assign the new types
 
