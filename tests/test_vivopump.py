@@ -13,7 +13,8 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
-    improve_jobcode_description, improve_course_title, replace_initials, parse_pages, parse_date_parts
+    improve_jobcode_description, improve_course_title, replace_initials, parse_pages, parse_date_parts, \
+    improve_display_name
 from pump import Pump
 
 # TODO: Add test cases for each data scenario (six to go) -- easy
@@ -198,14 +199,26 @@ class WriteUpdateDefTestCase(unittest.TestCase):
         os.remove(filename)
 
 
-class RepairEmailTestCase(unittest.TestCase):
+class ImproveEmailTestCase(unittest.TestCase):
     def test_no_op(self):
         in_email = "mconlon@ufl.edu"
         out_email = improve_email(in_email)
         self.assertEqual(in_email, out_email)
 
 
-class RepairPhoneNumberTestCase(unittest.TestCase):
+class ImproveDisplayNameTestCase(unittest.TestCase):
+    def test_no_op(self):
+        in_name = "Conlon, Mike"
+        out_name = improve_display_name(in_name)
+        self.assertEqual(in_name, out_name)
+
+    def test_standard_case(self):
+        in_name = "CONLON,MIKE"
+        out_name = improve_display_name(in_name)
+        self.assertEqual("Conlon, Mike", out_name)
+
+
+class ImprovePhoneNumberTestCase(unittest.TestCase):
     def test_no_op(self):
         in_phone = "(352) 273-8700"
         out_phone = improve_phone_number(in_phone)

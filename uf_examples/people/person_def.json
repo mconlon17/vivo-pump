@@ -177,6 +177,7 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 },
                 "object": {
+                    "filter": "improve_display_name"
                     "literal": true
                 }
             }

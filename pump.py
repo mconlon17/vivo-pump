@@ -330,7 +330,7 @@ def do_get(update_def, enum, filename, inter='\t', intra=';', do_filter=True, de
     from vivopump import vivo_query
     import codecs
     from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
-        improve_dollar_amount, improve_sponsor_award_id, improve_deptid
+        improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
     query = make_get_query(update_def)
     if debug:

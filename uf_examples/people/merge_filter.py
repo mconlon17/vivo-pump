@@ -35,11 +35,11 @@ vivo_data = data_in[data_in.keys()[1]]  # Grab a row, any row
 for row, data in data_in.items():
     ufid = data['UFID']
     if ufid in vivo_ufids:  # ufid is in vivo and source
-        data_out[row] = data
+        data_out[row] = dict(data)
         data_out[row]['uri'] = vivo_ufid[ufid]
         data_out[row]['current'] = 'yes'
     else:  # ufid is in source, not in vivo
-        data_out[row] = data
+        data_out[row] = dict(data)
         data_out[row]['uri'] = ''
         data_out[row]['current'] = 'yes'
 

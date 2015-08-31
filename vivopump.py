@@ -1199,13 +1199,13 @@ def improve_deptid(s):
 def improve_display_name(s):
     """
     Give a display name s, fix it up into a standard format -- last name, comma, first name (or initial), middle name
-    of initials.  Initials are followed with a period and a space.  No trailing space at the end of the display_name
+    or initials.  Initials are followed with a period and a space.  No trailing space at the end of the display_name
     :param s: Display names in a variety of formats
     :return: standard display name
     """
-    # TODO: Write the guts of improve_display_name
-    # TODO: Add unit tests for improve_display_name
-    s = s.strip()
+    s = s.title()  # Capitalize each word
+    s = comma_space(s)  # put a blank after the comma
+    s = s.strip()  # remove trailing spaces
     return s
 
 
