@@ -197,6 +197,27 @@ def key_string(s):
     return k
 
 
+def get_vivo_types(selector, separator=';'):
+    """
+    Query VIVO using the selector and return a dictionary with keys of all uri satisfying the selector and
+    data of all the types for each uri, separated by the separator
+    :return: dictionary of types keyed by uri
+    """
+    query = """
+    select ?uri (GROUP_CONCAT(?type; separator="{{separator}}") AS ?types)
+    where {
+      {{selector}}
+      ?uri rdf:type ?type .}
+    GROUP BY ?uri
+    """
+    q = query.replace("{{separator}}", separator)
+    q = q.replace("{{selector}}", selector)
+    a = vivo_query(q)
+    types = [x['types']['value'] for x in a['results']['bindings']]
+    uri = [x['uri']['value'] for x in a['results']['bindings']]
+    return dict(zip(uri, types))
+
+
 def get_vivo_ufid():
     """
     Query VIVO and return a list of all the ufid found in VIVO

@@ -25,7 +25,7 @@ data_out = {}
 null_count = 0
 for row, data in data_in.items():
     new_data =dict(data)
-    vivo_types = get_vivo_types(uri)
+    vivo_types = get_vivo_types("?uri a uf:UFEntity .")
     data_out[row] = new_data
 print >>sys.stderr, "NULL values replaced", null_count
 write_csv_fp(sys.stdout, data_out)

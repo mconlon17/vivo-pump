@@ -254,4 +254,4 @@ vivopump.py
 salary_plan_filter updated.
 * **2015-08-31** null_value_filter.py added to uf_examples/people.  The filter replaces values of "NULL" with values of 
 empty string. Add deptid_enum.txt to uf_examples/people.  Add improve_display_name to vivopump and test cases to
-testvivopump.  Add improve filters to contact_filter
+testvivopump.  Add improve filters to contact_filter.  Add vivo_get_types to vivopump and test case to testvivopump.

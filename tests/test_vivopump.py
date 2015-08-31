@@ -10,7 +10,7 @@ __version__ = "1.00"
 
 import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, improve_email, improve_phone_number, \
-    comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, \
+    comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
     improve_jobcode_description, improve_course_title, replace_initials, parse_pages, parse_date_parts, \
@@ -174,6 +174,12 @@ class VIVOQueryTestCase(unittest.TestCase):
             WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
             """, debug=True)
             print result
+
+
+class VIVOGetTypesTestCase(unittest.TestCase):
+    def test_vivo_get_types(self):
+        result = get_vivo_types("?uri a foaf:Person .")
+        self.assertTrue(len(result) > 0)
 
 
 class VIVOGetUFIDTestCase(unittest.TestCase):
