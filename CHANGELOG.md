@@ -252,3 +252,5 @@ create date in pub_update_data.txt
 vivopump.py
 * **2015-08-30** Begin work in uf_examples/people to support person type update.  merge_filter, manage_columns,
 salary_plan_filter updated.
+* **2015-08-31** null_value_filter.py added to uf_examples/people.  The filter replaces values of "NULL" with values of 
+empty string.

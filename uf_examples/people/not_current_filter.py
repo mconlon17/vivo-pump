@@ -1,12 +1,12 @@
 #!/usr/bin/env/python
 
 """
-    not_current_filter.py -- handle people leaving uf.  Set their contact info and workingtitle to None to ensure
+    not_current_filter.py -- handle people leaving uf.  Set their contact info and working title to None to ensure
     these values are removed.
 """
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015, University of Florida"
+__copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 

@@ -325,19 +325,6 @@
                     "literal": true
                 }
             }
-        ]
-        "current": [
-            {
-                "predicate": {
-                    "single": true,
-                    "comment": "Would prefer to indicate that the set of values will be updated, not replaced"
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-                },
-                "object": {
-                    "literal": false,
-                    "enum": "current_enum.txt"
-                }
-            }
         ],
         "HOME_DEPT": [
             {
