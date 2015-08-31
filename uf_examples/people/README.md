@@ -37,8 +37,9 @@ salary plans to be included.
 
     cat position_data.csv | python salary_plan_filter.py | python manage_columns_filter.py | python merge_filter.py | 
     python privacy_filter.py | python contact_filter.py | python homedept_assignment_filter.py | 
-    python not_current_filter.py | python ufid_exception_filter.py | 
-    python uri_exception_filter.py | python null_value_filter.py >person_update_data.txt
+    python not_current_filter.py | python null_value_filter.py  | 
+    python types_filter.py | python ufid_exception_filter.py | 
+    python uri_exception_filter.py  >person_update_data.txt
     
 1. Inspect the person_update_data.txt
 1. Run the pump
@@ -56,10 +57,13 @@ particular person is in the source (current) or not
 1. homedept_assignment_filter -- for homedepts matching patterns in the input file, assign to corresponding home
 departments.
 1. not_current_filter -- for people no longer at UF, set their working title and UF contact info to None
-1. ufid_exception_filter -- blanks the data of people on the exception list.  These people will not be updated
-1. uri_exception_filter -- blanks the data of people on the exception list.  These people will not be updated
 1. null_value_filter -- replace all values of "NULL" with empty strings.  Enterprise data containing "NULL" indicates
 an unknown or missing value.  No change will be made in VIVO.
+1. types_filter -- create a multi-valued "types" field from values in VIVO, values in source, and UFCurrentEntity
+status.  Result is a delimited field whose values are codes from the people_types.txt file
+1. ufid_exception_filter -- blanks the data of people on the exception list.  These people will not be updated
+1. uri_exception_filter -- blanks the data of people on the exception list.  These people will not be updated
+
 
 
 ## Handlers needed
