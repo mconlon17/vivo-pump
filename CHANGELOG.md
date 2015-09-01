@@ -260,4 +260,4 @@ Add types_filter to uf_examples/people. Using improve_jobcode_description to imp
 uf_examples/person, which has been run to completion.  See person_add.rdf and person_sub.def. Improve 
 improve_jobcode_description.  uf_examples/positions salary_plan_enum updated.  uf_examples/positions updated.  Now
 runs to completion on positions_data_small and produces position_add.rdf and position_sub.rdf. Verbose now shows sizes
-of enums in the Pump.
+of enums in the Pump. Add qualifiers to position_def.json for ufid and deptid to address relates.
