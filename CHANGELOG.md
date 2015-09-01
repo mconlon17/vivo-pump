@@ -258,4 +258,6 @@ testvivopump.  Add improve filters to contact_filter.  Add vivo_get_types to viv
 Add types_filter to uf_examples/people. Using improve_jobcode_description to improve working_title in uf_examples.
 * **2015-09-01** Fix bug in write_csv_fp for spreadsheets with one row.  Create small version of position_data in 
 uf_examples/person, which has been run to completion.  See person_add.rdf and person_sub.def. Improve 
-improve_jobcode_description.  uf_examples/positions salary_plan_enum updated.
+improve_jobcode_description.  uf_examples/positions salary_plan_enum updated.  uf_examples/positions updated.  Now
+runs to completion on positions_data_small and produces position_add.rdf and position_sub.rdf. Verbose now shows sizes
+of enums in the Pump.

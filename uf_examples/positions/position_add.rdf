@@ -1,0 +1,56 @@
+<http://vivo.school.edu/individual/2330645866> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/3816211709> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/2859633186> .
+<http://vivo.school.edu/individual/7863297752> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#CourtesyFacultyPosition> .
+<http://vivo.school.edu/individual/1315198944> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/320898527> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/7017494766> .
+<http://vivo.school.edu/individual/3705785916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#NonAcademicPosition> .
+<http://vivo.school.edu/individual/6170996388> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/2299067793> .
+<http://vivo.school.edu/individual/1315198944> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/8068077143> .
+<http://vivo.school.edu/individual/2859633186> <http://vivoweb.org/ontology/core#dateTime> "2010-07-12"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8068077143> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/1465232466> <http://vivoweb.org/ontology/core#relates> <http://vivo.ufl.edu/individual/n9846733421> .
+<http://vivo.school.edu/individual/6792001591> <http://vivoweb.org/ontology/core#dateTime> "2013-08-16"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/9287585169> <http://vivoweb.org/ontology/core#relates> <http://vivo.ufl.edu/individual/n594132259> .
+<http://vivo.school.edu/individual/3705785916> <http://vivoweb.org/ontology/core#relates> <http://vivo.ufl.edu/individual/n1742584657> .
+<http://vivo.school.edu/individual/9287585169> <http://www.w3.org/2000/01/rdf-schema#label> "Courtesy Assistant Professor" .
+<http://vivo.school.edu/individual/6170996388> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#CourtesyFacultyPosition> .
+<http://vivo.school.edu/individual/320898527> <http://vivo.school.edu/ontology/uf-extension#hrTitle> "ADJ LECTURER" .
+<http://vivo.school.edu/individual/7017494766> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/6792001591> .
+<http://vivo.school.edu/individual/8306404890> <http://vivoweb.org/ontology/core#dateTime> "1993-07-02"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8068077143> <http://vivoweb.org/ontology/core#dateTime> "2001-10-23"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/9287585169> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#CourtesyFacultyPosition> .
+<http://vivo.school.edu/individual/7863297752> <http://vivoweb.org/ontology/core#relates> <http://vivo.ufl.edu/individual/n13794> .
+<http://vivo.school.edu/individual/3575853102> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/7342263709> .
+<http://vivo.school.edu/individual/7017494766> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/1465232466> <http://vivo.school.edu/ontology/uf-extension#hrTitle> "ADJ LECTURER" .
+<http://vivo.school.edu/individual/3705785916> <http://vivo.school.edu/ontology/uf-extension#hrTitle> "IT EXPERT" .
+<http://vivo.school.edu/individual/320898527> <http://vivoweb.org/ontology/core#relates> <http://vivo.ufl.edu/individual/n1673879240> .
+<http://vivo.school.edu/individual/7342263709> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/9287585169> <http://vivo.school.edu/ontology/uf-extension#hrTitle> "CO AST PROF" .
+<http://vivo.school.edu/individual/6170996388> <http://vivo.school.edu/ontology/uf-extension#hrTitle> "CO AST PROF" .
+<http://vivo.school.edu/individual/1465232466> <http://www.w3.org/2000/01/rdf-schema#label> "Adjunct Lecturer" .
+<http://vivo.school.edu/individual/2859633186> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/1465232466> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/ufextensions#TemporaryFacultyPosition> .
+<http://vivo.school.edu/individual/2330645866> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/8306404890> .
+<http://vivo.school.edu/individual/6792001591> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/2299067793> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/653605537> .
+<http://vivo.school.edu/individual/3575853102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/6170996388> <http://www.w3.org/2000/01/rdf-schema#label> "Courtesy Assistant Professor" .
+<http://vivo.school.edu/individual/8306404890> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/320898527> <http://www.w3.org/2000/01/rdf-schema#label> "Adjunct Lecturer" .
+<http://vivo.school.edu/individual/653605537> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/1465232466> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/3575853102> .
+<http://vivo.school.edu/individual/7342263709> <http://vivoweb.org/ontology/core#dateTime> "2013-07-19"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/3705785916> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/3816211709> .
+<http://vivo.school.edu/individual/7863297752> <http://vivo.school.edu/ontology/uf-extension#hrTitle> "CO AST PROF" .
+<http://vivo.school.edu/individual/6170996388> <http://vivoweb.org/ontology/core#relates> <http://vivo.ufl.edu/individual/n6657823770> .
+<http://vivo.school.edu/individual/9287585169> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/1315198944> .
+<http://vivo.school.edu/individual/653605537> <http://vivoweb.org/ontology/core#dateTime> "2013-09-27"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/7863297752> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/2330645866> .
+<http://vivo.school.edu/individual/7863297752> <http://www.w3.org/2000/01/rdf-schema#label> "Courtesy Assistant Professor" .
+<http://vivo.school.edu/individual/3816211709> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/320898527> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/ufextensions#TemporaryFacultyPosition> .
+<http://vivo.school.edu/individual/2299067793> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/3705785916> <http://www.w3.org/2000/01/rdf-schema#label> "Information Technology Expert" .
+
+

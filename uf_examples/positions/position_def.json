@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/relates"
+                    "ref": "http://vivoweb.org/ontology/core#relates"
                 },
                 "object": {
                     "literal": false,
@@ -21,7 +21,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/relates"
+                    "ref": "http://vivoweb.org/ontology/core#relates"
                 },
                 "object": {
                     "literal": false,
@@ -40,7 +40,7 @@
                     "enum": "salary_plan_enum.txt"
                 }
             }
-        ]
+        ],
         "START_DATE": [
             {
                 "predicate": {
@@ -118,7 +118,6 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 }, 
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
@@ -132,7 +131,6 @@
                     "ref": "http://vivo.school.edu/ontology/uf-extension#hrTitle"
                 }, 
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }

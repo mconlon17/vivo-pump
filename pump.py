@@ -147,6 +147,13 @@ class Pump(object):
             print datetime.now(), 'Graphs ready for processing. Original has ', len(self.original_graph), \
                 '. Update graph has', len(self.update_graph)
             print datetime.now(), 'Updates ready for processing. ', len(self.update_data), 'rows.'
+            if len(self.enum) == 0:
+                print datetime.now(), "No enumerations"
+            else:
+                for key in self.enum.keys():
+                    print datetime.now(), key, "get", len(self.enum[key]['get']), "update", \
+                        len(self.enum[key]['update'])
+
         return self.do_update()
 
     def do_update(self):
