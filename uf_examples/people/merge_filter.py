@@ -28,7 +28,7 @@ print >>sys.stderr, 'VIVO ufid', len(vivo_ufid)
 source_ufid = [data_in[x]['UFID'] for x in data_in]
 print >>sys.stderr, 'Source ufid', len(source_ufid)
 
-vivo_data = data_in[data_in.keys()[1]]  # Grab a row, any row
+vivo_data = data_in[data_in.keys()[0]]  # Grab a row, any row
 
 #   Process ufid in VIVO and in Source
 

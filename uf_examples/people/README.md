@@ -88,4 +88,8 @@ people are not edited by the pump.  We leave them in the person_update_data so t
 and apply manual edits to these records if needed.
 1. The pump makes the changes requested in person_update_data.txt, creating add and sub rdf
 
-# TODO: Add person type
+## Testing
+
+See position_data_small.txt for an abbreviated position file which can be used for testing.  Filtering this file 
+leads to person_update_data_small.txt.  The sv.cfg file points at the small version and produced person_add.rdf and
+person_sub.rdf, which can be inspected to verify the ingest is working as expected.

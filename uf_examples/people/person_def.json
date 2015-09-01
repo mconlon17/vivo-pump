@@ -177,7 +177,7 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 },
                 "object": {
-                    "filter": "improve_display_name"
+                    "filter": "improve_display_name",
                     "literal": true
                 }
             }
@@ -189,8 +189,7 @@
                     "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/gatorlink"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "string"
+                    "literal": true
                 }
             }
         ],
@@ -225,8 +224,7 @@
                 },
                 "object": {
                     "literal": true,
-                    "filter": "improve_phone",
-                    "datatype": "xsd:string"
+                    "filter": "improve_phone"
                 }
             }
         ],
@@ -261,8 +259,7 @@
                 },
                 "object": {
                     "literal": true,
-                    "filter": "improve_phone",
-                    "datatype": "xsd:string"
+                    "filter": "improve_phone"
                 }
             }
         ],
@@ -285,6 +282,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "http://www.w3.org/2006/vcard/ns#Email",
                     "name": "email_address"
                 }
             },
@@ -307,8 +305,7 @@
                 },
                 "object": {
                     "literal": true,
-                    "filter": "improve_ufid",
-                    "datatype": "string"
+                    "filter": "improve_ufid"
                 }
             }
         ],
