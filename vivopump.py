@@ -140,7 +140,7 @@ def write_csv_fp(fp, data, delimiter='|'):
     :param delimiter: field delimiter for output
     :return:
     """
-    var_names = data[data.keys()[1]].keys()  # create a list of var_names from the first row
+    var_names = data[data.keys()[0]].keys()  # create a list of var_names from the first row
     fp.write(delimiter.join(var_names) + '\n')
     for key in sorted(data.keys()):
         fp.write(delimiter.join([data[key][x] for x in var_names]) + '\n')
