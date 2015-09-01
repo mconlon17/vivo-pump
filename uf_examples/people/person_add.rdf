@@ -1,0 +1,34 @@
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/703092184> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Telephone> .
+<http://vivo.school.edu/individual/3390189357> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/9462392156> .
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity> .
+<http://vivo.school.edu/individual/9462392156> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/3390189357> <http://www.w3.org/2006/vcard/ns#hasTelephone> <http://vivo.school.edu/individual/703092184> .
+<http://vivo.school.edu/individual/3390189357> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity> .
+<http://vivo.school.edu/individual/9462392156> <http://www.w3.org/2006/vcard/ns#givenName> "Lingxiao" .
+<http://vivo.school.edu/individual/7861140495> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/3390189357> .
+<http://vivo.school.edu/individual/n1133> <http://vivo.ufl.edu/ontology/vivo-ufl/homeDept> <http://vivo.ufl.edu/individual/n8763427> .
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.ufl.edu/ontology/vivo-ufl/CourtesyFaculty> .
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/2000/01/rdf-schema#label> "Zhang, Lingxiao" .
+<http://vivo.school.edu/individual/9462392156> <http://www.w3.org/2006/vcard/ns#honorificPrefix> "Mr" .
+<http://vivo.school.edu/individual/6216843404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Fax> .
+<http://vivo.school.edu/individual/7861140495> <http://vivo.ufl.edu/ontology/vivo-ufl/homeDept> <http://vivo.ufl.edu/individual/n2030376853> .
+<http://vivo.school.edu/individual/n1133> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity> .
+<http://vivo.school.edu/individual/n7488> <http://www.w3.org/2006/vcard/ns#honorificPrefix> "Dr" .
+<http://vivo.school.edu/individual/n7921> <http://www.w3.org/2006/vcard/ns#hasTelephone> <http://vivo.school.edu/individual/36031489> .
+<http://vivo.school.edu/individual/3567223112> <http://www.w3.org/2006/vcard/ns#email> "lingxiao.zhang@ars.usda.gov" .
+<http://vivo.school.edu/individual/36031489> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Telephone> .
+<http://vivo.school.edu/individual/9462392156> <http://www.w3.org/2006/vcard/ns#familyName> "Zhang" .
+<http://vivo.school.edu/individual/7861140495> <http://vivo.ufl.edu/ontology/vivo-ufl/gatorlink> "lingxiao007" .
+<http://vivo.school.edu/individual/703092184> <http://www.w3.org/2006/vcard/ns#telephone> "(561) 924-5227" .
+<http://vivo.school.edu/individual/n1133> <http://www.w3.org/2000/01/rdf-schema#label> "Conlon, Mike" .
+<http://vivo.school.edu/individual/7861140495> <http://vivo.ufl.edu/ontology/vivo-ufl/ufid> "86146920" .
+<http://vivo.school.edu/individual/n1133> <http://vivo.ufl.edu/ontology/vivo-ufl/ufid> "84808900" .
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/n7921> <http://www.w3.org/2006/vcard/ns#hasTelephone> <http://vivo.school.edu/individual/6216843404> .
+<http://vivo.school.edu/individual/7861140495> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://vivo.school.edu/individual/3567223112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Email> .
+<http://vivo.school.edu/individual/3390189357> <http://www.w3.org/2006/vcard/ns#hasEmail> <http://vivo.school.edu/individual/3567223112> .
+
+
