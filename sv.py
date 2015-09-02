@@ -104,7 +104,8 @@ if args.verbose:
 #   Create a Pump and use it to perform the requested actions based on arguments
 
 p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'query_uri': args.queryuri,
-                                                                         'username': args.pwd, 'password': args.pwd},
+                                                                         'username': args.username,
+                                                                         'password': args.pwd},
          uri_prefix=args.uriprefix)
 if args.action == 'get':
     n_rows = p.get(args.src, args.inter, args.intra)
