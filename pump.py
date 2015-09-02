@@ -17,6 +17,8 @@
 
 """
 
+#TODO: Progress indicator regardless of verbose
+
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"

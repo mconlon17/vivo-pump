@@ -84,7 +84,7 @@ GM01044|org;funder|Asi Specialities||
 GM01045|org;funder|Coastal Technology Corp||
 GM01046|org;funder|Applied Pharmacology & Toxicol||
 GM01047|org;funder|Omnicare Clinical Research||
-GM01048|org;funder|Alpha Oncology||
+GM01048|org;funder;company|Alpha Oncology||
 GM01049|org;funder|Vistagen||
 GM0105|org;funder|Cargill Fertilizer Inc||
 GM01050|org;funder|Sea Life Park Hawaii||

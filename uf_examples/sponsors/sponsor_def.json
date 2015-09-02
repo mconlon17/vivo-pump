@@ -12,7 +12,6 @@
                     "ref": "http://vivo.school.edu/ontology/uf-extension#sponsorId"
                 },
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
@@ -41,7 +40,6 @@
                     "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 },
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
