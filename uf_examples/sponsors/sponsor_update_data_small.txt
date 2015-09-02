@@ -1,0 +1,25 @@
+sponsorid|type|name|remove|uri
+GM01052|org;funder|Novazyme Pharmaceuticals Inc||
+GM01053|org;funder|Glaxo Smithkline||
+GM01071|org;funder|Concepts in Pharm Research Inc||
+GM01072|org;funder|Acorn Cardiovascular Inc||
+GM01097|org;funder|Fabre Kramer Pharmaceuticals||
+GM01098|org;funder|Visteon Corp||
+GM01099|org;funder|Itt Industries Inc||
+GM011|org;funder|Advanced Tissue Sciences||
+GM0110|org;funder|Cetus Oncology Corp||
+GM01100|org;funder|Titan Pharmaceuticals Inc||
+GM01|org;funder|Sponsored Programs Holding Account||
+GM010|org;funder|Advanced Technology Labs Inc||
+GM0100|org;funder|Burroughs Wellcome Company||
+GM01000|org;funder|Seaspace Corporation||
+GM01001|org;funder|Phormax Corporation||
+GM01002|org;funder|Optometrix Inc||
+GM01003|org;funder|Avax America Inc||
+GM01004|org;funder|Amer Bioscience Inc||
+GM01005|org;funder|Exponent Environmental Group||
+GM01006|org;funder|Galileo Laboratories Inc||
+GM01007|org;funder|Sepracor Inc||
+GM01008|org;funder|Wrs Infrastructure & Env||
+GM01009|org;funder|Framatome Technologies Inc||
+GM0101|org;funder|Burroughs Wellcome Fund||

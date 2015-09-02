@@ -20,11 +20,11 @@ A command line tool using the pump (Simple VIVO) is delivered with the pump.  Si
 VIVO data from a "spreadsheet" -- a delimited file of rows and columns, and a corresponding definition file.  Simple
 VIVO supports get and update, along with some reporting operators.  For example:
 
-    sv get -defn org_def.json -src orgs.txt
+    python sv.py -a get -d org_def.json -s orgs.txt
     
 will use the definition file org_def.json to get data from VIVO and return it in orgs.txt
 
-    sv update -defn person_def.json -src people.txt
+    python sv.py -a update -d person_def.json -s people.txt
     
 will use the definition file person_def.json and the source data in people.txt to make updates in VIVO
 

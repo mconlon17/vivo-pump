@@ -25,5 +25,5 @@ Five columns result from the filters:
 1. uri
 1. remove
 
-    cat sponsors.txt | python manage_columns_filter.py | python unique_sponsorid_filter.py | 
-    python merge_filter.py > sponsor_update_data.txt
+    cat sponsors_small.txt | python manage_columns_filter.py | python unique_sponsorid_filter.py | 
+    python merge_filter.py > sponsor_update_data_small.txt
