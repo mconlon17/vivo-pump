@@ -718,8 +718,7 @@ def improve_course_title(s):
 
     s = s.lower()  # convert to lower
     s = s.title()  # uppercase each word
-    s += ' '       # add a trailing space so we can find these abbreviated
-                   # words throughout the string
+    s += ' '       # add a trailing space so we can find these abbreviated words throughout the string
     t = s.replace(", ,", ",")
     t = t.replace("  ", " ")
     t = t.replace("/", " @")
@@ -746,8 +745,7 @@ def improve_jobcode_description(s):
 
     s = s.lower()  # convert to lower
     s = s.title()  # uppercase each word
-    s += ' '       # add a trailing space so we can find these abbreviated
-                   # words throughout the string
+    s += ' '       # add a trailing space so we can find these abbreviated words throughout the string
     t = s.replace(", ,", ",")
     t = t.replace("  ", " ")
     t = t.replace("/", " @")
