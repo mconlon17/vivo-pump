@@ -17,9 +17,8 @@ The Pump has two major operators:
 # Simple VIVO
 
 Before you can use this tool please install the requirements:
-<pre>
-pip install -r requirements.txt
-</pre>
+
+    pip install -r requirements.txt
 
 A command line tool using the pump (Simple VIVO) is delivered with the pump.  Simple VIVO supports data management of
 VIVO data from a "spreadsheet" -- a delimited file of rows and columns, and a corresponding definition file.  Simple
