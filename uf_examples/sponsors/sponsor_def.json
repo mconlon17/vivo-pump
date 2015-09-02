@@ -23,7 +23,10 @@
                     "include": [
                         "thing",
                         "agent",
-                        "org"
+                        "org",
+                        "bfo1",
+                        "bfo2",
+                        "bfo4"
                     ],
                     "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
                 },

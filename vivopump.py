@@ -11,6 +11,8 @@ import csv
 import string
 import random
 
+# TODO: write_improve_working_title
+
 
 class InvalidDataException(Exception):
     """
@@ -271,7 +273,7 @@ def get_vivo_sponsorid():
     Query VIVO and return a list of all the sponsorid found in VIVO
     :return: dictionary of uri keyed by sponsorid
     """
-    query = "select ?uri ?sponsorid where {?uri uf:sponsorid ?sponsorid .}"
+    query = "select ?uri ?sponsorid where {?uri uf:sponsorId ?sponsorid .}"
     a = vivo_query(query)
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]

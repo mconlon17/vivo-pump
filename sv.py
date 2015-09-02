@@ -45,7 +45,7 @@ program_defaults = {
     'inter': '\t',
     'intra': ';',
     'username': 'vivo_root@school.edu',
-    'pwd': 'password',
+    'password': 'password',
     'rdfprefix': 'pump',
     'queryuri': 'http://localhost:80/vivo/api/sparql_query',
     'uriprefix': 'http://vivo.school.edu/individual/',
@@ -64,7 +64,7 @@ parser.add_argument("-d", "--defn", help="name of definition file", nargs="?")
 parser.add_argument("-i", "--inter", help="interfield delimiter", nargs="?")
 parser.add_argument("-j", "--intra", help="intrafield delimiter", nargs="?")
 parser.add_argument("-u", "--username", help="username for API", nargs="?")
-parser.add_argument("-p", "--pwd", help="password for API", nargs="?")
+parser.add_argument("-p", "--password", help="password for API", nargs="?")
 parser.add_argument("-q", "--queryuri", help="URI for API", nargs="?")
 parser.add_argument("-r", "--rdfprefix", help="RDF prefix", nargs="?")
 parser.add_argument("-x", "--uriprefix", help="URI prefix", nargs="?")
@@ -103,9 +103,9 @@ if args.verbose:
 
 #   Create a Pump and use it to perform the requested actions based on arguments
 
-p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'query_uri': args.queryuri,
+p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'queryuri': args.queryuri,
                                                                          'username': args.username,
-                                                                         'password': args.pwd},
+                                                                         'password': args.password},
          uri_prefix=args.uriprefix)
 if args.action == 'get':
     n_rows = p.get(args.src, args.inter, args.intra)

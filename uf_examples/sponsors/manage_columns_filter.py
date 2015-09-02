@@ -23,7 +23,7 @@ for row, data in data_in.items():
 
     new_data['uri'] = ''
     new_data['remove'] = ''
-    new_data['type'] = 'org;funder'
+    new_data['type'] = 'funder'
     new_data['name'] = improve_title(new_data['SponsorName'])
     new_data['sponsorid'] = new_data['Sponsor_ID']
 

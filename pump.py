@@ -17,7 +17,8 @@
 
 """
 
-#TODO: Progress indicator regardless of verbose
+# TODO: Progress indicator regardless of verbose
+# TODO: Get parms passed into vivo_query
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
@@ -32,6 +33,7 @@ class PathLengthException(Exception):
     """
     Raise this exception when a path definition is longer than the allowable (currently 3)
     """
+
     def __init__(self, value):
         Exception.__init__(self)
         self.value = value
@@ -49,7 +51,7 @@ class Pump(object):
 
     def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False,
                  nofilters=False, inter='\t', intra=';',
-                 query_parms={'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery',
+                 query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
                               'username': 'vivo_root@school.edu', 'password': 'v;bisons'},
                  uri_prefix='http://vivo.school.edu/individual/'):
         """
@@ -57,6 +59,7 @@ class Pump(object):
         :param json_def_filename:  File name of file containing JSON pump definition
         """
         from vivopump import read_update_def
+
         self.update_def = read_update_def(json_def_filename)
         self.update_data = None
         self.original_graph = None
@@ -106,8 +109,8 @@ class Pump(object):
         :rtype: int
         """
         self.out_filename = filename
-        return do_get(self.update_def, self.enum, self.out_filename, inter, intra, do_filter=self.filter,
-                      debug=self.verbose)
+        return do_get(self.update_def, self.enum, self.out_filename, self.query_parms, inter, intra,
+                      do_filter=self.filter, debug=self.verbose)
 
     def update(self, filename=None, inter='\t', intra=';'):
         """
@@ -194,18 +197,16 @@ class Pump(object):
                 if data_update[column_name] == '':
                     continue
 
-
                 if len(column_def) > 3:
                     raise PathLengthException(
                         "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
                     do_three_step_update(row, column_name, uri, self.uri_prefix, column_def, data_update, self.intra,
-                                         self.enum, self.update_graph, debug=False)
+                                         self.enum, self.update_graph, self.query_parms, self.debug)
                 elif len(column_def) == 2:
                     do_two_step_update(row, column_name, uri, self.uri_prefix, column_def, data_update, self.intra,
-                                       self.enum, self.update_graph,
-                                       debug=False)
+                                       self.enum, self.update_graph, self.query_parms, self.debug)
                 elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {}
@@ -231,7 +232,7 @@ class Pump(object):
         return [add, sub]
 
 
-def do_remove(row, uri, update_graph, debug=False):
+def do_remove(row, uri, update_graph, debug):
     """
     Given the row, uri, and value of a remove instruction, find the uri in the update_graph and remove all triples
     associated with it as either a subject or object
@@ -270,13 +271,13 @@ def make_get_query(update_def):
         if len(path) == 1:
             middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
         else:
-            middle_query += path[0]['object']['name'] + ' . ?' +\
-                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
+            middle_query += path[0]['object']['name'] + ' . ?' + \
+                            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
             if len(path) == 2:
                 middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
             else:
-                middle_query += path[1]['object']['name'] + ' . ?' +\
-                    path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
+                middle_query += path[1]['object']['name'] + ' . ?' + \
+                                path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
                 if len(path) == 3:
                     middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
                 else:
@@ -327,7 +328,7 @@ def make_get_data(update_def, result_set):
     return data
 
 
-def do_get(update_def, enum, filename, inter='\t', intra=';', do_filter=True, debug=True):
+def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, debug):
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
     editing using an editor or spreadsheet, and suitable for use by do_update.
@@ -341,10 +342,13 @@ def do_get(update_def, enum, filename, inter='\t', intra=';', do_filter=True, de
     from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
+    # Generate the get query, execute the query, shape the query results into the return object
+
     query = make_get_query(update_def)
     if debug:
+        print query_parms
         print query
-    result_set = vivo_query(query, debug=debug)
+    result_set = vivo_query(query, query_parms, debug)
     data = make_get_data(update_def, result_set)
 
     # Write out the file
@@ -445,7 +449,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_values
 
 
-def get_step_triples(update_graph, uri, step_def, debug=True):
+def get_step_triples(update_graph, uri, step_def, query_parms, debug):
     """
     Return the triples matching the criteria defined in the current step of an update
     :param update_graph: the update graph
@@ -455,15 +459,16 @@ def get_step_triples(update_graph, uri, step_def, debug=True):
     """
     from rdflib import Graph
     from vivopump import vivo_query, add_qualifiers, make_rdf_term
+
     if 'qualifier' not in step_def['object']:
         g = update_graph.triples((uri, step_def['predicate']['ref'], None))
     else:
-        q = 'select (?' + step_def['object']['name'] +' as ?o) where { <' + str(uri) + '> <' + \
+        q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
             str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
             add_qualifiers([step_def]) + ' }\n'
         if debug:
             print "\nStep Triples Query\n", q
-        result_set = vivo_query(q)
+        result_set = vivo_query(q, query_parms, debug)
         g = Graph()
         for binding in result_set['results']['bindings']:
             o = make_rdf_term(binding['o'])
@@ -473,7 +478,8 @@ def get_step_triples(update_graph, uri, step_def, debug=True):
     return g
 
 
-def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, intra, enum, update_graph, debug=False):
+def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, intra, enum, update_graph,
+                         query_parms, debug):
     """
     Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
     end objects as necessary to perform the requested update
@@ -491,7 +497,7 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
     from vivopump import new_uri
 
     step_def = path[0]
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, debug)]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)]
 
     if len(step_uris) == 0:
 
@@ -521,7 +527,7 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
 
 
 def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_update, intra, enum, update_graph,
-                       debug=False):
+                       query_parms, debug):
     """
     In a two step update, identify intermediate entity that might need to be created, and end path objects that might
     not yet exist or might need to be created.  Cases are:
@@ -534,11 +540,12 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
     """
     from rdflib import RDF, RDFS, Literal, URIRef
     from vivopump import new_uri
+
     step_def = column_def[0]
 
     # Find all the intermediate entities in VIVO and then process cases related to count and defs
 
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, debug)]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)]
 
     if len(step_uris) == 0:
 
@@ -553,7 +560,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
                                                             lang=step_def['object'].get('lang', None))))
         uri = step_uri
         step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def)}
+        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)}
         column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
@@ -569,7 +576,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
                 step_uris, "using", step_uri
         uri = step_uri
         step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def)}
+        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)}
         column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
@@ -581,7 +588,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
     return None
 
 
-def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug=False):
+def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug):
     """
     Given the uri of an entity to be updated, the current step definition, column value(s), vivo object(s), and
     the update graph, add or remove triples to the update graph as needed to make the appropriate adjustments
@@ -680,14 +687,14 @@ def load_enum(update_def):
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
     from vivopump import read_csv
-#    import os
+    #    import os
     enum = {}
     for path in update_def['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
                 enum_filename = step['object']['enum']
                 enum_name = enum_filename
-#                enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
+                #                enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
                 if enum_name not in enum:
                     enum[enum_name] = {}
                     enum[enum_name]['get'] = {}
