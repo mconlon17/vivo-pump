@@ -12,6 +12,12 @@ all deptids represent organizations, some represent managed entities or buckets 
 attempt to represent all organizational detail at UF.  Student organizations (more than 800) are not represented unless
 someone refers to the organization on their profile.  All colleges, departments, centers and institutes are represented.
 
+## Sponsors
+
+UF maintains a list of sponsors of research, each with a unique UF sponsor ID.  These are the FundingOrganizations of
+UF grants.  A simple ingest prepares the sponsor data from the enterprise data provided by UF, and adds or updates
+sponsors in VIVO as needed.
+
 ## People
 
 UF adds people to its VIVO each week, based on a feed of position data from HR.  UF employees are identified by UFID,

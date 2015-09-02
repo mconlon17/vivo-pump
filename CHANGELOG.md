@@ -263,3 +263,4 @@ runs to completion on positions_data_small and produces position_add.rdf and pos
 of enums in the Pump. Add qualifiers to position_def.json for ufid and deptid to address relates.
 * **2015-09-02** Improve uf_examples/sponsors README, sv.cfg.  Remove sponsor_def.json string datatypes.  vivopump.py
 code format improvements. pump updates to pass query_parms to vivo_query.  Fix bug in uf_examples/manage_columns_filter.
+Improve uf_examples/README.md
