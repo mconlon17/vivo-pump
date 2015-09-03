@@ -264,4 +264,4 @@ of enums in the Pump. Add qualifiers to position_def.json for ufid and deptid to
 * **2015-09-02** Improve uf_examples/sponsors README, sv.cfg.  Remove sponsor_def.json string datatypes.  vivopump.py
 code format improvements. pump updates to pass query_parms to vivo_query.  Fix bug in uf_examples/manage_columns_filter.
 Improve uf_examples/README.md. New improve_jobcode_description passes pylint
-* **2015-09-03** New improve_title.  vivopump.py now passes pylint.
+* **2015-09-03** New improve_title.  vivopump.py now passes pylint.  Move all TODO items to GitHub issues.

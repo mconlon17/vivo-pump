@@ -17,9 +17,6 @@
 
 """
 
-# TODO: Progress indicator regardless of verbose
-# TODO: Get parms passed into vivo_query
-
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
@@ -583,7 +580,6 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
                       debug=debug)
 
     else:
-        # TODO: Implement set compare through multiple intermediate case -- medium
         print "WARNING: Updating multi-valued multi-step predicates such as ", column_name, " not yet implemented"
     return None
 
@@ -606,9 +602,6 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
     :param update_graph: rdflib graph of the triples in the update set
     :return: None
     """
-
-    # TODO: Use qualifiers to identify triples to be updated -- difficult
-    # TODO: Add label as a qualifier -- medium
 
     from rdflib import Literal, URIRef
 

@@ -17,10 +17,6 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     improve_display_name
 from pump import Pump
 
-# TODO: Add test cases for each data scenario (six to go) -- easy
-# TODO: Add test cases for each command line scenario in sv -- easy
-# TODO: Use params to the Pump() to set for test VIVO scenario -- medium
-
 
 class ReplaceInitialsCase(unittest.TestCase):
     def test_replace_initials_default(self):

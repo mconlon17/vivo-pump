@@ -22,8 +22,5 @@ A simple list and def for managing the names of the publishers.
 
 Simple list with "ameru" tag.  Name and web address only.
 
-# TODO: Create separate defs for maintaining "all," "uf," "publishers," and "american universities"
-# TODO: Add rdf:type for american universities to UF VIVO
-# TODO: Add python script for producing american universities web insert
 
 
