@@ -320,7 +320,8 @@
                     "ref": "http://vivoweb.org/ontology/core#preferredTitle"
                 },
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "filter": "improve_jobcode_description"
                 }
             }
         ],

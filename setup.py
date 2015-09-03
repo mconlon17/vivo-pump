@@ -1,3 +1,16 @@
+#!/usr/bin/env/python
+
+"""
+    setup.py: The VIVO Pump
+
+    Install the VIVO Pump, a tool for getting and updating VIVO data to and from spreadsheets
+"""
+
+__author__ = "Michael Conlon"
+__copyright__ = "Copyright (c) 2015 Michael Conlon"
+__license__ = "New BSD License"
+__version__ = "0.61"
+
 from distutils.core import setup
 
 setup(
@@ -10,5 +23,5 @@ setup(
     description='Use CSV files to update data in VIVO and get data from VIVO.  All semantics are externalized in'
         'JSON format definition files.',
     py_modules=['vivopump', 'pump'],
-    requires=['rdflib(>=4.2.1)'],
+    requires=['rdflib(>=4.2.1)', 'SPARQLWrapper(>=1.6.4)'],
 )
