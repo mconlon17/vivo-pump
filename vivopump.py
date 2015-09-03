@@ -5,7 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "BSD 3-Clause license"
-__version__ = "1.01"
+__version__ = "1.02"
 
 import csv
 import string
@@ -884,13 +884,226 @@ def improve_jobcode_description(s):
 def improve_title(s):
     """
     DSP, HR, funding agencies and others use a series of abbreviations to fit grant titles into limited text
-    strings.  Systems often restrict the length of titles of various kinds and
-    faculty often clip their titles to fit in available space.  Here we reverse
-    the process and lengthen the name for readability
+    strings.  Systems often restrict the length of titles of various kinds and faculty often clip their titles to
+    fit in available space.  Here we reverse the process and lengthen the name for readability
     :param s:
     :return:
     :rtype: basestring
     """
+    abbrev_table = {
+        "'S ": "'s ",
+        "2-blnd ": "Double-blind ",
+        "2blnd ": "Double-blind ",
+        "A ": "a ",
+        "Aav ": "AAV ",
+        "Aca ": "Academic ",
+        "Acad ": "Academic ",
+        "Acp ": "ACP ",
+        "Acs ": "ACS ",
+        "Act ": "Acting ",
+        "Adj ": "Adjunct ",
+        "Adm ": "Administrator ",
+        "Admin ": "Administrative ",
+        "Adv ": "Advisory ",
+        "Advanc ": "Advanced ",
+        "Aff ": "Affiliate ",
+        "Affl ": "Affiliate ",
+        "Ahec ": "AHEC ",
+        "Aldh ": "ALDH ",
+        "Alk1 ": "ALK1 ",
+        "Alumn Aff ": "Alumni Affairs ",
+        "Amd3100 ": "AMD3100 ",
+        "And ": "and ",
+        "Aso ": "Associate ",
+        "Asoc ": "Associate ",
+        "Assoc ": "Associate ",
+        "Ast ": "Assistant ",
+        "Ast #G ": "Grading Assistant ",
+        "Ast #R ": "Research Assistant ",
+        "Ast #T ": "Teaching Assistant ",
+        "At ": "at ",
+        "Bldg ": "Building ",
+        "Bpm ": "BPM ",
+        "Brcc ": "BRCC ",
+        "Cfo ": "Chief Financial Officer ",
+        "Cio ": "Chief Information Officer ",
+        "Clin ": "Clinical ",
+        "Clncl ": "Clinical ",
+        "Cms ": "CMS ",
+        "Cns ": "CNS ",
+        "Cncr ": "Cancer ",
+        "Co ": "Courtesy ",
+        "Cog ": "COG ",
+        "Communic ": "Communications ",
+        "Compar ": "Compare ",
+        "Coo ": "Chief Operating Officer ",
+        "Copd ": "COPD ",
+        "Cpb ": "CPB ",
+        "Crd ": "Coordinator ",
+        "Cse ": "CSE ",
+        "Ctr ": "Center ",
+        "Cty ": "County ",
+        "Cwp ": "CWP ",
+        "Dbl-bl ": "Double-blind ",
+        "Dbl-blnd ": "Double-blind ",
+        "Dbs ": "DBS ",
+        "Dev ": "Development ",
+        "Devel ": "Development ",
+        "Dist ": "Distinguished ",
+        "Dna ": "DNA ",
+        "Doh ": "DOH ",
+        "Doh/cms ": "DOH/CMS ",
+        "Double Blinded ": "Double-blind ",
+        "Double-blinded ": "Double-blind ",
+        "Dpt-1 ": "DPT-1 ",
+        "Dtra0001 ": "DTRA0001 ",
+        "Dtra0016 ": "DTRA-0016 ",
+        "Educ ": "Education ",
+        "Eff/saf ": "Safety and Efficacy ",
+        "Eh&S ": "EH&S ",
+        "Emer ": "Emeritus ",
+        "Emin ": "Eminent ",
+        "Enforce ": "Enforcement ",
+        "Eng ": "Engineer ",
+        "Environ ": "Environmental ",
+        "Epr ": "EPR ",
+        "Eval ": "Evaluation ",
+        "Ext ": "Extension ",
+        "Fdot ": "FDOT ",
+        "Fdots ": "FDOT ",
+        "Fhtcc ": "FHTCC ",
+        "Finan ": "Financial ",
+        "Fla ": "Florida ",
+        "Fllw ": "Follow ",
+        "For ": "for ",
+        "G-csf ": "G-CSF ",
+        "Gen ": "General ",
+        "Gis ": "GIS ",
+        "Gm-csf ": "GM-CSF ",
+        "Grad ": "Graduate ",
+        "Hcv ": "HCV ",
+        "Hiv ": "HIV ",
+        "Hiv-infected ": "HIV-infected ",
+        "Hiv/aids ": "HIV/AIDS ",
+        "Hlb ": "HLB ",
+        "Hlth ": "Health ",
+        "Hou ": "Housing ",
+        "Hsv-1 ": "HSV-1 ",
+        "I/ii ": "I/II ",
+        "I/ucrc ": "I/UCRC ",
+        "Ica ": "ICA ",
+        "Icd ": "ICD ",
+        "Ieee ": "IEEE ",
+        "Ifas ": "IFAS ",
+        "Igf-1 ": "IGF-1 ",
+        "Ii ": "II ",
+        "Ii/iii ": "II/III ",
+        "Iii ": "III ",
+        "In ": "in ",
+        "Info ": "Information ",
+        "Inter-vention ": "Intervention ",
+        "Ipa ": "IPA ",
+        "Ipm ": "IPM ",
+        "Ippd ": "IPPD ",
+        "Ips ": "IPS ",
+        "It ": "Information Technology ",
+        "Iv ": "IV ",
+        "Jnt ": "Joint ",
+        "Lng ": "Long ",
+        "Mccarty ": "McCarty ",
+        "Mgmt ": "Management ",
+        "Mgr ": "Manager ",
+        "Mgt ": "Management ",
+        "Mlti ": "Multi ",
+        "Mlti-ctr ": "Multicenter ",
+        "Mltictr ": "Multicenter ",
+        "Mri ": "MRI ",
+        "Mstr ": "Master ",
+        "Multi-center ": "Multicenter ",
+        "Multi-ctr ": "Multicenter ",
+        "Nih ": "NIH ",
+        "Nmr ": "NMR ",
+        "Nsf ": "NSF ",
+        "Ne ": "NE ",
+        "Nw ": "NW ",
+        "Of ": "of ",
+        "On ": "on ",
+        "Or ": "or ",
+        "Open-labeled ": "Open-label ",
+        "Opn-lbl ": "Open-label ",
+        "Opr ": "Operator ",
+        "Phas ": "Phased ",
+        "Php ": "PHP ",
+        "Phs ": "PHS ",
+        "Pk/pd ": "PK/PD ",
+        "Pky ": "P. K. Yonge ",
+        "Plcb-ctrl ": "Placebo-controlled ",
+        "Plcbo ": "Placebo ",
+        "Plcbo-ctrl ": "Placebo-controlled ",
+        "Postdoc ": "Postdoctoral ",
+        "Pract ": "Practitioner ",
+        "Pres5 ": "President 5 ",
+        "Pres6 ": "President 6 ",
+        "Prg ": "Programs ",
+        "Prof ": "Professor ",
+        "Prog ": "Programmer ",
+        "Progs ": "Programs ",
+        "Prov ": "Provisional ",
+        "Psr ": "PSR ",
+        "Radiol ": "Radiology ",
+        "Rcv ": "Receiving ",
+        "Rdmzd ": "Randomized ",
+        "Rep ": "Representative ",
+        "Res ": "Research ",
+        "Ret ": "Retirement ",
+        "Reu ": "REU ",
+        "Rna ": "RNA ",
+        "Rndmzd ": "Randomized ",
+        "Roc-124 ": "ROC-124 ",
+        "Rsch ": "Research ",
+        "Saf ": "SAF ",
+        "Saf/eff ": "Safety and Efficacy ",
+        "Sbjcts ": "Subjects ",
+        "Sch ": "School ",
+        "Se ": "SE ",
+        "Ser ": "Service ",
+        "Sfwmd ": "SFWMD ",
+        "Sle ": "SLE ",
+        "Sntc ": "SNTC ",
+        "Spec ": "Specialist ",
+        "Spnsrd ": "Sponsored ",
+        "Spv ": "Supervisor ",
+        "Sr ": "Senior ",
+        "Stdy ": "Study ",
+        "Subj ": "Subject ",
+        "Supp ": "Support ",
+        "Supt ": "Superintendant ",
+        "Supv ": "Supervisor ",
+        "Svc ": "Services ",
+        "Svcs ": "Services ",
+        "Sw ": "SW ",
+        "Tch ": "Teaching ",
+        "Tech ": "Technician ",
+        "Technol ": "Technologist ",
+        "Teh ": "the ",
+        "The ": "the ",
+        "To ": "to ",
+        "Trls ": "Trials ",
+        "Trm ": "Term ",
+        "Tv ": "TV ",
+        "Uaa ": "UAA ",
+        "Uf ": "UF ",
+        "Ufrf ": "UFRF ",
+        "Uhf ": "UHF ",
+        "Univ ": "University ",
+        "Us ": "US ",
+        "Usa ": "USA ",
+        "Va ": "VA ",
+        "Vhf ": "VHF ",
+        "Vis ": "Visiting ",
+        "Vp ": "Vice President ",
+        "Wuft-Fm ": "WUFT-FM "
+    }
     if s == "":
         return s
     if s[len(s) - 1] == ',':
@@ -906,219 +1119,10 @@ def improve_title(s):
     t = t.replace("/", " @")  # might be two slashes in the input
     t = t.replace(",", " !")
     t = t.replace(",", " !")  # might be two commas in input
-    t = t.replace("'S ", "'s ")
-    t = t.replace("2-blnd ", "Double-blind ")
-    t = t.replace("2blnd ", "Double-blind ")
-    t = t.replace("A ", "a ")
-    t = t.replace("Aav ", "AAV ")
-    t = t.replace("Aca ", "Academic ")
-    t = t.replace("Acad ", "Academic ")
-    t = t.replace("Acp ", "ACP ")
-    t = t.replace("Acs ", "ACS ")
-    t = t.replace("Act ", "Acting ")
-    t = t.replace("Adj ", "Adjunct ")
-    t = t.replace("Adm ", "Administrator ")
-    t = t.replace("Admin ", "Administrative ")
-    t = t.replace("Adv ", "Advisory ")
-    t = t.replace("Advanc ", "Advanced ")
-    t = t.replace("Aff ", "Affiliate ")
-    t = t.replace("Affl ", "Affiliate ")
-    t = t.replace("Ahec ", "AHEC ")
-    t = t.replace("Aldh ", "ALDH ")
-    t = t.replace("Alk1 ", "ALK1 ")
-    t = t.replace("Alumn Aff ", "Alumni Affairs ")
-    t = t.replace("Amd3100 ", "AMD3100 ")
-    t = t.replace("And ", "and ")
-    t = t.replace("Aso ", "Associate ")
-    t = t.replace("Asoc ", "Associate ")
-    t = t.replace("Assoc ", "Associate ")
-    t = t.replace("Ast ", "Assistant ")
-    t = t.replace("Ast #G ", "Grading Assistant ")
-    t = t.replace("Ast #R ", "Research Assistant ")
-    t = t.replace("Ast #T ", "Teaching Assistant ")
-    t = t.replace("At ", "at ")
-    t = t.replace("Bldg ", "Building ")
-    t = t.replace("Bpm ", "BPM ")
-    t = t.replace("Brcc ", "BRCC ")
-    t = t.replace("Cfo ", "Chief Financial Officer ")
-    t = t.replace("Cio ", "Chief Information Officer ")
-    t = t.replace("Clin ", "Clinical ")
-    t = t.replace("Clncl ", "Clinical ")
-    t = t.replace("Cms ", "CMS ")
-    t = t.replace("Cns ", "CNS ")
-    t = t.replace("Cncr ", "Cancer ")
-    t = t.replace("Co ", "Courtesy ")
-    t = t.replace("Cog ", "COG ")
-    t = t.replace("Communic ", "Communications ")
-    t = t.replace("Compar ", "Compare ")
-    t = t.replace("Coo ", "Chief Operating Officer ")
-    t = t.replace("Copd ", "COPD ")
-    t = t.replace("Cpb ", "CPB ")
-    t = t.replace("Crd ", "Coordinator ")
-    t = t.replace("Cse ", "CSE ")
-    t = t.replace("Ctr ", "Center ")
-    t = t.replace("Cty ", "County ")
-    t = t.replace("Cwp ", "CWP ")
-    t = t.replace("Dbl-bl ", "Double-blind ")
-    t = t.replace("Dbl-blnd ", "Double-blind ")
-    t = t.replace("Dbs ", "DBS ")
-    t = t.replace("Dev ", "Development ")
-    t = t.replace("Devel ", "Development ")
-    t = t.replace("Dist ", "Distinguished ")
-    t = t.replace("Dna ", "DNA ")
-    t = t.replace("Doh ", "DOH ")
-    t = t.replace("Doh/cms ", "DOH/CMS ")
-    t = t.replace("Double Blinded ", "Double-blind ")
-    t = t.replace("Double-blinded ", "Double-blind ")
-    t = t.replace("Dpt-1 ", "DPT-1 ")
-    t = t.replace("Dtra0001 ", "DTRA0001 ")
-    t = t.replace("Dtra0016 ", "DTRA-0016 ")
-    t = t.replace("Educ ", "Education ")
-    t = t.replace("Eff/saf ", "Safety and Efficacy ")
-    t = t.replace("Eh&S ", "EH&S ")
-    t = t.replace("Emer ", "Emeritus ")
-    t = t.replace("Emin ", "Eminent ")
-    t = t.replace("Enforce ", "Enforcement ")
-    t = t.replace("Eng ", "Engineer ")
-    t = t.replace("Environ ", "Environmental ")
-    t = t.replace("Epr ", "EPR ")
-    t = t.replace("Eval ", "Evaluation ")
-    t = t.replace("Ext ", "Extension ")
-    t = t.replace("Fdot ", "FDOT ")
-    t = t.replace("Fdots ", "FDOT ")
-    t = t.replace("Fhtcc ", "FHTCC ")
-    t = t.replace("Finan ", "Financial ")
-    t = t.replace("Fla ", "Florida ")
-    t = t.replace("Fllw ", "Follow ")
-    t = t.replace("For ", "for ")
-    t = t.replace("G-csf ", "G-CSF ")
-    t = t.replace("Gen ", "General ")
-    t = t.replace("Gis ", "GIS ")
-    t = t.replace("Gm-csf ", "GM-CSF ")
-    t = t.replace("Grad ", "Graduate ")
-    t = t.replace("Hcv ", "HCV ")
-    t = t.replace("Hiv ", "HIV ")
-    t = t.replace("Hiv-infected ", "HIV-infected ")
-    t = t.replace("Hiv/aids ", "HIV/AIDS ")
-    t = t.replace("Hlb ", "HLB ")
-    t = t.replace("Hlth ", "Health ")
-    t = t.replace("Hou ", "Housing ")
-    t = t.replace("Hsv-1 ", "HSV-1 ")
-    t = t.replace("I/ii ", "I/II ")
-    t = t.replace("I/ucrc ", "I/UCRC ")
-    t = t.replace("Ica ", "ICA ")
-    t = t.replace("Icd ", "ICD ")
-    t = t.replace("Ieee ", "IEEE ")
-    t = t.replace("Ifas ", "IFAS ")
-    t = t.replace("Igf-1 ", "IGF-1 ")
-    t = t.replace("Ii ", "II ")
-    t = t.replace("Ii/iii ", "II/III ")
-    t = t.replace("Iii ", "III ")
-    t = t.replace("In ", "in ")
-    t = t.replace("Info ", "Information ")
-    t = t.replace("Inter-vention ", "Intervention ")
-    t = t.replace("Ipa ", "IPA ")
-    t = t.replace("Ipm ", "IPM ")
-    t = t.replace("Ippd ", "IPPD ")
-    t = t.replace("Ips ", "IPS ")
-    t = t.replace("It ", "Information Technology ")
-    t = t.replace("Iv ", "IV ")
-    t = t.replace("Jnt ", "Joint ")
-    t = t.replace("Lng ", "Long ")
-    t = t.replace("Mccarty ", "McCarty ")
-    t = t.replace("Mgmt ", "Management ")
-    t = t.replace("Mgr ", "Manager ")
-    t = t.replace("Mgt ", "Management ")
-    t = t.replace("Mlti ", "Multi ")
-    t = t.replace("Mlti-ctr ", "Multicenter ")
-    t = t.replace("Mltictr ", "Multicenter ")
-    t = t.replace("Mri ", "MRI ")
-    t = t.replace("Mstr ", "Master ")
-    t = t.replace("Multi-center ", "Multicenter ")
-    t = t.replace("Multi-ctr ", "Multicenter ")
-    t = t.replace("Nih ", "NIH ")
-    t = t.replace("Nmr ", "NMR ")
-    t = t.replace("Nsf ", "NSF ")
-    t = t.replace("Ne ", "NE ")
-    t = t.replace("Nw ", "NW ")
-    t = t.replace("Of ", "of ")
-    t = t.replace("On ", "on ")
-    t = t.replace("Or ", "or ")
-    t = t.replace("Open-labeled ", "Open-label ")
-    t = t.replace("Opn-lbl ", "Open-label ")
-    t = t.replace("Opr ", "Operator ")
-    t = t.replace("Phas ", "Phased ")
-    t = t.replace("Php ", "PHP ")
-    t = t.replace("Phs ", "PHS ")
-    t = t.replace("Pk/pd ", "PK/PD ")
-    t = t.replace("Pky ", "P. K. Yonge ")
-    t = t.replace("Pky ", "PK Yonge ")
-    t = t.replace("Plcb-ctrl ", "Placebo-controlled ")
-    t = t.replace("Plcbo ", "Placebo ")
-    t = t.replace("Plcbo-ctrl ", "Placebo-controlled ")
-    t = t.replace("Postdoc ", "Postdoctoral ")
-    t = t.replace("Pract ", "Practitioner ")
-    t = t.replace("Pres5 ", "President 5 ")
-    t = t.replace("Pres6 ", "President 6 ")
-    t = t.replace("Prg ", "Programs ")
-    t = t.replace("Prof ", "Professor ")
-    t = t.replace("Prog ", "Programmer ")
-    t = t.replace("Progs ", "Programs ")
-    t = t.replace("Prov ", "Provisional ")
-    t = t.replace("Psr ", "PSR ")
-    t = t.replace("Radiol ", "Radiology ")
-    t = t.replace("Rcv ", "Receiving ")
-    t = t.replace("Rdmzd ", "Randomized ")
-    t = t.replace("Rep ", "Representative ")
-    t = t.replace("Res ", "Research ")
-    t = t.replace("Ret ", "Retirement ")
-    t = t.replace("Reu ", "REU ")
-    t = t.replace("Rna ", "RNA ")
-    t = t.replace("Rndmzd ", "Randomized ")
-    t = t.replace("Roc-124 ", "ROC-124 ")
-    t = t.replace("Rsch ", "Research ")
-    t = t.replace("Saf ", "SAF ")
-    t = t.replace("Saf/eff ", "Safety and Efficacy ")
-    t = t.replace("Sbjcts ", "Subjects ")
-    t = t.replace("Sch ", "School ")
-    t = t.replace("Se ", "SE ")
-    t = t.replace("Ser ", "Service ")
-    t = t.replace("Sfwmd ", "SFWMD ")
-    t = t.replace("Sle ", "SLE ")
-    t = t.replace("Sntc ", "SNTC ")
-    t = t.replace("Spec ", "Specialist ")
-    t = t.replace("Spnsrd ", "Sponsored ")
-    t = t.replace("Spv ", "Supervisor ")
-    t = t.replace("Sr ", "Senior ")
-    t = t.replace("Stdy ", "Study ")
-    t = t.replace("Subj ", "Subject ")
-    t = t.replace("Supp ", "Support ")
-    t = t.replace("Supt ", "Superintendant ")
-    t = t.replace("Supv ", "Supervisor ")
-    t = t.replace("Svc ", "Services ")
-    t = t.replace("Svcs ", "Services ")
-    t = t.replace("Sw ", "SW ")
-    t = t.replace("Tch ", "Teaching ")
-    t = t.replace("Tech ", "Technician ")
-    t = t.replace("Technol ", "Technologist ")
-    t = t.replace("Teh ", "the ")
-    t = t.replace("The ", "the ")
-    t = t.replace("To ", "to ")
-    t = t.replace("Trls ", "Trials ")
-    t = t.replace("Trm ", "Term ")
-    t = t.replace("Tv ", "TV ")
-    t = t.replace("Uaa ", "UAA ")
-    t = t.replace("Uf ", "UF ")
-    t = t.replace("Ufrf ", "UFRF ")
-    t = t.replace("Uhf ", "UHF ")
-    t = t.replace("Univ ", "University ")
-    t = t.replace("Us ", "US ")
-    t = t.replace("Usa ", "USA ")
-    t = t.replace("Va ", "VA ")
-    t = t.replace("Vhf ", "VHF ")
-    t = t.replace("Vis ", "Visiting ")
-    t = t.replace("Vp ", "Vice President ")
-    t = t.replace("Wuft-Fm ", "WUFT-FM ")
+
+    for abbrev in abbrev_table:
+        t = t.replace(abbrev, abbrev_table[abbrev])
+
     t = t.replace(" @", "/")  # restore /
     t = t.replace(" @", "/")
     t = t.replace(" !", ",")  # restore ,

@@ -1,4 +1,103 @@
 ************* Module vivopump
 W:185, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:1137, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:1142, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
 W:551, 0: Dangerous default value {} as argument (dangerous-default-value)
+W:893,19: Duplicate key 'Pky ' in dictionary (duplicate-key)
+
+
+Report
+======
+469 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |4      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |7      |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |39     |NC         |NC         |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    SPARQLWrapper (vivopump)
+    rdflib (vivopump)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |537    |41.89 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |636    |49.61 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |5      |0.39  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |104    |8.11  |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |4      |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------------+------------+
+|message id                    |occurrences |
++==============================+============+
+|anomalous-backslash-in-string |2           |
++------------------------------+------------+
+|duplicate-key                 |1           |
++------------------------------+------------+
+|dangerous-default-value       |1           |
++------------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 9.91/10
+
