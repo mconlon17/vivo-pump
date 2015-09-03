@@ -531,7 +531,7 @@ def get_graph(update_def, debug=False):
     return a
 
 
-def new_uri(uri_prefix='http://vivo.school.edu/individual/'):
+def new_uri(uri_prefix='http://vivo.school.edu/individual/n'):
     """
     Find an unused VIVO URI with the specified VIVO_URI_PREFIX
     """
@@ -717,7 +717,7 @@ def improve_course_title(s):
     Here we attempt to reverse the process -- a short title is turned into a
     longer one for use in labels
     """
-
+    # TODO: Add abbreviations for course titles
     s = s.lower()  # convert to lower
     s = s.title()  # uppercase each word
     s += ' '       # add a trailing space so we can find these abbreviated words throughout the string
@@ -744,7 +744,125 @@ def improve_jobcode_description(s):
     Here we attempt to reverse the process -- a short title is turned into a
     longer one for use in position labels
     """
-
+    abbrev_table = {
+        "Aca ": "Academic ",
+        "Act ": "Acting ",
+        "Advanc ": "Advanced ",
+        "Adv ": "Advisory ",
+        "Agric ": "Agricultural ",
+        "Alumn Aff ": "Alumni Affairs ",
+        "Anal  ": "Analyst ",
+        "Asst ": "Assistant ",
+        "Ast #R ": "Research Assistant ",
+        "Ast #G ": "Grading Assistant ",
+        "Ast #T ": "Teaching Assistant ",
+        "Ast ": "Assistant ",
+        "Asst. ": "Assistant ",
+        "Affl ": "Affiliate ",
+        "Anlst ": "Analyst ",
+        "Aso ": "Associate ",
+        "Asoc ": "Associate ",
+        "Assoc ": "Associate ",
+        "Bio ": "Biological ",
+        "Prof ": "Professor ",
+        "Mstr ": "Master ",
+        "Couns ": "Counselor ",
+        "Adj ": "Adjunct ",
+        "Dist ": "Distinguished ",
+        "Chem ": "Chemist ",
+        "Chr ": "Chair ",
+        "Cio ": "Chief Information Officer ",
+        "Comm ": "Communications ",
+        "Coo ": "Chief Operating Officer ",
+        "Coord ": "Coordinator ",
+        "Co ": "Courtesy ",
+        "Clin ": "Clinical ",
+        "Clrk ": "Clerk ",
+        "Ctsy ": "Courtesy ",
+        "Dn ": "Dean ",
+        "Div ": "Division ",
+        "Fin ": "Financial",
+        "Finan ": "Financial ",
+        "Stu ": "Student ",
+        "Prg ": "Program ",
+        "Dev ": "Development ",
+        "Aff ": "Affiliate ",
+        "Svcs ": "Services ",
+        "Devel ": "Development ",
+        "Progs ": "Programs ",
+        "Facil ": "Facility ",
+        "Hlt ": "Health ",
+        "Hlth ": "Health ",
+        "Int ": "Interim ",
+        "Sctst ": "Scientist ",
+        "Supp ": "Support ",
+        "Cty ": "County ",
+        "Ext ": "Extension ",
+        "Emer ": "Emeritus ",
+        "Enforce ": "Enforcement ",
+        "Environ ": "Environmental ",
+        "Gen ": "General ",
+        "Grd ": "Graduate ",
+        "Jnt ": "Joint ",
+        "Jr": "Junior",
+        "Eng ": "Engineer ",
+        "Ctr ": "Center ",
+        "Opr ": "Operator ",
+        "Admin ": "Administrative ",
+        "Dis ": "Distinguished ",
+        "Ser ": "Service ",
+        "Rep ": "Representative ",
+        "Radiol ": "Radiology ",
+        "Technol ": "Technologist ",
+        "Pres ": "President ",
+        "Pres5 ": "President 5 ",
+        "Pres6 ": "President 6 ",
+        "Emin ": "Eminent ",
+        "Cfo ": "Chief Financial Officer ",
+        "Prov ": "Provisional ",
+        "Adm ": "Administrator ",
+        "Info ": "Information ",
+        "It ": "Information Technology ",
+        "Mgr ": "Manager ",
+        "Mgt ": "Management ",
+        "Vis ": "Visiting ",
+        "Lect ": "Lecturer ",
+        "Phas ": "Phased ",
+        "Prog ": "Programmer ",
+        "Prof. ": "Professor ",
+        "Pract ": "Practitioner ",
+        "Registr ": "Registration ",
+        "Rsch ": "Research ",
+        "Rsrh ": "Research ",
+        "Ret ": "Retirement ",
+        "Sch ": "School ",
+        "Sci ": "Scientist ",
+        "Serv ": "Service ",
+        "Tch ": "Teaching ",
+        "Tele ": "Telecommunications ",
+        "Tv ": "TV ",
+        "Univ ": "University ",
+        "Educ ": "Education ",
+        "Crd ": "Coordinator ",
+        "Res ": "Research ",
+        "Dir ": "Director ",
+        "Pky ": "PK Yonge ",
+        "Rcv ": "Receiving ",
+        "Sr ": "Senior ",
+        "Spec ": "Specialist ",
+        "Spc ": "Specialist ",
+        "Spv ": "Supervisor ",
+        "Supv ": "Supervisor ",
+        "Supt ": "Superintendent ",
+        "Stud ": "Student",
+        "Ii ": "II ",
+        "Iii ": "III ",
+        "Iv ": "IV ",
+        "Communic ": "Communications ",
+        "Postdoc ": "Postdoctoral ",
+        "Tech ": "Technician ",
+        "Vp ": "Vice President "
+    }
     s = s.lower()  # convert to lower
     s = s.title()  # uppercase each word
     s += ' '       # add a trailing space so we can find these abbreviated words throughout the string
@@ -754,126 +872,8 @@ def improve_jobcode_description(s):
     t = t.replace("/", " @")  # might be two slashes in the input
     t = t.replace(",", " !")
     t = t.replace("&", " and ")
-    t = t.replace("Aca ", "Academic ")
-    t = t.replace("Act ", "Acting ")
-    t = t.replace("Advanc ", "Advanced ")
-    t = t.replace("Adv ", "Advisory ")
-    t = t.replace("Agric ", "Agricultural ")
-    t = t.replace("Alumn Aff ", "Alumni Affairs ")
-    t = t.replace("Anal  ", "Analyst ")
-    t = t.replace("Asst ", "Assistant ")
-    t = t.replace("Ast #R ", "Research Assistant ")
-    t = t.replace("Ast #G ", "Grading Assistant ")
-    t = t.replace("Ast #T ", "Teaching Assistant ")
-    t = t.replace("Ast ", "Assistant ")
-    t = t.replace("Asst. ", "Assistant ")
-    t = t.replace("Affl ", "Affiliate ")
-    t = t.replace("Anlst ", "Analyst ")
-    t = t.replace("Aso ", "Associate ")
-    t = t.replace("Asoc ", "Associate ")
-    t = t.replace("Assoc ", "Associate ")
-    t = t.replace("Bio ", "Biological ")
-    t = t.replace("Prof ", "Professor ")
-    t = t.replace("Mstr ", "Master ")
-    t = t.replace("Couns ", "Counselor ")
-    t = t.replace("Adj ", "Adjunct ")
-    t = t.replace("Dist ", "Distinguished ")
-    t = t.replace("Chem", "Chemist")
-    t = t.replace("Chr ", "Chair ")
-    t = t.replace("Cio ", "Chief Information Officer ")
-    t = t.replace("Comm", "Communications")
-    t = t.replace("Coo ", "Chief Operating Officer ")
-    t = t.replace("Coord ", "Coordinator ")
-    t = t.replace("Co ", "Courtesy ")
-    t = t.replace("Clin ", "Clinical ")
-    t = t.replace("Clrk", "Clerk")
-    t = t.replace("Ctsy", "Courtesy")
-    t = t.replace("Dn ", "Dean ")
-    t = t.replace("Div ", "Division ")
-    t = t.replace("Fin ", "Financial")
-    t = t.replace("Finan ", "Financial ")
-    t = t.replace("Stu ", "Student ")
-    t = t.replace("Prg ", "Program ")
-    t = t.replace("Dev ", "Development ")
-    t = t.replace("Aff ", "Affiliate ")
-    t = t.replace("Svcs ", "Services ")
-    t = t.replace("Devel ", "Development ")
-    t = t.replace("Tech ", "Technician ")
-    t = t.replace("Progs ", "Programs ")
-    t = t.replace("Facil ", "Facility ")
-    t = t.replace("Hlt", "Health")
-    t = t.replace("Hlth ", "Health ")
-    t = t.replace("Int ", "Interim ")
-    t = t.replace("Sctst ", "Scientist ")
-    t = t.replace("Supp ", "Support ")
-    t = t.replace("Cty ", "County ")
-    t = t.replace("Ext ", "Extension ")
-    t = t.replace("Emer ", "Emeritus ")
-    t = t.replace("Enforce ", "Enforcement ")
-    t = t.replace("Environ ", "Environmental ")
-    t = t.replace("Gen ", "General ")
-    t = t.replace("Grd", "Graduate")
-    t = t.replace("Jnt ", "Joint ")
-    t = t.replace("Jr", "Junior")
-    t = t.replace("Eng ", "Engineer ")
-    t = t.replace("Ctr ", "Center ")
-    t = t.replace("Opr ", "Operator ")
-    t = t.replace("Admin ", "Administrative ")
-    t = t.replace("Dis ", "Distinguished ")
-    t = t.replace("Ser ", "Service ")
-    t = t.replace("Rep ", "Representative ")
-    t = t.replace("Radiol ", "Radiology ")
-    t = t.replace("Technol ", "Technologist ")
-    t = t.replace("Pres ", "President ")
-    t = t.replace("Pres5 ", "President 5 ")
-    t = t.replace("Pres6 ", "President 6 ")
-    t = t.replace("Emin ", "Eminent ")
-    t = t.replace("Cfo ", "Chief Financial Officer ")
-    t = t.replace("Prov ", "Provisional ")
-    t = t.replace("Adm ", "Administrator ")
-    t = t.replace("Info ", "Information ")
-    t = t.replace("It ", "Information Technology ")
-    t = t.replace("Mgr ", "Manager ")
-    t = t.replace("Mgt ", "Management ")
-    t = t.replace("Vis ", "Visiting ")
-    t = t.replace("Lect ", "Lecturer ")
-    t = t.replace("Phas ", "Phased ")
-    t = t.replace("Prog ", "Programmer ")
-    t = t.replace("Prof. ", "Professor ")
-    t = t.replace("Pract ", "Practitioner ")
-    t = t.replace("Registr ", "Registration ")
-    t = t.replace("Rsch ", "Research ")
-    t = t.replace("Rsrh ", "Research ")
-    t = t.replace("Ret ", "Retirement ")
-    t = t.replace("Sch ", "School ")
-    t = t.replace("Sci ", "Scientist ")
-    t = t.replace("Svcs ", "Services ")
-    t = t.replace("Serv ", "Service ")
-    t = t.replace("Tch ", "Teaching ")
-    t = t.replace("Tele ", "Telecommunications ")
-    t = t.replace("Tv ", "TV ")
-    t = t.replace("Univ ", "University ")
-    t = t.replace("Educ ", "Education ")
-    t = t.replace("Crd ", "Coordinator ")
-    t = t.replace("Res ", "Research ")
-    t = t.replace("Dir ", "Director ")
-    t = t.replace("Pky ", "PK Yonge ")
-    t = t.replace("Rcv ", "Receiving ")
-    t = t.replace("Sr ", "Senior ")
-    t = t.replace("Spec ", "Specialist ")
-    t = t.replace("Spc ", "Specialist ")
-    t = t.replace("Spv ", "Supervisor ")
-    t = t.replace("Supv ", "Supervisor ")
-    t = t.replace("Supt ", "Superintendant ")
-    t = t.replace("Stud ", "Student")
-    t = t.replace("Pky ", "P. K. Yonge ")
-    t = t.replace("Ii ", "II ")
-    t = t.replace("Iii ", "III ")
-    t = t.replace("Iv ", "IV ")
-    t = t.replace("Communic ", "Communications ")
-    t = t.replace("Postdoc ", "Postdoctoral ")
-    t = t.replace("Tech ", "Technician ")
-    t = t.replace("Vp ", "Vice President ")
+    for abbrev in abbrev_table:
+        t = t.replace(abbrev, abbrev_table[abbrev])
     t = t.replace(" @", "/")  # restore /
     t = t.replace(" @", "/")
     t = t.replace(" !", ",")  # restore ,
