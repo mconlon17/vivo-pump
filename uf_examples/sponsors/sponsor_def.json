@@ -46,6 +46,29 @@
                     "literal": true
                 }
             }
+        ],
+        "date_harvested": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#dateHarvested"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:datetime"
+                }
+            }
+        ],
+        "harvested_by": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#harvestedBy"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
         ]
     }
 }

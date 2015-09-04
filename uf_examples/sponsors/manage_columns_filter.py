@@ -10,10 +10,12 @@ __license__ = "New BSD License"
 __version__ = "0.01"
 
 from vivopump import read_csv_fp, write_csv_fp, improve_title
+from pump import __version__
+from datetime import date
 import sys
 
 data_in = read_csv_fp(sys.stdin)
-var_names = data_in[data_in.keys()[1]].keys()  # create a list of var_names from the first row
+var_names = data_in[data_in.keys()[0]].keys()  # create a list of var_names from the first row
 print >>sys.stderr, "Columns in", var_names
 data_out = {}
 for row, data in data_in.items():
@@ -26,6 +28,8 @@ for row, data in data_in.items():
     new_data['type'] = 'funder'
     new_data['name'] = improve_title(new_data['SponsorName'])
     new_data['sponsorid'] = new_data['Sponsor_ID']
+    new_data['date_harvested'] = str(date.today())
+    new_data['harvested_by'] = 'VIVO Pump' + ' ' + __version__
 
     # Delete all the upper case column names
 
@@ -34,7 +38,7 @@ for row, data in data_in.items():
             del new_data[name]
 
     data_out[row] = new_data
-var_names = data_out[data_out.keys()[1]].keys()  # create a list of var_names from the first row
+var_names = data_out[data_out.keys()[0]].keys()  # create a list of var_names from the first row
 print >>sys.stderr, "Columns out", var_names
 write_csv_fp(sys.stdout, data_out)
 
