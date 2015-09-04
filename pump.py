@@ -180,7 +180,7 @@ class Pump(object):
                 # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
                 # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
-                uri_string = new_uri(self.uri_prefix)
+                uri_string = new_uri(self.query_parms)
                 if self.verbose:
                     print "Adding an entity for row", row, ".  Will be added at", uri_string
                 uri = URIRef(uri_string)
@@ -501,7 +501,7 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
 
         # VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
 
-        step_uri = URIRef(new_uri(uri_prefix))
+        step_uri = URIRef(new_uri(query_parms))
         update_graph.add((uri, step_def['predicate']['ref'], step_uri))
         update_graph.add((step_uri, RDF.type, step_def['object']['type']))
         if 'label' in step_def['object']:
@@ -549,7 +549,7 @@ def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_updat
 
         # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
 
-        step_uri = URIRef(new_uri(uri_prefix))
+        step_uri = URIRef(new_uri(query_parms))
         update_graph.add((uri, step_def['predicate']['ref'], step_uri))
         update_graph.add((step_uri, RDF.type, step_def['object']['type']))
         if 'label' in step_def['object']:

@@ -266,4 +266,5 @@ code format improvements. pump updates to pass query_parms to vivo_query.  Fix b
 Improve uf_examples/README.md. New improve_jobcode_description passes pylint
 * **2015-09-03** New improve_title.  vivopump.py now passes pylint.  Move all TODO items to GitHub issues.
 * **2015-09-04** uf_examples/sponsors now demonstrates harvested_by and date_harvested. Updating test cases.
-Continue to get query parameters passed to vivo_query.  New_uri now has parms as an argument for passing to vivo_query
+Continue to get query parameters passed to vivo_query.  New_uri now has parms as an argument for passing to vivo_query.
+Imporve testvivopump, externalizing the query_parms for tests that require them.

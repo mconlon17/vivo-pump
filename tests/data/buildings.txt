@@ -1,1 +1,3 @@
 uri	abbreviation	url	photo	number	name
+http://vivo.school.edu/individual/n3523					Clinical and Translational Research Building
+http://vivo.school.edu/individual/n7909					Tigert Hall
