@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "order_by": "ccn",
+        "order_by": "sponsorid",
         "entity_sparql": "?uri a foaf:Organization . ?uri uf:sponsorId ?sponsorid .",
         "type": "http://xmlns.com/foaf/0.1/Organization"
     },

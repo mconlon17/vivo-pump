@@ -1,50 +1,50 @@
-<http://vivo.school.edu/individual/2768065116> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/1740510435> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/3066270733> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/3066270733> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/5985039965> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/2296164111> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/3963516916> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/8202429111> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/5874327687> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/7424661856> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/3805257004> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/5927175557> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8084707766> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/793961448> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/3094034736> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/5226631481> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/8015313782> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/8679496269> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/5874327687> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/4238702950> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/9231791860> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/2296164111> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/1711215368> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/8202429111> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/5985039965> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/2768065116> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/793961448> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
 <http://vivo.school.edu/individual/3963516916> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/8720619787> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/2768065116> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/5985039965> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/5226631481> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/5927175557> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/1740510435> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/8084707766> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/8679496269> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/3369154919> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/3369154919> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/6923310333> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/793961448> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/3805257004> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/6923310333> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/3094034736> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/4238702950> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/8202429111> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/7424661856> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/1711215368> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/8720619787> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/5927175557> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/8015313782> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/8679496269> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/3369154919> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/3293325926> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
-<http://vivo.school.edu/individual/1740510435> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/6923310333> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/4238702950> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/3805257004> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/3369154919> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/5226631481> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8015313782> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/3963516916> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/5874327687> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/9231791860> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/3293325926> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
-<http://vivo.school.edu/individual/9231791860> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/8679496269> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/4238702950> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/5927175557> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/5226631481> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/3066270733> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/1740510435> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/3805257004> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/3094034736> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/1711215368> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/8015313782> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
 <http://vivo.school.edu/individual/8084707766> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/2296164111> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/7424661856> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/9231791860> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/8720619787> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/5874327687> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/7424661856> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/2768065116> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/5985039965> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/2296164111> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
+<http://vivo.school.edu/individual/8202429111> <http://vivo.school.edu/ontology/uf-extension#dateHarvested> "2015-09-04"^^<http://www.w3.org/2001/XMLSchema#datetime> .
+<http://vivo.school.edu/individual/1711215368> <http://vivo.school.edu/ontology/uf-extension#harvestedBy> "VIVO Pump 0.61" .
 
 

@@ -197,10 +197,12 @@ def key_string(s):
     return k
 
 
-def get_vivo_types(selector, separator=';'):
+def get_vivo_types(selector, parms, separator=';'):
     """
     Query VIVO using the selector and return a dictionary with keys of all uri satisfying the selector and
     data of all the types for each uri, separated by the separator
+    :param: selector: query fragment for selecting the entities whose types will be returned
+    :param: parms: vivo_query parms
     :return: dictionary of types keyed by uri
     """
     query = """
@@ -212,19 +214,20 @@ def get_vivo_types(selector, separator=';'):
     """
     q = query.replace("{{separator}}", separator)
     q = q.replace("{{selector}}", selector)
-    a = vivo_query(q)
+    a = vivo_query(q, parms)
     types = [x['types']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(uri, types))
 
 
-def get_vivo_ufid():
+def get_vivo_ufid(parms):
     """
     Query VIVO and return a list of all the ufid found in VIVO
+    :param: parms: vivo_query parameters
     :return: dictionary of uri keyed by ufid
     """
     query = "select ?uri ?ufid where {?uri uf:ufid ?ufid .}"
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     ufid = [x['ufid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(ufid, uri))
@@ -266,22 +269,24 @@ def get_vivo_ccn():
     return dict(zip(ccn, uri))
 
 
-def get_vivo_sponsorid():
+def get_vivo_sponsorid(parms):
     """
     Query VIVO and return a list of all the sponsorid found in VIVO
+    :param: parms: vivo_query parms
     :return: dictionary of uri keyed by sponsorid
     """
     query = "select ?uri ?sponsorid where {?uri uf:sponsorId ?sponsorid .}"
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(sponsorid, uri))
 
 
-def get_vivo_authors():
+def get_vivo_authors(parms):
     """
     Query VIVO and return a list of all the authors found in VIVO.  Authors are people connected to
     publications through authorships
+    :param: parms: vivo_query parms
     :return: dictionary of author uri keyed by display_name (that won't work!)
     """
     query = """
@@ -297,7 +302,7 @@ def get_vivo_authors():
         ?uri rdfs:label ?display_name .
     }
     """
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     display_name = [x['display_name']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(display_name, uri))
@@ -488,7 +493,7 @@ def make_rdf_term(row_term):
     return rdf_term
 
 
-def get_graph(update_def, debug=False):
+def get_graph(update_def, query_parms, debug=False):
     """
     Given the update def, get a graph from VIVO of the triples eligible for updating
     :return: graph of triples
@@ -500,7 +505,7 @@ def get_graph(update_def, debug=False):
     entity_query = 'select ?uri (<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> as ?p) (<' + \
         str(update_def['entity_def']['type']) + '> as ?o)\nwhere {\n    ' + \
         update_def['entity_def']['entity_sparql'] + '\n}'
-    result = vivo_query(entity_query, debug=debug)
+    result = vivo_query(entity_query, query_parms, debug=debug)
     for row in result['results']['bindings']:
         s = URIRef(row['uri']['value'])
         p = URIRef(row['p']['value'])
@@ -510,7 +515,7 @@ def get_graph(update_def, debug=False):
         update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
             continue
-        result = vivo_query(update_query, debug=debug)
+        result = vivo_query(update_query, query_parms, debug=debug)
         for row in result['results']['bindings']:
             s = URIRef(row['uri']['value'])
             p = URIRef(row['p']['value'])
@@ -529,28 +534,30 @@ def get_graph(update_def, debug=False):
     return a
 
 
-def new_uri(uri_prefix='http://vivo.school.edu/individual/n'):
+def new_uri(parms):
     """
-    Find an unused VIVO URI with the specified VIVO_URI_PREFIX
+    Find an unused VIVO URI in the VIVO defined by the parms
+    :param parms: dictionary with queryuri, username, password and uriprefix
+    :return: a URI not in VIVO
     """
     test_uri = ""
     while True:
-        test_uri = uri_prefix + str(random.randint(1, 9999999999))
+        test_uri = parms['uriprefix'] + str(random.randint(1, 9999999999))
         query = """
             SELECT (COUNT(?z) AS ?count) WHERE {
             <""" + test_uri + """> ?y ?z
             }"""
-        response = vivo_query(query)
+        response = vivo_query(query, parms)
         if int(response["results"]["bindings"][0]['count']['value']) == 0:
             break
     return test_uri
 
 
-def vivo_query(query, parms={'query_uri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}, debug=False):
+def vivo_query(query, parms, debug=False):
     """
-    A new VIVO query function using SparqlWrapper.  Tested with Stardog, UF VIVO and Dbpedia
+    A new VIVO query function using SPARQLWrapper.  Tested with Stardog, UF VIVO and Dbpedia
     :param query: SPARQL query.  VIVO PREFIX will be added
+    :param parms: dictionary with query parms:  queryuri, username and password
     :param debug: boolean. If true, query will be printed to stdout
     :return: result object, typically JSON
     :rtype: dict
@@ -572,14 +579,12 @@ def vivo_query(query, parms={'query_uri': 'http://localhost:8080/vivo/api/sparql
     """
     from SPARQLWrapper import SPARQLWrapper, JSON
     if debug:
-        print "In vivo_query"
-        print parms['query_uri']
-        print query
-    sparql = SPARQLWrapper(parms['query_uri'])
+        print "in vivo_query"
+        print parms
+    sparql = SPARQLWrapper(parms['queryuri'])
     new_query = prefix + query
     sparql.setQuery(new_query)
     if debug:
-        print "after setQuery"
         print new_query
     sparql.setReturnFormat(JSON)
     sparql.addParameter("email", parms['username'])
@@ -715,7 +720,18 @@ def improve_course_title(s):
     Here we attempt to reverse the process -- a short title is turned into a
     longer one for use in labels
     """
-    # TODO: Add abbreviations for course titles
+    abbrev_table = {
+        "Intro ": "Introduction ",
+        "To ": "to ",
+        "Of ": "of ",
+        "In ": "in ",
+        "Stat ": "Statistics ",
+        "Spec ": "Special ",
+        "Top ": "Topics ",
+        "Hist ": "History ",
+        "Hlthcare ": "Healthcare ",
+        "Prac ": "Practice "
+    }
     s = s.lower()  # convert to lower
     s = s.title()  # uppercase each word
     s += ' '       # add a trailing space so we can find these abbreviated words throughout the string
@@ -725,7 +741,8 @@ def improve_course_title(s):
     t = t.replace("/", " @")  # might be two slashes in the input
     t = t.replace(",", " !")
     t = t.replace("-", " #")
-
+    for abbrev in abbrev_table:
+        t = t.replace(abbrev, abbrev_table[abbrev])
     t = t.replace(" @", "/")  # restore /
     t = t.replace(" @", "/")  # restore /
     t = t.replace(" !", ",")  # restore ,

@@ -1,0 +1,25 @@
+uri|harvested_by|name|type|sponsorid|date_harvested
+http://vivo.school.edu/individual/1711215368||Phormax Corporation|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01001|
+http://vivo.school.edu/individual/1740510435||Itt Industries Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01099|
+http://vivo.school.edu/individual/2296164111||Visteon Corp|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01098|
+http://vivo.school.edu/individual/2768065116||Amer Bioscience Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01004|
+http://vivo.school.edu/individual/3066270733||Burroughs Wellcome Company|agent;thing;bfo1;org;funder;bfo2;bfo4|GM0100|
+http://vivo.school.edu/individual/3094034736||Cetus Oncology Corp|agent;thing;bfo1;org;funder;bfo2;bfo4|GM0110|
+http://vivo.school.edu/individual/3293325926||Glaxo Smithkline|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01053|
+http://vivo.school.edu/individual/3369154919||Avax America Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01003|
+http://vivo.school.edu/individual/3805257004||Galileo Laboratories Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01006|
+http://vivo.school.edu/individual/3963516916||Framatome Technologies Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01009|
+http://vivo.school.edu/individual/4238702950||Titan Pharmaceuticals Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01100|
+http://vivo.school.edu/individual/5226631481||Concepts in Pharm Research Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01071|
+http://vivo.school.edu/individual/5874327687||Advanced Technology Labs Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM010|
+http://vivo.school.edu/individual/5927175557||Sepracor Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01007|
+http://vivo.school.edu/individual/5985039965||Novazyme Pharmaceuticals Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01052|
+http://vivo.school.edu/individual/6923310333||Sponsored Programs Holding Account|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01|
+http://vivo.school.edu/individual/7424661856||Wrs Infrastructure & Env|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01008|
+http://vivo.school.edu/individual/793961448||Exponent Environmental Group|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01005|
+http://vivo.school.edu/individual/8015313782||Acorn Cardiovascular Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01072|
+http://vivo.school.edu/individual/8084707766||Optometrix Inc|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01002|
+http://vivo.school.edu/individual/8202429111||Fabre Kramer Pharmaceuticals|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01097|
+http://vivo.school.edu/individual/8679496269||Advanced Tissue Sciences|agent;thing;bfo1;org;funder;bfo2;bfo4|GM011|
+http://vivo.school.edu/individual/8720619787||Burroughs Wellcome Fund|agent;thing;bfo1;org;funder;bfo2;bfo4|GM0101|
+http://vivo.school.edu/individual/9231791860||Seaspace Corporation|agent;thing;bfo1;org;funder;bfo2;bfo4|GM01000|

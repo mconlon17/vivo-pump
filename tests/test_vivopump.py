@@ -4,7 +4,7 @@
 """
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015, University of Florida"
+__copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
 __version__ = "1.00"
 
@@ -68,13 +68,19 @@ class ParseDatePartsCase(unittest.TestCase):
 
 
 class NewUriTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons',
+             'uriprefix': 'http://vivo.school.edu/individual/n'}
+
     def test_new_uri_default(self):
-        uri = new_uri()
+        uri = new_uri(NewUriTestCase.parms)
         print uri
         self.assertTrue(len(uri) > 0)
 
     def test_new_uri_prefix(self):
-        uri = new_uri(uri_prefix='http://my.vivo.edu/individual/')
+        parms = NewUriTestCase.parms
+        parms['uriprefix'] = 'http://my.vivo.edu/'
+        uri = new_uri(parms)
         print uri
         self.assertTrue(uri.startswith('http://my.vivo.edu'))
 
@@ -111,11 +117,15 @@ class MakeRdfTermTestCase(unittest.TestCase):
 
 
 class GetGraphTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons',
+             'uriprefix': 'http://vivo.school.edu/individual/n'}
+
     def test_normal_case(self):
         update_def = read_update_def('data/grant_def.json')
-        a = get_graph(update_def)
+        a = get_graph(update_def, GetGraphTestCase.parms)
         print len(a)
-        self.assertTrue(len(a) == 241611)
+        self.assertTrue(len(a) == 11)
 
 
 class ReadCSVTestCase(unittest.TestCase):
@@ -154,11 +164,14 @@ class WriteCSVTestCase(unittest.TestCase):
 
 
 class VIVOQueryTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
+
     def test_vivo_query(self):
         result = vivo_query("""
         SELECT ?label
         WHERE { <http://vivo.school.edu/individual/n1133> rdfs:label ?label }
-        """, debug=True)
+        """, VIVOQueryTestCase.parms, debug=True)
         print result
         self.assertTrue(len(result) > 0)
 
@@ -168,31 +181,43 @@ class VIVOQueryTestCase(unittest.TestCase):
             result = vivo_query("""
             SEWECT ?label
             WHERE { <http://vivo.ufl.edu/individual/n25562> rdfs:label ?label }
-            """, debug=True)
+            """, VIVOQueryTestCase.parms, debug=True)
             print result
 
 
 class VIVOGetTypesTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
+
     def test_vivo_get_types(self):
-        result = get_vivo_types("?uri a foaf:Person .")
+        result = get_vivo_types("?uri a foaf:Person .", VIVOGetTypesTestCase.parms)
         self.assertTrue(len(result) > 0)
 
 
 class VIVOGetUFIDTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
+
     def test_vivo_get_ufid(self):
-        result = get_vivo_ufid()
+        result = get_vivo_ufid(VIVOGetUFIDTestCase.parms)
         self.assertTrue(len(result) > 0)
 
 
 class VIVOGetAuthorsTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
+
     def test_vivo_get_authors(self):
-        result = get_vivo_authors()
+        result = get_vivo_authors(VIVOGetAuthorsTestCase.parms)
         self.assertTrue(len(result) > 0)
 
 
 class VIVOGetSponsorsTestCase(unittest.TestCase):
+    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
+
     def test_vivo_get_sponsorid(self):
-        result = get_vivo_sponsorid()
+        result = get_vivo_sponsorid(VIVOGetSponsorsTestCase.parms)
         print len(result)
         self.assertTrue(len(result) > 0)
 
@@ -267,7 +292,7 @@ class ImproveJobCodeDescriptionTestCase(unittest.TestCase):
         in_title = "RES ASO PROF & DIR"
         out_title = improve_jobcode_description(in_title)
         print out_title
-        self.assertEqual("Research Associate Professor & Director", out_title)
+        self.assertEqual("Research Associate Professor  and  Director", out_title)
 
     def test_preserve_unicode(self):
         in_title = u"CRD TECH PRG 2"

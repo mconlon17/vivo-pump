@@ -139,7 +139,8 @@ class Pump(object):
         self.enum = load_enum(self.update_def)
 
         if self.original_graph is None:  # Test for injection
-            self.original_graph = get_graph(self.update_def, debug=self.verbose)  # Create the original graph from VIVO
+            self.original_graph = get_graph(self.update_def, self.query_parms, debug=self.verbose)
+            # Create the original graph from VIVO
 
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
