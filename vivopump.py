@@ -1299,3 +1299,75 @@ def parse_date_parts(month, year):
     month_number = month_numbers[month_name.upper()]
     date_value = datetime(int(year), month_number, int(month_day))
     return date_value.isoformat()
+
+
+def get_args():
+    """
+    Get the args specified by the user.  Arg values are determined:
+    1) from hard coded values (see below)
+    2) Overridden by values in a specified config file (see below)
+    3) Overridden by values on the command line
+    :return: args structure as defined by argparser
+    """
+    import argparse
+    import ConfigParser
+
+    program_defaults = {
+        'action': 'summarize',
+        'defn': 'pump_def.json',
+        'inter': '\t',
+        'intra': ';',
+        'username': 'vivo_root@school.edu',
+        'password': 'password',
+        'rdfprefix': 'pump',
+        'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+        'uriprefix': 'http://vivo.school.edu/individual/n',
+        'src': 'pump_data.txt',
+        'config': 'sv.cfg',
+        'verbose': False,
+        'nofilters': False
+    }
+
+    parser = argparse.ArgumentParser(description="Get or update row and column data from and to VIVO",
+                                     epilog="For more info, see http://github.com/mconlon17/vivo-pump")
+    parser.add_argument("-a", "--action", help="desired action.  get = get data from VIVO.  update = update VIVO "
+                        "data from a spreadsheet. summarize = show def summary. serialize = serial version of the pump",
+                        nargs='?')
+    parser.add_argument("-d", "--defn", help="name of definition file", nargs="?")
+    parser.add_argument("-i", "--inter", help="interfield delimiter", nargs="?")
+    parser.add_argument("-j", "--intra", help="intrafield delimiter", nargs="?")
+    parser.add_argument("-u", "--username", help="username for API", nargs="?")
+    parser.add_argument("-p", "--password", help="password for API", nargs="?")
+    parser.add_argument("-q", "--queryuri", help="URI for API", nargs="?")
+    parser.add_argument("-r", "--rdfprefix", help="RDF prefix", nargs="?")
+    parser.add_argument("-x", "--uriprefix", help="URI prefix", nargs="?")
+    parser.add_argument("-s", "--src", help="name of source file containing data to be updated in VIVO", nargs='?')
+    parser.add_argument("-c", "--config", help="name of file containing config data.  Config data overrides program "
+                        "defaults. Command line overrides config file values", nargs='?')
+    parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
+    parser.add_argument("-n", "--nofilters", action="store_true", help="turn off filters")
+    args = parser.parse_args()
+
+    if args.config is None:
+        args.config = program_defaults['config']
+
+    #   Config file values overwrite program defaults
+
+    config = ConfigParser.ConfigParser()
+    config.read(args.config)  # Read the config file from the config filename specified in the command line args
+    for section in config.sections():
+        for name, val in config.items(section):
+            program_defaults[name] = val
+
+    #   Non null command line values overwrite the config file values
+
+    for name, val in vars(args).items():
+        if val is not None:
+            program_defaults[name] = val
+
+    #   Put the final values back in args
+
+    for name, val in program_defaults.items():
+        vars(args)[name] = val
+
+    return args

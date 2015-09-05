@@ -17,7 +17,7 @@
 """
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015, University of Florida"
+__copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
@@ -27,7 +27,7 @@ import sys
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_sponsors = get_vivo_sponsorid()  # get dictionary of sponsor uri keyed by sponsorid
+vivo_sponsors = get_vivo_sponsorid(parms)  # get dictionary of sponsor uri keyed by sponsorid
 print >>sys.stderr, 'VIVO sponsors', len(vivo_sponsors)
 
 for row, data in data_in.items():
