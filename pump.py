@@ -343,7 +343,11 @@ def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, deb
     from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
-    # Generate the get query, execute the query, shape the query results into the return object
+    #   We need a generator that produces the order based on the order value in the entity def, or uri order if not
+    #   present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
+    #   always unique
+
+    #   Generate the get query, execute the query, shape the query results into the return object
 
     query = make_get_query(update_def)
     if debug:
@@ -352,15 +356,15 @@ def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, deb
     result_set = vivo_query(query, query_parms, debug)
     data = make_get_data(update_def, result_set)
 
-    # Write out the file
+    #   Write out the file
 
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
     columns = ['uri'] + update_def['entity_def']['order']
-    outfile.write(inter.join(columns))
+    outfile.write(inter.join(columns))  # write a header using the inter field separator between column names
     outfile.write('\n')
 
-    for uri in sorted(data.keys()):
+    for uri in sorted(data.keys()):  # replace with generator described above to support row order
         for name in columns:
             if name in data[uri]:
 
