@@ -4,7 +4,7 @@
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
-__license__ = "BSD 3-Clause license"
+__license__ = "New BSD license"
 __version__ = "1.02"
 
 import csv

@@ -27,7 +27,7 @@
 # data is provided, use it to match authors and then disambiguate the rest.
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015"
+__copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 

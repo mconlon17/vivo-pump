@@ -5,7 +5,7 @@
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015 (c) Michael Conlon"
-__license__ = "BSD 3-Clause license"
+__license__ = "New BSD license"
 __version__ = "1.00"
 
 import unittest
@@ -14,7 +14,7 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
     improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
     improve_jobcode_description, improve_course_title, replace_initials, parse_pages, parse_date_parts, \
-    improve_display_name, get_args
+    improve_display_name
 from pump import Pump
 
 

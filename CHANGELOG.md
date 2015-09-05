@@ -269,4 +269,4 @@ Improve uf_examples/README.md. New improve_jobcode_description passes pylint
 Continue to get query parameters passed to vivo_query.  New_uri now has parms as an argument for passing to vivo_query.
 Improve testvivopump, externalizing the query_parms for tests that require them.
 * **2015-09-05** Minor code formatting.  Move arg processing from sv.py to get_args.  Use get_args in filters.
-PumpEnumTestCase repaired.
+PumpEnumTestCase repaired.  Improve copyright notices.
