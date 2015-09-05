@@ -233,37 +233,40 @@ def get_vivo_ufid(parms):
     return dict(zip(ufid, uri))
 
 
-def get_vivo_publishers():
+def get_vivo_publishers(parms):
     """
     Query VIVO and return a list of all the publishers found in VIVO
+    :param: parms: vivo_query parameters
     :return: dictionary of uri keyed by simplified publisher name
     """
     query = "select ?uri ?label where {?uri a vivo:Publisher . ?uri rdfs:label ?label .}"
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     label = [key_string(x['label']['value']) for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(label, uri))
 
 
-def get_vivo_journals():
+def get_vivo_journals(parms):
     """
     Query VIVO and return a list of all the journals found in VIVO
+    :param: parms: vivo_query params
     :return: dictionary of uri keyed by ISSN
     """
     query = "select ?uri ?issn where {?uri bibo:issn ?issn .}"
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     issn = [x['issn']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(issn, uri))
 
 
-def get_vivo_ccn():
+def get_vivo_ccn(parms):
     """
     Query VIVO and return a list of all the ccn found in VIVO
+    :param: parms: vivo_query parms
     :return: dictionary of uri keyed by ccn
     """
     query = "select ?uri ?ccn where {?uri uf:ccn ?ccn .}"
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     ccn = [x['ccn']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(ccn, uri))
@@ -308,10 +311,11 @@ def get_vivo_authors(parms):
     return dict(zip(display_name, uri))
 
 
-def get_vivo_positions():
+def get_vivo_positions(parms):
     """
     Query VIVO and return a list of all the UF positions found in VIVO.  UF positions will
     have an hrTitle.  Non UF positions will not have this property
+    :param: parms: vivo_query parameters
     :return: dictionary of position uri keyed by ufid, deptid, hr_title, start_date
     """
     query = """
@@ -324,7 +328,7 @@ def get_vivo_positions():
       ?uri vivo:dateTimeInterval ?dti . ?dti vivo:start ?start . ?start vivo:dateTimeValue ?start_date .
     }
     """
-    a = vivo_query(query)
+    a = vivo_query(query, parms)
     ufids = [x['ufid']['value'] for x in a['results']['bindings']]
     deptids = [x['deptid']['value'] for x in a['results']['bindings']]
     hr_titles = [x['hr_title']['value'] for x in a['results']['bindings']]

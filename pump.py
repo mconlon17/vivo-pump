@@ -117,6 +117,8 @@ class Pump(object):
         from vivopump import read_csv, get_graph
         from rdflib import Graph
         import logging
+        import os.path
+        import time
 
         self.intra = intra
         self.inter = inter
@@ -154,7 +156,8 @@ class Pump(object):
                 print datetime.now(), "No enumerations"
             else:
                 for key in self.enum.keys():
-                    print datetime.now(), key, "get", len(self.enum[key]['get']), "update", \
+                    print datetime.now(), key, "modified", time.ctime(os.path.getmtime(key)), \
+                        "get", len(self.enum[key]['get']), "update", \
                         len(self.enum[key]['update'])
 
         return self.do_update()
