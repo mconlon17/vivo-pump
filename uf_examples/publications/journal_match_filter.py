@@ -21,13 +21,14 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_journals
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_journals, get_parms
 import sys
 
+parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_journals = get_vivo_journals()  # get dictionary of journal uri keyed by simplified  name
+vivo_journals = get_vivo_journals(parms)  # get dictionary of journal uri keyed by simplified  name
 print >>sys.stderr, 'VIVO journals', len(vivo_journals)
 print >>sys.stderr, vivo_journals
 

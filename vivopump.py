@@ -1371,3 +1371,16 @@ def get_args():
         vars(args)[name] = val
 
     return args
+
+
+def get_parms():
+    """
+    Use get args to get the args, and return a dictionary of the args ready for use in pump software
+    :return: dict: parms
+    """
+    parms = {}
+    args = get_args()
+    for name, val in vars(args).items():
+        if val is not None:
+            parms[name] = val
+    return parms

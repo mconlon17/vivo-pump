@@ -28,11 +28,11 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_authors
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_authors, get_parms
 import sys
 
 
-def disambiguate_author(author, vivo_authors=get_vivo_authors()):
+def disambiguate_author(author, vivo_authors):
     """
     Given an author dictionary with name parts, find matches in the data structure returned by get_vivo_authors
     :param author: dictionary of name parts
@@ -42,9 +42,10 @@ def disambiguate_author(author, vivo_authors=get_vivo_authors()):
     author_uri_list = []
     return author_uri_list
 
+parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
-vivo_authors = get_vivo_authors()  # get dictionaries of authors keyed by name parts
+vivo_authors = get_vivo_authors(parms)  # get dictionaries of authors keyed by name parts
 print >>sys.stderr, 'VIVO authors', len(vivo_authors)
 print >>sys.stderr, vivo_authors
 data_out = {}

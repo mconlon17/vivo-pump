@@ -10,7 +10,6 @@ __license__ = "New BSD License"
 __version__ = "0.01"
 
 from vivopump import read_csv_fp, write_csv_fp
-import shelve
 import sys
 
 data_in = read_csv_fp(sys.stdin)

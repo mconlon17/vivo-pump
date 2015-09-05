@@ -20,14 +20,15 @@ __copyright__ = "Copyright 2015 (c), Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_types, read_csv
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_types, get_parms, read_csv
 import sys
 
+parms = get_parms()
 type_data = read_csv('people_types.txt', delimiter='\t')
 type_enum = {type_data[row]['vivo']: type_data[row]['short'] for row in type_data}  # convert spreadsheet to dict
 plan_data = read_csv('salary_plan_enum.txt', delimiter='\t')
 plan_enum = {plan_data[row]['short']: plan_data[row]['vivo'] for row in plan_data}  # convert spreadsheet to dict
-vivo_types = get_vivo_types("?uri a uf:UFEntity . ?uri a foaf:Person .")  # must match entity_sparql
+vivo_types = get_vivo_types("?uri a uf:UFEntity . ?uri a foaf:Person .", parms)  # must match entity_sparql
 data_in = read_csv_fp(sys.stdin)
 data_out = {}
 for row, data in data_in.items():

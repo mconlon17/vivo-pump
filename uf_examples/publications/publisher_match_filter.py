@@ -21,14 +21,15 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_publishers, key_string
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_publishers, get_parms, key_string
 import sys
 
+parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
 row_out = 0
-vivo_publishers = get_vivo_publishers()  # get dictionary of publisher uri keyed by simplified  name
+vivo_publishers = get_vivo_publishers(parms)  # get dictionary of publisher uri keyed by simplified  name
 print >>sys.stderr, 'VIVO publishers', len(vivo_publishers)
 print >>sys.stderr, vivo_publishers
 

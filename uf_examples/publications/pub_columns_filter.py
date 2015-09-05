@@ -13,7 +13,6 @@ from vivopump import read_csv_fp, write_csv_fp, improve_title, parse_pages, pars
 import sys
 
 
-
 data_in = read_csv_fp(sys.stdin)
 var_names = data_in[data_in.keys()[1]].keys()  # create a list of var_names from the first row
 print >>sys.stderr, "Columns in", var_names

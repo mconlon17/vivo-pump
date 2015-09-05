@@ -21,13 +21,14 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_pubs
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_pubs, get_parms
 import sys
 
+parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_pubs = get_vivo_pubs()  # get dictionary of pub uri keyed by simplified  name
+vivo_pubs = get_vivo_pubs(parms)  # get dictionary of pub uri keyed by simplified name
 print >>sys.stderr, 'VIVO pubs', len(vivo_pubs)
 print >>sys.stderr, vivo_pubs
 

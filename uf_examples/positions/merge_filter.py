@@ -21,13 +21,14 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_positions
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_positions, get_parms
 import sys
 
+parms = get_parms
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_positions = get_vivo_positions()  # get dictionary of position uri keyed by ufid, deptid, hr_title, start_date
+vivo_positions = get_vivo_positions(parms)  # get dictionary of position uri keyed by ufid, deptid, hr_title, start_date
 print >>sys.stderr, 'VIVO positions', len(vivo_positions)
 
 for row, data in data_in.items():

@@ -21,9 +21,12 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_sponsorid
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_sponsorid, get_parms
 import sys
 
+parms = get_parms()
+if parms['verbose']:
+    print >>sys.stderr, parms
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}

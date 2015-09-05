@@ -16,13 +16,14 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_ufid
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_ufid, get_parms
 import sys
 
+parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_ufid = get_vivo_ufid()  # get dictionary of uri keyed by ufid
+vivo_ufid = get_vivo_ufid(parms)  # get dictionary of uri keyed by ufid
 vivo_ufids = vivo_ufid.keys()
 print >>sys.stderr, 'VIVO ufid', len(vivo_ufid)
 source_ufid = [data_in[x]['UFID'] for x in data_in]
@@ -49,7 +50,7 @@ for row, data in data_in.items():
 #   through additional filtering operations
 
 row_number = max(data_in.keys())  # vivo will continue numbering rows from here
-blank_data = blank_data = dict(zip(vivo_data.keys(), ['' for x in vivo_data.keys()]))
+blank_data = dict(zip(vivo_data.keys(), ['' for x in vivo_data.keys()]))
 print >>sys.stderr, blank_data
 print >>sys.stderr, vivo_ufid
 for ufid, uri in vivo_ufid.items():

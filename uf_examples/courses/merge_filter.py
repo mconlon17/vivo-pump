@@ -21,13 +21,14 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.02"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_ccn
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_ccn, get_parms
 import sys
 
+parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, len(data_in)
 data_out = {}
-vivo_courses = get_vivo_ccn()  # get dictionary of course uri keyed by ccn
+vivo_courses = get_vivo_ccn(parms)  # get dictionary of course uri keyed by ccn
 print >>sys.stderr, 'VIVO courses', len(vivo_courses)
 
 for row, data in data_in.items():
