@@ -279,7 +279,7 @@ def get_vivo_sponsorid(parms):
     :return: dictionary of uri keyed by sponsorid
     """
     query = "select ?uri ?sponsorid where {?uri uf:sponsorId ?sponsorid .}"
-    a = vivo_query(query, parms)
+    a = vivo_query(query, parms, parms['verbose'])
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(sponsorid, uri))
@@ -566,30 +566,17 @@ def vivo_query(query, parms, debug=False):
     :return: result object, typically JSON
     :rtype: dict
     """
-    prefix = """
-    PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-    PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-    PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-    PREFIX bibo: <http://purl.org/ontology/bibo/>
-    PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX obo: <http://purl.obolibrary.org/obo/>
-    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-    PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-    PREFIX vivo: <http://vivoweb.org/ontology/core#>
-    """
     from SPARQLWrapper import SPARQLWrapper, JSON
+    import sys
+
     if debug:
-        print "in vivo_query"
-        print parms
+        print >>sys.stderr, "in vivo_query"
+        print >>sys.stderr, parms
     sparql = SPARQLWrapper(parms['queryuri'])
-    new_query = prefix + query
+    new_query = parms['prefix'] + '\n' + query
     sparql.setQuery(new_query)
     if debug:
-        print new_query
+        print >>sys.stderr, new_query
     sparql.setReturnFormat(JSON)
     sparql.addParameter("email", parms['username'])
     sparql.addParameter("password", parms['password'])

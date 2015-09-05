@@ -28,4 +28,4 @@ Seven columns result from the filters:
 1. date_harvested
 
     cat sponsors_small.txt | python manage_columns_filter.py | python unique_sponsorid_filter.py | 
-    python merge_filter.py > sponsor_update_data_small.txt
+    python merge_filter.py -v > sponsor_update_data_small.txt
