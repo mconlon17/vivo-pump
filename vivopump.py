@@ -1306,6 +1306,20 @@ def get_args():
         'intra': ';',
         'username': 'vivo_root@school.edu',
         'password': 'password',
+        'prefix':
+        'PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n'
+        'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n'
+        'PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>\n'
+        'PREFIX owl:   <http://www.w3.org/2002/07/owl#>\n'
+        'PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>\n'
+        'PREFIX bibo: <http://purl.org/ontology/bibo/>\n'
+        'PREFIX event: <http://purl.org/NET/c4dm/event.owl#>\n'
+        'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+        'PREFIX obo: <http://purl.obolibrary.org/obo/>\n'
+        'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n'
+        'PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>\n'
+        'PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>\n'
+        'PREFIX vivo: <http://vivoweb.org/ontology/core#>\n',
         'rdfprefix': 'pump',
         'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
         'uriprefix': 'http://vivo.school.edu/individual/n',

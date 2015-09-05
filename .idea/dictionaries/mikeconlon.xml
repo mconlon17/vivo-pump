@@ -37,6 +37,7 @@
       <w>rdfprefix</w>
       <w>repl</w>
       <w>sewect</w>
+      <w>skos</w>
       <w>sponsorid</w>
       <w>stardog</w>
       <w>stdout</w>
@@ -45,6 +46,8 @@
       <w>uriprefix</w>
       <w>uriref</w>
       <w>vcardemail</w>
+      <w>vitro</w>
+      <w>vitrop</w>
       <w>vivopump</w>
       <w>vivotools</w>
       <w>workingtitle</w>
