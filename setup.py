@@ -23,5 +23,5 @@ setup(
     description='Use CSV files to update data in VIVO and get data from VIVO.  All semantics are externalized in'
         'JSON format definition files.',
     py_modules=['vivopump', 'pump'],
-    requires=['rdflib(>=4.2.1)', 'SPARQLWrapper(>=1.6.4)'],
+    requires=['rdflib(>=4.2.1)', 'SPARQLWrapper(>=1.6.4)', 'bibtexparser(>=0.6.0)'],
 )
