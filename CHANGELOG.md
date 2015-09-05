@@ -271,4 +271,5 @@ Improve testvivopump, externalizing the query_parms for tests that require them.
 * **2015-09-05** Minor code formatting.  Move arg processing from sv.py to get_args.  Use get_args in filters.
 PumpEnumTestCase repaired.  Improve copyright notices.  All filters now use get_parms.  Require bibtexparser.
 prefix is now a query param.  vivo_query expects a prefix in the query parms.  All sv.cfg updated to include
-prefix.  Unit tests not yet updated.
+prefix.  Unit tests not yet updated.  read_update_def improved -- now throws error if name in object matches name
+in column_def.  Unit test added.

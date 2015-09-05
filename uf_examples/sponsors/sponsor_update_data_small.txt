@@ -1,0 +1,25 @@
+harvested_by|sponsorid|name|date_harvested|type|uri|remove
+VIVO Pump 0.61|GM01052|Novazyme Pharmaceuticals Inc|2015-09-05|funder|http://vivo.school.edu/individual/5985039965|
+VIVO Pump 0.61|GM01053|Glaxo Smithkline|2015-09-05|funder|http://vivo.school.edu/individual/3293325926|
+VIVO Pump 0.61|GM01071|Concepts in Pharm Research Inc|2015-09-05|funder|http://vivo.school.edu/individual/5226631481|
+VIVO Pump 0.61|GM01072|Acorn Cardiovascular Inc|2015-09-05|funder|http://vivo.school.edu/individual/8015313782|
+VIVO Pump 0.61|GM01097|Fabre Kramer Pharmaceuticals|2015-09-05|funder|http://vivo.school.edu/individual/8202429111|
+VIVO Pump 0.61|GM01098|Visteon Corp|2015-09-05|funder|http://vivo.school.edu/individual/2296164111|
+VIVO Pump 0.61|GM01099|Itt Industries Inc|2015-09-05|funder|http://vivo.school.edu/individual/1740510435|
+VIVO Pump 0.61|GM011|Advanced Tissue Sciences|2015-09-05|funder|http://vivo.school.edu/individual/8679496269|
+VIVO Pump 0.61|GM0110|Cetus Oncology Corp|2015-09-05|funder|http://vivo.school.edu/individual/3094034736|
+VIVO Pump 0.61|GM01100|Titan Pharmaceuticals Inc|2015-09-05|funder|http://vivo.school.edu/individual/4238702950|
+VIVO Pump 0.61|GM01|Sponsored Programs Holding Account|2015-09-05|funder|http://vivo.school.edu/individual/6923310333|
+VIVO Pump 0.61|GM010|Advanced Technology Labs Inc|2015-09-05|funder|http://vivo.school.edu/individual/5874327687|
+VIVO Pump 0.61|GM0100|Burroughs Wellcome Company|2015-09-05|funder|http://vivo.school.edu/individual/3066270733|
+VIVO Pump 0.61|GM01000|Seaspace Corporation|2015-09-05|funder|http://vivo.school.edu/individual/9231791860|
+VIVO Pump 0.61|GM01001|Phormax Corporation|2015-09-05|funder|http://vivo.school.edu/individual/1711215368|
+VIVO Pump 0.61|GM01002|Optometrix Inc|2015-09-05|funder|http://vivo.school.edu/individual/8084707766|
+VIVO Pump 0.61|GM01003|Avax America Inc|2015-09-05|funder|http://vivo.school.edu/individual/3369154919|
+VIVO Pump 0.61|GM01004|Amer Bioscience Inc|2015-09-05|funder|http://vivo.school.edu/individual/2768065116|
+VIVO Pump 0.61|GM01005|Exponent Environmental Group|2015-09-05|funder|http://vivo.school.edu/individual/793961448|
+VIVO Pump 0.61|GM01006|Galileo Laboratories Inc|2015-09-05|funder|http://vivo.school.edu/individual/3805257004|
+VIVO Pump 0.61|GM01007|Sepracor Inc|2015-09-05|funder|http://vivo.school.edu/individual/5927175557|
+VIVO Pump 0.61|GM01008|Wrs Infrastructure & Env|2015-09-05|funder|http://vivo.school.edu/individual/7424661856|
+VIVO Pump 0.61|GM01009|Framatome Technologies Inc|2015-09-05|funder|http://vivo.school.edu/individual/3963516916|
+VIVO Pump 0.61|GM0101|Burroughs Wellcome Fund|2015-09-05|funder|http://vivo.school.edu/individual/8720619787|

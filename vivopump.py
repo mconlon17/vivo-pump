@@ -12,6 +12,18 @@ import string
 import random
 
 
+class InvalidDefException(Exception):
+    """
+    Raise this exception when update definition contains values that can not be processed
+    """
+    def __init__(self, value):
+        Exception.__init__(self)
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
 class InvalidDataException(Exception):
     """
     Raise this exception when update data contains values that can not be processed
@@ -390,6 +402,10 @@ def read_update_def(filename):
 
     def add_order(a, b):
         """
+        Given an update_def (a) and the test of the input file containing the update_def (b),
+        add an "order" parameter to the entity_def, specifying the column_def ordering.  This
+        is used in subsequent processing to insure that the order in the input file is preserved
+        when output is created.
         :param a: update_def
         :param b: string of input file
         :return a new update_def dictionary with an order list in the entity def
@@ -405,11 +421,26 @@ def read_update_def(filename):
         defn['entity_def']['order'] = order
         return defn
 
+    def validate_update_def(a):
+        """
+        Validate the update_def.  Throw InvalidDef if errors
+        :param a: update_def
+        :return None
+        """
+        names = [y[x]['object'].get('name', '') for y in a['column_defs'].values() for x in range(len(y))]
+        print names
+        col_names = a['column_defs'].keys()
+        for name in col_names:
+            if name in names:
+                raise InvalidDefException(name + " in object and column_defs")
+        return None
+
     import json
     with open(filename, "r") as my_file:
         data = my_file.read()
         update_def = fixit(json.loads(data))
         update_def = add_order(update_def, data)
+        validate_update_def(update_def)
     return update_def
 
 

@@ -12,9 +12,9 @@ import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, improve_email, improve_phone_number, \
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, get_vivo_sponsorid, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
-    improve_dollar_amount, InvalidDataException, improve_date, improve_deptid, improve_sponsor_award_id, \
-    improve_jobcode_description, improve_course_title, replace_initials, parse_pages, parse_date_parts, \
-    improve_display_name
+    improve_dollar_amount, InvalidDataException, InvalidDefException, improve_date, improve_deptid, \
+    improve_sponsor_award_id, improve_jobcode_description, improve_course_title, replace_initials, parse_pages, \
+    parse_date_parts, improve_display_name
 from pump import Pump
 
 
@@ -89,6 +89,11 @@ class ReadUpdateDefTestCase(unittest.TestCase):
     def test_read_normal_def(self):
         update_def = read_update_def('data/grant_def.json')
         self.assertTrue(update_def.keys() == ['entity_def', 'column_defs'])
+
+    def test_invalid_def(self):
+        with self.assertRaises(InvalidDefException):
+            update_def = read_update_def('data/grant_invalid_def.json')
+            print update_def
 
     def test_update_def_order(self):
         update_def = read_update_def('data/grant_def.json')
