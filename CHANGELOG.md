@@ -273,3 +273,5 @@ PumpEnumTestCase repaired.  Improve copyright notices.  All filters now use get_
 prefix is now a query param.  vivo_query expects a prefix in the query parms.  All sv.cfg updated to include
 prefix.  Unit tests not yet updated.  read_update_def improved -- now throws error if name in object matches name
 in column_def.  Unit test added. Start work to support order_by.
+* **2015-09-06** Adopt semantic versioning.  See http://semver.org. Pump version set at 0.6.1.  README.md explains
+semantic versioning and documents the API for the Pump.

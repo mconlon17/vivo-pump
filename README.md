@@ -62,3 +62,38 @@ the collection of buildings and their photos in VIVO can be updated.
 manager, and/or automated improvement using filters (see Additional Features).
 1. Upgrades.  Use JSON definitions for your current version to pull data out of an old VIVO and into spreadsheets.  
 Use JSON definitions for the upgraded version to put data from your spreadsheets into your new VIVO.
+
+# Semantic versioning
+
+The Pump is version numbered using semantic versioning.  See http://semver.org.  See the Pump for the current version.
+Semantic versioning involves three numeric version numbers:  the major number, the minor number and the patch number.
+The major number 0, 1, etc indicates version of the API that are not backward compatible -- your use of the Pump _must_
+change if the Pump moves from major version *x* to major version *x+1*.  The minor number indicates additional
+functionality that *does not* alter your existing use of the Pump.  Minor versions *do not* cause your use of the 
+Pump to change.  You may find that you wish to take advantage of new features offered by the minor version and as a 
+result, you choose to alter your use of the Pump.  Patch versions fix bugs.  They do not provide additional
+functionality.  Any of these version numbers may increment indefinitely.  In addition, the Pump may use release 
+candidates, in which case you will see a version number such as x.y.z-rc1 indicating a release candidate for x.y.z
+
+The Pump currently has a major version number of "0."  This indicates that the Pump is pre-production and that the API
+is under development.  Minor version numbers continue to increase as features are added.
+
+# The Pump API
+
+**Note:  This is a first attempt to define the API of the Pump for semantic versioning.  No guarantees.**
+
+The Pump API consists of:
+
+1. The Pump arguments.  All Pump arguments are available as configurable parameters -- 1) accessible from the command
+line of simple vivo (`sv`), 2) settable from the config file used by simple vivo and the "filters" you will see in the
+examples, and 3) hard coded into the software as defaults to be overridden by the config file and/or command line
+parameters.
+2.  Pump methods and instance variables.  The instance variables correspond to the arguments described above.  The
+methods are used to execute Pump functionality.
+3.  The JSON definition file structure.  Structure of the JSON definition file is part of the API.  Semantic versioning 
+applies to changes in the structure of definition files used by the Pump.  Features may be added, leading to minor
+version number increments.  When existing JSON files must be upgraded, these constitute major version number increments.
+
+The Pump API *does not* include the `vivopump` functions and their calling sequences.  The `vivopump` software is 
+provided solely to serve the Pump as ancillary/internal functions of the Pump and may be refactored without altering the 
+semantic versioning of the Pump.
