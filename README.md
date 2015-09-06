@@ -97,3 +97,10 @@ version number increments.  When existing JSON files must be upgraded, these con
 The Pump API *does not* include the `vivopump` functions and their calling sequences.  The `vivopump` software is 
 provided solely to serve the Pump as ancillary/internal functions of the Pump and may be refactored without altering the 
 semantic versioning of the Pump.
+
+# The Pump Wiki
+
+[The Pump Wiki](https://github.com/mconlon17/vivo-pump/wiki) describes the Pump, its API, test cases, its use in 
+software, and its use via the command tool Simple VIVO.  Simple VIVO is described in detail -- usage, examples, and
+extending examples.  Together, the Pump and Simple VIVO provide a method for standardizing and simplifying data
+management in VIVO.
