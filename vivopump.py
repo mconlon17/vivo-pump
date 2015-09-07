@@ -1400,6 +1400,8 @@ def get_args():
     #   Put the final values back in args
 
     for name, val in program_defaults.items():
+        if val == 'tab':
+            val = '\t'
         vars(args)[name] = val
 
     return args

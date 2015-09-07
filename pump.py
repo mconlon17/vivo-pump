@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.6.1"
+__version__ = "0.6.2"
 
 from datetime import datetime
 from json import dumps
@@ -49,8 +49,24 @@ class Pump(object):
     def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False,
                  nofilters=False, inter='\t', intra=';',
                  query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                              'username': 'vivo_root@school.edu', 'password': 'v;bisons'},
-                 uri_prefix='http://vivo.school.edu/individual/'):
+                              'username': 'vivo_root@school.edu', 'password': 'v;bisons',
+                              'uriprefix': 'http://vivo.school.edu/individual/n',
+                              'prefix': '''
+                            PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                            PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+                            PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+                            PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+                            PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+                            PREFIX bibo: <http://purl.org/ontology/bibo/>
+                            PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+                            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                            PREFIX obo: <http://purl.obolibrary.org/obo/>
+                            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                            PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
+                            PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
+                            PREFIX vivo: <http://vivoweb.org/ontology/core#>
+                            '''
+                 }):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
@@ -69,7 +85,6 @@ class Pump(object):
         self.inter = inter
         self.out_filename = out_filename
         self.query_parms = query_parms
-        self.uri_prefix = uri_prefix
 
     def __str__(self):
         """
@@ -107,7 +122,7 @@ class Pump(object):
         """
         self.out_filename = filename
         return do_get(self.update_def, self.enum, self.out_filename, self.query_parms, inter, intra,
-                      do_filter=self.filter, debug=self.verbose)
+                      self.filter, self.verbose)
 
     def update(self, filename=None, inter='\t', intra=';'):
         """
@@ -203,11 +218,11 @@ class Pump(object):
                         "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
-                    do_three_step_update(row, column_name, uri, self.uri_prefix, column_def, data_update, self.intra,
-                                         self.enum, self.update_graph, self.query_parms, self.debug)
+                    do_three_step_update(row, column_name, uri, column_def, data_update, self.intra,
+                                         self.enum, self.update_graph, self.query_parms, self.verbose)
                 elif len(column_def) == 2:
-                    do_two_step_update(row, column_name, uri, self.uri_prefix, column_def, data_update, self.intra,
-                                       self.enum, self.update_graph, self.query_parms, self.debug)
+                    do_two_step_update(row, column_name, uri, column_def, data_update, self.intra,
+                                       self.enum, self.update_graph, self.query_parms, self.verbose)
                 elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {}
@@ -218,7 +233,7 @@ class Pump(object):
                     if self.verbose:
                         print row, column_name, column_values, uri, vivo_objs
                     do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
-                                  debug=self.verbose)
+                                  self.verbose)
 
         # Return the add and sub graphs representing the changes that need to be made to the original
 
@@ -343,8 +358,8 @@ def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, deb
     from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
-    #   We need a generator that produces the order based on the order value in the entity def, or uri order if not
-    #   present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
+    # We need a generator that produces the order based on the order value in the entity def, or uri order if not
+    # present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
     #   always unique
 
     #   Generate the get query, execute the query, shape the query results into the return object
@@ -483,7 +498,7 @@ def get_step_triples(update_graph, uri, step_def, query_parms, debug):
     return g
 
 
-def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, intra, enum, update_graph,
+def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, update_graph,
                          query_parms, debug):
     """
     Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
@@ -515,8 +530,8 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
             update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
                                                             datatype=step_def['object'].get('datatype', None),
                                                             lang=step_def['object'].get('lang', None))))
-        do_two_step_update(row, column_name, step_uri, uri_prefix, path[1:], data_update, intra, enum, update_graph,
-                           debug=debug)
+        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph,
+                           query_parms, debug=debug)
 
     elif step_def['predicate']['single']:
 
@@ -526,12 +541,12 @@ def do_three_step_update(row, column_name, uri, uri_prefix, path, data_update, i
         if len(step_uris) > 1:
             print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
                 step_uris, "using", step_uri
-        do_two_step_update(row, column_name, step_uri, uri_prefix, path[1:], data_update, intra, enum, update_graph,
-                           debug=debug)
+        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph,
+                           query_parms, debug=debug)
     return None
 
 
-def do_two_step_update(row, column_name, uri, uri_prefix, column_def, data_update, intra, enum, update_graph,
+def do_two_step_update(row, column_name, uri, column_def, data_update, intra, enum, update_graph,
                        query_parms, debug):
     """
     In a two step update, identify intermediate entity that might need to be created, and end path objects that might
@@ -688,14 +703,14 @@ def load_enum(update_def):
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
     from vivopump import read_csv
-    #    import os
+    # import os
     enum = {}
     for path in update_def['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
                 enum_filename = step['object']['enum']
                 enum_name = enum_filename
-                #                enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
+                # enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
                 if enum_name not in enum:
                     enum[enum_name] = {}
                     enum[enum_name]['get'] = {}

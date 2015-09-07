@@ -1,0 +1,32 @@
+{
+    "entity_def": {
+        "order_by": "date",
+        "entity_sparql": "?uri a vivo:DateTimeValue .",
+        "type": "http://vivoweb.org/ontology/core#DateTimeValue"
+    }, 
+    "column_defs": {
+        "Precision": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTimePrecision"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "datetime_precision_enum.txt"
+                }
+            }
+        ],
+        "Date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#DateTime"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

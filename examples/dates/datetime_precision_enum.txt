@@ -1,0 +1,1 @@
+short	vivoy	http://vivoweb.org/ontology/core#yearPrecisionym	http://vivoweb.org/ontology/core#yearMonthPrecisionymd	http://vivoweb.org/ontology/core#yearMonthDayPrecision

@@ -275,3 +275,5 @@ prefix.  Unit tests not yet updated.  read_update_def improved -- now throws err
 in column_def.  Unit test added. Start work to support order_by.
 * **2015-09-06** Adopt semantic versioning.  See http://semver.org. Pump version set at 0.6.1.  README.md explains
 semantic versioning and documents the API for the Pump.
+* **2015-09-07** 0.6.2 Dates example.  Pump calling sequence changes.  Significant 
+[wiki documentation](/mconlon17/vivo-pump/wiki)

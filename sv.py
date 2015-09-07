@@ -44,10 +44,12 @@ if args.verbose:
 
 #   Create a Pump and use it to perform the requested actions based on arguments
 
-p = Pump(args.defn, args.src, args.verbose, args.nofilters, query_parms={'queryuri': args.queryuri,
-                                                                         'username': args.username,
-                                                                         'password': args.password},
-         uri_prefix=args.uriprefix)
+p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra,
+         query_parms={'queryuri': args.queryuri,
+                      'username': args.username,
+                      'password': args.password,
+                      'prefix': args.prefix,
+                      'uriprefix': args.uriprefix})
 if args.action == 'get':
     n_rows = p.get(args.src, args.inter, args.intra)
     print datetime.now(), n_rows, "rows in", args.src
