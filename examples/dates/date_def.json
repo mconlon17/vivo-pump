@@ -21,10 +21,11 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#DateTime"
+                    "ref": "http://vivoweb.org/ontology/core#dateTime"
                 },
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:datetime"
                 }
             }
         ]

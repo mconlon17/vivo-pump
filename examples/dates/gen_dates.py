@@ -17,14 +17,17 @@ print >>out_file, "uri\tPrecision\tDate"
 
 #   Generate years
 
-for year in range(1800, 2051):
+start_year = 1970
+end_year = 2020
+
+for year in range(start_year, end_year + 1):
     date_string = str(year) + "-01-01T00:00:00"
     print >>out_file, "\t" + "y" + "\t" + date_string
 
 #   Generate year month
 
-current_date = datetime(1800, 1, 1)
-end_date = datetime(2050, 12, 31)
+current_date = datetime(start_year, 1, 1)
+end_date = datetime(end_year, 12, 31)
 while current_date <= end_date:
     date_string = current_date.isoformat()
     print >>out_file, "\t" + "ym" + "\t" + date_string
@@ -32,8 +35,8 @@ while current_date <= end_date:
 
 #   Generate year month day
 
-current_date = datetime(1800, 1, 1)
-end_date = datetime(2050, 12, 31)
+current_date = datetime(start_year, 1, 1)
+end_date = datetime(end_year, 12, 31)
 while current_date <= end_date:
     date_string = current_date.isoformat()
     print >>out_file, "\t" + "ymd" + "\t" + date_string

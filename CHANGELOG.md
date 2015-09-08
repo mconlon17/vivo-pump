@@ -277,3 +277,4 @@ in column_def.  Unit test added. Start work to support order_by.
 semantic versioning and documents the API for the Pump.
 * **2015-09-07** 0.6.2 Dates example.  Pump calling sequence changes.  Support tab as a value in the config file.
 Significant [wiki documentation](https://github.com/mconlon17/vivo-pump/wiki).
+* **2015-09-08** Improve dates example.  Improve orgs example.
