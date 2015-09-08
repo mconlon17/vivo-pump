@@ -42,4 +42,4 @@ One enumeration is used:
 values of these parameters.
 1. Run Simple VIVO to produce the date_add.rdf and date_sub.rdf.  Parameters are supplied by the `sv.cfg` file.
 
-    python sv.py
+    `python sv.py`
