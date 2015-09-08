@@ -252,7 +252,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#hasSuccessorOrg"
+                    "ref": "http://vivoweb.org/ontology/core#hasSuccessorOrganization"
                 }, 
                 "object": {
                     "literal": false,

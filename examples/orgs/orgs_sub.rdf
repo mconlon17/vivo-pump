@@ -1,0 +1,12 @@
+<http://vivo.school.edu/individual/n7031> <http://www.w3.org/2006/vcard/ns#telephone> "352 273 8700"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BFO_0000004> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BFO_0000001> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#FundingOrganization> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/2000/01/rdf-schema#label> "Sponsored Programs Holding Account" .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BFO_0000002> .
+<http://vivo.school.edu/individual/6923310333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/n6310> <http://vivoweb.org/ontology/core#overview> "The CTSI is a big research institute at UF doing lots of important things." .
+
+

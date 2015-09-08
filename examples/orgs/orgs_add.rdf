@@ -1,0 +1,65 @@
+<http://vivo.school.edu/individual/8084707766> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BFO_0000001> .
+<http://vivo.school.edu/individual/2768065116> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/7424661856> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n4372804675> <http://www.w3.org/2000/01/rdf-schema#label> "Home Page" .
+<http://vivo.school.edu/individual/n934389325> <http://vivoweb.org/ontology/core#webpage> <http://vivo.school.edu/individual/n663782846> .
+<http://vivo.school.edu/individual/n1311> <http://vivoweb.org/ontology/core#primaryEmail> "info@duraspace.org" .
+<http://vivo.school.edu/individual/n8957531173> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Address> .
+<http://vivo.school.edu/individual/n1311> <http://vivoweb.org/ontology/core#mailingAddress> <http://vivo.school.edu/individual/n8957531173> .
+<http://vivo.school.edu/individual/2296164111> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Department> .
+<http://vivo.school.edu/individual/n7031> <http://www.w3.org/2006/vcard/ns#telephone> "(352) 273-8700" .
+<http://vivo.school.edu/individual/n6750566131> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#URLLink> .
+<http://vivo.school.edu/individual/4238702950> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/8679496269> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n8957531173> <http://vivoweb.org/ontology/core#addressCity> "Winchester" .
+<http://vivo.school.edu/individual/8202429111> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n721> .
+<http://vivo.school.edu/individual/n7385393178> <http://www.w3.org/2006/vcard/ns#telephone> "(607) 216-4548" .
+<http://vivo.school.edu/individual/3963516916> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n1311> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n2418733306> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/n6750566131> <http://vivoweb.org/ontology/core#linkURI> "http://www.chem.ufl.edu"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://vivo.school.edu/individual/n663782846> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#URLLink> .
+<http://vivo.school.edu/individual/5927175557> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BFO_0000002> .
+<http://vivo.school.edu/individual/3094034736> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n8957531173> <http://www.w3.org/2000/01/rdf-schema#label> "Mailing Address" .
+<http://vivo.school.edu/individual/n1311> <http://vivoweb.org/ontology/core#overview> "DuraSpace is an independent 501(c)(3) not-for-profit organization providing leadership and innovation for open technologies that promote durable, persistent access to digital data. We collaborate with academic, scientific, cultural, and technology communities by supporting projects and creating services to help ensure that current and future generations have access to our collective digital heritage." .
+<http://vivo.school.edu/individual/8015313782> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/8720619787> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/3066270733> .
+<http://vivo.school.edu/individual/3066270733> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/1711215368> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/BFO_0000004> .
+<http://vivo.school.edu/individual/n2418733306> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n8957531173> <http://vivoweb.org/ontology/core#addressState> "MA" .
+<http://vivo.school.edu/individual/n4372804675> <http://vivoweb.org/ontology/core#linkURI> "http://duraspace.org"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://vivo.school.edu/individual/n4145> <http://vivoweb.org/ontology/core#webpage> <http://vivo.school.edu/individual/n6750566131> .
+<http://vivo.school.edu/individual/n1311> <http://vivoweb.org/ontology/core#webpage> <http://vivo.school.edu/individual/n4372804675> .
+<http://vivo.school.edu/individual/n6750566131> <http://www.w3.org/2000/01/rdf-schema#label> "Home Page" .
+<http://vivo.school.edu/individual/1740510435> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n663782846> <http://www.w3.org/2000/01/rdf-schema#label> "Home Page" .
+<http://vivo.school.edu/individual/3369154919> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n8957531173> <http://vivoweb.org/ontology/core#address1> "P.O. Box 138" .
+<http://vivo.school.edu/individual/5985039965> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<http://vivo.school.edu/individual/3805257004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n4372804675> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#URLLink> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/2000/01/rdf-schema#label> "Physics" .
+<http://vivo.school.edu/individual/3293325926> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/793961448> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n8957531173> <http://vivoweb.org/ontology/core#addressPostalCode> "01890" .
+<http://vivo.school.edu/individual/8720619787> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Foundation> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.school.edu/individual/5226631481> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n2418733306> <http://www.w3.org/2006/vcard/ns#hasTelephone> <http://vivo.school.edu/individual/n7385393178> .
+<http://vivo.school.edu/individual/n7385393178> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Telephone> .
+<http://vivo.school.edu/individual/n663782846> <http://vivoweb.org/ontology/core#linkURI> "http://www.phys.ufl.edu"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://vivo.school.edu/individual/n1311> <http://vivoweb.org/ontology/core#hasSuccessorOrganization> <Lyrasis> .
+<http://vivo.school.edu/individual/5874327687> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AcademicDepartment> .
+<http://vivo.school.edu/individual/9231791860> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Company> .
+<http://vivo.school.edu/individual/n934389325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+
+
