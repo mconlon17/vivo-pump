@@ -119,6 +119,8 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
     def get(self):
         """
+        Perform the Pump get operation -- using the definition, query VIVO, make a spreadsheet and write it to
+        a file.
         :return: count of the number of rows in the table
         :rtype: int
         """
@@ -128,6 +130,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
     def update(self):
         """
         Prepare for the update, getting graph and update_data.  Then do the update, producing triples
+        :return: list(graph, graph): The add and sub graphs for performing the update
         """
         from vivopump import read_csv, get_graph
         from rdflib import Graph

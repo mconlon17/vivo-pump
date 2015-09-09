@@ -456,31 +456,29 @@ class ImproveSponsorAwardIdTestCase(unittest.TestCase):
 
 
 class PumpTestCase(unittest.TestCase):
-    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-             'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
 
     def test_pump_serialize(self):
-        p = Pump(query_parms=PumpTestCase.parms)
+        p = Pump()
         self.assertTrue(p.serialize().startswith("{\"entity_def\":"))
 
     def test_pump_filename(self):
-        p = Pump("data/building_def.json", query_parms=PumpTestCase.parms)
+        p = Pump("data/building_def.json")
         self.assertTrue("vivo:Building" in p.serialize())
 
     def test_pump_summarize(self):
-        p = Pump("data/building_def.json", query_parms=PumpTestCase.parms)
+        p = Pump("data/building_def.json")
         result = p.summarize()
         print result
         self.assertTrue("Pump Summary for data/building" in result)
 
     def test_pump_get_no_filename(self):
-        p = Pump("data/building_def.json", query_parms=PumpTestCase.parms)
+        p = Pump("data/building_def.json")
         with self.assertRaises(TypeError):
             n_rows = p.get()
             print n_rows
 
     def test_pump_get(self):
-        p = Pump("data/building_def.json", query_parms=PumpTestCase.parms)
+        p = Pump("data/building_def.json")
         n_rows = p.get("data/buildings.txt")
         print n_rows
         self.assertEqual(2, n_rows)
@@ -496,14 +494,14 @@ class PumpGetTestCase(unittest.TestCase):
 
     def test_get_no_filter(self, ):
         p = Pump(verbose=True)
-        print p.query_parms
         p.filter = False
         n_rows = p.get()
         self.assertEqual(2, n_rows)
 
     def test_get_filter(self):
-        p = Pump("data/building_def.json", query_parms=PumpGetTestCase.parms)
-        n_rows = p.get("data/buildings_filtered.txt")
+        p = Pump("data/building_def.json")
+        p.out_filename = "data/buildings_filtered.txt"
+        n_rows = p.get()
         self.assertEqual(2, n_rows)
 
 
@@ -533,7 +531,7 @@ class PumpUpdateCallTestCase(unittest.TestCase):
 
     def test_inject_empty_original_graph(self):
         from rdflib import Graph, URIRef
-        p = Pump(query_parms=PumpUpdateCallTestCase.parms, verbose=True)
+        p = Pump()
         p.original_graph = Graph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n8984374104', u'abbreviation': u'None'}}
         [add, sub] = p.update()
@@ -544,13 +542,10 @@ class PumpUpdateCallTestCase(unittest.TestCase):
 
 
 class PumpUpdateLiteralsTestCase(unittest.TestCase):
-    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-        'username': 'vivo_root@school.edu', 'password': 'v;bisons',
-        'uriprefix': 'http://vivo.school.edu/individual/'}
 
     def test_with_datatype(self):
         from rdflib import URIRef, Literal, XSD
-        p = Pump("data/building_def.json", query_parms=PumpUpdateLiteralsTestCase.parms, verbose=True)
+        p = Pump("data/building_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
         [add, sub] = p.update()
         self.assertTrue(
