@@ -280,4 +280,4 @@ Significant [wiki documentation](https://github.com/mconlon17/vivo-pump/wiki).
 * **2015-09-08** Improve dates example.  Improve orgs example.
 * **2015-09-09** 0.6.3 Remove extraneous print from validate_def.  Improve test cases. Fix bug -- Strip white space 
 from update values. p.update() and p.get() now have no parameters -- everything comes from the Pump. Fix bug -- default 
-Pump values.
+Pump values. Code moved from pup to vivopump.  Eventually pump will be methods only.  No helper or auxiliary code.

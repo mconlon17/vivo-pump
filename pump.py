@@ -73,7 +73,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
         """
-        from vivopump import read_update_def
+        from vivopump import read_update_def, load_enum
 
         self.update_def = read_update_def(json_def_filename)
         self.update_data = None
@@ -110,6 +110,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         :return: the string summary report
         :rtype: basestring
         """
+        from vivopump import make_get_query
         result = str(datetime.now()) + " Pump Summary for " + self.json_def_filename + "\n" + \
             str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
             str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
@@ -128,7 +129,6 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         """
         Prepare for the update, getting graph and update_data.  Then do the update, producing triples
         """
-
         from vivopump import read_csv, get_graph
         from rdflib import Graph
         import logging
@@ -179,7 +179,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         rdf as necessary to process requested changes
         """
         from rdflib import URIRef, RDF
-        from vivopump import new_uri
+        from vivopump import new_uri, prepare_column_values
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
@@ -264,82 +264,6 @@ def do_remove(row, uri, update_graph, debug):
     return removed
 
 
-def make_get_query(update_def):
-    """
-    Given an update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
-    See do_get
-    :return: a sparql query string
-    """
-    from vivopump import add_qualifiers
-
-    front_query = 'SELECT ?uri ?' + ' ?'.join(update_def['column_defs'].keys()) + '\nWHERE {\n    ' + \
-                  update_def['entity_def']['entity_sparql'] + '\n'
-
-    # Fake recursion here to depth 3.  Could be replaced by real recursion to arbitrary path length
-
-    middle_query = ""
-    for name, path in update_def['column_defs'].items():
-        middle_query += '    OPTIONAL {  ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
-        if len(path) == 1:
-            middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
-        else:
-            middle_query += path[0]['object']['name'] + ' . ?' + \
-                            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
-            if len(path) == 2:
-                middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
-            else:
-                middle_query += path[1]['object']['name'] + ' . ?' + \
-                                path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
-                if len(path) == 3:
-                    middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
-                else:
-                    raise PathLengthException('Path length >3 not supported in do_get')
-
-    back_query = '}\nORDER BY ?' + update_def['entity_def']['order_by']
-    return front_query + middle_query + back_query
-
-
-def unique_path(path):
-    """
-    Given a path, determine if all its elements are single-valued predicates.  If so, the path is unique,
-    regardless of length.  If any one of the steps in the path has a non single-valued predicated, the path is not
-    unique.
-    :param path: a definition path
-    :return: True if path is unique
-    :rtype: boolean
-    """
-    unique = True
-    for elem in path:
-        if not elem['predicate']['single']:
-            unique = False
-            break
-    return unique
-
-
-def make_get_data(update_def, result_set):
-    """
-    Given a query result set, produce a data structure with one element per uri and column values collected
-    into lists.  If VIVO has multiple values for a path defined to be unique, print a WARNING to the log and
-    return the first value found in the data, ignoring the rest
-    :param result_set: SPARQL result set
-    :return: dictionary
-    :rtype: dict
-    """
-    data = {}
-
-    for binding in result_set['results']['bindings']:
-        uri = str(binding['uri']['value'])
-        if uri not in data:
-            data[uri] = {}
-        for name in ['uri'] + update_def['column_defs'].keys():
-            if name in binding:
-                if name in data[uri]:
-                    data[uri][name].add(binding[name]['value'])
-                else:
-                    data[uri][name] = {binding[name]['value']}
-    return data
-
-
 def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, debug):
     """
     Data is queried from VIVO and returned as a tab delimited text file suitable for
@@ -349,7 +273,7 @@ def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, deb
     :param: do_filter: boolean if True do the filters, otherwise do not apply filters
     :return:  Number of rows of data
     """
-    from vivopump import vivo_query
+    from vivopump import vivo_query, make_get_data, unique_path, make_get_query
     import codecs
     from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
         improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
@@ -428,74 +352,6 @@ def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, deb
     return len(data)
 
 
-def prepare_column_values(update_string, intra, step_def, enum, row, column_name):
-    """
-    Given the string of data from the update file, the step definition, the row and column name of the
-    update_string in the update file, enumerations and filters, prepare the column values and return them
-    as a list of strings
-    :return: column_values a list of strings
-    :rtype: list[str]
-    """
-    from vivopump import InvalidDataException
-
-    if step_def['predicate']['single']:
-        column_values = [update_string.strip()]
-    else:
-        column_values = update_string.split(intra)
-        for i in range(len(column_values)):
-            column_values[i] = column_values[i].strip()
-        if 'include' in step_def['predicate']:
-            column_values += step_def['predicate']['include'].strip()
-
-    # Check column values for consistency with single and multi-value attributes
-
-    if step_def['predicate']['single'] and len(column_values) > 1:
-        raise InvalidDataException(str(row) + str(column_name) +
-                                   'Predicate is single-valued, multiple values in source.')
-    while '' in column_values:
-        column_values.remove('')
-    if 'None' in column_values and len(column_values) > 1:
-        raise InvalidDataException(str(row) + str(column_name) +
-                                   'None value in multi-valued predicate set')
-
-    # Handle enumerations
-
-    if 'enum' in step_def['object']:
-        for i in range(len(column_values)):
-            column_values[i] = enum[step_def['object']['enum']]['update'].get(column_values[i], column_values[i])
-
-    return column_values
-
-
-def get_step_triples(update_graph, uri, step_def, query_parms, debug):
-    """
-    Return the triples matching the criteria defined in the current step of an update
-    :param update_graph: the update graph
-    :param uri: uri of the entity currently the subject of an update
-    :param step_def: step definition from update_def
-    :return:  Graph containing one or more triples that match the criteria for the step
-    """
-    from rdflib import Graph
-    from vivopump import vivo_query, add_qualifiers, make_rdf_term
-
-    if 'qualifier' not in step_def['object']:
-        g = update_graph.triples((uri, step_def['predicate']['ref'], None))
-    else:
-        q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
-            str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
-            add_qualifiers([step_def]) + ' }\n'
-        if debug:
-            print "\nStep Triples Query\n", q
-        result_set = vivo_query(q, query_parms, debug)
-        g = Graph()
-        for binding in result_set['results']['bindings']:
-            o = make_rdf_term(binding['o'])
-            g.add((uri, step_def['predicate']['ref'], o))
-        if debug:
-            print "Step Triples", len(g)
-    return g
-
-
 def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, update_graph,
                          query_parms, debug):
     """
@@ -512,7 +368,7 @@ def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, 
     :return: Changes in the update_graph
     """
     from rdflib import RDF, RDFS, Literal, URIRef
-    from vivopump import new_uri
+    from vivopump import new_uri, get_step_triples
 
     step_def = path[0]
     step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)]
@@ -557,7 +413,7 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, intra, en
     :return: alterations in update graph
     """
     from rdflib import RDF, RDFS, Literal, URIRef
-    from vivopump import new_uri
+    from vivopump import new_uri, get_step_triples, prepare_column_values
 
     step_def = column_def[0]
 
@@ -686,35 +542,3 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
             update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
 
     return None
-
-
-def load_enum(update_def):
-    """
-    Find all enumerations in the update_def. for each, read the corresponding enum file and build the corresponding
-    pair of enum dictionaries.
-
-    The two columns in the tab delimited input file must be called "short" and "vivo".  "vivo" is the value to put in
-    vivo (update) or get from vivo.  short is the human usable short form.
-
-    The input file name appears as the 'enum' value in update_def
-
-    :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
-    """
-    from vivopump import read_csv
-    # import os
-    enum = {}
-    for path in update_def['column_defs'].values():
-        for step in path:
-            if 'object' in step and 'enum' in step['object']:
-                enum_filename = step['object']['enum']
-                enum_name = enum_filename
-                # enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
-                if enum_name not in enum:
-                    enum[enum_name] = {}
-                    enum[enum_name]['get'] = {}
-                    enum[enum_name]['update'] = {}
-                    enum_data = read_csv(enum_filename, delimiter='\t')
-                    for enum_datum in enum_data.values():
-                        enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
-                        enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
-    return enum
