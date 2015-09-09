@@ -51,10 +51,10 @@ p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.int
                       'prefix': args.prefix,
                       'uriprefix': args.uriprefix})
 if args.action == 'get':
-    n_rows = p.get(args.src, args.inter, args.intra)
+    n_rows = p.get()
     print datetime.now(), n_rows, "rows in", args.src
 elif args.action == 'update':
-    [add_graph, sub_graph] = p.update(args.src, args.inter, args.intra)
+    [add_graph, sub_graph] = p.update()
     add_file = open(args.rdfprefix + '_add.rdf', 'w')
     print >>add_file, add_graph.serialize(format='nt')
     add_file.close()

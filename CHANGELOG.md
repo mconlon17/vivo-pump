@@ -278,3 +278,6 @@ semantic versioning and documents the API for the Pump.
 * **2015-09-07** 0.6.2 Dates example.  Pump calling sequence changes.  Support tab as a value in the config file.
 Significant [wiki documentation](https://github.com/mconlon17/vivo-pump/wiki).
 * **2015-09-08** Improve dates example.  Improve orgs example.
+* **2015-09-09** 0.6.3 Remove extraneous print from validate_def.  Improve test cases. Fix bug -- Strip white space 
+from update values. p.update() and p.get() now have no parameters -- everything comes from the Pump. Fix bug -- default 
+Pump values.

@@ -493,13 +493,12 @@ class PumpTestCase(unittest.TestCase):
 
 
 class PumpGetTestCase(unittest.TestCase):
-    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-        'username': 'vivo_root@school.edu', 'password': 'v;bisons'}
 
     def test_get_no_filter(self, ):
-        p = Pump("data/building_def.json", query_parms=PumpGetTestCase.parms)
+        p = Pump(verbose=True)
+        print p.query_parms
         p.filter = False
-        n_rows = p.get("data/buildings_nofilter.txt")
+        n_rows = p.get()
         self.assertEqual(2, n_rows)
 
     def test_get_filter(self):
@@ -509,35 +508,32 @@ class PumpGetTestCase(unittest.TestCase):
 
 
 class PumpUpdateCallTestCase(unittest.TestCase):
-    parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-        'username': 'vivo_root@school.edu', 'password': 'v;bisons',
-        'uriprefix': 'http://vivo.school.edu/individual/'}
 
     def test_default_usage(self):
-        p = Pump(query_parms=PumpUpdateCallTestCase.parms)
-        p.update()
+        p = Pump()
         self.assertTrue("data/pump_def.json" in p.summarize())  # Using the default definition
 
     def test_no_update_file(self):
-        p = Pump(query_parms=PumpUpdateCallTestCase.parms)
+        p = Pump()
+        p.out_filename = 'data/no_update_file.txt'
         with self.assertRaises(IOError):
-            p.update('data/no_update_file.txt')
+            p.update()
 
     def test_normal_inject(self):
-        p = Pump(query_parms=PumpUpdateCallTestCase.parms)
+        p = Pump(verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n8984374104', u'abbreviation': u'None'}}
         p.update()
         self.assertTrue("8984374104" in str(p.update_data))  # Using the injected data, not default
 
     def test_missing_uri_column_inject(self):
-        p = Pump(query_parms=PumpUpdateCallTestCase.parms)
+        p = Pump()
         p.update_data = {1: {u'overview': u'None'}}
         with self.assertRaises(KeyError):
             p.update()
 
     def test_inject_empty_original_graph(self):
         from rdflib import Graph, URIRef
-        p = Pump(query_parms=PumpUpdateCallTestCase.parms,verbose=True)
+        p = Pump(query_parms=PumpUpdateCallTestCase.parms, verbose=True)
         p.original_graph = Graph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n8984374104', u'abbreviation': u'None'}}
         [add, sub] = p.update()
@@ -596,7 +592,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
 class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_one_add(self):
         from rdflib import URIRef, Literal
-        p = Pump()
+        p = Pump(verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
         [add, sub] = p.update()
         self.assertTrue(

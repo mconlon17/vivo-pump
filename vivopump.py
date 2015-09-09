@@ -428,7 +428,6 @@ def read_update_def(filename):
         :return None
         """
         names = [y[x]['object'].get('name', '') for y in a['column_defs'].values() for x in range(len(y))]
-        print names
         col_names = a['column_defs'].keys()
         for name in col_names:
             if name in names:
