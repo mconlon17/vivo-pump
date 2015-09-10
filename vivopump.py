@@ -5,7 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.6.3"
+__version__ = "0.6.4"
 
 import csv
 import string
@@ -402,22 +402,29 @@ def read_update_def(filename):
 
     def add_order(a, b):
         """
-        Given an update_def (a) and the test of the input file containing the update_def (b),
+        Given an update_def (a) and the string of the input file containing the update_def (b),
         add an "order" parameter to the entity_def, specifying the column_def ordering.  This
         is used in subsequent processing to insure that the order in the input file is preserved
         when output is created.
         :param a: update_def
-        :param b: string of input file
+        :param b: string of update_def from file
         :return a new update_def dictionary with an order list in the entity def
         """
         defn = a
         loc = []
         var_list = []
+        k = b.find("column_defs")
+        b = b[k:]
+        print b
         for var in defn['column_defs'].keys():
             var_list.append(var)
-            loc.append(b.find(var + '":'))
+            loc.append(b.find(var + '": ['))
         seq = sorted(loc)
-        order = [var_list[seq.index(v)] for v in loc]
+        order = [var_list[loc.index(v)] for v in seq]
+        print "var_list = ", var_list
+        print "loc =", loc
+        print "seq =", seq
+        print "order = ", order
         defn['entity_def']['order'] = order
         return defn
 
