@@ -281,4 +281,5 @@ Significant [wiki documentation](https://github.com/mconlon17/vivo-pump/wiki).
 * **2015-09-09** 0.6.3 Remove extraneous print from validate_def.  Improve test cases. Fix bug -- Strip white space 
 from update values. p.update() and p.get() now have no parameters -- everything comes from the Pump. Fix bug -- default 
 Pump values. Code moved from pup to vivopump.  Eventually pump will be methods only.  No helper or auxiliary code.
-test_vivopump.py updated to remove query_parms.
+test_vivopump.py updated to remove query_parms.  Encapsulate code in sv.py in a main() function and check for 
+\_\_name\_\_=="__main__" to run the main() function.

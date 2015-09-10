@@ -37,35 +37,44 @@ from pump import Pump
 #   and a third parameter's value might come from the config file, overwriting the program default and left unspecified
 #   on the command line
 
-print datetime.now(), "Start"
-args = get_args()
-if args.verbose:
-    print datetime.now(), "Arguments\n", vars(args)
 
-#   Create a Pump and use it to perform the requested actions based on arguments
+def main():
+    """
+    The main function.  Does the work of Simple VIVO
+    :return: None
+    """
+    print datetime.now(), "Start"
+    args = get_args()
+    if args.verbose:
+        print datetime.now(), "Arguments\n", vars(args)
 
-p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra,
-         query_parms={'queryuri': args.queryuri,
-                      'username': args.username,
-                      'password': args.password,
-                      'prefix': args.prefix,
-                      'uriprefix': args.uriprefix})
-if args.action == 'get':
-    n_rows = p.get()
-    print datetime.now(), n_rows, "rows in", args.src
-elif args.action == 'update':
-    [add_graph, sub_graph] = p.update()
-    add_file = open(args.rdfprefix + '_add.rdf', 'w')
-    print >>add_file, add_graph.serialize(format='nt')
-    add_file.close()
-    sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
-    print >>sub_file, sub_graph.serialize(format='nt')
-    sub_file.close()
-    print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
-elif args.action == 'summarize':
-    print p.summarize()
-elif args.action == 'serialize':
-    print p.serialize()
-else:
-    print datetime.now(), "Unknown action.  Try sv -h for help"
-print datetime.now(), "Finish"
+    #   Create a Pump and use it to perform the requested actions based on arguments
+
+    p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra,
+             query_parms={'queryuri': args.queryuri,
+                          'username': args.username,
+                          'password': args.password,
+                          'prefix': args.prefix,
+                          'uriprefix': args.uriprefix})
+    if args.action == 'get':
+        n_rows = p.get()
+        print datetime.now(), n_rows, "rows in", args.src
+    elif args.action == 'update':
+        [add_graph, sub_graph] = p.update()
+        add_file = open(args.rdfprefix + '_add.rdf', 'w')
+        print >>add_file, add_graph.serialize(format='nt')
+        add_file.close()
+        sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
+        print >>sub_file, sub_graph.serialize(format='nt')
+        sub_file.close()
+        print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
+    elif args.action == 'summarize':
+        print p.summarize()
+    elif args.action == 'serialize':
+        print p.serialize()
+    else:
+        print datetime.now(), "Unknown action.  Try sv -h for help"
+    print datetime.now(), "Finish"
+
+if __name__ == "__main__":
+    main()
