@@ -1,0 +1,2 @@
+uri|person|degree|school|date|field
+http://vivo.school.edu/individual/n3900|http://vivoweb.org/ontology/degree/academicDegree98|Ph.D. Doctor of Philosophy|University of Florida||Statistics

@@ -23,6 +23,6 @@ The python program `make_enum.py` can be used to update four of these enumeratio
 
     python make_enum.py
 
-The field of study enumeration is managed by hand -- if you have fields of study that you would like to be able to represent in VIVO,
-edit the field_enum.txt file with a text editor and add a row for each such field of study.
+The field of study enumeration is managed by hand -- if you have fields of study that you would like to be able to 
+represent in VIVO, edit the field_enum.txt file with a text editor and add a row for each such field of study.
 

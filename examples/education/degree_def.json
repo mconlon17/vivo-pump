@@ -19,6 +19,20 @@
                 }
             }
         ],
+        "degree": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?adegree a vivo:AcademicDegree .",
+                    "name": "adegree",
+                    "enum": "degree_enum.txt"
+                }
+            }
+        ],
         "school": [
             {
                 "predicate": {
@@ -43,24 +57,21 @@
                 }
             }
         ],
-        "degree": [
-            {
-                "predicate": {
-                    "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#relates"
-                },
-                "object": {
-                    "literal": false,
-                    "qualifier": "?adegree a vivo:AcademicDegree .",
-                    "name": "adegree",
-                    "enum": "degree_enum.txt"
-                }
-            }
-        ],
         "field": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/RO_0002353"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:EducationalProcess",
+                    "name": "process_thing"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
                     "ref": "http://vivoweb.org/ontology/core#majorField"
                 },
                 "object": {
@@ -68,6 +79,6 @@
                     "enum": "field_enum.txt"
                 }
             }
-        ],
+        ]
     }
 }
