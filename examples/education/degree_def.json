@@ -1,0 +1,73 @@
+{
+    "entity_def": {
+        "type": "http://vivoweb.org/ontology/core#AwardedDegree",
+        "entity_sparql": "?uri a vivo:AwardedDegree . ",
+        "order_by": "name"
+    }, 
+    "column_defs": {
+        "person": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?aperson a foaf:Person .",
+                    "name": "aperson",
+                    "enum": "person_enum.txt"
+                }
+            }
+        ],
+        "school": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#assignedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "school_enum.txt"
+                }
+            }
+        ],
+        "date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeValue"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "degree": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?adegree a vivo:AcademicDegree .",
+                    "name": "adegree",
+                    "enum": "degree_enum.txt"
+                }
+            }
+        ],
+        "field": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#majorField"
+                },
+                "object": {
+                    "literal": true,
+                    "enum": "field_enum.txt"
+                }
+            }
+        ],
+    }
+}
