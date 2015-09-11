@@ -1,0 +1,82 @@
+{
+    "entity_def": {
+        "type": "http://vivoweb.org/ontology/core#Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+        "deptid": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#administeredBy"
+                }, 
+                "object": {
+                    "filter": "improve_deptid", 
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum": "data/deptid.txt"
+                }
+            }
+        ],
+        "length_four": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "name": "award_period"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#start"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeValue", 
+                    "name": "start"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                }, 
+                "object": {
+                    "name" : "neverending",
+                    "type": "http://vivoweb.org/ontology/core#DateTimeValue",
+                    "literal": false
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#evenMore"
+                },
+                "object": {
+                    "filter": "improve_date",
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ], 
+        "total_award": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#totalAwardAmount"
+                }, 
+                "object": {
+                    "filter": "improve_dollar_amount",
+                     "datatype": "xsd:decimal",
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

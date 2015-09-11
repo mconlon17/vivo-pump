@@ -8,13 +8,12 @@
         "person": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "http://vivoweb.org/ontology/core#relates"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?aperson a foaf:Person .",
-                    "name": "aperson",
+                    "qualifier": "?person a foaf:Person .",
                     "enum": "person_enum.txt"
                 }
             }
@@ -22,13 +21,12 @@
         "degree": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "http://vivoweb.org/ontology/core#relates"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?adegree a vivo:AcademicDegree .",
-                    "name": "adegree",
+                    "qualifier": "?degree a vivo:AcademicDegree .",
                     "enum": "degree_enum.txt"
                 }
             }

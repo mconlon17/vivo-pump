@@ -12,9 +12,9 @@ import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, improve_email, improve_phone_number, \
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, get_vivo_sponsorid, \
     improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
-    improve_dollar_amount, InvalidDataException, InvalidDefException, improve_date, improve_deptid, \
-    improve_sponsor_award_id, improve_jobcode_description, improve_course_title, replace_initials, parse_pages, \
-    parse_date_parts, improve_display_name
+    improve_dollar_amount, InvalidDataException, InvalidDefException, PathLengthException, improve_date, \
+    improve_deptid, improve_sponsor_award_id, improve_jobcode_description, improve_course_title, replace_initials, \
+    parse_pages, parse_date_parts, improve_display_name
 from pump import Pump
 
 
@@ -94,6 +94,12 @@ class ReadUpdateDefTestCase(unittest.TestCase):
         with self.assertRaises(InvalidDefException):
             update_def = read_update_def('data/grant_invalid_def.json')
             print update_def
+
+    def test_pathlength_def(self):
+        with self.assertRaises(PathLengthException):
+            p = Pump(json_def_filename='data/grant_invalidpathlength_def.json')
+            n = p.get()
+            print n
 
     def test_update_def_order(self):
         update_def = read_update_def('data/grant_def.json')

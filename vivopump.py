@@ -36,6 +36,18 @@ class InvalidDataException(Exception):
         return repr(self.value)
 
 
+class PathLengthException(Exception):
+    """
+    Raise this exception when update def has a path length greater than support
+    """
+    def __init__(self, value):
+        Exception.__init__(self)
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
 class UnicodeCsvReader(object):
     """
     From http://stackoverflow.com/questions/1846135/python-csv-
@@ -421,10 +433,6 @@ def read_update_def(filename):
             loc.append(b.find(var + '": ['))
         seq = sorted(loc)
         order = [var_list[loc.index(v)] for v in seq]
-        print "var_list = ", var_list
-        print "loc =", loc
-        print "seq =", seq
-        print "order = ", order
         defn['entity_def']['order'] = order
         return defn
 
@@ -1445,12 +1453,12 @@ def make_get_query(update_def):
             middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
         else:
             middle_query += path[0]['object']['name'] + ' . ?' + \
-                            path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
+                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
             if len(path) == 2:
                 middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
             else:
                 middle_query += path[1]['object']['name'] + ' . ?' + \
-                                path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
+                    path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
                 if len(path) == 3:
                     middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
                 else:

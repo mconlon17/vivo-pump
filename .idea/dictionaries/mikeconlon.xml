@@ -25,6 +25,7 @@
       <w>interfield</w>
       <w>intra</w>
       <w>intrafield</w>
+      <w>invalidpathlength</w>
       <w>isoformat</w>
       <w>mycities</w>
       <w>nofilter</w>
@@ -32,6 +33,7 @@
       <w>objs</w>
       <w>obolibrary</w>
       <w>parms</w>
+      <w>pathlength</w>
       <w>pyunit</w>
       <w>queryuri</w>
       <w>rdfprefix</w>
