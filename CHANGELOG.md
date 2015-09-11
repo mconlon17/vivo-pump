@@ -289,5 +289,5 @@ qualifier on length 1 path.
 * **2015-09-11** 0.6.5 Strict enumeration for update.  When update value is not found in enumeration, an ERROR message
 is generated and the column value is set to blank (no update). Remove print from add_order. Improve education example.
 Improve strip() for included values.  PumpRemoveTestCase now uses injected graphs -- we load the graph with specific
-triples and update uses the test graph rather than querying VIVO.  This tests update explicitly without reliance
+triples and update uses the test graph rather than querying VIVO.  This tests update() explicitly without reliance
 on VIVO URLs.
