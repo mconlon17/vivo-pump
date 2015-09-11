@@ -1521,10 +1521,11 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
         column_values = [update_string.strip()]
     else:
         column_values = update_string.split(intra)
+        if 'include' in step_def['predicate']:
+            column_values += step_def['predicate']['include']
         for i in range(len(column_values)):
             column_values[i] = column_values[i].strip()
-        if 'include' in step_def['predicate']:
-            column_values += step_def['predicate']['include'].strip()
+
 
     # Check column values for consistency with single and multi-value attributes
 

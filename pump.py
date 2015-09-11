@@ -517,6 +517,8 @@ def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, upd
                     update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                     if debug:
                         print "REMOVE", row, column_name, unicode(vivo_object)
+                        print "VIVO was ", unicode(vivo_object)
+                        print "Source is", column_string
                 if step_def['object']['literal']:
                     if debug:
                         print "ADD   ", row, column_name, column_string
