@@ -5,7 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.6.4"
+__version__ = "0.6.5"
 
 import csv
 import string
@@ -427,7 +427,6 @@ def read_update_def(filename):
         var_list = []
         k = b.find("column_defs")
         b = b[k:]
-        print b
         for var in defn['column_defs'].keys():
             var_list.append(var)
             loc.append(b.find(var + '": ['))
@@ -1542,7 +1541,11 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
 
     if 'enum' in step_def['object']:
         for i in range(len(column_values)):
-            column_values[i] = enum[step_def['object']['enum']]['update'].get(column_values[i], column_values[i])
+            try:
+                column_values[i] = enum[step_def['object']['enum']]['update'][column_values[i]]
+            except KeyError:
+                print "ERROR: ", column_values[i], "not found in enumeration.  Blank value substituted."
+                column_values[i] = ''
 
     return column_values
 

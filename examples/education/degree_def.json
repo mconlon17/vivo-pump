@@ -63,7 +63,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:EducationalProcess",
+                    "type": "http://vivoweb.org/ontology/core#EducationalProcess",
                     "name": "process_thing"
                 }
             },

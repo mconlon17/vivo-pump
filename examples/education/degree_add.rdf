@@ -1,0 +1,9 @@
+<http://vivo.school.edu/individual/n4180443756> <http://purl.obolibrary.org/obo/RO_0002353> <http://vivo.school.edu/individual/n3442895359> .
+<http://vivo.school.edu/individual/n3442895359> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#EducationalProcess> .
+<http://vivo.school.edu/individual/n4180443756> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AwardedDegree> .
+<http://vivo.school.edu/individual/n4180443756> <http://vivoweb.org/ontology/core#relates> <http://vivoweb.org/ontology/degree/academicDegree77> .
+<http://vivo.school.edu/individual/n3442895359> <http://vivoweb.org/ontology/core#majorField> "Medicine" .
+<http://vivo.school.edu/individual/n4180443756> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.school.edu/individual/n7130> .
+<http://vivo.school.edu/individual/n4180443756> <http://vivoweb.org/ontology/core#dateTimeValue> <http://vivo.school.edu/individual/n5828820123> .
+
+

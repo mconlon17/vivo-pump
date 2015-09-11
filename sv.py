@@ -19,7 +19,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.6.4"
+__version__ = "0.6.5"
 
 from datetime import datetime
 from vivopump import get_args
