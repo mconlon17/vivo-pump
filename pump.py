@@ -53,21 +53,21 @@ class Pump(object):
                               'password': 'v;bisons',
                               'uriprefix': 'http://vivo.school.edu/individual/n',
                               'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
+                                  '''
+                                  PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                                  PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+                                  PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+                                  PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+                                  PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+                                  PREFIX bibo: <http://purl.org/ontology/bibo/>
+                                  PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+                                  PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                                  PREFIX obo: <http://purl.obolibrary.org/obo/>
+                                  PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                                  PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
+                                  PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
+                                  PREFIX vivo: <http://vivoweb.org/ontology/core#>
+                                  '''
                  }):
         """
         Initialize the pump
@@ -111,10 +111,11 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         :rtype: basestring
         """
         from vivopump import make_get_query
+
         result = str(datetime.now()) + " Pump Summary for " + self.json_def_filename + "\n" + \
-            str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
-            str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
-            str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
+                 str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
+                 str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
+                 str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
         return result
 
     def get(self):
@@ -152,10 +153,9 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
         if self.original_graph is None:  # Test for injection
 
-            #   Create the original graph from VIVO
+            # Create the original graph from VIVO
 
             self.original_graph = get_graph(self.update_def, self.query_parms, debug=self.verbose)
-
 
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
@@ -216,8 +216,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
                         "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
-                    do_three_step_update(row, column_name, uri, column_def, data_update, self.intra,
-                                         self.enum, self.update_graph, self.query_parms, self.verbose)
+                    self.__do_three_step_update(row, column_name, uri, column_def, data_update)
                 elif len(column_def) == 2:
                     do_two_step_update(row, column_name, uri, column_def, data_update, self.intra,
                                        self.enum, self.update_graph, self.query_parms, self.verbose)
@@ -277,7 +276,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
         # We need a generator that produces the order based on the order value in the entity def, or uri order if not
         # present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
-        #   always unique
+        # always unique
 
         #   Generate the get query, execute the query, shape the query results into the return object
 
@@ -350,53 +349,50 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
         return len(data)
 
+    def __do_three_step_update(self, row, column_name, uri, path, data_update):
+        """
+        Given the current state in the update, and a path length three column_def, add, change or delete intermediate
+        and end objects as necessary to perform the requested update
+        :param row: row number of the update.  For printing
+        :param column_name: column_name of the update.  For printing
+        :param uri: uri of the entity at the head of the path
+        :param path: the column definition
+        :param data_update: the data provided for the update
+        :return: Changes in the update_graph
+        """
+        from rdflib import RDF, RDFS, Literal, URIRef
+        from vivopump import new_uri, get_step_triples
 
-def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, update_graph,
-                         query_parms, debug):
-    """
-    Given the current state in the update, and a path length three column_def, ad, change or delete intermediate and
-    end objects as necessary to perform the requested update
-    :param row: row number of the update.  For printing
-    :param column_name: column_name of the update.  For printing
-    :param uri: uri of the entity at the head of the path
-    :param path: the column definition
-    :param data_update: the data provided for the update
-    :param enum: the enumerations
-    :param update_graph: the update graph
-    :param debug: debug status. For printing.
-    :return: Changes in the update_graph
-    """
-    from rdflib import RDF, RDFS, Literal, URIRef
-    from vivopump import new_uri, get_step_triples
+        step_def = path[0]
+        step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
+                                                       self.verbose)]
 
-    step_def = path[0]
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)]
+        if len(step_uris) == 0:
 
-    if len(step_uris) == 0:
+            # VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
 
-        # VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
+            step_uri = URIRef(new_uri(self.query_parms))
+            self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
+            self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+            if 'label' in step_def['object']:
+                self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
+                                                                     datatype=step_def['object'].get('datatype', None),
+                                                                     lang=step_def['object'].get('lang', None))))
+            do_two_step_update(row, column_name, step_uri, path[1:], data_update, self.intra, self.enum,
+                               self.update_graph, self.query_parms, debug=self.verbose)
 
-        step_uri = URIRef(new_uri(query_parms))
-        update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-        update_graph.add((step_uri, RDF.type, step_def['object']['type']))
-        if 'label' in step_def['object']:
-            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
-                                                            datatype=step_def['object'].get('datatype', None),
-                                                            lang=step_def['object'].get('lang', None))))
-        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph,
-                           query_parms, debug=debug)
+        elif step_def['predicate']['single']:
 
-    elif step_def['predicate']['single']:
+            #   VIVO has 1 or more values for first intermediate, so we need to see if the predicate
+            #   is expected to be single
 
-        # VIVO has 1 or more values for first intermediate, so we need to see if the predicate is expected to be single
-
-        step_uri = step_uris[0]
-        if len(step_uris) > 1:
-            print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
-                step_uris, "using", step_uri
-        do_two_step_update(row, column_name, step_uri, path[1:], data_update, intra, enum, update_graph,
-                           query_parms, debug=debug)
-    return None
+            step_uri = step_uris[0]
+            if len(step_uris) > 1:
+                print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
+                    step_uris, "using", step_uri
+            do_two_step_update(row, column_name, step_uri, path[1:], data_update, self.intra, self.enum,
+                               self.update_graph, self.query_parms, debug=self.verbose)
+        return None
 
 
 def do_two_step_update(row, column_name, uri, column_def, data_update, intra, enum, update_graph,
