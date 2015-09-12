@@ -775,13 +775,14 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
 
     def test_multiple_one_add(self):
-        from rdflib import URIRef
+        from rdflib import URIRef, Graph
 
         #  Add multiple values for an attribute to an entity that has no values for the attribute
 
         p = Pump("data/person_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
                                u'research_areas': u'http://vivo.ufl.edu/individual/n2551317090;http://vivo.ufl.edu/individual/n157098'}}
+        p.original_graph = Graph()
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 2 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
@@ -792,23 +793,39 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivo.ufl.edu/individual/n157098")) in add)
 
     def test_multiple_one_change_nothing(self):
+        from rdflib import Graph, URIRef, RDF
 
         #  Do nothing if the multiple values specified match those in VIVO
 
         p = Pump("data/person_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
-                               u'types': u'person;thing;agent;fac;uf;ufc'}}
+                               u'types': u'fac;uf'}}
+        p.original_graph = Graph()
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity')))
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 
     def test_multiple_one_change(self):
-        from rdflib import URIRef
+        from rdflib import URIRef, Graph, RDF
 
         #  Change the set of values adding one and removing another
 
         p = Pump("data/person_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
-                               u'types': u'person;thing;agent;fac;uf;pd'}}
+                               u'types': u'person;fac;uf;pd'}}
+
+        p.original_graph = Graph()
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://xmlns.com/foaf/0.1/Person')))
         [add, sub] = p.update()
         self.assertTrue(len(add) == 1 and len(sub) == 1 and
                         (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
@@ -819,10 +836,24 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                          URIRef("http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity")) in sub)
 
     def test_multiple_one_delete(self):
+        from rdflib import Graph, URIRef
 
         #  Empty the set of values
 
-        p = Pump("data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json")
+        p.original_graph = Graph()
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                              URIRef('http://any1')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                              URIRef('http://any2')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                              URIRef('http://any3')))
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                              URIRef('http://any4')))
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n25674',
                              u'research_areas': u'None'}}
         [add, sub] = p.update()
