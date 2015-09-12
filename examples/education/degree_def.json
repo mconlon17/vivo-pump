@@ -59,17 +59,6 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/RO_0002353"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#EducationalProcess",
-                    "name": "process_thing"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
                     "ref": "http://vivoweb.org/ontology/core#majorField"
                 },
                 "object": {

@@ -1,9 +1,9 @@
-<http://vivo.school.edu/individual/n6336524507> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#EducationalProcess> .
-<http://vivo.school.edu/individual/n6336524507> <http://vivoweb.org/ontology/core#majorField> "Medicine" .
-<http://vivo.school.edu/individual/n6756612130> <http://vivoweb.org/ontology/core#relates> <http://vivoweb.org/ontology/degree/academicDegree77> .
-<http://vivo.school.edu/individual/n6756612130> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.school.edu/individual/n7130> .
-<http://vivo.school.edu/individual/n6756612130> <http://vivoweb.org/ontology/core#dateTimeValue> <http://vivo.school.edu/individual/n5828820123> .
-<http://vivo.school.edu/individual/n6756612130> <http://purl.obolibrary.org/obo/RO_0002353> <http://vivo.school.edu/individual/n6336524507> .
-<http://vivo.school.edu/individual/n6756612130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AwardedDegree> .
+<http://vivo.school.edu/individual/n6583308326> <http://vivoweb.org/ontology/core#dateTimeValue> <http://vivo.school.edu/individual/n5828820123> .
+<http://vivo.school.edu/individual/n6583308326> <http://vivoweb.org/ontology/core#majorField> "Medicine" .
+<http://vivo.school.edu/individual/n6583308326> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.school.edu/individual/n7130> .
+<http://vivo.school.edu/individual/n6583308326> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AwardedDegree> .
+<http://vivo.school.edu/individual/n3900> <http://vivoweb.org/ontology/core#dateTimeValue> <http://vivo.school.edu/individual/n7105275773> .
+<http://vivo.school.edu/individual/n6583308326> <http://vivoweb.org/ontology/core#relates> <http://vivoweb.org/ontology/degree/academicDegree77> .
+<http://vivo.school.edu/individual/n3900> <http://vivoweb.org/ontology/core#majorField> "Statistics" .
 
 

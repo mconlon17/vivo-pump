@@ -822,7 +822,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 class PumpRemoveTestCase(unittest.TestCase):
     def test_uri_not_found_case(self):
         from rdflib import Graph, URIRef, RDF
-        p = Pump("data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json")
         p.original_graph = Graph()
         p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'), RDF.type,
                               URIRef('http://xmlns.com/foaf/0.1/Person')))
@@ -833,7 +833,7 @@ class PumpRemoveTestCase(unittest.TestCase):
 
     def test_single_uri_case(self):
         from rdflib import Graph, URIRef, RDF
-        p = Pump("data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json")
         p.original_graph = Graph()
         p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n2084211328'), RDF.type,
                               URIRef('http://xmlns.com/foaf/0.1/Person')))
@@ -844,7 +844,7 @@ class PumpRemoveTestCase(unittest.TestCase):
 
     def test_large_case(self):
         from rdflib import Graph, URIRef, RDF, RDFS, Literal
-        p = Pump("data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json")
         p.original_graph = Graph()
         p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'), RDF.type,
                               URIRef('http://xmlns.com/foaf/0.1/Person')))
@@ -854,8 +854,6 @@ class PumpRemoveTestCase(unittest.TestCase):
                               URIRef('http://vivo.vivoweb.org/ontology/core#Authorship')))
         p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1412'), URIRef('http://any'),
                               URIRef('http://vivo.ufl.edu/individual/n25674')))
-        for su, pr, ob in p.original_graph:
-            print su, pr, ob
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n25674',
                              u'remove': u'True'}}
         [add, sub] = p.update()
@@ -863,7 +861,7 @@ class PumpRemoveTestCase(unittest.TestCase):
 
     def test_not_found(self):
         from rdflib import Graph
-        p = Pump("data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json")
         p.original_graph = Graph()  # empty graph
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n12345678',
                              u'remove': u'True'}}

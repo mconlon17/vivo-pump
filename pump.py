@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.6.5"
+__version__ = "0.6.6"
 
 from datetime import datetime
 from json import dumps
