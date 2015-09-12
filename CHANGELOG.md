@@ -295,4 +295,5 @@ on VIVO URLs.
 for path length 1 case. Test case demonstrates sorting a CSV structure.  do_remove refactored as __do_remove, a
 private method of the Pump class.  do_get refactored as __do_get, a private method of the Pump class. 
 do_three_step_update refactored as __do_three_step_update, a private method of the Pump class.  do_two_step_update
-refactored as __do_step_update, a private method of the Pump Class.
+refactored as __do_step_update, a private method of the Pump Class.  do_the_update refactored as __do_the_update, a 
+private method of the Pump class.  pump.py now has only a class definition, methods and private methods.

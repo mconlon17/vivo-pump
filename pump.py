@@ -228,8 +228,7 @@ class Pump(object):
                                                           row, column_name)
                     if self.verbose:
                         print row, column_name, column_values, uri, vivo_objs
-                    do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
-                                  self.verbose)
+                    self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
         # Return the add and sub graphs representing the changes that need to be made to the original
 
@@ -419,7 +418,7 @@ class Pump(object):
 
         if len(step_uris) == 0:
 
-            # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
+            # VIVO has no values for intermediate, so add a new intermediate and __do_the_update on the leaf
 
             step_uri = URIRef(new_uri(self.query_parms))
             self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
@@ -435,8 +434,7 @@ class Pump(object):
                                           self.verbose)}
             column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
                                                   column_name)
-            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
-                          self.verbose)
+            self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
         elif step_def['predicate']['single']:
 
@@ -453,94 +451,89 @@ class Pump(object):
                                           self.verbose)}
             column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
                                                   column_name)
-            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
-                          self.verbose)
+            self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
         else:
             print "WARNING: Updating multi-valued multi-step predicates such as ", column_name, " not yet implemented"
         return None
 
+    def __do_the_update(self, row, column_name, uri, step_def, column_values, vivo_objs):
+        """
+        Given the uri of an entity to be updated, the current step definition, column value(s), vivo object(s), and
+        the update graph, add or remove triples to the update graph as needed to make the appropriate adjustments
+        based on column values and the current state of VIVO.  Whew.
 
-def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug):
-    """
-    Given the uri of an entity to be updated, the current step definition, column value(s), vivo object(s), and
-    the update graph, add or remove triples to the update graph as needed to make the appropriate adjustments
-    based on column values and the current state of VIVO.  Whew.
+        There is likely controversy and refactoring to come here.  For example, None is not supported for multi-valued
+        predicates.  Why isn't single valued a special case of multi-valued?  And there will be more questions.
 
-    There is likely controversy and refactoring to come here.  For example, None is not supported for multi-valued
-    predicates.  Why isn't single valued a special case of multi-valued?  And there will be more questions.
+        The code below represents the guts of the update.  Everything else is getting in position.
 
-    The code below represents the guts of the update.  Everything else is getting in position.
+        :param uri: uri of the current entity
+        :param step_def: current step definition (always a leaf in the flow graph)
+        :param column_values: list of prepared column values
+        :param vivo_objs: dict of object Literals keyed by string value of literal
+        :return: None
+        """
 
-    :param uri: uri of the current entity
-    :param step_def: current step definition (always a leaf in the flow graph)
-    :param column_values: list of prepared column values
-    :param vivo_objs: dict of object Literals keyed by string value of literal
-    :param update_graph: rdflib graph of the triples in the update set
-    :return: None
-    """
+        from rdflib import Literal, URIRef
 
-    from rdflib import Literal, URIRef
+        # Compare VIVO to Input and update as indicated
 
-    # Compare VIVO to Input and update as indicated
-
-    if len(column_values) == 1:
-        column_string = column_values[0]
-        if column_string == '':
-            return None  # No action required if spreadsheet value is empty
-        elif column_string == 'None':
-            if debug:
-                print "Remove", column_name, "from", str(uri)
-            for vivo_object in vivo_objs.values():
-                update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                if debug:
-                    print uri, step_def['predicate']['ref'], vivo_object
-        elif len(vivo_objs) == 0:
-            if debug:
-                print "Adding", column_name, column_string
-            if step_def['object']['literal']:
-                update_graph.add((uri, step_def['predicate']['ref'], Literal(column_string,
-                                                                             datatype=step_def['object'].get('datatype',
-                                                                                                             None),
-                                                                             lang=step_def['object'].get('lang',
-                                                                                                         None))))
-            else:
-                update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
-        else:
-            for vivo_object in vivo_objs.values():
-                if unicode(vivo_object) == column_string:
-                    continue  # No action required if vivo same as source
-                else:
-                    update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                    if debug:
-                        print "REMOVE", row, column_name, unicode(vivo_object)
-                        print "VIVO was ", unicode(vivo_object)
-                        print "Source is", column_string
+        if len(column_values) == 1:
+            column_string = column_values[0]
+            if column_string == '':
+                return None  # No action required if spreadsheet value is empty
+            elif column_string == 'None':
+                if self.verbose:
+                    print "Remove", column_name, "from", str(uri)
+                for vivo_object in vivo_objs.values():
+                    self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
+                    if self.verbose:
+                        print uri, step_def['predicate']['ref'], vivo_object
+            elif len(vivo_objs) == 0:
+                if self.verbose:
+                    print "Adding", column_name, column_string
                 if step_def['object']['literal']:
-                    if debug:
-                        print "ADD   ", row, column_name, column_string
-                        print step_def
-                        print "lang is ", step_def['object'].get('lang', None)
-                    update_graph.add((uri, step_def['predicate']['ref'],
-                                      Literal(column_string, datatype=step_def['object'].get('datatype', None),
-                                              lang=step_def['object'].get('lang', None))))
+                    self.update_graph.add((uri, step_def['predicate']['ref'],
+                                           Literal(column_string, datatype=step_def['object'].get('datatype', None),
+                                                   lang=step_def['object'].get('lang', None))))
                 else:
-                    update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
-    else:
-        # Ready for set comparison
-        if debug:
-            print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
-
-        add_values = set(column_values) - set(vivo_objs.keys())
-        sub_values = set(vivo_objs.keys()) - set(column_values)
-        for value in add_values:
-            if step_def['object']['literal']:
-                update_graph.add((uri, step_def['predicate']['ref'],
-                                  Literal(value, datatype=step_def['object'].get('datatype', None),
-                                          lang=step_def['object'].get('lang', None))))
+                    self.update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
             else:
-                update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
-        for value in sub_values:
-            update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
+                for vivo_object in vivo_objs.values():
+                    if unicode(vivo_object) == column_string:
+                        continue  # No action required if vivo same as source
+                    else:
+                        self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
+                        if self.verbose:
+                            print "REMOVE", row, column_name, unicode(vivo_object)
+                            print "VIVO was ", unicode(vivo_object)
+                            print "Source is", column_string
+                    if step_def['object']['literal']:
+                        if self.verbose:
+                            print "ADD   ", row, column_name, column_string
+                            print step_def
+                            print "lang is ", step_def['object'].get('lang', None)
+                        self.update_graph.add((uri, step_def['predicate']['ref'],
+                                               Literal(column_string, datatype=step_def['object'].get('datatype', None),
+                                                       lang=step_def['object'].get('lang', None))))
+                    else:
+                        self.update_graph.add((uri, step_def['predicate']['ref'], URIRef(column_string)))
+        else:
+            # Ready for set comparison
+            if self.verbose:
+                print 'SET COMPARE', row, column_name, column_values, vivo_objs.keys()
 
-    return None
+            add_values = set(column_values) - set(vivo_objs.keys())
+            sub_values = set(vivo_objs.keys()) - set(column_values)
+            for value in add_values:
+                if step_def['object']['literal']:
+                    self.update_graph.add((uri, step_def['predicate']['ref'],
+                                           Literal(value, datatype=step_def['object'].get('datatype', None),
+                                                   lang=step_def['object'].get('lang', None))))
+                else:
+                    self.update_graph.add((uri, step_def['predicate']['ref'], URIRef(value)))
+            for value in sub_values:
+                self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_objs[value]))
+
+        return None
