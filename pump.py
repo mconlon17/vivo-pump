@@ -218,8 +218,7 @@ class Pump(object):
                 elif len(column_def) == 3:
                     self.__do_three_step_update(row, column_name, uri, column_def, data_update)
                 elif len(column_def) == 2:
-                    do_two_step_update(row, column_name, uri, column_def, data_update, self.intra,
-                                       self.enum, self.update_graph, self.query_parms, self.verbose)
+                    self.__do_two_step_update(row, column_name, uri, column_def, data_update)
                 elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {unicode(o): o for s, p, o in
@@ -378,8 +377,7 @@ class Pump(object):
                 self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
                                                                      datatype=step_def['object'].get('datatype', None),
                                                                      lang=step_def['object'].get('lang', None))))
-            do_two_step_update(row, column_name, step_uri, path[1:], data_update, self.intra, self.enum,
-                               self.update_graph, self.query_parms, debug=self.verbose)
+            self.__do_two_step_update(row, column_name, step_uri, path[1:], data_update)
 
         elif step_def['predicate']['single']:
 
@@ -390,72 +388,77 @@ class Pump(object):
             if len(step_uris) > 1:
                 print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
                     step_uris, "using", step_uri
-            do_two_step_update(row, column_name, step_uri, path[1:], data_update, self.intra, self.enum,
-                               self.update_graph, self.query_parms, debug=self.verbose)
+            self.__do_two_step_update(row, column_name, step_uri, path[1:], data_update)
         return None
 
+    def __do_two_step_update(self, row, column_name, uri, column_def, data_update):
+        """
+        In a two step update, identify intermediate entity that might need to be created, and end path objects that
+        might not yet exist or might need to be created.  Cases are:
 
-def do_two_step_update(row, column_name, uri, column_def, data_update, intra, enum, update_graph,
-                       query_parms, debug):
-    """
-    In a two step update, identify intermediate entity that might need to be created, and end path objects that might
-    not yet exist or might need to be created.  Cases are:
+                              Predicate Single   Predicate Multiple
+        VIVO has 0 values     Add, do_the        Add intermediate, do_the
+        VIVO has 1 value         do_the          Set compare through intermediate
+        VIVO has >1 value     WARNING, do_the    Set compare through intermediate
+        :param: row: current row in spreadsheet
+        :param: column_name: name of current column in spreadsheet
+        :param: uri: uri in VIVO of the current entity
+        :param: column_def: the column def for the current column
+        :param: data_update: the column_value
+        :return: alterations in update graph
+        """
+        from rdflib import RDF, RDFS, Literal, URIRef
+        from vivopump import new_uri, get_step_triples, prepare_column_values
 
-                          Predicate Single   Predicate Multiple
-    VIVO has 0 values     Add, do_the        Add intermediate, do_the
-    VIVO has 1 value         do_the          Set compare through intermediate
-    VIVO has >1 value     WARNING, do_the    Set compare through intermediate
-    :return: alterations in update graph
-    """
-    from rdflib import RDF, RDFS, Literal, URIRef
-    from vivopump import new_uri, get_step_triples, prepare_column_values
+        step_def = column_def[0]
 
-    step_def = column_def[0]
+        # Find all the intermediate entities in VIVO and then process cases related to count and defs
 
-    # Find all the intermediate entities in VIVO and then process cases related to count and defs
+        step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
+                                                       self.verbose)]
 
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)]
+        if len(step_uris) == 0:
 
-    if len(step_uris) == 0:
+            # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
 
-        # VIVO has no values for intermediate, so add a new intermediate and do_the_update on the leaf
+            step_uri = URIRef(new_uri(self.query_parms))
+            self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
+            self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+            if 'label' in step_def['object']:
+                self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
+                                                                     datatype=step_def['object'].get('datatype', None),
+                                                                     lang=step_def['object'].get('lang', None))))
+            uri = step_uri
+            step_def = column_def[1]
+            vivo_objs = {unicode(o): o for s, p, o in
+                         get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
+                                          self.verbose)}
+            column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
+                                                  column_name)
+            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                          self.verbose)
 
-        step_uri = URIRef(new_uri(query_parms))
-        update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-        update_graph.add((step_uri, RDF.type, step_def['object']['type']))
-        if 'label' in step_def['object']:
-            update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
-                                                            datatype=step_def['object'].get('datatype', None),
-                                                            lang=step_def['object'].get('lang', None))))
-        uri = step_uri
-        step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in
-                     get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)}
-        column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
-                                              column_name)
-        do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
-                      debug=debug)
+        elif step_def['predicate']['single']:
 
-    elif step_def['predicate']['single']:
+            # VIVO has 1 or more values, so we need to see if the predicate is expected to be single
 
-        # VIVO has 1 or more values, so we need to see if the predicate is expected to be single
+            step_uri = step_uris[0]
+            if len(step_uris) > 1:
+                print "WARNING: Single predicate", column_name, "has", len(step_uris), "values: ", \
+                    step_uris, "using", step_uri
+            uri = step_uri
+            step_def = column_def[1]
+            vivo_objs = {unicode(o): o for s, p, o in
+                         get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
+                                          self.verbose)}
+            column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
+                                                  column_name)
+            do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, self.update_graph,
+                          self.verbose)
 
-        step_uri = step_uris[0]
-        if len(step_uris) > 1:
-            print "WARNING: Single predicate", column_name, "has", len(step_uris), "values: ", \
-                step_uris, "using", step_uri
-        uri = step_uri
-        step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in
-                     get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)}
-        column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
-                                              column_name)
-        do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
-                      debug=debug)
-
-    else:
-        print "WARNING: Updating multi-valued multi-step predicates such as ", column_name, " not yet implemented"
-    return None
+        else:
+            print "WARNING: Updating multi-valued multi-step predicates such as ", column_name, " not yet implemented"
+        return None
 
 
 def do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph, debug):

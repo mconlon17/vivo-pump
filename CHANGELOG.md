@@ -294,4 +294,5 @@ on VIVO URLs.
 * **2015-09-12** 0.6.6 Improve education example.  Remove print/verbose from PumpRemoveTestCase. Qualifiers now working
 for path length 1 case. Test case demonstrates sorting a CSV structure.  do_remove refactored as __do_remove, a
 private method of the Pump class.  do_get refactored as __do_get, a private method of the Pump class. 
-do_three_step_update refactored as __do_three_step_update, a private method of the Pump class.
+do_three_step_update refactored as __do_three_step_update, a private method of the Pump class.  do_two_step_update
+refactored as __do_step_update, a private method of the Pump Class.
