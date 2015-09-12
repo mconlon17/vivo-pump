@@ -291,4 +291,5 @@ is generated and the column value is set to blank (no update). Remove print from
 Improve strip() for included values.  PumpRemoveTestCase now uses injected graphs -- we load the graph with specific
 triples and update uses the test graph rather than querying VIVO.  This tests update() explicitly without reliance
 on VIVO URLs.
-* **2015-09-12** 0.6.6 Improve education example.  Remove print/verbose from PumpRemoveTestCase.
+* **2015-09-12** 0.6.6 Improve education example.  Remove print/verbose from PumpRemoveTestCase. Qualifiers now working
+for path length 1 case.

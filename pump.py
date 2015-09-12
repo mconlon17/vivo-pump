@@ -182,7 +182,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         rdf as necessary to process requested changes
         """
         from rdflib import URIRef, RDF
-        from vivopump import new_uri, prepare_column_values
+        from vivopump import new_uri, prepare_column_values, get_step_triples
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
@@ -224,9 +224,8 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
                                        self.enum, self.update_graph, self.query_parms, self.verbose)
                 elif len(column_def) == 1:
                     step_def = column_def[0]
-                    vivo_objs = {}
-                    for s, p, o in self.update_graph.triples((uri, step_def['predicate']['ref'], None)):
-                        vivo_objs[unicode(o)] = o
+                    vivo_objs = {unicode(o): o for s, p, o in
+                                 get_step_triples(self.update_graph, uri, step_def, self.query_parms, self.verbose)}
                     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
                                                           row, column_name)
                     if self.verbose:

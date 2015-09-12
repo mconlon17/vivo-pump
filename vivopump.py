@@ -1564,9 +1564,14 @@ def get_step_triples(update_graph, uri, step_def, query_parms, debug):
     if 'qualifier' not in step_def['object']:
         g = update_graph.triples((uri, step_def['predicate']['ref'], None))
     else:
-        q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
-            str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
-            add_qualifiers([step_def]) + ' }\n'
+        if 'name' in step_def['object']:
+            q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
+                str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
+                add_qualifiers([step_def]) + ' }\n'
+        else:
+            q = 'select ?o where { <' + str(uri) + '> <' + \
+                str(step_def['predicate']['ref']) + '> ?o .\n' + \
+                add_qualifiers([step_def]) + ' }\n'
         if debug:
             print "\nStep Triples Query\n", q
         result_set = vivo_query(q, query_parms, debug)
@@ -1575,7 +1580,7 @@ def get_step_triples(update_graph, uri, step_def, query_parms, debug):
             o = make_rdf_term(binding['o'])
             g.add((uri, step_def['predicate']['ref'], o))
         if debug:
-            print "Step Triples", len(g)
+            print "Step Triples\n", g.serialize(format='nt')
     return g
 
 
