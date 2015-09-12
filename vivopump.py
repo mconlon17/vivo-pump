@@ -190,6 +190,20 @@ def write_csv(filename, data, delimiter='|'):
             f.write(delimiter.join(data[key].values()) + '\n')
 
 
+def sort_csv(data, order):
+    """
+    Given a data structure as returned by read_csv, and a list of column names, return a data
+    structure sorted as defined by order.
+    :param data:
+    :param order:
+    :return: data structure sorted as defined by order
+    """
+    sdata = {}
+    for row in ordered:
+        sdata[row] = data[ordered]
+    return sdata
+
+
 def replace_initials(s):
     """
     For a string s, find all occurrences of A. B. etc and replace them with A B etc

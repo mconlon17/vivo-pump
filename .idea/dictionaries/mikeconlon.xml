@@ -39,11 +39,14 @@
       <w>queryuri</w>
       <w>rdfprefix</w>
       <w>repl</w>
+      <w>rown</w>
+      <w>sdata</w>
       <w>sewect</w>
       <w>skos</w>
       <w>sponsorid</w>
       <w>stardog</w>
       <w>stdout</w>
+      <w>tdata</w>
       <w>tising</w>
       <w>ufrf</w>
       <w>uriprefix</w>

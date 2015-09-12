@@ -145,6 +145,16 @@ class ReadCSVTestCase(unittest.TestCase):
         print data
         self.assertTrue(data.keys() == range(1, 74))
 
+    def test_sorted_csv(self):
+        data = read_csv("data/extension.txt", delimiter='\t')
+        sdata = {}
+        order = sorted(data, key=lambda rown: data[rown]['name'], reverse=True)
+        row = 1
+        for o in order:
+            sdata[row] = data[o]
+            row += 1
+        print sdata
+
     def test_read_csv_minimal(self):
         data = read_csv("data/minimal.txt", delimiter='|')
         data_string = "{1: {u'overview': u'None', u'uri': u'http://vivo.ufl.edu/individual/n7023304'}}"
