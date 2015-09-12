@@ -124,8 +124,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         :return: count of the number of rows in the table
         :rtype: int
         """
-        return do_get(self.update_def, self.enum, self.out_filename, self.query_parms, self.inter, self.intra,
-                      self.filter, self.verbose)
+        return self.__do_get()
 
     def update(self):
         """
@@ -264,94 +263,92 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             print "REMOVING", removed, "triples for ", uri, "on row", row
         return removed
 
+    def __do_get(self):
+        """
+        Data is queried from VIVO and returned as a tab delimited text file suitable for
+        editing using an editor or spreadsheet, and suitable for use by do_update.
 
-def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, debug):
-    """
-    Data is queried from VIVO and returned as a tab delimited text file suitable for
-    editing using an editor or spreadsheet, and suitable for use by do_update.
+        :return:  Number of rows of data
+        """
+        from vivopump import vivo_query, make_get_data, unique_path, make_get_query
+        import codecs
+        from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
+            improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
-    :param filename: Tab delimited file of data from VIVO
-    :param: do_filter: boolean if True do the filters, otherwise do not apply filters
-    :return:  Number of rows of data
-    """
-    from vivopump import vivo_query, make_get_data, unique_path, make_get_query
-    import codecs
-    from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
-        improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
+        # We need a generator that produces the order based on the order value in the entity def, or uri order if not
+        # present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
+        #   always unique
 
-    # We need a generator that produces the order based on the order value in the entity def, or uri order if not
-    # present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
-    #   always unique
+        #   Generate the get query, execute the query, shape the query results into the return object
 
-    #   Generate the get query, execute the query, shape the query results into the return object
+        query = make_get_query(self.update_def)
+        if self.verbose:
+            print self.query_parms
+            print query
+        result_set = vivo_query(query, self.query_parms, self.verbose)
+        data = make_get_data(self.update_def, result_set)
 
-    query = make_get_query(update_def)
-    if debug:
-        print query_parms
-        print query
-    result_set = vivo_query(query, query_parms, debug)
-    data = make_get_data(update_def, result_set)
+        #   Write out the file
 
-    #   Write out the file
+        outfile = codecs.open(self.out_filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
 
-    outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
-
-    columns = ['uri'] + update_def['entity_def']['order']
-    outfile.write(inter.join(columns))  # write a header using the inter field separator between column names
-    outfile.write('\n')
-
-    for uri in sorted(data.keys()):  # replace with generator described above to support row order
-        print uri
-        for name in columns:
-            if name in data[uri]:
-
-                # Translate VIVO values via enumeration if any
-
-                if name in update_def['column_defs']:
-                    path = update_def['column_defs'][name]
-
-                    # Warn/correct if path is unique and VIVO is not
-
-                    if unique_path(path) and len(data[uri][name]) > 1:
-                        print "WARNING. VIVO has non-unique values for unique path:", name, "at", uri, data[uri][name]
-                        data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from the multi-valued set
-                        print data[uri][name]
-
-                    # Handle filters
-
-                    if do_filter and 'filter' in path[len(path) - 1]['object']:
-                        a = set()
-                        for x in data[uri][name]:
-                            was_string = x
-                            new_string = eval(path[len(path) - 1]['object']['filter'])(x)
-                            if debug and was_string != new_string:
-                                print uri, name, path[len(path) - 1]['object'][
-                                    'filter'], "FILTER IMPROVED", was_string, 'to', \
-                                    new_string
-                            a.add(new_string)
-                        data[uri][name] = a
-
-                    # Handle enumerations
-
-                    if 'enum' in path[len(path) - 1]['object']:
-                        enum_name = path[len(path) - 1]['object']['enum']
-                        a = set()
-                        for x in data[uri][name]:
-                            a.add(enum[enum_name]['get'].get(x, x))  # if we can't find the value in the
-                            # enumeration, just return the value
-                        data[uri][name] = a
-
-                # Gather values into a delimited string
-
-                val = intra.join(data[uri][name])
-                outfile.write(val.replace('\r', ' ').replace('\n', ' ').replace('\t', ' '))
-            if name != columns[len(columns) - 1]:
-                outfile.write(inter)
+        columns = ['uri'] + self.update_def['entity_def']['order']
+        outfile.write(self.inter.join(columns))  # write a header using the inter field separator between column names
         outfile.write('\n')
 
-    outfile.close()
+        for uri in sorted(data.keys()):  # replace with generator described above to support row order
+            print uri
+            for name in columns:
+                if name in data[uri]:
 
-    return len(data)
+                    # Translate VIVO values via enumeration if any
+
+                    if name in self.update_def['column_defs']:
+                        path = self.update_def['column_defs'][name]
+
+                        # Warn/correct if path is unique and VIVO is not
+
+                        if unique_path(path) and len(data[uri][name]) > 1:
+                            print "WARNING. VIVO has non-unique values for unique path:", name, "at", uri, \
+                                data[uri][name]
+                            data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from multi-valued set
+                            print data[uri][name]
+
+                        # Handle filters
+
+                        if self.filter and 'filter' in path[len(path) - 1]['object']:
+                            a = set()
+                            for x in data[uri][name]:
+                                was_string = x
+                                new_string = eval(path[len(path) - 1]['object']['filter'])(x)
+                                if self.verbose and was_string != new_string:
+                                    print uri, name, path[len(path) - 1]['object'][
+                                        'filter'], "FILTER IMPROVED", was_string, 'to', \
+                                        new_string
+                                a.add(new_string)
+                            data[uri][name] = a
+
+                        # Handle enumerations
+
+                        if 'enum' in path[len(path) - 1]['object']:
+                            enum_name = path[len(path) - 1]['object']['enum']
+                            a = set()
+                            for x in data[uri][name]:
+                                a.add(self.enum[enum_name]['get'].get(x, x))  # if we can't find the value in the
+                                # enumeration, just return the value
+                            data[uri][name] = a
+
+                    # Gather values into a delimited string
+
+                    val = self.intra.join(data[uri][name])
+                    outfile.write(val.replace('\r', ' ').replace('\n', ' ').replace('\t', ' '))
+                if name != columns[len(columns) - 1]:
+                    outfile.write(self.inter)
+            outfile.write('\n')
+
+        outfile.close()
+
+        return len(data)
 
 
 def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, update_graph,
