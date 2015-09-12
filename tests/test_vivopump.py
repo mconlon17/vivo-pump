@@ -775,7 +775,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
 
     def test_multiple_one_add(self):
-        from rdflib import URIRef, Graph
+        from rdflib import URIRef, Graph, RDF
 
         #  Add multiple values for an attribute to an entity that has no values for the attribute
 
@@ -783,6 +783,8 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
                                u'research_areas': u'http://vivo.ufl.edu/individual/n2551317090;http://vivo.ufl.edu/individual/n157098'}}
         p.original_graph = Graph()
+        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                              URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 2 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
