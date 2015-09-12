@@ -174,9 +174,9 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
                         "get", len(self.enum[key]['get']), "update", \
                         len(self.enum[key]['update'])
 
-        return self.do_update()
+        return self.__do_update()
 
-    def do_update(self):
+    def __do_update(self):
         """
         read updates from a spreadsheet filename.  Compare to data in VIVO.  Generate add and sub
         rdf as necessary to process requested changes
@@ -188,7 +188,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             uri = URIRef(data_update['uri'])
 
             if 'remove' in data_update.keys() and data_update['remove'].lower() == 'true':
-                do_remove(row, uri, self.update_graph, self.verbose)
+                self.__do_remove(row, uri)
                 continue
 
             if (uri, None, None) not in self.update_graph:
@@ -246,25 +246,23 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             print sub.serialize(format='nt')
         return [add, sub]
 
-
-def do_remove(row, uri, update_graph, debug):
-    """
-    Given the row, uri, and value of a remove instruction, find the uri in the update_graph and remove all triples
-    associated with it as either a subject or object
-    :param row: the row number in the data for the remove instruction
-    :param uri: the uri of the entity to be removed
-    :param update_graph: the update_graph to be altered
-    :param debug: boolean.  If true, diagnostic output is generate for stdout
-    :return: int: Number of triples removed.  Must have remove =true and uri found in update_graph
-    """
-    before = len(update_graph)
-    update_graph.remove((uri, None, None))
-    update_graph.remove((None, None, uri))
-    after = len(update_graph)
-    removed = before - after
-    if debug:
-        print "REMOVING", removed, "triples for ", uri, "on row", row
-    return removed
+    def __do_remove(self, row, uri):
+        """
+        Given the row an uri of a remove instruction, find the uri in the update_graph and remove all triples
+        associated with it as either a subject or object
+        :param row: the row number in the data for the remove instruction
+        :param uri: the uri of the entity to be removed
+        :return: int: Number of triples removed.  Must have remove =true and uri found in update_graph
+        :rtype: int
+        """
+        before = len(self.update_graph)
+        self.update_graph.remove((uri, None, None))
+        self.update_graph.remove((None, None, uri))
+        after = len(self.update_graph)
+        removed = before - after
+        if self.verbose:
+            print "REMOVING", removed, "triples for ", uri, "on row", row
+        return removed
 
 
 def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, debug):

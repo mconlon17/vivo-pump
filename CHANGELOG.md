@@ -292,4 +292,5 @@ Improve strip() for included values.  PumpRemoveTestCase now uses injected graph
 triples and update uses the test graph rather than querying VIVO.  This tests update() explicitly without reliance
 on VIVO URLs.
 * **2015-09-12** 0.6.6 Improve education example.  Remove print/verbose from PumpRemoveTestCase. Qualifiers now working
-for path length 1 case. Test case demonstrates sorting a CSV structure.
+for path length 1 case. Test case demonstrates sorting a CSV structure.  do_remove refactored as __do_remove, a
+private method of the Pump class.
