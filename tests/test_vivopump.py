@@ -110,7 +110,7 @@ class MakeUpdateQueryTestCase(unittest.TestCase):
     def test_make_query(self):
         update_def = read_update_def('data/grant_def.json')
         for path in update_def['column_defs'].values():
-            update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
+            update_query = make_update_query('ha', update_def['entity_def']['entity_sparql'], path)
             print update_query
             self.assertTrue(len(update_query) > 0)
 

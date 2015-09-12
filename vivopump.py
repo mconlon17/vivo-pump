@@ -480,11 +480,12 @@ def add_qualifiers(input_path):
     return ' '.join([x['object'].get('qualifier', '') for x in input_path])
 
 
-def make_update_query(entity_sparql, path):
+def make_update_query(column_name, entity_sparql, path):
     """
     Given a path from an update_def data structure, generate the query needed to pull the triples from VIVO that might
     be updated.  Here's what the queries look like by path length
 
+    :param column_name:
     Path length 1 example:
 
             select ?uri (vivo:subOrganizationWithin as ?p) ?o
@@ -514,8 +515,9 @@ def make_update_query(entity_sparql, path):
     """
     query = ""
     if len(path) == 1:
-        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ?o\n' + \
-                '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?o' + \
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) (?' + column_name + ' as ?o)\n' + \
+                '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
+                column_name + \
                 ' . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 2:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
@@ -573,8 +575,8 @@ def get_graph(update_def, query_parms, debug=False):
         p = URIRef(row['p']['value'])
         o = make_rdf_term(row['o'])
         a.add((s, p, o))
-    for path in update_def['column_defs'].values():
-        update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
+    for column_name, path in update_def['column_defs'].items():
+        update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
             continue
         result = vivo_query(update_query, query_parms, debug=debug)
@@ -1565,9 +1567,10 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_values
 
 
-def get_step_triples(update_graph, uri, step_def, query_parms, debug):
+def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug):
     """
     Return the triples matching the criteria defined in the current step of an update
+    :param column_name:
     :param update_graph: the update graph
     :param uri: uri of the entity currently the subject of an update
     :param step_def: step definition from update_def
@@ -1583,8 +1586,8 @@ def get_step_triples(update_graph, uri, step_def, query_parms, debug):
                 str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
                 add_qualifiers([step_def]) + ' }\n'
         else:
-            q = 'select ?o where { <' + str(uri) + '> <' + \
-                str(step_def['predicate']['ref']) + '> ?o .\n' + \
+            q = 'select (?' + column_name + ' as ?o) where { <' + str(uri) + '> <' + \
+                str(step_def['predicate']['ref']) + '> ?' + column_name + ' .\n' + \
                 add_qualifiers([step_def]) + ' }\n'
         if debug:
             print "\nStep Triples Query\n", q

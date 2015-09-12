@@ -13,7 +13,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?o a foaf:Person .",
+                    "qualifier": "?person a foaf:Person .",
                     "enum": "person_enum.txt"
                 }
             }
@@ -26,7 +26,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?o a vivo:AcademicDegree .",
+                    "qualifier": "?degree a vivo:AcademicDegree .",
                     "enum": "degree_enum.txt"
                 }
             }

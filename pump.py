@@ -225,7 +225,8 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
                 elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {unicode(o): o for s, p, o in
-                                 get_step_triples(self.update_graph, uri, step_def, self.query_parms, self.verbose)}
+                                 get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
+                                                  self.verbose)}
                     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
                                                           row, column_name)
                     if self.verbose:
@@ -302,6 +303,7 @@ def do_get(update_def, enum, filename, query_parms, inter, intra, do_filter, deb
     outfile.write('\n')
 
     for uri in sorted(data.keys()):  # replace with generator described above to support row order
+        print uri
         for name in columns:
             if name in data[uri]:
 
@@ -373,7 +375,7 @@ def do_three_step_update(row, column_name, uri, path, data_update, intra, enum, 
     from vivopump import new_uri, get_step_triples
 
     step_def = path[0]
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)]
 
     if len(step_uris) == 0:
 
@@ -421,7 +423,7 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, intra, en
 
     # Find all the intermediate entities in VIVO and then process cases related to count and defs
 
-    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)]
+    step_uris = [o for s, p, o in get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)]
 
     if len(step_uris) == 0:
 
@@ -436,7 +438,8 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, intra, en
                                                             lang=step_def['object'].get('lang', None))))
         uri = step_uri
         step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)}
+        vivo_objs = {unicode(o): o for s, p, o in
+                     get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)}
         column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
@@ -452,7 +455,8 @@ def do_two_step_update(row, column_name, uri, column_def, data_update, intra, en
                 step_uris, "using", step_uri
         uri = step_uri
         step_def = column_def[1]
-        vivo_objs = {unicode(o): o for s, p, o in get_step_triples(update_graph, uri, step_def, query_parms, debug)}
+        vivo_objs = {unicode(o): o for s, p, o in
+                     get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug)}
         column_values = prepare_column_values(data_update[column_name], intra, step_def, enum, row,
                                               column_name)
         do_the_update(row, column_name, uri, step_def, column_values, vivo_objs, update_graph,
