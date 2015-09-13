@@ -886,17 +886,9 @@ class PumpRemoveTestCase(unittest.TestCase):
         self.assertTrue(len(add) == 0 and len(sub) == 1)
 
     def test_large_case(self):
-        from rdflib import Graph, URIRef, RDF, RDFS, Literal
+        from testgraph import TestGraph
         p = Pump("data/person_def.json")
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'), RDF.type,
-                              URIRef('http://xmlns.com/foaf/0.1/Person')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'), RDFS.label,
-                              Literal("Doe, John")))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1412'), RDF.type,
-                              URIRef('http://vivo.vivoweb.org/ontology/core#Authorship')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1412'), URIRef('http://any'),
-                              URIRef('http://vivo.ufl.edu/individual/n25674')))
+        p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n25674',
                              u'remove': u'True'}}
         [add, sub] = p.update()

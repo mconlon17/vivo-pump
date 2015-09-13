@@ -26,19 +26,6 @@ from datetime import datetime
 from json import dumps
 
 
-class PathLengthException(Exception):
-    """
-    Raise this exception when a path definition is longer than the allowable (currently 3)
-    """
-
-    def __init__(self, value):
-        Exception.__init__(self)
-        self.value = value
-
-    def __str__(self):
-        return repr(self.value)
-
-
 class Pump(object):
     """
     The VIVO Pump is a tool for data management using delimited rectangular text files, aka spreadsheets.
@@ -181,7 +168,7 @@ class Pump(object):
         rdf as necessary to process requested changes
         """
         from rdflib import URIRef, RDF
-        from vivopump import new_uri, prepare_column_values, get_step_triples
+        from vivopump import new_uri, prepare_column_values, get_step_triples, PathLengthException
 
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
