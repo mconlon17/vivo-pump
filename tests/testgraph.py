@@ -21,10 +21,32 @@ class TestGraph(Graph):
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n25674'), RDFS.label,
                   Literal("Doe, John")))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                  URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                  URIRef('http://any1')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                  URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                  URIRef('http://any2')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                  URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                  URIRef('http://any3')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
+                  URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
+                  URIRef('http://any4')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                  URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                  URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Person')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n1412'), RDF.type,
                   URIRef('http://vivo.vivoweb.org/ontology/core#Authorship')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n1412'), URIRef('http://any'),
                   URIRef('http://vivo.ufl.edu/individual/n25674')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n2084211328'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Person')))
 
     def __str__(self):
         return self.serialize(format="nt")

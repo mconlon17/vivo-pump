@@ -775,16 +775,16 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
 
     def test_multiple_one_add(self):
-        from rdflib import URIRef, Graph, RDF
+        from rdflib import URIRef
+        from testgraph import TestGraph
 
         #  Add multiple values for an attribute to an entity that has no values for the attribute
 
         p = Pump("data/person_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
                                u'research_areas': u'http://vivo.ufl.edu/individual/n2551317090;http://vivo.ufl.edu/individual/n157098'}}
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
+        p.original_graph = TestGraph()
+
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 2 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
@@ -795,39 +795,27 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivo.ufl.edu/individual/n157098")) in add)
 
     def test_multiple_one_change_nothing(self):
-        from rdflib import Graph, URIRef, RDF
+        from testgraph import TestGraph
 
         #  Do nothing if the multiple values specified match those in VIVO
 
         p = Pump("data/person_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
-                               u'types': u'fac;uf'}}
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity')))
+                             u'types': u'fac;uf;ufc;person'}}
+        p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 
     def test_multiple_one_change(self):
-        from rdflib import URIRef, Graph, RDF
+        from testgraph import TestGraph
+        from rdflib import URIRef
 
         #  Change the set of values adding one and removing another
 
         p = Pump("data/person_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1723097935',
-                               u'types': u'person;fac;uf;pd'}}
-
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://vivoweb.org/ontology/core#FacultyMember')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://vivo.ufl.edu/ontology/vivo-ufl/UFEntity')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n1723097935'), RDF.type,
-                              URIRef('http://xmlns.com/foaf/0.1/Person')))
+                             u'types': u'person;fac;uf;pd'}}
+        p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(len(add) == 1 and len(sub) == 1 and
                         (URIRef("http://vivo.ufl.edu/individual/n1723097935"),
@@ -838,24 +826,12 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                          URIRef("http://vivo.ufl.edu/ontology/vivo-ufl/UFCurrentEntity")) in sub)
 
     def test_multiple_one_delete(self):
-        from rdflib import Graph, URIRef
+        from testgraph import TestGraph
 
         #  Empty the set of values
 
         p = Pump("data/person_def.json")
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
-                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
-                              URIRef('http://any1')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
-                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
-                              URIRef('http://any2')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
-                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
-                              URIRef('http://any3')))
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'),
-                              URIRef('http://vivoweb.org/ontology/core#hasResearchArea'),
-                              URIRef('http://any4')))
+        p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n25674',
                              u'research_areas': u'None'}}
         [add, sub] = p.update()
@@ -864,22 +840,18 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
 class PumpRemoveTestCase(unittest.TestCase):
     def test_uri_not_found_case(self):
-        from rdflib import Graph, URIRef, RDF
+        from testgraph import TestGraph
         p = Pump("data/person_def.json")
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n25674'), RDF.type,
-                              URIRef('http://xmlns.com/foaf/0.1/Person')))
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n2084211328',
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n20845',
                              u'remove': u'True'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 
     def test_single_uri_case(self):
-        from rdflib import Graph, URIRef, RDF
+        from testgraph import TestGraph
         p = Pump("data/person_def.json")
-        p.original_graph = Graph()
-        p.original_graph.add((URIRef('http://vivo.ufl.edu/individual/n2084211328'), RDF.type,
-                              URIRef('http://xmlns.com/foaf/0.1/Person')))
+        p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n2084211328',
                              u'remove': u'True'}}
         [add, sub] = p.update()

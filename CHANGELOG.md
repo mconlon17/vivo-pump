@@ -299,4 +299,4 @@ refactored as __do_step_update, a private method of the Pump Class.  do_the_upda
 private method of the Pump class.  pump.py now has only a class definition, methods and private methods. multiple_one
 test cases updated to use graph injection and remove VIVO dependency.
 * **2015-09-13** Remove redundant PathLengthException from pump.py.  testgraph.py defines TestGraph() a Graph() with
-known triples for testing the Pump.
+known triples for testing the Pump.  Ten tests updated to use TestGraph.
