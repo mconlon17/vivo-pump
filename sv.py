@@ -3,7 +3,7 @@
 """
     sv.py: Simple VIVO
 
-    Uses the VIVO Pump to provide data management services for VIVO.  Tabular data is mapped by the pump in and out
+    Uses the VIVO Pump to provide data management service for VIVO.  Tabular data is mapped by the pump in and out
     of VIVO.
 
     Produce a spreadsheet from VIVO that has the entities and attributes ready for editing and updating
