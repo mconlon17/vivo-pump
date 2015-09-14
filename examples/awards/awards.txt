@@ -1,0 +1,3 @@
+uri	person	award	conferred_by	date
+http://vivo.school.edu/individual/n6916	Conlon, Michael	Phi Beta Kappa	Bucknell University	1975
+	Cynthia Wilson Garvan	Phi Beta Kappa	University of Florida	1986

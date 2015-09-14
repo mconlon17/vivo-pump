@@ -1,0 +1,59 @@
+{
+    "entity_def": {
+        "type": "http://vivoweb.org/ontology/core#AwardReceipt",
+        "entity_sparql": "?uri a vivo:AwardReceipt . ",
+        "order_by": "name"
+    }, 
+    "column_defs": {
+        "person": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?person a foaf:Person .",
+                    "enum": "person_enum.txt"
+                }
+            }
+        ],
+        "award": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://vivoweb.org/ontology/core#relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?award a vivo:Award .",
+                    "enum": "award_enum.txt"
+                }
+            }
+        ],
+        "conferred_by": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#assignedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "org_enum.txt"
+                }
+            }
+        ],
+        "date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeValue"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "date_enum.txt"
+                }
+            }
+        ]
+    }
+}

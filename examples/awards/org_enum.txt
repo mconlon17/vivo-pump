@@ -1,0 +1,39 @@
+short	vivo
+Academic Technology	http://vivo.school.edu/individual/n2596
+Acorn Cardiovascular Inc	http://vivo.school.edu/individual/8015313782
+Advanced Technology Labs Inc	http://vivo.school.edu/individual/5874327687
+Advanced Tissue Sciences	http://vivo.school.edu/individual/8679496269
+Amer Bioscience Inc	http://vivo.school.edu/individual/2768065116
+Avax America Inc	http://vivo.school.edu/individual/3369154919
+Bucknell University	http://vivo.school.edu/individual/n715
+Burroughs Wellcome Company	http://vivo.school.edu/individual/3066270733
+Burroughs Wellcome Fund	http://vivo.school.edu/individual/8720619787
+Center for Instructional and Research Computing Activities	http://vivo.school.edu/individual/n2232
+Cetus Oncology Corp	http://vivo.school.edu/individual/3094034736
+Chemistry	http://vivo.school.edu/individual/n4145
+Clinical and Translational Science Institute	http://vivo.school.edu/individual/n6310
+College of Liberal Arts and Sciences	http://vivo.school.edu/individual/n721
+Concepts in Pharm Research Inc	http://vivo.school.edu/individual/5226631481
+Duraspace	http://vivo.school.edu/individual/n1311
+Exponent Environmental Group	http://vivo.school.edu/individual/793961448
+Fabre Kramer Pharmaceuticals	http://vivo.school.edu/individual/8202429111
+Framatome Technologies Inc	http://vivo.school.edu/individual/3963516916
+Galileo Laboratories Inc	http://vivo.school.edu/individual/3805257004
+Glaxo Smithkline	http://vivo.school.edu/individual/3293325926
+Harvard University	http://vivo.school.edu/individual/n7130
+Itt Industries Inc	http://vivo.school.edu/individual/1740510435
+National Institutes of Health	http://vivo.school.edu/individual/n2770
+Nature Publishing Group	http://vivo.school.edu/individual/n4584
+Novazyme Pharmaceuticals Inc	http://vivo.school.edu/individual/5985039965
+Optometrix Inc	http://vivo.school.edu/individual/8084707766
+Oxford University Press	http://vivo.school.edu/individual/n5230
+Phormax Corporation	http://vivo.school.edu/individual/1711215368
+Physics	http://vivo.school.edu/individual/n934389325
+Seaspace Corporation	http://vivo.school.edu/individual/9231791860
+Sepracor Inc	http://vivo.school.edu/individual/5927175557
+Springer	http://vivo.school.edu/individual/n1047
+Titan Pharmaceuticals Inc	http://vivo.school.edu/individual/4238702950
+University of Florida	http://vivo.school.edu/individual/n8013
+VIVO Project	http://vivo.school.edu/individual/n7580
+Visteon Corp	http://vivo.school.edu/individual/2296164111
+Wrs Infrastructure & Env	http://vivo.school.edu/individual/7424661856
