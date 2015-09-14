@@ -303,4 +303,5 @@ known triples for testing the Pump.  Ten tests updated to use TestGraph.
 * **2015-09-14** Add Awards and Honors example.  Combine cities and buildings examples into one folder called locations.
 Will create a generic locations def that supports types, lat long and within for managing location.  Rename
 examples/faculty to examples/people. Retire examples/sections. Add examples/concepts placeholder folder. Add 
-examples/services placeholder folder.  Add examples/mentoring placeholder folder.
+examples/services placeholder folder.  Add examples/mentoring placeholder folder.  Add examples/journals placeholder
+folder.
