@@ -304,4 +304,4 @@ known triples for testing the Pump.  Ten tests updated to use TestGraph.
 Will create a generic locations def that supports types, lat long and within for managing location.  Rename
 examples/faculty to examples/people. Retire examples/sections. Add examples/concepts placeholder folder. Add 
 examples/services placeholder folder.  Add examples/mentoring placeholder folder.  Add examples/journals placeholder
-folder.  Add examples/positions as placeholder folder.
+folder.  Add examples/positions as placeholder folder. Wiki, diagram and folders now aligned.
