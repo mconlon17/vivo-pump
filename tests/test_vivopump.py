@@ -170,17 +170,17 @@ class ReadCSVTestCase(unittest.TestCase):
 
 class WriteCSVTestCase(unittest.TestCase):
     def test_write_csv(self):
-        data = read_csv("data/buildings.txt", delimiter='\t')
+        data = read_csv("data/locations.txt", delimiter='\t')
         write_csv("data/buildings_out.txt", data, delimiter='\t')
-        data2 = read_csv("data/buildings.txt", delimiter='\t')
+        data2 = read_csv("data/locations.txt", delimiter='\t')
         self.assertTrue(data == data2)
 
     def test_write_csv_fp(self):
-        data = read_csv("data/buildings.txt", delimiter='\t')
+        data = read_csv("data/locations.txt", delimiter='\t')
         fp = open('data/buildings_out.txt', 'w')
         write_csv_fp(fp, data, delimiter='\t')
         fp.close()
-        data2 = read_csv("data/buildings.txt", delimiter='\t')
+        data2 = read_csv("data/locations.txt", delimiter='\t')
         self.assertTrue(data == data2)
 
 
@@ -495,13 +495,13 @@ class PumpTestCase(unittest.TestCase):
 
     def test_pump_get(self):
         p = Pump("data/building_def.json")
-        n_rows = p.get("data/buildings.txt")
+        n_rows = p.get("data/locations.txt")
         print n_rows
         self.assertEqual(2, n_rows)
 
     def test_pump_update(self):
         p = Pump("data/building_def.json")
-        [add, sub] = p.update("data/buildings.txt")
+        [add, sub] = p.update("data/locations.txt")
         self.assertEqual(0, len(add))
         self.assertEqual(0, len(sub))
 
