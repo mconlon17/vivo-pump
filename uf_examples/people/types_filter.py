@@ -4,7 +4,7 @@
     types_filter.py -- Create a types value for managing people types.  This is a bit of nasty business.  Person
     types consists of different kinds of information, all rolled in to a "types" field that is multi-valued. The
     source data is authoritative for two concepts -- the type of the current position, which UF maps to the type of
-    the person.  So for example, if a person has a Faculty position, they are assumed to be a faculty member.  But
+    the person.  So for example, if a person has a Faculty position, they are assumed to be a people member.  But
     there is no way for this filter to remove types that might now be obsolete -- the source data contains only
     the current position type.  Other type information comes from other authoritative sources and in some
     cases is managed within VIVO (VIVOOptIn, for example).  The source is also authoritative for current status.
@@ -24,7 +24,7 @@ from vivopump import read_csv_fp, write_csv_fp, get_vivo_types, get_parms, read_
 import sys
 
 parms = get_parms()
-type_data = read_csv('people_types.txt', delimiter='\t')
+type_data = read_csv('person_types.txt', delimiter='\t')
 type_enum = {type_data[row]['vivo']: type_data[row]['short'] for row in type_data}  # convert spreadsheet to dict
 plan_data = read_csv('salary_plan_enum.txt', delimiter='\t')
 plan_enum = {plan_data[row]['short']: plan_data[row]['vivo'] for row in plan_data}  # convert spreadsheet to dict

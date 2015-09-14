@@ -950,7 +950,7 @@ def improve_jobcode_description(s):
 def improve_title(s):
     """
     DSP, HR, funding agencies and others use a series of abbreviations to fit grant titles into limited text
-    strings.  Systems often restrict the length of titles of various kinds and faculty often clip their titles to
+    strings.  Systems often restrict the length of titles of various kinds and people often clip their titles to
     fit in available space.  Here we reverse the process and lengthen the name for readability
     :param s:
     :return:
