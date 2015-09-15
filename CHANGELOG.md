@@ -305,4 +305,4 @@ Will create a generic locations def that supports types, lat long and within for
 examples/faculty to examples/people. Retire examples/sections. Add examples/concepts placeholder folder. Add 
 examples/services placeholder folder.  Add examples/mentoring placeholder folder.  Add examples/journals placeholder
 folder.  Add examples/positions as placeholder folder. Wiki, diagram and folders now aligned.
-* **2015-09-15**  TestNewURI test cases repaired.  Repaired UpdateQueryTestCase.
+* **2015-09-15**  TestNewURI test cases repaired.  Repaired UpdateQueryTestCase.  Repaired GetGraphTestCase.
