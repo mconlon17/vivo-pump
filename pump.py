@@ -33,7 +33,7 @@ class Pump(object):
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
 
-    def __init__(self, json_def_filename="data/pump_def.json", out_filename="data/pump_data.txt", verbose=False,
+    def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt", verbose=False,
                  nofilters=False, inter='\t', intra=';',
                  query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
                               'username': 'vivo_root@school.edu',

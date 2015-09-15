@@ -604,7 +604,7 @@ class ImproveSponsorAwardIdTestCase(unittest.TestCase):
 class PumpTestCase(unittest.TestCase):
 
     def test_pump_serialize(self):
-        p = Pump()
+        p = Pump(json_def_filename = "data/pump_def.json")
         self.assertTrue(p.serialize().startswith("{\"entity_def\":"))
 
     def test_pump_filename(self):
@@ -617,21 +617,24 @@ class PumpTestCase(unittest.TestCase):
         print result
         self.assertTrue("Pump Summary for data/building" in result)
 
-    def test_pump_get_no_filename(self):
+    def test_pump_get_default_filename(self):
+        import os
         p = Pump("data/building_def.json")
-        with self.assertRaises(TypeError):
-            n_rows = p.get()
-            print n_rows
+        filename = p.out_filename
+        p.get()
+        self.assertTrue(os.path.isfile(filename))
+        os.remove(filename)
 
     def test_pump_get(self):
         p = Pump("data/building_def.json")
-        n_rows = p.get("data/locations.txt")
+        n_rows = p.get()
         print n_rows
         self.assertEqual(2, n_rows)
 
     def test_pump_update(self):
         p = Pump("data/building_def.json")
-        [add, sub] = p.update("data/locations.txt")
+        p.out_filename = "data/pump_data.txt"
+        [add, sub] = p.update()
         self.assertEqual(0, len(add))
         self.assertEqual(0, len(sub))
 
