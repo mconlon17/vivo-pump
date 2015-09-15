@@ -307,4 +307,4 @@ examples/services placeholder folder.  Add examples/mentoring placeholder folder
 folder.  Add examples/positions as placeholder folder. Wiki, diagram and folders now aligned.
 * **2015-09-15**  TestNewURI test cases repaired.  Repaired UpdateQueryTestCase.  Repaired GetGraphTestCase.  Repaired
 WriteCSVTestCase.  Repaired VIVOQueryTestCase. Repair PumpRemoveTestCase.  Repaired PumpGetTestCase.  Repaired 
-VIVOGetTypesTestCase.
+VIVOGetTypesTestCase.  Repaired VIVOGetUFIDTestCase.
