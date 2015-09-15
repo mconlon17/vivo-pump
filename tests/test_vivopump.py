@@ -918,7 +918,7 @@ class PumpRemoveTestCase(unittest.TestCase):
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n25674',
                              u'remove': u'True'}}
         [add, sub] = p.update()
-        self.assertTrue(len(add) == 0 and len(sub) == 3)
+        self.assertTrue(len(add) == 0 and len(sub) == 7)
 
     def test_not_found(self):
         from rdflib import Graph
