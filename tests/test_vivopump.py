@@ -205,17 +205,17 @@ class ReadCSVTestCase(unittest.TestCase):
 
 class WriteCSVTestCase(unittest.TestCase):
     def test_write_csv(self):
-        data = read_csv("data/locations.txt", delimiter='\t')
+        data = read_csv("data/buildings.txt", delimiter='\t')
         write_csv("data/buildings_out.txt", data, delimiter='\t')
-        data2 = read_csv("data/locations.txt", delimiter='\t')
+        data2 = read_csv("data/buildings.txt", delimiter='\t')
         self.assertTrue(data == data2)
 
     def test_write_csv_fp(self):
-        data = read_csv("data/locations.txt", delimiter='\t')
+        data = read_csv("data/buildings.txt", delimiter='\t')
         fp = open('data/buildings_out.txt', 'w')
         write_csv_fp(fp, data, delimiter='\t')
         fp.close()
-        data2 = read_csv("data/locations.txt", delimiter='\t')
+        data2 = read_csv("data/buildings.txt", delimiter='\t')
         self.assertTrue(data == data2)
 
 
