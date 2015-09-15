@@ -658,7 +658,7 @@ class PumpUpdateCallTestCase(unittest.TestCase):
 
     def test_default_usage(self):
         p = Pump()
-        self.assertTrue("data/pump_def.json" in p.summarize())  # Using the default definition
+        self.assertTrue("pump_def.json" in p.summarize())  # Using the default definition
 
     def test_no_update_file(self):
         p = Pump()
