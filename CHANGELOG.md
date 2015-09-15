@@ -309,4 +309,5 @@ folder.  Add examples/positions as placeholder folder. Wiki, diagram and folders
 repaired.  Repaired UpdateQueryTestCase.  Repaired GetGraphTestCase.  Repaired
 WriteCSVTestCase.  Repaired VIVOQueryTestCase. Repair PumpRemoveTestCase.  Repaired PumpGetTestCase.  Repaired 
 VIVOGetTypesTestCase.  Repaired VIVOGetUFIDTestCase.  Repaired VIVOGetAuthorsTestCase.  
-Repaired VIVOGetSponsorsTestCase. Repaired PumpTestCase. Repaired PumpUpdateCallTestCase.
+Repaired VIVOGetSponsorsTestCase. Repaired PumpTestCase. Repaired PumpUpdateCallTestCase.  
+Repaired PumpUpdateLiteralsTestCase.  Now working as expected.

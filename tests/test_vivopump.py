@@ -694,8 +694,10 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
     def test_with_datatype(self):
         from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
         p = Pump("data/building_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
+        p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
@@ -704,8 +706,10 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
     def test_with_lang(self):
         from rdflib import URIRef, Literal
+        from testgraph import TestGraph
         p = Pump("data/building_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'name': u'Building 42'}}
+        p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
@@ -714,8 +718,10 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
     def test_without_datatype(self):
         from rdflib import URIRef, Literal
+        from testgraph import TestGraph
         p = Pump("data/building_def.json", verbose=True)
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'url': u'http://a'}}
+        p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 4 and len(sub) == 0 and (None,
@@ -724,11 +730,13 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
     def test_without_lang(self):
         from rdflib import URIRef, Literal
+        from testgraph import TestGraph
         p = Pump("data/org_def.json", verbose=True)
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n928712', u'name': u'Ad ver tising'}}
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n2525', u'name': u'Ad ver tising'}}
+        p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n928712"),
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n2525"),
                                                  URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
                                                  Literal("Ad ver tising")) in add)
 

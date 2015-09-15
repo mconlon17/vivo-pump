@@ -47,6 +47,16 @@ class TestGraph(Graph):
                   URIRef('http://vivo.ufl.edu/individual/n25674')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n2084211328'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n1001011525'), RDF.type,
+                  URIRef('http://vivo.vivoweb.org/ontology/core#Building')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n1001011525'), RDFS.label,
+                  Literal("Building 42")))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n2525'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Organization')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n2525'), RDF.type,
+                  URIRef('http://vivo.vivoweb.org/ontology/core#AcademicDepartment')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n2525'), RDFS.label,
+                  Literal("Advertising")))
 
     def __str__(self):
         return self.serialize(format="nt")
