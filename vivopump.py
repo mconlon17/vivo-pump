@@ -317,7 +317,7 @@ def get_vivo_sponsorid(parms):
     :return: dictionary of uri keyed by sponsorid
     """
     query = "select ?uri ?sponsorid where {?uri uf:sponsorId ?sponsorid .}"
-    a = vivo_query(query, parms, parms['verbose'])
+    a = vivo_query(query, parms)
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(sponsorid, uri))
