@@ -1,0 +1,613 @@
+uri	name	types	within	lat	long
+http://aims.fao.org/aos/geopolitical.owl#Afghanistan	Afghanistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Africa	Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Albania	Albania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Algeria	Algeria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#American_Samoa	American Samoa	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Americas	Americas	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Andorra	Andorra	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Angola	Angola	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Anguilla	Anguilla	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Antarctica	Antarctica	loc;territory;area;region;bfo4;thing;geopol;bfo141;bfo1;http://aims.fao.org/aos/geopolitical.owl#other;bfo2;geo;continent;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Antigua_and_Barbuda	Antigua and Barbuda	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Argentina	Argentina	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Armenia	Armenia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Aruba	Aruba	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Asia	Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Australia	Australia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand	Australia and New Zealand	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Austria	Austria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Azerbaijan	Azerbaijan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bahamas_the	Bahamas	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bahrain	Bahrain	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bangladesh	Bangladesh	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Barbados	Barbados	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Belarus	Belarus	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Belgium	Belgium	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Belize	Belize	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Benin	Benin	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bermuda	Bermuda	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bhutan	Bhutan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bolivia	Bolivia (Plurinational State of)	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bonaire_Sint_Eustatius_and_Saba	Bonaire, Sint Eustatius and Saba  	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bosnia_and_Herzegovina	Bosnia and Herzegovina	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Botswana	Botswana	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Brazil	Brazil	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#British_Virgin_Islands	British Virgin Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Brunei_Darussalam	Brunei Darussalam	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Bulgaria	Bulgaria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Burkina_Faso	Burkina Faso	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Burundi	Burundi	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cambodia	Cambodia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cameroon	Cameroon	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Canada	Canada	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cape_Verde	Cape Verde	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Caribbean	Caribbean	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cayman_Islands	Cayman Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Central_African_Republic_the	Central African Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Chad	Chad	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Chile	Chile	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#China	China	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Colombia	Colombia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Comoros_the	Comoros	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Congo_the	Congo	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cook_Islands_the	Cook Islands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Costa_Rica	Costa Rica	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire	C&#244;te d'Ivoire	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Croatia	Croatia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cuba	Cuba	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Curacao	Cura&#231;ao 	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Cyprus	Cyprus	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Czech_Republic_the	Czech Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Czechoslovakia	Czechoslovakia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the	North Korea	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Democratic_Republic_of_the_Congo	Democratic Republic of the Congo	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Democratic_Yemen	Yemen, Democratic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Denmark	Denmark	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Djibouti	Djibouti	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Dominica	Dominica	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Dominican_Republic_the	Dominican Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Ecuador	Ecuador	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Egypt	Egypt	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#El_Salvador	El Salvador	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Equatorial_Guinea	Equatorial Guinea	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Eritrea	Eritrea	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Estonia	Estonia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Ethiopia	Ethiopia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Ethiopia_1993	Ethiopia_1993	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Europe	Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Falkland_Is	Falkland Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Faroe_Islands	Faroe Islands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Federal_Republic_of_Germany_the	Germany, Federal Republic of	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Fiji	Fiji	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Finland	Finland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#France	France	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#French_Guiana	French Guiana	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#French_Polynesia	French Polynesia	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Gabon	Gabon	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Gambia__the	Gambia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Georgia	Georgia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#German_Democratic_Republic_the	German Democratic Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Germany	Germany	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Ghana	Ghana	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Gibraltar	Gibraltar	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Greece	Greece	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Grenada	Grenada	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Guadeloupe	Guadeloupe	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Guam	Guam	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Guatemala	Guatemala	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Guinea	Guinea	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Guinea-Bissau	Guinea-Bissau	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Guyana	Guyana	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Haiti	Haiti	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Holy_See	Holy See	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Honduras	Honduras	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Hungary	Hungary	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Iceland	Iceland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#India	India	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Indonesia	Indonesia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Iran_Islamic_Rep_of_	Iran (Islamic Republic of)	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Iraq	Iraq	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Ireland	Ireland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Israel	Israel	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Italy	Italy	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Jamaica	Jamaica	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Japan	Japan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Jordan	Jordan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Kazakhstan	Kazakhstan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Kenya	Kenya	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Kiribati	Kiribati	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Kuwait	Kuwait	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Kyrgyzstan	Kyrgyzstan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Lao_People_s_Democratic_Republic__the	Lao People's Democratic Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Latvia	Latvia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Lebanon	Lebanon	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Lesotho	Lesotho	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Liberia	Liberia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Libyan_Arab_Jamahiriya__the	Libyan Arab Jamahiriya	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Liechtenstein	Liechtenstein	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Lithuania	Lithuania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Luxembourg	Luxembourg	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Madagascar	Madagascar	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Malawi	Malawi	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Malaysia	Malaysia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Maldives	Maldives	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Mali	Mali	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Malta	Malta	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Marshall_Islands__the	Marshall Islands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Martinique	Martinique	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Mauritania	Mauritania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Mauritius	Mauritius	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Melanesia	Melanesia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Mexico	Mexico	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Micronesia	Micronesia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Micronesia__Fed_States_of_	Micronesia (Federated States of)	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Monaco	Monaco	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Mongolia	Mongolia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Montenegro	Montenegro	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Montserrat	Montserrat	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Morocco	Morocco	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Mozambique	Mozambique	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Myanmar	Myanmar	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Namibia	Namibia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Nauru	Nauru	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Nepal	Nepal	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Netherlands_Antilles	Netherlands Antilles	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Netherlands_the	Netherlands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#New_Caledonia	New Caledonia	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#New_Zealand	New Zealand	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Nicaragua	Nicaragua	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Niger_the	Niger	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Nigeria	Nigeria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Niue	Niue	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Norway	Norway	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Oceania	Oceania	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Oman	Oman	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Pakistan	Pakistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Palau	Palau	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Panama	Panama	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Papua_New_Guinea	Papua New Guinea	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Paraguay	Paraguay	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Peru	Peru	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Philippines__the	Philippines	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Poland	Poland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Polynesia	Polynesia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Portugal	Portugal	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico	Puerto Rico	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Qatar	Qatar	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Republic_of_Korea__the	South Korea	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Republic_of_Moldova	Republic of Moldova	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Reunion	R&#233;union	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Romania	Romania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the	Russian Federation	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Rwanda	Rwanda	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint-Martin	Saint-Martin (French Part)   	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint_Barthelemy	Saint Barth&#233;lemy   	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint_Helena	Saint Helena, Ascension and Tristan da Cunha 	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint_Kitts_and_Nevis	Saint Kitts and Nevis	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint_Lucia	Saint Lucia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint_Pierre_and_Miquelon	Saint Pierre and Miquelon	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saint_Vincent_and_the_Grenadines	Saint Vincent and the Grenadines	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Samoa	Samoa	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#San_Marino	San Marino	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sao_Tome_and_Principe	Sao Tome and Principe	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Saudi_Arabia	Saudi Arabia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Senegal	Senegal	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Serbia	Serbia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Serbia_and_Montenegro	Serbia and Montenegro	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Seychelles	Seychelles	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sierra_Leone	Sierra Leone	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Singapore	Singapore	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sint_Maarten	Sint Maarten (Dutch Part)  	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Slovakia	Slovakia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Slovenia	Slovenia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Socialist_Federal_Republic_of_Yugoslavia_the	Yugoslavia, Socialist Federal Republic of	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Solomon_Islands	Solomon Islands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Somalia	Somalia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#South_Africa	South Africa	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#South_America	South America	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#South_Sudan	South Sudan 	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Spain	Spain	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sri_Lanka	Sri Lanka	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sudan_the	Sudan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sudan_the_1956	Sudan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Suriname	Suriname	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Swaziland	Swaziland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Sweden	Sweden	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Switzerland	Switzerland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Syrian_Arab_Republic_the	Syrian Arab Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Tajikistan	Tajikistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Thailand	Thailand	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#The_former_Yugoslav_Republic_of_Macedonia	Yugoslav, former Yugoslav Republic of Macedonia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Timor-Leste	Timor-Leste	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Togo	Togo	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Tokelau	Tokelau	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Tonga	Tonga	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Trinidad_and_Tobago	Trinidad and Tobago	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Tunisia	Tunisia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Turkey	Turkey	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Turkmenistan	Turkmenistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Turks_and_Caicos_Islands	Turks and Caicos Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Tuvalu	Tuvalu	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Uganda	Uganda	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Ukraine	Ukraine	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Union_of_Soviet_Socialist_Republic_the	Union of Soviet Socialist Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#United_Arab_Emirates__the	United Arab Emirates	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the	United Kingdom	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#United_Republic_of_Tanzania__the	United Republic of Tanzania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#United_States_Virgin_Islands	United States Virgin Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#United_States_of_America	United States of America	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Uruguay	Uruguay	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Uzbekistan	Uzbekistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Vanuatu	Vanuatu	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Venezuela	Venezuela (Bolivarian Republic of)	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Viet_Nam	Viet Nam	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Wallis_and_Futuna_Is	Wallis and Futuna Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Yemen	Yemen	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Yemen_1990	Yemen_1990	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Yugoslavia	Yugoslavia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Zaire	Zaire	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Zambia	Zambia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Zimbabwe	Zimbabwe	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#central_America	central America	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#central_Asia	Central Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#eastern_Africa	eastern Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#eastern_Asia	eastern Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#eastern_Europe	eastern Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#middle_Africa	middle Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#northern_Africa	northern Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#northern_America	North America	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#northern_Europe	northern Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia	south-eastern Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#southern_Africa	southern Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#southern_Asia	southern Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#southern_Europe	southern Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#western_Africa	western Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#western_Asia	western Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#western_Europe	western Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://dbpedia.org/resource/Alabama	Alabama	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Alaska	Alaska	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Arizona	Arizona	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Arkansas	Arkansas	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/California	California	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Colorado	Colorado	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Connecticut	Connecticut	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Delaware	Delaware	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Florida	Florida	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Georgia	Georgia	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Hawaii	Hawaii	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Idaho	Idaho	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Illinois	Illinois	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Indiana	Indiana	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Iowa	Iowa	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Kansas	Kansas	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Kentucky	Kentucky	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Louisiana	Louisiana	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Maine	Maine	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Maryland	Maryland	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Massachusetts	Massachusetts	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Michigan	Michigan	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Minnesota	Minnesota	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Mississipi	Mississipi	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Missouri	Missouri	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Montana	Montana	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Nebraska	Nebraska	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Nevada	Nevada	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/New_Hampshire	New Hampshire	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/New_Jersey	New Jersey	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/New_Mexico	New Mexico	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/New_York	New York	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/North_Carolina	North Carolina	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/North_Dakota	North Dakota	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Ohio	Ohio	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Oklahoma	Oklahoma	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Oregon	Oregon	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Pennsylvania	Pennsylvania	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Rhode_Island	Rhode Island	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/South_Carolina	South Carolina	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/South_Dakota	South Dakota	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Tennessee	Tennessee	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Texas	Texas	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Utah	Utah	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Vermont	Vermont	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Virginia	Virginia	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Washington	Washington	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/West_Virginia	West Virginia	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Wisconsin	Wisconsin	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://dbpedia.org/resource/Wyoming	Wyoming	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://vivo.school.edu/individual/1013029227	Richmond	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	37.5314	-77.476
+http://vivo.school.edu/individual/1035662568	Olathe	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kansas	38.8843	-94.8188
+http://vivo.school.edu/individual/1042241611	Pasadena	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1606	-118.1396
+http://vivo.school.edu/individual/1077270824	Fort Worth	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.7795	-97.3463
+http://vivo.school.edu/individual/1084060438	Burbank	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.189	-118.3249
+http://vivo.school.edu/individual/1124625818	Riverside	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.9381	-117.3932
+http://vivo.school.edu/individual/1220574291	Norfolk	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	36.923	-76.2446
+http://vivo.school.edu/individual/1303942692	Birmingham	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Alabama	33.5274	-86.799
+http://vivo.school.edu/individual/1331233848	Shreveport	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Louisiana	32.467	-93.7927
+http://vivo.school.edu/individual/1340606941	Boston	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Massachusetts	42.332	-71.0202
+http://vivo.school.edu/individual/1377748965	Escondido	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.1336	-117.0732
+http://vivo.school.edu/individual/1418499808	West Jordan	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Utah	40.6023	-112.001
+http://vivo.school.edu/individual/1419851875	Athens	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Georgia	33.9496	-83.3701
+http://vivo.school.edu/individual/1432115235	Washington	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	District of Columbia	38.9041	-77.0171
+http://vivo.school.edu/individual/1458414250	Oxnard	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.2023	-119.2046
+http://vivo.school.edu/individual/1502558251	Corona	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.8624	-117.5639
+http://vivo.school.edu/individual/1529203483	High Point	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	35.9855	-79.9902
+http://vivo.school.edu/individual/1534940746	Dayton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Ohio	39.7774	-84.1996
+http://vivo.school.edu/individual/1624419176	Seattle	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	47.6205	-122.3509
+http://vivo.school.edu/individual/1651872505	Tempe	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.3884	-111.9318
+http://vivo.school.edu/individual/1658862358	Bellevue	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	47.5978	-122.1565
+http://vivo.school.edu/individual/1703531238	San Bernardino	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1393	-117.2953
+http://vivo.school.edu/individual/171064840	Frisco	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	33.151	-96.8193
+http://vivo.school.edu/individual/172390843	Hialeah	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	25.8699	-80.3029
+http://vivo.school.edu/individual/1761294392	Alexandria	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	38.8183	-77.082
+http://vivo.school.edu/individual/1775577766	Mobile	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Alabama	30.6684	-88.1002
+http://vivo.school.edu/individual/1835282518	Henderson	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Nevada	36.0122	-115.0375
+http://vivo.school.edu/individual/1913954549	Yonkers	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New York	40.9459	-73.8674
+http://vivo.school.edu/individual/1964478700	Independence	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Missouri	39.0853	-94.3513
+http://vivo.school.edu/individual/1991521874	Boulder	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	40.0175	-105.2797
+http://vivo.school.edu/individual/2140252468	Davenport	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Iowa	41.5541	-90.604
+http://vivo.school.edu/individual/2224171361	Newark	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Jersey	40.7242	-74.1726
+http://vivo.school.edu/individual/2258084070	Indianapolis	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Indiana	39.7767	-86.1459
+http://vivo.school.edu/individual/2361138336	Joliet	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	41.5181	-88.1584
+http://vivo.school.edu/individual/2373895596	Toledo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Ohio	41.6641	-83.5819
+http://vivo.school.edu/individual/241167267	Rialto	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1118	-117.3883
+http://vivo.school.edu/individual/2462439372	Durham	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	35.981	-78.9056
+http://vivo.school.edu/individual/2501780635	Cincinnati	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Ohio	39.1399	-84.5064
+http://vivo.school.edu/individual/2609197154	Warren	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	42.4929	-83.025
+http://vivo.school.edu/individual/2655826980	North Las Vegas	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Nevada	36.283	-115.0893
+http://vivo.school.edu/individual/2669041271	Madison	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Wisconsin	43.0878	-89.4301
+http://vivo.school.edu/individual/2701933249	Waco	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	31.5601	-97.186
+http://vivo.school.edu/individual/2760389568	Carolina	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Puerto Rico	18.381	-65.957
+http://vivo.school.edu/individual/2825087831	West Palm Beach	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.7483	-80.1266
+http://vivo.school.edu/individual/2836854420	Antioch	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.9775	-121.7976
+http://vivo.school.edu/individual/2868665341	Lincoln	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Nebraska	40.809	-96.6804
+http://vivo.school.edu/individual/2904574350	Long Beach	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.8091	-118.1553
+http://vivo.school.edu/individual/2936129424	Rochester	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Minnesota	44.0154	-92.4772
+http://vivo.school.edu/individual/2973458699	Waterbury	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Connecticut	41.5585	-73.0367
+http://vivo.school.edu/individual/3005705945	Clearwater	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	27.9795	-82.7663
+http://vivo.school.edu/individual/3044957346	Miami Gardens	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	25.9489	-80.2436
+http://vivo.school.edu/individual/3096552200	Carrollton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.9884	-96.8998
+http://vivo.school.edu/individual/3163697429	Santa Clara	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.3646	-121.9679
+http://vivo.school.edu/individual/3200099588	Bridgeport	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Connecticut	41.1874	-73.1957
+http://vivo.school.edu/individual/3202254249	Thousand Oaks	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1933	-118.8742
+http://vivo.school.edu/individual/3233536063	West Valley City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Utah	40.6885	-112.0118
+http://vivo.school.edu/individual/3248325876	Ann Arbor	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	42.2756	-83.7313
+http://vivo.school.edu/individual/3289835508	Charlotte	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	35.2087	-80.8307
+http://vivo.school.edu/individual/3338883434	Columbia	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Missouri	38.9479	-92.3261
+http://vivo.school.edu/individual/338334941	Spokane	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	47.6736	-117.4166
+http://vivo.school.edu/individual/3404850411	Downey	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.9382	-118.1309
+http://vivo.school.edu/individual/3499934445	Sunnyvale	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.3858	-122.0263
+http://vivo.school.edu/individual/3499957221	Ontario	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.0395	-117.6088
+http://vivo.school.edu/individual/3528041944	Cary	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	35.7821	-78.8141
+http://vivo.school.edu/individual/3528600136	Stamford	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Connecticut	41.0799	-73.546
+http://vivo.school.edu/individual/3541762862	Port St. Lucie	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	27.281	-80.3838
+http://vivo.school.edu/individual/3568944010	Pittsburgh	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Pennsylvania	40.4398	-79.9766
+http://vivo.school.edu/individual/361430505	Baltimore	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Maryland	39.3002	-76.6105
+http://vivo.school.edu/individual/3639784891	Santa Rosa	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	38.4468	-122.7061
+http://vivo.school.edu/individual/3663757509	Wichita	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kansas	37.6907	-97.3427
+http://vivo.school.edu/individual/3672875471	Miramar	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	25.977	-80.3358
+http://vivo.school.edu/individual/3677198307	Sterling Heights	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	42.5812	-83.0303
+http://vivo.school.edu/individual/3712188294	Oakland	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.7699	-122.2256
+http://vivo.school.edu/individual/3764814631	Tucson	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	32.1543	-110.8711
+http://vivo.school.edu/individual/3854357846	San Francisco	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.7751	-122.4193
+http://vivo.school.edu/individual/3870066966	Grand Prairie	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.6842	-97.021
+http://vivo.school.edu/individual/3872903623	Phoenix	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.5722	-112.088
+http://vivo.school.edu/individual/3873462505	Fargo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Dakota	46.8652	-96.829
+http://vivo.school.edu/individual/387668109	Oklahoma City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oklahoma	35.4671	-97.5137
+http://vivo.school.edu/individual/3897858313	Newport News	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	37.076	-76.5217
+http://vivo.school.edu/individual/3905958668	Huntsville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Alabama	34.7843	-86.539
+http://vivo.school.edu/individual/3910290067	Elk Grove	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	38.4144	-121.3849
+http://vivo.school.edu/individual/3996845428	Coral Springs	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.2708	-80.2593
+http://vivo.school.edu/individual/4073046212	Victorville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.5277	-117.3536
+http://vivo.school.edu/individual/4073507608	Charleston	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	South Carolina	32.8179	-79.9589
+http://vivo.school.edu/individual/4135667386	Inglewood	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.9561	-118.3443
+http://vivo.school.edu/individual/4153480226	Kent	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	47.3853	-122.2169
+http://vivo.school.edu/individual/4160294944	Jackson	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Mississipi	32.3158	-90.2128
+http://vivo.school.edu/individual/4163402642	Odessa	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	31.8804	-102.3434
+http://vivo.school.edu/individual/4164078460	Peoria	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.7877	-112.3111
+http://vivo.school.edu/individual/4167443820	New York City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New York	40.6643	-73.9385
+http://vivo.school.edu/individual/4177773942	Glendale	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.5331	-112.1899
+http://vivo.school.edu/individual/4186168396	New Orleans	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Louisiana	30.0686	-89.939
+http://vivo.school.edu/individual/4222004017	Gilbert	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.3102	-111.7422
+http://vivo.school.edu/individual/42570644	Centennial	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	39.5906	-104.8691
+http://vivo.school.edu/individual/4283168819	Hartford	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Connecticut	41.766	-72.6833
+http://vivo.school.edu/individual/4296890488	Fullerton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.8857	-117.928
+http://vivo.school.edu/individual/4303640831	Knoxville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Tennessee	35.9709	-83.9465
+http://vivo.school.edu/individual/4352456192	Wichita Falls	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	33.9067	-98.5259
+http://vivo.school.edu/individual/4489880380	Portland	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oregon	45.537	-122.65
+http://vivo.school.edu/individual/450575309	El Paso	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	31.8484	-106.427
+http://vivo.school.edu/individual/4512225208	Westminster	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	39.8822	-105.0644
+http://vivo.school.edu/individual/4550618268	Norman	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oklahoma	35.2406	-97.3453
+http://vivo.school.edu/individual/45862700	Corpus Christi	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	27.7543	-97.1734
+http://vivo.school.edu/individual/4592547501	Chattanooga	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Tennessee	35.0665	-85.2471
+http://vivo.school.edu/individual/4596648121	Cleveland	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Ohio	41.4781	-81.6795
+http://vivo.school.edu/individual/4602310604	Colorado Springs	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	38.8673	-104.7607
+http://vivo.school.edu/individual/4649920832	Pompano Beach	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.2426	-80.129
+http://vivo.school.edu/individual/4698870108	South Bend	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Indiana	41.6769	-86.269
+http://vivo.school.edu/individual/472859945	Hayward	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.6281	-122.1063
+http://vivo.school.edu/individual/4734165530	Gainesville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	29.6788	-82.3459
+http://vivo.school.edu/individual/4750427675	Pembroke Pines	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.0212	-80.3404
+http://vivo.school.edu/individual/4785761433	Buffalo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New York	42.8925	-78.8597
+http://vivo.school.edu/individual/4787288958	Miami	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	25.7752	-80.2086
+http://vivo.school.edu/individual/4814069853	Chandler	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.2829	-111.8549
+http://vivo.school.edu/individual/4902804673	Vallejo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	38.1079	-122.2639
+http://vivo.school.edu/individual/4952079886	Salinas	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	36.6902	-121.6337
+http://vivo.school.edu/individual/4966043613	Baton Rouge	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Louisiana	30.4485	-91.1259
+http://vivo.school.edu/individual/4984841773	Richardson	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.9723	-96.7081
+http://vivo.school.edu/individual/5078358566	Stockton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.9763	-121.3133
+http://vivo.school.edu/individual/508013004	Clarksville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Tennessee	36.5664	-87.3452
+http://vivo.school.edu/individual/508049657	Laredo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	27.5477	-99.4869
+http://vivo.school.edu/individual/5159539011	Scottsdale	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.6687	-111.8237
+http://vivo.school.edu/individual/5232330778	Providence	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Rhode Island	41.8231	-71.4188
+http://vivo.school.edu/individual/5253810657	McAllen	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	26.2185	-98.2461
+http://vivo.school.edu/individual/5272548969	San Jose	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.2969	-121.8193
+http://vivo.school.edu/individual/5274350332	Mesquite	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.7639	-96.5924
+http://vivo.school.edu/individual/5375648494	Round Rock	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	30.5237	-97.6674
+http://vivo.school.edu/individual/5428781084	Everett	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	48.0033	-122.1742
+http://vivo.school.edu/individual/5437832045	Brownsville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	26.0183	-97.4538
+http://vivo.school.edu/individual/5525784336	Tallahassee	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	30.4551	-84.2534
+http://vivo.school.edu/individual/5647956171	Nashville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Tennessee	36.1718	-86.785
+http://vivo.school.edu/individual/5680456181	Grand Rapids	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	42.9612	-85.6556
+http://vivo.school.edu/individual/5687847290	Hollywood	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.0311	-80.1646
+http://vivo.school.edu/individual/5713889962	Tacoma	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	47.2522	-122.4598
+http://vivo.school.edu/individual/5723846574	Roseville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	38.7657	-121.3032
+http://vivo.school.edu/individual/5764914094	Irving	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.8577	-96.97
+http://vivo.school.edu/individual/5857135166	Glendale	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1814	-118.2458
+http://vivo.school.edu/individual/586904767	Thornton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	39.918	-104.9454
+http://vivo.school.edu/individual/5884071434	Worcester	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Massachusetts	42.2695	-71.8078
+http://vivo.school.edu/individual/5888947905	Amarillo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	35.1978	-101.8287
+http://vivo.school.edu/individual/5889321596	Santa Ana	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.7365	-117.8826
+http://vivo.school.edu/individual/5902255886	Bayamon	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Puerto Rico	18.399	-66.156
+http://vivo.school.edu/individual/5919689033	Carlsbad	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.1239	-117.2828
+http://vivo.school.edu/individual/593339900	Memphis	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Tennessee	35.1035	-89.9785
+http://vivo.school.edu/individual/5945550118	Rochester	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New York	43.1699	-77.6169
+http://vivo.school.edu/individual/5955454492	Murfreesboro	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Tennessee	35.8522	-86.4161
+http://vivo.school.edu/individual/5995255670	Arlington	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.7007	-97.1247
+http://vivo.school.edu/individual/6096370558	Minneapolis	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Minnesota	44.9633	-93.2683
+http://vivo.school.edu/individual/6123345692	Fayetteville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	35.0851	-78.9803
+http://vivo.school.edu/individual/6144923887	Temecula	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.5019	-117.1246
+http://vivo.school.edu/individual/6163777630	Montgomery	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Alabama	32.3463	-86.2686
+http://vivo.school.edu/individual/6255011088	New Haven	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Connecticut	41.3108	-72.925
+http://vivo.school.edu/individual/626093166	Broken Arrow	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oklahoma	36.0365	-95.781
+http://vivo.school.edu/individual/6266739982	Savannah	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Georgia	32.0025	-81.1536
+http://vivo.school.edu/individual/6335089157	Springfield	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Missouri	37.1942	-93.2913
+http://vivo.school.edu/individual/6353042059	Des Moines	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Iowa	41.5739	-93.6167
+http://vivo.school.edu/individual/6371645077	Springfield	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	39.7639	-89.6708
+http://vivo.school.edu/individual/6404085520	Garden Grove	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.7788	-117.9605
+http://vivo.school.edu/individual/6405436230	Vancouver	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Washington	45.6372	-122.5965
+http://vivo.school.edu/individual/6427320807	Murrieta	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.5719	-117.1907
+http://vivo.school.edu/individual/643647618	Springfield	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Massachusetts	42.1155	-72.54
+http://vivo.school.edu/individual/644947315	Lancaster	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.6936	-118.1753
+http://vivo.school.edu/individual/6449593919	Greensboro	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	36.0965	-79.8271
+http://vivo.school.edu/individual/6521877824	Virginia Beach	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	36.7793	-76.024
+http://vivo.school.edu/individual/654527671	Salt Lake City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Utah	40.7785	-111.9314
+http://vivo.school.edu/individual/6553781081	North Charleston	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	South Carolina	32.8853	-80.0169
+http://vivo.school.edu/individual/6554894585	Salem	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oregon	44.9237	-123.0231
+http://vivo.school.edu/individual/6618437541	Fremont	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.4944	-121.9411
+http://vivo.school.edu/individual/6657762574	Simi Valley	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.2669	-118.7485
+http://vivo.school.edu/individual/6682538766	Allentown	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Pennsylvania	40.594	-75.4782
+http://vivo.school.edu/individual/6694491148	Killeen	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	31.0777	-97.732
+http://vivo.school.edu/individual/6714525847	Pueblo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	38.2731	-104.6124
+http://vivo.school.edu/individual/6714739681	Columbus	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Georgia	32.5102	-84.8749
+http://vivo.school.edu/individual/6738384873	Tulsa	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oklahoma	36.1279	-95.9023
+http://vivo.school.edu/individual/6743743748	Chicago	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	41.8376	-87.6818
+http://vivo.school.edu/individual/6773350532	Lakewood	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	39.6989	-105.1176
+http://vivo.school.edu/individual/6795769335	Overland Park	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kansas	38.889	-94.6906
+http://vivo.school.edu/individual/6828094823	Austin	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	30.3072	-97.756
+http://vivo.school.edu/individual/6830353835	Ponce	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Puerto Rico	18.011	-66.614
+http://vivo.school.edu/individual/6853948038	Elgin	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	42.0396	-88.3217
+http://vivo.school.edu/individual/6870847597	Daly City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.7009	-122.465
+http://vivo.school.edu/individual/6884133140	Las Cruces	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Mexico	32.3197	-106.7653
+http://vivo.school.edu/individual/6906092738	Naperville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	41.7492	-88.162
+http://vivo.school.edu/individual/6913161015	Eugene	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oregon	44.0567	-123.1162
+http://vivo.school.edu/individual/6921190470	Oceanside	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.2246	-117.3062
+http://vivo.school.edu/individual/6936941280	Little Rock	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arkansas	34.7254	-92.3586
+http://vivo.school.edu/individual/6938434915	Lansing	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	42.7098	-84.5562
+http://vivo.school.edu/individual/704310919	San Diego	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	32.8153	-117.135
+http://vivo.school.edu/individual/7076617131	WinstonSalem	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	36.1033	-80.2606
+http://vivo.school.edu/individual/7085131434	Flint	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	43.0244	-83.692
+http://vivo.school.edu/individual/7107886370	Denton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	33.2151	-97.1417
+http://vivo.school.edu/individual/7142824756	El Cajon	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	32.8017	-116.9605
+http://vivo.school.edu/individual/7152404285	Fort Collins	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	40.5482	-105.0648
+http://vivo.school.edu/individual/7205458836	Moreno Valley	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.9233	-117.2057
+http://vivo.school.edu/individual/7254700532	Kansas City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Missouri	39.1252	-94.5511
+http://vivo.school.edu/individual/7260068062	Beaumont	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	30.0843	-94.1458
+http://vivo.school.edu/individual/7267773784	Omaha	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Nebraska	41.2647	-96.0419
+http://vivo.school.edu/individual/7274629214	Cape Coral	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.6431	-81.9973
+http://vivo.school.edu/individual/7291062693	Albuquerque	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Mexico	35.1056	-106.6474
+http://vivo.school.edu/individual/7365934392	Augusta	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Georgia	33.3655	-82.0734
+http://vivo.school.edu/individual/738404213	Mesa	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.4019	-111.7174
+http://vivo.school.edu/individual/7398285496	Rancho Cucamonga	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1233	-117.5642
+http://vivo.school.edu/individual/7469847082	Boise	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Idaho	43.5985	-116.2311
+http://vivo.school.edu/individual/7550290235	Manchester	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Hampshire	42.9847	-71.4439
+http://vivo.school.edu/individual/7563637725	Plano	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	33.0508	-96.7479
+http://vivo.school.edu/individual/7613805277	Gresham	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Oregon	45.5023	-122.4416
+http://vivo.school.edu/individual/7617641894	Berkeley	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.8667	-122.2991
+http://vivo.school.edu/individual/7627977678	Cambridge	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Massachusetts	42.376	-71.1183
+http://vivo.school.edu/individual/7629731005	Milwaukee	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Wisconsin	43.0633	-87.9667
+http://vivo.school.edu/individual/7629961697	Akron	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Ohio	41.0805	-81.5214
+http://vivo.school.edu/individual/7688025908	Richmond	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.953	-122.3594
+http://vivo.school.edu/individual/7725670475	Columbus	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Ohio	39.9848	-82.985
+http://vivo.school.edu/individual/7743680729	Sioux Falls	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	South Dakota	43.5383	-96.732
+http://vivo.school.edu/individual/7800254727	Costa Mesa	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.6659	-117.9123
+http://vivo.school.edu/individual/780681030	San Buenaventura	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.2681	-119.255
+http://vivo.school.edu/individual/7810323785	Atlanta	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Georgia	33.7629	-84.4227
+http://vivo.school.edu/individual/7813068462	Wilmington	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	34.2092	-77.8858
+http://vivo.school.edu/individual/7826434039	Columbia	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	South Carolina	34.0298	-80.8966
+http://vivo.school.edu/individual/7840764573	Kenosha	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Wisconsin	42.5822	-87.8456
+http://vivo.school.edu/individual/7861665760	Lowell	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Massachusetts	42.6389	-71.3221
+http://vivo.school.edu/individual/7869611376	Santa Maria	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.9332	-120.4438
+http://vivo.school.edu/individual/7892981412	Anaheim	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.8555	-117.7601
+http://vivo.school.edu/individual/7918171471	Jacksonville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	30.337	-81.6613
+http://vivo.school.edu/individual/7923775295	Irvine	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.6784	-117.7713
+http://vivo.school.edu/individual/7993722006	Paterson	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Jersey	40.9147	-74.1628
+http://vivo.school.edu/individual/80207877	Pomona	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.0586	-117.7613
+http://vivo.school.edu/individual/8021020699	Santa Clarita	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.4049	-118.5047
+http://vivo.school.edu/individual/8027621986	Dallas	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.7757	-96.7967
+http://vivo.school.edu/individual/8077191645	Aurora	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	32.7007	-97.1247
+http://vivo.school.edu/individual/8106803247	Fort Lauderdale	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	26.1413	-80.1439
+http://vivo.school.edu/individual/8107100152	Los Angeles	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.0194	-118.4108
+http://vivo.school.edu/individual/8147349378	Evansville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Indiana	37.9877	-87.5347
+http://vivo.school.edu/individual/8206319535	Cedar Rapids	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Iowa	41.967	-91.6778
+http://vivo.school.edu/individual/8215360901	Aurora	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	41.7635	-88.2901
+http://vivo.school.edu/individual/8231812540	Honolulu	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Hawaii	21.3259	-157.8453
+http://vivo.school.edu/individual/8236137100	Pasadena	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	29.6583	-95.1505
+http://vivo.school.edu/individual/8260432512	Detroit	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Michigan	42.383	-83.1022
+http://vivo.school.edu/individual/8297455126	Louisville	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kentucky	38.1781	-85.6667
+http://vivo.school.edu/individual/8336877639	Huntington Beach	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.6906	-118.0093
+http://vivo.school.edu/individual/845825196	St. Louis	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Missouri	38.6357	-90.2446
+http://vivo.school.edu/individual/8475681653	Houston	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	29.7805	-95.3863
+http://vivo.school.edu/individual/8478479872	West Covina	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.0559	-117.9099
+http://vivo.school.edu/individual/8487273941	Midland	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.0299	-102.1097
+http://vivo.school.edu/individual/8506497381	Orange	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.8048	-117.8249
+http://vivo.school.edu/individual/8518709076	Denver	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	39.7618	-104.8806
+http://vivo.school.edu/individual/8535820454	Saint Paul	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Minnesota	44.9489	-93.1039
+http://vivo.school.edu/individual/854813789	Syracuse	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New York	43.041	-76.1436
+http://vivo.school.edu/individual/8590086864	Fairfield	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	38.2568	-122.0397
+http://vivo.school.edu/individual/8608284894	St. Petersburg	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	27.762	-82.6441
+http://vivo.school.edu/individual/865226043	Sacramento	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	38.5666	-121.4686
+http://vivo.school.edu/individual/8653838639	Anchorage	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Alaska	61.1775	-149.2744
+http://vivo.school.edu/individual/8676656591	Surprise	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Arizona	33.6706	-112.4527
+http://vivo.school.edu/individual/8748079363	Philadelphia	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Pennsylvania	40.0094	-75.1333
+http://vivo.school.edu/individual/8749196183	Chula Vista	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	32.6277	-117.0152
+http://vivo.school.edu/individual/8772730651	Billings	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Montana	45.7895	-108.5499
+http://vivo.school.edu/individual/8793560056	Green Bay	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Wisconsin	44.5207	-87.9842
+http://vivo.school.edu/individual/882723854	Elizabeth	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Jersey	40.6663	-74.1935
+http://vivo.school.edu/individual/8852076090	Lafayette	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Louisiana	30.2116	-92.0314
+http://vivo.school.edu/individual/8885090846	Tampa	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	27.9701	-82.4797
+http://vivo.school.edu/individual/8890278093	Bakersfield	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	35.3212	-119.0183
+http://vivo.school.edu/individual/8919594816	Modesto	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.6609	-120.9891
+http://vivo.school.edu/individual/8921153514	Fort Wayne	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Indiana	41.0882	-85.1439
+http://vivo.school.edu/individual/8924972642	San Juan	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Puerto Rico	18.466	-66.106
+http://vivo.school.edu/individual/9043442580	Lexington	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kentucky	38.0402	-84.4584
+http://vivo.school.edu/individual/9047599152	El Monte	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.0746	-118.0291
+http://vivo.school.edu/individual/9072154236	Fontana	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.1088	-117.4627
+http://vivo.school.edu/individual/9102467840	Jersey City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	New Jersey	40.7114	-74.0648
+http://vivo.school.edu/individual/9130080321	Torrance	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.835	-118.3414
+http://vivo.school.edu/individual/9179097327	Kansas City	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kansas	39.1225	-94.7418
+http://vivo.school.edu/individual/9208743817	Arvada	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Colorado	39.8097	-105.1066
+http://vivo.school.edu/individual/922222435	Orlando	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	28.4159	-81.2988
+http://vivo.school.edu/individual/9242879801	Raleigh	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	North Carolina	35.8302	-78.6414
+http://vivo.school.edu/individual/929146692	McKinney	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	33.2012	-96.668
+http://vivo.school.edu/individual/9302937772	Concord	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	37.9722	-122.0016
+http://vivo.school.edu/individual/9356737409	Topeka	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Kansas	39.0362	-95.6948
+http://vivo.school.edu/individual/9370174496	Chesapeake	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	36.6794	-76.3018
+http://vivo.school.edu/individual/9371224991	Palm Bay	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida	27.9856	-80.6626
+http://vivo.school.edu/individual/9405660604	Lubbock	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	33.5665	-101.8867
+http://vivo.school.edu/individual/9444564416	Las Vegas	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Nevada	36.2277	-115.264
+http://vivo.school.edu/individual/9503015221	Hampton	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Virginia	37.048	-76.2971
+http://vivo.school.edu/individual/9513169610	Garland	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.9098	-96.6304
+http://vivo.school.edu/individual/9556860686	Norwalk	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	33.9069	-118.0834
+http://vivo.school.edu/individual/9600480740	San Antonio	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	29.4724	-98.5251
+http://vivo.school.edu/individual/9602725850	Visalia	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	36.3272	-119.3234
+http://vivo.school.edu/individual/9606509895	Provo	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Utah	40.2453	-111.6448
+http://vivo.school.edu/individual/9775100379	Rockford	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	42.2634	-89.0628
+http://vivo.school.edu/individual/9778001401	Fresno	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	36.7827	-119.7945
+http://vivo.school.edu/individual/9839673415	Erie	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Pennsylvania	42.1166	-80.0735
+http://vivo.school.edu/individual/9858409333	Reno	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Nevada	39.4745	-119.7765
+http://vivo.school.edu/individual/9928239922	Peoria	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Illinois	40.7523	-89.6171
+http://vivo.school.edu/individual/9956638905	Abilene	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Texas	32.4545	-99.7381
+http://vivo.school.edu/individual/999003926	Palmdale	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	California	34.5913	-118.109
+http://vivo.school.edu/individual/n3049	Puerto Rico	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://vivo.school.edu/individual/n4010	District of Columbia	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
+http://vivo.school.edu/individual/n7756	Archer	loc;city;region;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6	Florida		
