@@ -1,2 +1,2 @@
-uri|person|degree|school|date|field
-http://vivo.school.edu/individual/n3900|Conlon, Michael|Ph.D. Doctor of Philosophy|University of Florida||
+uri	person	degree	school	date	field
+http://vivo.school.edu/individual/n3900	Conlon, Michael	Ph.D. Doctor of Philosophy	University of Florida		

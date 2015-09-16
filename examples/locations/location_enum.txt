@@ -1,4 +1,4 @@
-short	ivo
+short	vivo
 Afghanistan	http://aims.fao.org/aos/geopolitical.owl#Afghanistan
 Africa	http://aims.fao.org/aos/geopolitical.owl#Africa
 Alabama	http://dbpedia.org/resource/Alabama
