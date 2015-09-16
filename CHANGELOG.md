@@ -312,4 +312,4 @@ VIVOGetTypesTestCase.  Repaired VIVOGetUFIDTestCase.  Repaired VIVOGetAuthorsTes
 Repaired VIVOGetSponsorsTestCase. Repaired PumpTestCase. Repaired PumpUpdateCallTestCase.  
 Repaired PumpUpdateLiteralsTestCase.  Now working as expected.
 * **2015-09-16** Begin examples/locations. Location enumeration supports unicode.  order_by no longer required in 
-make_get_query.
+make_get_query. Remove uri print from do_get.

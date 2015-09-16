@@ -281,7 +281,6 @@ class Pump(object):
         outfile.write('\n')
 
         for uri in sorted(data.keys()):  # replace with generator described above to support row order
-            print uri
             for name in columns:
                 if name in data[uri]:
 

@@ -1,10 +1,10 @@
 uri	name	types	within	lat	long
 http://aims.fao.org/aos/geopolitical.owl#Afghanistan	Afghanistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Africa	Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Africa	Africa	loc;group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Albania	Albania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Algeria	Algeria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#American_Samoa	American Samoa	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Americas	Americas	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Americas	Americas	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Andorra	Andorra	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Angola	Angola	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Anguilla	Anguilla	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -13,9 +13,9 @@ http://aims.fao.org/aos/geopolitical.owl#Antigua_and_Barbuda	Antigua and Barbuda
 http://aims.fao.org/aos/geopolitical.owl#Argentina	Argentina	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Armenia	Armenia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Aruba	Aruba	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Asia	Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Asia	Asia	loc;group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Australia	Australia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand	Australia and New Zealand	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand	Australia and New Zealand	loc;group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Austria	Austria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Azerbaijan	Azerbaijan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Bahamas_the	Bahamas	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -42,7 +42,7 @@ http://aims.fao.org/aos/geopolitical.owl#Cambodia	Cambodia	loc;territory;area;co
 http://aims.fao.org/aos/geopolitical.owl#Cameroon	Cameroon	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Canada	Canada	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Cape_Verde	Cape Verde	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Caribbean	Caribbean	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Caribbean	Caribbean	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Cayman_Islands	Cayman Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Central_African_Republic_the	Central African Republic	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Chad	Chad	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -75,7 +75,7 @@ http://aims.fao.org/aos/geopolitical.owl#Eritrea	Eritrea	loc;territory;area;coun
 http://aims.fao.org/aos/geopolitical.owl#Estonia	Estonia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Ethiopia	Ethiopia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Ethiopia_1993	Ethiopia_1993	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Europe	Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Europe	Europe	loc;group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Falkland_Is	Falkland Islands	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Faroe_Islands	Faroe Islands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Federal_Republic_of_Germany_the	Germany, Federal Republic of	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -138,9 +138,9 @@ http://aims.fao.org/aos/geopolitical.owl#Marshall_Islands__the	Marshall Islands	
 http://aims.fao.org/aos/geopolitical.owl#Martinique	Martinique	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Mauritania	Mauritania	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Mauritius	Mauritius	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Melanesia	Melanesia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Melanesia	Melanesia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Mexico	Mexico	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Micronesia	Micronesia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Micronesia	Micronesia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Micronesia__Fed_States_of_	Micronesia (Federated States of)	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Monaco	Monaco	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Mongolia	Mongolia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -161,7 +161,7 @@ http://aims.fao.org/aos/geopolitical.owl#Niger_the	Niger	loc;territory;area;coun
 http://aims.fao.org/aos/geopolitical.owl#Nigeria	Nigeria	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Niue	Niue	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Norway	Norway	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Oceania	Oceania	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Oceania	Oceania	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Oman	Oman	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Pakistan	Pakistan	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Palau	Palau	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -171,7 +171,7 @@ http://aims.fao.org/aos/geopolitical.owl#Paraguay	Paraguay	loc;territory;area;co
 http://aims.fao.org/aos/geopolitical.owl#Peru	Peru	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Philippines__the	Philippines	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Poland	Poland	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#Polynesia	Polynesia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#Polynesia	Polynesia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Portugal	Portugal	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico	Puerto Rico	loc;territory;area;region;nonself;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Qatar	Qatar	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -205,7 +205,7 @@ http://aims.fao.org/aos/geopolitical.owl#Socialist_Federal_Republic_of_Yugoslavi
 http://aims.fao.org/aos/geopolitical.owl#Solomon_Islands	Solomon Islands	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Somalia	Somalia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#South_Africa	South Africa	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#South_America	South America	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#South_America	South America	loc;group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#South_Sudan	South Sudan 	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Spain	Spain	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Sri_Lanka	Sri Lanka	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
@@ -249,22 +249,22 @@ http://aims.fao.org/aos/geopolitical.owl#Yugoslavia	Yugoslavia	loc;territory;are
 http://aims.fao.org/aos/geopolitical.owl#Zaire	Zaire	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Zambia	Zambia	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
 http://aims.fao.org/aos/geopolitical.owl#Zimbabwe	Zimbabwe	loc;territory;area;country;region;self;thing;geopol;bfo141;bfo1;bfo2;geo;bfo4;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#central_America	central America	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#central_Asia	Central Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#eastern_Africa	eastern Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#eastern_Asia	eastern Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#eastern_Europe	eastern Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#middle_Africa	middle Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#northern_Africa	northern Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#northern_America	North America	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#northern_Europe	northern Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia	south-eastern Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#southern_Africa	southern Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#southern_Asia	southern Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#southern_Europe	southern Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#western_Africa	western Africa	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#western_Asia	western Asia	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
-http://aims.fao.org/aos/geopolitical.owl#western_Europe	western Europe	loc;http://aims.fao.org/aos/geopolitical.owl#group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#central_America	central America	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#central_Asia	Central Asia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#eastern_Africa	eastern Africa	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#eastern_Asia	eastern Asia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#eastern_Europe	eastern Europe	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#middle_Africa	middle Africa	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#northern_Africa	northern Africa	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#northern_America	North America	loc;group;area;region;continent;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#northern_Europe	northern Europe	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia	south-eastern Asia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#southern_Africa	southern Africa	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#southern_Asia	southern Asia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#southern_Europe	southern Europe	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#western_Africa	western Africa	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#western_Asia	western Asia	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
+http://aims.fao.org/aos/geopolitical.owl#western_Europe	western Europe	loc;group;area;region;thing;bfo141;bfo1;bfo2;geo;bfo4;georegion;bfo6			
 http://dbpedia.org/resource/Alabama	Alabama	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
 http://dbpedia.org/resource/Alaska	Alaska	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		
 http://dbpedia.org/resource/Arizona	Arizona	loc;region;geopol;thing;state;bfo141;bfo1;bfo2;geo;bfo4;bfo6	United States of America		

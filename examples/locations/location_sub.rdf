@@ -1,55 +1,55 @@
+<http://aims.fao.org/aos/geopolitical.owl#western_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#southern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
 <http://aims.fao.org/aos/geopolitical.owl#northern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://vivo.school.edu/individual/5902255886> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
-<http://aims.fao.org/aos/geopolitical.owl#northern_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://vivo.school.edu/individual/5428781084> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
-<http://aims.fao.org/aos/geopolitical.owl#Reunion> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00E9union"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1658862358> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
+<http://vivo.school.edu/individual/7365934392> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#southern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
 <http://vivo.school.edu/individual/1419851875> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#Polynesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#South_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://vivo.school.edu/individual/8924972642> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
+<http://aims.fao.org/aos/geopolitical.owl#middle_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire> <http://www.w3.org/2000/01/rdf-schema#label> "C\u00F4te d'Ivoire"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://aims.fao.org/aos/geopolitical.owl#central_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Americas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Barthelemy> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Barth\u00E9lemy   "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/4153480226> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
 <http://vivo.school.edu/individual/6714739681> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
 <http://aims.fao.org/aos/geopolitical.owl#Micronesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://vivo.school.edu/individual/4153480226> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
-<http://vivo.school.edu/individual/6405436230> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
-<http://aims.fao.org/aos/geopolitical.owl#Oceania> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire> <http://www.w3.org/2000/01/rdf-schema#label> "C\u00F4te d'Ivoire"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://aims.fao.org/aos/geopolitical.owl#northern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#South_Sudan> <http://www.w3.org/2000/01/rdf-schema#label> "South Sudan "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://vivo.school.edu/individual/1624419176> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
-<http://vivo.school.edu/individual/7365934392> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#Melanesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#western_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
 <http://aims.fao.org/aos/geopolitical.owl#Antarctica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#other> .
-<http://aims.fao.org/aos/geopolitical.owl#South_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#eastern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://vivo.school.edu/individual/338334941> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
-<http://aims.fao.org/aos/geopolitical.owl#Caribbean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Saint_Barthelemy> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Barth\u00E9lemy   "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://vivo.school.edu/individual/8924972642> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
-<http://aims.fao.org/aos/geopolitical.owl#western_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#southern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Sint_Maarten> <http://www.w3.org/2000/01/rdf-schema#label> "Sint Maarten (Dutch Part)  "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://aims.fao.org/aos/geopolitical.owl#eastern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#middle_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#southern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://vivo.school.edu/individual/1658862358> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
 <http://vivo.school.edu/individual/2760389568> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
-<http://vivo.school.edu/individual/6830353835> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
-<http://vivo.school.edu/individual/7810323785> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Saint-Martin> <http://www.w3.org/2000/01/rdf-schema#label> "Saint-Martin (French Part)   "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://aims.fao.org/aos/geopolitical.owl#southern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#eastern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://vivo.school.edu/individual/6266739982> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#Bonaire_Sint_Eustatius_and_Saba> <http://www.w3.org/2000/01/rdf-schema#label> "Bonaire, Sint Eustatius and Saba  "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://aims.fao.org/aos/geopolitical.owl#Saint_Helena> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Helena, Ascension and Tristan da Cunha "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://aims.fao.org/aos/geopolitical.owl#central_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#western_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Americas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#Curacao> <http://www.w3.org/2000/01/rdf-schema#label> "Cura\u00E7ao "^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://aims.fao.org/aos/geopolitical.owl#Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#eastern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Melanesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
 <http://vivo.school.edu/individual/5713889962> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
+<http://vivo.school.edu/individual/6830353835> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
+<http://aims.fao.org/aos/geopolitical.owl#Reunion> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00E9union"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://aims.fao.org/aos/geopolitical.owl#Bonaire_Sint_Eustatius_and_Saba> <http://www.w3.org/2000/01/rdf-schema#label> "Bonaire, Sint Eustatius and Saba  "^^<http://www.w3.org/2001/XMLSchema#string> .
 <http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
-<http://aims.fao.org/aos/geopolitical.owl#central_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Helena> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Helena, Ascension and Tristan da Cunha "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://aims.fao.org/aos/geopolitical.owl#southern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Caribbean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#South_Sudan> <http://www.w3.org/2000/01/rdf-schema#label> "South Sudan "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://aims.fao.org/aos/geopolitical.owl#Polynesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#northern_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://vivo.school.edu/individual/338334941> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
+<http://aims.fao.org/aos/geopolitical.owl#Sint_Maarten> <http://www.w3.org/2000/01/rdf-schema#label> "Sint Maarten (Dutch Part)  "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/5428781084> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
+<http://vivo.school.edu/individual/5902255886> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/n3049> .
+<http://aims.fao.org/aos/geopolitical.owl#central_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Saint-Martin> <http://www.w3.org/2000/01/rdf-schema#label> "Saint-Martin (French Part)   "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/6266739982> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#Oceania> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://vivo.school.edu/individual/6405436230> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
+<http://aims.fao.org/aos/geopolitical.owl#western_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#northern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://vivo.school.edu/individual/7810323785> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#eastern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#eastern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
+<http://aims.fao.org/aos/geopolitical.owl#Curacao> <http://www.w3.org/2000/01/rdf-schema#label> "Cura\u00E7ao "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/1624419176> <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Washington> .
+<http://aims.fao.org/aos/geopolitical.owl#western_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://aims.fao.org/aos/geopolitical.owl#group> .
 
 
