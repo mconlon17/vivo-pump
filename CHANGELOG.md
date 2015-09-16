@@ -311,4 +311,4 @@ WriteCSVTestCase.  Repaired VIVOQueryTestCase. Repair PumpRemoveTestCase.  Repai
 VIVOGetTypesTestCase.  Repaired VIVOGetUFIDTestCase.  Repaired VIVOGetAuthorsTestCase.  
 Repaired VIVOGetSponsorsTestCase. Repaired PumpTestCase. Repaired PumpUpdateCallTestCase.  
 Repaired PumpUpdateLiteralsTestCase.  Now working as expected.
-* **2015-09-16** Begin examples/locations
+* **2015-09-16** Begin examples/locations. Location enmeration supports unicode

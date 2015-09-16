@@ -1,4 +1,4 @@
-short	vivo
+short	ivo
 Afghanistan	http://aims.fao.org/aos/geopolitical.owl#Afghanistan
 Africa	http://aims.fao.org/aos/geopolitical.owl#Africa
 Alabama	http://dbpedia.org/resource/Alabama
@@ -148,3 +148,466 @@ Costa Mesa	http://vivo.school.edu/individual/7800254727
 Costa Rica	http://aims.fao.org/aos/geopolitical.owl#Costa_Rica
 Croatia	http://aims.fao.org/aos/geopolitical.owl#Croatia
 Cuba	http://aims.fao.org/aos/geopolitical.owl#Cuba
+Cura&#231;ao 	http://aims.fao.org/aos/geopolitical.owl#Curacao
+Cyprus	http://aims.fao.org/aos/geopolitical.owl#Cyprus
+Czech Republic	http://aims.fao.org/aos/geopolitical.owl#Czech_Republic_the
+Czechoslovakia	http://aims.fao.org/aos/geopolitical.owl#Czechoslovakia
+C&#244;te d'Ivoire	http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire
+Delaware	http://dbpedia.org/resource/Delaware
+Denmark	http://aims.fao.org/aos/geopolitical.owl#Denmark
+Denver	http://vivo.school.edu/individual/8518709076
+Des Moines	http://vivo.school.edu/individual/6353042059
+Ecuador	http://aims.fao.org/aos/geopolitical.owl#Ecuador
+Egypt	http://aims.fao.org/aos/geopolitical.owl#Egypt
+El Paso	http://vivo.school.edu/individual/450575309
+Eritrea	http://aims.fao.org/aos/geopolitical.owl#Eritrea
+Escondido	http://vivo.school.edu/individual/1377748965
+Estonia	http://aims.fao.org/aos/geopolitical.owl#Estonia
+Eugene	http://vivo.school.edu/individual/6913161015
+Fairfield	http://vivo.school.edu/individual/8590086864
+Faroe Islands	http://aims.fao.org/aos/geopolitical.owl#Faroe_Islands
+Fayetteville	http://vivo.school.edu/individual/6123345692
+Fontana	http://vivo.school.edu/individual/9072154236
+Fort Lauderdale	http://vivo.school.edu/individual/8106803247
+French Guiana	http://aims.fao.org/aos/geopolitical.owl#French_Guiana
+French Polynesia	http://aims.fao.org/aos/geopolitical.owl#French_Polynesia
+Frisco	http://vivo.school.edu/individual/171064840
+Garland	http://vivo.school.edu/individual/9513169610
+Georgia	http://aims.fao.org/aos/geopolitical.owl#Georgia
+German Democratic Republic	http://aims.fao.org/aos/geopolitical.owl#German_Democratic_Republic_the
+Germany	http://aims.fao.org/aos/geopolitical.owl#Germany
+Gibraltar	http://aims.fao.org/aos/geopolitical.owl#Gibraltar
+Gilbert	http://vivo.school.edu/individual/4222004017
+Grand Prairie	http://vivo.school.edu/individual/3870066966
+Greece	http://aims.fao.org/aos/geopolitical.owl#Greece
+Guinea	http://aims.fao.org/aos/geopolitical.owl#Guinea
+Haiti	http://aims.fao.org/aos/geopolitical.owl#Haiti
+High Point	http://vivo.school.edu/individual/1529203483
+Honduras	http://aims.fao.org/aos/geopolitical.owl#Honduras
+Jamaica	http://aims.fao.org/aos/geopolitical.owl#Jamaica
+Kentucky	http://dbpedia.org/resource/Kentucky
+Lansing	http://vivo.school.edu/individual/6938434915
+Latvia	http://aims.fao.org/aos/geopolitical.owl#Latvia
+Luxembourg	http://aims.fao.org/aos/geopolitical.owl#Luxembourg
+Marshall Islands	http://aims.fao.org/aos/geopolitical.owl#Marshall_Islands__the
+Michigan	http://dbpedia.org/resource/Michigan
+Minnesota	http://dbpedia.org/resource/Minnesota
+Mississipi	http://dbpedia.org/resource/Mississipi
+Missouri	http://dbpedia.org/resource/Missouri
+Nauru	http://aims.fao.org/aos/geopolitical.owl#Nauru
+Nebraska	http://dbpedia.org/resource/Nebraska
+New York	http://dbpedia.org/resource/New_York
+North Carolina	http://dbpedia.org/resource/North_Carolina
+Oregon	http://dbpedia.org/resource/Oregon
+Pennsylvania	http://dbpedia.org/resource/Pennsylvania
+Cambridge	http://vivo.school.edu/individual/7627977678
+Charleston	http://vivo.school.edu/individual/4073507608
+Chattanooga	http://vivo.school.edu/individual/4592547501
+Concord	http://vivo.school.edu/individual/9302937772
+Dallas	http://vivo.school.edu/individual/8027621986
+Daly City	http://vivo.school.edu/individual/6870847597
+Davenport	http://vivo.school.edu/individual/2140252468
+Dayton	http://vivo.school.edu/individual/1534940746
+Denton	http://vivo.school.edu/individual/7107886370
+Detroit	http://vivo.school.edu/individual/8260432512
+District of Columbia	http://vivo.school.edu/individual/n4010
+Durham	http://vivo.school.edu/individual/2462439372
+El Cajon	http://vivo.school.edu/individual/7142824756
+El Monte	http://vivo.school.edu/individual/9047599152
+El Salvador	http://aims.fao.org/aos/geopolitical.owl#El_Salvador
+Elgin	http://vivo.school.edu/individual/6853948038
+Elizabeth	http://vivo.school.edu/individual/882723854
+Elk Grove	http://vivo.school.edu/individual/3910290067
+Equatorial Guinea	http://aims.fao.org/aos/geopolitical.owl#Equatorial_Guinea
+Erie	http://vivo.school.edu/individual/9839673415
+Ethiopia	http://aims.fao.org/aos/geopolitical.owl#Ethiopia
+Ethiopia_1993	http://aims.fao.org/aos/geopolitical.owl#Ethiopia_1993
+Europe	http://aims.fao.org/aos/geopolitical.owl#Europe
+Evansville	http://vivo.school.edu/individual/8147349378
+Everett	http://vivo.school.edu/individual/5428781084
+Falkland Islands	http://aims.fao.org/aos/geopolitical.owl#Falkland_Is
+Fargo	http://vivo.school.edu/individual/3873462505
+Fiji	http://aims.fao.org/aos/geopolitical.owl#Fiji
+Finland	http://aims.fao.org/aos/geopolitical.owl#Finland
+Flint	http://vivo.school.edu/individual/7085131434
+Fort Collins	http://vivo.school.edu/individual/7152404285
+Fort Wayne	http://vivo.school.edu/individual/8921153514
+Fort Worth	http://vivo.school.edu/individual/1077270824
+France	http://aims.fao.org/aos/geopolitical.owl#France
+Fremont	http://vivo.school.edu/individual/6618437541
+Fresno	http://vivo.school.edu/individual/9778001401
+Fullerton	http://vivo.school.edu/individual/4296890488
+Gabon	http://aims.fao.org/aos/geopolitical.owl#Gabon
+Gainesville	http://vivo.school.edu/individual/4734165530
+Gambia	http://aims.fao.org/aos/geopolitical.owl#Gambia__the
+Garden Grove	http://vivo.school.edu/individual/6404085520
+Germany, Federal Republic of	http://aims.fao.org/aos/geopolitical.owl#Federal_Republic_of_Germany_the
+Ghana	http://aims.fao.org/aos/geopolitical.owl#Ghana
+Glendale	http://vivo.school.edu/individual/4177773942
+Glendale	http://vivo.school.edu/individual/5857135166
+Grand Rapids	http://vivo.school.edu/individual/5680456181
+Green Bay	http://vivo.school.edu/individual/8793560056
+Greensboro	http://vivo.school.edu/individual/6449593919
+Grenada	http://aims.fao.org/aos/geopolitical.owl#Grenada
+Gresham	http://vivo.school.edu/individual/7613805277
+Guadeloupe	http://aims.fao.org/aos/geopolitical.owl#Guadeloupe
+Guam	http://aims.fao.org/aos/geopolitical.owl#Guam
+Guatemala	http://aims.fao.org/aos/geopolitical.owl#Guatemala
+Guinea-Bissau	http://aims.fao.org/aos/geopolitical.owl#Guinea-Bissau
+Hampton	http://vivo.school.edu/individual/9503015221
+Hartford	http://vivo.school.edu/individual/4283168819
+Hayward	http://vivo.school.edu/individual/472859945
+Henderson	http://vivo.school.edu/individual/1835282518
+Hialeah	http://vivo.school.edu/individual/172390843
+Hollywood	http://vivo.school.edu/individual/5687847290
+Holy See	http://aims.fao.org/aos/geopolitical.owl#Holy_See
+Honolulu	http://vivo.school.edu/individual/8231812540
+Houston	http://vivo.school.edu/individual/8475681653
+Hungary	http://aims.fao.org/aos/geopolitical.owl#Hungary
+Huntington Beach	http://vivo.school.edu/individual/8336877639
+Huntsville	http://vivo.school.edu/individual/3905958668
+Iceland	http://aims.fao.org/aos/geopolitical.owl#Iceland
+Independence	http://vivo.school.edu/individual/1964478700
+India	http://aims.fao.org/aos/geopolitical.owl#India
+Indonesia	http://aims.fao.org/aos/geopolitical.owl#Indonesia
+Nevada	http://dbpedia.org/resource/Nevada
+Indianapolis	http://vivo.school.edu/individual/2258084070
+Inglewood	http://vivo.school.edu/individual/4135667386
+Iran (Islamic Republic of)	http://aims.fao.org/aos/geopolitical.owl#Iran_Islamic_Rep_of_
+Iraq	http://aims.fao.org/aos/geopolitical.owl#Iraq
+Ireland	http://aims.fao.org/aos/geopolitical.owl#Ireland
+Irvine	http://vivo.school.edu/individual/7923775295
+Irving	http://vivo.school.edu/individual/5764914094
+Israel	http://aims.fao.org/aos/geopolitical.owl#Israel
+Jackson	http://vivo.school.edu/individual/4160294944
+Jacksonville	http://vivo.school.edu/individual/7918171471
+Japan	http://aims.fao.org/aos/geopolitical.owl#Japan
+Jersey City	http://vivo.school.edu/individual/9102467840
+Jordan	http://aims.fao.org/aos/geopolitical.owl#Jordan
+Kazakhstan	http://aims.fao.org/aos/geopolitical.owl#Kazakhstan
+Kenya	http://aims.fao.org/aos/geopolitical.owl#Kenya
+Kiribati	http://aims.fao.org/aos/geopolitical.owl#Kiribati
+Kyrgyzstan	http://aims.fao.org/aos/geopolitical.owl#Kyrgyzstan
+New Jersey	http://dbpedia.org/resource/New_Jersey
+North Dakota	http://dbpedia.org/resource/North_Dakota
+Poland	http://aims.fao.org/aos/geopolitical.owl#Poland
+South Dakota	http://dbpedia.org/resource/South_Dakota
+Joliet	http://vivo.school.edu/individual/2361138336
+Kansas City	http://vivo.school.edu/individual/7254700532
+Kansas City	http://vivo.school.edu/individual/9179097327
+Kenosha	http://vivo.school.edu/individual/7840764573
+Kent	http://vivo.school.edu/individual/4153480226
+Killeen	http://vivo.school.edu/individual/6694491148
+Knoxville	http://vivo.school.edu/individual/4303640831
+Kuwait	http://aims.fao.org/aos/geopolitical.owl#Kuwait
+Lafayette	http://vivo.school.edu/individual/8852076090
+Lakewood	http://vivo.school.edu/individual/6773350532
+Lancaster	http://vivo.school.edu/individual/644947315
+Lao People's Democratic Republic	http://aims.fao.org/aos/geopolitical.owl#Lao_People_s_Democratic_Republic__the
+Laredo	http://vivo.school.edu/individual/508049657
+Las Cruces	http://vivo.school.edu/individual/6884133140
+Las Vegas	http://vivo.school.edu/individual/9444564416
+Lebanon	http://aims.fao.org/aos/geopolitical.owl#Lebanon
+Lesotho	http://aims.fao.org/aos/geopolitical.owl#Lesotho
+Lexington	http://vivo.school.edu/individual/9043442580
+Liberia	http://aims.fao.org/aos/geopolitical.owl#Liberia
+Libyan Arab Jamahiriya	http://aims.fao.org/aos/geopolitical.owl#Libyan_Arab_Jamahiriya__the
+Liechtenstein	http://aims.fao.org/aos/geopolitical.owl#Liechtenstein
+Lincoln	http://vivo.school.edu/individual/2868665341
+Lithuania	http://aims.fao.org/aos/geopolitical.owl#Lithuania
+Louisville	http://vivo.school.edu/individual/8297455126
+Lubbock	http://vivo.school.edu/individual/9405660604
+Madagascar	http://aims.fao.org/aos/geopolitical.owl#Madagascar
+Malawi	http://aims.fao.org/aos/geopolitical.owl#Malawi
+Malaysia	http://aims.fao.org/aos/geopolitical.owl#Malaysia
+Maldives	http://aims.fao.org/aos/geopolitical.owl#Maldives
+Mauritania	http://aims.fao.org/aos/geopolitical.owl#Mauritania
+Mozambique	http://aims.fao.org/aos/geopolitical.owl#Mozambique
+Netherlands Antilles	http://aims.fao.org/aos/geopolitical.owl#Netherlands_Antilles
+Niger	http://aims.fao.org/aos/geopolitical.owl#Niger_the
+Rhode Island	http://dbpedia.org/resource/Rhode_Island
+Manchester	http://vivo.school.edu/individual/7550290235
+Martinique	http://aims.fao.org/aos/geopolitical.owl#Martinique
+Mauritius	http://aims.fao.org/aos/geopolitical.owl#Mauritius
+McKinney	http://vivo.school.edu/individual/929146692
+Memphis	http://vivo.school.edu/individual/593339900
+Mesa	http://vivo.school.edu/individual/738404213
+Mesquite	http://vivo.school.edu/individual/5274350332
+Miami	http://vivo.school.edu/individual/4787288958
+Micronesia (Federated States of)	http://aims.fao.org/aos/geopolitical.owl#Micronesia__Fed_States_of_
+Modesto	http://vivo.school.edu/individual/8919594816
+Montenegro	http://aims.fao.org/aos/geopolitical.owl#Montenegro
+Montgomery	http://vivo.school.edu/individual/6163777630
+Murfreesboro	http://vivo.school.edu/individual/5955454492
+Myanmar	http://aims.fao.org/aos/geopolitical.owl#Myanmar
+Nepal	http://aims.fao.org/aos/geopolitical.owl#Nepal
+Nicaragua	http://aims.fao.org/aos/geopolitical.owl#Nicaragua
+Ohio	http://dbpedia.org/resource/Ohio
+Tennessee	http://dbpedia.org/resource/Tennessee
+West Virginia	http://dbpedia.org/resource/West_Virginia
+McAllen	http://vivo.school.edu/individual/5253810657
+Miami Gardens	http://vivo.school.edu/individual/3044957346
+Midland	http://vivo.school.edu/individual/8487273941
+Minneapolis	http://vivo.school.edu/individual/6096370558
+Morocco	http://aims.fao.org/aos/geopolitical.owl#Morocco
+Norman	http://vivo.school.edu/individual/4550618268
+North Charleston	http://vivo.school.edu/individual/6553781081
+North Korea	http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the
+North Las Vegas	http://vivo.school.edu/individual/2655826980
+Oakland	http://vivo.school.edu/individual/3712188294
+Odessa	http://vivo.school.edu/individual/4163402642
+Oklahoma City	http://vivo.school.edu/individual/387668109
+Omaha	http://vivo.school.edu/individual/7267773784
+Ontario	http://vivo.school.edu/individual/3499957221
+Orange	http://vivo.school.edu/individual/8506497381
+Pakistan	http://aims.fao.org/aos/geopolitical.owl#Pakistan
+Palau	http://aims.fao.org/aos/geopolitical.owl#Palau
+Palm Bay	http://vivo.school.edu/individual/9371224991
+Pembroke Pines	http://vivo.school.edu/individual/4750427675
+Peoria	http://vivo.school.edu/individual/9928239922
+Peru	http://aims.fao.org/aos/geopolitical.owl#Peru
+Phoenix	http://vivo.school.edu/individual/3872903623
+Polynesia	http://aims.fao.org/aos/geopolitical.owl#Polynesia
+Port St. Lucie	http://vivo.school.edu/individual/3541762862
+Portland	http://vivo.school.edu/individual/4489880380
+Pueblo	http://vivo.school.edu/individual/6714525847
+Puerto Rico	http://vivo.school.edu/individual/n3049
+Raleigh	http://vivo.school.edu/individual/9242879801
+Rancho Cucamonga	http://vivo.school.edu/individual/7398285496
+Richardson	http://vivo.school.edu/individual/4984841773
+Richmond	http://vivo.school.edu/individual/1013029227
+Riverside	http://vivo.school.edu/individual/1124625818
+Rockford	http://vivo.school.edu/individual/9775100379
+Romania	http://aims.fao.org/aos/geopolitical.owl#Romania
+Round Rock	http://vivo.school.edu/individual/5375648494
+Russian Federation	http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the
+Saint Pierre and Miquelon	http://aims.fao.org/aos/geopolitical.owl#Saint_Pierre_and_Miquelon
+Saint Vincent and the Grenadines	http://aims.fao.org/aos/geopolitical.owl#Saint_Vincent_and_the_Grenadines
+Salinas	http://vivo.school.edu/individual/4952079886
+San Antonio	http://vivo.school.edu/individual/9600480740
+San Bernardino	http://vivo.school.edu/individual/1703531238
+San Diego	http://vivo.school.edu/individual/704310919
+San Jose	http://vivo.school.edu/individual/5272548969
+Santa Ana	http://vivo.school.edu/individual/5889321596
+Santa Clara	http://vivo.school.edu/individual/3163697429
+Santa Clarita	http://vivo.school.edu/individual/8021020699
+Scottsdale	http://vivo.school.edu/individual/5159539011
+Senegal	http://aims.fao.org/aos/geopolitical.owl#Senegal
+Serbia	http://aims.fao.org/aos/geopolitical.owl#Serbia
+Serbia and Montenegro	http://aims.fao.org/aos/geopolitical.owl#Serbia_and_Montenegro
+Seychelles	http://aims.fao.org/aos/geopolitical.owl#Seychelles
+Sierra Leone	http://aims.fao.org/aos/geopolitical.owl#Sierra_Leone
+Sioux Falls	http://vivo.school.edu/individual/7743680729
+Solomon Islands	http://aims.fao.org/aos/geopolitical.owl#Solomon_Islands
+Somalia	http://aims.fao.org/aos/geopolitical.owl#Somalia
+South Africa	http://aims.fao.org/aos/geopolitical.owl#South_Africa
+South America	http://aims.fao.org/aos/geopolitical.owl#South_America
+South Carolina	http://dbpedia.org/resource/South_Carolina
+South Korea	http://aims.fao.org/aos/geopolitical.owl#Republic_of_Korea__the
+Spain	http://aims.fao.org/aos/geopolitical.owl#Spain
+Sri Lanka	http://aims.fao.org/aos/geopolitical.owl#Sri_Lanka
+Stamford	http://vivo.school.edu/individual/3528600136
+Sterling Heights	http://vivo.school.edu/individual/3677198307
+Swaziland	http://aims.fao.org/aos/geopolitical.owl#Swaziland
+Sweden	http://aims.fao.org/aos/geopolitical.owl#Sweden
+Switzerland	http://aims.fao.org/aos/geopolitical.owl#Switzerland
+Trinidad and Tobago	http://aims.fao.org/aos/geopolitical.owl#Trinidad_and_Tobago
+Uganda	http://aims.fao.org/aos/geopolitical.owl#Uganda
+Utah	http://dbpedia.org/resource/Utah
+Vermont	http://dbpedia.org/resource/Vermont
+Wisconsin	http://dbpedia.org/resource/Wisconsin
+Wyoming	http://dbpedia.org/resource/Wyoming
+Little Rock	http://vivo.school.edu/individual/6936941280
+Long Beach	http://vivo.school.edu/individual/2904574350
+Los Angeles	http://vivo.school.edu/individual/8107100152
+Lowell	http://vivo.school.edu/individual/7861665760
+Madison	http://vivo.school.edu/individual/2669041271
+Mali	http://aims.fao.org/aos/geopolitical.owl#Mali
+Malta	http://aims.fao.org/aos/geopolitical.owl#Malta
+Melanesia	http://aims.fao.org/aos/geopolitical.owl#Melanesia
+Mexico	http://aims.fao.org/aos/geopolitical.owl#Mexico
+Micronesia	http://aims.fao.org/aos/geopolitical.owl#Micronesia
+Milwaukee	http://vivo.school.edu/individual/7629731005
+Mobile	http://vivo.school.edu/individual/1775577766
+Monaco	http://aims.fao.org/aos/geopolitical.owl#Monaco
+Mongolia	http://aims.fao.org/aos/geopolitical.owl#Mongolia
+Montserrat	http://aims.fao.org/aos/geopolitical.owl#Montserrat
+Murrieta	http://vivo.school.edu/individual/6427320807
+Namibia	http://aims.fao.org/aos/geopolitical.owl#Namibia
+Nashville	http://vivo.school.edu/individual/5647956171
+Netherlands	http://aims.fao.org/aos/geopolitical.owl#Netherlands_the
+New Caledonia	http://aims.fao.org/aos/geopolitical.owl#New_Caledonia
+New Mexico	http://dbpedia.org/resource/New_Mexico
+New Haven	http://vivo.school.edu/individual/6255011088
+New Orleans	http://vivo.school.edu/individual/4186168396
+New Zealand	http://aims.fao.org/aos/geopolitical.owl#New_Zealand
+Newport News	http://vivo.school.edu/individual/3897858313
+Nigeria	http://aims.fao.org/aos/geopolitical.owl#Nigeria
+Niue	http://aims.fao.org/aos/geopolitical.owl#Niue
+North America	http://aims.fao.org/aos/geopolitical.owl#northern_America
+Norwalk	http://vivo.school.edu/individual/9556860686
+Norway	http://aims.fao.org/aos/geopolitical.owl#Norway
+Oceania	http://aims.fao.org/aos/geopolitical.owl#Oceania
+Oklahoma	http://dbpedia.org/resource/Oklahoma
+Miramar	http://vivo.school.edu/individual/3672875471
+Moreno Valley	http://vivo.school.edu/individual/7205458836
+Naperville	http://vivo.school.edu/individual/6906092738
+New York City	http://vivo.school.edu/individual/4167443820
+Newark	http://vivo.school.edu/individual/2224171361
+Norfolk	http://vivo.school.edu/individual/1220574291
+Oceanside	http://vivo.school.edu/individual/6921190470
+Olathe	http://vivo.school.edu/individual/1035662568
+Oman	http://aims.fao.org/aos/geopolitical.owl#Oman
+Orlando	http://vivo.school.edu/individual/922222435
+Overland Park	http://vivo.school.edu/individual/6795769335
+Oxnard	http://vivo.school.edu/individual/1458414250
+Palmdale	http://vivo.school.edu/individual/999003926
+Panama	http://aims.fao.org/aos/geopolitical.owl#Panama
+Papua New Guinea	http://aims.fao.org/aos/geopolitical.owl#Papua_New_Guinea
+Paraguay	http://aims.fao.org/aos/geopolitical.owl#Paraguay
+Pasadena	http://vivo.school.edu/individual/1042241611
+Pasadena	http://vivo.school.edu/individual/8236137100
+Paterson	http://vivo.school.edu/individual/7993722006
+Peoria	http://vivo.school.edu/individual/4164078460
+Philadelphia	http://vivo.school.edu/individual/8748079363
+Philippines	http://aims.fao.org/aos/geopolitical.owl#Philippines__the
+Pittsburgh	http://vivo.school.edu/individual/3568944010
+Plano	http://vivo.school.edu/individual/7563637725
+Pomona	http://vivo.school.edu/individual/80207877
+Pompano Beach	http://vivo.school.edu/individual/4649920832
+Ponce	http://vivo.school.edu/individual/6830353835
+Portugal	http://aims.fao.org/aos/geopolitical.owl#Portugal
+Providence	http://vivo.school.edu/individual/5232330778
+Provo	http://vivo.school.edu/individual/9606509895
+Puerto Rico	http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico
+Qatar	http://aims.fao.org/aos/geopolitical.owl#Qatar
+Reno	http://vivo.school.edu/individual/9858409333
+Republic of Moldova	http://aims.fao.org/aos/geopolitical.owl#Republic_of_Moldova
+Rialto	http://vivo.school.edu/individual/241167267
+Richmond	http://vivo.school.edu/individual/7688025908
+Rochester	http://vivo.school.edu/individual/2936129424
+Rochester	http://vivo.school.edu/individual/5945550118
+Roseville	http://vivo.school.edu/individual/5723846574
+Rwanda	http://aims.fao.org/aos/geopolitical.owl#Rwanda
+R&#233;union	http://aims.fao.org/aos/geopolitical.owl#Reunion
+Sacramento	http://vivo.school.edu/individual/865226043
+Saint Barth&#233;lemy   	http://aims.fao.org/aos/geopolitical.owl#Saint_Barthelemy
+Saint Helena, Ascension and Tristan da Cunha 	http://aims.fao.org/aos/geopolitical.owl#Saint_Helena
+Saint Kitts and Nevis	http://aims.fao.org/aos/geopolitical.owl#Saint_Kitts_and_Nevis
+Saint Lucia	http://aims.fao.org/aos/geopolitical.owl#Saint_Lucia
+Saint Paul	http://vivo.school.edu/individual/8535820454
+Saint-Martin (French Part)   	http://aims.fao.org/aos/geopolitical.owl#Saint-Martin
+Salem	http://vivo.school.edu/individual/6554894585
+Salt Lake City	http://vivo.school.edu/individual/654527671
+Samoa	http://aims.fao.org/aos/geopolitical.owl#Samoa
+San Buenaventura	http://vivo.school.edu/individual/780681030
+San Francisco	http://vivo.school.edu/individual/3854357846
+San Juan	http://vivo.school.edu/individual/8924972642
+San Marino	http://aims.fao.org/aos/geopolitical.owl#San_Marino
+Santa Maria	http://vivo.school.edu/individual/7869611376
+Santa Rosa	http://vivo.school.edu/individual/3639784891
+Sao Tome and Principe	http://aims.fao.org/aos/geopolitical.owl#Sao_Tome_and_Principe
+Saudi Arabia	http://aims.fao.org/aos/geopolitical.owl#Saudi_Arabia
+Savannah	http://vivo.school.edu/individual/6266739982
+Seattle	http://vivo.school.edu/individual/1624419176
+Shreveport	http://vivo.school.edu/individual/1331233848
+Simi Valley	http://vivo.school.edu/individual/6657762574
+Singapore	http://aims.fao.org/aos/geopolitical.owl#Singapore
+Sint Maarten (Dutch Part)  	http://aims.fao.org/aos/geopolitical.owl#Sint_Maarten
+Slovakia	http://aims.fao.org/aos/geopolitical.owl#Slovakia
+Slovenia	http://aims.fao.org/aos/geopolitical.owl#Slovenia
+South Bend	http://vivo.school.edu/individual/4698870108
+South Sudan 	http://aims.fao.org/aos/geopolitical.owl#South_Sudan
+Spokane	http://vivo.school.edu/individual/338334941
+Springfield	http://vivo.school.edu/individual/6335089157
+Springfield	http://vivo.school.edu/individual/6371645077
+Springfield	http://vivo.school.edu/individual/643647618
+St. Louis	http://vivo.school.edu/individual/845825196
+St. Petersburg	http://vivo.school.edu/individual/8608284894
+Stockton	http://vivo.school.edu/individual/5078358566
+Sudan	http://aims.fao.org/aos/geopolitical.owl#Sudan_the
+Sudan	http://aims.fao.org/aos/geopolitical.owl#Sudan_the_1956
+Sunnyvale	http://vivo.school.edu/individual/3499934445
+Suriname	http://aims.fao.org/aos/geopolitical.owl#Suriname
+Surprise	http://vivo.school.edu/individual/8676656591
+Syracuse	http://vivo.school.edu/individual/854813789
+Syrian Arab Republic	http://aims.fao.org/aos/geopolitical.owl#Syrian_Arab_Republic_the
+Tacoma	http://vivo.school.edu/individual/5713889962
+Tajikistan	http://aims.fao.org/aos/geopolitical.owl#Tajikistan
+Tallahassee	http://vivo.school.edu/individual/5525784336
+Tampa	http://vivo.school.edu/individual/8885090846
+Temecula	http://vivo.school.edu/individual/6144923887
+Tempe	http://vivo.school.edu/individual/1651872505
+Thailand	http://aims.fao.org/aos/geopolitical.owl#Thailand
+Thornton	http://vivo.school.edu/individual/586904767
+Thousand Oaks	http://vivo.school.edu/individual/3202254249
+Timor-Leste	http://aims.fao.org/aos/geopolitical.owl#Timor-Leste
+Togo	http://aims.fao.org/aos/geopolitical.owl#Togo
+Tokelau	http://aims.fao.org/aos/geopolitical.owl#Tokelau
+Toledo	http://vivo.school.edu/individual/2373895596
+Tonga	http://aims.fao.org/aos/geopolitical.owl#Tonga
+Topeka	http://vivo.school.edu/individual/9356737409
+Torrance	http://vivo.school.edu/individual/9130080321
+Tucson	http://vivo.school.edu/individual/3764814631
+Tulsa	http://vivo.school.edu/individual/6738384873
+Tunisia	http://aims.fao.org/aos/geopolitical.owl#Tunisia
+Turkey	http://aims.fao.org/aos/geopolitical.owl#Turkey
+Turkmenistan	http://aims.fao.org/aos/geopolitical.owl#Turkmenistan
+Turks and Caicos Islands	http://aims.fao.org/aos/geopolitical.owl#Turks_and_Caicos_Islands
+Tuvalu	http://aims.fao.org/aos/geopolitical.owl#Tuvalu
+Ukraine	http://aims.fao.org/aos/geopolitical.owl#Ukraine
+Union of Soviet Socialist Republic	http://aims.fao.org/aos/geopolitical.owl#Union_of_Soviet_Socialist_Republic_the
+United Arab Emirates	http://aims.fao.org/aos/geopolitical.owl#United_Arab_Emirates__the
+United Kingdom	http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the
+United Republic of Tanzania	http://aims.fao.org/aos/geopolitical.owl#United_Republic_of_Tanzania__the
+United States Virgin Islands	http://aims.fao.org/aos/geopolitical.owl#United_States_Virgin_Islands
+United States of America	http://aims.fao.org/aos/geopolitical.owl#United_States_of_America
+Uruguay	http://aims.fao.org/aos/geopolitical.owl#Uruguay
+Uzbekistan	http://aims.fao.org/aos/geopolitical.owl#Uzbekistan
+Vallejo	http://vivo.school.edu/individual/4902804673
+Vancouver	http://vivo.school.edu/individual/6405436230
+Vanuatu	http://aims.fao.org/aos/geopolitical.owl#Vanuatu
+Venezuela (Bolivarian Republic of)	http://aims.fao.org/aos/geopolitical.owl#Venezuela
+Victorville	http://vivo.school.edu/individual/4073046212
+Viet Nam	http://aims.fao.org/aos/geopolitical.owl#Viet_Nam
+Virginia Beach	http://vivo.school.edu/individual/6521877824
+Visalia	http://vivo.school.edu/individual/9602725850
+Waco	http://vivo.school.edu/individual/2701933249
+Wallis and Futuna Islands	http://aims.fao.org/aos/geopolitical.owl#Wallis_and_Futuna_Is
+Warren	http://vivo.school.edu/individual/2609197154
+Washington	http://vivo.school.edu/individual/1432115235
+Waterbury	http://vivo.school.edu/individual/2973458699
+West Covina	http://vivo.school.edu/individual/8478479872
+West Jordan	http://vivo.school.edu/individual/1418499808
+West Palm Beach	http://vivo.school.edu/individual/2825087831
+West Valley City	http://vivo.school.edu/individual/3233536063
+Westminster	http://vivo.school.edu/individual/4512225208
+Wichita	http://vivo.school.edu/individual/3663757509
+Wichita Falls	http://vivo.school.edu/individual/4352456192
+Wilmington	http://vivo.school.edu/individual/7813068462
+WinstonSalem	http://vivo.school.edu/individual/7076617131
+Worcester	http://vivo.school.edu/individual/5884071434
+Yemen	http://aims.fao.org/aos/geopolitical.owl#Yemen
+Yemen, Democratic	http://aims.fao.org/aos/geopolitical.owl#Democratic_Yemen
+Yemen_1990	http://aims.fao.org/aos/geopolitical.owl#Yemen_1990
+Yonkers	http://vivo.school.edu/individual/1913954549
+Yugoslav, former Yugoslav Republic of Macedonia	http://aims.fao.org/aos/geopolitical.owl#The_former_Yugoslav_Republic_of_Macedonia
+Yugoslavia	http://aims.fao.org/aos/geopolitical.owl#Yugoslavia
+Yugoslavia, Socialist Federal Republic of	http://aims.fao.org/aos/geopolitical.owl#Socialist_Federal_Republic_of_Yugoslavia_the
+Zaire	http://aims.fao.org/aos/geopolitical.owl#Zaire
+Zambia	http://aims.fao.org/aos/geopolitical.owl#Zambia
+Zimbabwe	http://aims.fao.org/aos/geopolitical.owl#Zimbabwe
+central America	http://aims.fao.org/aos/geopolitical.owl#central_America
+eastern Africa	http://aims.fao.org/aos/geopolitical.owl#eastern_Africa
+eastern Asia	http://aims.fao.org/aos/geopolitical.owl#eastern_Asia
+eastern Europe	http://aims.fao.org/aos/geopolitical.owl#eastern_Europe
+middle Africa	http://aims.fao.org/aos/geopolitical.owl#middle_Africa
+northern Africa	http://aims.fao.org/aos/geopolitical.owl#northern_Africa
+northern Europe	http://aims.fao.org/aos/geopolitical.owl#northern_Europe
+south-eastern Asia	http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia
+southern Africa	http://aims.fao.org/aos/geopolitical.owl#southern_Africa
+southern Asia	http://aims.fao.org/aos/geopolitical.owl#southern_Asia
+southern Europe	http://aims.fao.org/aos/geopolitical.owl#southern_Europe
+western Africa	http://aims.fao.org/aos/geopolitical.owl#western_Africa
+western Asia	http://aims.fao.org/aos/geopolitical.owl#western_Asia
+western Europe	http://aims.fao.org/aos/geopolitical.owl#western_Europe
