@@ -1,0 +1,72 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a vivo:GeographicLocation .",
+        "type": "http://vivoweb.org/ontology/core#GeographicLocation"
+    }, 
+    "column_defs": {
+        "name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "literal": true,
+                    "lang": "en-US"
+                }
+            }
+        ],
+        "types": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                    "include": [
+                        "loc"
+                    ]
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "location_types.txt"
+                }
+            }
+        ],
+        "within": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.obolibrary.org/obo/BFO_0000050"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "location_enum.txt"
+                }
+            }
+        ],
+        "lat": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+                }, 
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:decimal"
+                }
+            }
+        ],
+        "long": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:decimal"
+                }
+            }
+        ]
+    }
+}

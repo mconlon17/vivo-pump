@@ -1,9 +1,18 @@
+# Managing Locations using Simple VIVO
+
+VIVO can store information about locations such as cities, buildings, and campuses.  One Simple VIVO definition can
+be used to manage all your locations, or you may choose to use source files specific to different kinds of locations -- 
+one for cities, one for buildings, one for campuses.
+
+
+
+
 # Add US Cities to VIVO
 
-Add cities in the United States with population over 100,000 in 2012 to VIVO.  List came from Wikipedia,updated with
+Add cities in the United States with population over 100,000 in 2015 to VIVO.  List came from Wikipedia,updated with
 cities over 100,000 in Puerto Rico.
 
-Each city has a name, a state, altitude and longitude.
+Each city has a name, a state, latitude and longitude.
 
 Look up the state in VIVO through an enum.  If not found, throw an error -- all the states need to be in VIVO.  VIVO
 is missing District of Columbia and Puerto Rico.  These need to be added by hand before the cities can be added.
@@ -16,7 +25,9 @@ There's nothing US specific about this code.  The data file contains US cities. 
 to add cities of interest in provinces or states of interest.
 
 The def file assumes that the wgs ontology has been loaded into
-your VIVO.  See [World Geodetic System](https://en.wikipedia.org/wiki/World_Geodetic_System) in Wikipedia and [Basic Geo Vocabulary](http://www.w3.org/2003/01/geo/) and the  [RDF file](http://www.w3.org/2003/01/geo/wgs84_pos#)
+your VIVO.  See [World Geodetic System](https://en.wikipedia.org/wiki/World_Geodetic_System) in Wikipedia 
+and [Basic Geo Vocabulary](http://www.w3.org/2003/01/geo/) and 
+the  [RDF file](http://www.w3.org/2003/01/geo/wgs84_pos#)
 
 # How to use
 

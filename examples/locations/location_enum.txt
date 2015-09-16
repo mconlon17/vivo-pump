@@ -1,0 +1,150 @@
+short	vivo
+Afghanistan	http://aims.fao.org/aos/geopolitical.owl#Afghanistan
+Africa	http://aims.fao.org/aos/geopolitical.owl#Africa
+Alabama	http://dbpedia.org/resource/Alabama
+Alaska	http://dbpedia.org/resource/Alaska
+Albania	http://aims.fao.org/aos/geopolitical.owl#Albania
+Algeria	http://aims.fao.org/aos/geopolitical.owl#Algeria
+Americas	http://aims.fao.org/aos/geopolitical.owl#Americas
+Washington	http://dbpedia.org/resource/Washington
+Akron	http://vivo.school.edu/individual/7629961697
+Amarillo	http://vivo.school.edu/individual/5888947905
+American Samoa	http://aims.fao.org/aos/geopolitical.owl#American_Samoa
+Anaheim	http://vivo.school.edu/individual/7892981412
+Anchorage	http://vivo.school.edu/individual/8653838639
+Andorra	http://aims.fao.org/aos/geopolitical.owl#Andorra
+Angola	http://aims.fao.org/aos/geopolitical.owl#Angola
+Anguilla	http://aims.fao.org/aos/geopolitical.owl#Anguilla
+Antarctica	http://aims.fao.org/aos/geopolitical.owl#Antarctica
+Antigua and Barbuda	http://aims.fao.org/aos/geopolitical.owl#Antigua_and_Barbuda
+Archer	http://vivo.school.edu/individual/n7756
+Argentina	http://aims.fao.org/aos/geopolitical.owl#Argentina
+Arizona	http://dbpedia.org/resource/Arizona
+Arkansas	http://dbpedia.org/resource/Arkansas
+Arlington	http://vivo.school.edu/individual/5995255670
+Armenia	http://aims.fao.org/aos/geopolitical.owl#Armenia
+Aruba	http://aims.fao.org/aos/geopolitical.owl#Aruba
+Arvada	http://vivo.school.edu/individual/9208743817
+Atlanta	http://vivo.school.edu/individual/7810323785
+Augusta	http://vivo.school.edu/individual/7365934392
+Aurora	http://vivo.school.edu/individual/8215360901
+Austin	http://vivo.school.edu/individual/6828094823
+Australia	http://aims.fao.org/aos/geopolitical.owl#Australia
+Australia and New Zealand	http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand
+Austria	http://aims.fao.org/aos/geopolitical.owl#Austria
+Azerbaijan	http://aims.fao.org/aos/geopolitical.owl#Azerbaijan
+Bahamas	http://aims.fao.org/aos/geopolitical.owl#Bahamas_the
+Bahrain	http://aims.fao.org/aos/geopolitical.owl#Bahrain
+Barbados	http://aims.fao.org/aos/geopolitical.owl#Barbados
+Belarus	http://aims.fao.org/aos/geopolitical.owl#Belarus
+Belize	http://aims.fao.org/aos/geopolitical.owl#Belize
+Benin	http://aims.fao.org/aos/geopolitical.owl#Benin
+Iowa	http://dbpedia.org/resource/Iowa
+Berkeley	http://vivo.school.edu/individual/7617641894
+Bermuda	http://aims.fao.org/aos/geopolitical.owl#Bermuda
+Bhutan	http://aims.fao.org/aos/geopolitical.owl#Bhutan
+Bonaire, Sint Eustatius and Saba  	http://aims.fao.org/aos/geopolitical.owl#Bonaire_Sint_Eustatius_and_Saba
+Bosnia and Herzegovina	http://aims.fao.org/aos/geopolitical.owl#Bosnia_and_Herzegovina
+Boston	http://vivo.school.edu/individual/1340606941
+Botswana	http://aims.fao.org/aos/geopolitical.owl#Botswana
+Bridgeport	http://vivo.school.edu/individual/3200099588
+British Virgin Islands	http://aims.fao.org/aos/geopolitical.owl#British_Virgin_Islands
+Brunei Darussalam	http://aims.fao.org/aos/geopolitical.owl#Brunei_Darussalam
+Bulgaria	http://aims.fao.org/aos/geopolitical.owl#Bulgaria
+Burundi	http://aims.fao.org/aos/geopolitical.owl#Burundi
+California	http://dbpedia.org/resource/California
+Cambodia	http://aims.fao.org/aos/geopolitical.owl#Cambodia
+Cape Coral	http://vivo.school.edu/individual/7274629214
+Cape Verde	http://aims.fao.org/aos/geopolitical.owl#Cape_Verde
+Caribbean	http://aims.fao.org/aos/geopolitical.owl#Caribbean
+Carrollton	http://vivo.school.edu/individual/3096552200
+Cayman Islands	http://aims.fao.org/aos/geopolitical.owl#Cayman_Islands
+Chad	http://aims.fao.org/aos/geopolitical.owl#Chad
+Charlotte	http://vivo.school.edu/individual/3289835508
+Chile	http://aims.fao.org/aos/geopolitical.owl#Chile
+Colorado	http://dbpedia.org/resource/Colorado
+Connecticut	http://dbpedia.org/resource/Connecticut
+Democratic Republic of the Congo	http://aims.fao.org/aos/geopolitical.owl#Democratic_Republic_of_the_Congo
+Djibouti	http://aims.fao.org/aos/geopolitical.owl#Djibouti
+Dominica	http://aims.fao.org/aos/geopolitical.owl#Dominica
+Dominican Republic	http://aims.fao.org/aos/geopolitical.owl#Dominican_Republic_the
+Florida	http://dbpedia.org/resource/Florida
+Georgia	http://dbpedia.org/resource/Georgia
+Hawaii	http://dbpedia.org/resource/Hawaii
+Downey	http://vivo.school.edu/individual/3404850411
+Guyana	http://aims.fao.org/aos/geopolitical.owl#Guyana
+Idaho	http://dbpedia.org/resource/Idaho
+Illinois	http://dbpedia.org/resource/Illinois
+Indiana	http://dbpedia.org/resource/Indiana
+Italy	http://aims.fao.org/aos/geopolitical.owl#Italy
+Kansas	http://dbpedia.org/resource/Kansas
+Louisiana	http://dbpedia.org/resource/Louisiana
+Maine	http://dbpedia.org/resource/Maine
+Maryland	http://dbpedia.org/resource/Maryland
+Massachusetts	http://dbpedia.org/resource/Massachusetts
+Montana	http://dbpedia.org/resource/Montana
+New Hampshire	http://dbpedia.org/resource/New_Hampshire
+Texas	http://dbpedia.org/resource/Texas
+Virginia	http://dbpedia.org/resource/Virginia
+Abilene	http://vivo.school.edu/individual/9956638905
+Albuquerque	http://vivo.school.edu/individual/7291062693
+Alexandria	http://vivo.school.edu/individual/1761294392
+Allentown	http://vivo.school.edu/individual/6682538766
+Ann Arbor	http://vivo.school.edu/individual/3248325876
+Antioch	http://vivo.school.edu/individual/2836854420
+Asia	http://aims.fao.org/aos/geopolitical.owl#Asia
+Athens	http://vivo.school.edu/individual/1419851875
+Aurora	http://vivo.school.edu/individual/8077191645
+Bakersfield	http://vivo.school.edu/individual/8890278093
+Baltimore	http://vivo.school.edu/individual/361430505
+Bangladesh	http://aims.fao.org/aos/geopolitical.owl#Bangladesh
+Baton Rouge	http://vivo.school.edu/individual/4966043613
+Bayamon	http://vivo.school.edu/individual/5902255886
+Beaumont	http://vivo.school.edu/individual/7260068062
+Belgium	http://aims.fao.org/aos/geopolitical.owl#Belgium
+Bellevue	http://vivo.school.edu/individual/1658862358
+Billings	http://vivo.school.edu/individual/8772730651
+Birmingham	http://vivo.school.edu/individual/1303942692
+Boise	http://vivo.school.edu/individual/7469847082
+Bolivia (Plurinational State of)	http://aims.fao.org/aos/geopolitical.owl#Bolivia
+Boulder	http://vivo.school.edu/individual/1991521874
+Brazil	http://aims.fao.org/aos/geopolitical.owl#Brazil
+Broken Arrow	http://vivo.school.edu/individual/626093166
+Brownsville	http://vivo.school.edu/individual/5437832045
+Buffalo	http://vivo.school.edu/individual/4785761433
+Burbank	http://vivo.school.edu/individual/1084060438
+Burkina Faso	http://aims.fao.org/aos/geopolitical.owl#Burkina_Faso
+Cameroon	http://aims.fao.org/aos/geopolitical.owl#Cameroon
+Canada	http://aims.fao.org/aos/geopolitical.owl#Canada
+Carlsbad	http://vivo.school.edu/individual/5919689033
+Carolina	http://vivo.school.edu/individual/2760389568
+Cary	http://vivo.school.edu/individual/3528041944
+Cedar Rapids	http://vivo.school.edu/individual/8206319535
+Centennial	http://vivo.school.edu/individual/42570644
+Central African Republic	http://aims.fao.org/aos/geopolitical.owl#Central_African_Republic_the
+Central Asia	http://aims.fao.org/aos/geopolitical.owl#central_Asia
+Chandler	http://vivo.school.edu/individual/4814069853
+Chesapeake	http://vivo.school.edu/individual/9370174496
+Chicago	http://vivo.school.edu/individual/6743743748
+China	http://aims.fao.org/aos/geopolitical.owl#China
+Chula Vista	http://vivo.school.edu/individual/8749196183
+Cincinnati	http://vivo.school.edu/individual/2501780635
+Clarksville	http://vivo.school.edu/individual/508013004
+Clearwater	http://vivo.school.edu/individual/3005705945
+Cleveland	http://vivo.school.edu/individual/4596648121
+Colombia	http://aims.fao.org/aos/geopolitical.owl#Colombia
+Colorado Springs	http://vivo.school.edu/individual/4602310604
+Columbia	http://vivo.school.edu/individual/3338883434
+Columbia	http://vivo.school.edu/individual/7826434039
+Columbus	http://vivo.school.edu/individual/6714739681
+Columbus	http://vivo.school.edu/individual/7725670475
+Comoros	http://aims.fao.org/aos/geopolitical.owl#Comoros_the
+Congo	http://aims.fao.org/aos/geopolitical.owl#Congo_the
+Cook Islands	http://aims.fao.org/aos/geopolitical.owl#Cook_Islands_the
+Coral Springs	http://vivo.school.edu/individual/3996845428
+Corona	http://vivo.school.edu/individual/1502558251
+Corpus Christi	http://vivo.school.edu/individual/45862700
+Costa Mesa	http://vivo.school.edu/individual/7800254727
+Costa Rica	http://aims.fao.org/aos/geopolitical.owl#Costa_Rica
+Croatia	http://aims.fao.org/aos/geopolitical.owl#Croatia
+Cuba	http://aims.fao.org/aos/geopolitical.owl#Cuba
