@@ -1478,8 +1478,10 @@ def make_get_query(update_def):
                     middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
                 else:
                     raise PathLengthException('Path length >3 not supported in do_get')
-
-    back_query = '}\nORDER BY ?' + update_def['entity_def']['order_by']
+    if 'order_by' in update_def['entity_def']:
+        back_query = '}\nORDER BY ?' + update_def['entity_def']['order_by']
+    else:
+        back_query = '}\n'
     return front_query + middle_query + back_query
 
 
