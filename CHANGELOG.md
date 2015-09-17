@@ -313,3 +313,4 @@ Repaired VIVOGetSponsorsTestCase. Repaired PumpTestCase. Repaired PumpUpdateCall
 Repaired PumpUpdateLiteralsTestCase.  Now working as expected.
 * **2015-09-16** Begin examples/locations. Location enumeration supports unicode.  order_by no longer required in 
 make_get_query. Remove uri print from do_get. Update examples/locations buildings and cities examples.
+* **2015-09-17** Add examples/concepts.

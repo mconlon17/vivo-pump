@@ -1,0 +1,45 @@
+{
+    "entity_def": {
+        "order_by": "label",
+        "entity_sparql": "?uri a skos:Concept .",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept"
+    }, 
+    "column_defs": {
+        "label": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "literal": true,
+                    "lang": "en-US"
+                }
+            }
+        ],
+        "narrower": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2004/02/skos/core#narrower"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "concept_enum.txt"
+                }
+            }
+        ],
+        "broader": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://www.w3.org/2004/02/skos/core#broader"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "concept_enum.txt"
+                }
+            }
+        ]
+    }
+}
