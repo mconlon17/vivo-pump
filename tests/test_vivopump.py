@@ -782,7 +782,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  Literal("JWRU", datatype=XSD.string)) in sub)
 
     def test_unique_two_add_fullpath(self):
-        from rdflib import URIRef, Literal
+        from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
         p = Pump("data/org_def.json", verbose=True)
@@ -794,61 +794,67 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n2525', u'zip': u'32653'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 4 and len(sub) == 0 and (None,
-                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
-                                                 Literal("32653")) in add)
+            len(add) == 5 and len(sub) == 0 and (None,
+                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
+                                                 Literal("32653", datatype=XSD.string)) in add)
 
     def test_unique_two_add_to_existing(self):
-        from rdflib import URIRef, Literal
+        from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
-        # Add a zip code to the provost's office at UF.  An address already exists, the zip needs to be
+        # Add a zip code to an address already exists, the zip needs to be
         # added to the existing address
 
-        p = Pump("data/org_def.json")
+        p = Pump("data/org_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n3535', u'zip': u'32653'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n3535"),
-                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
-                                                 Literal("32653")) in add)
+            len(add) == 1 and len(sub) == 0 and (None,
+                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
+                                                 Literal("32653", datatype=XSD.string)) in add)
 
     def test_unique_two_change(self):
         from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
 
         # Change the zip code on an existing address
 
-        p = Pump("data/org_def.json")
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n87597', u'zip': u'32653'}}
+        p = Pump("data/org_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n4545', u'zip': u'32653'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n994294"),
-                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
-                                                 Literal("32653")) in add and
-                                                (URIRef("http://vivo.ufl.edu/individual/n994294"),
-                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
-                                                 Literal("32611", datatype=XSD.string)) in sub)
+            len(add) == 1 and len(sub) == 1 and (None,
+                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
+                                                 Literal("32653", datatype=XSD.string)) in add and
+                                                (None,
+                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
+                                                 Literal("32604", datatype=XSD.string)) in sub)
 
     def test_unique_two_delete(self):
         from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
 
         # Delete the zip code on an existing address
 
-        p = Pump("data/org_def.json")
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n87597', u'zip': u'None'}}
+        p = Pump("data/org_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n4545', u'zip': u'None'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n994294"),
-                                                 URIRef("http://vivoweb.org/ontology/core#addressPostalCode"),
-                                                 Literal("32611", datatype=XSD.string)) in sub)
+            len(add) == 0 and len(sub) == 1 and (None,
+                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
+                                                 Literal("32604", datatype=XSD.string)) in sub)
 
     def test_unique_two_delete_not_found(self):
+        from testgraph import TestGraph
 
         # Delete the zip code from an existing address that doesn't have a zip code.
 
-        p = Pump("data/org_def.json")
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n765319', u'zip': u'None'}}
+        p = Pump("data/org_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n3535', u'zip': u'None'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 

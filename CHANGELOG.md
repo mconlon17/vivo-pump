@@ -315,3 +315,4 @@ Repaired PumpUpdateLiteralsTestCase.  Now working as expected.
 make_get_query. Remove uri print from do_get. Update examples/locations buildings and cities examples.
 * **2015-09-17** Add examples/concepts.
 * **2015-09-18** Move create_enum to vivopump.py.  Update make_enum in examples.  Test case added for create_enum.
+Length two tests rewritten for 1.6 and TestGraph.

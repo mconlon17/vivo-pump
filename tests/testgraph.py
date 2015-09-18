@@ -64,7 +64,7 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.ufl.edu/individual/n2525'), RDFS.label,
                   Literal("Advertising")))
 
-        # org with address
+        # org with address, no zip code
 
         self.add((URIRef('http://vivo.ufl.edu/individual/n3535'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Organization')))
@@ -94,6 +94,40 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.ufl.edu/individual/n801'),
                   URIRef('http://www.w3.org/2006/vcard/ns#streetAddress'),
                   Literal("3600 Mowry Road; Mail stop 6", datatype=XSD.string)))
+
+        # org with complete address
+
+        self.add((URIRef('http://vivo.ufl.edu/individual/n4545'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Organization')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n4545'), RDF.type,
+                  URIRef('http://vivo.vivoweb.org/ontology/core#AcademicDepartment')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n4545'), RDFS.label,
+                  Literal("Pediatrics")))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n4545'),
+                  URIRef('http://purl.obolibrary.org/obo/ARG_2000028'),
+                  URIRef('http://vivo.ufl.edu/individual/n90')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n90'), RDF.type,  # a vcard
+                  URIRef('http://www.w3.org/2006/vcard/ns#Kind')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n90'),
+                  URIRef('http://www.w3.org/2006/vcard/ns#hasAddress'),
+                  URIRef('http://vivo.ufl.edu/individual/n901')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n901'), RDF.type,  # an address
+                  URIRef('http://www.w3.org/2006/vcard/ns#Address')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n901'),
+                  URIRef('http://www.w3.org/2006/vcard/ns#country'),
+                  Literal("US", datatype=XSD.string)))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n901'),
+                  URIRef('http://www.w3.org/2006/vcard/ns#locality'),
+                  Literal("Gainesville", datatype=XSD.string)))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n901'),
+                  URIRef('http://www.w3.org/2006/vcard/ns#region'),
+                  Literal("FL", datatype=XSD.string)))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n901'),
+                  URIRef('http://www.w3.org/2006/vcard/ns#streetAddress'),
+                  Literal("3600 Mowry Road; Mail stop 4", datatype=XSD.string)))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n901'),
+                  URIRef('http://www.w3.org/2006/vcard/ns#postalCode'),
+                  Literal("32604", datatype=XSD.string)))
 
     def __str__(self):
         return self.serialize(format="nt")
