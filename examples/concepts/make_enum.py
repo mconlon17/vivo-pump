@@ -20,7 +20,7 @@ def main():
     print datetime.now(), "Start"
     parms = get_parms()
 
-    #   person
+    #   Concept
 
     query = """
     SELECT (MIN (?xlabel) AS ?short) ?vivo

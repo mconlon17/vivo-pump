@@ -1,3 +1,4 @@
 short	vivo
-University of Florida	http://vivo.school.edu/individual/n8013
+Bucknell University	http://vivo.school.edu/individual/n715
 Harvard University	http://vivo.school.edu/individual/n7130
+University of Florida	http://vivo.school.edu/individual/n8013

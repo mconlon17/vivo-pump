@@ -24,5 +24,8 @@ The python program `make_enum.py` can be used to update four of these enumeratio
     python make_enum.py
 
 The field of study enumeration is managed by hand -- if you have fields of study that you would like to be able to 
-represent in VIVO, edit the field_enum.txt file with a text editor and add a row for each such field of study.
+represent in VIVO, edit the field_enum.txt file with a text editor and add a row for each such field of study.  Notice
+that the two columns in `field_enum.txt` are identical, separated by a tab.  This is intentional and provides a 
+"controlled vocabulary" for a text field such as field of study.  Your source file must contain fields of study
+found in the enumeration.
 
