@@ -1024,5 +1024,38 @@ class PumpEnumTestCase(unittest.TestCase):
         self.assertTrue(summary.find('people_types') > -1)
 
 
+class CreateEnumTestCase(unittest.TestCase):
+    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+                   'username': 'vivo_root@school.edu',
+                   'password': 'v;bisons',
+                   'uriprefix': 'http://vivo.school.edu/individual/n',
+                   'prefix':
+'''
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
+PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+'''
+                   }
+
+    def test_normal_case(self):
+        from vivopump import create_enum
+        import os
+        filename = "data/__test_create_enum.txt"
+        query = "select ?short ?vivo where {?vivo a foaf:Person . ?vivo rdfs:label ?short .} ORDER BY ?short"
+        create_enum(filename, query, CreateEnumTestCase.query_parms)
+        self.assertTrue(os.path.isfile(filename))
+        os.remove(filename)
+
+
 if __name__ == "__main__":
     unittest.main()
