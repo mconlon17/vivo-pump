@@ -7,31 +7,10 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
-__version__ = "0.1"
+__version__ = "0.1.2"
 
 from datetime import datetime
-from vivopump import get_parms, vivo_query
-import codecs
-
-
-def create_enum(filename, query, parms, trim=0):
-    """
-    Given, query, parms and a filename, execute the query and write the enum into the file
-    :param: filename: name of the file to contain the enumeration
-    :param: query: the query to be used to create the columns for the enumeration
-    :param: parms: dictionary of VIVO SPARQL API parameters
-    :param: trim:  If 0, no trim.  If k, return the first k characters as a trimmed value for short
-    :return: None
-    """
-    data = vivo_query(query, parms)
-    outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
-    outfile.write("short\tvivo\n")
-    for item in data['results']['bindings']:
-        if trim == 0:
-            outfile.write(item["short"]["value"] + "\t" + item["vivo"]["value"] + "\n")
-        else:
-            outfile.write(item["short"]["value"][0:trim] + "\t" + item["vivo"]["value"] + "\n")
-    outfile.close()
+from vivopump import get_parms, create_enum
 
 
 def main():

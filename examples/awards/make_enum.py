@@ -7,29 +7,10 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from datetime import datetime
-from vivopump import get_parms, vivo_query
-
-
-def create_enum(filename, query, parms, trim=0):
-    """
-    Given, query, parms and a filename, execute the query and write the enum into the file
-    :param: filename:
-    :param: query:
-    :param: parms:
-    :param: trim:
-    :return: None
-    """
-    data = vivo_query(query, parms)
-    with open(filename, "w") as f:
-        print >>f, "short\tvivo"
-        for item in data['results']['bindings']:
-            if trim == 0:
-                print >>f, item["short"]["value"] + "\t" + item["vivo"]["value"]
-            else:
-                print >>f, item["short"]["value"][0:trim] + "\t" + item["vivo"]["value"]
+from vivopump import get_parms, create_enum
 
 
 def main():
