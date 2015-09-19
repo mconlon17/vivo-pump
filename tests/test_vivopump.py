@@ -979,17 +979,19 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
     def test_unique_three_delete(self):
         from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
 
         # WARNING: Delete start date value from existing datetime interval.  This may not be the desirable data
         # management action
 
         p = Pump("data/grant_def.json", verbose=True)
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n650082272', u'start_date': u'None'}}
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n125', u'start_date': u'None'}}
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 0 and len(sub) == 1 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
-                                                 Literal("2006-07-01T00:00:00", datatype=XSD.dateTime)) in sub)
+                                                 Literal("2010-04-01", datatype=XSD.dateTime)) in sub)
 
     def test_multiple_one_add(self):
         from rdflib import URIRef
