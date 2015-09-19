@@ -51,7 +51,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "data/ufid.txt"
+                    "enum": "data/orcid.txt"
                 }
             }
         ], 
@@ -135,7 +135,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "data/ufid.txt"
+                    "enum": "data/orcid.txt"
                 }
             }
         ], 
@@ -182,7 +182,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "enum": "data/ufid.txt"
+                    "enum": "data/orcid.txt"
                 }
             }
         ], 

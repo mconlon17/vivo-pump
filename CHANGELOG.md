@@ -319,4 +319,4 @@ Length two tests rewritten for 1.6 and TestGraph.
 * **2015-09-19** 0.6.8 order_by implemented in do_get. make_rdf_term_from_source added to vivopump. 
 MakeRdfTermFromSourceTestCase added with five cases.  prepare_columns refactored to return rdflib terms.  
 __do_the_update refactored to used rdflib terms.  Simplifies code, handles all rdflib term types and compares.  All
-test cases pass.
+test cases pass.  Removing VIVO date dependencies from PumpUpdateDataTestCases.  Two cases to improve.

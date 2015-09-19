@@ -129,5 +129,61 @@ class TestGraph(Graph):
                   URIRef('http://www.w3.org/2006/vcard/ns#postalCode'),
                   Literal("32604", datatype=XSD.string)))
 
+        # grant with no datetime interval
+
+        self.add((URIRef('http://vivo.ufl.edu/individual/n44'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#Grant')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n44'), RDFS.label,
+                  Literal("Field trial of CHX1234 v PPC45")))
+
+        #   grant with partial datetime interval (end, no start)
+
+        self.add((URIRef('http://vivo.ufl.edu/individual/n55'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#Grant')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n55'), RDFS.label,
+                  Literal("Influences on French Opera 1890-1893")))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n55'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTimeInterval'),
+                  URIRef('http://vivo.ufl.edu/individual/n123')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n123'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#DateTimeInterval')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n123'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#end'),
+                  URIRef('http://vivo.ufl.edu/individual/n124')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n124'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n124'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  Literal("2015-12-31", datatype=XSD.datetime)))
+
+        #   grant with full datetime interval
+
+        self.add((URIRef('http://vivo.ufl.edu/individual/n125'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#Grant')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n125'), RDFS.label,
+                  Literal("Influences on French Opera 1890-1893")))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n125'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTimeInterval'),
+                  URIRef('http://vivo.ufl.edu/individual/n126')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n126'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#DateTimeInterval')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n126'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#start'),
+                  URIRef('http://vivo.ufl.edu/individual/n127')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n127'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n127'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  Literal("2010-04-01", datatype=XSD.datetime)))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n126'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#end'),
+                  URIRef('http://vivo.ufl.edu/individual/n128')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n128'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
+        self.add((URIRef('http://vivo.ufl.edu/individual/n128'),
+                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  Literal("2014-03-31", datatype=XSD.datetime)))
+
+
     def __str__(self):
         return self.serialize(format="nt")

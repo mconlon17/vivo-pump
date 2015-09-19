@@ -1639,21 +1639,24 @@ def load_enum(update_def):
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
-    # import os
+    import sys
     enum = {}
     for path in update_def['column_defs'].values():
         for step in path:
             if 'object' in step and 'enum' in step['object']:
-                enum_filename = step['object']['enum']
-                enum_name = enum_filename
-                # enum_name = os.path.splitext(os.path.split(enum_filename)[1])[0]
+                enum_name = step['object']['enum']
                 if enum_name not in enum:
                     enum[enum_name] = {}
                     enum[enum_name]['get'] = {}
                     enum[enum_name]['update'] = {}
-                    enum_data = read_csv(enum_filename, delimiter='\t')
+                    enum_data = read_csv(enum_name, delimiter='\t')
                     for enum_datum in enum_data.values():
-                        enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
+                        try:
+                            enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
+                        except KeyError:
+                            print >>sys.stderr, "ERROR: Enumeration ", enum_name, \
+                                " does not have required columns named short and vivo"
+                            raise KeyError
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
     return enum
 
