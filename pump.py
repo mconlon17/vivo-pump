@@ -254,8 +254,9 @@ class Pump(object):
 
         :return:  Number of rows of data
         """
-        from vivopump import vivo_query, make_get_data, unique_path, make_get_query
+        from vivopump import vivo_query, make_get_data, unique_path, make_get_query, read_csv, write_csv
         import codecs
+        import sys
         from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
             improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
@@ -330,6 +331,23 @@ class Pump(object):
             outfile.write('\n')
 
         outfile.close()
+
+        # Rewrite the file based on the order_by or uri if none
+
+        sort_column_name = self.update_def['entity_def'].get('order_by', 'uri')
+        data = read_csv(self.out_filename, delimiter=self.inter)
+        sdata = {}
+        try:
+            order = sorted(data, key=lambda rown: data[rown][sort_column_name])
+        except KeyError:
+            print >>sys.stderr, "ERROR: ", sort_column_name, \
+                "in order_by not found.  No such column name. Sorting by uri."
+            order = sorted(data, key=lambda rown: data[rown]['uri'])
+        row = 1
+        for o in order:
+            sdata[row] = data[o]
+            row += 1
+        write_csv(self.out_filename, sdata, delimiter=self.inter)
 
         return len(data)
 
