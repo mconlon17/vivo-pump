@@ -39,41 +39,7 @@
                     "literal": true
                 }
             }
-        ], 
-        "photo": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
-                    "name": "photouri"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
-        "number": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/buildingNumber"
-                }, 
-                "object": {
-                    "literal": true,
-                    "datatype": "xsd:integer"
-                }
-            }
-        ], 
+        ],
         "name": [
             {
                 "predicate": {

@@ -690,6 +690,76 @@ class PumpUpdateCallTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#Building")) in add)
 
 
+class MakeRdfTermFromSourceTestCase(unittest.TestCase):
+    def test_empty(self):
+        from rdflib import Literal
+        from vivopump import make_rdf_term_from_source
+
+        step_def = {
+            "object": {
+                "literal": True,
+                "datatype": "xsd:string"
+            }
+        }
+        source_val = ''
+        rdf_term = make_rdf_term_from_source(source_val, step_def)
+        self.assertTrue(unicode(rdf_term) == unicode(Literal('')))
+
+    def test_empty_compare(self):
+        from rdflib import Literal
+        from vivopump import make_rdf_term_from_source
+
+        step_def = {
+            "object": {
+                "literal": True,
+                "datatype": "xsd:string"
+            }
+        }
+        source_val = ''
+        rdf_term = make_rdf_term_from_source(source_val, step_def)
+        self.assertTrue(rdf_term == Literal('', datatype="http://www.w3.org/2001/XMLSchema#string"))
+
+    def test_lang(self):
+        from rdflib import Literal
+        from vivopump import make_rdf_term_from_source
+
+        step_def = {
+            "object": {
+                "literal": True,
+                "lang": "fr"
+            }
+        }
+        source_val = 'a'
+        rdf_term = make_rdf_term_from_source(source_val, step_def)
+        self.assertTrue(rdf_term == Literal('a', lang="fr"))
+
+    def test_ref(self):
+        from rdflib import URIRef
+        from vivopump import make_rdf_term_from_source
+
+        step_def = {
+            "object": {
+                "literal": False
+            }
+        }
+        source_val = 'http://any'
+        rdf_term = make_rdf_term_from_source(source_val, step_def)
+        self.assertTrue(rdf_term == URIRef("http://any"))
+
+    def test_ref_string(self):
+        from rdflib import URIRef
+        from vivopump import make_rdf_term_from_source
+
+        step_def = {
+            "object": {
+                "literal": False
+            }
+        }
+        source_val = 'http://any'
+        rdf_term = make_rdf_term_from_source(source_val, step_def)
+        self.assertTrue(unicode(rdf_term) == unicode(URIRef("http://any")))
+
+
 class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
     def test_with_datatype(self):
@@ -700,7 +770,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
         p.original_graph = TestGraph()
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
                                                  URIRef("http://vivoweb.org/ontology/core#abbreviation"),
                                                  Literal("PH9", datatype=XSD.string)) in add)
 
@@ -747,10 +817,10 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         from testgraph import TestGraph
         p = Pump(verbose=True)
         p.original_graph = TestGraph()
-        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n1001011525', u'abbreviation': u'PH9'}}
+        p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n2525', u'abbreviation': u'PH9'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n1001011525"),
+            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.ufl.edu/individual/n2525"),
                                                  URIRef("http://vivoweb.org/ontology/core#abbreviation"),
                                                  Literal("PH9")) in add)
 

@@ -1526,14 +1526,35 @@ def make_get_data(update_def, result_set):
     return data
 
 
+def make_rdf_term_from_source(value, step):
+    """
+    Given a text string value and a step definition, return the rdflib term as defined by the step def
+    :param: value: string from source
+    :param: step: step definition from update_def
+    :return: rdf_term: an rdf_term from rdflib -- either Literal or URIRef
+    """
+    from rdflib import Literal, URIRef
+    if step["object"]["literal"]:
+        datatype = step["object"].get('datatype', None)
+        if datatype is not None and datatype[:4] == 'xsd:':
+            datatype = datatype.replace('xsd:', 'http://www.w3.org/2001/XMLSchema#')
+        rdf_term = Literal(value, datatype=datatype, lang=step["object"].get('lang', None))
+    else:
+        rdf_term = URIRef(value)
+    return rdf_term
+
+
 def prepare_column_values(update_string, intra, step_def, enum, row, column_name):
     """
     Given the string of data from the update file, the step definition, the row and column name of the
     update_string in the update file, enumerations and filters, prepare the column values and return them
-    as a list of strings
-    :return: column_values a list of strings
+    as a list of rdflib terms
+
+    :return: column_values a list of rdflib terms
     :rtype: list[str]
     """
+
+    # Split source data into list, add include values, strip white space
 
     if step_def['predicate']['single']:
         column_values = [update_string.strip()]
@@ -1543,7 +1564,6 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
             column_values += step_def['predicate']['include']
         for i in range(len(column_values)):
             column_values[i] = column_values[i].strip()
-
 
     # Check column values for consistency with single and multi-value attributes
 
@@ -1566,7 +1586,11 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
                 print "ERROR: ", column_values[i], "not found in enumeration.  Blank value substituted."
                 column_values[i] = ''
 
-    return column_values
+    # Convert to rdflib terms
+
+    column_terms = [make_rdf_term_from_source(column_value, step_def) for column_value in column_values]
+
+    return column_terms
 
 
 def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug):
