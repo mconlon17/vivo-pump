@@ -7,7 +7,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
-__version__ = "0.1.2"
+__version__ = "0.1.1"
 
 from datetime import datetime
 from vivopump import get_parms, create_enum
@@ -20,13 +20,13 @@ def main():
     print datetime.now(), "Start"
     parms = get_parms()
 
-    #   person
+    #   person via Orcid
 
     query = """
-    SELECT (MIN (?xlabel) AS ?short) ?vivo
+    SELECT (MIN (?xshort) AS ?short) ?vivo
     WHERE
     {
-          ?vivo vivo:orcid ?xlabel .
+          ?vivo vivo:orcidId ?xshort .
     }
     GROUP BY ?vivo
     ORDER BY ?short
@@ -34,7 +34,7 @@ def main():
 
     create_enum("orcid_enum.txt", query, parms)
 
-    #   department
+    #   department via label
 
     query = """
     SELECT (MIN (?xlabel) AS ?short) ?vivo
@@ -48,6 +48,21 @@ def main():
     """
 
     create_enum("dept_enum.txt", query, parms)
+
+    #   dates via datetime
+
+    query = """
+    SELECT ?short ?vivo
+    WHERE
+    {
+          ?vivo a vivo:DateTimeValue .
+#          ?vivo vivo:dateTimePrecision vivo:yearMonthDayPrecision .
+          ?vivo vivo:dateTime ?short .
+    }
+    ORDER BY ?short
+    """
+
+    create_enum("date_enum.txt", query, parms, trim=10)
 
     print datetime.now(), "End"
 

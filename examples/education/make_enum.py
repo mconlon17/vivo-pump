@@ -65,7 +65,7 @@ def main():
 
     create_enum("school_enum.txt", query, parms)
 
-    #   school
+    #   dates
 
     query = """
     SELECT ?short ?vivo
