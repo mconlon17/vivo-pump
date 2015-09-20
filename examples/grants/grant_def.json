@@ -1,0 +1,237 @@
+{
+    "entity_def": {
+        "type": "http://vivoweb.org/ontology/core#Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+        "department": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#administeredBy"
+                }, 
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum" : "dept_enum.txt"
+                }
+            }
+        ], 
+        "direct_costs": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#grantDirectCosts"
+                }, 
+                "object": {
+                    "filter": "improve_dollar_amount",
+                    "datatype": "xsd:decimal",
+                    "literal": true
+                }
+            }
+        ], 
+        "cois": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#relatedRole"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#Co-principalInvestigatorRole", 
+                    "name": "coirole"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#co-PrincipalInvestigatorRoleOf"
+                }, 
+                "object": {
+                    "literal": false,
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ], 
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "name": "award_period"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#end"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeValue", 
+                    "name": "end"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                }, 
+                "object": {
+                    "filter": "improve_date",
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ], 
+        "title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "filter": "improve_title",
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ], 
+        "sponsor_award_id": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#sponsorAwardId"
+                }, 
+                "object": {
+                    "filter": "improve_sponsor_award_id",
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ], 
+        "invs": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#relatedRole"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#InvestigatorRole", 
+                    "name": "invrole"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#investigatorRoleOf"
+                }, 
+                "object": {
+                    "literal": false,
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ], 
+        "sponsorid": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#grantAwardedBy"
+                }, 
+                "object": {
+                    "literal": false,
+                    "enum": "sponsor_enum.txt"
+                }
+            }
+        ], 
+        "award_id": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#localAwardId"
+                }, 
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ], 
+        "pis": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "http://vivoweb.org/ontology/core#relatedRole"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#PrincipalInvestigatorRole", 
+                    "name": "pirole"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#principalInvestigatorRoleOf"
+                }, 
+                "object": {
+                    "literal": false,
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ], 
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "name": "award_period"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#start"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "http://vivoweb.org/ontology/core#DateTimeValue", 
+                    "name": "start"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                }, 
+                "object": {
+                    "filter": "improve_date",
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ], 
+        "total_award": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://vivoweb.org/ontology/core#totalAwardAmount"
+                }, 
+                "object": {
+                    "filter": "improve_dollar_amount",
+                     "datatype": "xsd:decimal",
+                    "literal": true
+                }
+            }
+        ]
+    }
+}
