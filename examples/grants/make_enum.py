@@ -40,7 +40,8 @@ def main():
     SELECT (MIN (?xlabel) AS ?short) ?vivo
     WHERE
     {
-          ?vivo a vivo:Department .
+          {?vivo a vivo:Department . } UNION {?vivo a vivo:Institute . } UNION {?vivo a vivo:School . }
+          UNION {?vivo a vivo:Center .} UNION {?vivo a vivo:College . }
           ?vivo rdfs:label ?xlabel .
     }
     GROUP BY ?vivo
@@ -48,6 +49,36 @@ def main():
     """
 
     create_enum("dept_enum.txt", query, parms)
+
+    #   Funding Organizations via label
+
+    query = """
+    SELECT (MIN (?xlabel) AS ?short) ?vivo
+    WHERE
+    {
+          ?vivo a vivo:FundingOrganization .
+          ?vivo rdfs:label ?xlabel .
+    }
+    GROUP BY ?vivo
+    ORDER BY ?short
+    """
+
+    create_enum("sponsor_enum.txt", query, parms)
+
+    #   Concept via label
+
+    query = """
+    SELECT (MIN (?xlabel) AS ?short) ?vivo
+    WHERE
+    {
+          ?vivo a skos:Concept .
+          ?vivo rdfs:label ?xlabel .
+    }
+    GROUP BY ?vivo
+    ORDER BY ?short
+    """
+
+    create_enum("concept_enum.txt", query, parms)
 
     #   dates via datetime
 

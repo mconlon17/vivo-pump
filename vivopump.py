@@ -185,23 +185,9 @@ def write_csv(filename, data, delimiter='|'):
     :return:
     """
     with open(filename, 'w') as f:
-        f.write(delimiter.join(data[data.keys()[1]].keys()) + '\n')
+        f.write(delimiter.join(data[data.keys()[0]].keys()) + '\n')
         for key in sorted(data.keys()):
             f.write(delimiter.join(data[key].values()) + '\n')
-
-
-def sort_csv(data, order):
-    """
-    Given a data structure as returned by read_csv, and a list of column names, return a data
-    structure sorted as defined by order.
-    :param data:
-    :param order:
-    :return: data structure sorted as defined by order
-    """
-    sdata = {}
-    for row in ordered:
-        sdata[row] = data[ordered]
-    return sdata
 
 
 def replace_initials(s):

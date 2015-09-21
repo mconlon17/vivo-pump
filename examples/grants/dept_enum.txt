@@ -1,4 +1,7 @@
 short	vivo
 Academic Technology	http://vivo.school.edu/individual/n2596
+Center for Instructional and Research Computing Activities	http://vivo.school.edu/individual/n2232
 Chemistry	http://vivo.school.edu/individual/n4145
+Clinical and Translational Science Institute	http://vivo.school.edu/individual/n6310
+College of Liberal Arts and Sciences	http://vivo.school.edu/individual/n721
 Physics	http://vivo.school.edu/individual/n934389325
