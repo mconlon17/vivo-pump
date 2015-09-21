@@ -5,6 +5,19 @@
         "order_by": "title"
     }, 
     "column_defs": {
+    	"title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "filter": "improve_title",
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ], 
         "department": [
             {
                 "predicate": {
@@ -85,19 +98,6 @@
                 "object": {
                     "filter": "improve_date",
                     "datatype": "xsd:datetime",
-                    "literal": true
-                }
-            }
-        ], 
-        "title": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
-                }, 
-                "object": {
-                    "filter": "improve_title",
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }

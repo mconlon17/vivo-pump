@@ -321,3 +321,4 @@ MakeRdfTermFromSourceTestCase added with five cases.  prepare_columns refactored
 __do_the_update refactored to used rdflib terms.  Simplifies code, handles all rdflib term types and compares.  All
 test cases pass.  Removing VIVO date dependencies from PumpUpdateDataTestCases.  Two cases to improve.
 * **2015-09-20** Begin examples/grants
+* **2015-09-21** More work on examples/grants
