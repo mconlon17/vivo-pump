@@ -3,7 +3,7 @@
 Grants are a bit more complex than some of the other entities we have been managing using Simple VIVO.  Grants
 have the following columns:
 
-1. Local award ID -- that is, what number of other identifier does your institution give this grant
+1. Local award ID -- that is, what number, or other identifier, does your institution give this grant
 1. Title
 1. Direct costs -- all years
 1. Total award amount -- all years, direct plus indirect
@@ -36,7 +36,7 @@ adding ORCID to people.
 
 1. Use `make_enum.py` to prepare the enumerations for grants
 
-    `python make_enum.py``
+    `python make_enum.py`
 
 1. Use get to retrieve the grants from your VIVO to a spreadsheet
 

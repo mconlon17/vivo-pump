@@ -1,0 +1,44 @@
+{
+    "entity_def": {
+        "type": "http://purl.org/bibo/ontology/Journal",
+        "entity_sparql": "?uri a bibo:Journal .",
+        "order_by": "name"
+    }, 
+    "column_defs": {
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "issn": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.org/bibo/ontology/issn"
+                },
+                "object": {
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ],
+        "eissn": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "http://purl.org/bibo/ontology/eissn"
+                },
+                "object": {
+                    "datatype": "xsd:string",
+                    "literal": true
+                }
+            }
+        ]
+    }
+}
