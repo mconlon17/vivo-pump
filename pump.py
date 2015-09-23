@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.6.8"
+__version__ = "0.7.0"
 
 from datetime import datetime
 from json import dumps
@@ -62,7 +62,7 @@ class Pump(object):
         """
         from vivopump import read_update_def, load_enum
 
-        self.update_def = read_update_def(json_def_filename)
+        self.update_def = read_update_def(json_def_filename, query_parms['prefix'])
         self.update_data = None
         self.original_graph = None
         self.update_graph = None

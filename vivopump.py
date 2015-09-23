@@ -5,7 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.6.8"
+__version__ = "0.7.0"
 
 import csv
 import string
@@ -362,13 +362,29 @@ def get_vivo_positions(parms):
     return dict(zip(keys, uri))
 
 
-def read_update_def(filename):
+def read_update_def(filename, prefix):
     """
     Read an update_def in JSON format, from a file
     :param filename: name of file to read
+    :param prefix: text prefix for sparql queries
     :rtype: dict
     :return: JSON-like object from file, replacing all URI strings with URIRef objects
     """
+
+    def make_prefix_dict(prefix):
+        """
+        Given prefix text, return a prefix dictionary with tags as keys and url strings as values
+        :param prefix:
+        :return: dictionary
+        :rtype: dict
+        """
+        prefix_dict = {}
+        prefix_list = prefix.split()
+        for i in range(len(prefix_list) - 2):
+            if prefix_list[i].upper() == "PREFIX":
+                prefix_dict[prefix_list[i + 1]] = prefix_list[i + 2].replace('<', '').replace('>', '')
+
+        return prefix_dict
 
     def cast_to_rdflib(t):
         """
@@ -392,7 +408,7 @@ def read_update_def(filename):
         r = cast_table[t]
         return r
 
-    def fixit(current_object):
+    def fixit(current_object, prefix_dict):
         """
         Read the def data structure and replace all string URIs with URIRef entities
         :param current_object: the piece of the data structure to be fixed
@@ -401,15 +417,20 @@ def read_update_def(filename):
         from rdflib import URIRef
         if isinstance(current_object, dict):
             for k in current_object.keys():
-                current_object[k] = fixit(current_object[k])
+                current_object[k] = fixit(current_object[k], prefix_dict)
         elif isinstance(current_object, list):
             for i in range(0, len(current_object)):
-                current_object[i] = fixit(current_object[i])
+                current_object[i] = fixit(current_object[i], prefix_dict)
         elif isinstance(current_object, basestring):
             if current_object.startswith("http://"):
                 current_object = URIRef(current_object)
             elif current_object.startswith("xsd:"):
                 current_object = cast_to_rdflib(current_object)
+            elif ':' in current_object:
+                k = current_object.find(':')
+                tag = str(current_object[0:k + 1])
+                if tag in prefix_dict:
+                    current_object = URIRef(str(current_object).replace(tag, prefix_dict[tag]))
         return current_object
 
     def add_order(a, b):
@@ -451,7 +472,8 @@ def read_update_def(filename):
     import json
     with open(filename, "r") as my_file:
         data = my_file.read()
-        update_def = fixit(json.loads(data))
+        prefix_dict = make_prefix_dict(prefix)
+        update_def = fixit(json.loads(data), prefix_dict)
         update_def = add_order(update_def, data)
         validate_update_def(update_def)
     return update_def

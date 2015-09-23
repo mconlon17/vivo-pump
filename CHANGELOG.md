@@ -324,3 +324,5 @@ test cases pass.  Removing VIVO date dependencies from PumpUpdateDataTestCases. 
 * **2015-09-21** More work on examples/grants. Complete the grant example.  Repair bug in write_csv regarding one-line
 spreadsheets.  Complete examples/journals with sample journal data provided.
 * **2015-09-22** Complete examples/courses.  Includes course management and teaching assignment management.
+* **2015-09-23** 0.7.0 Support for prefixes in def files (Finally\!).  test_substitution added to 
+ReadUpdateDefTestCase

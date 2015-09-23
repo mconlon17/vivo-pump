@@ -104,13 +104,37 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
 
 class ReadUpdateDefTestCase(unittest.TestCase):
+
+    prefix = \
+'''
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
+PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+'''
+
     def test_read_normal_def(self):
-        update_def = read_update_def('data/grant_def.json')
+        update_def = read_update_def('data/grant_def.json', prefix=ReadUpdateDefTestCase.prefix)
         self.assertTrue(update_def.keys() == ['entity_def', 'column_defs'])
+
+    def test_substitution(self):
+        from rdflib import URIRef
+        update_def = read_update_def('data/pump_def.json', prefix=ReadUpdateDefTestCase.prefix)
+        self.assertTrue(update_def['entity_def']['type']) == \
+            URIRef(u'http://vivoweb.org/ontology/core#Building')
 
     def test_invalid_def(self):
         with self.assertRaises(InvalidDefException):
-            update_def = read_update_def('data/grant_invalid_def.json')
+            update_def = read_update_def('data/grant_invalid_def.json', prefix=ReadUpdateDefTestCase.prefix)
             print update_def
 
     def test_pathlength_def(self):
@@ -120,8 +144,9 @@ class ReadUpdateDefTestCase(unittest.TestCase):
             print n
 
     def test_update_def_order(self):
-        update_def = read_update_def('data/grant_def.json')
-        self.assertEqual(update_def['entity_def']['order'][0:4], [u'deptid', u'direct_costs', u'cois', u'end_date'])
+        update_def = read_update_def('data/grant_def.json', prefix=ReadUpdateDefTestCase.prefix)
+        self.assertEqual(update_def['entity_def']['order'][0:4], [u'deptid', u'direct_costs',
+                                                                  u'cois', u'end_date'])
 
 
 class MakeUpdateQueryTestCase(unittest.TestCase):
