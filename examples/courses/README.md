@@ -30,4 +30,4 @@ For each course taught by an instructor, you will need to know:
 1. The course that was taught -- by name of the course
 1. The person who taught the course -- by orcid 
 1. The start date for the course -- year month day by value
-1. The end date for the course -- year monday day by value.  For example "2015-12-09"
+1. The end date for the course -- year month day by value.  For example "2015-12-09"
