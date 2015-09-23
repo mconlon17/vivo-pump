@@ -1,0 +1,2 @@
+course	instructor	uri	end_date	start_date
+Introduction to Statistics	http://orcid.org/0000-0002-1304-8447	http://vivo.school.edu/individual/n6696	1982-01-01	1980-01-01

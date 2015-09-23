@@ -323,3 +323,4 @@ test cases pass.  Removing VIVO date dependencies from PumpUpdateDataTestCases. 
 * **2015-09-20** Begin examples/grants
 * **2015-09-21** More work on examples/grants. Complete the grant example.  Repair bug in write_csv regarding one-line
 spreadsheets.  Complete examples/journals with sample journal data provided.
+* **2015-09-22** Complete examples/teaching.  Includes course management.  It's all about TeacherRoles.

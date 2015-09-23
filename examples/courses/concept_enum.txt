@@ -1,0 +1,183 @@
+short	vivo
+A.A. Associate of Arts	http://vivoweb.org/ontology/degree/academicDegree132
+A.B. Bachelor of Arts	http://vivoweb.org/ontology/degree/academicDegree1
+A.M.T. Master of Arts in Teaching	http://vivoweb.org/ontology/degree/academicDegree3
+A.S. Associate of Science	http://vivoweb.org/ontology/degree/academicDegree127
+ADN Associate Degree Nursing	http://vivoweb.org/ontology/degree/academicDegree118
+AeEng. Aeronautical Engineer	http://vivoweb.org/ontology/degree/academicDegree2
+Au.D. Doctor of Audiology	http://vivoweb.org/ontology/degree/academicDegree145
+B.A. Bachelor of Arts	http://vivoweb.org/ontology/degree/academicDegree4
+B.A.E. Aeronautical Engineering	http://vivoweb.org/ontology/degree/academicDegree7
+B.A.E. Agricultural Engineering	http://vivoweb.org/ontology/degree/academicDegree8
+B.A.E. Architectural Engineering	http://vivoweb.org/ontology/degree/academicDegree9
+B.A.E. Bachelor of Art Education	http://vivoweb.org/ontology/degree/academicDegree6
+B.A.E. Bachelor of Arts in Education	http://vivoweb.org/ontology/degree/academicDegree5
+B.A.M. Bachelor of Applied Mathematics	http://vivoweb.org/ontology/degree/academicDegree11
+B.A.S. Bachelor of Applied Science	http://vivoweb.org/ontology/degree/academicDegree124
+B.Ag. Bachelor of Agriculture	http://vivoweb.org/ontology/degree/academicDegree10
+B.Arch. Bachelor of Architecture	http://vivoweb.org/ontology/degree/academicDegree12
+B.B.A. Bachelor of Business Administration	http://vivoweb.org/ontology/degree/academicDegree13
+B.C.E. Bachelor of Civil Engineering	http://vivoweb.org/ontology/degree/academicDegree14
+B.C.L. Bachelor of Canon Law	http://vivoweb.org/ontology/degree/academicDegree16
+B.Ch.E Bachelor of Chemical Engineering	http://vivoweb.org/ontology/degree/academicDegree15
+B.D. Bachelor of Divinity	http://vivoweb.org/ontology/degree/academicDegree17
+B.E. Bachelor of Education	http://vivoweb.org/ontology/degree/academicDegree18
+B.E. Bachelor of Engineering	http://vivoweb.org/ontology/degree/academicDegree19
+B.E.E. Bachelor of Electrical Engineering	http://vivoweb.org/ontology/degree/academicDegree20
+B.F. Bachelor of Forestry	http://vivoweb.org/ontology/degree/academicDegree21
+B.F.A. Bachelor of Fine Arts	http://vivoweb.org/ontology/degree/academicDegree22
+B.J. Bachelor of Journalism	http://vivoweb.org/ontology/degree/academicDegree23
+B.L.S. Bachelor of Liberal Studies	http://vivoweb.org/ontology/degree/academicDegree24
+B.L.S. Bachelor of Library Science	http://vivoweb.org/ontology/degree/academicDegree25
+B.Lit. Bachelor of Literature	http://vivoweb.org/ontology/degree/academicDegree26
+B.M. Bachelor of Medicine	http://vivoweb.org/ontology/degree/academicDegree27
+B.M. Bachelor of Music	http://vivoweb.org/ontology/degree/academicDegree28
+B.M.S. Bachelor of Marine Science	http://vivoweb.org/ontology/degree/academicDegree29
+B.N. Bachelor of Nursing	http://vivoweb.org/ontology/degree/academicDegree30
+B.N.S. Bachelor of Science in Nursing	http://vivoweb.org/ontology/degree/academicDegree138
+B.Pharm. Bachelor of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree31
+B.R.E. Bachelor of Religious Education	http://vivoweb.org/ontology/degree/academicDegree32
+B.S. Bachelor of Science	http://vivoweb.org/ontology/degree/academicDegree33
+B.S.E. Bachelor of Science in Engineering	http://vivoweb.org/ontology/degree/academicDegree120
+B.S.Ed. Bachelor of Science in Education	http://vivoweb.org/ontology/degree/academicDegree34
+B.S.F.S. Bachelor of Science in Forensic Science	http://vivoweb.org/ontology/degree/academicDegree136
+B.S.N. Bachelor of Science in Nursing	http://vivoweb.org/ontology/degree/academicDegree130
+B.Sc. Bachelor of Science	http://vivoweb.org/ontology/degree/academicDegree110
+B.V.S. Bachelor of Veterinary Science	http://vivoweb.org/ontology/degree/academicDegree128
+Biochemistry, Genetics and Molecular Biology(all)	http://vivo.school.edu/individual/sub-45808d46d43b0b80bb6e8731ef0d63b8
+C.E. Civil Engineer	http://vivoweb.org/ontology/degree/academicDegree35
+Cardiology and Cardiovascular Medicine	http://vivo.school.edu/individual/sub-220485771efd6d31bc191f4bf4f95bd9
+Cellular and Molecular Neuroscience	http://vivo.school.edu/individual/sub-1426eaafaf90e18093225b1525de2f25
+Ch.E. Chemical Engineer	http://vivoweb.org/ontology/degree/academicDegree36
+D.A. Doctor of Arts	http://vivoweb.org/ontology/degree/academicDegree37
+D.A.S. Doctor of Applied Science	http://vivoweb.org/ontology/degree/academicDegree38
+D.B.A. Doctor of Business Administration	http://vivoweb.org/ontology/degree/academicDegree39
+D.C. Doctor of Chiropractic	http://vivoweb.org/ontology/degree/academicDegree40
+D.D. Doctor of Divinity	http://vivoweb.org/ontology/degree/academicDegree41
+D.D.S. Doctor of Dental Science	http://vivoweb.org/ontology/degree/academicDegree43
+D.D.S. Doctor of Dental Surgery	http://vivoweb.org/ontology/degree/academicDegree42
+D.Ed. Doctor of Education	http://vivoweb.org/ontology/degree/academicDegree44
+D.H.Ed. Doctor of Health Education	http://vivoweb.org/ontology/degree/academicDegree146
+D.L.S. Doctor of Library Science	http://vivoweb.org/ontology/degree/academicDegree45
+D.M.D. Doctor of Dental Medicine	http://vivoweb.org/ontology/degree/academicDegree46
+D.M.S. Doctor of Medical Science	http://vivoweb.org/ontology/degree/academicDegree48
+D.M.Sc. Doctor of Medical Science	http://vivoweb.org/ontology/degree/academicDegree125
+D.O. Doctor of Osteopathic Medicine	http://vivoweb.org/ontology/degree/academicDegree47
+D.P.A. Doctor of Public Administration	http://vivoweb.org/ontology/degree/academicDegree49
+D.P.H. Doctor of Public Health	http://vivoweb.org/ontology/degree/academicDegree50
+D.P.M. Doctor of Podiatric Medicine	http://vivoweb.org/ontology/degree/academicDegree139
+D.Phil. Doctor of Philosophy	http://vivoweb.org/ontology/degree/academicDegree112
+D.R.E. Doctor of Religious Education	http://vivoweb.org/ontology/degree/academicDegree51
+D.S.W. Doctor of Social Welfare	http://vivoweb.org/ontology/degree/academicDegree52
+D.S.W. Doctor of Social Work	http://vivoweb.org/ontology/degree/academicDegree53
+D.Sc. Doctor of Science	http://vivoweb.org/ontology/degree/academicDegree54
+D.V.M. Doctor of Veterinary Medicine	http://vivoweb.org/ontology/degree/academicDegree55
+Developmental Neuroscience	http://vivo.school.edu/individual/sub-cdcf44543af15a06fbfd31e72d9d58e5
+Dip.Ed. Diploma of Education	http://vivoweb.org/ontology/degree/academicDegree116
+Dr.P.H. Doctor of Public Health	http://vivoweb.org/ontology/degree/academicDegree148
+E.E. Electrical Engineer	http://vivoweb.org/ontology/degree/academicDegree58
+E.M. Engineer of Mines	http://vivoweb.org/ontology/degree/academicDegree59
+E.Met. Engineer of Metallurgy	http://vivoweb.org/ontology/degree/academicDegree60
+Ed.D. Doctor of Education	http://vivoweb.org/ontology/degree/academicDegree56
+Ed.M Master of Education	http://vivoweb.org/ontology/degree/academicDegree133
+Ed.S. Education Specialist	http://vivoweb.org/ontology/degree/academicDegree57
+Epidemiology	http://vivo.school.edu/individual/sub-7113ad9cbb67f8eb97d88b179c18ca2f
+F.R.C.S. Fellowship of the Royal College of Surgeons	http://vivoweb.org/ontology/degree/academicDegree135
+Fiction	http://vivo.school.edu/individual/n7145
+H.S.C. Higher School Certificate	http://vivoweb.org/ontology/degree/academicDegree149
+I.E. Industrial Engineer	http://vivoweb.org/ontology/degree/academicDegree61
+I.E. Industrial Engineering	http://vivoweb.org/ontology/degree/academicDegree62
+Immunology	http://vivo.school.edu/individual/sub-ceb4fd141a731ff6bbb576b0e05b2277
+Immunology and Allergy	http://vivo.school.edu/individual/sub-87d6e595f81be15efe8aa39e48bbd94a
+J.D. Doctor of Laws	http://vivoweb.org/ontology/degree/academicDegree63
+J.S.D. Doctor of Juristic Science	http://vivoweb.org/ontology/degree/academicDegree64
+L.H.D. Doctor of Humane Letters	http://vivoweb.org/ontology/degree/academicDegree65
+LL.B. Bachelor of Laws	http://vivoweb.org/ontology/degree/academicDegree68
+LL.D. Doctor of Laws	http://vivoweb.org/ontology/degree/academicDegree69
+LL.M. Master of Laws	http://vivoweb.org/ontology/degree/academicDegree70
+Litt.B. Bachelor of Letters	http://vivoweb.org/ontology/degree/academicDegree66
+Litt.M. Master of Letters	http://vivoweb.org/ontology/degree/academicDegree67
+M.A. Master of Arts	http://vivoweb.org/ontology/degree/academicDegree71
+M.Aero.E. Master of Aeronautical Engineering	http://vivoweb.org/ontology/degree/academicDegree72
+M.B.A. Master of Business Administration	http://vivoweb.org/ontology/degree/academicDegree73
+M.B.E. Master of Business Engineering	http://vivoweb.org/ontology/degree/academicDegree141
+M.C.E. Master of Christian Education 	http://vivoweb.org/ontology/degree/academicDegree74
+M.C.E. Master of Civil Engineering	http://vivoweb.org/ontology/degree/academicDegree75
+M.C.S. Master of Computer Science	http://vivoweb.org/ontology/degree/academicDegree76
+M.Ch.E. Master of Chemical Engineering	http://vivoweb.org/ontology/degree/academicDegree140
+M.D. Doctor of Medicine	http://vivoweb.org/ontology/degree/academicDegree77
+M.Div. Master of Divinity	http://vivoweb.org/ontology/degree/academicDegree78
+M.E. Master of Engineering	http://vivoweb.org/ontology/degree/academicDegree79
+M.Ed. Master of Education	http://vivoweb.org/ontology/degree/academicDegree80
+M.Eng. Master of Engineering	http://vivoweb.org/ontology/degree/academicDegree81
+M.F.A. Master of Fine Arts	http://vivoweb.org/ontology/degree/academicDegree82
+M.H.A. Master of Hospital Administration	http://vivoweb.org/ontology/degree/academicDegree83
+M.H.S. Master of Health Science	http://vivoweb.org/ontology/degree/academicDegree122
+M.I.A. Master of International Affairs	http://vivoweb.org/ontology/degree/academicDegree137
+M.L.I.S. Master of Library and Information Science 	http://vivoweb.org/ontology/degree/academicDegree115
+M.L.S. Master of Library Science	http://vivoweb.org/ontology/degree/academicDegree84
+M.M. Master of Music	http://vivoweb.org/ontology/degree/academicDegree85
+M.M.E. Master of Mechanical Engineering	http://vivoweb.org/ontology/degree/academicDegree86
+M.M.E. Master of Music Education	http://vivoweb.org/ontology/degree/academicDegree87
+M.M.S. Master of Management Studies	http://vivoweb.org/ontology/degree/academicDegree126
+M.M.Sc. Master of Medical Science	http://vivoweb.org/ontology/degree/academicDegree150
+M.Med. Master of Medicine	http://vivoweb.org/ontology/degree/academicDegree131
+M.Mus. Master of Music	http://vivoweb.org/ontology/degree/academicDegree88
+M.N. Master of Nursing	http://vivoweb.org/ontology/degree/academicDegree89
+M.P.A.S. Master in Physician Assistant Studies	http://vivoweb.org/ontology/degree/academicDegree147
+M.P.H. Master of Public Health	http://vivoweb.org/ontology/degree/academicDegree113
+M.Phil. Master of Philosophy 	http://vivoweb.org/ontology/degree/academicDegree111
+M.R.E. Master of Religious Education	http://vivoweb.org/ontology/degree/academicDegree90
+M.S. Master of Science	http://vivoweb.org/ontology/degree/academicDegree91
+M.S.E. Master of Science in Engineering	http://vivoweb.org/ontology/degree/academicDegree134
+M.S.P.H. Master of Science in Public Health	http://vivoweb.org/ontology/degree/academicDegree114
+M.S.W. Master of Social Work	http://vivoweb.org/ontology/degree/academicDegree92
+M.Sc. Master of Science	http://vivoweb.org/ontology/degree/academicDegree117
+M.Th. Master of Theology	http://vivoweb.org/ontology/degree/academicDegree93
+M.V.Sc. Master of Veterinary Science	http://vivoweb.org/ontology/degree/academicDegree129
+Mathematics(all)	http://vivo.school.edu/individual/sub-b507e57fc1f73a75b8466248f016ea82
+Medical informatics	http://id.loc.gov/authorities/subjects/sh89005069
+Medicine(all)	http://vivo.school.edu/individual/sub-0736615959d4e9d9433631bf9b95aca0
+Neuroscience(all)	http://vivo.school.edu/individual/sub-e544da5c72d822770eb346fe3894b396
+Nuc.E. Nuclear Engineer	http://vivoweb.org/ontology/degree/academicDegree94
+Nursing(all)	http://vivo.school.edu/individual/sub-1759825949f358dd02ccc3ea76d3390d
+O.D. Doctor of Optometry	http://vivoweb.org/ontology/degree/academicDegree95
+Pathology and Forensic Medicine	http://vivo.school.edu/individual/sub-740c7970ddeb78346c0ba5ee0a67ac07
+Pediatrics, Perinatology, and Child Health	http://vivo.school.edu/individual/sub-1c790ea73d3a27a755d36a67d1cfbc35
+Ph.B. Bachelor of Philosophy	http://vivoweb.org/ontology/degree/academicDegree97
+Ph.D. Doctor of Philosophy	http://vivoweb.org/ontology/degree/academicDegree98
+Pharm.B. Bachelor of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree142
+Pharm.D. Doctor of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree96
+Pharm.M. Master of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree143
+Pharmacology	http://vivo.school.edu/individual/sub-bf035ab77b10209b5cec697ff0d1599d
+Pharmacology, Toxicology and Pharmaceutics(all)	http://vivo.school.edu/individual/sub-6661cf099e2a13d321cd1f2c20545286
+Phi Beta Kappa	http://vivo.school.edu/individual/n2735
+Psy.D. Doctor of Psychology	http://vivoweb.org/ontology/degree/academicDegree119
+Psychiatry and Mental health	http://vivo.school.edu/individual/sub-a728d1690c719bd4b773d262de7dd1b8
+Public Health, Environmental and Occupational Health	http://vivo.school.edu/individual/sub-643f947c36cda744be8d88bdc6145cbc
+S.B. Bachelor of Science	http://vivoweb.org/ontology/degree/academicDegree99
+S.J.D. Doctor of Juridical Science	http://vivoweb.org/ontology/degree/academicDegree101
+S.J.D. Doctor of the Science of Law	http://vivoweb.org/ontology/degree/academicDegree102
+S.Sc.D. Doctor of Social Science	http://vivoweb.org/ontology/degree/academicDegree103
+S.T.B. Bachelor of Sacred Theology	http://vivoweb.org/ontology/degree/academicDegree104
+S.T.D. Doctor of Sacred Theology	http://vivoweb.org/ontology/degree/academicDegree105
+S.T.M. Master of Sacred Theology	http://vivoweb.org/ontology/degree/academicDegree106
+Sample Broader Concept	http://vivo.school.edu/individual/n1071
+Sample Narrower Concept	http://vivo.school.edu/individual/n4220
+Sample Skos Concept	http://vivo.school.edu/individual/n6621
+Sc.B. Bachelor of Science	http://vivoweb.org/ontology/degree/academicDegree121
+Sc.D. Doctor of Science	http://vivoweb.org/ontology/degree/academicDegree100
+Sc.M. Master of Science	http://vivoweb.org/ontology/degree/academicDegree123
+Semantic Web	http://id.loc.gov/authorities/subjects/sh2002000569
+Statistics and Probability	http://vivo.school.edu/individual/sub-0dc3ba61b8e1a4c9cc115eb9144e493f
+Statistics, Probability and Uncertainty	http://vivo.school.edu/individual/sub-7396f9db6c7cdcc9844369b30d4cb674
+Th.B. Bachelor of Theology	http://vivoweb.org/ontology/degree/academicDegree107
+Th.D. Doctor of Theology	http://vivoweb.org/ontology/degree/academicDegree108
+Th.M. Master of Theology	http://vivoweb.org/ontology/degree/academicDegree109
+Toxicology	http://vivo.school.edu/individual/sub-c89ec17cae7626c0f28c316950ee28f0
+V.M.D. Veterinariae Medicinae Doctoris	http://vivoweb.org/ontology/degree/academicDegree144
+VIVO	http://vivo.school.edu/individual/n7841
+year value	http://vivoweb.org/ontology/core#yearPrecision
+year-month value	http://vivoweb.org/ontology/core#yearMonthPrecision
+year-month-day value	http://vivoweb.org/ontology/core#yearMonthDayPrecision
+year-month-day-time value	http://vivoweb.org/ontology/core#yearMonthDayTimePrecision

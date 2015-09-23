@@ -1,0 +1,2 @@
+concepts	uri	name
+	http://vivo.school.edu/individual/n7501	Introduction to Statistics
