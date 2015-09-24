@@ -326,3 +326,4 @@ spreadsheets.  Complete examples/journals with sample journal data provided.
 * **2015-09-22** Complete examples/courses.  Includes course management and teaching assignment management.
 * **2015-09-23** 0.7.0 Support for prefixes in def files (Finally\!).  test_substitution added to 
 ReadUpdateDefTestCase.  `examples/orgs` is complete
+* **2015-09-24** Improving `testgraph.py` and PumpUpdateDataTestCase.  Two tests to pass.

@@ -163,17 +163,17 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.ufl.edu/individual/n125'), RDFS.label,
                   Literal("Influences on French Opera 1890-1893")))
         self.add((URIRef('http://vivo.ufl.edu/individual/n125'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTimeInterval'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTimeInterval'),
                   URIRef('http://vivo.ufl.edu/individual/n126')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n126'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeInterval')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n126'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#start'),
+                  URIRef('http://vivoweb.org/ontology/core#start'),
                   URIRef('http://vivo.ufl.edu/individual/n127')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n127'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
         self.add((URIRef('http://vivo.ufl.edu/individual/n127'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTime'),
                   Literal("2010-04-01", datatype=XSD.datetime)))
         self.add((URIRef('http://vivo.ufl.edu/individual/n126'),
                   URIRef('http://vivo.vivoweb.org/ontology/core#end'),

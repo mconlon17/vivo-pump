@@ -1,0 +1,88 @@
+{
+    "entity_def": {
+        "type": "vivo:Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+    	"title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval",
+                    "name": "award_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:start"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeValue",
+                    "name": "start"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTime"
+                },
+                "object": {
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ],
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval",
+                    "name": "award_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:end"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeValue",
+                    "name": "end"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTime"
+                },
+                "object": {
+                    "datatype": "xsd:datetime",
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

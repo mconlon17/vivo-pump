@@ -986,7 +986,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_three_change(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
-        p = Pump("data/grant_def.json", verbose=True)
+        p = Pump("data/grant_dates_def.json", verbose=True)
         p.original_graph = TestGraph()
 
         # WARNING.  This test passes by changing the start date value on an existing datetime interval.  Not sure
@@ -1009,7 +1009,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         # WARNING: Delete start date value from existing datetime interval.  This may not be the desirable data
         # management action
 
-        p = Pump("data/grant_def.json", verbose=True)
+        p = Pump("data/grant_dates_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.ufl.edu/individual/n125', u'start_date': u'None'}}
         [add, sub] = p.update()
