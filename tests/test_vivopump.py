@@ -1000,7 +1000,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  Literal("2006-03-02", datatype=XSD.datetime)) in add and
                                                 (None,
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
-                                                 Literal("2010-04-01", datatype=XSD.dateTime)) in sub)
+                                                 Literal("2010-04-01", datatype=XSD.datetime)) in sub)
 
     def test_unique_three_delete(self):
         from rdflib import URIRef, Literal, XSD
@@ -1016,7 +1016,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         self.assertTrue(
             len(add) == 0 and len(sub) == 1 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
-                                                 Literal("2010-04-01", datatype=XSD.dateTime)) in sub)
+                                                 Literal("2010-04-01", datatype=XSD.datetime)) in sub)
 
     def test_multiple_one_add(self):
         from rdflib import URIRef

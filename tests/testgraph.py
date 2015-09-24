@@ -184,6 +184,5 @@ class TestGraph(Graph):
                   URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
                   Literal("2014-03-31", datatype=XSD.datetime)))
 
-
     def __str__(self):
         return self.serialize(format="nt")
