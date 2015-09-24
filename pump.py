@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.7.0"
+__version__ = "0.7.1"
 
 from datetime import datetime
 from json import dumps
@@ -111,9 +111,9 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         from vivopump import make_get_query
 
         result = str(datetime.now()) + " Pump Summary for " + self.json_def_filename + "\n" + \
-                 str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
-                 str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
-                 str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
+            str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
+            str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
+            str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
         return result
 
     def get(self):
@@ -271,10 +271,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
             improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
 
-        # We need a generator that produces the order based on the order value in the entity def, or uri order if not
-        # present.  When an order value is present, we always have str(uri) as a last sort order since str(uri) is
-        # always unique
-
         #   Generate the get query, execute the query, shape the query results into the return object
 
         query = make_get_query(self.update_def)
@@ -292,7 +288,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         outfile.write(self.inter.join(columns))  # write a header using the inter field separator between column names
         outfile.write('\n')
 
-        for uri in sorted(data.keys()):  # replace with generator described above to support row order
+        for uri in sorted(data.keys()):
             for name in columns:
                 if name in data[uri]:
 
@@ -329,8 +325,12 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                             enum_name = path[len(path) - 1]['object']['enum']
                             a = set()
                             for x in data[uri][name]:
-                                a.add(self.enum[enum_name]['get'].get(x, x))  # if we can't find the value in the
-                                # enumeration, just return the value
+                                val = self.enum[enum_name]['get'].get(x, '')
+                                if val != '':
+                                    a.add(val)
+                                else:
+                                    print "WARNING: Unable to find ", x, "in", enum_name, \
+                                        ". Blank substituted in", self.out_filename
                             data[uri][name] = a
 
                     # Gather values into a delimited string

@@ -1,0 +1,94 @@
+{
+    "entity_def": {
+        "order_by": "orcid",
+        "entity_sparql": "?uri a vivo:Position . ",
+        "type": "vivo:Position"
+    }, 
+    "column_defs": {
+        "orcid": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?orcid a foaf:Person .",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "department": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?department a foaf:Organization .",
+                    "enum": "dept_enum.txt"
+                }
+            }
+        ],
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:dateTimeInterval"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "vivo:DateTimeInterval", 
+                    "name": "employment_period"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:start"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "vivo:DateTimeValue", 
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval",
+                    "name": "employment_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:end"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeValue",
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "rdfs:label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

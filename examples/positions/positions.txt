@@ -1,0 +1,4 @@
+end_date	title	uri	department	orcid	start_date
+	Chief Strategy Officer	http://vivo.school.edu/individual/n1376			2012-01-01
+	Project Director	http://vivo.school.edu/individual/n4082		http://orcid.org/0000-0002-1304-8447	2015-01-01
+	Co-director	http://vivo.school.edu/individual/n569	Clinical and Translational Science Institute	http://orcid.org/0000-0002-1304-8447	2013-01-01
