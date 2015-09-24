@@ -660,8 +660,8 @@ class PumpTestCase(unittest.TestCase):
         p = Pump("data/building_def.json")
         p.out_filename = "data/pump_data.txt"
         [add, sub] = p.update()
-        self.assertEqual(0, len(add))
-        self.assertEqual(0, len(sub))
+        self.assertEqual(2, len(add))
+        self.assertEqual(2, len(sub))
 
 
 class PumpGetTestCase(unittest.TestCase):
