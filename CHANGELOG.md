@@ -329,4 +329,4 @@ ReadUpdateDefTestCase.  `examples/orgs` is complete
 * **2015-09-24** 0.7.1. get now warns when values can not be found in enumerations, and supplies a blank
 value in the returned spreadsheet. Improving `testgraph.py` and PumpUpdateDataTestCase.  All tests in the 
 case now pass.
-* **2015-09-25** Begin mentoring example
+* **2015-09-25** Begin mentoring example.  All cfg updated for 1.6 ontology prefixes.
