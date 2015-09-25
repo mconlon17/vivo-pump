@@ -2,7 +2,7 @@
 
 Chair of committee, professional mentoring, other types of person-to-person scholarly relationships.
 
-To enter a mentoring relationship, there are severn attributes
+To enter a mentoring relationship, there are seven attributes
 
 1.  Mentor -- entered by orcid from list in enumeration
 1.  Mentee -- entered by orcid from list in enumeration

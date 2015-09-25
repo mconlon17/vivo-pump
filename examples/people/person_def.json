@@ -1,10 +1,32 @@
 {
     "entity_def": {
-        "order_by": "name", 
-        "entity_sparql": "?uri a vivo:FacultyMember .", 
+        "order_by": "display_name",
+        "entity_sparql": "?uri a foaf:Person .",
         "type": "foaf:Person"
     }, 
     "column_defs": {
+        "display_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "rdfs:label"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "orcid": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:orcid"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
         "types": [
             {
                 "predicate": {
@@ -18,7 +40,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "enum": "data/people_types.txt"
+                    "enum": "person_types.txt"
                 }
             }
         ],
@@ -33,25 +55,488 @@
                 }
             }
         ],
-        "name": [
+        "overview": [
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "rdfs:label"
-                }, 
+                    "single": true,
+                    "ref": "vivo:overview"
+                },
                 "object": {
                     "literal": true
                 }
             }
-        ], 
+        ],
+        "name_prefix": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Name",
+                    "name": "vcard_name_thing"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:honorificPrefix"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "first_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Name",
+                    "name": "vcard_name_thing"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:givenName"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "middle_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Name",
+                    "name": "vcard_name_thing"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:additionalName"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "last_name": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Name",
+                    "name": "vcard_name_thing"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:familyName"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "name_suffix": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasName"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Name",
+                    "name": "vcard_name_thing"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:honorificSuffix"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
         "title": [
             {
                 "predicate": {
-                    "single": true, 
-                    "ref": "vivo:preferredTitle"
-                }, 
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
                 "object": {
-                    "literal": true
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasTitle"
+                },
+                "object": {
+                    "literal": false,
+                    "name": "vcardtitle",
+                    "type": "vcard:Title"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:title"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "phone": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasTelephone"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "NOT EXISTS { ?telephone_number a vcard:Code }",
+                    "type": "vcard:Telephone",
+                    "name": "telephone_number"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:telephone"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "email": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasEmail"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Email",
+                    "name": "vcardemail"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:email"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "home_page": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasURL"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:URL",
+                    "qualifier": "?url rdfs:label \"Home Page\" .",
+                    "label": "Home Page",
+                    "name": "url"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:url"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:anyURI"
+                }
+            }
+        ],
+        "street_address": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:streetAddress"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "city": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:locality"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "state": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:region"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "zip": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:postalCode"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "country": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:ARG_2000028"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Kind",
+                    "name": "vcard"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:hasAddress"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vcard:Address",
+                    "name": "address"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vcard:country"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ]

@@ -330,4 +330,4 @@ ReadUpdateDefTestCase.  `examples/orgs` is complete
 value in the returned spreadsheet. Improving `testgraph.py` and PumpUpdateDataTestCase.  All tests in the 
 case now pass.
 * **2015-09-25** Begin mentoring example.  All cfg updated for 1.6 ontology prefixes.  All json updated to use
-prefixes.
+prefixes.  Person example complete.
