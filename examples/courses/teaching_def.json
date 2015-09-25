@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://vivoweb.org/ontology/core#TeacherRole",
+        "type": "vivo:TeacherRole",
         "entity_sparql": "?uri a vivo:TeacherRole .",
         "order_by": "course"
     }, 
@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/BFO_0000054"
+                    "ref": "obo:BFO_0000054"
                 },
                 "object": {
                     "literal": false,
@@ -21,7 +21,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://purl.obolibrary.org/obo/RO_0000052"
+                    "ref": "obo:RO_0000052"
                 }, 
                 "object": {
                     "literal": false,
@@ -33,18 +33,18 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                    "ref": "vivo:dateTimeInterval"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval",
+                    "type": "vivo:DateTimeInterval",
                     "name": "teaching_period"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#start"
+                    "ref": "vivo:start"
                 },
                 "object": {
                     "literal": false,
@@ -56,18 +56,18 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                    "ref": "vivo:dateTimeInterval"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval",
+                    "type": "vivo:DateTimeInterval",
                     "name": "teaching_period"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#end"
+                    "ref": "vivo:end"
                 },
                 "object": {
                     "literal": false,

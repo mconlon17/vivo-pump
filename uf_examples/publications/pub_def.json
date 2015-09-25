@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://vivoweb.org/ontology/core#InformationResource", 
+        "type": "vivo:InformationResource", 
         "entity_sparql": "?uri a vivo:InformationResource .", 
         "order_by": "title"
     }, 
@@ -9,22 +9,22 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasURL"
+                    "ref": "vcard:hasURL"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#URL",
+                    "type": "vcard:URL",
                     "qualifier": "?url rdfs:label \"Full Text\" .",
                     "label": "Full Text",
                     "name": "url"
@@ -33,7 +33,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#url"
+                    "ref": "vcard:url"
                 },
                 "object": {
                     "literal": true,
@@ -45,7 +45,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://purl.org/ontology/bibo/doi"
+                    "ref": "bibo:doi"
                 }, 
                 "object": {
                     "literal": true
@@ -56,7 +56,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "filter": "improve_title", 

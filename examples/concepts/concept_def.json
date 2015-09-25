@@ -2,14 +2,14 @@
     "entity_def": {
         "order_by": "label",
         "entity_sparql": "?uri a skos:Concept .",
-        "type": "http://www.w3.org/2004/02/skos/core#Concept"
+        "type": "skos:Concept"
     }, 
     "column_defs": {
         "label": [
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 },
                 "object": {
                     "literal": true,
@@ -21,7 +21,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2004/02/skos/core#narrower"
+                    "ref": "skos:narrower"
                 },
                 "object": {
                     "literal": false,
@@ -33,7 +33,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2004/02/skos/core#broader"
+                    "ref": "skos:broader"
                 },
                 "object": {
                     "literal": false,

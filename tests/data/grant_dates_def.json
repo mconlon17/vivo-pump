@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "literal": true

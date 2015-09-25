@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://xmlns.com/foaf/0.1/Organization", 
+        "type": "foaf:Organization", 
         "entity_sparql": "?uri a foaf:Organization .",
         "order_by": "name"
     }, 
@@ -9,29 +9,29 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                    "ref": "vcard:hasAddress"
                 }, 
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "type": "vcard:Address",
                     "name": "address"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#locality"
+                    "ref": "vcard:locality"
                 },
                 "object": {
                     "literal": true,
@@ -43,29 +43,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                    "ref": "vcard:hasAddress"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "type": "vcard:Address",
                     "name": "address"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#postalCode"
+                    "ref": "vcard:postalCode"
                 },
                 "object": {
                     "literal": true,
@@ -77,7 +77,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "literal": true
@@ -88,22 +88,22 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasURL"
+                    "ref": "vcard:hasURL"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#URL",
+                    "type": "vcard:URL",
                     "qualifier": "?url rdfs:label \"Home Page\" .",
                     "label": "Home Page",
                     "name": "url"
@@ -112,7 +112,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#url"
+                    "ref": "vcard:url"
                 },
                 "object": {
                     "literal": true,
@@ -124,29 +124,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasEmail"
+                    "ref": "vcard:hasEmail"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Email",
+                    "type": "vcard:Email",
                     "name": "vcardemail"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#email"
+                    "ref": "vcard:email"
                 },
                 "object": {
                     "literal": true,
@@ -158,29 +158,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                    "ref": "vcard:hasAddress"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "type": "vcard:Address",
                     "name": "address"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#streetAddress"
+                    "ref": "vcard:streetAddress"
                 },
                 "object": {
                     "literal": true,
@@ -192,7 +192,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://purl.obolibrary.org/obo/BFO_0000050"
+                    "ref": "obo:BFO_0000050"
                 }, 
                 "object": {
                     "literal": false
@@ -203,7 +203,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#abbreviation"
+                    "ref": "vivo:abbreviation"
                 }, 
                 "object": {
                     "literal": true
@@ -214,30 +214,30 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasTelephone"
+                    "ref": "vcard:hasTelephone"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "NOT EXISTS { ?telephone_number a <http://www.w3.org/2006/vcard/ns#Code> }",
-                    "type": "http://www.w3.org/2006/vcard/ns#Telephone",
+                    "qualifier": "NOT EXISTS { ?telephone_number a <vcard:Code> }",
+                    "type": "vcard:Telephone",
                     "name": "telephone_number"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#telephone"
+                    "ref": "vcard:telephone"
                 },
                 "object": {
                     "literal": true,
@@ -249,30 +249,30 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasTelephone"
+                    "ref": "vcard:hasTelephone"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?fax_number a <http://www.w3.org/2006/vcard/ns#Fax> .",
-                    "type": "http://www.w3.org/2006/vcard/ns#Fax",
+                    "qualifier": "?fax_number a <vcard:Fax> .",
+                    "type": "vcard:Fax",
                     "name": "fax_number"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#telephone"
+                    "ref": "vcard:telephone"
                 },
                 "object": {
                     "literal": true,
@@ -284,29 +284,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                    "ref": "vcard:hasAddress"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "type": "vcard:Address",
                     "name": "address"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#region"
+                    "ref": "vcard:region"
                 },
                 "object": {
                     "literal": true,
@@ -318,29 +318,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasAddress"
+                    "ref": "vcard:hasAddress"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Address",
+                    "type": "vcard:Address",
                     "name": "address"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#country"
+                    "ref": "vcard:country"
                 },
                 "object": {
                     "literal": true,
@@ -352,7 +352,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#overview"
+                    "ref": "vivo:overview"
                 }, 
                 "object": {
                     "literal": true
@@ -368,7 +368,7 @@
                         "agent", 
                         "org"
                     ], 
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "rdf:type"
                 }, 
                 "object": {
                     "literal": false, 
@@ -380,7 +380,7 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#hasSuccessorOrganization"
+                    "ref": "vivo:hasSuccessorOrganization"
                 }, 
                 "object": {
                     "literal": false

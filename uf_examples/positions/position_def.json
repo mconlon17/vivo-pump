@@ -2,19 +2,19 @@
     "entity_def": {
         "order_by": "ufid",
         "entity_sparql": "?uri a vivo:Position . ",
-        "type": "http://vivo.school.edu/ontology/core#Position"
+        "type": "vivo:Position"
     }, 
     "column_defs": {
         "UFID": [
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#relates"
+                    "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
                     "qualifier": "?person a foaf:Person .",
-                    "type": "http://xmlns.com/foaf/0.1/Person",
+                    "type": "foaf:Person",
                     "name": "person",
                     "enum": "ufid.txt"
                 }
@@ -24,12 +24,12 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#relates"
+                    "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
                     "qualifier": "?org a foaf:Organization .",
-                    "type": "http://xmlns.com/foaf/0.1/Organization",
+                    "type": "foaf:Organization",
                     "name": "org",
                     "enum": "deptid.txt"
                 }
@@ -39,7 +39,7 @@
                     {
                 "predicate": {
                     "single": false,
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "rdf:type"
                 },
                 "object": {
                     "literal": false,
@@ -51,29 +51,29 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                    "ref": "vivo:dateTimeInterval"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "type": "vivo:DateTimeInterval", 
                     "name": "employment_period"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#start"
+                    "ref": "vivo:start"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#DateTimeValue", 
+                    "type": "vivo:DateTimeValue", 
                     "name": "end"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                    "ref": "vivo:dateTime"
                 }, 
                 "object": {
                     "filter": "improve_date",
@@ -86,29 +86,29 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                    "ref": "vivo:dateTimeInterval"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "type": "vivo:DateTimeInterval", 
                     "name": "employment_period"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#end"
+                    "ref": "vivo:end"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#DateTimeValue", 
+                    "type": "vivo:DateTimeValue", 
                     "name": "end"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                    "ref": "vivo:dateTime"
                 }, 
                 "object": {
                     "filter": "improve_date",
@@ -121,7 +121,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "literal": true
@@ -134,7 +134,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#hrTitle"
+                    "ref": "uf:hrTitle"
                 }, 
                 "object": {
                     "literal": true

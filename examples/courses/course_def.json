@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://vivoweb.org/ontology/core#Course",
+        "type": "vivo:Course",
         "entity_sparql": "?uri a vivo:Course .",
         "order_by": "name"
     }, 
@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "literal": true
@@ -20,7 +20,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#hasSubjectArea"
+                    "ref": "vivo:hasSubjectArea"
                 },
                 "object": {
                     "literal": false,

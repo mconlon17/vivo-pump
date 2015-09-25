@@ -2,14 +2,14 @@
     "entity_def": {
         "order_by": "name", 
         "entity_sparql": "?uri a vivo:Building .", 
-        "type": "http://vivoweb.org/ontology/core#Building"
+        "type": "vivo:Building"
     }, 
     "column_defs": {
         "abbreviation": [
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#abbreviation"
+                    "ref": "vivo:abbreviation"
                 }, 
                 "object": {
                     "literal": true
@@ -20,11 +20,11 @@
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://vivoweb.org/ontology/core#webpage"
+                    "ref": "vivo:webpage"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#URLLink", 
+                    "type": "vivo:URLLink", 
                     "name": "weburi", 
                     "label": "Home Page"
                 }
@@ -32,51 +32,18 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#linkURI"
+                    "ref": "vivo:linkURI"
                 }, 
                 "object": {
                     "literal": true
                 }
             }
-        ], 
-        "photo": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
-                    "name": "photouri"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
-        "number": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/buildingNumber"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
+        ],
         "name": [
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "filter": "improve_title", 

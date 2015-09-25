@@ -1,59 +1,15 @@
 {
     "entity_def": {
         "order_by": "name", 
-        "entity_sparql": "?uri a vivo:FacultyMember . ?uri a uf:UFEntity .",
-        "type": "http://xmlns.com/foaf/0.1/Person"
+        "entity_sparql": "?uri a vivo:FacultyMember .",
+        "type": "vivo:FacultyMember"
     }, 
     "column_defs": {
-        "deptid": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/homeDept"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://xmlns.com/foaf/0.1/Organization", 
-                    "name": "homedept"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vivo.ufl.edu/ontology/vivo-ufl/deptID"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
-        "photo": [
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#mainImage"
-                }, 
-                "object": {
-                    "literal": false, 
-                    "type": "http://vitro.mannlib.cornell.edu/ns/vitro/public#File", 
-                    "name": "photouri"
-                }
-            }, 
-            {
-                "predicate": {
-                    "single": true, 
-                    "ref": "http://vitro.mannlib.cornell.edu/ns/vitro/public#filename"
-                }, 
-                "object": {
-                    "literal": true
-                }
-            }
-        ], 
         "types": [
             {
                 "predicate": {
                     "single": false, 
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "rdf:type"
                 },
                 "object": {
                     "literal": false,
@@ -65,7 +21,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#hasResearchArea"
+                    "ref": "vivo:hasResearchArea"
                 },
                 "object": {
                     "literal": false
@@ -76,7 +32,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "literal": true
@@ -87,7 +43,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#preferredTitle"
+                    "ref": "vivo:preferredTitle"
                 }, 
                 "object": {
                     "literal": true

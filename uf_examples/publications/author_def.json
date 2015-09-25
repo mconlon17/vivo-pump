@@ -2,7 +2,7 @@
     "entity_def": {
         "order_by": "name", 
         "entity_sparql": "?uri a foaf:Person .",
-        "type": "http://xmlns.com/foaf/0.1/Person"
+        "type": "foaf:Person"
     }, 
     "column_defs": {
         "uri": [
@@ -13,7 +13,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 },
                 "object": {
                     "literal": true
@@ -24,29 +24,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                    "ref": "vcard:hasName"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "type": "vcard:Name",
                     "name": "vcardname"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#givenName"
+                    "ref": "vcard:givenName"
                 },
                 "object": {
                     "literal": true,
@@ -58,29 +58,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                    "ref": "vcard:hasName"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "type": "vcard:Name",
                     "name": "vcardname"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#additionalName"
+                    "ref": "vcard:additionalName"
                 },
                 "object": {
                     "literal": true,
@@ -92,29 +92,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                    "ref": "vcard:hasName"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "type": "vcard:Name",
                     "name": "vcardname"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#familyName"
+                    "ref": "vcard:familyName"
                 },
                 "object": {
                     "literal": true,
@@ -126,29 +126,29 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/ARG_2000028"
+                    "ref": "obo:ARG_2000028"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Kind",
+                    "type": "vcard:Kind",
                     "name": "vcard"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#hasName"
+                    "ref": "vcard:hasName"
                 },
                 "object": {
                     "literal": false,
-                    "type": "http://www.w3.org/2006/vcard/ns#Name",
+                    "type": "vcard:Name",
                     "name": "vcardname"
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2006/vcard/ns#honorificSuffix"
+                    "ref": "vcard:honorificSuffix"
                 },
                 "object": {
                     "literal": true,
@@ -165,7 +165,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                    "ref": "rdf:type",
                 },
                 "object": {
                     "literal": false,

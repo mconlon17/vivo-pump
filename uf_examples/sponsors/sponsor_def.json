@@ -2,14 +2,14 @@
     "entity_def": {
         "order_by": "sponsorid",
         "entity_sparql": "?uri a foaf:Organization . ?uri uf:sponsorId ?sponsorid .",
-        "type": "http://xmlns.com/foaf/0.1/Organization"
+        "type": "foaf:Organization"
     },
     "column_defs": {
         "sponsorid": [
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#sponsorId"
+                    "ref": "uf:sponsorId"
                 },
                 "object": {
                     "literal": true
@@ -28,7 +28,7 @@
                         "bfo2",
                         "bfo4"
                     ],
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "rdf:type"
                 },
                 "object": {
                     "literal": false,
@@ -40,7 +40,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 },
                 "object": {
                     "literal": true
@@ -51,7 +51,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#dateHarvested"
+                    "ref": "uf:dateHarvested"
                 },
                 "object": {
                     "literal": true,
@@ -63,7 +63,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#harvestedBy"
+                    "ref": "uf:harvestedBy"
                 },
                 "object": {
                     "literal": true

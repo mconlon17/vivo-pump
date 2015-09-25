@@ -1,14 +1,14 @@
 {
     "entity_def": {
         "entity_sparql": "?uri a vivo:GeographicLocation .",
-        "type": "http://vivoweb.org/ontology/core#GeographicLocation"
+        "type": "vivo:GeographicLocation"
     }, 
     "column_defs": {
         "name": [
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 },
                 "object": {
                     "literal": true,
@@ -20,7 +20,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                    "ref": "rdf:type",
                     "include": [
                         "loc"
                     ]
@@ -35,7 +35,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://purl.obolibrary.org/obo/BFO_0000050"
+                    "ref": "obo:BFO_0000050"
                 },
                 "object": {
                     "literal": false,
@@ -47,7 +47,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+                    "ref": "wgs84:lat"
                 }, 
                 "object": {
                     "literal": true,
@@ -59,7 +59,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+                    "ref": "wgs84:long"
                 },
                 "object": {
                     "literal": true,

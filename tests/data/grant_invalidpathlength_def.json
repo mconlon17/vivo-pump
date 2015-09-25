@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://vivoweb.org/ontology/core#Grant", 
+        "type": "vivo:Grant", 
         "entity_sparql": "?uri a vivo:Grant . ",
         "order_by": "title"
     }, 
@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#administeredBy"
+                    "ref": "vivo:administeredBy"
                 }, 
                 "object": {
                     "filter": "improve_deptid", 
@@ -23,40 +23,40 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeInterval"
+                    "ref": "vivo:dateTimeInterval"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#DateTimeInterval", 
+                    "type": "vivo:DateTimeInterval", 
                     "name": "award_period"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#start"
+                    "ref": "vivo:start"
                 }, 
                 "object": {
                     "literal": false, 
-                    "type": "http://vivoweb.org/ontology/core#DateTimeValue", 
+                    "type": "vivo:DateTimeValue", 
                     "name": "start"
                 }
             }, 
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                    "ref": "vivo:dateTime"
                 }, 
                 "object": {
                     "name" : "neverending",
-                    "type": "http://vivoweb.org/ontology/core#DateTimeValue",
+                    "type": "vivo:DateTimeValue",
                     "literal": false
                 }
             },
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#evenMore"
+                    "ref": "vivo:evenMore"
                 },
                 "object": {
                     "filter": "improve_date",
@@ -69,7 +69,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://vivoweb.org/ontology/core#totalAwardAmount"
+                    "ref": "vivo:totalAwardAmount"
                 }, 
                 "object": {
                     "filter": "improve_dollar_amount",

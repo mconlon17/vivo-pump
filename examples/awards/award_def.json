@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://vivoweb.org/ontology/core#AwardReceipt",
+        "type": "vivo:AwardReceipt",
         "entity_sparql": "?uri a vivo:AwardReceipt . ",
         "order_by": "name"
     }, 
@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#relates"
+                    "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
@@ -22,7 +22,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "http://vivoweb.org/ontology/core#relates"
+                    "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
@@ -35,7 +35,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#assignedBy"
+                    "ref": "vivo:assignedBy"
                 },
                 "object": {
                     "literal": false,
@@ -47,7 +47,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTimeValue"
+                    "ref": "vivo:dateTimeValue"
                 },
                 "object": {
                     "literal": false,

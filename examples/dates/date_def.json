@@ -2,14 +2,14 @@
     "entity_def": {
         "order_by": "date",
         "entity_sparql": "?uri a vivo:DateTimeValue .",
-        "type": "http://vivoweb.org/ontology/core#DateTimeValue"
+        "type": "vivo:DateTimeValue"
     }, 
     "column_defs": {
-        "Precision": [
+        "precision": [
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTimePrecision"
+                    "ref": "vivo:dateTimePrecision"
                 },
                 "object": {
                     "literal": false,
@@ -17,11 +17,11 @@
                 }
             }
         ],
-        "Date": [
+        "date": [
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivoweb.org/ontology/core#dateTime"
+                    "ref": "vivo:dateTime"
                 },
                 "object": {
                     "literal": true,

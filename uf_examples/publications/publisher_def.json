@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "type": "http://xmlns.com/foaf/0.1/Organization", 
+        "type": "vivo:Publisher",
         "entity_sparql": "?uri a vivo:Publisher .",
         "order_by": "name"
     }, 
@@ -9,7 +9,7 @@
             {
                 "predicate": {
                     "single": true, 
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 }, 
                 "object": {
                     "literal": true
@@ -25,7 +25,7 @@
                         "agent", 
                         "org"
                     ], 
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "ref": "rdf:type"
                 }, 
                 "object": {
                     "literal": false, 
