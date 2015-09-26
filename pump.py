@@ -175,8 +175,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
     def __do_update(self):
         """
-        read updates from a spreadsheet filename.  Compare to data in VIVO.  Generate add and sub
-        rdf as necessary to process requested changes
+        For each row, process each column.  Compare to data in VIVO.  Generate add and sub
+        rdf as necessary to process requested add, change, delete
         """
         from rdflib import URIRef, RDF
         from vivopump import new_uri, prepare_column_values, get_step_triples, PathLengthException
@@ -211,7 +211,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
                 if len(column_def) > 3:
                     raise PathLengthException(
-                        "Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
+                        "ERROR: Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
                     self.__do_three_step_update(row, column_name, uri, column_def, data_update)
