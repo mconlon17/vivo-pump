@@ -1,0 +1,109 @@
+{
+    "entity_def": {
+        "type": "vivo:AdvisingRelationship",
+        "entity_sparql": "?uri a vivo:AdvisingRelationship . ",
+        "order_by": "name"
+    },
+    "closure_defs": {
+
+    },
+    "column_defs": {
+        "advisor": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?advisee a foaf:Person .",
+                    "enum": "data/orcid_enum.txt"
+                }
+            }
+        ],
+        "advisee": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?advisee a foaf:Person .",
+                    "enum": "data/orcid_enum.txt"
+                }
+            }
+        ],
+        "subject_areas": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:hasSubjectArea"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "data/concept_enum.txt"
+                }
+            }
+        ],
+        "degree": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "qualifier": "?degree a vivo:AcademicDegree .",
+                    "enum": "data/degree_enum.txt"
+                }
+            }
+        ],
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval",
+                    "name": "teaching_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:start"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "data/date_enum.txt"
+                }
+            }
+        ],
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval",
+                    "name": "teaching_period"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:end"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "data/date_enum.txt"
+                }
+            }
+        ]
+    }
+}

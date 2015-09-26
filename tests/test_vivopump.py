@@ -1113,6 +1113,12 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         self.assertTrue(len(add) == 0 and len(sub) == 4)
 
 
+class ClosureTestCase(unittest.TestCase):
+    def test_read_closure(self):
+        Pump(json_def_filename="data/mentoring_def.json")
+        self.assertTrue(True)
+
+
 class PumpRemoveTestCase(unittest.TestCase):
     def test_uri_not_found_case(self):
         from testgraph import TestGraph
