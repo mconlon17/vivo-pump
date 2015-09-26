@@ -331,3 +331,5 @@ value in the returned spreadsheet. Improving `testgraph.py` and PumpUpdateDataTe
 case now pass.
 * **2015-09-25** Begin mentoring example.  All cfg updated for 1.6 ontology prefixes.  All json updated to use
 prefixes.  Person example complete.
+* **2015-09-26** New testcase for reading defs with empty columns -- useful for adding empty columns to get
+results -- columns such as notes or remove

@@ -462,7 +462,7 @@ def read_update_def(filename, prefix):
         :param a: update_def
         :return None
         """
-        names = [y[x]['object'].get('name', '') for y in a['column_defs'].values() for x in range(len(y))]
+        names = [y[x].get('object', None).get('name', '') for y in a['column_defs'].values() for x in range(len(y))]
         col_names = a['column_defs'].keys()
         for name in col_names:
             if name in names:

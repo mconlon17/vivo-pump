@@ -724,6 +724,10 @@ class PumpUpdateCallTestCase(unittest.TestCase):
         p.update()
         self.assertTrue("8984374104" in str(p.update_data))  # Using the injected data, not default
 
+    def test_empty_column_defs(self):
+        Pump(json_def_filename="data/building_empty_column_def.json", verbose=True)
+        self.assertTrue(True)  # No error thrown reading def
+
     def test_missing_uri_column_inject(self):
         p = Pump()
         p.update_data = {1: {u'overview': u'None'}}

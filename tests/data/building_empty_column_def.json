@@ -1,0 +1,59 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a vivo:Building .", 
+        "type": "vivo:Building"
+    }, 
+    "column_defs": {
+        "abbreviation": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:abbreviation"
+                }, 
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "remove": [
+        ],
+        "url": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "vivo:webpage"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "vivo:URLLink", 
+                    "name": "weburi", 
+                    "label": "Home Page"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:linkURI"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "rdfs:label"
+                }, 
+                "object": {
+                    "filter": "improve_title",
+                    "literal": true,
+                    "lang": "en-US"
+                }
+            }
+        ]
+    }
+}
