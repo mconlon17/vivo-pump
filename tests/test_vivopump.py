@@ -1115,8 +1115,9 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
 class ClosureTestCase(unittest.TestCase):
     def test_read_closure(self):
-        Pump(json_def_filename="data/mentoring_def.json")
-        self.assertTrue(True)
+        p = Pump(json_def_filename="data/teaching_def.json")
+        print p.update_def
+        self.assertTrue(True)  # No exception thrown when reading a def with a closure
 
 
 class PumpRemoveTestCase(unittest.TestCase):
