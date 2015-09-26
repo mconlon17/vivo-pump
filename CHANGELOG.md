@@ -336,3 +336,4 @@ results -- columns such as notes or remove.  Begin work on closures -- additiona
 alternate paths to entities.  New ClosureTestCase closures.  Executing the closures allow us to reuse the columns and create "triangular"
 assertions -- assertions between entities created earlier in an update.  Example:  A leads to B and A leads to 
 C.  Closures allow us to make assertions between B and C by creating paths from A to B to C (or A to C to B).
+Closure processing added to __do_update.

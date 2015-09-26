@@ -201,7 +201,11 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                 self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
             entity_uri = uri
 
-            for column_name, column_def in self.update_def['column_defs'].items():
+            #   For this row, process all the column_defs and then process closure defs if any.  Closures allow
+            #   columns to be "reused" providing additional paths from the row entity to entities in the paths.
+
+            for column_name, column_def in self.update_def['column_defs'].items() + \
+                    self.update_def.get('closure_defs', {}).items():
                 if column_name not in data_update:
                     continue  # extra column names are allowed in the spreadsheet for annotation
                 uri = entity_uri
