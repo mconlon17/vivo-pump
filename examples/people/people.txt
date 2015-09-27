@@ -1,52 +1,52 @@
 city	first_name	last_name	display_name	zip	title	home_page	overview	name_suffix	uri	phone	state	street_address	research_areas	country	orcid	middle_name	name_prefix	email	types
-			A DAVIS						http://vivo.school.edu/individual/per-c1738a3a35234a3fdd69550292eba31c										person;agent;thing
-			Ann E. Lane						http://vivo.school.edu/individual/per-64bf178f48371e9b5a75ce594582d20f										person;agent;thing
-			Barbara Frentzen						http://vivo.school.edu/individual/per-a02643cf61736ac28d76e739831fbdeb										person;agent;thing
-	Chrisopher	Barnes	Barnes, Chrisopher P						http://vivo.school.edu/individual/n2503										thing;person;agent;staff
-			Carl J. Pepine						http://vivo.school.edu/individual/per-a2c795d27ebf2ed8c1b1d3ce5d27d556										person;agent;thing
-			Christine Malone						http://vivo.school.edu/individual/per-64d818bf668b0e2fc1dc1f529013f28b										person;agent;thing
-			Cindy L. Merrick						http://vivo.school.edu/individual/per-42fd5f443ca69a4d4efc366360765006										person;agent;thing
-			Claire Baralt						http://vivo.school.edu/individual/per-82b59991e38737307bfb82bd268ddcee										person;agent;thing
-	Michael	Conlon	Conlon, Michael		VIVO Project Director		This demo profile is intended to provide triples for testing the UF 1.6 upgrade, and the new VIVO Pump software.		http://vivo.school.edu/individual/n1133				http://id.loc.gov/authorities/subjects/sh2002000569;http://vivo.school.edu/individual/n7841;http://id.loc.gov/authorities/subjects/sh89005069					mconlon@duraspace.org	fac;person;agent;thing
-			Cynthia Wilson Garvan						http://vivo.school.edu/individual/per-0536910687a12f23b9b31abeff32e0f9										person;agent;thing
-			David R. Nelson						http://vivo.school.edu/individual/per-056b763c06dd3b82b304be943e1c70b9										person;agent;thing
-			Doreen Radjenovic						http://vivo.school.edu/individual/per-68fa03b53a1fe02850d034dafb467b24										person;agent;thing
-			Eileen Handberg-Thurmond						http://vivo.school.edu/individual/per-02df2355bf9965880df85ed15226cc05										person;agent;thing
-			F WEBER						http://vivo.school.edu/individual/per-f45a81cde2324d634a73e6fb350e72b8										person;agent;thing
-			F. D. Eyler						http://vivo.school.edu/individual/per-f255edd3d39f3c417bc1d50fa2dcc615										person;agent;thing
-			Fonda Davis Eyler						http://vivo.school.edu/individual/per-0a6c1806e0f132a596544473cc1e735f										person;agent;thing
-			Fonda Davis Eyler						http://vivo.school.edu/individual/per-974f6f03c4d67646e7dc0a9e62792ea6										person;agent;thing
-			Franco Silvestris						http://vivo.school.edu/individual/per-3203b39c1e24a0c1f895dd41e707b51e										person;agent;thing
-			GENE C. ANDERSON						http://vivo.school.edu/individual/per-609cb48f180468eb32966a5d4ac91766										person;agent;thing
-			Gene Cranston Anderson						http://vivo.school.edu/individual/per-4bb84272ac9d9ad3cbb30eb252cb94ba										person;agent;thing
-	Yan	Gong	Gong, Yan						http://vivo.school.edu/individual/n205										fac;person;agent;thing
-			J GEARING						http://vivo.school.edu/individual/per-f5c3b8d2a5f03c4b09379ed3adc1c1f7										person;agent;thing
-	Manoj	Jadhov	Jadhov, Manoj		Postdoctoral Associate				http://vivo.school.edu/individual/n8066										nfa;thing;pd;agent;person
-			Julie A. Johnson						http://vivo.school.edu/individual/per-9e5e5454847c40281c692a9782ddae70										person;agent;thing
-			K. Wobie						http://vivo.school.edu/individual/per-703c4b7590f31c89f4b931c8f53d24ae										person;agent;thing
-			Kathleen Wobie						http://vivo.school.edu/individual/per-5fba1d2b60a5aba21a258d59a0658cf2										person;agent;thing
-			M Behnke						http://vivo.school.edu/individual/per-54c92cf993f5eb52feda19aa109a14ad										person;agent;thing
-			M. Behnke						http://vivo.school.edu/individual/per-264982d236529ed81aa03915b83b0913										person;agent;thing
-	Jonathan	Markow	Markow, Jonathan		Chief Strategy Officer				http://vivo.school.edu/individual/n3078										person;thing;agent;staff
-			Martin Rodriguez						http://vivo.school.edu/individual/per-9d1ab9a0b7e630027f5b019fdd04c778										person;agent;thing
-			Marylou Behnke						http://vivo.school.edu/individual/per-caee90d514bd6bc3d20414262b40f976										person;agent;thing
-	Forest	Masters	Masters, Forest						http://vivo.school.edu/individual/n3413										fac;person;agent;thing
-			Melissa Rawley-Payne						http://vivo.school.edu/individual/per-a9bff8bcf29e2d49b05a3b8fca345c16										person;agent;thing
-			Michael J. Clare-Salzler						http://vivo.school.edu/individual/per-ba6babb5ad4da4d2c6217710dac68c14										person;agent;thing
-			N. S. Woods						http://vivo.school.edu/individual/per-18bd5ea85107a7498919d7758f7a0e0c										person;agent;thing
-			Nanci Stewart Woods						http://vivo.school.edu/individual/per-01f27e73b136483540bf617071239e81										person;agent;thing
-			Nanci Stewart Woods						http://vivo.school.edu/individual/per-8761f976173875d15c9accb3a70a0d25										person;agent;thing
-			O. Q. Casanova						http://vivo.school.edu/individual/per-e422870b136ea00bd055cc3c7d131f45										person;agent;thing
-	Jane	Pendergast	Pendergast, Jane					III	http://vivo.school.edu/individual/n3423							Meriweather	Dr		person;thing;agent;fac
-			Peter Volkers						http://vivo.school.edu/individual/per-7240adf71b83c64095b9244acfcb566b										person;agent;thing
-			Peter Zellig						http://vivo.school.edu/individual/per-0f8b6308a950cff00e59e866546aed74										person;agent;thing
-			Ralph C. Williams						http://vivo.school.edu/individual/per-73d94d2ea488819ef237af44a9387ac8										person;agent;thing
-			Rhonda Cooper-Dehoff						http://vivo.school.edu/individual/per-b709943461f5a3dd8a30bee03fe5b5ea										fac;person;agent;thing
-			Ronald G. Marks						http://vivo.school.edu/individual/per-7e04f1ce7c9cbe17820b5d9263d9150c										person;agent;thing
-			Ronald G. Thomas						http://vivo.school.edu/individual/per-fcb689e7530173d2fac8bcc9c174cd34										person;agent;thing
-			Sharon M. Dabrow						http://vivo.school.edu/individual/per-618e0420edec97278565af74d3b9cb50										person;agent;thing
-			Sheau-Huey Chiu						http://vivo.school.edu/individual/per-8d153fbc2119e3845fa6d9fdc0be9757										person;agent;thing
-			Stephen J. Ruberg						http://vivo.school.edu/individual/per-9142c800768e0d73ff7b9f12faa0f508										person;agent;thing
-			W.Bruce Yancey						http://vivo.school.edu/individual/per-befb96d0aafd5300589e2a6aad0f183f										person;agent;thing
-			William Cumming						http://vivo.school.edu/individual/per-c04b07a2a79e2ff453021661e6643d99										person;agent;thing
-	Homer	Willis	Willis, Homer						http://vivo.school.edu/individual/n2524										person;thing;agent;staff
+			A DAVIS						http://vivo.school.edu/individual/per-c1738a3a35234a3fdd69550292eba31c										thing;agent;person;bfo1;bfo2;bfo4
+			Ann E. Lane						http://vivo.school.edu/individual/per-64bf178f48371e9b5a75ce594582d20f										thing;agent;person;bfo1;bfo2;bfo4
+			Barbara Frentzen						http://vivo.school.edu/individual/per-a02643cf61736ac28d76e739831fbdeb										thing;agent;person;bfo1;bfo2;bfo4
+	Chrisopher	Barnes	Barnes, Chrisopher P						http://vivo.school.edu/individual/n2503										person;agent;thing;bfo1;bfo2;bfo4;staff
+			Carl J. Pepine						http://vivo.school.edu/individual/per-a2c795d27ebf2ed8c1b1d3ce5d27d556										thing;agent;person;bfo1;bfo2;bfo4
+			Christine Malone						http://vivo.school.edu/individual/per-64d818bf668b0e2fc1dc1f529013f28b										thing;agent;person;bfo1;bfo2;bfo4
+			Cindy L. Merrick						http://vivo.school.edu/individual/per-42fd5f443ca69a4d4efc366360765006										thing;agent;person;bfo1;bfo2;bfo4
+			Claire Baralt						http://vivo.school.edu/individual/per-82b59991e38737307bfb82bd268ddcee										thing;agent;person;bfo1;bfo2;bfo4
+	Michael	Conlon	Conlon, Michael		VIVO Project Director		This demo profile is intended to provide triples for testing the UF 1.6 upgrade, and the new VIVO Pump software.		http://vivo.school.edu/individual/n1133				http://id.loc.gov/authorities/subjects/sh2002000569;http://vivo.school.edu/individual/n7841;http://id.loc.gov/authorities/subjects/sh89005069					mconlon@duraspace.org	person;agent;thing;bfo1;fac;bfo2;bfo4
+			Cynthia Wilson Garvan						http://vivo.school.edu/individual/per-0536910687a12f23b9b31abeff32e0f9										thing;agent;person;bfo1;bfo2;bfo4
+			David R. Nelson						http://vivo.school.edu/individual/per-056b763c06dd3b82b304be943e1c70b9										thing;agent;person;bfo1;bfo2;bfo4
+			Doreen Radjenovic						http://vivo.school.edu/individual/per-68fa03b53a1fe02850d034dafb467b24										thing;agent;person;bfo1;bfo2;bfo4
+			Eileen Handberg-Thurmond						http://vivo.school.edu/individual/per-02df2355bf9965880df85ed15226cc05										thing;agent;person;bfo1;bfo2;bfo4
+			F WEBER						http://vivo.school.edu/individual/per-f45a81cde2324d634a73e6fb350e72b8										thing;agent;person;bfo1;bfo2;bfo4
+			F. D. Eyler						http://vivo.school.edu/individual/per-f255edd3d39f3c417bc1d50fa2dcc615										thing;agent;person;bfo1;bfo2;bfo4
+			Fonda Davis Eyler						http://vivo.school.edu/individual/per-0a6c1806e0f132a596544473cc1e735f										thing;agent;person;bfo1;bfo2;bfo4
+			Fonda Davis Eyler						http://vivo.school.edu/individual/per-974f6f03c4d67646e7dc0a9e62792ea6										thing;agent;person;bfo1;bfo2;bfo4
+			Franco Silvestris						http://vivo.school.edu/individual/per-3203b39c1e24a0c1f895dd41e707b51e										thing;agent;person;bfo1;bfo2;bfo4
+			GENE C. ANDERSON						http://vivo.school.edu/individual/per-609cb48f180468eb32966a5d4ac91766										thing;agent;person;bfo1;bfo2;bfo4
+			Gene Cranston Anderson						http://vivo.school.edu/individual/per-4bb84272ac9d9ad3cbb30eb252cb94ba										thing;agent;person;bfo1;bfo2;bfo4
+	Yan	Gong	Gong, Yan						http://vivo.school.edu/individual/n205										person;agent;thing;bfo1;fac;bfo2;bfo4
+			J GEARING						http://vivo.school.edu/individual/per-f5c3b8d2a5f03c4b09379ed3adc1c1f7										thing;agent;person;bfo1;bfo2;bfo4
+	Manoj	Jadhov	Jadhov, Manoj		Postdoctoral Associate				http://vivo.school.edu/individual/n8066										nfa;person;agent;thing;pd;bfo1;bfo2;bfo4
+			Julie A. Johnson						http://vivo.school.edu/individual/per-9e5e5454847c40281c692a9782ddae70										thing;agent;person;bfo1;bfo2;bfo4
+			K. Wobie						http://vivo.school.edu/individual/per-703c4b7590f31c89f4b931c8f53d24ae										thing;agent;person;bfo1;bfo2;bfo4
+			Kathleen Wobie						http://vivo.school.edu/individual/per-5fba1d2b60a5aba21a258d59a0658cf2										thing;agent;person;bfo1;bfo2;bfo4
+			M Behnke						http://vivo.school.edu/individual/per-54c92cf993f5eb52feda19aa109a14ad										thing;agent;person;bfo1;bfo2;bfo4
+			M. Behnke						http://vivo.school.edu/individual/per-264982d236529ed81aa03915b83b0913										thing;agent;person;bfo1;bfo2;bfo4
+	Jonathan	Markow	Markow, Jonathan		Chief Strategy Officer				http://vivo.school.edu/individual/n3078										thing;agent;person;bfo1;bfo2;bfo4;staff
+			Martin Rodriguez						http://vivo.school.edu/individual/per-9d1ab9a0b7e630027f5b019fdd04c778										thing;agent;person;bfo1;bfo2;bfo4
+			Marylou Behnke						http://vivo.school.edu/individual/per-caee90d514bd6bc3d20414262b40f976										thing;agent;person;bfo1;bfo2;bfo4
+	Forest	Masters	Masters, Forest						http://vivo.school.edu/individual/n3413										person;agent;thing;bfo1;fac;bfo2;bfo4
+			Melissa Rawley-Payne						http://vivo.school.edu/individual/per-a9bff8bcf29e2d49b05a3b8fca345c16										thing;agent;person;bfo1;bfo2;bfo4
+			Michael J. Clare-Salzler						http://vivo.school.edu/individual/per-ba6babb5ad4da4d2c6217710dac68c14										thing;agent;person;bfo1;bfo2;bfo4
+			N. S. Woods						http://vivo.school.edu/individual/per-18bd5ea85107a7498919d7758f7a0e0c										thing;agent;person;bfo1;bfo2;bfo4
+			Nanci Stewart Woods						http://vivo.school.edu/individual/per-01f27e73b136483540bf617071239e81										thing;agent;person;bfo1;bfo2;bfo4
+			Nanci Stewart Woods						http://vivo.school.edu/individual/per-8761f976173875d15c9accb3a70a0d25										thing;agent;person;bfo1;bfo2;bfo4
+			O. Q. Casanova						http://vivo.school.edu/individual/per-e422870b136ea00bd055cc3c7d131f45										thing;agent;person;bfo1;bfo2;bfo4
+	Jane	Pendergast	Pendergast, Jane					III	http://vivo.school.edu/individual/n3423							Meriweather	Dr		thing;agent;person;bfo1;fac;bfo2;bfo4
+			Peter Volkers						http://vivo.school.edu/individual/per-7240adf71b83c64095b9244acfcb566b										thing;agent;person;bfo1;bfo2;bfo4
+			Peter Zellig						http://vivo.school.edu/individual/per-0f8b6308a950cff00e59e866546aed74										thing;agent;person;bfo1;bfo2;bfo4
+			Ralph C. Williams						http://vivo.school.edu/individual/per-73d94d2ea488819ef237af44a9387ac8										thing;agent;person;bfo1;bfo2;bfo4
+			Rhonda Cooper-Dehoff						http://vivo.school.edu/individual/per-b709943461f5a3dd8a30bee03fe5b5ea										person;agent;thing;bfo1;fac;bfo2;bfo4
+			Ronald G. Marks						http://vivo.school.edu/individual/per-7e04f1ce7c9cbe17820b5d9263d9150c										thing;agent;person;bfo1;bfo2;bfo4
+			Ronald G. Thomas						http://vivo.school.edu/individual/per-fcb689e7530173d2fac8bcc9c174cd34										thing;agent;person;bfo1;bfo2;bfo4
+			Sharon M. Dabrow						http://vivo.school.edu/individual/per-618e0420edec97278565af74d3b9cb50										thing;agent;person;bfo1;bfo2;bfo4
+			Sheau-Huey Chiu						http://vivo.school.edu/individual/per-8d153fbc2119e3845fa6d9fdc0be9757										thing;agent;person;bfo1;bfo2;bfo4
+			Stephen J. Ruberg						http://vivo.school.edu/individual/per-9142c800768e0d73ff7b9f12faa0f508										thing;agent;person;bfo1;bfo2;bfo4
+			W.Bruce Yancey						http://vivo.school.edu/individual/per-befb96d0aafd5300589e2a6aad0f183f										thing;agent;person;bfo1;bfo2;bfo4
+			William Cumming						http://vivo.school.edu/individual/per-c04b07a2a79e2ff453021661e6643d99										thing;agent;person;bfo1;bfo2;bfo4
+	Homer	Willis	Willis, Homer						http://vivo.school.edu/individual/n2524										thing;agent;person;bfo1;bfo2;bfo4;staff

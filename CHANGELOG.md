@@ -338,4 +338,4 @@ allow us to reuse the columns and create "triangular" assertions -- assertions b
 in an update.  Example:  A leads to B and A leads to  C.  Closures allow us to make assertions between B and C 
 by creating paths from A to B to C (or A to C to B). Closure processing added to __do_update. Closure testing
 continues.
-* **2015-09-27** Closure documentation in the wiki.
+* **2015-09-27** Closure documentation in the wiki. improve examples/people/person_types.txt
