@@ -339,3 +339,5 @@ in an update.  Example:  A leads to B and A leads to  C.  Closures allow us to m
 by creating paths from A to B to C (or A to C to B). Closure processing added to __do_update. Closure testing
 continues.
 * **2015-09-27** Closure documentation in the wiki. improve examples/people/person_types.txt
+* **2015-09-28** Remove use of UF ontology extensions and UF domain addresses from test cases.  Now all test
+cases use vivo.school.edu as the domain name.
