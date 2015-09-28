@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "type": "foaf:Organization", 
-        "entity_sparql": "?uri a foaf:Organization .",
+        "entity_sparql": "?uri a foaf:Organization .  ?uri a ufVivo:UFCurrentEntity .",
         "order_by": "name"
     }, 
     "column_defs": {
