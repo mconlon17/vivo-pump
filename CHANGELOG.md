@@ -340,4 +340,6 @@ by creating paths from A to B to C (or A to C to B). Closure processing added to
 continues.
 * **2015-09-27** Closure documentation in the wiki. improve examples/people/person_types.txt
 * **2015-09-28** Remove use of UF ontology extensions and UF domain addresses from test cases.  Now all test
-cases use vivo.school.edu as the domain name.
+cases use vivo.school.edu as the domain name.  Closures working.  No code changes -- just getting the test
+case and def file writen properly. See `test_normal_closure`.  Closure example added to description of 
+closures in the wiki pages.

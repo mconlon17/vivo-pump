@@ -49,17 +49,17 @@ class TestGraph(Graph):
 
         #   Date
 
-        self.add((URIRef('http://vivo.school.edu/individual/n5142'), RDF.type,
+        self.add((URIRef("http://vivo.school.edu/individual/n8968236376"), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
-        self.add((URIRef('http://vivo.school.edu/individual/n5142'),
+        self.add((URIRef("http://vivo.school.edu/individual/n8968236376"),
                   URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
                   Literal("2012-01-01", datatype=XSD.datetime)))
 
         #   Another Date
 
-        self.add((URIRef('http://vivo.school.edu/individual/n2025'), RDF.type,
+        self.add((URIRef('http://vivo.school.edu/individual/n2871342684'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
-        self.add((URIRef('http://vivo.school.edu/individual/n2025'),
+        self.add((URIRef('http://vivo.school.edu/individual/n2871342684'),
                   URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
                   Literal("2013-01-01", datatype=XSD.datetime)))
 

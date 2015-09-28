@@ -1120,6 +1120,7 @@ class ClosureTestCase(unittest.TestCase):
 
     def test_normal_closure(self):
         from testgraph import TestGraph
+        from rdflib import URIRef
         p = Pump(json_def_filename="data/teaching_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'',
@@ -1129,7 +1130,10 @@ class ClosureTestCase(unittest.TestCase):
                              u'end_date': u'2013'}}
         print p.summarize()
         [add, sub] = p.update()
-        self.assertTrue(len(add) ==6 and len(sub) == 0)  # Eventually will test returned triples
+        self.assertTrue(len(add) == 8 and len(sub) == 0 and
+                        (URIRef("http://vivo.school.edu/individual/n25674"),
+                         URIRef("http://purl.obolibrary.org/obo/BFO_0000056"),
+                         URIRef("http://vivo.school.edu/individual/n7501")) in add)
 
 
 class PumpRemoveTestCase(unittest.TestCase):

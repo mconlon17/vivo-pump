@@ -14,8 +14,7 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Person",
-                    "name": "instructor",
-                    "qualifier" : "?instructor obo:RO_0000053 ?uri ."
+                    "name": "instructor"
                 }
             },
             {
