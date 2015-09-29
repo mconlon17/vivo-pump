@@ -1,6 +1,6 @@
 {
     "entity_def": {
-        "order_by": "ccn",
+        "order_by": "sponsorid",
         "entity_sparql": "?uri a vivo:FundingOrganization . ?uri ufvivo:sponsorID ?sponsorid .",
         "type": "http://xmlns.com/foaf/0.1/Organization"
     },
