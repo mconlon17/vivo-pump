@@ -1,7 +1,7 @@
 {
     "entity_def": {
         "order_by": "ccn",
-        "entity_sparql": "?uri a foaf:Organization . ?uri uf:sponsorId ?sponsorid .",
+        "entity_sparql": "?uri a vivo:FundingOrganization . ?uri ufvivo:sponsorID ?sponsorid .",
         "type": "http://xmlns.com/foaf/0.1/Organization"
     },
     "column_defs": {
