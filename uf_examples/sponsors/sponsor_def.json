@@ -1,15 +1,15 @@
 {
     "entity_def": {
-        "order_by": "sponsorid",
-        "entity_sparql": "?uri a foaf:Organization . ?uri uf:sponsorId ?sponsorid .",
-        "type": "foaf:Organization"
+        "order_by": "ccn",
+        "entity_sparql": "?uri a vivo:FundingOrganization . ?uri ufvivo:sponsorID ?sponsorid .",
+        "type": "http://xmlns.com/foaf/0.1/Organization"
     },
     "column_defs": {
         "sponsorid": [
             {
                 "predicate": {
                     "single": true,
-                    "ref": "uf:sponsorId"
+                    "ref": "http://vivo.school.edu/ontology/uf-extension#sponsorId"
                 },
                 "object": {
                     "literal": true
@@ -23,12 +23,9 @@
                     "include": [
                         "thing",
                         "agent",
-                        "org",
-                        "bfo1",
-                        "bfo2",
-                        "bfo4"
+                        "org"
                     ],
-                    "ref": "rdf:type"
+                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
                 },
                 "object": {
                     "literal": false,
@@ -40,30 +37,7 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "rdfs:label"
-                },
-                "object": {
-                    "literal": true
-                }
-            }
-        ],
-        "date_harvested": [
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "uf:dateHarvested"
-                },
-                "object": {
-                    "literal": true,
-                    "datatype": "xsd:datetime"
-                }
-            }
-        ],
-        "harvested_by": [
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "uf:harvestedBy"
+                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
                 },
                 "object": {
                     "literal": true
