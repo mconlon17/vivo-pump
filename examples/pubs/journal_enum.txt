@@ -1,0 +1,33 @@
+short	vivo
+American Journal of Obstetrics and Gynecology	http://vivo.school.edu/individual/jrnl-3127090727ee3f4401d0c05b41174045
+Archives of Pathology and Laboratory Medicine	http://vivo.school.edu/individual/jrnl-e4c3b019653f946d50412a5f0e60fecb
+Clinical Cardiology	http://vivo.school.edu/individual/jrnl-9d8dccc9819ebf08671e3c9366264a0f
+Clinical Immunology and Immunopathology	http://vivo.school.edu/individual/jrnl-865ae40b464c3209a0b1fb8dc2906d0f
+Clinical Obstetrics and Gynecology	http://vivo.school.edu/individual/jrnl-ba2873727ee9d0e3227dcc48f2f05951
+Clinical and Translational Science	http://vivo.school.edu/individual/jrnl-423a1099b1a9207e4ecdb2183c00c2ff
+Computational Statistics and Data Analysis	http://vivo.school.edu/individual/jrnl-a54416da4baaa7cc659a8773383af821
+Computers in nursing	http://vivo.school.edu/individual/jrnl-ea6307191edbb0e7fbd8b97e2fc357ba
+Controlled Clinical Trials	http://vivo.school.edu/individual/jrnl-5ec536c23384e4790cc1f185b45f62a0
+Hortscience	http://vivo.school.edu/individual/n1802
+Infant Behavior and Development	http://vivo.school.edu/individual/jrnl-ccc85388502093d027022a8cb85e57a0
+Journal of Adolescent Health	http://vivo.school.edu/individual/jrnl-8f15e877642d43a0fd337c2d98dffd13
+Journal of Analytical Toxicology	http://vivo.school.edu/individual/jrnl-32b5352b7d1226fb8a4111e4b6e55e66
+Journal of Applied Physiology	http://vivo.school.edu/individual/jrnl-a46b66cb0bce7b54773989a28592181e
+Journal of Developmental and Behavioral Pediatrics	http://vivo.school.edu/individual/jrnl-1fe4d1faffa17283b69c18cbf9506b45
+Journal of Drug Issues	http://vivo.school.edu/individual/jrnl-bbb48d1314e319e7b0d9c6fda9ad9f34
+Journal of Forensic Sciences	http://vivo.school.edu/individual/jrnl-c4e73c509531c33f53312d198de29121
+Journal of Nursing Measurement	http://vivo.school.edu/individual/jrnl-3850b803dcbe482d457c128deb12718d
+Journal of Pediatric Gastroenterology and Nutrition	http://vivo.school.edu/individual/jrnl-6e26ff8f855dcc51e3e56d159f4c9e3c
+Journal of Pediatrics	http://vivo.school.edu/individual/jrnl-9d157cb76bf72f6863ccaa909b8f3559
+Journal of the American College of Cardiology	http://vivo.school.edu/individual/jrnl-7a2c78c94967e3f21649865c3f4fd719
+Maternal-child nursing journal	http://vivo.school.edu/individual/jrnl-371e0f6776d8751faec0f04b031dac72
+Neurotoxicology and Teratology	http://vivo.school.edu/individual/jrnl-d61a3891a5286c37b961d7e7e39152ef
+Nuclear Technology Journal	http://vivo.school.edu/individual/n565
+Nursing Research	http://vivo.school.edu/individual/jrnl-2f7adae714386fc9cd9715be23255a5b
+Pediatric Research	http://vivo.school.edu/individual/jrnl-5fa9cdffde5388bd80dae526dca0a68a
+Pediatrics	http://vivo.school.edu/individual/jrnl-46c70a888c24b23f4c2992756de802c4
+Phillip Journal	http://vivo.school.edu/individual/jrnl-3eb998f47b24b07c77577c17bc311b0d
+Scandinavian Journal of Caring Sciences	http://vivo.school.edu/individual/jrnl-78c78db7289c13f988ed75f0a1aa094a
+Statistics in Medicine	http://vivo.school.edu/individual/jrnl-28d54b492b2e93610126a1e6a88fc145
+The Journal of Prosthetic Dentistry	http://vivo.school.edu/individual/jrnl-8485cf547b0c135e7265801e0209f9e3
+The Journal of the Florida Medical Association	http://vivo.school.edu/individual/jrnl-0649b98b36c500429086772a24a01530
