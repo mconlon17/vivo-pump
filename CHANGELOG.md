@@ -345,3 +345,4 @@ case and def file writen properly. See `test_normal_closure`.  Closure example a
 closures in the wiki pages.  Update connection strings and prefix for `uf_examples/orgs`
 * **2015-09-30** Progress on `examples/pubs`
 * **2015-10-01** Design work on set element column.  Issue #44
+* **2015-10-02** Ready for merge enhancement.
