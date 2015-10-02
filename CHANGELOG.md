@@ -344,3 +344,4 @@ cases use vivo.school.edu as the domain name.  Closures working.  No code change
 case and def file writen properly. See `test_normal_closure`.  Closure example added to description of 
 closures in the wiki pages.  Update connection strings and prefix for `uf_examples/orgs`
 * **2015-09-30** Progress on `examples/pubs`
+* **2015-10-01** Design work on set element column.  Issue #44
