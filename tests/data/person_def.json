@@ -1,8 +1,8 @@
 {
     "entity_def": {
         "order_by": "name", 
-        "entity_sparql": "?uri a vivo:FacultyMember .",
-        "type": "vivo:FacultyMember"
+        "entity_sparql": "?uri a foaf:Person .",
+        "type": "foaf:Person"
     }, 
     "column_defs": {
         "types": [
@@ -14,6 +14,18 @@
                 "object": {
                     "literal": false,
                     "enum": "data/people_types.txt"
+                }
+            }
+        ],
+        "any1": [
+            {
+                "predicate": {
+                    "single": "boolean",
+                    "ref": "vivo:hasResearchArea"
+                },
+                "object": {
+                    "literal": false,
+                    "value": "http://any1"
                 }
             }
         ],

@@ -1114,6 +1114,15 @@ class PumpUpdateDataTestCase(unittest.TestCase):
 
 
 class BooleanColumnTestCase(unittest.TestCase):
+    def test_summarize(self):
+        from testgraph import TestGraph
+        p = Pump(json_def_filename="data/person_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        print p.update_def
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n1723097935',
+                             u'any1': u'1'}}
+        print p.summarize()  # No exception thrown by summarize
+
     def test_add(self):
         from testgraph import TestGraph
         from rdflib import URIRef
