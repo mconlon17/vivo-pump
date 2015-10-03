@@ -467,6 +467,13 @@ def read_update_def(filename, prefix):
         for name in col_names:
             if name in names:
                 raise InvalidDefException(name + " in object and column_defs")
+
+        # Test for boolean value
+
+        for name in col_names:
+            for step in a['column_defs'][name]:
+                if step['predicate']['single'] == 'boolean' and 'value' not in step['object']:
+                    raise InvalidDefException(name + 'is boolean with no value')
         return None
 
     import json
@@ -1504,7 +1511,7 @@ def unique_path(path):
     """
     unique = True
     for elem in path:
-        if not elem['predicate']['single']:
+        if elem['predicate']['single'] != True:
             unique = False
             break
     return unique
@@ -1564,8 +1571,21 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
 
     # Split source data into list, add include values, strip white space
 
-    if step_def['predicate']['single']:
+    if step_def['predicate']['single'] == True:
         column_values = [update_string.strip()]
+    elif step_def['predicate']['single'] == 'boolean':
+
+    #   For boolean predicates the instruction is either '0', '1' or ''.
+
+        update_string = update_string.strip()
+        if update_string == '':
+            column_values = ['']
+        elif update_string == '0' or update_string == 'None' or update_string.lower() == 'false' or \
+                update_string.lower() == 'n' or update_string.lower() == 'no':
+            column_values = ['0']
+        else:
+            column_values = ['1']
+        print "PREP", update_string, step_def['object']['value'], column_values
     else:
         column_values = update_string.split(intra)
         if 'include' in step_def['predicate']:
@@ -1575,7 +1595,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
 
     # Check column values for consistency with single and multi-value attributes
 
-    if step_def['predicate']['single'] and len(column_values) > 1:
+    if step_def['predicate']['single'] == True and len(column_values) > 1:
         raise InvalidDataException(str(row) + str(column_name) +
                                    'Predicate is single-valued, multiple values in source.')
     while '' in column_values:

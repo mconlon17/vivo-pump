@@ -24,8 +24,7 @@
                     "ref": "vivo:hasResearchArea"
                 },
                 "object": {
-                    "literal": false,
-                    "value": "http://any1"
+                    "literal": false
                 }
             }
         ],

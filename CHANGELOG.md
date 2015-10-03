@@ -346,4 +346,5 @@ closures in the wiki pages.  Update connection strings and prefix for `uf_exampl
 * **2015-09-30** Progress on `examples/pubs`
 * **2015-10-01** Design work on set element column.  Issue #44
 * **2015-10-02** Ready for merge enhancement.
-* **2015-10-03** 0.8.0 Adding support for boolean columns.  Add BooleanColumnTestCase to test_vivopump.py
+* **2015-10-03** 0.8.0 Add support for boolean columns.  Add BooleanColumnTestCase to test_vivopump.py.  Add test
+case test_novalue to ReadUpdateDefTestCase.  Add validation test to `validate_update_def`

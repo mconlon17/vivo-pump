@@ -397,7 +397,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                                                      lang=step_def['object'].get('lang', None))))
             self.__do_two_step_update(row, column_name, step_uri, path[1:], data_update)
 
-        elif step_def['predicate']['single']:
+        elif step_def['predicate']['single']  == True:
 
             #   VIVO has 1 or more values for first intermediate, so we need to see if the predicate
             #   is expected to be single
@@ -456,7 +456,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                                   column_name)
             self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
-        elif step_def['predicate']['single']:
+        elif step_def['predicate']['single'] == True:
 
             # VIVO has 1 or more values, so we need to see if the predicate is expected to be single
 
@@ -494,6 +494,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         :param vivo_objs: dict of object Literals keyed by string value of literal
         :return: None
         """
+        from vivopump import make_rdf_term_from_source
 
         # Compare VIVO to Input and update as indicated
 
@@ -501,6 +502,23 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             column_string = unicode(column_values[0])
             if column_string == '':
                 return None  # No action required if spreadsheet value is empty
+
+            #   boolean processing
+
+            elif step_def['predicate']['single'] == 'boolean':
+                if column_string == '1':
+                    if self.verbose:
+                        print "Add boolean value", step_def['object']['value'], "to", str(uri)
+                    self.update_graph.add((uri, step_def['predicate']['ref'],
+                                          make_rdf_term_from_source(step_def['object']['value'], step_def)))
+                else:
+                    if self.verbose:
+                        print "Sub boolean value", step_def['object']['value'], "from", str(uri)
+                    self.update_graph.remove((uri, step_def['predicate']['ref'],
+                                             make_rdf_term_from_source(step_def['object']['value'], step_def)))
+
+            #   None processing
+
             elif column_string == 'None':
                 if self.verbose:
                     print "Remove", column_name, "from", str(uri)

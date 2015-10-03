@@ -137,6 +137,11 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             update_def = read_update_def('data/grant_invalid_def.json', prefix=ReadUpdateDefTestCase.prefix)
             print update_def
 
+    def test_novalue_def(self):
+        with self.assertRaises(InvalidDefException):
+            update_def = read_update_def('data/person_novalue_def.json', prefix=ReadUpdateDefTestCase.prefix)
+            print update_def
+
     def test_pathlength_def(self):
         with self.assertRaises(PathLengthException):
             p = Pump(json_def_filename='data/grant_invalidpathlength_def.json')
@@ -1128,13 +1133,14 @@ class BooleanColumnTestCase(unittest.TestCase):
         from rdflib import URIRef
         p = Pump(json_def_filename="data/person_def.json", verbose=True)
         p.original_graph = TestGraph()
+        print p.update_def
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n1723097935',
-                             u'any1': u'1'}}
+                             u'any1': u'y'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 1 and len(sub) == 0 and
                         (URIRef("http://vivo.school.edu/individual/n1723097935"),
                          URIRef("http://vivoweb.org/ontology/core#hasResearchArea"),
-                         URIRef("http://any1")) in sub)
+                         URIRef("http://any1")) in add)
 
     def test_remove(self):
         from testgraph import TestGraph
@@ -1142,7 +1148,7 @@ class BooleanColumnTestCase(unittest.TestCase):
         p = Pump(json_def_filename="data/person_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n25674',
-                             u'any1': u'None'}}
+                             u'any1': u'n'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 1 and
                         (URIRef("http://vivo.school.edu/individual/n25674"),
