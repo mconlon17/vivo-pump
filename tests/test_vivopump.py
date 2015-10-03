@@ -1113,6 +1113,34 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         self.assertTrue(len(add) == 0 and len(sub) == 4)
 
 
+class BooleanColumnTestCase(unittest.TestCase):
+    def test_add(self):
+        from testgraph import TestGraph
+        from rdflib import URIRef
+        p = Pump(json_def_filename="data/person_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n1723097935',
+                             u'any1': u'1'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 1 and len(sub) == 0 and
+                        (URIRef("http://vivo.school.edu/individual/n1723097935"),
+                         URIRef("http://vivoweb.org/ontology/core#hasResearchArea"),
+                         URIRef("http://any1")) in sub)
+
+    def test_remove(self):
+        from testgraph import TestGraph
+        from rdflib import URIRef
+        p = Pump(json_def_filename="data/person_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n25674',
+                             u'any1': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 1 and
+                        (URIRef("http://vivo.school.edu/individual/n25674"),
+                         URIRef("http://vivoweb.org/ontology/core#hasResearchArea"),
+                         URIRef("http://any1")) in sub)
+
+
 class ClosureTestCase(unittest.TestCase):
     def test_read_closure(self):
         Pump(json_def_filename="data/teaching_def.json", verbose=True)
