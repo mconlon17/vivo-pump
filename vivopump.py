@@ -10,6 +10,7 @@ __version__ = "0.8.0"
 import csv
 import string
 import random
+import sys
 
 
 class InvalidDefException(Exception):
@@ -302,7 +303,8 @@ def get_vivo_sponsorid(parms):
     :param: parms: vivo_query parms
     :return: dictionary of uri keyed by sponsorid
     """
-    query = "select ?uri ?sponsorid where {?uri uf:sponsorId ?sponsorid .}"
+
+    query = "select ?uri ?sponsorid where {?uri a vivo:FundingOrganization . ?uri ufvivo:sponsorID ?sponsorid .}"
     a = vivo_query(query, parms)
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
