@@ -350,3 +350,6 @@ closures in the wiki pages.  Update connection strings and prefix for `uf_exampl
 case test_novalue to ReadUpdateDefTestCase.  Add validation test to `validate_update_def`
 * **2015-10-04** Remove the data directory.  This is no longer used.  data for test cases is found as a sub
 directory of the tests directory.
+* **2015-10-05** examples/grants updated with closures for investigator and added AdminRole for department.  
+examples/teaching updated to provide closure for instructor and course.  examples/education updated to provide
+EducationalProcess and closures.  All need testing.

@@ -9,14 +9,26 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "vivo:relates"
+                    "ref": "obo:RO_0002353"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?person a foaf:Person .",
+                    "type": "vivo:EducationalProcess",
+                    "name": "educ_proc"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000057",
+                    "qualifier": "?recipient a foaf:Person ."
+                },
+                "object": {
+                    "literal": false,
+                    "name": "recipient",
                     "enum": "person_enum.txt"
                 }
-            }
+            },
         ],
         "degree": [
             {
@@ -34,20 +46,55 @@
         "school": [
             {
                 "predicate": {
-                    "single": true,
-                    "ref": "vivo:assignedBy"
+                    "single": false,
+                    "ref": "obo:RO_0002353"
                 },
                 "object": {
                     "literal": false,
+                    "type": "vivo:EducationalProcess",
+                    "name": "educ_proc"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000057",
+                    "qualifier": "?org a foaf:Organization ."
+                },
+                "object": {
+                    "literal": false,
+                    "name": "org",
                     "enum": "school_enum.txt"
                 }
-            }
+            },
         ],
         "date": [
             {
                 "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0002353"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:EducationalProcess",
+                    "name": "educ_proc"
+                }
+            },
+            {
+                "predicate": {
                     "single": true,
-                    "ref": "vivo:dateTimeValue"
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval",
+                    "name": "awarded_date"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:start"
                 },
                 "object": {
                     "literal": false,
@@ -64,6 +111,32 @@
                 "object": {
                     "literal": true,
                     "enum": "field_enum.txt"
+                }
+            }
+        ]
+    },
+    "closure_defs": {
+        "person": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "person_enum.txt"
+                }
+            }
+        ],
+        "school": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:assignedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "school_enum.txt"
                 }
             }
         ]

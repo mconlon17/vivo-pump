@@ -49,18 +49,7 @@
                 "object": {
                     "literal": false,
                     "type": "vivo:DateTimeValue",
-                    "name": "start"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vivo:dateTime"
-                },
-                "object": {
-                    "filter": "improve_date",
-                    "datatype": "xsd:datetime",
-                    "literal": true
+                    "enum": "date_enum.txt"
                 }
             }
         ],
@@ -84,18 +73,7 @@
                 "object": {
                     "literal": false,
                     "type": "vivo:DateTimeValue",
-                    "name": "end"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vivo:dateTime"
-                },
-                "object": {
-                    "filter": "improve_date",
-                    "datatype": "xsd:datetime",
-                    "literal": true
+                    "enum": "date_enum.txt"
                 }
             }
         ],
@@ -104,11 +82,22 @@
                 "predicate": {
                     "single": false,
                     "ref": "vivo:relates"
-                }, 
+                },
                 "object": {
                     "literal": false,
-                    "qualifier": "?department a foaf:Organization .",
-                    "enum" : "dept_enum.txt"
+                    "type": "vivo:AdminRole",
+                    "name": "adminrole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000052",
+                    "type": "foaf:Organization"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "dept_enum.txt"
                 }
             }
         ],
@@ -243,6 +232,56 @@
                 "object": {
                     "filter": "improve_sponsor_award_id",
                     "literal": true
+                }
+            }
+        ]
+    },
+    "closure_defs": {
+        "pis": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "cois": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "invs": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "department": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "enum" : "dept_enum.txt"
                 }
             }
         ]
