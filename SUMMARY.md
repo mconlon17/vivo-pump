@@ -1,11 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
-* [Intro to the Pump](.doc/Home.md)
-* [Using the Pump](Using-the-Pump.md)
-* [Simple VIVO](Simple-VIVO.md)
-   * [Dates](Dates.md)
-   * [Organizations](organizations)
+* [Intro to the Pump](doc/Home.md)
+* [Using the Pump](doc/Using-the-Pump.md)
+* [Simple VIVO](doc/Simple-VIVO.md)
+   * [Dates](doc/Dates.md)
+   * [Organizations](doc/Organizations.md)
    * [Concepts](concepts)
    * [People](people)
    * [Positions](positions)
