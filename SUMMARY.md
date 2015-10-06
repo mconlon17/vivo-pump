@@ -1,4 +1,3 @@
 # Summary
 
-* Simple VIVO
 
