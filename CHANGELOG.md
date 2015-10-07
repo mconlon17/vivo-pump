@@ -353,3 +353,5 @@ directory of the tests directory.
 * **2015-10-05** examples/grants updated with closures for investigator and added AdminRole for department.  
 examples/teaching updated to provide closure for instructor and course.  examples/education updated to provide
 EducationalProcess and closures.  All need testing.
+* **2015-10-06** Experimenting with GitBook.  And reversing the experiment.  Gitbook will be done in its own
+repository.
