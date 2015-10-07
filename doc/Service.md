@@ -1,1 +1,0 @@
-Service to the profession.  Can this be readily generalized?
