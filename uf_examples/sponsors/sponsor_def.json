@@ -9,27 +9,22 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://vivo.school.edu/ontology/uf-extension#sponsorId"
+                    "ref": "ufVivo:sponsorId"
                 },
                 "object": {
                     "literal": true
                 }
             }
         ],
-        "type": [
+        "funder": [
             {
                 "predicate": {
-                    "single": false,
-                    "include": [
-                        "thing",
-                        "agent",
-                        "org"
-                    ],
-                    "ref": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    "single": "boolean",
+                    "ref": "rdf:type"
                 },
                 "object": {
                     "literal": false,
-                    "enum": "org_types.txt"
+                    "value": "vivo:FundingOrganization"
                 }
             }
         ],
@@ -37,10 +32,11 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "http://www.w3.org/2000/01/rdf-schema#label"
+                    "ref": "rdfs:label"
                 },
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "filter": "improve_
                 }
             }
         ]

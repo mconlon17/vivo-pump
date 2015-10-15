@@ -354,4 +354,5 @@ directory of the tests directory.
 examples/teaching updated to provide closure for instructor and course.  examples/education updated to provide
 EducationalProcess and closures.  All need testing.
 * **2015-10-06** Experimenting with Gitbook.  And reversing Gitbook.  Gitbook will be done in its own repository.
-* **2015-10-15** Starting uf_examples/orcid
+* **2015-10-15** Starting uf_examples/orcid.  Add improve_org_name, Improvements to uf_examples/sponsors -- 
+use boolean column for funder, use improve_org_name

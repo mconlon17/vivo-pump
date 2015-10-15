@@ -304,7 +304,7 @@ def get_vivo_sponsorid(parms):
     :return: dictionary of uri keyed by sponsorid
     """
 
-    query = "select ?uri ?sponsorid where {?uri a vivo:FundingOrganization . ?uri ufvivo:sponsorID ?sponsorid .}"
+    query = "select ?uri ?sponsorid where {?uri a vivo:FundingOrganization . ?uri ufVivo:sponsorID ?sponsorid .}"
     a = vivo_query(query, parms)
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
@@ -962,6 +962,246 @@ def improve_jobcode_description(s):
     t = t.replace(" !", ",")  # restore ,
     t = t.replace(" #", "-")  # restore -
     return t[:-1]  # Take off the trailing space
+
+
+def improve_org_name(s):
+    """
+    Organization names are often abbreviated and sometime misspelled. Build a translation table here of
+    corrections/improvements to org names
+    :param s:
+    :return:
+    :rtype: basestring
+    """
+    abbrev_table = {
+        "'S ": "'s ",
+        " A ": " a ",
+        "Aav ": "AAV ",
+        "Aca ": "Academy ",
+        "Acad ": "Academy ",
+        "Adv ": "Advanced ",
+        "Advanc ": "Advanced ",
+        "Amer ": "American ",
+        "And ": "and ",
+        "Analysists ": "Analysts ",
+        "Asso ": "Association ",
+        "Assoc ": "Association ",
+        "At ": "at ",
+        "Bldg ": "Building ",
+        "Bpm ": "BPM ",
+        "Brcc ": "BRCC ",
+        "Clin ": "Clinical ",
+        "Clncl ": "Clinical ",
+        "Cms ": "CMS ",
+        "Cns ": "CNS ",
+        "Cncl ": "Council ",
+        "Cncr ": "Cancer ",
+        "Co ": "Company ",
+        "Cog ": "COG ",
+        "Col ": "College ",
+        "Coll ": "College ",
+        "Communic ": "Communications ",
+        "Compar ": "Compare ",
+        "Coo ": "Chief Operating Officer ",
+        "Corp ": "Corporation ",
+        "Cpb ": "CPB ",
+        "Crd ": "Coordinator ",
+        "Cse ": "CSE ",
+        "Ctr ": "Center ",
+        "Cty ": "County ",
+        "Cwp ": "CWP ",
+        "Dbs ": "DBS ",
+        "Dev ": "Development ",
+        "Devel ": "Development ",
+        "Dist ": "Distinguished ",
+        "Dna ": "DNA ",
+        "Doh ": "DOH ",
+        "Doh/cms ": "DOH/CMS ",
+        "Double Blinded ": "Double-blind ",
+        "Double-blinded ": "Double-blind ",
+        "Dpt-1 ": "DPT-1 ",
+        "Dtra0001 ": "DTRA0001 ",
+        "Dtra0016 ": "DTRA-0016 ",
+        "Edu ": "Education ",
+        "Educ ": "Education ",
+        "Eff/saf ": "Safety and Efficacy ",
+        "Eh&S ": "EH&S ",
+        "Emer ": "Emeritus ",
+        "Emin ": "Eminent ",
+        "Enforce ": "Enforcement ",
+        "Eng ": "Engineer ",
+        "Environ ": "Environmental ",
+        "Epr ": "EPR ",
+        "Eval ": "Evaluation ",
+        "Ext ": "Extension ",
+        "Fdot ": "FDOT ",
+        "Fdots ": "FDOT ",
+        "Fhtcc ": "FHTCC ",
+        "Finan ": "Financial ",
+        "Fl ": "Florida ",
+        "Fla ": "Florida ",
+        "Fllw ": "Follow ",
+        "For ": "for ",
+        "Fou ": "Foundation ",
+        "G-csf ": "G-CSF ",
+        "Gen ": "General ",
+        "Gis ": "GIS ",
+        "Gm-csf ": "GM-CSF ",
+        "Grad ": "Graduate ",
+        "Hcv ": "HCV ",
+        "Hiv ": "HIV ",
+        "Hiv-infected ": "HIV-infected ",
+        "Hiv/aids ": "HIV/AIDS ",
+        "Hlb ": "HLB ",
+        "Hlth ": "Health ",
+        "Hou ": "Housing ",
+        "Hsv-1 ": "HSV-1 ",
+        "I/ii ": "I/II ",
+        "I/ucrc ": "I/UCRC ",
+        "Ica ": "ICA ",
+        "Icd ": "ICD ",
+        "Ieee ": "IEEE ",
+        "Ifas ": "IFAS ",
+        "Igf-1 ": "IGF-1 ",
+        "Ii ": "II ",
+        "Ii/iii ": "II/III ",
+        "Iii ": "III ",
+        "In ": "in ",
+        "Info ": "Information ",
+        "Inst ": "Institute ",
+        "Intl ": "International ",
+        "Intervent ": "Intervention ",
+        "Ipa ": "IPA ",
+        "Ipm ": "IPM ",
+        "Ippd ": "IPPD ",
+        "Ips ": "IPS ",
+        "It ": "Information Technology ",
+        "Iv ": "IV ",
+        "Jnt ": "Joint ",
+        "Lng ": "Long ",
+        "Mccarty ": "McCarty ",
+        "Mgmt ": "Management ",
+        "Mgr ": "Manager ",
+        "Mgt ": "Management ",
+        "Mlti ": "Multi ",
+        "Mlti-ctr ": "Multicenter ",
+        "Mltictr ": "Multicenter ",
+        "Mri ": "MRI ",
+        "Mstr ": "Master ",
+        "Multi-center ": "Multicenter ",
+        "Multi-ctr ": "Multicenter ",
+        "Natl ": "National ",
+        "Nih ": "NIH ",
+        "Nmr ": "NMR ",
+        "Nsf ": "NSF ",
+        "Ne ": "NE ",
+        "Nw ": "NW ",
+        "Of ": "of ",
+        "On ": "on ",
+        "Or ": "or ",
+        "Open-labeled ": "Open-label ",
+        "Opn-lbl ": "Open-label ",
+        "Opr ": "Operator ",
+        "Org ": "Organization ",
+        "Phas ": "Phased ",
+        "Php ": "PHP ",
+        "Phs ": "PHS ",
+        "Pk/pd ": "PK/PD ",
+        "Pky ": "P. K. Yonge ",
+        "Plcb-ctrl ": "Placebo-controlled ",
+        "Plcbo ": "Placebo ",
+        "Plcbo-ctrl ": "Placebo-controlled ",
+        "Postdoc ": "Postdoctoral ",
+        "Pract ": "Practitioner ",
+        "Pres5 ": "President 5 ",
+        "Pres6 ": "President 6 ",
+        "Prg ": "Programs ",
+        "Prof ": "Professor ",
+        "Prog ": "Programmer ",
+        "Progs ": "Programs ",
+        "Prov ": "Provisional ",
+        "Psr ": "PSR ",
+        "Radiol ": "Radiology ",
+        "Rcv ": "Receiving ",
+        "Rdmzd ": "Randomized ",
+        "Heat Refrig Air Con": "Heating, Refrigerating and Air-Conditioning Engineers",
+        "Rep ": "Representative ",
+        "Res ": "Research ",
+        "Ret ": "Retirement ",
+        "Reu ": "REU ",
+        "Rna ": "RNA ",
+        "Rndmzd ": "Randomized ",
+        "Rsch ": "Research ",
+        "Saf ": "SAF ",
+        "Saf/eff ": "Safety and Efficacy ",
+        "Sbjcts ": "Subjects ",
+        "Sch ": "School ",
+        "Se ": "SE ",
+        "Ser ": "Service ",
+        "Sfwmd ": "SFWMD ",
+        "Sle ": "SLE ",
+        "Sntc ": "SNTC ",
+        "Soc ": "Society ",
+        "Spec ": "Specialist ",
+        "Spnsrd ": "Sponsored ",
+        "Spv ": "Supervisor ",
+        "Sr ": "Senior ",
+        "Stdy ": "Study ",
+        "Stratagies ": "Strategies ",
+        "Subj ": "Subject ",
+        "Supp ": "Support ",
+        "Supt ": "Superintendant ",
+        "Supv ": "Supervisor ",
+        "Svc ": "Services ",
+        "Svcs ": "Services ",
+        "Sw ": "SW ",
+        "Tch ": "Teaching ",
+        "Tech ": "Technician ",
+        "Technol ": "Technologist ",
+        "Teh ": "the ",
+        "The ": "the ",
+        "To ": "to ",
+        "Trls ": "Trials ",
+        "Trm ": "Term ",
+        "Tv ": "TV ",
+        "Uaa ": "UAA ",
+        "Uf ": "UF ",
+        "Ufrf ": "UFRF ",
+        "Uhf ": "UHF ",
+        "Univ ": "University ",
+        "Usa ": "USA ",
+        "Us ": "US ",
+        "Usa ": "USA ",
+        "Va ": "VA ",
+        "Vhf ": "VHF ",
+        "Vis ": "Visiting ",
+        "Vp ": "Vice President ",
+        "Wuft-Fm ": "WUFT-FM "
+    }
+    if s == "":
+        return s
+    if s[len(s) - 1] == ',':
+        s = s[0:len(s) - 1]
+    if s[len(s) - 1] == ',':
+        s = s[0:len(s) - 1]
+    s = s.lower()  # convert to lower
+    s = s.title()  # uppercase each word
+    s += ' '    # add a trailing space so we can find these abbreviated words throughout the string
+    t = s.replace(", ,", ",")
+    t = t.replace("  ", " ")
+    t = t.replace("/", " @")
+    t = t.replace("/", " @")  # might be two slashes in the input
+    t = t.replace(",", " !")
+    t = t.replace(",", " !")  # might be two commas in input
+
+    for abbrev in abbrev_table:
+        t = t.replace(abbrev, abbrev_table[abbrev])
+
+    t = t.replace(" @", "/")  # restore /
+    t = t.replace(" @", "/")
+    t = t.replace(" !", ",")  # restore ,
+    t = t.replace(" !", ",")  # restore ,
+    t = comma_space(t.strip())
+    return t[0].upper() + t[1:]
 
 
 def improve_title(s):

@@ -9,7 +9,7 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, improve_title
+from vivopump import read_csv_fp, write_csv_fp, improve_org_name
 from pump import __version__
 from datetime import date
 import sys
@@ -25,8 +25,8 @@ for row, data in data_in.items():
 
     new_data['uri'] = ''
     new_data['remove'] = ''
-    new_data['type'] = 'funder'
-    new_data['name'] = improve_title(new_data['SponsorName'])
+    new_data['funder'] = '1'
+    new_data['name'] = improve_org_name(new_data['SponsorName'])
     new_data['sponsorid'] = new_data['Sponsor_ID']
     new_data['date_harvested'] = str(date.today())
     new_data['harvested_by'] = 'VIVO Pump' + ' ' + __version__
