@@ -370,13 +370,13 @@ VIVO Pump 0.8.0|GM01305|Washington Sub Sanitary Commission|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM01306|Immusol Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n509883806|
 VIVO Pump 0.8.0|GM01566|Florida Golf Course Superintendant Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1766391009|
 VIVO Pump 0.8.0|GM01567|Florida Humanities Council|1|2015-10-15|http://vivo.ufl.edu/individual/n894276935|
-VIVO Pump 0.8.0|GM01568|Florida Lime and Avocado Admn Com|1|2015-10-15|http://vivo.ufl.edu/individual/n3847805738|
+VIVO Pump 0.8.0|GM01568|Florida Lime and Avocado Administration Com|1|2015-10-15|http://vivo.ufl.edu/individual/n3847805738|
 VIVO Pump 0.8.0|GM01569|Florida Mosquito Control Association|1|2015-10-15|http://vivo.ufl.edu/individual/n2670365742|
 VIVO Pump 0.8.0|GM01412|Boston Life Sciences|1|2015-10-15|http://vivo.ufl.edu/individual/n2134577993|
 VIVO Pump 0.8.0|GM01413|Benemann Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n455724785|
 VIVO Pump 0.8.0|GM01414|Oracle Giving|1|2015-10-15|http://vivo.ufl.edu/individual/n4135266444|
 VIVO Pump 0.8.0|GM01415|Peninsula Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n1200843697|
-VIVO Pump 0.8.0|GM01416|Ag Communicators in Education|1|2015-10-15|http://vivo.ufl.edu/individual/n14389171|
+VIVO Pump 0.8.0|GM01416|Agriculture Communicators in Education|1|2015-10-15|http://vivo.ufl.edu/individual/n14389171|
 VIVO Pump 0.8.0|GM01417|Alcoholic Beverage Med Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1006514555|
 VIVO Pump 0.8.0|GM01418|Alzheimers Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1620613761|
 VIVO Pump 0.8.0|GM01419|American Academy of Pediatrics|1|2015-10-15|http://vivo.ufl.edu/individual/n1728995741|
@@ -632,7 +632,7 @@ VIVO Pump 0.8.0|GM01743|Stanley Foundation Theodore & Vada|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM01744|State Legislative Leaders Fnd|1|2015-10-15|http://vivo.ufl.edu/individual/n6967452295|
 VIVO Pump 0.8.0|GM01745|State University of New York Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n988994860|
 VIVO Pump 0.8.0|GM01746|Steinbach Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1683608429|
-VIVO Pump 0.8.0|GM01747|Stop! Childrens Cancer Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n10333|
+VIVO Pump 0.8.0|GM01747|Stop! Children's Cancer Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n10333|
 VIVO Pump 0.8.0|GM01748|Sugar Cane Growers Coop of Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n36318130|
 VIVO Pump 0.8.0|GM01749|Suwannee River Area Health Education Center|1|2015-10-15|http://vivo.ufl.edu/individual/n117068236|
 VIVO Pump 0.8.0|GM0175|Florida Solar Energy Center|1|2015-10-15|http://vivo.ufl.edu/individual/n2929337453|
@@ -712,7 +712,7 @@ VIVO Pump 0.8.0|GM01684|National Surg Adjuv Breast & Bowel|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM01685|National Turfgrass Federation|1|2015-10-15|http://vivo.ufl.edu/individual/n1979156753|
 VIVO Pump 0.8.0|GM01686|National Wild Turkey Federation|1|2015-10-15|http://vivo.ufl.edu/individual/n3762340156|
 VIVO Pump 0.8.0|GM01687|Nature Conservancy|1|2015-10-15|http://vivo.ufl.edu/individual/n59456|
-VIVO Pump 0.8.0|GM01688|Nemours Childrens Clinic|1|2015-10-15|http://vivo.ufl.edu/individual/n1620509145|
+VIVO Pump 0.8.0|GM01688|Nemours Children's Clinic|1|2015-10-15|http://vivo.ufl.edu/individual/n1620509145|
 VIVO Pump 0.8.0|GM01689|New River Solid Waste Association|1|2015-10-15|http://vivo.ufl.edu/individual/n918468184|
 VIVO Pump 0.8.0|GM0169|Exxon Education Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n5168965602|
 VIVO Pump 0.8.0|GM01540|Dupont Fund Jesse Ball|1|2015-10-15|http://vivo.ufl.edu/individual/n1133481279|
@@ -728,7 +728,7 @@ VIVO Pump 0.8.0|GM01721|Save-A-Turtle|1|2015-10-15|http://vivo.ufl.edu/individua
 VIVO Pump 0.8.0|GM01722|Searle Scholars Program|1|2015-10-15|http://vivo.ufl.edu/individual/n3574096588|
 VIVO Pump 0.8.0|GM01723|Sendzimir Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4696661388|
 VIVO Pump 0.8.0|GM01724|Shands Teaching Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n54125|
-VIVO Pump 0.8.0|GM01725|Shands Teaching Hosp Shands Childrens Mn|1|2015-10-15|http://vivo.ufl.edu/individual/n1791976411|
+VIVO Pump 0.8.0|GM01725|Shands Teaching Hospital Shands Children's Mn|1|2015-10-15|http://vivo.ufl.edu/individual/n1791976411|
 VIVO Pump 0.8.0|GM01726|Shands Jacksonville Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n27238|
 VIVO Pump 0.8.0|GM01727|Shands Teaching Hospital Healthcare|1|2015-10-15|http://vivo.ufl.edu/individual/n126367|
 VIVO Pump 0.8.0|GM01728|Sigma Kappa Sorority Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n5063926987|
@@ -836,7 +836,7 @@ VIVO Pump 0.8.0|GM01501|Caribbean Conservation Corporation|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM01502|Cntr for Marine Conservation|1|2015-10-15|http://vivo.ufl.edu/individual/n3055354246|
 VIVO Pump 0.8.0|GM01503|Central Florida Area Health Education Center|1|2015-10-15|http://vivo.ufl.edu/individual/n1229380238|
 VIVO Pump 0.8.0|GM01504|Chicago Zoological Society|1|2015-10-15|http://vivo.ufl.edu/individual/n7151039887|
-VIVO Pump 0.8.0|GM01505|Childrens Memorial Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n543111765|
+VIVO Pump 0.8.0|GM01505|Children's Memorial Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n543111765|
 VIVO Pump 0.8.0|GM01506|Cleveland Clinic Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n853037498|
 VIVO Pump 0.8.0|GM01507|Florida Development Disabilities Council|1|2015-10-15|http://vivo.ufl.edu/individual/n208842121|
 VIVO Pump 0.8.0|GM01508|Congress of Neurological Surg|1|2015-10-15|http://vivo.ufl.edu/individual/n5670647439|
@@ -861,7 +861,7 @@ VIVO Pump 0.8.0|GM01932|Pbs Video|1|2015-10-15|http://vivo.ufl.edu/individual/n1
 VIVO Pump 0.8.0|GM01933|Everglades National Park|1|2015-10-15|http://vivo.ufl.edu/individual/n6092537500|
 VIVO Pump 0.8.0|GM01934|American Association of Health Plans Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n9580366447|
 VIVO Pump 0.8.0|GM01935|Adec Distance Education Consortium|1|2015-10-15|http://vivo.ufl.edu/individual/n5933962818|
-VIVO Pump 0.8.0|GM01936|Ag Institute of Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n2335157363|
+VIVO Pump 0.8.0|GM01936|Agriculture Institute of Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n2335157363|
 VIVO Pump 0.8.0|GM01937|Oxalosis and Hyperoxaluria Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n407896386|
 VIVO Pump 0.8.0|GM01938|Genesis Health Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4920952280|
 VIVO Pump 0.8.0|GM01939|Okeefenokee Wildlife League|1|2015-10-15|http://vivo.ufl.edu/individual/n839275905|
@@ -873,7 +873,7 @@ VIVO Pump 0.8.0|GM01943|Public Relations Society of America|1|2015-10-15|http://
 VIVO Pump 0.8.0|GM01944|Foundation for Fighting Blindness|1|2015-10-15|http://vivo.ufl.edu/individual/n2023175578|
 VIVO Pump 0.8.0|GM01965|Rural Sociology Society|1|2015-10-15|http://vivo.ufl.edu/individual/n302631707|
 VIVO Pump 0.8.0|GM01966|Wayne John Cancer Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n7334157228|
-VIVO Pump 0.8.0|GM01967|Welder Rob & Bess Wildlf Fndt|1|2015-10-15|http://vivo.ufl.edu/individual/n853960322|
+VIVO Pump 0.8.0|GM01967|Welder Rob & Bess Wildlf Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n853960322|
 VIVO Pump 0.8.0|GM01968|National Honey Board|1|2015-10-15|http://vivo.ufl.edu/individual/n2107032881|
 VIVO Pump 0.8.0|GM01850|American Society of Echocardiography|1|2015-10-15|http://vivo.ufl.edu/individual/n2758023002|
 VIVO Pump 0.8.0|GM01851|Hazardous Materials Technician & Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1973493197|
@@ -1014,9 +1014,9 @@ VIVO Pump 0.8.0|GM01782|Lawson Wilkins Ped Endocr Society|1|2015-10-15|http://vi
 VIVO Pump 0.8.0|GM01783|American Foundation for Urologic Disease|1|2015-10-15|http://vivo.ufl.edu/individual/n7701126145|
 VIVO Pump 0.8.0|GM01784|Big Bend Area Health Education Center|1|2015-10-15|http://vivo.ufl.edu/individual/n3527974134|
 VIVO Pump 0.8.0|GM01785|Dana Foundation Charles a|1|2015-10-15|http://vivo.ufl.edu/individual/n1026592875|
-VIVO Pump 0.8.0|GM01786|Childrens Hosp Boston|1|2015-10-15|http://vivo.ufl.edu/individual/n400726618|
+VIVO Pump 0.8.0|GM01786|Children's Hospital Boston|1|2015-10-15|http://vivo.ufl.edu/individual/n400726618|
 VIVO Pump 0.8.0|GM01787|California Avocado Com|1|2015-10-15|http://vivo.ufl.edu/individual/n1408135516|
-VIVO Pump 0.8.0|GM02144|Childrens Health Alliance Wisconsin|1|2015-10-15|http://vivo.ufl.edu/individual/n1496701783|
+VIVO Pump 0.8.0|GM02144|Children's Health Alliance Wisconsin|1|2015-10-15|http://vivo.ufl.edu/individual/n1496701783|
 VIVO Pump 0.8.0|GM02145|Wildlife Foundation of Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n234120640|
 VIVO Pump 0.8.0|GM02146|Shands Children's Miracle Network|1|2015-10-15|http://vivo.ufl.edu/individual/n1791976411|
 VIVO Pump 0.8.0|GM02147|Florida Peanut Producers Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1529866359|
@@ -1025,10 +1025,10 @@ VIVO Pump 0.8.0|GM02149|Institute for Advanced Study|1|2015-10-15|http://vivo.uf
 VIVO Pump 0.8.0|GM0215|Health & Sciences Research Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n3511460065|
 VIVO Pump 0.8.0|GM02150|Woodrow Wilson National Fellow Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n89344665|
 VIVO Pump 0.8.0|GM02151|Health Smiles for Wisconsin|1|2015-10-15|http://vivo.ufl.edu/individual/n2884791817|
-VIVO Pump 0.8.0|GM02152|Foundation for Childrens Oncology Group|1|2015-10-15|http://vivo.ufl.edu/individual/n267556350|
+VIVO Pump 0.8.0|GM02152|Foundation for Children's Oncology Group|1|2015-10-15|http://vivo.ufl.edu/individual/n267556350|
 VIVO Pump 0.8.0|GM02153|Public Health Trust Miami-Dade|1|2015-10-15|http://vivo.ufl.edu/individual/n1518311538|
 VIVO Pump 0.8.0|GM02030|Fraxa Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n722943256|
-VIVO Pump 0.8.0|GM02031|St Joseph's Hosp Med Cnt Barrow Neuro|1|2015-10-15|http://vivo.ufl.edu/individual/n3317658375|
+VIVO Pump 0.8.0|GM02031|St Joseph's Hospital Med Cnt Barrow Neuro|1|2015-10-15|http://vivo.ufl.edu/individual/n3317658375|
 VIVO Pump 0.8.0|GM02032|Lemelson Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n358507211|
 VIVO Pump 0.8.0|GM02033|Venturewell|1|2015-10-15|http://vivo.ufl.edu/individual/n129608750|
 VIVO Pump 0.8.0|GM02034|Facct Found for Accountability|1|2015-10-15|http://vivo.ufl.edu/individual/n2502340473|
@@ -1060,11 +1060,11 @@ VIVO Pump 0.8.0|GM01947|National Milk Producers Federation|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM01948|Soybean Research and Development Council|1|2015-10-15|http://vivo.ufl.edu/individual/n3739106046|
 VIVO Pump 0.8.0|GM01949|National Right to Work Legal Defen|1|2015-10-15|http://vivo.ufl.edu/individual/n8134410726|
 VIVO Pump 0.8.0|GM0195|General Motors Corporation Research Lab|1|2015-10-15|http://vivo.ufl.edu/individual/n9845958805|
-VIVO Pump 0.8.0|GM01950|Council for Ag Sci & Technologist|1|2015-10-15|http://vivo.ufl.edu/individual/n4886401413|
+VIVO Pump 0.8.0|GM01950|Council for Agriculture Sci & Technologist|1|2015-10-15|http://vivo.ufl.edu/individual/n4886401413|
 VIVO Pump 0.8.0|GM01951|Horowitz Memorial Fund|1|2015-10-15|http://vivo.ufl.edu/individual/n4252806222|
 VIVO Pump 0.8.0|GM01952|Parkinson's Disease Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n467177739|
 VIVO Pump 0.8.0|GM01953|Cooper Hospital University Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n4785122788|
-VIVO Pump 0.8.0|GM01954|Childrens Hosp Cincinnati|1|2015-10-15|http://vivo.ufl.edu/individual/n1473569375|
+VIVO Pump 0.8.0|GM01954|Children's Hospital Cincinnati|1|2015-10-15|http://vivo.ufl.edu/individual/n1473569375|
 VIVO Pump 0.8.0|GM01955|American Academy of Periodontology Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n7711153054|
 VIVO Pump 0.8.0|GM01956|Society of Geriatric Cardiology|1|2015-10-15|http://vivo.ufl.edu/individual/n3484758533|
 VIVO Pump 0.8.0|GM01957|United Nations Association of USA|1|2015-10-15|http://vivo.ufl.edu/individual/n1042779316|
@@ -1096,7 +1096,7 @@ VIVO Pump 0.8.0|GM01963|National Hemophilia Foundation|1|2015-10-15|http://vivo.
 VIVO Pump 0.8.0|GM01964|US Pharmacopeia|1|2015-10-15|http://vivo.ufl.edu/individual/n2214692772|
 VIVO Pump 0.8.0|GM01867|Louisiana University Marine Consort|1|2015-10-15|http://vivo.ufl.edu/individual/n6044636057|
 VIVO Pump 0.8.0|GM01868|American Society of Law Med and Ethics|1|2015-10-15|http://vivo.ufl.edu/individual/n2037227012|
-VIVO Pump 0.8.0|GM01869|Florida Ag in the Classroom Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n612112162|
+VIVO Pump 0.8.0|GM01869|Florida Agriculture in the Classroom Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n612112162|
 VIVO Pump 0.8.0|GM0187|Genentech Foundation for Growth Development|1|2015-10-15|http://vivo.ufl.edu/individual/n3474968287|
 VIVO Pump 0.8.0|GM01870|Common Purpose Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n3682334760|
 VIVO Pump 0.8.0|GM01871|Moffitt Cancer Center H Lee|1|2015-10-15|http://vivo.ufl.edu/individual/n24751|
@@ -1140,11 +1140,11 @@ VIVO Pump 0.8.0|GM0209|Gynopharma|1|2015-10-15|http://vivo.ufl.edu/individual/n6
 VIVO Pump 0.8.0|GM02090|Workforce Florida Inc Suncoast Development Board|1|2015-10-15|http://vivo.ufl.edu/individual/n6310711049|
 VIVO Pump 0.8.0|GM02091|Workforce Florida Inc Polk Cnty Development Board|1|2015-10-15|http://vivo.ufl.edu/individual/n5274293623|
 VIVO Pump 0.8.0|GM02092|Workforce Florida Inc Chipola Reg Plan Bd|1|2015-10-15|http://vivo.ufl.edu/individual/n3818078818|
-VIVO Pump 0.8.0|GM02129|Childrens Hosp Philadelphia|1|2015-10-15|http://vivo.ufl.edu/individual/n1093347580|
+VIVO Pump 0.8.0|GM02129|Children's Hospital Philadelphia|1|2015-10-15|http://vivo.ufl.edu/individual/n1093347580|
 VIVO Pump 0.8.0|GM0213|Hartz Mountain Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1161647931|
 VIVO Pump 0.8.0|GM02130|American Chemistry Council|1|2015-10-15|http://vivo.ufl.edu/individual/n1137085024|
-VIVO Pump 0.8.0|GM02131|Childrens Hosp Denver|1|2015-10-15|http://vivo.ufl.edu/individual/n6306562166|
-VIVO Pump 0.8.0|GM02132|Childrens Hosp Seattle|1|2015-10-15|http://vivo.ufl.edu/individual/n96822296|
+VIVO Pump 0.8.0|GM02131|Children's Hospital Denver|1|2015-10-15|http://vivo.ufl.edu/individual/n6306562166|
+VIVO Pump 0.8.0|GM02132|Children's Hospital Seattle|1|2015-10-15|http://vivo.ufl.edu/individual/n96822296|
 VIVO Pump 0.8.0|GM02133|National Childhood Cancer Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n234886493|
 VIVO Pump 0.8.0|GM02134|Tallahassee Mem Health Care Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n6445420979|
 VIVO Pump 0.8.0|GM02135|Tampa Bay Estuary Program|1|2015-10-15|http://vivo.ufl.edu/individual/n7073538279|
@@ -1211,7 +1211,7 @@ VIVO Pump 0.8.0|GM02017|American Association of Equine Prac Foundation|1|2015-10
 VIVO Pump 0.8.0|GM02018|So Building Code Congress International Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n6605174682|
 VIVO Pump 0.8.0|GM01992|National Black Nurses Association|1|2015-10-15|http://vivo.ufl.edu/individual/n9084394576|
 VIVO Pump 0.8.0|GM01993|Psi Chi Facult Advsr Research Grant|1|2015-10-15|http://vivo.ufl.edu/individual/n8649223509|
-VIVO Pump 0.8.0|GM01994|Ag and Labor Program Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n5649832942|
+VIVO Pump 0.8.0|GM01994|Agriculture and Labor Program Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n5649832942|
 VIVO Pump 0.8.0|GM01995|National Retail Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1608660361|
 VIVO Pump 0.8.0|GM01996|Alpha One Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n930283177|
 VIVO Pump 0.8.0|GM01997|Structural Stability Research Council|1|2015-10-15|http://vivo.ufl.edu/individual/n7864261612|
@@ -1313,7 +1313,7 @@ VIVO Pump 0.8.0|GM02303|Sou Association College Student Affairs|1|2015-10-15|htt
 VIVO Pump 0.8.0|GM02243|American Association of Anatomists|1|2015-10-15|http://vivo.ufl.edu/individual/n4692798780|
 VIVO Pump 0.8.0|GM02244|National Foundation for IPM Education|1|2015-10-15|http://vivo.ufl.edu/individual/n3857936558|
 VIVO Pump 0.8.0|GM02182|Heeb Foundation Harry J|1|2015-10-15|http://vivo.ufl.edu/individual/n1200889952|
-VIVO Pump 0.8.0|GM02183|Childrens Hosp Pittsburgh|1|2015-10-15|http://vivo.ufl.edu/individual/n1858093759|
+VIVO Pump 0.8.0|GM02183|Children's Hospital Pittsburgh|1|2015-10-15|http://vivo.ufl.edu/individual/n1858093759|
 VIVO Pump 0.8.0|GM02051|The Brain Tumor Society|1|2015-10-15|http://vivo.ufl.edu/individual/n517737358|
 VIVO Pump 0.8.0|GM02052|Walt Disney Company Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n2146360244|
 VIVO Pump 0.8.0|GM02053|Walt Disney Company Foundation Wildlife Cons Fund|1|2015-10-15|http://vivo.ufl.edu/individual/n2500476425|
@@ -1347,16 +1347,16 @@ VIVO Pump 0.8.0|GM02358|Mid-Continent Research for Education & Lrn|1|2015-10-15|
 VIVO Pump 0.8.0|GM02359|Rec Boating & Fishing Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n9203171923|
 VIVO Pump 0.8.0|GM0236|Ici Pharmaceutical Grp Ici Americas|1|2015-10-15|http://vivo.ufl.edu/individual/n2652849177|
 VIVO Pump 0.8.0|GM02360|Multiple Companies|1|2015-10-15|http://vivo.ufl.edu/individual/n119830|
-VIVO Pump 0.8.0|GM02361|US Dept of Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n1608451289|
-VIVO Pump 0.8.0|GM02362|US Dept of Ag Farmers Home Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n471087995|
+VIVO Pump 0.8.0|GM02361|US Department of Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n1608451289|
+VIVO Pump 0.8.0|GM02362|US Department of Agriculture Farmers Home Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n471087995|
 VIVO Pump 0.8.0|GM04333|Edventure Group|1|2015-10-15|http://vivo.ufl.edu/individual/n538834882|
-VIVO Pump 0.8.0|GM02397|US Dept of Interior Fish and Wildlife SE|1|2015-10-15|http://vivo.ufl.edu/individual/n2056010605|
-VIVO Pump 0.8.0|GM02398|US Dept of Interior National Biological Service|1|2015-10-15|http://vivo.ufl.edu/individual/n3024712274|
-VIVO Pump 0.8.0|GM02399|US Dept of Interior National Park Service|1|2015-10-15|http://vivo.ufl.edu/individual/n1158770938|
+VIVO Pump 0.8.0|GM02397|US Department of Interior Fish and Wildlife SE|1|2015-10-15|http://vivo.ufl.edu/individual/n2056010605|
+VIVO Pump 0.8.0|GM02398|US Department of Interior National Biological Service|1|2015-10-15|http://vivo.ufl.edu/individual/n3024712274|
+VIVO Pump 0.8.0|GM02399|US Department of Interior National Park Service|1|2015-10-15|http://vivo.ufl.edu/individual/n1158770938|
 VIVO Pump 0.8.0|GM024|Am Aqua Resources Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n6000151048|
 VIVO Pump 0.8.0|GM0240|Intel Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n363353|
 VIVO Pump 0.8.0|GM02330|Satellite Healthcare Research|1|2015-10-15|http://vivo.ufl.edu/individual/n4025348623|
-VIVO Pump 0.8.0|GM02366|US Dept of Ag Economic Research Services|1|2015-10-15|http://vivo.ufl.edu/individual/n1272959695|
+VIVO Pump 0.8.0|GM02366|US Department of Agriculture Economic Research Services|1|2015-10-15|http://vivo.ufl.edu/individual/n1272959695|
 VIVO Pump 0.8.0|GM02263|Mbi International|1|2015-10-15|http://vivo.ufl.edu/individual/n78358538|
 VIVO Pump 0.8.0|GM02264|Scottish Rite Foundation of Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n1532434482|
 VIVO Pump 0.8.0|GM02265|American College of Lab Animal Med|1|2015-10-15|http://vivo.ufl.edu/individual/n453076837|
@@ -1367,7 +1367,7 @@ VIVO Pump 0.8.0|GM02269|Nashville Area Metro Plan Organization|1|2015-10-15|http
 VIVO Pump 0.8.0|GM0227|Hoffmann La Roche Inc Roche Lab|1|2015-10-15|http://vivo.ufl.edu/individual/n993506718|
 VIVO Pump 0.8.0|GM02270|Ecoarray|1|2015-10-15|http://vivo.ufl.edu/individual/n152233040|
 VIVO Pump 0.8.0|GM02271|Lupus Clinical Trials Consort|1|2015-10-15|http://vivo.ufl.edu/individual/n3869985882|
-VIVO Pump 0.8.0|GM02272|Miami Childrens Hospital Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1500438888|
+VIVO Pump 0.8.0|GM02272|Miami Children's Hospital Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1500438888|
 VIVO Pump 0.8.0|GM02273|Joint Com Accred Health Orgs|1|2015-10-15|http://vivo.ufl.edu/individual/n968618919|
 VIVO Pump 0.8.0|GM02274|National Space Biomedical Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1978745522|
 VIVO Pump 0.8.0|GM02275|Florida Sports Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n9999227480|
@@ -1397,8 +1397,8 @@ VIVO Pump 0.8.0|GM01891|UF Alumni Association|1|2015-10-15|http://vivo.ufl.edu/i
 VIVO Pump 0.8.0|GM01892|Dystonia Medical Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n409197942|
 VIVO Pump 0.8.0|GM01893|Johns Hopkins Bayview Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n281526673|
 VIVO Pump 0.8.0|GM01894|North Florida Nssa|1|2015-10-15|http://vivo.ufl.edu/individual/n5190299060|
-VIVO Pump 0.8.0|GM01895|Childrens Hosp New Orleans|1|2015-10-15|http://vivo.ufl.edu/individual/n1112275942|
-VIVO Pump 0.8.0|GM01896|Childrens Hosp New Orleans Research for Child|1|2015-10-15|http://vivo.ufl.edu/individual/n1370095762|
+VIVO Pump 0.8.0|GM01895|Children's Hospital New Orleans|1|2015-10-15|http://vivo.ufl.edu/individual/n1112275942|
+VIVO Pump 0.8.0|GM01896|Children's Hospital New Orleans Research for Child|1|2015-10-15|http://vivo.ufl.edu/individual/n1370095762|
 VIVO Pump 0.8.0|GM01897|American Society of Nephrology|1|2015-10-15|http://vivo.ufl.edu/individual/n1152789714|
 VIVO Pump 0.8.0|GM01898|Farm Workers Association of Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n5498350927|
 VIVO Pump 0.8.0|GM01899|Scholl Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n8206040746|
@@ -1429,7 +1429,7 @@ VIVO Pump 0.8.0|GM02351|The International Plant Propagators Society|1|2015-10-15
 VIVO Pump 0.8.0|GM02352|Low Impact Development Center|1|2015-10-15|http://vivo.ufl.edu/individual/n6545111611|
 VIVO Pump 0.8.0|GM02353|Nature Coast Business Development Council|1|2015-10-15|http://vivo.ufl.edu/individual/n361125020|
 VIVO Pump 0.8.0|GM02354|Jaxcare|1|2015-10-15|http://vivo.ufl.edu/individual/n9572676043|
-VIVO Pump 0.8.0|GM02195|All Childrens Health Sys|1|2015-10-15|http://vivo.ufl.edu/individual/n2657263691|
+VIVO Pump 0.8.0|GM02195|All Children's Health Sys|1|2015-10-15|http://vivo.ufl.edu/individual/n2657263691|
 VIVO Pump 0.8.0|GM02196|Southern Coastal Agromed Center|1|2015-10-15|http://vivo.ufl.edu/individual/n4137225766|
 VIVO Pump 0.8.0|GM02197|American Planning Association|1|2015-10-15|http://vivo.ufl.edu/individual/n4172757631|
 VIVO Pump 0.8.0|GM02198|Surgical Infection Society|1|2015-10-15|http://vivo.ufl.edu/individual/n204427211|
@@ -1440,20 +1440,20 @@ VIVO Pump 0.8.0|GM02200|Lupus Research Institute|1|2015-10-15|http://vivo.ufl.ed
 VIVO Pump 0.8.0|GM02331|Water Environment Federation|1|2015-10-15|http://vivo.ufl.edu/individual/n1942916305|
 VIVO Pump 0.8.0|GM02332|Proctor & Gamble Fund|1|2015-10-15|http://vivo.ufl.edu/individual/n1241055356|
 VIVO Pump 0.8.0|GM02333|Cooley's Anemia Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n136123959|
-VIVO Pump 0.8.0|GM02384|US Dept of Commerce Ec Development Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n1175373961|
-VIVO Pump 0.8.0|GM02385|US Dept of Comm Nat Institute of Std and Technician|1|2015-10-15|http://vivo.ufl.edu/individual/n56152|
-VIVO Pump 0.8.0|GM02386|US Dept of Comm National Oceanic & Atmos Adm|1|2015-10-15|http://vivo.ufl.edu/individual/n1984058366|
-VIVO Pump 0.8.0|GM02387|US Dept of Comm National Technical Information Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n8447033211|
-VIVO Pump 0.8.0|GM02388|US Dept of Comm National Telecomm Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n1593123965|
-VIVO Pump 0.8.0|GM02389|US Dept of Commerce Sea Grant Program|1|2015-10-15|http://vivo.ufl.edu/individual/n869198692|
+VIVO Pump 0.8.0|GM02384|US Department of Commerce Ec Development Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n1175373961|
+VIVO Pump 0.8.0|GM02385|US Department of Comm Nat Institute of Std and Technician|1|2015-10-15|http://vivo.ufl.edu/individual/n56152|
+VIVO Pump 0.8.0|GM02386|US Department of Comm National Oceanic & Atmos Adm|1|2015-10-15|http://vivo.ufl.edu/individual/n1984058366|
+VIVO Pump 0.8.0|GM02387|US Department of Comm National Technical Information Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n8447033211|
+VIVO Pump 0.8.0|GM02388|US Department of Comm National Telecomm Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n1593123965|
+VIVO Pump 0.8.0|GM02389|US Department of Commerce Sea Grant Program|1|2015-10-15|http://vivo.ufl.edu/individual/n869198692|
 VIVO Pump 0.8.0|GM0239|Imc Fertilizer Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n7005488647|
-VIVO Pump 0.8.0|GM02390|US Dept of Commerce National Marine Fish Service|1|2015-10-15|http://vivo.ufl.edu/individual/n977887761|
-VIVO Pump 0.8.0|GM02391|US Dept of Defense|1|2015-10-15|http://vivo.ufl.edu/individual/n32091|
-VIVO Pump 0.8.0|GM02392|US Dept of Defense VA Contract Activity|1|2015-10-15|http://vivo.ufl.edu/individual/n9644815827|
-VIVO Pump 0.8.0|GM02393|US Dept of Defense Darpa|1|2015-10-15|http://vivo.ufl.edu/individual/n85398418|
-VIVO Pump 0.8.0|GM02394|US Dept of Defense National Recon|1|2015-10-15|http://vivo.ufl.edu/individual/n6038816923|
-VIVO Pump 0.8.0|GM02395|US Dept of Interior|1|2015-10-15|http://vivo.ufl.edu/individual/n1406461838|
-VIVO Pump 0.8.0|GM02396|US Dept of Interior Fish Wildlife Parks|1|2015-10-15|http://vivo.ufl.edu/individual/n1127291084|
+VIVO Pump 0.8.0|GM02390|US Department of Commerce National Marine Fish Service|1|2015-10-15|http://vivo.ufl.edu/individual/n977887761|
+VIVO Pump 0.8.0|GM02391|US Department of Defense|1|2015-10-15|http://vivo.ufl.edu/individual/n32091|
+VIVO Pump 0.8.0|GM02392|US Department of Defense VA Contract Activity|1|2015-10-15|http://vivo.ufl.edu/individual/n9644815827|
+VIVO Pump 0.8.0|GM02393|US Department of Defense Darpa|1|2015-10-15|http://vivo.ufl.edu/individual/n85398418|
+VIVO Pump 0.8.0|GM02394|US Department of Defense National Recon|1|2015-10-15|http://vivo.ufl.edu/individual/n6038816923|
+VIVO Pump 0.8.0|GM02395|US Department of Interior|1|2015-10-15|http://vivo.ufl.edu/individual/n1406461838|
+VIVO Pump 0.8.0|GM02396|US Department of Interior Fish Wildlife Parks|1|2015-10-15|http://vivo.ufl.edu/individual/n1127291084|
 VIVO Pump 0.8.0|GM0231|Houghten Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n5170680289|
 VIVO Pump 0.8.0|GM02310|Minnesota Act Against Tobacco|1|2015-10-15|http://vivo.ufl.edu/individual/n7305609493|
 VIVO Pump 0.8.0|GM02311|American Distance Education Consortium|1|2015-10-15|http://vivo.ufl.edu/individual/n259163336|
@@ -1463,23 +1463,23 @@ VIVO Pump 0.8.0|GM02314|Institute for Genomic Research|1|2015-10-15|http://vivo.
 VIVO Pump 0.8.0|GM02315|Loss Prevention Resesearch Council|1|2015-10-15|http://vivo.ufl.edu/individual/n932308417|
 VIVO Pump 0.8.0|GM02316|Juice Products Association|1|2015-10-15|http://vivo.ufl.edu/individual/n130537134|
 VIVO Pump 0.8.0|GM02166|Link Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4899495736|
-VIVO Pump 0.8.0|GM02367|US Dept of Ag National Ag Stat Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n1472082689|
-VIVO Pump 0.8.0|GM02368|US Dept of Ag Foreign Ag Service|1|2015-10-15|http://vivo.ufl.edu/individual/n263035697|
-VIVO Pump 0.8.0|GM02369|US Dept of Ag Risk Management Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1370988897|
+VIVO Pump 0.8.0|GM02367|US Department of Agriculture National Agriculture Stat Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n1472082689|
+VIVO Pump 0.8.0|GM02368|US Department of Agriculture Foreign Agriculture Service|1|2015-10-15|http://vivo.ufl.edu/individual/n263035697|
+VIVO Pump 0.8.0|GM02369|US Department of Agriculture Risk Management Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1370988897|
 VIVO Pump 0.8.0|GM0237|Idexx Laboratories|1|2015-10-15|http://vivo.ufl.edu/individual/n469170109|
-VIVO Pump 0.8.0|GM02370|US Dept of Ag Ag Marketing Services|1|2015-10-15|http://vivo.ufl.edu/individual/n989887679|
-VIVO Pump 0.8.0|GM02371|US Dept of Ag Aphis|1|2015-10-15|http://vivo.ufl.edu/individual/n92606789|
-VIVO Pump 0.8.0|GM02372|US Dept of Ag National Resources and Env|1|2015-10-15|http://vivo.ufl.edu/individual/n8021196225|
-VIVO Pump 0.8.0|GM02373|US Dept of Ag Forest Service|1|2015-10-15|http://vivo.ufl.edu/individual/n2004682434|
-VIVO Pump 0.8.0|GM02374|US Dept of Ag Natural Resources Conserv|1|2015-10-15|http://vivo.ufl.edu/individual/n1147383410|
-VIVO Pump 0.8.0|GM02375|US Dept of Ag National Wildlife Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n5202176496|
-VIVO Pump 0.8.0|GM02376|US Dept of Ag Science and Education|1|2015-10-15|http://vivo.ufl.edu/individual/n3016238578|
-VIVO Pump 0.8.0|GM02377|US Dept of Ag Ag Research Services|1|2015-10-15|http://vivo.ufl.edu/individual/n43376|
-VIVO Pump 0.8.0|GM02378|US Dept of Ag Coop State Research Services|1|2015-10-15|http://vivo.ufl.edu/individual/n43713|
-VIVO Pump 0.8.0|GM02379|US Dept of Ag Extension Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n27089|
+VIVO Pump 0.8.0|GM02370|US Department of Agriculture Agriculture Marketing Services|1|2015-10-15|http://vivo.ufl.edu/individual/n989887679|
+VIVO Pump 0.8.0|GM02371|US Department of Agriculture Aphis|1|2015-10-15|http://vivo.ufl.edu/individual/n92606789|
+VIVO Pump 0.8.0|GM02372|US Department of Agriculture National Resources and Env|1|2015-10-15|http://vivo.ufl.edu/individual/n8021196225|
+VIVO Pump 0.8.0|GM02373|US Department of Agriculture Forest Service|1|2015-10-15|http://vivo.ufl.edu/individual/n2004682434|
+VIVO Pump 0.8.0|GM02374|US Department of Agriculture Natural Resources Conserv|1|2015-10-15|http://vivo.ufl.edu/individual/n1147383410|
+VIVO Pump 0.8.0|GM02375|US Department of Agriculture National Wildlife Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n5202176496|
+VIVO Pump 0.8.0|GM02376|US Department of Agriculture Science and Education|1|2015-10-15|http://vivo.ufl.edu/individual/n3016238578|
+VIVO Pump 0.8.0|GM02377|US Department of Agriculture Agriculture Research Services|1|2015-10-15|http://vivo.ufl.edu/individual/n43376|
+VIVO Pump 0.8.0|GM02378|US Department of Agriculture Coop State Research Services|1|2015-10-15|http://vivo.ufl.edu/individual/n43713|
+VIVO Pump 0.8.0|GM02379|US Department of Agriculture Extension Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n27089|
 VIVO Pump 0.8.0|GM0238|Idexx Laboratories Blue Ridge Pharm|1|2015-10-15|http://vivo.ufl.edu/individual/n2187264904|
-VIVO Pump 0.8.0|GM02380|US Dept of Ag Integr Pest Management So Region|1|2015-10-15|http://vivo.ufl.edu/individual/n71865927|
-VIVO Pump 0.8.0|GM02381|US Dept of Ag Citrus Tristeza Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1016511053|
+VIVO Pump 0.8.0|GM02380|US Department of Agriculture Integr Pest Management So Region|1|2015-10-15|http://vivo.ufl.edu/individual/n71865927|
+VIVO Pump 0.8.0|GM02381|US Department of Agriculture Citrus Tristeza Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1016511053|
 VIVO Pump 0.8.0|GM02184|Coalition for Juvenile Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n4716433382|
 VIVO Pump 0.8.0|GM02185|National Mastitis Council|1|2015-10-15|http://vivo.ufl.edu/individual/n695665415|
 VIVO Pump 0.8.0|GM02186|New Directions Initiative|1|2015-10-15|http://vivo.ufl.edu/individual/n6435329241|
@@ -1500,10 +1500,10 @@ VIVO Pump 0.8.0|GM02455|National Institute of Health Niddk|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM02201|Arkansas Childrens' Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n7203372820|
 VIVO Pump 0.8.0|GM02202|Construction Industry Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n715178798|
 VIVO Pump 0.8.0|GM02437|Administration on Aging|1|2015-10-15|http://vivo.ufl.edu/individual/n1645896124|
-VIVO Pump 0.8.0|GM02438|Admn for Children & Families|1|2015-10-15|http://vivo.ufl.edu/individual/n935473132|
-VIVO Pump 0.8.0|GM02439|US Food and Drug Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n1339107733|
+VIVO Pump 0.8.0|GM02438|Administration for Children & Families|1|2015-10-15|http://vivo.ufl.edu/individual/n935473132|
+VIVO Pump 0.8.0|GM02439|US Food and Drug Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n1339107733|
 VIVO Pump 0.8.0|GM0244|International Technology Center|1|2015-10-15|http://vivo.ufl.edu/individual/n5984787105|
-VIVO Pump 0.8.0|GM02440|US Food and Drug Admn Orphan Prod|1|2015-10-15|http://vivo.ufl.edu/individual/n4649731294|
+VIVO Pump 0.8.0|GM02440|US Food and Drug Administration Orphan Prod|1|2015-10-15|http://vivo.ufl.edu/individual/n4649731294|
 VIVO Pump 0.8.0|GM02441|National Institute of Health|1|2015-10-15|http://vivo.ufl.edu/individual/n226077|
 VIVO Pump 0.8.0|GM02442|National Institute of Health Oar|1|2015-10-15||
 VIVO Pump 0.8.0|GM02443|National Institute of Health Nci|1|2015-10-15|http://vivo.ufl.edu/individual/n1460475225|
@@ -1516,18 +1516,18 @@ VIVO Pump 0.8.0|GM02449|National Institute of Health Niaaa|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM0245|Isk Biosciences Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n5813067146|
 VIVO Pump 0.8.0|GM02450|National Institute of Health Niaid|1|2015-10-15|http://vivo.ufl.edu/individual/n1489342439|
 VIVO Pump 0.8.0|GM02334|Rosenblatt-Naderi Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n2917410555|
-VIVO Pump 0.8.0|GM02400|US Dept of Interior Bureau of Land Management|1|2015-10-15|http://vivo.ufl.edu/individual/n1851269562|
-VIVO Pump 0.8.0|GM02401|US Dept of Interior Mineral Management Service|1|2015-10-15|http://vivo.ufl.edu/individual/n3665253415|
-VIVO Pump 0.8.0|GM02402|US Dept of Interior US Geological Survey|1|2015-10-15|http://vivo.ufl.edu/individual/n1138028475|
-VIVO Pump 0.8.0|GM02403|US Dept of Interior Bureau of Reclamtion|1|2015-10-15|http://vivo.ufl.edu/individual/n3571879863|
-VIVO Pump 0.8.0|GM02404|US Dept of Interior Biological Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n1894186681|
-VIVO Pump 0.8.0|GM02405|US Dept of Interior Florida Water Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n7721655886|
-VIVO Pump 0.8.0|GM02406|US Dept of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n1817191752|
-VIVO Pump 0.8.0|GM02407|US Dept of Transp Federal Aviation Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n145699164|
-VIVO Pump 0.8.0|GM02408|US Dept of Transportation Fed Hway Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n805749209|
-VIVO Pump 0.8.0|GM02409|US Dept of Trans National Hwy Traffic Safety|1|2015-10-15|http://vivo.ufl.edu/individual/n1127433|
+VIVO Pump 0.8.0|GM02400|US Department of Interior Bureau of Land Management|1|2015-10-15|http://vivo.ufl.edu/individual/n1851269562|
+VIVO Pump 0.8.0|GM02401|US Department of Interior Mineral Management Service|1|2015-10-15|http://vivo.ufl.edu/individual/n3665253415|
+VIVO Pump 0.8.0|GM02402|US Department of Interior US Geological Survey|1|2015-10-15|http://vivo.ufl.edu/individual/n1138028475|
+VIVO Pump 0.8.0|GM02403|US Department of Interior Bureau of Reclamtion|1|2015-10-15|http://vivo.ufl.edu/individual/n3571879863|
+VIVO Pump 0.8.0|GM02404|US Department of Interior Biological Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n1894186681|
+VIVO Pump 0.8.0|GM02405|US Department of Interior Florida Water Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n7721655886|
+VIVO Pump 0.8.0|GM02406|US Department of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n1817191752|
+VIVO Pump 0.8.0|GM02407|US Department of Transp Federal Aviation Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n145699164|
+VIVO Pump 0.8.0|GM02408|US Department of Transportation Fed Hway Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n805749209|
+VIVO Pump 0.8.0|GM02409|US Department of Trans National Hwy Traffic Safety|1|2015-10-15|http://vivo.ufl.edu/individual/n1127433|
 VIVO Pump 0.8.0|GM0241|Intesco Laboratories|1|2015-10-15|http://vivo.ufl.edu/individual/n3592182790|
-VIVO Pump 0.8.0|GM02410|US Dept of State|1|2015-10-15|http://vivo.ufl.edu/individual/n1330471222|
+VIVO Pump 0.8.0|GM02410|US Department of State|1|2015-10-15|http://vivo.ufl.edu/individual/n1330471222|
 VIVO Pump 0.8.0|GM02411|US Information Agency|1|2015-10-15|http://vivo.ufl.edu/individual/n5054891390|
 VIVO Pump 0.8.0|GM02412|US Nuclear Regulatory Com|1|2015-10-15|http://vivo.ufl.edu/individual/n2054726606|
 VIVO Pump 0.8.0|GM02413|US Environmental Pro Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1697557185|
@@ -1549,9 +1549,9 @@ VIVO Pump 0.8.0|GM02427|Nasa Lunar and Planetary Institute|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM02428|US National Foundation on Arts & Humanities|1|2015-10-15|http://vivo.ufl.edu/individual/n1857974552|
 VIVO Pump 0.8.0|GM02429|US National Foundation Institute of Museum Servs|1|2015-10-15|http://vivo.ufl.edu/individual/n9980862914|
 VIVO Pump 0.8.0|GM0243|International Paper Company|1|2015-10-15|http://vivo.ufl.edu/individual/n8977635287|
-VIVO Pump 0.8.0|GM02363|US Dept of Ag Farm Service Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1644041320|
-VIVO Pump 0.8.0|GM02364|US Dept of Ag Sustainable Ag Net|1|2015-10-15|http://vivo.ufl.edu/individual/n479866026|
-VIVO Pump 0.8.0|GM02365|US Dept of Ag National Urb Com Forest Ad Cou|1|2015-10-15|http://vivo.ufl.edu/individual/n8848871804|
+VIVO Pump 0.8.0|GM02363|US Department of Agriculture Farm Service Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1644041320|
+VIVO Pump 0.8.0|GM02364|US Department of Agriculture Sustainable Agriculture Net|1|2015-10-15|http://vivo.ufl.edu/individual/n479866026|
+VIVO Pump 0.8.0|GM02365|US Department of Agriculture National Urb Com Forest Ad Cou|1|2015-10-15|http://vivo.ufl.edu/individual/n8848871804|
 VIVO Pump 0.8.0|GM02335|Partnership for Strong Fam|1|2015-10-15|http://vivo.ufl.edu/individual/n2030750289|
 VIVO Pump 0.8.0|GM02336|Center of Sustainable Agroforest|1|2015-10-15|http://vivo.ufl.edu/individual/n7605397631|
 VIVO Pump 0.8.0|GM02337|National Com on Sci for Sus Forest|1|2015-10-15|http://vivo.ufl.edu/individual/n1812763211|
@@ -1563,7 +1563,7 @@ VIVO Pump 0.8.0|GM02341|California Strawberry Com|1|2015-10-15|http://vivo.ufl.e
 VIVO Pump 0.8.0|GM02342|Alachua Arc|1|2015-10-15|http://vivo.ufl.edu/individual/n2016965723|
 VIVO Pump 0.8.0|GM02343|Brain Tumor Society|1|2015-10-15|http://vivo.ufl.edu/individual/n1826975087|
 VIVO Pump 0.8.0|GM02344|Lightning Safety Alliance Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n7844457775|
-VIVO Pump 0.8.0|GM02192|Ag Facilities Admn Management Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n3062267279|
+VIVO Pump 0.8.0|GM02192|Agriculture Facilities Administration Management Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n3062267279|
 VIVO Pump 0.8.0|GM02193|Halifax Medical Center|1|2015-10-15|http://vivo.ufl.edu/individual/n65516|
 VIVO Pump 0.8.0|GM02194|Alachua Regional Marine Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n535600444|
 VIVO Pump 0.8.0|GM02167|Institute for Oper Research & Management Sci|1|2015-10-15|http://vivo.ufl.edu/individual/n4578887821|
@@ -1580,14 +1580,14 @@ VIVO Pump 0.8.0|GM02329|Intermountain Healthcare|1|2015-10-15|http://vivo.ufl.ed
 VIVO Pump 0.8.0|GM0233|Ibm Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n97377|
 VIVO Pump 0.8.0|GM02519|Peace Corps|1|2015-10-15|http://vivo.ufl.edu/individual/n128857|
 VIVO Pump 0.8.0|GM0252|Janssen Pharmaceutica Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1431521512|
-VIVO Pump 0.8.0|GM02520|US Dept of Energy|1|2015-10-15|http://vivo.ufl.edu/individual/n637653530|
-VIVO Pump 0.8.0|GM02521|US Dept of Energy Oak Ridge|1|2015-10-15|http://vivo.ufl.edu/individual/n72000903|
-VIVO Pump 0.8.0|GM02522|US Dept of Energy Pittsburgh Energy Technician|1|2015-10-15|http://vivo.ufl.edu/individual/n446280704|
-VIVO Pump 0.8.0|GM02523|US Dept of Energy Chicago|1|2015-10-15|http://vivo.ufl.edu/individual/n1009512550|
-VIVO Pump 0.8.0|GM02524|US Dept of Energy Idaho Operation Office|1|2015-10-15|http://vivo.ufl.edu/individual/n2029554835|
-VIVO Pump 0.8.0|GM02525|US Dept of Energy- Golden|1|2015-10-15|http://vivo.ufl.edu/individual/n867342852|
-VIVO Pump 0.8.0|GM02526|US Dept of Energy Albuquerque Ops Office|1|2015-10-15|http://vivo.ufl.edu/individual/n1196609985|
-VIVO Pump 0.8.0|GM02527|US Dept of Energy Oakland Operations Off|1|2015-10-15|http://vivo.ufl.edu/individual/n503252663|
+VIVO Pump 0.8.0|GM02520|US Department of Energy|1|2015-10-15|http://vivo.ufl.edu/individual/n637653530|
+VIVO Pump 0.8.0|GM02521|US Department of Energy Oak Ridge|1|2015-10-15|http://vivo.ufl.edu/individual/n72000903|
+VIVO Pump 0.8.0|GM02522|US Department of Energy Pittsburgh Energy Technician|1|2015-10-15|http://vivo.ufl.edu/individual/n446280704|
+VIVO Pump 0.8.0|GM02523|US Department of Energy Chicago|1|2015-10-15|http://vivo.ufl.edu/individual/n1009512550|
+VIVO Pump 0.8.0|GM02524|US Department of Energy Idaho Operation Office|1|2015-10-15|http://vivo.ufl.edu/individual/n2029554835|
+VIVO Pump 0.8.0|GM02525|US Department of Energy- Golden|1|2015-10-15|http://vivo.ufl.edu/individual/n867342852|
+VIVO Pump 0.8.0|GM02526|US Department of Energy Albuquerque Ops Office|1|2015-10-15|http://vivo.ufl.edu/individual/n1196609985|
+VIVO Pump 0.8.0|GM02527|US Department of Energy Oakland Operations Off|1|2015-10-15|http://vivo.ufl.edu/individual/n503252663|
 VIVO Pump 0.8.0|GM02528|Smithsonian Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n39693|
 VIVO Pump 0.8.0|GM02529|Smithsonian Institute Astro Observ|1|2015-10-15|http://vivo.ufl.edu/individual/n1720488079|
 VIVO Pump 0.8.0|GM0253|Janssen Pharmaceutica Inc Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n6223981118|
@@ -1600,14 +1600,14 @@ VIVO Pump 0.8.0|GM02555|City of Archer|1|2015-10-15|http://vivo.ufl.edu/individu
 VIVO Pump 0.8.0|GM02535|US National Security Agency|1|2015-10-15|http://vivo.ufl.edu/individual/n1909073366|
 VIVO Pump 0.8.0|GM02536|US Marine Corps|1|2015-10-15|http://vivo.ufl.edu/individual/n346827|
 VIVO Pump 0.8.0|GM02537|US Fed Communications Com|1|2015-10-15|http://vivo.ufl.edu/individual/n249616693|
-VIVO Pump 0.8.0|GM02477|US Dept of Education Fnd for Improv Postsec Ed|1|2015-10-15|http://vivo.ufl.edu/individual/n979167569|
+VIVO Pump 0.8.0|GM02477|US Department of Education Fnd for Improv Postsec Ed|1|2015-10-15|http://vivo.ufl.edu/individual/n979167569|
 VIVO Pump 0.8.0|GM02261|Jones Ecological Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n1962450179|
 VIVO Pump 0.8.0|GM02262|United Mitochondrial Disease Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n945585078|
 VIVO Pump 0.8.0|GM02163|Al Peanut Producers Association|1|2015-10-15|http://vivo.ufl.edu/individual/n6332238850|
 VIVO Pump 0.8.0|GM02164|Dauphin Island Sea Laboratory|1|2015-10-15|http://vivo.ufl.edu/individual/n119366279|
 VIVO Pump 0.8.0|GM02165|National Humanities Center|1|2015-10-15|http://vivo.ufl.edu/individual/n1640023634|
-VIVO Pump 0.8.0|GM02476|US Dept of Education|1|2015-10-15|http://vivo.ufl.edu/individual/n126889|
-VIVO Pump 0.8.0|GM02751|Knoll Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n900500886|
+VIVO Pump 0.8.0|GM02476|US Department of Education|1|2015-10-15|http://vivo.ufl.edu/individual/n126889|
+VIVO Pump 0.8.0|GM02751|Knoll Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n900500886|
 VIVO Pump 0.8.0|GM02752|Hoechst Roussel Vet Gmbh|1|2015-10-15|http://vivo.ufl.edu/individual/n79010|
 VIVO Pump 0.8.0|GM02753|Ml Laboratories Plc|1|2015-10-15|http://vivo.ufl.edu/individual/n7962407903|
 VIVO Pump 0.8.0|GM02754|Nippon Soda Company|1|2015-10-15|http://vivo.ufl.edu/individual/n1790962318|
@@ -1619,7 +1619,7 @@ VIVO Pump 0.8.0|GM02598|Alachua Cnty Waste Management|1|2015-10-15|http://vivo.u
 VIVO Pump 0.8.0|GM02599|Bradford Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n162317906|
 VIVO Pump 0.8.0|GM026|Lederle Lab Am Cyanamid Company|1|2015-10-15|http://vivo.ufl.edu/individual/n676747236|
 VIVO Pump 0.8.0|GM0260|Kamm Associates Inc a R|1|2015-10-15|http://vivo.ufl.edu/individual/n6572356108|
-VIVO Pump 0.8.0|GM02478|US Dept of Education Fulbright-Hays|1|2015-10-15|http://vivo.ufl.edu/individual/n1911555365|
+VIVO Pump 0.8.0|GM02478|US Department of Education Fulbright-Hays|1|2015-10-15|http://vivo.ufl.edu/individual/n1911555365|
 VIVO Pump 0.8.0|GM02317|Association of State and Territor Health|1|2015-10-15|http://vivo.ufl.edu/individual/n1050735857|
 VIVO Pump 0.8.0|GM02318|Pest Management Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4071488825|
 VIVO Pump 0.8.0|GM02319|American College Personnel Association|1|2015-10-15|http://vivo.ufl.edu/individual/n4700866515|
@@ -1627,9 +1627,9 @@ VIVO Pump 0.8.0|GM0232|Hydro Agri North America|1|2015-10-15|http://vivo.ufl.edu
 VIVO Pump 0.8.0|GM02320|American Society of Landscape Architects|1|2015-10-15|http://vivo.ufl.edu/individual/n2815732755|
 VIVO Pump 0.8.0|GM02321|Spie-International Society for Optic Engineers|1|2015-10-15|http://vivo.ufl.edu/individual/n5992640223|
 VIVO Pump 0.8.0|GM02322|National Pest Management Association Pest Management Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4685269210|
-VIVO Pump 0.8.0|GM02323|Childrens Hosp Oakland Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n632992180|
+VIVO Pump 0.8.0|GM02323|Children's Hospital Oakland Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n632992180|
 VIVO Pump 0.8.0|GM02324|American Psychological Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1004182951|
-VIVO Pump 0.8.0|GM02325|Childrens Oncology Group|1|2015-10-15|http://vivo.ufl.edu/individual/n1175109220|
+VIVO Pump 0.8.0|GM02325|Children's Oncology Group|1|2015-10-15|http://vivo.ufl.edu/individual/n1175109220|
 VIVO Pump 0.8.0|GM02326|Broad Ruth K Biomed Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n931507446|
 VIVO Pump 0.8.0|GM02327|Cntr for Civic Education|1|2015-10-15|http://vivo.ufl.edu/individual/n973718223|
 VIVO Pump 0.8.0|GM02490|US Army Med Research and Material Com|1|2015-10-15|http://vivo.ufl.edu/individual/n1947848958|
@@ -1638,9 +1638,9 @@ VIVO Pump 0.8.0|GM02430|US National Endow for the Arts|1|2015-10-15|http://vivo.
 VIVO Pump 0.8.0|GM02431|US National Endow for the Humanities|1|2015-10-15|http://vivo.ufl.edu/individual/n1627983853|
 VIVO Pump 0.8.0|GM02432|National Science Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n28779|
 VIVO Pump 0.8.0|GM02433|National Science Foundation Pres Fac Fellows|1|2015-10-15|http://vivo.ufl.edu/individual/n2173938902|
-VIVO Pump 0.8.0|GM02434|US Dept of Veterans Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n177875961|
-VIVO Pump 0.8.0|GM02435|US Dept of Vet Aff Gainesville Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n99220|
-VIVO Pump 0.8.0|GM02436|US Dept of Vet Aff Nashville Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n5593253219|
+VIVO Pump 0.8.0|GM02434|US Department of Veterans Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n177875961|
+VIVO Pump 0.8.0|GM02435|US Department of Vet Aff Gainesville Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n99220|
+VIVO Pump 0.8.0|GM02436|US Department of Vet Aff Nashville Med Center|1|2015-10-15|http://vivo.ufl.edu/individual/n5593253219|
 VIVO Pump 0.8.0|GM02495|US Navy Space Naval War Sys Center|1|2015-10-15|http://vivo.ufl.edu/individual/n1876673009|
 VIVO Pump 0.8.0|GM02496|US Air Force|1|2015-10-15|http://vivo.ufl.edu/individual/n54779|
 VIVO Pump 0.8.0|GM02497|US Air Force Afosr|1|2015-10-15|http://vivo.ufl.edu/individual/n1280903611|
@@ -1655,7 +1655,7 @@ VIVO Pump 0.8.0|GM02503|UF Air Force Phillips Laboratory|1|2015-10-15|http://viv
 VIVO Pump 0.8.0|GM02504|US Air Force Research Laboratory|1|2015-10-15|http://vivo.ufl.edu/individual/n1563746710|
 VIVO Pump 0.8.0|GM02505|US Air Force Special Ops Command|1|2015-10-15|http://vivo.ufl.edu/individual/n3057891518|
 VIVO Pump 0.8.0|GM02506|US Air Force Air Armament Center|1|2015-10-15|http://vivo.ufl.edu/individual/n849208726|
-VIVO Pump 0.8.0|GM02507|US Dept Housing and Urban Development|1|2015-10-15|http://vivo.ufl.edu/individual/n980718769|
+VIVO Pump 0.8.0|GM02507|US Department Housing and Urban Development|1|2015-10-15|http://vivo.ufl.edu/individual/n980718769|
 VIVO Pump 0.8.0|GM02508|Ctrs for Disease Control & Prevention|1|2015-10-15|http://vivo.ufl.edu/individual/n6188267724|
 VIVO Pump 0.8.0|GM02509|Ctrs for Dis Cntrl Institute Occup Sfty Health|1|2015-10-15|http://vivo.ufl.edu/individual/n756387595|
 VIVO Pump 0.8.0|GM0251|Jaeb Center for Health Research|1|2015-10-15|http://vivo.ufl.edu/individual/n762659692|
@@ -1663,13 +1663,13 @@ VIVO Pump 0.8.0|GM02510|Ctrs for Disease Cntrl Center for Env Health|1|2015-10-1
 VIVO Pump 0.8.0|GM02511|Institute of Museum and Library Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n225630190|
 VIVO Pump 0.8.0|GM02512|US Agcy International Development|1|2015-10-15|http://vivo.ufl.edu/individual/n1690480099|
 VIVO Pump 0.8.0|GM02513|US Agcy International Development International Development|1|2015-10-15|http://vivo.ufl.edu/individual/n1690480099|
-VIVO Pump 0.8.0|GM02514|US Dept of Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n1719588500|
-VIVO Pump 0.8.0|GM02515|US Dept of Justice Civil Rights Division|1|2015-10-15|http://vivo.ufl.edu/individual/n3599165495|
-VIVO Pump 0.8.0|GM02516|US Dept of Justice National Institute of Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n430131385|
-VIVO Pump 0.8.0|GM02517|US Dept of Labor|1|2015-10-15|http://vivo.ufl.edu/individual/n153442|
-VIVO Pump 0.8.0|GM02518|US National Archives Records Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n2151979163|
-VIVO Pump 0.8.0|GM02382|US Dept of Commerce|1|2015-10-15|http://vivo.ufl.edu/individual/n28188|
-VIVO Pump 0.8.0|GM02383|US Dept of Commerce Census Bur|1|2015-10-15|http://vivo.ufl.edu/individual/n733985938|
+VIVO Pump 0.8.0|GM02514|US Department of Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n1719588500|
+VIVO Pump 0.8.0|GM02515|US Department of Justice Civil Rights Division|1|2015-10-15|http://vivo.ufl.edu/individual/n3599165495|
+VIVO Pump 0.8.0|GM02516|US Department of Justice National Institute of Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n430131385|
+VIVO Pump 0.8.0|GM02517|US Department of Labor|1|2015-10-15|http://vivo.ufl.edu/individual/n153442|
+VIVO Pump 0.8.0|GM02518|US National Archives Records Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n2151979163|
+VIVO Pump 0.8.0|GM02382|US Department of Commerce|1|2015-10-15|http://vivo.ufl.edu/individual/n28188|
+VIVO Pump 0.8.0|GM02383|US Department of Commerce Census Bur|1|2015-10-15|http://vivo.ufl.edu/individual/n733985938|
 VIVO Pump 0.8.0|GM02245|Florida Association of Homebuilders|1|2015-10-15|http://vivo.ufl.edu/individual/n3059933229|
 VIVO Pump 0.8.0|GM02246|Starbucks Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n6714758318|
 VIVO Pump 0.8.0|GM02247|World Golf Foundation First Tee|1|2015-10-15|http://vivo.ufl.edu/individual/n9472568326|
@@ -1694,13 +1694,13 @@ VIVO Pump 0.8.0|GM02630|Manatee Cnty|1|2015-10-15|http://vivo.ufl.edu/individual
 VIVO Pump 0.8.0|GM02631|Martin Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n410895186|
 VIVO Pump 0.8.0|GM02632|Monroe Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n715337043|
 VIVO Pump 0.8.0|GM02633|Nassau Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n1623755435|
-VIVO Pump 0.8.0|GM02471|US Health Resources and Serv Admn Mic Wic|1|2015-10-15|http://vivo.ufl.edu/individual/n1489416227|
+VIVO Pump 0.8.0|GM02471|US Health Resources and Serv Administration Mic Wic|1|2015-10-15|http://vivo.ufl.edu/individual/n1489416227|
 VIVO Pump 0.8.0|GM02472|US Health Resources & Serv Adm Div of Med|1|2015-10-15|http://vivo.ufl.edu/individual/n1027339636|
 VIVO Pump 0.8.0|GM02473|US Health Resources and Serv Hrs Nursing|1|2015-10-15|http://vivo.ufl.edu/individual/n998423219|
-VIVO Pump 0.8.0|GM02474|US Health Resources and Serv Admn HIV/Aids|1|2015-10-15|http://vivo.ufl.edu/individual/n435256229|
+VIVO Pump 0.8.0|GM02474|US Health Resources and Serv Administration HIV/Aids|1|2015-10-15|http://vivo.ufl.edu/individual/n435256229|
 VIVO Pump 0.8.0|GM02475|Social Security Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n120534|
 VIVO Pump 0.8.0|GM02560|City of Gainesville Regional Util|1|2015-10-15|http://vivo.ufl.edu/individual/n1984308898|
-VIVO Pump 0.8.0|GM02538|US Dept of Homeland Security|1|2015-10-15|http://vivo.ufl.edu/individual/n994323182|
+VIVO Pump 0.8.0|GM02538|US Department of Homeland Security|1|2015-10-15|http://vivo.ufl.edu/individual/n994323182|
 VIVO Pump 0.8.0|GM02539|Multiple Federal Agencies|1|2015-10-15|http://vivo.ufl.edu/individual/n119830|
 VIVO Pump 0.8.0|GM0254|Ortho-Mcneil Pharmaceutical|1|2015-10-15|http://vivo.ufl.edu/individual/n605715966|
 VIVO Pump 0.8.0|GM02540|Serdp-Strategic Env R and D Programmer|1|2015-10-15|http://vivo.ufl.edu/individual/n2401366264|
@@ -1719,8 +1719,8 @@ VIVO Pump 0.8.0|GM0259|Johnson Controls Inc|1|2015-10-15|http://vivo.ufl.edu/ind
 VIVO Pump 0.8.0|GM02590|City of Mulberry|1|2015-10-15|http://vivo.ufl.edu/individual/n1966404754|
 VIVO Pump 0.8.0|GM02591|Alachua Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n1924004184|
 VIVO Pump 0.8.0|GM02592|Alachua Cnty Board of Cnty Commissioner|1|2015-10-15|http://vivo.ufl.edu/individual/n192188741|
-VIVO Pump 0.8.0|GM02593|Alachua Cnty Health Dept|1|2015-10-15|http://vivo.ufl.edu/individual/n2834646209|
-VIVO Pump 0.8.0|GM02532|US Dept of Health and Human Service|1|2015-10-15|http://vivo.ufl.edu/individual/n1555501331|
+VIVO Pump 0.8.0|GM02593|Alachua Cnty Health Department|1|2015-10-15|http://vivo.ufl.edu/individual/n2834646209|
+VIVO Pump 0.8.0|GM02532|US Department of Health and Human Service|1|2015-10-15|http://vivo.ufl.edu/individual/n1555501331|
 VIVO Pump 0.8.0|GM02533|Inter-American Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n7108441706|
 VIVO Pump 0.8.0|GM02534|Arpa|1|2015-10-15|http://vivo.ufl.edu/individual/n7678147088|
 VIVO Pump 0.8.0|GM02600|Brevard Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n359706835|
@@ -1757,19 +1757,19 @@ VIVO Pump 0.8.0|GM02682|City of Montgomery Al|1|2015-10-15|http://vivo.ufl.edu/i
 VIVO Pump 0.8.0|GM02683|City of Pittsburgh Pa|1|2015-10-15|http://vivo.ufl.edu/individual/n924968186|
 VIVO Pump 0.8.0|GM02684|State of California|1|2015-10-15|http://vivo.ufl.edu/individual/n2018753633|
 VIVO Pump 0.8.0|GM02685|State of Ca Citrus Research Board|1|2015-10-15|http://vivo.ufl.edu/individual/n28104015|
-VIVO Pump 0.8.0|GM02686|State of Ca Dept of Food & Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n227648125|
+VIVO Pump 0.8.0|GM02686|State of Ca Department of Food & Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n227648125|
 VIVO Pump 0.8.0|GM02687|State of Ca Water Resources Control Bd|1|2015-10-15|http://vivo.ufl.edu/individual/n2090483909|
 VIVO Pump 0.8.0|GM02688|State of Georgia|1|2015-10-15|http://vivo.ufl.edu/individual/n388030408|
-VIVO Pump 0.8.0|GM02689|State of Georgia Dept of Natural Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1907173282|
+VIVO Pump 0.8.0|GM02689|State of Georgia Department of Natural Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1907173282|
 VIVO Pump 0.8.0|GM0269|Lambda Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n493379734|
 VIVO Pump 0.8.0|GM02556|City of Daytona Beach|1|2015-10-15|http://vivo.ufl.edu/individual/n6281431216|
 VIVO Pump 0.8.0|GM02557|City of Eustis|1|2015-10-15|http://vivo.ufl.edu/individual/n1415873598|
 VIVO Pump 0.8.0|GM02558|City of Gainesville|1|2015-10-15|http://vivo.ufl.edu/individual/n757725064|
 VIVO Pump 0.8.0|GM02559|City of Gainesville Pub Works|1|2015-10-15|http://vivo.ufl.edu/individual/n2082561258|
 VIVO Pump 0.8.0|GM0256|Johnson Johnson Depuy Orthopaedics Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1911030276|
-VIVO Pump 0.8.0|GM02479|US Dept of Education Special Ed and Rehab Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n860349424|
+VIVO Pump 0.8.0|GM02479|US Department of Education Special Ed and Rehab Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n860349424|
 VIVO Pump 0.8.0|GM0248|Ivax Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1184255372|
-VIVO Pump 0.8.0|GM02480|General Services Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n7360857286|
+VIVO Pump 0.8.0|GM02480|General Services Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n7360857286|
 VIVO Pump 0.8.0|GM02481|US Army|1|2015-10-15|http://vivo.ufl.edu/individual/n29763|
 VIVO Pump 0.8.0|GM02482|US Army Research Office|1|2015-10-15|http://vivo.ufl.edu/individual/n1223058594|
 VIVO Pump 0.8.0|GM02483|US Army Corps of Engineers|1|2015-10-15|http://vivo.ufl.edu/individual/n232040|
@@ -1795,10 +1795,10 @@ VIVO Pump 0.8.0|GM02464|National Institute of Health Nccam|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM02465|National Institute of Health Niddk Niaid|1|2015-10-15|http://vivo.ufl.edu/individual/n2245313|
 VIVO Pump 0.8.0|GM02466|National Institute of Health Oprr|1|2015-10-15||
 VIVO Pump 0.8.0|GM02467|Agcy Healthcare Research & Quality|1|2015-10-15|http://vivo.ufl.edu/individual/n63644|
-VIVO Pump 0.8.0|GM02468|Health Care Financing Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n327762208|
-VIVO Pump 0.8.0|GM02469|US Health Resources and Serv Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n1542896002|
+VIVO Pump 0.8.0|GM02468|Health Care Financing Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n327762208|
+VIVO Pump 0.8.0|GM02469|US Health Resources and Serv Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n1542896002|
 VIVO Pump 0.8.0|GM0247|Rayonier Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n6257990|
-VIVO Pump 0.8.0|GM02470|US Health Reso Serv Admn Bhp|1|2015-10-15|http://vivo.ufl.edu/individual/n88360984|
+VIVO Pump 0.8.0|GM02470|US Health Reso Serv Administration Bhp|1|2015-10-15|http://vivo.ufl.edu/individual/n88360984|
 VIVO Pump 0.8.0|GM02619|Highlands Cnty Board of Commissioners|1|2015-10-15|http://vivo.ufl.edu/individual/n1501462662|
 VIVO Pump 0.8.0|GM0262|Key Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n7682456498|
 VIVO Pump 0.8.0|GM02620|Hillsborough Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n375134115|
@@ -1818,16 +1818,16 @@ VIVO Pump 0.8.0|GM0267|Kraft General Foods Inc|1|2015-10-15|http://vivo.ufl.edu/
 VIVO Pump 0.8.0|GM02670|St Johns River Water Management District|1|2015-10-15|http://vivo.ufl.edu/individual/n44173|
 VIVO Pump 0.8.0|GM02671|Suwannee River Water Management Distinguished|1|2015-10-15|http://vivo.ufl.edu/individual/n237585752|
 VIVO Pump 0.8.0|GM02672|Everglades Env Protect Distinguished|1|2015-10-15|http://vivo.ufl.edu/individual/n1175250778|
-VIVO Pump 0.8.0|GM02690|State of Georgia Dept of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n9575717036|
+VIVO Pump 0.8.0|GM02690|State of Georgia Department of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n9575717036|
 VIVO Pump 0.8.0|GM02691|State of Louisiana|1|2015-10-15|http://vivo.ufl.edu/individual/n1391721885|
-VIVO Pump 0.8.0|GM02692|State of La Dept of Wildlife Fisheries|1|2015-10-15|http://vivo.ufl.edu/individual/n4082004962|
+VIVO Pump 0.8.0|GM02692|State of La Department of Wildlife Fisheries|1|2015-10-15|http://vivo.ufl.edu/individual/n4082004962|
 VIVO Pump 0.8.0|GM02693|State of Minnesota|1|2015-10-15|http://vivo.ufl.edu/individual/n4764511715|
 VIVO Pump 0.8.0|GM02694|State of Texas|1|2015-10-15|http://vivo.ufl.edu/individual/n6722006522|
 VIVO Pump 0.8.0|GM02695|State of Texas Health Human Serv Com|1|2015-10-15|http://vivo.ufl.edu/individual/n1992405669|
 VIVO Pump 0.8.0|GM02696|State of Maryland|1|2015-10-15|http://vivo.ufl.edu/individual/n5032831416|
 VIVO Pump 0.8.0|GM02697|State of New Hampshire|1|2015-10-15|http://vivo.ufl.edu/individual/n8699012626|
 VIVO Pump 0.8.0|GM02698|State of Wisconsin|1|2015-10-15|http://vivo.ufl.edu/individual/n2869501966|
-VIVO Pump 0.8.0|GM02699|State of Wi Dept of National Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n7535292048|
+VIVO Pump 0.8.0|GM02699|State of Wi Department of National Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n7535292048|
 VIVO Pump 0.8.0|GM02626|Lake Cnty Water Authority|1|2015-10-15|http://vivo.ufl.edu/individual/n1577441693|
 VIVO Pump 0.8.0|GM02627|Lee Cnty|1|2015-10-15|http://vivo.ufl.edu/individual/n1217008709|
 VIVO Pump 0.8.0|GM02628|Lee Cnty Board of Commissioners|1|2015-10-15|http://vivo.ufl.edu/individual/n567540158|
@@ -1865,7 +1865,7 @@ VIVO Pump 0.8.0|GM02586|City of Bartow|1|2015-10-15|http://vivo.ufl.edu/individu
 VIVO Pump 0.8.0|GM02587|City of St Petersburg Housing Authority|1|2015-10-15|http://vivo.ufl.edu/individual/n4810847589|
 VIVO Pump 0.8.0|GM02720|Fujisawa Pharmaceutical|1|2015-10-15|http://vivo.ufl.edu/individual/n5800836492|
 VIVO Pump 0.8.0|GM02721|Fujitsu|1|2015-10-15|http://vivo.ufl.edu/individual/n4114648401|
-VIVO Pump 0.8.0|GM02722|Ivoclar Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n1362360814|
+VIVO Pump 0.8.0|GM02722|Ivoclar Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n1362360814|
 VIVO Pump 0.8.0|GM02723|Kluwer Academic Publishers|1|2015-10-15|http://vivo.ufl.edu/individual/n3874071835|
 VIVO Pump 0.8.0|GM02635|Orange Cnty Board of Commissioners|1|2015-10-15|http://vivo.ufl.edu/individual/n2038756205|
 VIVO Pump 0.8.0|GM02636|Orange Cnty Utilities|1|2015-10-15|http://vivo.ufl.edu/individual/n1056625137|
@@ -1913,7 +1913,7 @@ VIVO Pump 0.8.0|GM0289|Medtronic Inc Xomed|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM02890|World Commission on Dams|1|2015-10-15|http://vivo.ufl.edu/individual/n2484728471|
 VIVO Pump 0.8.0|GM02891|Chr. Michelsen Institute (Cmi)|1|2015-10-15|http://vivo.ufl.edu/individual/n7720237871|
 VIVO Pump 0.8.0|GM02892|Embrapa|1|2015-10-15|http://vivo.ufl.edu/individual/n870461563|
-VIVO Pump 0.8.0|GM02893|Arab Organization for Ag Development|1|2015-10-15|http://vivo.ufl.edu/individual/n702191776|
+VIVO Pump 0.8.0|GM02893|Arab Organization for Agriculture Development|1|2015-10-15|http://vivo.ufl.edu/individual/n702191776|
 VIVO Pump 0.8.0|GM02894|Corpei|1|2015-10-15|http://vivo.ufl.edu/individual/n5607636476|
 VIVO Pump 0.8.0|GM02895|Intermediate Technician Development Group|1|2015-10-15|http://vivo.ufl.edu/individual/n1490770640|
 VIVO Pump 0.8.0|GM02896|International Centre Research in Agroforest|1|2015-10-15|http://vivo.ufl.edu/individual/n618854321|
@@ -1940,7 +1940,7 @@ VIVO Pump 0.8.0|GM02702|State of Colorado|1|2015-10-15|http://vivo.ufl.edu/indiv
 VIVO Pump 0.8.0|GM02703|State of Tennessee|1|2015-10-15|http://vivo.ufl.edu/individual/n8616290283|
 VIVO Pump 0.8.0|GM02704|Cnty of Onondaga Ny|1|2015-10-15|http://vivo.ufl.edu/individual/n2782108206|
 VIVO Pump 0.8.0|GM02705|State of New York|1|2015-10-15|http://vivo.ufl.edu/individual/n8842873925|
-VIVO Pump 0.8.0|GM02706|State of Mt Dept of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n1367349625|
+VIVO Pump 0.8.0|GM02706|State of Mt Department of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n1367349625|
 VIVO Pump 0.8.0|GM02707|City of Knoxville Empowerment Zone|1|2015-10-15|http://vivo.ufl.edu/individual/n8020826825|
 VIVO Pump 0.8.0|GM02708|Galveston Cnty Texas|1|2015-10-15|http://vivo.ufl.edu/individual/n9305451477|
 VIVO Pump 0.8.0|GM02709|Miscellaneous Donors|1|2015-10-15||
@@ -1948,7 +1948,7 @@ VIVO Pump 0.8.0|GM0271|Lear-Siegler Inc|1|2015-10-15|http://vivo.ufl.edu/individ
 VIVO Pump 0.8.0|GM02710|Multiple Sources|1|2015-10-15|http://vivo.ufl.edu/individual/n119830|
 VIVO Pump 0.8.0|GM02711|Asta Medica|1|2015-10-15|http://vivo.ufl.edu/individual/n2802466955|
 VIVO Pump 0.8.0|GM02712|Asta Medica Awd Arzneimittelwerk Dresden|1|2015-10-15|http://vivo.ufl.edu/individual/n359112540|
-VIVO Pump 0.8.0|GM02713|Bayer Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n1208146623|
+VIVO Pump 0.8.0|GM02713|Bayer Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n1208146623|
 VIVO Pump 0.8.0|GM02714|Ciba Vision|1|2015-10-15|http://vivo.ufl.edu/individual/n279039604|
 VIVO Pump 0.8.0|GM02715|Ciba Vision Ntl Ophthalmic R & D|1|2015-10-15|http://vivo.ufl.edu/individual/n4999317598|
 VIVO Pump 0.8.0|GM02716|Ciba Vision Ciba Vision Opthalmics|1|2015-10-15|http://vivo.ufl.edu/individual/n9252226537|
@@ -1970,23 +1970,23 @@ VIVO Pump 0.8.0|GM02898|Petrobras Petroleo Brasileiro|1|2015-10-15|http://vivo.u
 VIVO Pump 0.8.0|GM02899|Oticon Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n3510543993|
 VIVO Pump 0.8.0|GM029|American Home Prods Wyeth Ayerst Labs Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1666089066|
 VIVO Pump 0.8.0|GM0290|Melville Corporation Marshalls Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n9945913369|
-VIVO Pump 0.8.0|GM02937|Florida Dept of Comm Aff Div of Emerg Management|1|2015-10-15|http://vivo.ufl.edu/individual/n1253344704|
-VIVO Pump 0.8.0|GM02938|Florida Dept of Community Affairs Coastal Mgm|1|2015-10-15|http://vivo.ufl.edu/individual/n3325914197|
-VIVO Pump 0.8.0|GM02939|Florida Dept of Education|1|2015-10-15|http://vivo.ufl.edu/individual/n685588686|
+VIVO Pump 0.8.0|GM02937|Florida Department of Comm Aff Div of Emerg Management|1|2015-10-15|http://vivo.ufl.edu/individual/n1253344704|
+VIVO Pump 0.8.0|GM02938|Florida Department of Community Affairs Coastal Mgm|1|2015-10-15|http://vivo.ufl.edu/individual/n3325914197|
+VIVO Pump 0.8.0|GM02939|Florida Department of Education|1|2015-10-15|http://vivo.ufl.edu/individual/n685588686|
 VIVO Pump 0.8.0|GM0294|Merck Company Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n908940705|
-VIVO Pump 0.8.0|GM02940|Florida Dept of Education Building Construction|1|2015-10-15|http://vivo.ufl.edu/individual/n4272001520|
-VIVO Pump 0.8.0|GM02941|Florida Dept of Education Bur of Vocational|1|2015-10-15|http://vivo.ufl.edu/individual/n7143995115|
-VIVO Pump 0.8.0|GM02942|Florida Dept of Education Florida Learn and Serve|1|2015-10-15|http://vivo.ufl.edu/individual/n9707500785|
-VIVO Pump 0.8.0|GM02943|Florida Dept of Bus and Professor Regulation|1|2015-10-15|http://vivo.ufl.edu/individual/n237706|
-VIVO Pump 0.8.0|GM02944|Florida Dept of Bus Professor Reg Real Estate Com|1|2015-10-15|http://vivo.ufl.edu/individual/n3596360704|
-VIVO Pump 0.8.0|GM02945|Florida Dept of Bus Professor Reg Pari-Mutuel Wag|1|2015-10-15|http://vivo.ufl.edu/individual/n1769131522|
+VIVO Pump 0.8.0|GM02940|Florida Department of Education Building Construction|1|2015-10-15|http://vivo.ufl.edu/individual/n4272001520|
+VIVO Pump 0.8.0|GM02941|Florida Department of Education Bur of Vocational|1|2015-10-15|http://vivo.ufl.edu/individual/n7143995115|
+VIVO Pump 0.8.0|GM02942|Florida Department of Education Florida Learn and Serve|1|2015-10-15|http://vivo.ufl.edu/individual/n9707500785|
+VIVO Pump 0.8.0|GM02943|Florida Department of Bus and Professor Regulation|1|2015-10-15|http://vivo.ufl.edu/individual/n237706|
+VIVO Pump 0.8.0|GM02944|Florida Department of Bus Professor Reg Real Estate Com|1|2015-10-15|http://vivo.ufl.edu/individual/n3596360704|
+VIVO Pump 0.8.0|GM02945|Florida Department of Bus Professor Reg Pari-Mutuel Wag|1|2015-10-15|http://vivo.ufl.edu/individual/n1769131522|
 VIVO Pump 0.8.0|GM02946|Florida State University System|1|2015-10-15|http://vivo.ufl.edu/individual/n9419743278|
 VIVO Pump 0.8.0|GM02947|Florida Community Hospital Education Council|1|2015-10-15|http://vivo.ufl.edu/individual/n6806110318|
 VIVO Pump 0.8.0|GM02948|Florida Center for Solid & Hazard Waste|1|2015-10-15|http://vivo.ufl.edu/individual/n994894707|
 VIVO Pump 0.8.0|GM02949|State Community Colleges|1|2015-10-15|http://vivo.ufl.edu/individual/n1909068369|
 VIVO Pump 0.8.0|GM0295|Merocel Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n2931369212|
 VIVO Pump 0.8.0|GM02876|Institut Fur Grenzgebiete|1|2015-10-15|http://vivo.ufl.edu/individual/n4978188496|
-VIVO Pump 0.8.0|GM02800|Phonak Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n278246465|
+VIVO Pump 0.8.0|GM02800|Phonak Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n278246465|
 VIVO Pump 0.8.0|GM02801|Biosearch Italia Spa|1|2015-10-15|http://vivo.ufl.edu/individual/n7915824385|
 VIVO Pump 0.8.0|GM02802|Elsevier Science Bv|1|2015-10-15|http://vivo.ufl.edu/individual/n2621342727|
 VIVO Pump 0.8.0|GM02803|Nematrol Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n4243087762|
@@ -2005,7 +2005,7 @@ VIVO Pump 0.8.0|GM02884|Institute of Food Research|1|2015-10-15|http://vivo.ufl.
 VIVO Pump 0.8.0|GM02885|National Cancer Institute of Canada|1|2015-10-15|http://vivo.ufl.edu/individual/n16855568|
 VIVO Pump 0.8.0|GM02886|Euro Commission Dir General Xii Srd|1|2015-10-15|http://vivo.ufl.edu/individual/n9211137831|
 VIVO Pump 0.8.0|GM02887|Grantecan Canary Isl Telescope|1|2015-10-15|http://vivo.ufl.edu/individual/n427792061|
-VIVO Pump 0.8.0|GM02888|National Ag & Water Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n3730282454|
+VIVO Pump 0.8.0|GM02888|National Agriculture & Water Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n3730282454|
 VIVO Pump 0.8.0|GM02889|Wellcome Trust|1|2015-10-15|http://vivo.ufl.edu/individual/n24370|
 VIVO Pump 0.8.0|GM02869|US - Mexico Fund for Culture|1|2015-10-15|http://vivo.ufl.edu/individual/n3823524575|
 VIVO Pump 0.8.0|GM0287|Medtronic Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n129077648|
@@ -2036,18 +2036,18 @@ VIVO Pump 0.8.0|GM02951|Miami Dade College|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM02952|Santa Fe College|1|2015-10-15|http://vivo.ufl.edu/individual/n101193222|
 VIVO Pump 0.8.0|GM02953|Valencia Community College|1|2015-10-15|http://vivo.ufl.edu/individual/n6690909202|
 VIVO Pump 0.8.0|GM02954|Multiple Community Colleges|1|2015-10-15|http://vivo.ufl.edu/individual/n3968688286|
-VIVO Pump 0.8.0|GM02955|Dept of Health & Rehab Service|1|2015-10-15|http://vivo.ufl.edu/individual/n1357171857|
-VIVO Pump 0.8.0|GM02956|Dept of Environmental Regulat|1|2015-10-15|http://vivo.ufl.edu/individual/n2101665949|
-VIVO Pump 0.8.0|GM02957|Florida Dept of Environmental Protect|1|2015-10-15|http://vivo.ufl.edu/individual/n1216391174|
-VIVO Pump 0.8.0|GM02958|Florida Dept of Env Protect Div of State Land|1|2015-10-15|http://vivo.ufl.edu/individual/n7513468766|
-VIVO Pump 0.8.0|GM02959|Florida Dept of Env Prot Bur of Bches Coast|1|2015-10-15|http://vivo.ufl.edu/individual/n910940957|
+VIVO Pump 0.8.0|GM02955|Department of Health & Rehab Service|1|2015-10-15|http://vivo.ufl.edu/individual/n1357171857|
+VIVO Pump 0.8.0|GM02956|Department of Environmental Regulat|1|2015-10-15|http://vivo.ufl.edu/individual/n2101665949|
+VIVO Pump 0.8.0|GM02957|Florida Department of Environmental Protect|1|2015-10-15|http://vivo.ufl.edu/individual/n1216391174|
+VIVO Pump 0.8.0|GM02958|Florida Department of Env Protect Div of State Land|1|2015-10-15|http://vivo.ufl.edu/individual/n7513468766|
+VIVO Pump 0.8.0|GM02959|Florida Department of Env Prot Bur of Bches Coast|1|2015-10-15|http://vivo.ufl.edu/individual/n910940957|
 VIVO Pump 0.8.0|GM0296|Metagene Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n904581510|
-VIVO Pump 0.8.0|GM02960|Florida Dept of Env Protect Marine Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n2012135480|
-VIVO Pump 0.8.0|GM02961|Florida Dept of Env Prot Invasive Plant Management|1|2015-10-15|http://vivo.ufl.edu/individual/n234572895|
-VIVO Pump 0.8.0|GM02962|Florida Dept of Env Prot Nat Cultural Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1872783922|
-VIVO Pump 0.8.0|GM02963|US Dept of Commerce|1|2015-10-15|http://vivo.ufl.edu/individual/n28188|
-VIVO Pump 0.8.0|GM02964|Florida Dept of State|1|2015-10-15|http://vivo.ufl.edu/individual/n2109153520|
-VIVO Pump 0.8.0|GM02965|Florida Dept of State Div of Cultural Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n951725524|
+VIVO Pump 0.8.0|GM02960|Florida Department of Env Protect Marine Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n2012135480|
+VIVO Pump 0.8.0|GM02961|Florida Department of Env Prot Invasive Plant Management|1|2015-10-15|http://vivo.ufl.edu/individual/n234572895|
+VIVO Pump 0.8.0|GM02962|Florida Department of Env Prot Nat Cultural Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1872783922|
+VIVO Pump 0.8.0|GM02963|US Department of Commerce|1|2015-10-15|http://vivo.ufl.edu/individual/n28188|
+VIVO Pump 0.8.0|GM02964|Florida Department of State|1|2015-10-15|http://vivo.ufl.edu/individual/n2109153520|
+VIVO Pump 0.8.0|GM02965|Florida Department of State Div of Cultural Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n951725524|
 VIVO Pump 0.8.0|GM0280|Mallinckrodt Cardiology|1|2015-10-15|http://vivo.ufl.edu/individual/n305549017|
 VIVO Pump 0.8.0|GM02838|Direccao Regional Agricultura|1|2015-10-15|http://vivo.ufl.edu/individual/n2245720646|
 VIVO Pump 0.8.0|GM02839|Gov of Ecuador|1|2015-10-15|http://vivo.ufl.edu/individual/n8503970909|
@@ -2057,14 +2057,14 @@ VIVO Pump 0.8.0|GM02841|French Embassy|1|2015-10-15|http://vivo.ufl.edu/individu
 VIVO Pump 0.8.0|GM02842|Republic of Haiti|1|2015-10-15|http://vivo.ufl.edu/individual/n7473751641|
 VIVO Pump 0.8.0|GM02843|Conselho Nacional De Desenvolv|1|2015-10-15|http://vivo.ufl.edu/individual/n7845842119|
 VIVO Pump 0.8.0|GM02844|Capes|1|2015-10-15|http://vivo.ufl.edu/individual/n2453217839|
-VIVO Pump 0.8.0|GM02845|Rural Development Admn Korea|1|2015-10-15|http://vivo.ufl.edu/individual/n806913581|
-VIVO Pump 0.8.0|GM02846|Rural Development Adm Korea National Jeju Ag Exp Sta|1|2015-10-15|http://vivo.ufl.edu/individual/n6444357313|
+VIVO Pump 0.8.0|GM02845|Rural Development Administration Korea|1|2015-10-15|http://vivo.ufl.edu/individual/n806913581|
+VIVO Pump 0.8.0|GM02846|Rural Development Adm Korea National Jeju Agriculture Exp Sta|1|2015-10-15|http://vivo.ufl.edu/individual/n6444357313|
 VIVO Pump 0.8.0|GM02847|Canadian Institute of Health Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1297704180|
 VIVO Pump 0.8.0|GM02848|European Union|1|2015-10-15|http://vivo.ufl.edu/individual/n2131491005|
 VIVO Pump 0.8.0|GM02849|Ukrainian National Academy of Sci Institute Hard Mat|1|2015-10-15|http://vivo.ufl.edu/individual/n5111425989|
 VIVO Pump 0.8.0|GM0285|Medimmune Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n377812751|
-VIVO Pump 0.8.0|GM02850|Gov of Israel Ag Research Organization|1|2015-10-15|http://vivo.ufl.edu/individual/n963025384|
-VIVO Pump 0.8.0|GM02851|Gov of Egypt Cntrl Lab Ag Climate|1|2015-10-15|http://vivo.ufl.edu/individual/n9199536034|
+VIVO Pump 0.8.0|GM02850|Gov of Israel Agriculture Research Organization|1|2015-10-15|http://vivo.ufl.edu/individual/n963025384|
+VIVO Pump 0.8.0|GM02851|Gov of Egypt Cntrl Lab Agriculture Climate|1|2015-10-15|http://vivo.ufl.edu/individual/n9199536034|
 VIVO Pump 0.8.0|GM02852|Swiss Federal Veterinary Office|1|2015-10-15|http://vivo.ufl.edu/individual/n4800914163|
 VIVO Pump 0.8.0|GM02853|Central Canada Veterinary Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1450999311|
 VIVO Pump 0.8.0|GM02736|Taiho Pharmaceutical|1|2015-10-15|http://vivo.ufl.edu/individual/n8519317182|
@@ -2279,7 +2279,7 @@ VIVO Pump 0.8.0|GM0415|Solvay Animal Health|1|2015-10-15|http://vivo.ufl.edu/ind
 VIVO Pump 0.8.0|GM04150|Southern Nursery Association|1|2015-10-15|http://vivo.ufl.edu/individual/n464306021|
 VIVO Pump 0.8.0|GM03847|Atk Thiokol|1|2015-10-15|http://vivo.ufl.edu/individual/n1213095585|
 VIVO Pump 0.8.0|GM03848|Foxhollow|1|2015-10-15|http://vivo.ufl.edu/individual/n1463923429|
-VIVO Pump 0.8.0|GM03849|Childrens Tumor Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1619015620|
+VIVO Pump 0.8.0|GM03849|Children's Tumor Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1619015620|
 VIVO Pump 0.8.0|GM0385|Ross Laboratories|1|2015-10-15|http://vivo.ufl.edu/individual/n4949131231|
 VIVO Pump 0.8.0|GM03850|Powerpad|1|2015-10-15|http://vivo.ufl.edu/individual/n1471723847|
 VIVO Pump 0.8.0|GM03851|Afferent|1|2015-10-15|http://vivo.ufl.edu/individual/n1176593071|
@@ -2336,7 +2336,7 @@ VIVO Pump 0.8.0|GM0655|Trimble Navigation|1|2015-10-15|http://vivo.ufl.edu/indiv
 VIVO Pump 0.8.0|GM03866|Advanced Algorithms and Systems|1|2015-10-15|http://vivo.ufl.edu/individual/n1709023745|
 VIVO Pump 0.8.0|GM03564|Korea Institute of Construction Technology|1|2015-10-15|http://vivo.ufl.edu/individual/n655071884|
 VIVO Pump 0.8.0|GM03858|Ucp Research and Educational Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n6530248433|
-VIVO Pump 0.8.0|GM03859|Florida Dept of Insurance Off of Insur Reg|1|2015-10-15|http://vivo.ufl.edu/individual/n874514778|
+VIVO Pump 0.8.0|GM03859|Florida Department of Insurance Off of Insur Reg|1|2015-10-15|http://vivo.ufl.edu/individual/n874514778|
 VIVO Pump 0.8.0|GM0386|Saga Petroleum|1|2015-10-15|http://vivo.ufl.edu/individual/n7262792214|
 VIVO Pump 0.8.0|GM03860|Arrowhead Research Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n422138204|
 VIVO Pump 0.8.0|GM03861|Biomotion Foundation Orthopaedic Research Lab|1|2015-10-15|http://vivo.ufl.edu/individual/n7474526445|
@@ -2433,7 +2433,7 @@ VIVO Pump 0.8.0|GM03590|UF Student Health Care Center|1|2015-10-15|http://vivo.u
 VIVO Pump 0.8.0|GM03591|Georgia Southwestern State University|1|2015-10-15|http://vivo.ufl.edu/individual/n621230354|
 VIVO Pump 0.8.0|GM03592|Glycadia Inc.|1|2015-10-15|http://vivo.ufl.edu/individual/n939576209|
 VIVO Pump 0.8.0|GM03593|Amyotrophic Lateral Sclerosis Association|1|2015-10-15|http://vivo.ufl.edu/individual/n922390187|
-VIVO Pump 0.8.0|GM03594|US Dept of Ag Food Safety and Inspection|1|2015-10-15|http://vivo.ufl.edu/individual/n697216139|
+VIVO Pump 0.8.0|GM03594|US Department of Agriculture Food Safety and Inspection|1|2015-10-15|http://vivo.ufl.edu/individual/n697216139|
 VIVO Pump 0.8.0|GM03595|Gov of Israel|1|2015-10-15|http://vivo.ufl.edu/individual/n8040252784|
 VIVO Pump 0.8.0|GM03596|Gov of Israel Ministry of Defense|1|2015-10-15|http://vivo.ufl.edu/individual/n1060381355|
 VIVO Pump 0.8.0|GM03103|Purdue University|1|2015-10-15|http://vivo.ufl.edu/individual/n59396|
@@ -2546,9 +2546,9 @@ VIVO Pump 0.8.0|GM04204|Imaging Diagnostics Systems|1|2015-10-15|http://vivo.ufl
 VIVO Pump 0.8.0|GM04205|Elusys Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n7733750803|
 VIVO Pump 0.8.0|GM04206|Computer Science Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n8675184036|
 VIVO Pump 0.8.0|GM04207|Medarex|1|2015-10-15|http://vivo.ufl.edu/individual/n2108200445|
-VIVO Pump 0.8.0|GM04208|State of New York Dept of Health|1|2015-10-15|http://vivo.ufl.edu/individual/n8821155739|
+VIVO Pump 0.8.0|GM04208|State of New York Department of Health|1|2015-10-15|http://vivo.ufl.edu/individual/n8821155739|
 VIVO Pump 0.8.0|GM03966|Auxilium Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n1535406208|
-VIVO Pump 0.8.0|GM03967|US Dept of Defense Missile Defense Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1778176502|
+VIVO Pump 0.8.0|GM03967|US Department of Defense Missile Defense Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n1778176502|
 VIVO Pump 0.8.0|GM03968|American Physicians Assurance|1|2015-10-15|http://vivo.ufl.edu/individual/n676459781|
 VIVO Pump 0.8.0|GM03969|Lovelace Biomed & Environmental Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n2020179960|
 VIVO Pump 0.8.0|GM0397|Scientific Ventures International|1|2015-10-15|http://vivo.ufl.edu/individual/n5796331793|
@@ -2559,7 +2559,7 @@ VIVO Pump 0.8.0|GM03568|Sarc|1|2015-10-15|http://vivo.ufl.edu/individual/n112210
 VIVO Pump 0.8.0|GM03569|Sorenson Medical|1|2015-10-15|http://vivo.ufl.edu/individual/n1257828993|
 VIVO Pump 0.8.0|GM0638|Broadcast Arts Group Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n8476559399|
 VIVO Pump 0.8.0|GM0639|Electric Power Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1474976574|
-VIVO Pump 0.8.0|GM064|Bayer Group Ag Div|1|2015-10-15|http://vivo.ufl.edu/individual/n1208146623|
+VIVO Pump 0.8.0|GM064|Bayer Group Agriculture Div|1|2015-10-15|http://vivo.ufl.edu/individual/n1208146623|
 VIVO Pump 0.8.0|GM0640|Oxigene|1|2015-10-15|http://vivo.ufl.edu/individual/n1900184775|
 VIVO Pump 0.8.0|GM0641|Cfd Research Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n523308249|
 VIVO Pump 0.8.0|GM03694|SE Reg for Biodefense & Emerg Infect|1|2015-10-15|http://vivo.ufl.edu/individual/n2317637868|
@@ -2624,16 +2624,16 @@ VIVO Pump 0.8.0|GM03918|Ghana Ministry of Road Transport|1|2015-10-15|http://viv
 VIVO Pump 0.8.0|GM03919|Amicus Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n352376957|
 VIVO Pump 0.8.0|GM03362|National Institute of Health - IFAS Loc|1|2015-10-15||
 VIVO Pump 0.8.0|GM03363|National Institute of Health - Eies Loc|1|2015-10-15||
-VIVO Pump 0.8.0|GM03364|US Dept of Ag Smith Lever|1|2015-10-15|http://vivo.ufl.edu/individual/n2130970558|
-VIVO Pump 0.8.0|GM03365|US Dept of Ag Forest Service|1|2015-10-15|http://vivo.ufl.edu/individual/n2004682434|
+VIVO Pump 0.8.0|GM03364|US Department of Agriculture Smith Lever|1|2015-10-15|http://vivo.ufl.edu/individual/n2130970558|
+VIVO Pump 0.8.0|GM03365|US Department of Agriculture Forest Service|1|2015-10-15|http://vivo.ufl.edu/individual/n2004682434|
 VIVO Pump 0.8.0|GM03366|Goldman Philanthropic Partnerships|1|2015-10-15|http://vivo.ufl.edu/individual/n7800269748|
-VIVO Pump 0.8.0|GM02836|Gov of Venezuela Ministry of Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n5042421360|
+VIVO Pump 0.8.0|GM02836|Gov of Venezuela Ministry of Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n5042421360|
 VIVO Pump 0.8.0|GM02857|Center for International Forestry Research|1|2015-10-15|http://vivo.ufl.edu/individual/n5927917925|
 VIVO Pump 0.8.0|GM02858|Halifax Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n2845020262|
-VIVO Pump 0.8.0|GM02859|Inter-Am Institute for Coop on Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n9360472721|
+VIVO Pump 0.8.0|GM02859|Inter-Am Institute for Coop on Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n9360472721|
 VIVO Pump 0.8.0|GM0286|Medscand USA|1|2015-10-15|http://vivo.ufl.edu/individual/n7607369426|
 VIVO Pump 0.8.0|GM02860|International Atomic Energy Agency|1|2015-10-15|http://vivo.ufl.edu/individual/n53403|
-VIVO Pump 0.8.0|GM02861|International Institute of Tropical Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n181457566|
+VIVO Pump 0.8.0|GM02861|International Institute of Tropical Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n181457566|
 VIVO Pump 0.8.0|GM02862|International Potato Center|1|2015-10-15|http://vivo.ufl.edu/individual/n1614884050|
 VIVO Pump 0.8.0|GM02863|International Rice Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n819550931|
 VIVO Pump 0.8.0|GM02864|Japanese Sea Turtle Association|1|2015-10-15|http://vivo.ufl.edu/individual/n203943738|
@@ -2734,19 +2734,19 @@ VIVO Pump 0.8.0|GM02977|Florida Fish and Wildlife Research Lab|1|2015-10-15|http
 VIVO Pump 0.8.0|GM02978|Florida Fish and Wildlife Com Marine Research Ins|1|2015-10-15|http://vivo.ufl.edu/individual/n27805861|
 VIVO Pump 0.8.0|GM02979|Florida Public Service Commission|1|2015-10-15|http://vivo.ufl.edu/individual/n3016816908|
 VIVO Pump 0.8.0|GM0298|Microelec Center of North Carolina|1|2015-10-15|http://vivo.ufl.edu/individual/n3099951237|
-VIVO Pump 0.8.0|GM02980|Florida Dept of Elder Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n319659055|
-VIVO Pump 0.8.0|GM02981|Florida Dept of Insurance|1|2015-10-15|http://vivo.ufl.edu/individual/n874514778|
+VIVO Pump 0.8.0|GM02980|Florida Department of Elder Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n319659055|
+VIVO Pump 0.8.0|GM02981|Florida Department of Insurance|1|2015-10-15|http://vivo.ufl.edu/individual/n874514778|
 VIVO Pump 0.8.0|GM02982|Florida Exec Office of the Governor|1|2015-10-15|http://vivo.ufl.edu/individual/n1902056309|
 VIVO Pump 0.8.0|GM02983|Florida Exec Office Gov Emerging Technician Com|1|2015-10-15|http://vivo.ufl.edu/individual/n5989830683|
 VIVO Pump 0.8.0|GM02984|Florida Exec Office Governor Tourism|1|2015-10-15|http://vivo.ufl.edu/individual/n914597774|
-VIVO Pump 0.8.0|GM02985|Agcy for Health Care Admn|1|2015-10-15|http://vivo.ufl.edu/individual/n1321928901|
-VIVO Pump 0.8.0|GM02986|Agcy Health Care Admn Ofc Health Policy|1|2015-10-15|http://vivo.ufl.edu/individual/n3554828489|
-VIVO Pump 0.8.0|GM02987|Florida Dept of Labor and Employment Security|1|2015-10-15|http://vivo.ufl.edu/individual/n4523503363|
-VIVO Pump 0.8.0|GM02988|Florida Dept of Labor and Emp Div of Job Bene|1|2015-10-15|http://vivo.ufl.edu/individual/n1800512539|
-VIVO Pump 0.8.0|GM02989|Dept of Natural Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n9682688912|
+VIVO Pump 0.8.0|GM02985|Agcy for Health Care Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n1321928901|
+VIVO Pump 0.8.0|GM02986|Agcy Health Care Administration Ofc Health Policy|1|2015-10-15|http://vivo.ufl.edu/individual/n3554828489|
+VIVO Pump 0.8.0|GM02987|Florida Department of Labor and Employment Security|1|2015-10-15|http://vivo.ufl.edu/individual/n4523503363|
+VIVO Pump 0.8.0|GM02988|Florida Department of Labor and Emp Div of Job Bene|1|2015-10-15|http://vivo.ufl.edu/individual/n1800512539|
+VIVO Pump 0.8.0|GM02989|Department of Natural Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n9682688912|
 VIVO Pump 0.8.0|GM0299|Miles Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n8797813151|
-VIVO Pump 0.8.0|GM02990|Florida Dept of Legal Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n25524|
-VIVO Pump 0.8.0|GM02991|Florida Dept of Legal Affairs Off of Atty General|1|2015-10-15|http://vivo.ufl.edu/individual/n25524|
+VIVO Pump 0.8.0|GM02990|Florida Department of Legal Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n25524|
+VIVO Pump 0.8.0|GM02991|Florida Department of Legal Affairs Off of Atty General|1|2015-10-15|http://vivo.ufl.edu/individual/n25524|
 VIVO Pump 0.8.0|GM04306|Alseres Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n650609076|
 VIVO Pump 0.8.0|GM04307|Universite De La Reunion|1|2015-10-15|http://vivo.ufl.edu/individual/n450727093|
 VIVO Pump 0.8.0|GM04308|Hennessy Research|1|2015-10-15|http://vivo.ufl.edu/individual/n645531059|
@@ -2755,7 +2755,7 @@ VIVO Pump 0.8.0|GM0431|Sybron Corporation|1|2015-10-15|http://vivo.ufl.edu/indiv
 VIVO Pump 0.8.0|GM04347|Wipower|1|2015-10-15|http://vivo.ufl.edu/individual/n696504276|
 VIVO Pump 0.8.0|GM04310|Sanuwave|1|2015-10-15|http://vivo.ufl.edu/individual/n3373145475|
 VIVO Pump 0.8.0|GM04311|Pierce Atwood|1|2015-10-15|http://vivo.ufl.edu/individual/n1530653717|
-VIVO Pump 0.8.0|GM04312|Florida Dept of Health Bankhead-Coley Cancer Re|1|2015-10-15|http://vivo.ufl.edu/individual/n482524105|
+VIVO Pump 0.8.0|GM04312|Florida Department of Health Bankhead-Coley Cancer Re|1|2015-10-15|http://vivo.ufl.edu/individual/n482524105|
 VIVO Pump 0.8.0|GM03351|Convatec|1|2015-10-15|http://vivo.ufl.edu/individual/n1230403800|
 VIVO Pump 0.8.0|GM03352|US Trade and Development Agcy|1|2015-10-15|http://vivo.ufl.edu/individual/n3000402213|
 VIVO Pump 0.8.0|GM03353|Salix Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n2044972597|
@@ -2787,8 +2787,8 @@ VIVO Pump 0.8.0|GM03627|Isotechnika|1|2015-10-15|http://vivo.ufl.edu/individual/
 VIVO Pump 0.8.0|GM03628|Gallaudet University|1|2015-10-15|http://vivo.ufl.edu/individual/n25814|
 VIVO Pump 0.8.0|GM03629|The Glaucoma Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1358900356|
 VIVO Pump 0.8.0|GM0363|Pursell Industries|1|2015-10-15|http://vivo.ufl.edu/individual/n1596662806|
-VIVO Pump 0.8.0|GM02992|Florida Dept of Management Services|1|2015-10-15|http://vivo.ufl.edu/individual/n725984643|
-VIVO Pump 0.8.0|GM02993|Florida Dept of Military Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n2958412538|
+VIVO Pump 0.8.0|GM02992|Florida Department of Management Services|1|2015-10-15|http://vivo.ufl.edu/individual/n725984643|
+VIVO Pump 0.8.0|GM02993|Florida Department of Military Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n2958412538|
 VIVO Pump 0.8.0|GM02913|Mcmaster University|1|2015-10-15|http://vivo.ufl.edu/individual/n1651704515|
 VIVO Pump 0.8.0|GM02914|University of Calgary|1|2015-10-15|http://vivo.ufl.edu/individual/n1387241657|
 VIVO Pump 0.8.0|GM02915|Showa University of Japan|1|2015-10-15|http://vivo.ufl.edu/individual/n1052179064|
@@ -2809,7 +2809,7 @@ VIVO Pump 0.8.0|GM03354|Homeland Foundation|1|2015-10-15|http://vivo.ufl.edu/ind
 VIVO Pump 0.8.0|GM03355|Foundation for Preserving Florida's Future|1|2015-10-15|http://vivo.ufl.edu/individual/n1589414318|
 VIVO Pump 0.8.0|GM0603|Technology Plan & Management Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n4506656948|
 VIVO Pump 0.8.0|GM0604|Advanced Biologics|1|2015-10-15|http://vivo.ufl.edu/individual/n6754263662|
-VIVO Pump 0.8.0|GM03009|Florida Dept of Health Alachua Cnty Health Dept|1|2015-10-15|http://vivo.ufl.edu/individual/n2222193662|
+VIVO Pump 0.8.0|GM03009|Florida Department of Health Alachua Cnty Health Department|1|2015-10-15|http://vivo.ufl.edu/individual/n2222193662|
 VIVO Pump 0.8.0|GM02776|Nugro Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n4113854159|
 VIVO Pump 0.8.0|GM02777|Ppl Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n4970702244|
 VIVO Pump 0.8.0|GM02778|Hautes Etudes Commerciales|1|2015-10-15|http://vivo.ufl.edu/individual/n2465392659|
@@ -2853,8 +2853,8 @@ VIVO Pump 0.8.0|GM0400|Searle & Company G D|1|2015-10-15|http://vivo.ufl.edu/ind
 VIVO Pump 0.8.0|GM04000|Naics Association|1|2015-10-15|http://vivo.ufl.edu/individual/n5114189895|
 VIVO Pump 0.8.0|GM04001|Eli & Edythe L Broad Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n152591947|
 VIVO Pump 0.8.0|GM04002|Broad Medical Research Program|1|2015-10-15|http://vivo.ufl.edu/individual/n2716666366|
-VIVO Pump 0.8.0|GM02928|Florida Dept of Banking & Finance|1|2015-10-15|http://vivo.ufl.edu/individual/n1877288724|
-VIVO Pump 0.8.0|GM02929|Florida Dept of Ag and Consumer Service|1|2015-10-15|http://vivo.ufl.edu/individual/n64699|
+VIVO Pump 0.8.0|GM02928|Florida Department of Banking & Finance|1|2015-10-15|http://vivo.ufl.edu/individual/n1877288724|
+VIVO Pump 0.8.0|GM02929|Florida Department of Agriculture and Consumer Service|1|2015-10-15|http://vivo.ufl.edu/individual/n64699|
 VIVO Pump 0.8.0|GM03163|University of Maryland|1|2015-10-15|http://vivo.ufl.edu/individual/n93906|
 VIVO Pump 0.8.0|GM03164|University of Massachusetts|1|2015-10-15|http://vivo.ufl.edu/individual/n19639|
 VIVO Pump 0.8.0|GM03165|University of Miami|1|2015-10-15|http://vivo.ufl.edu/individual/n30714|
@@ -2874,7 +2874,7 @@ VIVO Pump 0.8.0|GM03177|University of Notre Dame Gem Program|1|2015-10-15|http:/
 VIVO Pump 0.8.0|GM03119|Texas A&M University|1|2015-10-15|http://vivo.ufl.edu/individual/n100662|
 VIVO Pump 0.8.0|GM0312|Native Plant Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n8769085441|
 VIVO Pump 0.8.0|GM03120|Texas A&M University Engineering Exp Sta|1|2015-10-15|http://vivo.ufl.edu/individual/n1152531171|
-VIVO Pump 0.8.0|GM03121|Texas A&M University Ag Exp Station|1|2015-10-15|http://vivo.ufl.edu/individual/n242286772|
+VIVO Pump 0.8.0|GM03121|Texas A&M University Agriculture Exp Station|1|2015-10-15|http://vivo.ufl.edu/individual/n242286772|
 VIVO Pump 0.8.0|GM03122|Tulane University|1|2015-10-15|http://vivo.ufl.edu/individual/n3438278523|
 VIVO Pump 0.8.0|GM03649|French J D Alzheimer's Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4097156|
 VIVO Pump 0.8.0|GM0365|Abb Ceag Power Supplies Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n6759562284|
@@ -2909,13 +2909,13 @@ VIVO Pump 0.8.0|GM04003|Reinhold|1|2015-10-15|http://vivo.ufl.edu/individual/n95
 VIVO Pump 0.8.0|GM04004|Bioline Rx|1|2015-10-15|http://vivo.ufl.edu/individual/n1445525824|
 VIVO Pump 0.8.0|GM03535|Buckeye Technologies Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n2088437716|
 VIVO Pump 0.8.0|GM03536|Fed Public Defenders Ofc-Tampa|1|2015-10-15|http://vivo.ufl.edu/individual/n1195719884|
-VIVO Pump 0.8.0|GM03537|Ohio Dept of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n4987048924|
+VIVO Pump 0.8.0|GM03537|Ohio Department of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n4987048924|
 VIVO Pump 0.8.0|GM03538|State of Ohio|1|2015-10-15|http://vivo.ufl.edu/individual/n4030492935|
 VIVO Pump 0.8.0|GM03539|Duramed Research Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1507126514|
 VIVO Pump 0.8.0|GM0354|Phillips Petroleum Company|1|2015-10-15|http://vivo.ufl.edu/individual/n9039207122|
 VIVO Pump 0.8.0|GM03540|St Joseph Mercy Oakland|1|2015-10-15|http://vivo.ufl.edu/individual/n2248994934|
 VIVO Pump 0.8.0|GM03541|The Brain Trust|1|2015-10-15|http://vivo.ufl.edu/individual/n677033382|
-VIVO Pump 0.8.0|GM03542|Childrens Heart Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1226197510|
+VIVO Pump 0.8.0|GM03542|Children's Heart Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1226197510|
 VIVO Pump 0.8.0|GM03543|The Rosalynn Carter Institute for Caregiving|1|2015-10-15|http://vivo.ufl.edu/individual/n403156649|
 VIVO Pump 0.8.0|GM03544|Cepheid|1|2015-10-15|http://vivo.ufl.edu/individual/n618654930|
 VIVO Pump 0.8.0|GM03178|University of Oklahoma|1|2015-10-15|http://vivo.ufl.edu/individual/n81147|
@@ -2933,9 +2933,9 @@ VIVO Pump 0.8.0|GM03188|University of Tennessee SE Transportation Center|1|2015-
 VIVO Pump 0.8.0|GM03189|University of Texas|1|2015-10-15|http://vivo.ufl.edu/individual/n221418|
 VIVO Pump 0.8.0|GM03129|University of California|1|2015-10-15|http://vivo.ufl.edu/individual/n40449|
 VIVO Pump 0.8.0|GM0313|Natural Energy|1|2015-10-15|http://vivo.ufl.edu/individual/n3753369447|
-VIVO Pump 0.8.0|GM02970|Florida Dept of Transportation Safety Office|1|2015-10-15|http://vivo.ufl.edu/individual/n112464875|
-VIVO Pump 0.8.0|GM02971|Florida Dept of Transportation Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n576139781|
-VIVO Pump 0.8.0|GM02972|Florida Dept of Corrections|1|2015-10-15|http://vivo.ufl.edu/individual/n156561893|
+VIVO Pump 0.8.0|GM02970|Florida Department of Transportation Safety Office|1|2015-10-15|http://vivo.ufl.edu/individual/n112464875|
+VIVO Pump 0.8.0|GM02971|Florida Department of Transportation Research Center|1|2015-10-15|http://vivo.ufl.edu/individual/n576139781|
+VIVO Pump 0.8.0|GM02972|Florida Department of Corrections|1|2015-10-15|http://vivo.ufl.edu/individual/n156561893|
 VIVO Pump 0.8.0|GM03659|Straumann Manufacturing Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n452927051|
 VIVO Pump 0.8.0|GM0366|Rand Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1501246270|
 VIVO Pump 0.8.0|GM03660|Bioneuronics Corp.|1|2015-10-15|http://vivo.ufl.edu/individual/n1186492747|
@@ -2980,19 +2980,19 @@ VIVO Pump 0.8.0|GM04249|Partner University Fund|1|2015-10-15|http://vivo.ufl.edu
 VIVO Pump 0.8.0|GM0425|Suneast Solar Products|1|2015-10-15|http://vivo.ufl.edu/individual/n2820686718|
 VIVO Pump 0.8.0|GM04250|Overseas Development Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n359545868|
 VIVO Pump 0.8.0|GM04251|National Math and Science Initiative|1|2015-10-15|http://vivo.ufl.edu/individual/n430091566|
-VIVO Pump 0.8.0|GM02973|Florida Dept of Citrus|1|2015-10-15|http://vivo.ufl.edu/individual/n120989|
-VIVO Pump 0.8.0|GM02974|Florida Dept of Citrus Florida Citrus Commission|1|2015-10-15|http://vivo.ufl.edu/individual/n116007447|
+VIVO Pump 0.8.0|GM02973|Florida Department of Citrus|1|2015-10-15|http://vivo.ufl.edu/individual/n120989|
+VIVO Pump 0.8.0|GM02974|Florida Department of Citrus Florida Citrus Commission|1|2015-10-15|http://vivo.ufl.edu/individual/n116007447|
 VIVO Pump 0.8.0|GM02975|Florida Fish & Wildlife Consrv Commission|1|2015-10-15|http://vivo.ufl.edu/individual/n178325|
 VIVO Pump 0.8.0|GM02976|Florida Fish and Wildlife Com Env Education|1|2015-10-15|http://vivo.ufl.edu/individual/n1284664037|
-VIVO Pump 0.8.0|GM02966|Florida Dept of State Historical Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n2064879193|
-VIVO Pump 0.8.0|GM02967|Florida Dept of State Div of Libry Information Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n1040042343|
-VIVO Pump 0.8.0|GM02968|Florida Dept of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n152483|
-VIVO Pump 0.8.0|GM02969|Florida Dept of Transportation Mat Office|1|2015-10-15|http://vivo.ufl.edu/individual/n1873544529|
+VIVO Pump 0.8.0|GM02966|Florida Department of State Historical Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n2064879193|
+VIVO Pump 0.8.0|GM02967|Florida Department of State Div of Libry Information Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n1040042343|
+VIVO Pump 0.8.0|GM02968|Florida Department of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n152483|
+VIVO Pump 0.8.0|GM02969|Florida Department of Transportation Mat Office|1|2015-10-15|http://vivo.ufl.edu/individual/n1873544529|
 VIVO Pump 0.8.0|GM0297|Mfm Industries Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n5893555021|
 VIVO Pump 0.8.0|GM02900|International Continentl Sci Drill Programmer|1|2015-10-15|http://vivo.ufl.edu/individual/n9357441366|
 VIVO Pump 0.8.0|GM02901|Ecuadorian Passion Fruit Proc|1|2015-10-15|http://vivo.ufl.edu/individual/n3410917999|
 VIVO Pump 0.8.0|GM02902|Foundation for Research Science and Technician|1|2015-10-15|http://vivo.ufl.edu/individual/n8967360281|
-VIVO Pump 0.8.0|GM02903|Ottawa Hosp Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1031135537|
+VIVO Pump 0.8.0|GM02903|Ottawa Hospital Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1031135537|
 VIVO Pump 0.8.0|GM02904|Institute of International Education Brazil|1|2015-10-15|http://vivo.ufl.edu/individual/n1040085342|
 VIVO Pump 0.8.0|GM02905|Middle East Desalination Research C|1|2015-10-15|http://vivo.ufl.edu/individual/n1981378235|
 VIVO Pump 0.8.0|GM02906|Agmardt|1|2015-10-15|http://vivo.ufl.edu/individual/n680255613|
@@ -3101,7 +3101,7 @@ VIVO Pump 0.8.0|GM0420|Spectroscopy Imaging Systems|1|2015-10-15|http://vivo.ufl
 VIVO Pump 0.8.0|GM04200|University of Kiel|1|2015-10-15|http://vivo.ufl.edu/individual/n1808596152|
 VIVO Pump 0.8.0|GM04201|Aptus Endosystems|1|2015-10-15|http://vivo.ufl.edu/individual/n153587372|
 VIVO Pump 0.8.0|GM03147|University of Georgia|1|2015-10-15|http://vivo.ufl.edu/individual/n26321|
-VIVO Pump 0.8.0|GM03148|University of Georgia Ag Exp Sta|1|2015-10-15|http://vivo.ufl.edu/individual/n194423825|
+VIVO Pump 0.8.0|GM03148|University of Georgia Agriculture Exp Sta|1|2015-10-15|http://vivo.ufl.edu/individual/n194423825|
 VIVO Pump 0.8.0|GM03347|Vialactia Biosciences (Nz)|1|2015-10-15|http://vivo.ufl.edu/individual/n109121736|
 VIVO Pump 0.8.0|GM03348|Hardwood Forestry Fund|1|2015-10-15|http://vivo.ufl.edu/individual/n1615052813|
 VIVO Pump 0.8.0|GM03349|Dialysis Clinic|1|2015-10-15|http://vivo.ufl.edu/individual/n648802410|
@@ -3286,7 +3286,7 @@ VIVO Pump 0.8.0|GM02808|Hamilton Health Sciences|1|2015-10-15|http://vivo.ufl.ed
 VIVO Pump 0.8.0|GM02809|Zeca Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n5965698713|
 VIVO Pump 0.8.0|GM0281|Management & Training Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n798443869|
 VIVO Pump 0.8.0|GM02810|Irsid|1|2015-10-15|http://vivo.ufl.edu/individual/n1732758458|
-VIVO Pump 0.8.0|GM02811|Medela Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n611071276|
+VIVO Pump 0.8.0|GM02811|Medela Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n611071276|
 VIVO Pump 0.8.0|GM02662|Reg Planning Council Northeast Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n6917565079|
 VIVO Pump 0.8.0|GM02492|US Navy Naval Air Development Center|1|2015-10-15|http://vivo.ufl.edu/individual/n4882659552|
 VIVO Pump 0.8.0|GM02493|US Navy Research Lab|1|2015-10-15|http://vivo.ufl.edu/individual/n1354997476|
@@ -3418,12 +3418,12 @@ VIVO Pump 0.8.0|GM0996|Lentek International Inc|1|2015-10-15|http://vivo.ufl.edu
 VIVO Pump 0.8.0|GM0357|Post Buckley Schuh & Jerniga|1|2015-10-15|http://vivo.ufl.edu/individual/n61705|
 VIVO Pump 0.8.0|GM03049|UF College of Dentistry Seed Grnt Pro Dsr|1|2015-10-15||
 VIVO Pump 0.8.0|GM0293|Merck Sharp & Dohme|1|2015-10-15|http://vivo.ufl.edu/individual/n245566113|
-VIVO Pump 0.8.0|GM02930|Florida Dept of Ag and Con Service Forestry|1|2015-10-15|http://vivo.ufl.edu/individual/n1859392573|
-VIVO Pump 0.8.0|GM02931|Florida Dept of Ag and Con Service Plant Industry|1|2015-10-15|http://vivo.ufl.edu/individual/n1223513023|
-VIVO Pump 0.8.0|GM02932|Florida Dept of Ag and Con Serv Ag Env Services|1|2015-10-15|http://vivo.ufl.edu/individual/n1707081430|
-VIVO Pump 0.8.0|GM02933|Florida Dept of Ag Citrus Prod Research Advs Council|1|2015-10-15|http://vivo.ufl.edu/individual/n178217691|
-VIVO Pump 0.8.0|GM02934|Florida Dept of Community Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n120436270|
-VIVO Pump 0.8.0|GM02935|Florida Dept of Community Aff Housing Com Development|1|2015-10-15|http://vivo.ufl.edu/individual/n2087412962|
+VIVO Pump 0.8.0|GM02930|Florida Department of Agriculture and Con Service Forestry|1|2015-10-15|http://vivo.ufl.edu/individual/n1859392573|
+VIVO Pump 0.8.0|GM02931|Florida Department of Agriculture and Con Service Plant Industry|1|2015-10-15|http://vivo.ufl.edu/individual/n1223513023|
+VIVO Pump 0.8.0|GM02932|Florida Department of Agriculture and Con Serv Agriculture Env Services|1|2015-10-15|http://vivo.ufl.edu/individual/n1707081430|
+VIVO Pump 0.8.0|GM02933|Florida Department of Agriculture Citrus Prod Research Advs Council|1|2015-10-15|http://vivo.ufl.edu/individual/n178217691|
+VIVO Pump 0.8.0|GM02934|Florida Department of Community Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n120436270|
+VIVO Pump 0.8.0|GM02935|Florida Department of Community Aff Housing Com Development|1|2015-10-15|http://vivo.ufl.edu/individual/n2087412962|
 VIVO Pump 0.8.0|GM02936|Florida Energy Office|1|2015-10-15|http://vivo.ufl.edu/individual/n1544119786|
 VIVO Pump 0.8.0|GM02766|Danone|1|2015-10-15|http://vivo.ufl.edu/individual/n7632374783|
 VIVO Pump 0.8.0|GM02767|Phairson Medical|1|2015-10-15|http://vivo.ufl.edu/individual/n892885558|
@@ -3497,7 +3497,7 @@ VIVO Pump 0.8.0|GM04339|Intercept Pharmaceuticals|1|2015-10-15|http://vivo.ufl.e
 VIVO Pump 0.8.0|GM04341|United Way of America|1|2015-10-15|http://vivo.ufl.edu/individual/n1326742221|
 VIVO Pump 0.8.0|GM04342|Research & Engineering Development|1|2015-10-15|http://vivo.ufl.edu/individual/n1301113065|
 VIVO Pump 0.8.0|GM04343|Department for International Development|1|2015-10-15|http://vivo.ufl.edu/individual/n1528502357|
-VIVO Pump 0.8.0|GM04344|Florida Dept of Health Palm Beach Cnty Health Dep|1|2015-10-15|http://vivo.ufl.edu/individual/n3559878251|
+VIVO Pump 0.8.0|GM04344|Florida Department of Health Palm Beach Cnty Health Dep|1|2015-10-15|http://vivo.ufl.edu/individual/n3559878251|
 VIVO Pump 0.8.0|GM04345|Thrasher Research Fund|1|2015-10-15|http://vivo.ufl.edu/individual/n6251068944|
 VIVO Pump 0.8.0|GM04382|Society of Urology Chairpersons & Programmer Direc|1|2015-10-15|http://vivo.ufl.edu/individual/n1432232122|
 VIVO Pump 0.8.0|GM04383|Cambridge University Hospitals Nhs Foundation Trust|1|2015-10-15|http://vivo.ufl.edu/individual/n218476795|
@@ -3536,12 +3536,12 @@ VIVO Pump 0.8.0|GM03302|US - Egypt Joint Board|1|2015-10-15|http://vivo.ufl.edu/
 VIVO Pump 0.8.0|GM03303|Lykes Development Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1183161294|
 VIVO Pump 0.8.0|GM03067|East Carolina University|1|2015-10-15|http://vivo.ufl.edu/individual/n190405|
 VIVO Pump 0.8.0|GM03068|Embry-Riddle Aeronautical University|1|2015-10-15|http://vivo.ufl.edu/individual/n41941|
-VIVO Pump 0.8.0|GM02994|Florida Dept of Veterans Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n1288859500|
+VIVO Pump 0.8.0|GM02994|Florida Department of Veterans Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n1288859500|
 VIVO Pump 0.8.0|GM02995|Florida Board of Regents|1|2015-10-15|http://vivo.ufl.edu/individual/n8982539403|
 VIVO Pump 0.8.0|GM02996|Florida Institute of Phosphate Research|1|2015-10-15|http://vivo.ufl.edu/individual/n953284796|
 VIVO Pump 0.8.0|GM02997|Florida Legislature|1|2015-10-15|http://vivo.ufl.edu/individual/n1896486973|
 VIVO Pump 0.8.0|GM02998|Florida Joint Legislative Management Com|1|2015-10-15|http://vivo.ufl.edu/individual/n6874973867|
-VIVO Pump 0.8.0|GM02999|Dept of Law Enforcement|1|2015-10-15|http://vivo.ufl.edu/individual/n1094472883|
+VIVO Pump 0.8.0|GM02999|Department of Law Enforcement|1|2015-10-15|http://vivo.ufl.edu/individual/n1094472883|
 VIVO Pump 0.8.0|GM03|3M Company Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n310646608|
 VIVO Pump 0.8.0|GM030|American Home Prods Immunex Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1747756974|
 VIVO Pump 0.8.0|GM0300|Mission Research Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n7134426331|
@@ -3560,17 +3560,17 @@ VIVO Pump 0.8.0|GM04542|City of Dunnellon|1|2015-10-15|http://vivo.ufl.edu/indiv
 VIVO Pump 0.8.0|GM04543|Docomo USA Labs|1|2015-10-15|http://vivo.ufl.edu/individual/n1493494322|
 VIVO Pump 0.8.0|GM05050|Swift Technical Services|1|2015-10-15|http://vivo.ufl.edu/individual/n976022901|
 VIVO Pump 0.8.0|GM05051|Ben-Gurion University of the Negev|1|2015-10-15|http://vivo.ufl.edu/individual/n737841466|
-VIVO Pump 0.8.0|GM03001|Dept of Juvenile Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n762898124|
+VIVO Pump 0.8.0|GM03001|Department of Juvenile Justice|1|2015-10-15|http://vivo.ufl.edu/individual/n762898124|
 VIVO Pump 0.8.0|GM03002|Florida Institute of Government|1|2015-10-15|http://vivo.ufl.edu/individual/n1491214379|
-VIVO Pump 0.8.0|GM03003|Florida Dept of Children and Families|1|2015-10-15|http://vivo.ufl.edu/individual/n1535880984|
-VIVO Pump 0.8.0|GM03004|Florida Dept of Health|1|2015-10-15|http://vivo.ufl.edu/individual/n28559|
+VIVO Pump 0.8.0|GM03003|Florida Department of Children and Families|1|2015-10-15|http://vivo.ufl.edu/individual/n1535880984|
+VIVO Pump 0.8.0|GM03004|Florida Department of Health|1|2015-10-15|http://vivo.ufl.edu/individual/n28559|
 VIVO Pump 0.8.0|GM03231|Medical University of South Carolina|1|2015-10-15|http://vivo.ufl.edu/individual/n59819|
 VIVO Pump 0.8.0|GM03232|Lehigh University|1|2015-10-15|http://vivo.ufl.edu/individual/n246090|
 VIVO Pump 0.8.0|GM03233|University of Nevada|1|2015-10-15|http://vivo.ufl.edu/individual/n54874|
 VIVO Pump 0.8.0|GM03234|Georgia State University|1|2015-10-15|http://vivo.ufl.edu/individual/n1698714159|
 VIVO Pump 0.8.0|GM0609|Allerderm Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n7282787482|
 VIVO Pump 0.8.0|GM03526|Hill Memorial Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n613352229|
-VIVO Pump 0.8.0|GM03527|Florida Dept of Revenue|1|2015-10-15|http://vivo.ufl.edu/individual/n1359331535|
+VIVO Pump 0.8.0|GM03527|Florida Department of Revenue|1|2015-10-15|http://vivo.ufl.edu/individual/n1359331535|
 VIVO Pump 0.8.0|GM03528|Corautus Genetics|1|2015-10-15|http://vivo.ufl.edu/individual/n626504970|
 VIVO Pump 0.8.0|GM03881|Viron Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n277697834|
 VIVO Pump 0.8.0|GM03882|United Biosource|1|2015-10-15|http://vivo.ufl.edu/individual/n322243115|
@@ -3627,7 +3627,7 @@ VIVO Pump 0.8.0|GM04514|Florida Energy & Climate Commission|1|2015-10-15|http://
 VIVO Pump 0.8.0|GM04515|Drexel University|1|2015-10-15|http://vivo.ufl.edu/individual/n442578113|
 VIVO Pump 0.8.0|GM04560|California Olive Committee|1|2015-10-15|http://vivo.ufl.edu/individual/n401695661|
 VIVO Pump 0.8.0|GM04712|Oregon Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n807096713|
-VIVO Pump 0.8.0|GM04713|US Dept of Energy National Nuclear Sec Adm|1|2015-10-15|http://vivo.ufl.edu/individual/n565431201|
+VIVO Pump 0.8.0|GM04713|US Department of Energy National Nuclear Sec Adm|1|2015-10-15|http://vivo.ufl.edu/individual/n565431201|
 VIVO Pump 0.8.0|GM04714|New South Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n1882948195|
 VIVO Pump 0.8.0|GM04715|City of Fort Lauderdale|1|2015-10-15|http://vivo.ufl.edu/individual/n7429364254|
 VIVO Pump 0.8.0|GM04485|Frontline/World|1|2015-10-15|http://vivo.ufl.edu/individual/n808114576|
@@ -3659,12 +3659,12 @@ VIVO Pump 0.8.0|GM04699|Nathan S Kline Institute for Psychiatric Research|1|2015
 VIVO Pump 0.8.0|GM03608|Progress Energy Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n1062368847|
 VIVO Pump 0.8.0|GM03609|European Organization for Nuclear Research|1|2015-10-15|http://vivo.ufl.edu/individual/n8104457522|
 VIVO Pump 0.8.0|GM0361|Professional Medical Products|1|2015-10-15|http://vivo.ufl.edu/individual/n593492893|
-VIVO Pump 0.8.0|GM03610|Childrens Fund Glyco Stor Dis Research|1|2015-10-15|http://vivo.ufl.edu/individual/n505117236|
+VIVO Pump 0.8.0|GM03610|Children's Fund Glyco Stor Dis Research|1|2015-10-15|http://vivo.ufl.edu/individual/n505117236|
 VIVO Pump 0.8.0|GM03611|Smith's Md|1|2015-10-15|http://vivo.ufl.edu/individual/n1840746919|
-VIVO Pump 0.8.0|GM03005|Florida Dept of Health Childrens Med Servs|1|2015-10-15|http://vivo.ufl.edu/individual/n1695631283|
-VIVO Pump 0.8.0|GM03006|Florida Dept of Health Emergency Operations|1|2015-10-15|http://vivo.ufl.edu/individual/n556598109|
-VIVO Pump 0.8.0|GM03007|Florida Dept of Health Biomed Research Pgm/J&E King|1|2015-10-15|http://vivo.ufl.edu/individual/n157101453|
-VIVO Pump 0.8.0|GM03008|Florida Dept of Health Off Tobacco Control|1|2015-10-15|http://vivo.ufl.edu/individual/n5973352792|
+VIVO Pump 0.8.0|GM03005|Florida Department of Health Children's Med Servs|1|2015-10-15|http://vivo.ufl.edu/individual/n1695631283|
+VIVO Pump 0.8.0|GM03006|Florida Department of Health Emergency Operations|1|2015-10-15|http://vivo.ufl.edu/individual/n556598109|
+VIVO Pump 0.8.0|GM03007|Florida Department of Health Biomed Research Pgm/J&E King|1|2015-10-15|http://vivo.ufl.edu/individual/n157101453|
+VIVO Pump 0.8.0|GM03008|Florida Department of Health Off Tobacco Control|1|2015-10-15|http://vivo.ufl.edu/individual/n5973352792|
 VIVO Pump 0.8.0|GM03984|Orexigen Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n995963849|
 VIVO Pump 0.8.0|GM03985|Xanodyne Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n1321172763|
 VIVO Pump 0.8.0|GM03986|Grainger Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n90485238|
@@ -3764,7 +3764,7 @@ VIVO Pump 0.8.0|GM0587|Anamed Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n5
 VIVO Pump 0.8.0|GM0588|Smith Bucklin & Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n2001875250|
 VIVO Pump 0.8.0|GM0589|Purdue Pharma L P|1|2015-10-15|http://vivo.ufl.edu/individual/n817900706|
 VIVO Pump 0.8.0|GM03506|Emerge Interactive Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n598166510|
-VIVO Pump 0.8.0|GM03507|Plus Orthopedics Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n841778945|
+VIVO Pump 0.8.0|GM03507|Plus Orthopedics Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n841778945|
 VIVO Pump 0.8.0|GM03508|Medical University of Ohio (University of Toledo)|1|2015-10-15|http://vivo.ufl.edu/individual/n1538244869|
 VIVO Pump 0.8.0|GM03509|Pediamed Pharmaceuticals Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1511204580|
 VIVO Pump 0.8.0|GM0351|Advanced Photonics Technology|1|2015-10-15|http://vivo.ufl.edu/individual/n8869852045|
@@ -3789,7 +3789,7 @@ VIVO Pump 0.8.0|GM04379|4Frontiers Corporation|1|2015-10-15|http://vivo.ufl.edu/
 VIVO Pump 0.8.0|GM04561|Darifair Foods Crm|1|2015-10-15|http://vivo.ufl.edu/individual/n990898012|
 VIVO Pump 0.8.0|GM04562|Republic of Korea|1|2015-10-15|http://vivo.ufl.edu/individual/n1286082198|
 VIVO Pump 0.8.0|GM04890|Numoda|1|2015-10-15|http://vivo.ufl.edu/individual/n384984295|
-VIVO Pump 0.8.0|GM04563|Chungcheongnam-Do Ag Research & Extension Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n1380910206|
+VIVO Pump 0.8.0|GM04563|Chungcheongnam-Do Agriculture Research & Extension Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n1380910206|
 VIVO Pump 0.8.0|GM04564|Apt Pharmaceuticals Inc.|1|2015-10-15|http://vivo.ufl.edu/individual/n502916546|
 VIVO Pump 0.8.0|GM04565|Cancer Education Consortium|1|2015-10-15|http://vivo.ufl.edu/individual/n1601002576|
 VIVO Pump 0.8.0|GM04566|Basell Polyolefine Gmbh|1|2015-10-15|http://vivo.ufl.edu/individual/n793641511|
@@ -3844,7 +3844,7 @@ VIVO Pump 0.8.0|GM0770|Eikos|1|2015-10-15|http://vivo.ufl.edu/individual/n910423
 VIVO Pump 0.8.0|GM0771|Agraquest Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1335998080|
 VIVO Pump 0.8.0|GM0958|USA Floral Products Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n8687540316|
 VIVO Pump 0.8.0|GM04437|Am Holistic Veterinary Medical Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1884852775|
-VIVO Pump 0.8.0|GM04438|Florida Dept of Transp Office of Construction|1|2015-10-15|http://vivo.ufl.edu/individual/n1433355326|
+VIVO Pump 0.8.0|GM04438|Florida Department of Transp Office of Construction|1|2015-10-15|http://vivo.ufl.edu/individual/n1433355326|
 VIVO Pump 0.8.0|GM04439|Florida Association of Public Health Nurses|1|2015-10-15|http://vivo.ufl.edu/individual/n1139945380|
 VIVO Pump 0.8.0|GM04440|Florida Nurses Association|1|2015-10-15|http://vivo.ufl.edu/individual/n4147100656|
 VIVO Pump 0.8.0|GM04328|Prospect Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n297345327|
@@ -3871,7 +3871,7 @@ VIVO Pump 0.8.0|GM04338|Comm on Rehabilitation Counselor Cert|1|2015-10-15|http:
 VIVO Pump 0.8.0|GM04380|Bikam Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n2038879771|
 VIVO Pump 0.8.0|GM04462|Beat Information Technology|1|2015-10-15|http://vivo.ufl.edu/individual/n103153|
 VIVO Pump 0.8.0|GM03870|Radiant Research|1|2015-10-15|http://vivo.ufl.edu/individual/n391836020|
-VIVO Pump 0.8.0|GM03871|US Dept of the Treasury|1|2015-10-15|http://vivo.ufl.edu/individual/n9715151605|
+VIVO Pump 0.8.0|GM03871|US Department of the Treasury|1|2015-10-15|http://vivo.ufl.edu/individual/n9715151605|
 VIVO Pump 0.8.0|GM03872|US Small Business Administration|1|2015-10-15|http://vivo.ufl.edu/individual/n3718595775|
 VIVO Pump 0.8.0|GM03873|Nps Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n600343482|
 VIVO Pump 0.8.0|GM03874|Nacon Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n5461898016|
@@ -3900,7 +3900,7 @@ VIVO Pump 0.8.0|GM04705|Eusa Pharma (Usa)|1|2015-10-15|http://vivo.ufl.edu/indiv
 VIVO Pump 0.8.0|GM04706|Tropical Fruit Sp|1|2015-10-15|http://vivo.ufl.edu/individual/n895722349|
 VIVO Pump 0.8.0|GM04707|Omega Medical Grants Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1590735467|
 VIVO Pump 0.8.0|GM04708|Nordic Sugar a/S Innovation|1|2015-10-15|http://vivo.ufl.edu/individual/n144831351|
-VIVO Pump 0.8.0|GM04463|US Dept of Energy Idaho National Laboratory|1|2015-10-15|http://vivo.ufl.edu/individual/n619138880|
+VIVO Pump 0.8.0|GM04463|US Department of Energy Idaho National Laboratory|1|2015-10-15|http://vivo.ufl.edu/individual/n619138880|
 VIVO Pump 0.8.0|GM04464|Institute Appl Phys of Russian Academy Science|1|2015-10-15|http://vivo.ufl.edu/individual/n7834972234|
 VIVO Pump 0.8.0|GM04465|Marine Mammal Commission|1|2015-10-15|http://vivo.ufl.edu/individual/n765298815|
 VIVO Pump 0.8.0|GM04466|Helen Hay Whitney Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n3652699233|
@@ -3962,7 +3962,7 @@ VIVO Pump 0.8.0|GM03455|Verizon Foundation|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM03456|The Impact Group|1|2015-10-15|http://vivo.ufl.edu/individual/n536013225|
 VIVO Pump 0.8.0|GM03457|Wintec|1|2015-10-15|http://vivo.ufl.edu/individual/n1570594412|
 VIVO Pump 0.8.0|GM03458|University Consor for Intermodal Trans SAF & S|1|2015-10-15|http://vivo.ufl.edu/individual/n9758309945|
-VIVO Pump 0.8.0|GM03459|Childrens Hospital Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n9414324932|
+VIVO Pump 0.8.0|GM03459|Children's Hospital Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n9414324932|
 VIVO Pump 0.8.0|GM0346|Pharmaceutical Product Development Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n7930798505|
 VIVO Pump 0.8.0|GM03482|Osprey Pharmaceutical Company|1|2015-10-15|http://vivo.ufl.edu/individual/n404917542|
 VIVO Pump 0.8.0|GM03483|Tantus Group|1|2015-10-15|http://vivo.ufl.edu/individual/n6046807613|
@@ -4081,9 +4081,9 @@ VIVO Pump 0.8.0|GM04412|Shands Teaching Hospital Housestaff|1|2015-10-15|http://
 VIVO Pump 0.8.0|GM04063|Romark Laboratories|1|2015-10-15|http://vivo.ufl.edu/individual/n830095998|
 VIVO Pump 0.8.0|GM03494|Biomedical Research Models|1|2015-10-15|http://vivo.ufl.edu/individual/n6059974571|
 VIVO Pump 0.8.0|GM03495|Optonet Inc.|1|2015-10-15|http://vivo.ufl.edu/individual/n52039447|
-VIVO Pump 0.8.0|GM03496|Nationwide Childrens Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n140623|
+VIVO Pump 0.8.0|GM03496|Nationwide Children's Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n140623|
 VIVO Pump 0.8.0|GM05037|Munroe Regional Medical Center|1|2015-10-15|http://vivo.ufl.edu/individual/n12265|
-VIVO Pump 0.8.0|GM05038|The Childrens Hospital Association|1|2015-10-15|http://vivo.ufl.edu/individual/n2068603245|
+VIVO Pump 0.8.0|GM05038|The Children's Hospital Association|1|2015-10-15|http://vivo.ufl.edu/individual/n2068603245|
 VIVO Pump 0.8.0|GM05039|Ev3|1|2015-10-15|http://vivo.ufl.edu/individual/n35571783|
 VIVO Pump 0.8.0|GM05040|Alternate Energy Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n1153735961|
 VIVO Pump 0.8.0|GM05041|Cntr of Excellence in Cancer Comm Research|1|2015-10-15|http://vivo.ufl.edu/individual/n3674556040|
@@ -4206,7 +4206,7 @@ VIVO Pump 0.8.0|GM04850|Ubatec S.A.|1|2015-10-15|http://vivo.ufl.edu/individual/
 VIVO Pump 0.8.0|GM04590|Orange Cnty Public Schools|1|2015-10-15|http://vivo.ufl.edu/individual/n9462037581|
 VIVO Pump 0.8.0|GM04747|New York Botanical Garden|1|2015-10-15|http://vivo.ufl.edu/individual/n528267828|
 VIVO Pump 0.8.0|GM04748|Association for Frontotemporal Dementias|1|2015-10-15|http://vivo.ufl.edu/individual/n5023155984|
-VIVO Pump 0.8.0|GM04608|Centre Hosp De L'Universite De Montreal|1|2015-10-15|http://vivo.ufl.edu/individual/n137438584|
+VIVO Pump 0.8.0|GM04608|Centre Hospital De L'Universite De Montreal|1|2015-10-15|http://vivo.ufl.edu/individual/n137438584|
 VIVO Pump 0.8.0|GM04477|International Association for the Study of Pain|1|2015-10-15|http://vivo.ufl.edu/individual/n64468712|
 VIVO Pump 0.8.0|GM04478|Glaxo Smithkline - Croatia|1|2015-10-15|http://vivo.ufl.edu/individual/n1044860118|
 VIVO Pump 0.8.0|GM04479|Juvantia Pharma|1|2015-10-15|http://vivo.ufl.edu/individual/n1465521127|
@@ -4301,7 +4301,7 @@ VIVO Pump 0.8.0|GM03739|Universidad Privada Del Norte|1|2015-10-15|http://vivo.u
 VIVO Pump 0.8.0|GM03730|Association Francaise Contre Les Myopathies|1|2015-10-15|http://vivo.ufl.edu/individual/n889515966|
 VIVO Pump 0.8.0|GM03731|Helvetas Bhutan|1|2015-10-15|http://vivo.ufl.edu/individual/n1065993191|
 VIVO Pump 0.8.0|GM03732|Xhale|1|2015-10-15|http://vivo.ufl.edu/individual/n124637|
-VIVO Pump 0.8.0|GM03733|US Dept of Vet Aff Maryland Healthcare|1|2015-10-15|http://vivo.ufl.edu/individual/n764523525|
+VIVO Pump 0.8.0|GM03733|US Department of Vet Aff Maryland Healthcare|1|2015-10-15|http://vivo.ufl.edu/individual/n764523525|
 VIVO Pump 0.8.0|GM04038|General Mills Bell Institute Health & Nutrition|1|2015-10-15|http://vivo.ufl.edu/individual/n1571445041|
 VIVO Pump 0.8.0|GM04039|University of Copenhagen|1|2015-10-15|http://vivo.ufl.edu/individual/n23750|
 VIVO Pump 0.8.0|GM0404|Seney Research Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n3732770228|
@@ -4351,7 +4351,7 @@ VIVO Pump 0.8.0|GM03273|Miller Steve|1|2015-10-15|http://vivo.ufl.edu/individual
 VIVO Pump 0.8.0|GM03274|Mortimer J|1|2015-10-15|http://vivo.ufl.edu/individual/n8095625444|
 VIVO Pump 0.8.0|GM03275|Piotrowski G|1|2015-10-15|http://vivo.ufl.edu/individual/n5640152791|
 VIVO Pump 0.8.0|GM03291|Draper Lonnie|1|2015-10-15|http://vivo.ufl.edu/individual/n8825419728|
-VIVO Pump 0.8.0|GM03292|Bard (US Israel Ag R&D Fund)|1|2015-10-15|http://vivo.ufl.edu/individual/n455888942|
+VIVO Pump 0.8.0|GM03292|Bard (US Israel Agriculture R&D Fund)|1|2015-10-15|http://vivo.ufl.edu/individual/n455888942|
 VIVO Pump 0.8.0|GM03293|Nato|1|2015-10-15|http://vivo.ufl.edu/individual/n736139313|
 VIVO Pump 0.8.0|GM03294|United Nations|1|2015-10-15|http://vivo.ufl.edu/individual/n1173250202|
 VIVO Pump 0.8.0|GM04064|Kamada|1|2015-10-15|http://vivo.ufl.edu/individual/n452381865|
@@ -4367,7 +4367,7 @@ VIVO Pump 0.8.0|GM0567|Viropharma Inc|1|2015-10-15|http://vivo.ufl.edu/individua
 VIVO Pump 0.8.0|GM0568|Western Consort for Pub Health|1|2015-10-15|http://vivo.ufl.edu/individual/n124753762|
 VIVO Pump 0.8.0|GM0772|Novartis US|1|2015-10-15|http://vivo.ufl.edu/individual/n1165049338|
 VIVO Pump 0.8.0|GM0773|Novartis US Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n1165049338|
-VIVO Pump 0.8.0|GM04614|US Dept Def National Geospatial Intel Agency|1|2015-10-15|http://vivo.ufl.edu/individual/n9537220931|
+VIVO Pump 0.8.0|GM04614|US Department Def National Geospatial Intel Agency|1|2015-10-15|http://vivo.ufl.edu/individual/n9537220931|
 VIVO Pump 0.8.0|GM04635|Molecules for Health|1|2015-10-15|http://vivo.ufl.edu/individual/n1349262698|
 VIVO Pump 0.8.0|GM04636|Petroalgae|1|2015-10-15|http://vivo.ufl.edu/individual/n1139977762|
 VIVO Pump 0.8.0|GM04637|Strategic Program for Asthma Research|1|2015-10-15|http://vivo.ufl.edu/individual/n7844998758|
@@ -4378,7 +4378,7 @@ VIVO Pump 0.8.0|GM04640|Ventracor USA|1|2015-10-15|http://vivo.ufl.edu/individua
 VIVO Pump 0.8.0|GM04641|Siskin Children's Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1626246051|
 VIVO Pump 0.8.0|GM04642|Alnylam Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n1821873714|
 VIVO Pump 0.8.0|GM03295|United Nations Education Sci and Culture Organization|1|2015-10-15|http://vivo.ufl.edu/individual/n5170945956|
-VIVO Pump 0.8.0|GM03296|United Nations Food and Ag Organization|1|2015-10-15|http://vivo.ufl.edu/individual/n34818|
+VIVO Pump 0.8.0|GM03296|United Nations Food and Agriculture Organization|1|2015-10-15|http://vivo.ufl.edu/individual/n34818|
 VIVO Pump 0.8.0|GM04820|Allergan Sales|1|2015-10-15|http://vivo.ufl.edu/individual/n1241260476|
 VIVO Pump 0.8.0|GM04346|Foundation for Life Care Planning Research|1|2015-10-15|http://vivo.ufl.edu/individual/n6517964317|
 VIVO Pump 0.8.0|GM04348|Network Appliance|1|2015-10-15|http://vivo.ufl.edu/individual/n5303774311|
@@ -4404,7 +4404,7 @@ VIVO Pump 0.8.0|GM03728|Brooks Tropicals Inc|1|2015-10-15|http://vivo.ufl.edu/in
 VIVO Pump 0.8.0|GM03729|Novartis Institute for Biomedical Research|1|2015-10-15|http://vivo.ufl.edu/individual/n1243851609|
 VIVO Pump 0.8.0|GM04030|Boston Applied Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n1374424666|
 VIVO Pump 0.8.0|GM03770|Athenagen Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n517624305|
-VIVO Pump 0.8.0|GM03771|Arpida Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n339779562|
+VIVO Pump 0.8.0|GM03771|Arpida Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n339779562|
 VIVO Pump 0.8.0|GM04659|Nanomech|1|2015-10-15|http://vivo.ufl.edu/individual/n6818082286|
 VIVO Pump 0.8.0|GM04660|China National Complete Plant Import & Expor|1|2015-10-15|http://vivo.ufl.edu/individual/n1400438618|
 VIVO Pump 0.8.0|GM04661|Ruhr-Universitat Bochum|1|2015-10-15|http://vivo.ufl.edu/individual/n919367640|
@@ -4474,7 +4474,7 @@ VIVO Pump 0.8.0|GM04575|St Cloud State University|1|2015-10-15|http://vivo.ufl.e
 VIVO Pump 0.8.0|GM03488|Kent St University|1|2015-10-15|http://vivo.ufl.edu/individual/n218347788|
 VIVO Pump 0.8.0|GM03489|The Stanley Med Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1810971159|
 VIVO Pump 0.8.0|GM0349|Pharmacia Ophthalmics Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1526328868|
-VIVO Pump 0.8.0|GM04418|US Dept Energy Savannah River National Lab|1|2015-10-15|http://vivo.ufl.edu/individual/n1228558549|
+VIVO Pump 0.8.0|GM04418|US Department Energy Savannah River National Lab|1|2015-10-15|http://vivo.ufl.edu/individual/n1228558549|
 VIVO Pump 0.8.0|GM04419|Otomedicine|1|2015-10-15|http://vivo.ufl.edu/individual/n32304|
 VIVO Pump 0.8.0|GM04420|Federal Reserve Bank of Atlanta|1|2015-10-15|http://vivo.ufl.edu/individual/n97004644|
 VIVO Pump 0.8.0|GM04421|Cancer Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n2694753895|
@@ -4608,7 +4608,7 @@ VIVO Pump 0.8.0|GM0005614|Hhv-6 Foundation|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM0006153|Spiralkote Flexible Packaging|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006839|The Aids Institute|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006908|Carnegie Institution of Washington|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006978|US Dept of Vet Aff James a Haley Hospita|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006978|US Department of Vet Aff James a Haley Hospita|1|2015-10-15||
 VIVO Pump 0.8.0|GM04601|Clinton Foundation William J|1|2015-10-15|http://vivo.ufl.edu/individual/n1901143434|
 VIVO Pump 0.8.0|GM04602|Vertical Partners|1|2015-10-15|http://vivo.ufl.edu/individual/n1213795043|
 VIVO Pump 0.8.0|GM03778|Fugro Pelagos Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n814675314|
@@ -4645,7 +4645,7 @@ VIVO Pump 0.8.0|GM03747|E Fougera & Company|1|2015-10-15|http://vivo.ufl.edu/ind
 VIVO Pump 0.8.0|GM03748|Agrofresh Incorporated|1|2015-10-15|http://vivo.ufl.edu/individual/n523181075|
 VIVO Pump 0.8.0|GM04918|Jacksonville Electric Authority|1|2015-10-15|http://vivo.ufl.edu/individual/n43221433|
 VIVO Pump 0.8.0|GM04919|City of Sanford|1|2015-10-15|http://vivo.ufl.edu/individual/n2121423953|
-VIVO Pump 0.8.0|GM04920|City of Sanford Water Utility Dept|1|2015-10-15|http://vivo.ufl.edu/individual/n3268807875|
+VIVO Pump 0.8.0|GM04920|City of Sanford Water Utility Department|1|2015-10-15|http://vivo.ufl.edu/individual/n3268807875|
 VIVO Pump 0.8.0|GM0006527|Healthspottr|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006542|Infectious Diseases Society of America|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006558|Interstitial Cystitis Association|1|2015-10-15||
@@ -4705,13 +4705,13 @@ VIVO Pump 0.8.0|GM05158|Terumo Cardiovascular Systems|1|2015-10-15|http://vivo.u
 VIVO Pump 0.8.0|GM05159|Mcgill University|1|2015-10-15|http://vivo.ufl.edu/individual/n37650|
 VIVO Pump 0.8.0|GM05160|National Institute for Nanoengineering Company|1|2015-10-15|http://vivo.ufl.edu/individual/n9060524482|
 VIVO Pump 0.8.0|GM05161|Prgm for Appropriate Technology in Health|1|2015-10-15|http://vivo.ufl.edu/individual/n788545795|
-VIVO Pump 0.8.0|GM05162|Wallace Clinical Trials Center Greenwich Hosp|1|2015-10-15|http://vivo.ufl.edu/individual/n2033662239|
+VIVO Pump 0.8.0|GM05162|Wallace Clinical Trials Center Greenwich Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n2033662239|
 VIVO Pump 0.8.0|GM05163|Gulf Power Company|1|2015-10-15|http://vivo.ufl.edu/individual/n284258993|
 VIVO Pump 0.8.0|GM05164|Howard University|1|2015-10-15|http://vivo.ufl.edu/individual/n63894|
 VIVO Pump 0.8.0|GM05165|Country of Belize|1|2015-10-15|http://vivo.ufl.edu/individual/n896107136|
 VIVO Pump 0.8.0|GM04925|High Performance Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n1972357601|
 VIVO Pump 0.8.0|GM04926|Enpoint|1|2015-10-15|http://vivo.ufl.edu/individual/n481382057|
-VIVO Pump 0.8.0|GM04927|St Jude Childrens Research Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n995051967|
+VIVO Pump 0.8.0|GM04927|St Jude Children's Research Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n995051967|
 VIVO Pump 0.8.0|GM04928|University of Aberdeen|1|2015-10-15|http://vivo.ufl.edu/individual/n197076281|
 VIVO Pump 0.8.0|GM04929|Harry Lloyd Charitable Trust|1|2015-10-15|http://vivo.ufl.edu/individual/n951609290|
 VIVO Pump 0.8.0|GM04930|Showa Denko Kk|1|2015-10-15|http://vivo.ufl.edu/individual/n6835989200|
@@ -4738,8 +4738,8 @@ VIVO Pump 0.8.0|GM04619|Nsolgel|1|2015-10-15|http://vivo.ufl.edu/individual/n128
 VIVO Pump 0.8.0|GM04620|Oil-Dry Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1027700731|
 VIVO Pump 0.8.0|GM04621|University of Cyprus|1|2015-10-15|http://vivo.ufl.edu/individual/n33929720|
 VIVO Pump 0.8.0|GM04654|US Dry Bean Council|1|2015-10-15|http://vivo.ufl.edu/individual/n1392000676|
-VIVO Pump 0.8.0|GM04622|US Dept Def Armed Forces Institute Pathology|1|2015-10-15|http://vivo.ufl.edu/individual/n5975373754|
-VIVO Pump 0.8.0|GM04623|Alachua Cnty Public Works Dept|1|2015-10-15|http://vivo.ufl.edu/individual/n1166008484|
+VIVO Pump 0.8.0|GM04622|US Department Def Armed Forces Institute Pathology|1|2015-10-15|http://vivo.ufl.edu/individual/n5975373754|
+VIVO Pump 0.8.0|GM04623|Alachua Cnty Public Works Department|1|2015-10-15|http://vivo.ufl.edu/individual/n1166008484|
 VIVO Pump 0.8.0|GM04624|Uretek Icr|1|2015-10-15|http://vivo.ufl.edu/individual/n506738019|
 VIVO Pump 0.8.0|GM04687|Ekr Therapeutics|1|2015-10-15|http://vivo.ufl.edu/individual/n138571604|
 VIVO Pump 0.8.0|GM04698|City of Gretna|1|2015-10-15|http://vivo.ufl.edu/individual/n704349792|
@@ -4839,7 +4839,7 @@ VIVO Pump 0.8.0|GM0005841|Georgia Regents University|1|2015-10-15|http://vivo.uf
 VIVO Pump 0.8.0|GM0006087|Acent Laboratories|1|2015-10-15|http://vivo.ufl.edu/individual/n1150700725|
 VIVO Pump 0.8.0|GM0006211|University Federal Do Rio Grande Do Sul|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006423|Charles Stewart Mott Foundation|1|2015-10-15||
-VIVO Pump 0.8.0|GM03702|Max Zeller Soehne Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n1053135111|
+VIVO Pump 0.8.0|GM03702|Max Zeller Soehne Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n1053135111|
 VIVO Pump 0.8.0|GM03703|Minnesota Campus Compact|1|2015-10-15|http://vivo.ufl.edu/individual/n1230371541|
 VIVO Pump 0.8.0|GM03704|Washington Savannah River Company|1|2015-10-15|http://vivo.ufl.edu/individual/n5829172797|
 VIVO Pump 0.8.0|GM03705|Neuropace Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n382337945|
@@ -4868,13 +4868,13 @@ VIVO Pump 0.8.0|GM05253|Guy Harvey Ocean Foundation|1|2015-10-15|http://vivo.ufl
 VIVO Pump 0.8.0|GM05254|Tibion Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n847288062|
 VIVO Pump 0.8.0|GM0005388|Elsevier Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1228272156|
 VIVO Pump 0.8.0|GM0005592|Community Health Centers Alliance|1|2015-10-15|http://vivo.ufl.edu/individual/n2211995544|
-VIVO Pump 0.8.0|GM0005839|Dept Pub Health Maternal & Child Health Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n761920892|
+VIVO Pump 0.8.0|GM0005839|Department Pub Health Maternal & Child Health Serv|1|2015-10-15|http://vivo.ufl.edu/individual/n761920892|
 VIVO Pump 0.8.0|GM0503|Astrazeneca Zeneca Pharm|1|2015-10-15|http://vivo.ufl.edu/individual/n1121490221|
 VIVO Pump 0.8.0|GM0504|Berger-Boyer & Associates Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n9308882900|
 VIVO Pump 0.8.0|GM0505|British Biotech Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n5827408813|
 VIVO Pump 0.8.0|GM03428|Combinatorx|1|2015-10-15|http://vivo.ufl.edu/individual/n1473960199|
 VIVO Pump 0.8.0|GM03429|Kirchgessner Foundation Karl|1|2015-10-15|http://vivo.ufl.edu/individual/n1799071489|
-VIVO Pump 0.8.0|GM0343|Pfizer Inc Ag Postdoctoral Fellow|1|2015-10-15|http://vivo.ufl.edu/individual/n5673206681|
+VIVO Pump 0.8.0|GM0343|Pfizer Inc Agriculture Postdoctoral Fellow|1|2015-10-15|http://vivo.ufl.edu/individual/n5673206681|
 VIVO Pump 0.8.0|GM03430|Cypress Bioscience Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n995623931|
 VIVO Pump 0.8.0|GM03431|Ipl Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n1249176731|
 VIVO Pump 0.8.0|GM03432|The Allen Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1202283443|
@@ -4930,7 +4930,7 @@ VIVO Pump 0.8.0|GM0006562|International Foundation for Research in Paraplegia|1|
 VIVO Pump 0.8.0|GM0006567|International Union Against Tuberculosis Lung Dis|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006569|Islamic Medical Association of North America|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006864|Disney Worldwide Conservation Fund|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006954|Florida Dept of Htlh Ed Ethel Moore Alzheimer|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006954|Florida Department of Htlh Ed Ethel Moore Alzheimer|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005497|Cytopherx|1|2015-10-15|http://vivo.ufl.edu/individual/n8323125231|
 VIVO Pump 0.8.0|GM0005524|Plx Pharma|1|2015-10-15|http://vivo.ufl.edu/individual/n822143095|
 VIVO Pump 0.8.0|GM0006819|West Marine Products Inc.|1|2015-10-15||
@@ -5051,7 +5051,7 @@ VIVO Pump 0.8.0|GM0005921|Wenzhou Medical University|1|2015-10-15|http://vivo.uf
 VIVO Pump 0.8.0|GM0005940|Community Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n2729925441|
 VIVO Pump 0.8.0|GM0005957|Venaxis|1|2015-10-15|http://vivo.ufl.edu/individual/n1221508033|
 VIVO Pump 0.8.0|GM0005978|Orthoaccel Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n6641880563|
-VIVO Pump 0.8.0|GM0005979|US Dept of Int Bur of Ocean Energy Management|1|2015-10-15|http://vivo.ufl.edu/individual/n2470961118|
+VIVO Pump 0.8.0|GM0005979|US Department of Int Bur of Ocean Energy Management|1|2015-10-15|http://vivo.ufl.edu/individual/n2470961118|
 VIVO Pump 0.8.0|GM0006061|Sk Life Science|1|2015-10-15|http://vivo.ufl.edu/individual/n8523281445|
 VIVO Pump 0.8.0|GM0005372|Phytopharm Plc|1|2015-10-15|http://vivo.ufl.edu/individual/n1678514516|
 VIVO Pump 0.8.0|GM0005455|National Institute for Aerospace Technology|1|2015-10-15|http://vivo.ufl.edu/individual/n2389054145|
@@ -5127,7 +5127,7 @@ VIVO Pump 0.8.0|GM03805|National Governors Association|1|2015-10-15|http://vivo.
 VIVO Pump 0.8.0|GM05056|Paul C Rizzo Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n729092413|
 VIVO Pump 0.8.0|GM0006416|Center for Khmer Studies|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006793|Aldeyra Therapeutics|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006807|Cnty of Los Angeles Dept of Public Health|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006807|Cnty of Los Angeles Department of Public Health|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006815|Arbor Research Collaborative for Health|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006930|Bitcauldron|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006659|Nestle Nutrition Institute|1|2015-10-15||
@@ -5382,7 +5382,7 @@ VIVO Pump 0.8.0|GM05266|National Center for Responsible Gaming|1|2015-10-15|http
 VIVO Pump 0.8.0|GM04910|Mcq|1|2015-10-15|http://vivo.ufl.edu/individual/n738139037|
 VIVO Pump 0.8.0|GM04911|Huawei Technologies Company|1|2015-10-15|http://vivo.ufl.edu/individual/n854127339|
 VIVO Pump 0.8.0|GM04912|Spectrum Health Hospitals|1|2015-10-15|http://vivo.ufl.edu/individual/n3996610763|
-VIVO Pump 0.8.0|GM04913|Henkel Ag & Co. Kgaa|1|2015-10-15|http://vivo.ufl.edu/individual/n354383893|
+VIVO Pump 0.8.0|GM04913|Henkel Agriculture & Co. Kgaa|1|2015-10-15|http://vivo.ufl.edu/individual/n354383893|
 VIVO Pump 0.8.0|GM04855|Bluewave Industries|1|2015-10-15|http://vivo.ufl.edu/individual/n687903666|
 VIVO Pump 0.8.0|GM04856|Nanophotonica|1|2015-10-15|http://vivo.ufl.edu/individual/n20134774|
 VIVO Pump 0.8.0|GM04857|Konarka Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n944527878|
@@ -5422,7 +5422,7 @@ VIVO Pump 0.8.0|GM0006967|City of St Pete Beach|1|2015-10-15||
 VIVO Pump 0.8.0|GM05155|Stiefel Laboratories|1|2015-10-15|http://vivo.ufl.edu/individual/n1052394168|
 VIVO Pump 0.8.0|GM05156|Osi Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n2115492086|
 VIVO Pump 0.8.0|GM05157|Palm Beach Metropolitan Planning Organization|1|2015-10-15|http://vivo.ufl.edu/individual/n613580091|
-VIVO Pump 0.8.0|GM0006713|S Region Sustainable Ag Research and Ed Pgm|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006713|S Region Sustainable Agriculture Research and Ed Pgm|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006716|Samuel H. Kress Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006737|Soft Bones Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006739|Sonoran Joint Venture|1|2015-10-15||
@@ -5457,7 +5457,7 @@ VIVO Pump 0.8.0|GM05016|Enterprise Minnesota|1|2015-10-15|http://vivo.ufl.edu/in
 VIVO Pump 0.8.0|GM05017|Harvard Medical School|1|2015-10-15|http://vivo.ufl.edu/individual/n92562|
 VIVO Pump 0.8.0|GM04676|National 4-H Council|1|2015-10-15|http://vivo.ufl.edu/individual/n1293862849|
 VIVO Pump 0.8.0|GM04677|Ethicon Endo-Surgery|1|2015-10-15|http://vivo.ufl.edu/individual/n1683809259|
-VIVO Pump 0.8.0|GM04113|Childrens Neuroblastoma Cancer Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1670903645|
+VIVO Pump 0.8.0|GM04113|Children's Neuroblastoma Cancer Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1670903645|
 VIVO Pump 0.8.0|GM05134|Bp Exploration & Production|1|2015-10-15|http://vivo.ufl.edu/individual/n1850384879|
 VIVO Pump 0.8.0|GM05135|Indumar Products|1|2015-10-15|http://vivo.ufl.edu/individual/n5175592980|
 VIVO Pump 0.8.0|GM05136|Wolverine Tube|1|2015-10-15|http://vivo.ufl.edu/individual/n6941539514|
@@ -5528,7 +5528,7 @@ VIVO Pump 0.8.0|GM04897|Ecoasset Solutions|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM04898|Celator Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n6834028084|
 VIVO Pump 0.8.0|GM04899|Friedrich's Ataxia Research Alliance|1|2015-10-15|http://vivo.ufl.edu/individual/n354332366|
 VIVO Pump 0.8.0|GM04900|Arginetix|1|2015-10-15|http://vivo.ufl.edu/individual/n1986582260|
-VIVO Pump 0.8.0|GM04901|US Dept of Ag National Institute of Food & Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n27089|
+VIVO Pump 0.8.0|GM04901|US Department of Agriculture National Institute of Food & Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n27089|
 VIVO Pump 0.8.0|GM04902|Athens Classic Marathon|1|2015-10-15|http://vivo.ufl.edu/individual/n1780070706|
 VIVO Pump 0.8.0|GM04499|Hesperion US|1|2015-10-15|http://vivo.ufl.edu/individual/n602402693|
 VIVO Pump 0.8.0|GM04358|Am Pediatric Surgical Nurses Association|1|2015-10-15|http://vivo.ufl.edu/individual/n776614743|
@@ -5565,7 +5565,7 @@ VIVO Pump 0.8.0|GM0005571|Gulf of Mexico Alliance|1|2015-10-15|http://vivo.ufl.e
 VIVO Pump 0.8.0|GM0005574|Adventrx Pharmaceuticals Inc.|1|2015-10-15|http://vivo.ufl.edu/individual/n1846214187|
 VIVO Pump 0.8.0|GM0005309|Bird Dog Express|1|2015-10-15|http://vivo.ufl.edu/individual/n1251434694|
 VIVO Pump 0.8.0|GM0005313|Florida Probe|1|2015-10-15|http://vivo.ufl.edu/individual/n699995966|
-VIVO Pump 0.8.0|GM0005415|Florida Dpt of Ag & Cons Service Office of Energy|1|2015-10-15|http://vivo.ufl.edu/individual/n2071214622|
+VIVO Pump 0.8.0|GM0005415|Florida Dpt of Agriculture & Cons Service Office of Energy|1|2015-10-15|http://vivo.ufl.edu/individual/n2071214622|
 VIVO Pump 0.8.0|GM0005498|American Dental Education Assn|1|2015-10-15|http://vivo.ufl.edu/individual/n8433377435|
 VIVO Pump 0.8.0|GM0005793|Lilly Endowment Inc|1|2015-10-15|http://vivo.ufl.edu/individual/n3180352629|
 VIVO Pump 0.8.0|GM05067|Fan Family Foudation|1|2015-10-15|http://vivo.ufl.edu/individual/n395288023|
@@ -5631,7 +5631,7 @@ VIVO Pump 0.8.0|GM0005686|Foundation for Child Development|1|2015-10-15|http://v
 VIVO Pump 0.8.0|GM0006830|Bcm Families Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005456|Normandeau Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n637324547|
 VIVO Pump 0.8.0|GM0005506|German Heart Centre|1|2015-10-15|http://vivo.ufl.edu/individual/n7196588738|
-VIVO Pump 0.8.0|GM0005605|Rady Children's Hosp - San Diego|1|2015-10-15|http://vivo.ufl.edu/individual/n625830319|
+VIVO Pump 0.8.0|GM0005605|Rady Children's Hospital - San Diego|1|2015-10-15|http://vivo.ufl.edu/individual/n625830319|
 VIVO Pump 0.8.0|GM0005672|Neighborhood Housing Services of So Florida|1|2015-10-15|http://vivo.ufl.edu/individual/n6459356831|
 VIVO Pump 0.8.0|GM0005916|Applied Medical Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n770613875|
 VIVO Pump 0.8.0|GM0006118|Invado Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n926704915|
@@ -5651,7 +5651,7 @@ VIVO Pump 0.8.0|GM0006873|Premitec Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006922|Ma Institute of Technician Lincoln Laboratory|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005625|Oceanyx Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n3190361217|
 VIVO Pump 0.8.0|GM0005984|Oncology Nursing Society Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4096444207|
-VIVO Pump 0.8.0|GM0006049|Abbott Products Operations Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n4569727619|
+VIVO Pump 0.8.0|GM0006049|Abbott Products Operations Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n4569727619|
 VIVO Pump 0.8.0|GM0005343|Pinney Associates|1|2015-10-15|http://vivo.ufl.edu/individual/n1514126263|
 VIVO Pump 0.8.0|GM0005346|Mpex Pharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n123808759|
 VIVO Pump 0.8.0|GM0006032|Jose Carreras International Leukaemia Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n6719609890|
@@ -5674,7 +5674,7 @@ VIVO Pump 0.8.0|GM0006486|Folger Shakespeare Library|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006487|Fondation Leducq|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006493|Foundanimals|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005690|Atw Automation|1|2015-10-15|http://vivo.ufl.edu/individual/n4431520817|
-VIVO Pump 0.8.0|GM0005746|State of California Dept of Fish & Game|1|2015-10-15|http://vivo.ufl.edu/individual/n4164186752|
+VIVO Pump 0.8.0|GM0005746|State of California Department of Fish & Game|1|2015-10-15|http://vivo.ufl.edu/individual/n4164186752|
 VIVO Pump 0.8.0|GM0006215|Baptist Medical Center|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005677|Institut Rosell|1|2015-10-15|http://vivo.ufl.edu/individual/n2739054161|
 VIVO Pump 0.8.0|GM0005679|VA Palo Alto Health Care System|1|2015-10-15|http://vivo.ufl.edu/individual/n6863874283|
@@ -5768,7 +5768,7 @@ VIVO Pump 0.8.0|GM03501|Chf Solutions Inc.|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM0007041|Hospital for Sick Children|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007064|Criterium|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005760|Florida Alcohol & Drug Abuse Association|1|2015-10-15|http://vivo.ufl.edu/individual/n2153365360|
-VIVO Pump 0.8.0|GM0005968|Victoria Dept of Envirom & Prim Industry|1|2015-10-15|http://vivo.ufl.edu/individual/n2967693784|
+VIVO Pump 0.8.0|GM0005968|Victoria Department of Envirom & Prim Industry|1|2015-10-15|http://vivo.ufl.edu/individual/n2967693784|
 VIVO Pump 0.8.0|GM0005494|Fondazione Centro S Raffaele Del Monte T|1|2015-10-15|http://vivo.ufl.edu/individual/n1217166353|
 VIVO Pump 0.8.0|GM0005834|Colloidal Dynamics|1|2015-10-15|http://vivo.ufl.edu/individual/n9498775503|
 VIVO Pump 0.8.0|GM0006298|A. L. Mailman Family Foundation|1|2015-10-15||
@@ -5905,7 +5905,7 @@ VIVO Pump 0.8.0|GM0006726|Society for Industrial and Applied Math|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006754|Tg Philanthropy|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006774|Volkswagen Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005408|Hebrew University of Jerusalem|1|2015-10-15|http://vivo.ufl.edu/individual/n1795264457|
-VIVO Pump 0.8.0|GM0005887|State of Wisconsin Dept of Nat Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n7535292048|
+VIVO Pump 0.8.0|GM0005887|State of Wisconsin Department of Nat Resources|1|2015-10-15|http://vivo.ufl.edu/individual/n7535292048|
 VIVO Pump 0.8.0|GM0005899|Coop Institute Marine & Atmospheric Studies|1|2015-10-15|http://vivo.ufl.edu/individual/n7413018131|
 VIVO Pump 0.8.0|GM0005938|Mesothelioma Applied Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n358564719|
 VIVO Pump 0.8.0|GM0006051|Wendy C Turner|1|2015-10-15|http://vivo.ufl.edu/individual/n5677858357|
@@ -5981,7 +5981,7 @@ VIVO Pump 0.8.0|GM0005613|Allegro Microsystems|1|2015-10-15|http://vivo.ufl.edu/
 VIVO Pump 0.8.0|GM0005330|Wichita State University|1|2015-10-15|http://vivo.ufl.edu/individual/n4904722329|
 VIVO Pump 0.8.0|GM0005420|Hollister|1|2015-10-15|http://vivo.ufl.edu/individual/n1417149186|
 VIVO Pump 0.8.0|GM0005775|The Geneva Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4312625041|
-VIVO Pump 0.8.0|GM0006147|St Luke's Roosevelt Hosp Center|1|2015-10-15|http://vivo.ufl.edu/individual/n20497131|
+VIVO Pump 0.8.0|GM0006147|St Luke's Roosevelt Hospital Center|1|2015-10-15|http://vivo.ufl.edu/individual/n20497131|
 VIVO Pump 0.8.0|GM0005477|Fundecitrus|1|2015-10-15|http://vivo.ufl.edu/individual/n2125164705|
 VIVO Pump 0.8.0|GM0005532|Texas Children's Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n297383526|
 VIVO Pump 0.8.0|GM0005606|Aecom|1|2015-10-15|http://vivo.ufl.edu/individual/n1346662077|
@@ -6085,7 +6085,7 @@ VIVO Pump 0.8.0|GM0005762|Broncus Medical|1|2015-10-15|http://vivo.ufl.edu/indiv
 VIVO Pump 0.8.0|GM0005747|Collie Health Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n1043948852|
 VIVO Pump 0.8.0|GM0005791|Rheumatology Research Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n944773689|
 VIVO Pump 0.8.0|GM0005821|Nsri - National Security Research Institute|1|2015-10-15|http://vivo.ufl.edu/individual/n1139516329|
-VIVO Pump 0.8.0|GM0005824|California Dept of Food & Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n9666179757|
+VIVO Pump 0.8.0|GM0005824|California Department of Food & Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n9666179757|
 VIVO Pump 0.8.0|GM0005999|Neuronetics|1|2015-10-15|http://vivo.ufl.edu/individual/n136718651|
 VIVO Pump 0.8.0|GM0006083|Rally Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n9788259026|
 VIVO Pump 0.8.0|GM0006968|Coins for Alzheimers Research Trust|1|2015-10-15||
@@ -6100,7 +6100,7 @@ VIVO Pump 0.8.0|GM0006088|Pivotal Software|1|2015-10-15|http://vivo.ufl.edu/indi
 VIVO Pump 0.8.0|GM0005638|Trgel|1|2015-10-15|http://vivo.ufl.edu/individual/n6112936720|
 VIVO Pump 0.8.0|GM0005808|Center for Advancement of Science in Space|1|2015-10-15|http://vivo.ufl.edu/individual/n5174372374|
 VIVO Pump 0.8.0|GM0005847|Ipsen Biopharmaceuticals|1|2015-10-15|http://vivo.ufl.edu/individual/n4201073539|
-VIVO Pump 0.8.0|GM0005523|Commonwealth of Virginia Dept of Forestr|1|2015-10-15|http://vivo.ufl.edu/individual/n1229404392|
+VIVO Pump 0.8.0|GM0005523|Commonwealth of Virginia Department of Forestr|1|2015-10-15|http://vivo.ufl.edu/individual/n1229404392|
 VIVO Pump 0.8.0|GM0005723|Janssen Research & Development|1|2015-10-15|http://vivo.ufl.edu/individual/n9341037364|
 VIVO Pump 0.8.0|GM0005764|Lloyd's Register Educational Trust|1|2015-10-15|http://vivo.ufl.edu/individual/n1221708718|
 VIVO Pump 0.8.0|GM0005790|Mallinckrodt Fdtn Edward Jr.|1|2015-10-15|http://vivo.ufl.edu/individual/n4807680686|
@@ -6134,7 +6134,7 @@ VIVO Pump 0.8.0|GM0005520|Medacta International Sa|1|2015-10-15|http://vivo.ufl.
 VIVO Pump 0.8.0|GM0006041|Altavian|1|2015-10-15|http://vivo.ufl.edu/individual/n4514977962|
 VIVO Pump 0.8.0|GM0005755|Astex|1|2015-10-15|http://vivo.ufl.edu/individual/n4832394445|
 VIVO Pump 0.8.0|GM0006022|Lutonix|1|2015-10-15|http://vivo.ufl.edu/individual/n298525600|
-VIVO Pump 0.8.0|GM0006831|Florida Dept of Economic Opportunity|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006831|Florida Department of Economic Opportunity|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006880|Bridge Pharma Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006956|Koch Biological Solutions Llc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006870|Sugarcane Refined Genetics|1|2015-10-15||
@@ -6153,7 +6153,7 @@ VIVO Pump 0.8.0|EDISON|Edison Pharmaceuticals|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005840|Center for Produce Safety|1|2015-10-15|http://vivo.ufl.edu/individual/n7311029843|
 VIVO Pump 0.8.0|GM0006906|Diabetes Research Connection|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005328|Cactus & Succulent Society of Am|1|2015-10-15|http://vivo.ufl.edu/individual/n614506320|
-VIVO Pump 0.8.0|GM0005478|Indian River Cnty Health Dept|1|2015-10-15|http://vivo.ufl.edu/individual/n900100160|
+VIVO Pump 0.8.0|GM0005478|Indian River Cnty Health Department|1|2015-10-15|http://vivo.ufl.edu/individual/n900100160|
 VIVO Pump 0.8.0|GM0005482|Ao Foundation|1|2015-10-15|http://vivo.ufl.edu/individual/n4189425360|
 VIVO Pump 0.8.0|GM0005864|Agrisoma Biosciences|1|2015-10-15|http://vivo.ufl.edu/individual/n1462798348|
 VIVO Pump 0.8.0|GM0006265|Torch Technologies|1|2015-10-15||
@@ -6309,7 +6309,7 @@ VIVO Pump 0.8.0|GM0006317|Am Fund for Alternatives to Animal Research|1|2015-10-
 VIVO Pump 0.8.0|GM0006319|Am Institute of Aeronautics and Astronautics|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006874|Bayer Animal Health Gmbh|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006878|Pediatric Brain Tumor Foundation|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006881|Childrens Research Institute|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006881|Children's Research Institute|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006882|Middle River Aircraft Systems|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006883|Path Vaccine Solutions|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006890|Izun Pharmaceuticals Corporation|1|2015-10-15||
@@ -6336,7 +6336,7 @@ VIVO Pump 0.8.0|GM0006278|Infinity Pharmaceuticals|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006623|Metropolis Magazine|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006627|Moldovan Research and Development Association|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006630|Motorola Mobility Foundation|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006960|Florida Research Center for Ag Sustainability Inc|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006960|Florida Research Center for Agriculture Sustainability Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006999|Clinipace Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005452|Mds Coating Technologies|1|2015-10-15|http://vivo.ufl.edu/individual/n5609190319|
 VIVO Pump 0.8.0|GM0005896|West Central|1|2015-10-15|http://vivo.ufl.edu/individual/n3924997939|
@@ -6351,7 +6351,7 @@ VIVO Pump 0.8.0|GM0006457|Dentaquest Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006458|Dermatology Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006464|Early American Industries Association|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006468|Elsevier Foundation|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006471|Eppendorf Ag|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006471|Eppendorf Agriculture|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006599|Lowe Syndrome Association|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006998|Oakland University|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006128|Korea Fdtn for Next General Sports Talent|1|2015-10-15|http://vivo.ufl.edu/individual/n6057524343|
@@ -6436,7 +6436,7 @@ VIVO Pump 0.8.0|GM0005603|Kessler Foundation|1|2015-10-15|http://vivo.ufl.edu/in
 VIVO Pump 0.8.0|GM0005815|Landenberger Research Foundation Margaret Q.|1|2015-10-15|http://vivo.ufl.edu/individual/n9248774164|
 VIVO Pump 0.8.0|GM0006242|Andaman Therapeutics|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005432|Noetic Developments|1|2015-10-15|http://vivo.ufl.edu/individual/n4805880922|
-VIVO Pump 0.8.0|GM0006256|State of Texas Dept Aging & Disabled Service|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006256|State of Texas Department Aging & Disabled Service|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006812|Nise Network|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005545|Design Interactions|1|2015-10-15|http://vivo.ufl.edu/individual/n1892302447|
 VIVO Pump 0.8.0|GM0005553|The Florida Aquarium|1|2015-10-15|http://vivo.ufl.edu/individual/n729557222|
@@ -6590,7 +6590,7 @@ VIVO Pump 0.8.0|GM03403|Uniroyal Chemical Company|1|2015-10-15|http://vivo.ufl.e
 VIVO Pump 0.8.0|GM03404|Residual Funds|1|2015-10-15|http://vivo.ufl.edu/individual/n119830|
 VIVO Pump 0.8.0|GM03405|University Area Community Development Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1279872882|
 VIVO Pump 0.8.0|GM03406|The Christensen Fund|1|2015-10-15|http://vivo.ufl.edu/individual/n712766797|
-VIVO Pump 0.8.0|GM03407|Childrens Hosp Los Angeles|1|2015-10-15|http://vivo.ufl.edu/individual/n739584702|
+VIVO Pump 0.8.0|GM03407|Children's Hospital Los Angeles|1|2015-10-15|http://vivo.ufl.edu/individual/n739584702|
 VIVO Pump 0.8.0|GM03700|Florida Nursery Growers and Landscape Association|1|2015-10-15|http://vivo.ufl.edu/individual/n453126597|
 VIVO Pump 0.8.0|GM03701|American Education Finance Association|1|2015-10-15|http://vivo.ufl.edu/individual/n1021903678|
 VIVO Pump 0.8.0|GM0006027|Universidad De La Salle|1|2015-10-15|http://vivo.ufl.edu/individual/n7904237732|
@@ -6690,8 +6690,8 @@ VIVO Pump 0.8.0|GM0006240|Boneco|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006270|Mu Alpha Theta|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006300|Academy Neurologic Comm Disorders and Sci|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007222|American Association for Thoracic Surgery|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007223|Ca Dept of Education|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007224|Florida Dept of Health Duval Company|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007223|Ca Department of Education|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007224|Florida Department of Health Duval Company|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007225|Society of Family Planning|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007226|Cypress Creek Farms|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006093|Thar Energy|1|2015-10-15|http://vivo.ufl.edu/individual/n4176905926|
@@ -6768,7 +6768,7 @@ VIVO Pump 0.8.0|GM0005430|National Estuarine Research Reserve System Scienc|1|20
 VIVO Pump 0.8.0|GM0005736|Nve Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n433310875|
 VIVO Pump 0.8.0|GM0005568|Pediatric Research in Inpatient Settings|1|2015-10-15|http://vivo.ufl.edu/individual/n980296934|
 VIVO Pump 0.8.0|GM0005583|Echelon Biosciences|1|2015-10-15|http://vivo.ufl.edu/individual/n8607563290|
-VIVO Pump 0.8.0|GM0005587|State of Nc Dept of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n8093164903|
+VIVO Pump 0.8.0|GM0005587|State of Nc Department of Transportation|1|2015-10-15|http://vivo.ufl.edu/individual/n8093164903|
 VIVO Pump 0.8.0|GM0005365|Johns Hopkins Bloomberg School Pub Health|1|2015-10-15|http://vivo.ufl.edu/individual/n4155443463|
 VIVO Pump 0.8.0|GM0005657|Cersys|1|2015-10-15|http://vivo.ufl.edu/individual/n8139737984|
 VIVO Pump 0.8.0|GM0005696|Tampa General Hospital|1|2015-10-15|http://vivo.ufl.edu/individual/n6213273114|
@@ -6778,7 +6778,7 @@ VIVO Pump 0.8.0|GM0007213|American Phytopathological Society|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007214|Theravance Biopharma US Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007212|Laboratory Corporation of America Holdings|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007211|Anthrex Inc|1|2015-10-15||
-VIVO Pump 0.8.0|GM0005639|Ubs Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n1034900771|
+VIVO Pump 0.8.0|GM0005639|Ubs Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n1034900771|
 VIVO Pump 0.8.0|GM0005751|Representative of Korea Agcy for Defense Developmen|1|2015-10-15|http://vivo.ufl.edu/individual/n3087780953|
 VIVO Pump 0.8.0|GM0005858|Eloquest Healthcare|1|2015-10-15|http://vivo.ufl.edu/individual/n2021250135|
 VIVO Pump 0.8.0|GM0006201|Parker-Hannifin|1|2015-10-15||
@@ -6921,9 +6921,9 @@ VIVO Pump 0.8.0|GM0007200|Anges Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007219|American College of Clinical Pharmacy|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007221|Purdue Center for Regional Development|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007220|Behavioral Based Improvement Solutions|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007236|Connecticut State Dept of Education|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007236|Connecticut State Department of Education|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007242|University of Arkansas for Medical Sciences|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007243|University of Florida Dept of Obstetrics & Gyn|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007243|University of Florida Department of Obstetrics & Gyn|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007246|Gresham Smith and Partners|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007247|E.L. Robinson Engineering|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006069|Florida Institute of Technology|1|2015-10-15|http://vivo.ufl.edu/individual/n198393|
@@ -6935,7 +6935,7 @@ VIVO Pump 0.8.0|GM0006857|Marine Mammal Center|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006877|Balchem Corporation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005565|Wintek Corporation|1|2015-10-15|http://vivo.ufl.edu/individual/n1311948699|
 VIVO Pump 0.8.0|GM0005691|Vegalab|1|2015-10-15|http://vivo.ufl.edu/individual/n3512327330|
-VIVO Pump 0.8.0|GM0005868|State of Queensland Dept Ag Fish & Fores|1|2015-10-15|http://vivo.ufl.edu/individual/n8046410668|
+VIVO Pump 0.8.0|GM0005868|State of Queensland Department Agriculture Fish & Fores|1|2015-10-15|http://vivo.ufl.edu/individual/n8046410668|
 VIVO Pump 0.8.0|GM0006208|Life Technologies|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006303|African American Success Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006304|Aga Khan Foundation|1|2015-10-15||
@@ -6984,7 +6984,7 @@ VIVO Pump 0.8.0|GM0005514|Mitsubishi Plastics|1|2015-10-15|http://vivo.ufl.edu/i
 VIVO Pump 0.8.0|GM0005624|Philips Healthcare|1|2015-10-15|http://vivo.ufl.edu/individual/n1472331655|
 VIVO Pump 0.8.0|GM0006141|Southern Group on Educational Affairs|1|2015-10-15|http://vivo.ufl.edu/individual/n3762595678|
 VIVO Pump 0.8.0|GM0006228|Province of Quebec|1|2015-10-15||
-VIVO Pump 0.8.0|GM0006841|Florida Network for Childrens Advocacy Ctrs I|1|2015-10-15||
+VIVO Pump 0.8.0|GM0006841|Florida Network for Children's Advocacy Ctrs I|1|2015-10-15||
 VIVO Pump 0.8.0|GM0005356|Dah Technician|1|2015-10-15|http://vivo.ufl.edu/individual/n2633935589|
 VIVO Pump 0.8.0|GM0005872|Mission Critical Electronic Systems|1|2015-10-15|http://vivo.ufl.edu/individual/n7338700296|
 VIVO Pump 0.8.0|GM0005890|Neuronet Learning|1|2015-10-15|http://vivo.ufl.edu/individual/n2277436173|
@@ -7045,7 +7045,7 @@ VIVO Pump 0.8.0|GM0006658|National Op Committee Stds in Athletic Equip|1|2015-10
 VIVO Pump 0.8.0|GM0005889|University of Leeds|1|2015-10-15|http://vivo.ufl.edu/individual/n9546055226|
 VIVO Pump 0.8.0|GM0006045|Satchels Pizza Grant Program|1|2015-10-15|http://vivo.ufl.edu/individual/n5081989557|
 VIVO Pump 0.8.0|GM0007312|Delete Me|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007313|US Dept of Ag Rural Utilities Service|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007313|US Department of Agriculture Rural Utilities Service|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007306|Jpb Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007311|Pgeostat Llc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007314|Laulima Systems|1|2015-10-15||
@@ -7060,10 +7060,10 @@ VIVO Pump 0.8.0|GM0007334|Jrs Biodiversity Foundation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007336|Society for the Study of Evolution|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007335|Compgeom|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007057|Anthera Pharmaceuticals|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007058|Ag Harvesters Llc|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007058|Agriculture Harvesters Llc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007059|National University of Singapore|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007060|Space and Naval Warfare Systems Command|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007061|Dept for Environment Food & Rural Affair|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007061|Department for Environment Food & Rural Affair|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007062|Catabasis Pahrmaceuticals|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007063|Coherent Logix|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007065|Earth Science Laboratories|1|2015-10-15||
@@ -7220,7 +7220,7 @@ VIVO Pump 0.8.0|GM0007251|Society of Woman Geographers|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007252|Mast Therapetucs Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007253|Cynapsus Therapeutics Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007250|Fera Scienced Limited|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007333|Bright From the Start Ga Dept of Early C|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007333|Bright From the Start Ga Department of Early C|1|2015-10-15||
 VIVO Pump 0.8.0|GM04818|Alpha Scents|1|2015-10-15|http://vivo.ufl.edu/individual/n491564290|
 VIVO Pump 0.8.0|GM05151|Novus Nutrition Brands|1|2015-10-15|http://vivo.ufl.edu/individual/n702678385|
 VIVO Pump 0.8.0|GM04052|Sciele Pharma|1|2015-10-15|http://vivo.ufl.edu/individual/n380134457|
@@ -7299,7 +7299,7 @@ VIVO Pump 0.8.0|GM0006014|The French Muscular Dystrophy Association (Afm)|1|2015
 VIVO Pump 0.8.0|GM0006015|Walt Disney Parks and Resorts U.S. Inc.|1|2015-10-15|http://vivo.ufl.edu/individual/n3298367210|
 VIVO Pump 0.8.0|GM0006016|Tirc Energy Engineering|1|2015-10-15|http://vivo.ufl.edu/individual/n1418007653|
 VIVO Pump 0.8.0|GM0006082|Material Science Corp.|1|2015-10-15|http://vivo.ufl.edu/individual/n3818855989|
-VIVO Pump 0.8.0|GM0006086|Wockhardt Bio Ag|1|2015-10-15|http://vivo.ufl.edu/individual/n5888921973|
+VIVO Pump 0.8.0|GM0006086|Wockhardt Bio Agriculture|1|2015-10-15|http://vivo.ufl.edu/individual/n5888921973|
 VIVO Pump 0.8.0|GM0005854|All Points Logistics|1|2015-10-15|http://vivo.ufl.edu/individual/n9299651146|
 VIVO Pump 0.8.0|GM0006488|Fondation Lefoulon-Delalande|1|2015-10-15||
 VIVO Pump 0.8.0|GM0006517|Global Probiotics Council|1|2015-10-15||
@@ -7320,12 +7320,12 @@ VIVO Pump 0.8.0|GM0007235|Benitec Biopharma|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007233|Cytosorbents Corporation|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007302|Kolon Life Science Inc|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007300|Dimension Therapeutics Inc|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007303|US Dept of Vet Aff Atlanta Medical Center|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007303|US Department of Vet Aff Atlanta Medical Center|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007301|American Society for Veterinary Clinicalpath|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007258|Stetson University|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007244|Central Florida Pulmonary Group|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007245|Eco-Cognizant|1|2015-10-15||
-VIVO Pump 0.8.0|GM0007323|Glencatec Ag|1|2015-10-15||
+VIVO Pump 0.8.0|GM0007323|Glencatec Agriculture|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007326|Mosaic Company|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007327|Centre for Diarrhoeal Disease Research|1|2015-10-15||
 VIVO Pump 0.8.0|GM0007328|National Institute for Public Health & the Environm|1|2015-10-15||
