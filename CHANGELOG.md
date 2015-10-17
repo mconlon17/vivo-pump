@@ -357,4 +357,4 @@ EducationalProcess and closures.  All need testing.
 * **2015-10-15** Starting uf_examples/orcid.  Add improve_org_name, Improvements to uf_examples/sponsors -- 
 use boolean column for funder, use improve_org_name
 * **2015-10-17** Test for reserved words when reading definitions.  Add test case test_reserved_word.  Tests pass.
-Ive comments in make_get_data
+Improve comments in `make_get_data`
