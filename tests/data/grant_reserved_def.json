@@ -1,0 +1,25 @@
+{
+    "entity_def": {
+        "type": "vivo:Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+        "uri": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:administeredBy"
+                }, 
+                "object": {
+                    "filter": "improve_deptid", 
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum": "data/deptid.txt"
+                }
+            }
+        ], 
+        "action": [
+        ]
+    }
+}

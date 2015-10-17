@@ -470,6 +470,12 @@ def read_update_def(filename, prefix):
             if name in names:
                 raise InvalidDefException(name + " in object and column_defs")
 
+        # Test for reserved column names
+
+        reserved_words = set(['uri', 'action'])
+        if set(col_names) & reserved_words != set():
+            raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
+
         # Test for boolean value
 
         for name in col_names:
@@ -970,7 +976,7 @@ def improve_org_name(s):
     corrections/improvements to org names
     :param s:
     :return:
-    :rtype: basestring
+    :rtype: string
     """
     abbrev_table = {
         "'S ": "'s ",
