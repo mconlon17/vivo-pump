@@ -29,6 +29,7 @@
       <w>isoformat</w>
       <w>iter</w>
       <w>mycities</w>
+      <w>nfac</w>
       <w>nofilter</w>
       <w>nofilters</w>
       <w>novalue</w>
@@ -53,6 +54,7 @@
       <w>ufrf</w>
       <w>uriprefix</w>
       <w>uriref</w>
+      <w>vals</w>
       <w>vcardemail</w>
       <w>versioning</w>
       <w>vitro</w>

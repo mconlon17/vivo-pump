@@ -703,7 +703,7 @@ class PumpTestCase(unittest.TestCase):
 
 class PumpGetTestCase(unittest.TestCase):
 
-    def test_get_no_filter(self, ):
+    def test_get_no_filter(self):
         p = Pump(verbose=True)
         p.filter = False
         n_rows = p.get()
@@ -714,6 +714,17 @@ class PumpGetTestCase(unittest.TestCase):
         p.out_filename = "data/buildings_filtered.txt"
         n_rows = p.get()
         self.assertEqual(2, n_rows)
+
+    def test_boolean_get(self):
+        from vivopump import read_csv
+        p = Pump("data/faculty_boolean_def.json")
+        p.get()
+        data = read_csv('pump_data.txt', delimiter='\t')
+        nfac = 0
+        for row, vals in data.items():
+            if vals['faculty'] == '1':
+                nfac += 1
+        self.assertEqual(5, nfac)
 
 
 class PumpUpdateCallTestCase(unittest.TestCase):

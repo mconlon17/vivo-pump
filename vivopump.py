@@ -1776,7 +1776,7 @@ def unique_path(path):
 def make_get_data(update_def, result_set):
     """
     Given a query result set, produce a dictionary keyed by uri with values of dictionaries keyed by column
-    names.  Where column names have multiple values, create lists of values.
+    names.  Where columns have multiple values, create sets of values.
     :param result_set: SPARQL result set
     :return: dictionary
     :rtype: dict
@@ -1788,11 +1788,19 @@ def make_get_data(update_def, result_set):
         if uri not in data:
             data[uri] = {}
         for name in ['uri'] + update_def['column_defs'].keys():
-            if name in binding:
-                if name in data[uri]:
-                    data[uri][name].add(binding[name]['value'])
-                else:
-                    data[uri][name] = {binding[name]['value']}
+            if name != 'uri':
+                last_step = update_def['column_defs'][name][len(update_def['column_defs'][name]) - 1]
+            if name != 'uri' and last_step['predicate']['single'] == 'boolean':
+                if name in binding and (str(last_step['object']['value']) == binding[name]['value']):
+                    data[uri][name] = '1'
+                elif name not in data[uri]:
+                    data[uri][name] = '0'
+            else:
+                if name in binding:
+                    if name in data[uri]:
+                        data[uri][name].add(binding[name]['value'])
+                    else:
+                        data[uri][name] = {binding[name]['value']}
     return data
 
 
