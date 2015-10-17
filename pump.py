@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.0"
+__version__ = "0.8.1"
 
 from datetime import datetime
 from json import dumps
@@ -145,7 +145,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
         new_update_columns = {}
         for name, path in self.update_def['column_defs'].items():
-            if name in self.update_data[1].keys():
+            if name in self.update_data[self.update_data.keys()[0]].keys():
                 new_update_columns[name] = path
         self.update_def['column_defs'] = new_update_columns
 
@@ -181,12 +181,38 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         from rdflib import URIRef, RDF
         from vivopump import new_uri, prepare_column_values, get_step_triples, PathLengthException
 
+        merges = {}
+
         for row, data_update in self.update_data.items():
             uri = URIRef(data_update['uri'])
+            action = data_update.get('action', '').lower()
 
-            if 'remove' in data_update.keys() and data_update['remove'].lower() == 'true':
+            # Process remove action if any
+
+            if action == 'remove':
                 self.__do_remove(row, uri)
                 continue
+
+            # Collect merge info if any
+
+            if action != '':
+                k = action.find('1')
+                if k > -1:
+                    key = action[0:k]
+                    if key not in merges:
+                        merges[key] = {}
+                        merges[key]['primary'] = None
+                        merges[key]['secondary'] = [uri]
+                    else:
+                        merges[key]['secondary'].append(uri)
+                else:
+                    if action not in merges:
+                        merges[action] = {}
+                    merges[action]['primary'] = uri
+                    if 'secondary' not in merges[action]:
+                        merges[action]['secondary'] = []
+
+            # Add the uri if not found
 
             if (uri, None, None) not in self.update_graph:
 
@@ -232,6 +258,14 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                         print row, column_name, column_values, uri, vivo_objs
                     self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
+        # Print the merge info
+
+        if self.verbose:
+            print "Merge Info:", merges
+
+        if any(merges):
+            self.__do_merges(merges)
+
         # Return the add and sub graphs representing the changes that need to be made to the original
 
         add = self.update_graph - self.original_graph  # Triples in update that are not in original
@@ -243,6 +277,24 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             print "Triples to sub"
             print sub.serialize(format='nt')
         return [add, sub]
+
+    def __do_merges(self, merges):
+        """
+        Given merge data collected by processing the action column of the update data, merge all the secondary
+        uris to the corresponding primary uris
+        :param merges: dictionary of merges.  merge key and two elements.  Primary uri and list of secondary uris
+        :return: None
+        """
+        for key in merges:
+            primary_uri = merges[key]['primary']
+            if primary_uri is not None:
+                for secondary_uri in merges[key]['secondary']:
+                    for s, p, o in self.update_graph.triples((secondary_uri, None, None)):
+                        self.update_graph.add((primary_uri, p, o))
+                        self.update_graph.remove((secondary_uri, p, o))
+                    for s, p, o in self.update_graph.triples((None, None, secondary_uri)):
+                        self.update_graph.add((s, p, primary_uri))
+                        self.update_graph.remove((s, p, secondary_uri))
 
     def __do_remove(self, row, uri):
         """
