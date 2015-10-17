@@ -1775,9 +1775,8 @@ def unique_path(path):
 
 def make_get_data(update_def, result_set):
     """
-    Given a query result set, produce a data structure with one element per uri and column values collected
-    into lists.  If VIVO has multiple values for a path defined to be unique, print a WARNING to the log and
-    return the first value found in the data, ignoring the rest
+    Given a query result set, produce a dictionary keyed by uri with values of dictionaries keyed by column
+    names.  Where column names have multiple values, create lists of values.
     :param result_set: SPARQL result set
     :return: dictionary
     :rtype: dict
