@@ -356,6 +356,6 @@ EducationalProcess and closures.  All need testing.
 * **2015-10-06** Experimenting with Gitbook.  And reversing Gitbook.  Gitbook will be done in its own repository.
 * **2015-10-15** Starting uf_examples/orcid.  Add improve_org_name, Improvements to uf_examples/sponsors -- 
 use boolean column for funder, use improve_org_name
-* **2015-10-17** Test for reserved words when reading definitions.  Add test case test_reserved_word.  Tests pass.
+* **2015-10-17** Test for reserved words when reading definitions.  Add test case `test_reserved_word`.  Tests pass.
 Improve comments in `make_get_data`. Add types to tests/data/people_types.txt.  get now returns binary columns.
 Test case `test_boolean_get` added.
