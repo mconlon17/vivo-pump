@@ -358,3 +358,4 @@ EducationalProcess and closures.  All need testing.
 use boolean column for funder, use improve_org_name
 * **2015-10-17** Test for reserved words when reading definitions.  Add test case test_reserved_word.  Tests pass.
 Improve comments in `make_get_data`. Add types to tests/data/people_types.txt.  get now returns binary columns.
+Test case `test_boolean_get` added.
