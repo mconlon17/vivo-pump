@@ -360,3 +360,4 @@ use boolean column for funder, use improve_org_name
 pass. Improve comments in `make_get_data`. Add types to `tests/data/people_types.txt`.  get now returns binary columns.
 Test case `test_boolean_get` added.  Add addition persons to TestGraph for merge testing.  Add `PumpMergeTestCase`.
 merge functionality added to action column.  Processed in update and `__do_merges`
+* **2015-10-18** Update README.md to describe actions.
