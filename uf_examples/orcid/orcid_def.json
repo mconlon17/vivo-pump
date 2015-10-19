@@ -1,7 +1,7 @@
 {
     "entity_def": {
-        "entity_sparql": "?uri vivo:orcidId ?orcid .",
-        "type": "http://xmlns.com/foaf/0.1/Person"
+        "entity_sparql": "?uri a foaf:Person .",
+        "type": "foaf:Person"
     },
     "column_defs": {
         "orcid": [
@@ -9,9 +9,11 @@
                 "predicate": {
                     "single": true,
                     "ref": "vivo:orcidId"
+
                 },
                 "object": {
-                    "literal": false
+                    "literal": false,
+                    "type": "owl:Thing"
                 }
             }
         ]

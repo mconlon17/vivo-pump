@@ -547,6 +547,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         :return: None
         """
         from vivopump import make_rdf_term_from_source
+        from rdflib import RDF
 
         # Compare VIVO to Input and update as indicated
 
@@ -578,10 +579,18 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                     self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                     if self.verbose:
                         print uri, step_def['predicate']['ref'], vivo_object
+
+            #   Add processing
+
             elif len(vivo_objs) == 0:
                 if self.verbose:
                     print "Adding", column_name, column_string
-                self.update_graph.add((uri, step_def['predicate']['ref'], column_values[0]))
+                self.update_graph.add((uri, step_def['predicate']['ref'], column_values[0]))  # Literal or URIRef
+                if 'type' in step_def['object']:
+                    self.update_graph.add((uri, RDF.type, step_def['object']['type']))
+
+            #   Update processing
+
             else:
                 for vivo_object in vivo_objs.values():
                     if vivo_object == column_values[0]:
@@ -598,10 +607,11 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                             print step_def
                             print "lang is ", step_def['object'].get('lang', None)
         else:
-            # Ready for set comparison
+
+            # Set comparison processing
+
             if self.verbose:
                 print 'SET COMPARE', row, column_name, column_values, vivo_objs.values()
-
             add_values = set(column_values) - set(vivo_objs.values())
             sub_values = set(vivo_objs.values()) - set(column_values)
             for value in add_values:
