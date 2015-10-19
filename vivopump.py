@@ -989,7 +989,7 @@ def improve_org_name(s):
         "Adv ": "Advanced ",
         "Advanc ": "Advanced ",
         "Ag ": "Agriculture ",
-        "Agri ": "Agriculture",
+        "Agri ": "Agriculture ",
         "Amer ": "American ",
         "And ": "and ",
         "Analysists ": "Analysts ",
