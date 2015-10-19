@@ -362,4 +362,5 @@ Test case `test_boolean_get` added.  Add addition persons to TestGraph for merge
 merge functionality added to action column.  Processed in update and `__do_merges`
 * **2015-10-18** Update README.md to describe actions.
 * **2015-10-19** Begin work on multi-step, multi-valued predicates.  Add `examples/grants/grants_pi_def.json` for
-testing.  Complete UF orcid example.  Add type assertion for single step path literal object.
+testing.  Complete UF orcid example.  Add type assertion for single step path literal object. Add improve_org_name
+to __do_get

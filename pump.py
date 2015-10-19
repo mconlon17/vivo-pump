@@ -325,7 +325,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         import codecs
         import sys
         from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
-            improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name
+            improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name, \
+            improve_org_name
 
         #   Generate the get query, execute the query, shape the query results into the return object
 
