@@ -979,6 +979,7 @@ def improve_org_name(s):
     :rtype: string
     """
     abbrev_table = {
+        " & ": " and ",
         "'S ": "'s ",
         " A ": " a ",
         "Aav ": "AAV ",
@@ -988,6 +989,7 @@ def improve_org_name(s):
         "Adv ": "Advanced ",
         "Advanc ": "Advanced ",
         "Ag ": "Agriculture ",
+        "Agri ": "Agriculture",
         "Amer ": "American ",
         "And ": "and ",
         "Analysists ": "Analysts ",
