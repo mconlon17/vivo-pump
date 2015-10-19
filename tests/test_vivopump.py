@@ -137,6 +137,11 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             update_def = read_update_def('data/grant_invalid_def.json', prefix=ReadUpdateDefTestCase.prefix)
             print update_def
 
+    def test_reserved_word(self):
+        with self.assertRaises(InvalidDefException):
+            update_def = read_update_def('data/grant_reserved_def.json', prefix=ReadUpdateDefTestCase.prefix)
+            print update_def
+
     def test_novalue_def(self):
         with self.assertRaises(InvalidDefException):
             update_def = read_update_def('data/person_novalue_def.json', prefix=ReadUpdateDefTestCase.prefix)
@@ -698,7 +703,7 @@ class PumpTestCase(unittest.TestCase):
 
 class PumpGetTestCase(unittest.TestCase):
 
-    def test_get_no_filter(self, ):
+    def test_get_no_filter(self):
         p = Pump(verbose=True)
         p.filter = False
         n_rows = p.get()
@@ -709,6 +714,17 @@ class PumpGetTestCase(unittest.TestCase):
         p.out_filename = "data/buildings_filtered.txt"
         n_rows = p.get()
         self.assertEqual(2, n_rows)
+
+    def test_boolean_get(self):
+        from vivopump import read_csv
+        p = Pump("data/faculty_boolean_def.json")
+        p.get()
+        data = read_csv('pump_data.txt', delimiter='\t')
+        nfac = 0
+        for row, vals in data.items():
+            if vals['faculty'] == '1':
+                nfac += 1
+        self.assertEqual(5, nfac)
 
 
 class PumpUpdateCallTestCase(unittest.TestCase):
@@ -1179,13 +1195,52 @@ class ClosureTestCase(unittest.TestCase):
                          URIRef("http://vivo.school.edu/individual/n7501")) in add)
 
 
+class PumpMergeTestCase(unittest.TestCase):
+    def test_show_merge(self):
+        from testgraph import TestGraph
+        p = Pump("data/person_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n25674', u'action': u'b'},
+                         2: {u'uri': u'http://vivo.school.edu/individual/n709', u'action': u'a1'},
+                         3: {u'uri': u'http://vivo.school.edu/individual/n710', u'action': u''},
+                         4: {u'uri': u'http://vivo.school.edu/individual/n1723097935', u'action': u'a1'},
+                         5: {u'uri': u'http://vivo.school.edu/individual/n2084211328', u'action': u'a'},
+                         6: {u'uri': u'http://vivo.school.edu/individual/n708', u'action': u'b1'},
+                         7: {u'uri': u'http://vivo.school.edu/individual/n711', u'action': u'a1'},
+                         }
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 1 and len(sub) == 5)
+
+    def test_no_primary_merge(self):
+        from testgraph import TestGraph
+        p = Pump("data/person_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {3: {u'uri': u'http://vivo.school.edu/individual/n710', u'action': u''},
+                         4: {u'uri': u'http://vivo.school.edu/individual/n1723097935', u'action': u'a1'},
+                         7: {u'uri': u'http://vivo.school.edu/individual/n711', u'action': u'a1'},
+                         }
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 0)
+
+    def test_no_secondary_merge(self):
+        from testgraph import TestGraph
+        p = Pump("data/person_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {3: {u'uri': u'http://vivo.school.edu/individual/n710', u'action': u''},
+                         4: {u'uri': u'http://vivo.school.edu/individual/n1723097935', u'action': u'a'},
+                         7: {u'uri': u'http://vivo.school.edu/individual/n711', u'action': u'a'},
+                         }
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 0 and len(sub) == 0)
+
+
 class PumpRemoveTestCase(unittest.TestCase):
     def test_uri_not_found_case(self):
         from testgraph import TestGraph
         p = Pump("data/person_def.json")
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n20845',
-                             u'remove': u'True'}}
+                             u'action': u'remove'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 
@@ -1194,7 +1249,7 @@ class PumpRemoveTestCase(unittest.TestCase):
         p = Pump("data/person_def.json")
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n2084211328',
-                             u'remove': u'True'}}
+                             u'action': u'Remove'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 1)
 
@@ -1203,7 +1258,7 @@ class PumpRemoveTestCase(unittest.TestCase):
         p = Pump("data/person_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n25674',
-                             u'remove': u'True'}}
+                             u'action': u'REMOVE'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 8)
 
@@ -1212,7 +1267,7 @@ class PumpRemoveTestCase(unittest.TestCase):
         p = Pump("data/person_def.json")
         p.original_graph = Graph()  # empty graph
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n12345678',
-                             u'remove': u'True'}}
+                             u'action': u'Remove'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 

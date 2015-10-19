@@ -42,6 +42,8 @@ formatting.
 member, for example. For such attributes, 
 the Pump supports comparing the set of values in VIVO to the set provided in the spreadsheet,
 adding and removing as needed to insure that final set in VIVO is the set specified in spreadsheet.
+1. Remove and merge actions.  A special column named 'action' can be used to specify which entities should be removed and which
+should be merged with other entities.
 1.  Handlers (coming soon) permit additional operations to be performed on column values. A photo handler might make
 a thumbnail and insure that the original and its thumbnail are placed in the filesystem where VIVO expects.
 

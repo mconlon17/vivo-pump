@@ -5,7 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.8.0"
+__version__ = "0.8.1"
 
 import csv
 import string
@@ -469,6 +469,12 @@ def read_update_def(filename, prefix):
         for name in col_names:
             if name in names:
                 raise InvalidDefException(name + " in object and column_defs")
+
+        # Test for reserved column names
+
+        reserved_words = set(['uri', 'action'])
+        if set(col_names) & reserved_words != set():
+            raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
 
         # Test for boolean value
 
@@ -970,7 +976,7 @@ def improve_org_name(s):
     corrections/improvements to org names
     :param s:
     :return:
-    :rtype: basestring
+    :rtype: string
     """
     abbrev_table = {
         " & ": " and ",
@@ -1771,9 +1777,8 @@ def unique_path(path):
 
 def make_get_data(update_def, result_set):
     """
-    Given a query result set, produce a data structure with one element per uri and column values collected
-    into lists.  If VIVO has multiple values for a path defined to be unique, print a WARNING to the log and
-    return the first value found in the data, ignoring the rest
+    Given a query result set, produce a dictionary keyed by uri with values of dictionaries keyed by column
+    names.  Where columns have multiple values, create sets of values.
     :param result_set: SPARQL result set
     :return: dictionary
     :rtype: dict
@@ -1785,11 +1790,19 @@ def make_get_data(update_def, result_set):
         if uri not in data:
             data[uri] = {}
         for name in ['uri'] + update_def['column_defs'].keys():
-            if name in binding:
-                if name in data[uri]:
-                    data[uri][name].add(binding[name]['value'])
-                else:
-                    data[uri][name] = {binding[name]['value']}
+            if name != 'uri':
+                last_step = update_def['column_defs'][name][len(update_def['column_defs'][name]) - 1]
+            if name != 'uri' and last_step['predicate']['single'] == 'boolean':
+                if name in binding and (str(last_step['object']['value']) == binding[name]['value']):
+                    data[uri][name] = '1'
+                elif name not in data[uri]:
+                    data[uri][name] = '0'
+            else:
+                if name in binding:
+                    if name in data[uri]:
+                        data[uri][name].add(binding[name]['value'])
+                    else:
+                        data[uri][name] = {binding[name]['value']}
     return data
 
 

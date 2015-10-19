@@ -1,0 +1,44 @@
+{
+    "entity_def": {
+        "order_by": "name", 
+        "entity_sparql": "?uri a foaf:Person .",
+        "type": "foaf:Person"
+    }, 
+    "column_defs": {
+        "types": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "rdf:type"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "data/people_types.txt"
+                }
+            }
+        ],
+        "faculty": [
+            {
+                "predicate": {
+                    "single": "boolean",
+                    "ref": "rdf:type"
+                },
+                "object": {
+                    "literal": false,
+                    "value": "vivo:FacultyMember"
+                }
+            }
+        ],
+        "name": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "rdfs:label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}

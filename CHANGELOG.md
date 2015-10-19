@@ -356,3 +356,10 @@ EducationalProcess and closures.  All need testing.
 * **2015-10-06** Experimenting with Gitbook.  And reversing Gitbook.  Gitbook will be done in its own repository.
 * **2015-10-15** Starting uf_examples/orcid.  Add improve_org_name, Improvements to uf_examples/sponsors -- 
 use boolean column for funder, use improve_org_name
+* **2015-10-17** 0.8.1 Test for reserved words when reading definitions.  Add test case `test_reserved_word`.  Tests 
+pass. Improve comments in `make_get_data`. Add types to `tests/data/people_types.txt`.  get now returns binary columns.
+Test case `test_boolean_get` added.  Add addition persons to TestGraph for merge testing.  Add `PumpMergeTestCase`.
+merge functionality added to action column.  Processed in update and `__do_merges`
+* **2015-10-18** Update README.md to describe actions.
+* **2015-10-19** Begin work on multi-step, multi-valued predicates.  Add `examples/grants/grants_pi_def.json` for
+testing.  Complete UF orcid example.  Add type assertion for single step path literal object.

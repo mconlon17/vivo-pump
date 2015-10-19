@@ -82,6 +82,26 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n2084211328'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
 
+        #   Person with no attributes
+
+        self.add((URIRef('http://vivo.school.edu/individual/n708'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Person')))
+
+        #   Person with no attributes
+
+        self.add((URIRef('http://vivo.school.edu/individual/n709'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Person')))
+
+        #   Person with no attributes
+
+        self.add((URIRef('http://vivo.school.edu/individual/n710'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Person')))
+
+        #   Person with no attributes
+
+        self.add((URIRef('http://vivo.school.edu/individual/n711'), RDF.type,
+                  URIRef('http://xmlns.com/foaf/0.1/Person')))
+
         #   Building with name and abbreviation
 
         self.add((URIRef('http://vivo.school.edu/individual/n1001011525'), RDF.type,
