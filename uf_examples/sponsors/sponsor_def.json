@@ -36,7 +36,7 @@
                 },
                 "object": {
                     "literal": true,
-                    "filter": "improve_
+                    "filter": "improve_org_name"
                 }
             }
         ]
