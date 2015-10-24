@@ -364,4 +364,6 @@ merge functionality added to action column.  Processed in update and `__do_merge
 * **2015-10-19** Begin work on multi-step, multi-valued predicates.  Add `examples/grants/grants_pi_def.json` for
 testing.  Complete UF orcid example.  Add type assertion for single step path literal object. Add improve_org_name
 to __do_get
-* **2015-10-24** PEP-8 improvements in vivopump.py. grant_pi_def improved.
+* **2015-10-24** 0.8.2. Add automatic qualifier restriction for get_step_triples when object has type assertion.  This
+provides an easy means to avoid qualifiers when using non-descriptive predicates such as "relates." 
+PEP-8 improvements in vivopump.py. grant_pi_def improved.

@@ -5,7 +5,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.8.1"
+__version__ = "0.8.2"
 
 import csv
 import string
@@ -304,7 +304,7 @@ def get_vivo_sponsorid(parms):
     :return: dictionary of uri keyed by sponsorid
     """
 
-    query = "select ?uri ?sponsorid where {?uri a vivo:FundingOrganization . ?uri ufVivo:sponsorID ?sponsorid .}"
+    query = "select ?uri ?sponsorid where {?uri a vivo:FundingOrganization . ?uri uf:sponsorId ?sponsorid .}"
     a = vivo_query(query, parms)
     sponsorid = [x['sponsorid']['value'] for x in a['results']['bindings']]
     uri = [x['uri']['value'] for x in a['results']['bindings']]
@@ -1895,10 +1895,36 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
     :return:  Graph containing one or more triples that match the criteria for the step
     """
     from rdflib import Graph
+    type_query_template = """
+    CONSTRUCT {<{{uri}}> <{{pred}}> ?o}
+    WHERE {
+        <{{uri}}> <{{pred}}> ?o .
+        ?o a <{{type}}> .
+    }
+    """
 
     if 'qualifier' not in step_def['object']:
-        g = update_graph.triples((uri, step_def['predicate']['ref'], None))
+        if 'type' not in step_def['object']:
+            g = update_graph.triples((uri, step_def['predicate']['ref'], None))
+        else:
+
+            #   Handle non-specific predicates qualified by type (a common case for VIVO-ISF)
+
+            type_query = type_query_template.replace('{{uri}}', str(uri))
+            type_query = type_query.replace('{{pred}}', str(step_def['predicate']['ref']))
+            type_query = type_query.replace('{{type}}', str(step_def['object']['type']))
+            if debug:
+                print 'get_step_triples type query', type_query
+            qresult = update_graph.query(type_query)
+            g = Graph()
+            for row in qresult:
+                g.add(row)
+            if debug:
+                print "Step Triples\n", g.serialize(format='nt')
     else:
+
+        #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF))
+
         if 'name' in step_def['object']:
             q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
                 str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
