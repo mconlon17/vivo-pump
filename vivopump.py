@@ -472,7 +472,7 @@ def read_update_def(filename, prefix):
 
         # Test for reserved column names
 
-        reserved_words = set(['uri', 'action'])
+        reserved_words = {'uri', 'action'}
         if set(col_names) & reserved_words != set():
             raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
 
@@ -1186,7 +1186,6 @@ def improve_org_name(s):
         "Univ ": "University ",
         "Usa ": "USA ",
         "Us ": "US ",
-        "Usa ": "USA ",
         "Va ": "VA ",
         "Vhf ": "VHF ",
         "Vis ": "Visiting ",
@@ -1595,7 +1594,7 @@ def parse_pages(pages):
 
 def parse_date_parts(month, year):
     """
-    Given a mont string and a year string from publisher data, parse apart the month, day and year and create
+    Given a month string and a year string from publisher data, parse apart the month, day and year and create
     a standard date string that can be used as input to VIVO
     :param month: string from publisher data.  May be text such as 'JUN' or 'Jun 15' with day number included
     :param year: string of year such as '2015'
@@ -1840,7 +1839,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
         column_values = [update_string.strip()]
     elif step_def['predicate']['single'] == 'boolean':
 
-    #   For boolean predicates the instruction is either '0', '1' or ''.
+        #   For boolean predicates the instruction is either '0', '1' or ''.
 
         update_string = update_string.strip()
         if update_string == '':
