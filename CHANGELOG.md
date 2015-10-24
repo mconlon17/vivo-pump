@@ -364,4 +364,4 @@ merge functionality added to action column.  Processed in update and `__do_merge
 * **2015-10-19** Begin work on multi-step, multi-valued predicates.  Add `examples/grants/grants_pi_def.json` for
 testing.  Complete UF orcid example.  Add type assertion for single step path literal object. Add improve_org_name
 to __do_get
-* **2015-10-24** PEP-8 improvements in vivopump.py
+* **2015-10-24** PEP-8 improvements in vivopump.py. grant_pi_def improved.
