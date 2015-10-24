@@ -365,5 +365,5 @@ merge functionality added to action column.  Processed in update and `__do_merge
 testing.  Complete UF orcid example.  Add type assertion for single step path literal object. Add improve_org_name
 to __do_get
 * **2015-10-24** 0.8.2. Add automatic qualifier restriction for `get_step_triples` when object has type assertion.  This
-provides an easy means to avoid qualifiers when using non-descriptive predicates such as "relates."
+provides an easy means to avoid qualifiers when using non-descriptive predicates such as "relates."  All tests pass.
 PEP-8 improvements in vivopump.py. `grant_pi_def` improved.
