@@ -137,6 +137,11 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             update_def = read_update_def('data/grant_invalid_def.json', prefix=ReadUpdateDefTestCase.prefix)
             print update_def
 
+    def test_invalid_multiple_def(self):
+        with self.assertRaises(InvalidDefException):
+            update_def = read_update_def('data/grant_invalid_multiple_def.json', prefix=ReadUpdateDefTestCase.prefix)
+            print update_def
+
     def test_reserved_word(self):
         with self.assertRaises(InvalidDefException):
             update_def = read_update_def('data/grant_reserved_def.json', prefix=ReadUpdateDefTestCase.prefix)

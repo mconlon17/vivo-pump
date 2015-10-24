@@ -1,0 +1,46 @@
+{
+    "entity_def": {
+        "type": "vivo:Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+        "deptid": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:administeredBy"
+                }, 
+                "object": {
+                    "filter": "improve_deptid", 
+                    "literal": true,
+                    "datatype": "xsd:integer",
+                    "enum": "data/deptid.txt"
+                }
+            }
+        ],
+        "pis": [
+            {
+                "predicate": {
+                    "single": false, 
+                    "ref": "vivo:relatedRole"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "vivo:PrincipalInvestigatorRole", 
+                    "name": "pirole"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:principalInvestigatorRoleOf"
+                }, 
+                "object": {
+                    "literal": false,
+                    "enum": "data/orcid.txt"
+                }
+            }
+        ]
+    }
+}

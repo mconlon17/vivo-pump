@@ -489,6 +489,17 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
                                                        self.verbose)]
 
+        #   Here's how we think multi-valued, multi-step predicates work:
+        #   Determine the add set (which intermediates point to column values that are not yet in VIVO
+        #       For each element in the add set, construct the intermediate and call __do_the_update to
+        #       construct the leaf
+        #   Determine the sub set (which intermediates point to column values that are in VIVO and are
+        #   not in the column values
+        #       For each element in the sub set, remove the leaf and the intermediate
+        #
+        #   This framework should also handle single valued predicates, and cases where there are no step_uris.
+        #   That is, it should handle everything.  All the code below should be replaced.
+
         if len(step_uris) == 0:
 
             # VIVO has no values for intermediate, so add a new intermediate and __do_the_update on the leaf
