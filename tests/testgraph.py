@@ -186,12 +186,37 @@ class TestGraph(Graph):
                   URIRef('http://www.w3.org/2006/vcard/ns#postalCode'),
                   Literal("32604", datatype=XSD.string)))
 
-        #   grant with no datetime interval
+        #   grant with no datetime interval and no principal investigators
 
         self.add((URIRef('http://vivo.school.edu/individual/n44'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#Grant')))
         self.add((URIRef('http://vivo.school.edu/individual/n44'), RDFS.label,
                   Literal("Field trial of CHX1234 v PPC45")))
+
+        #   grant with two investigators
+
+        self.add((URIRef('http://vivo.school.edu/individual/n45'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#Grant')))
+        self.add((URIRef('http://vivo.school.edu/individual/n45'), RDFS.label,
+                  Literal("Investigator Trial")))
+
+        self.add((URIRef('http://vivo.school.edu/individual/n45'),
+                  URIRef('http://vivoweb.org/ontology/core#relates'),
+                  URIRef('http://vivo.school.edu/individual/n46')))
+        self.add((URIRef('http://vivo.school.edu/individual/n46'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#PrincipalInvestigatorRole')))
+        self.add((URIRef('http://vivo.school.edu/individual/n46'),
+                  URIRef('http://purl.obolibrary.org/obo/RO_0000052'),  # inheres in
+                  URIRef('http://vivo.school.edu/individual/n1133')))  # investigator URI
+
+        self.add((URIRef('http://vivo.school.edu/individual/n45'),
+                  URIRef('http://vivoweb.org/ontology/core#relates'),
+                  URIRef('http://vivo.school.edu/individual/n47')))
+        self.add((URIRef('http://vivo.school.edu/individual/n47'), RDF.type,
+                  URIRef('http://vivoweb.org/ontology/core#PrincipalInvestigatorRole')))
+        self.add((URIRef('http://vivo.school.edu/individual/n47'),
+                  URIRef('http://purl.obolibrary.org/obo/RO_0000052'),  # inheres in
+                  URIRef('http://vivo.school.edu/individual/n3413')))  # investigator URI
 
         #   grant with partial datetime interval (end, no start)
 
