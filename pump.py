@@ -501,7 +501,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             for s, p, o in get_step_triples(self.update_graph, step_uri, column_name, column_def[1],
                                             self.query_parms, self.verbose):
                 vivo_objs[unicode(o)] = [o, step_uri]
-        column_values = prepare_column_values(data_update[column_name], self.intra, step_def[1], self.enum, row,
+        column_values = prepare_column_values(data_update[column_name], self.intra, column_def[1], self.enum, row,
                                               column_name)
         vivo_values = [vivo_objs[x][0] for x in vivo_objs.keys()]
         add_values = set(column_values) - set(vivo_values)

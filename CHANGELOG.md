@@ -371,4 +371,4 @@ contains more than one multi-valued predicate.  `test_invalid_multiple_def` All 
 __do_two_step_update describing new algorithm to be coded for handling multi-valued intermediates.
 * **2015-10-25** 0.8.3 **UNTESTED** added code for new two-step processing.  Should handle all cases.  Tests being
 written. Added `test/data/grant_pi_def.json` for testing two step update. Added grant with two investigators to 
-`testgraph.py` for testing two step processing.
+`testgraph.py` for testing two step processing.  Add twelve new test cases in new `class PumpUpdateTwoTestCase`

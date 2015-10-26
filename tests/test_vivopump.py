@@ -893,6 +893,144 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
                                                  Literal("Ad ver tising")) in add)
 
 
+class PumpUpdateTwoTestCase(unittest.TestCase):
+
+    #   Test various scenarios of a length two path multiple predicate/single leaf
+
+    def test_blank_to_empty(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n44',
+                             u'pis': u''}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 0)
+
+    def test_none_to_empty(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n44',
+                             u'pis': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 0)
+
+    def test_add_one_to_empty(self):
+        from rdflib import URIRef
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n44',
+                             u'pis': u'http://vivo.school.edu/individual/n1133'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 3 and len(sub) == 0 and (URIRef("http://vivo.school.edu/individual/n44"),
+                                                 URIRef("http://vivoweb.org/ontology/core#relates"),
+                                                 None) in add)
+
+    def test_add_two_to_empty(self):
+        from rdflib import URIRef
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n44',
+                             u'pis': u'http://vivo.school.edu/individual/n1133;'
+                             'http://vivo.school.edu/individual/n3413'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 6 and len(sub) == 0 and (URIRef("http://vivo.school.edu/individual/n44"),
+                                                 URIRef("http://vivoweb.org/ontology/core#relates"),
+                                                 None) in add)
+
+    def test_blank_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u''}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 0)
+
+    def test_none_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 0)
+
+    def test_add_existing_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'http://vivo.school.edu/individual/n1133'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 0)
+
+    def test_add_two_existing_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'http://vivo.school.edu/individual/n1133;'
+                             'http://vivo.school.edu/individual/n3413'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 0)
+
+    def test_add_one_new_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'http://vivo.school.edu/individual/n1134'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 3 and len(sub) == 0)
+
+    def test_add_one_new_one_existing_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'http://vivo.school.edu/individual/n1133;'
+                             'http://vivo.school.edu/individual/n3414'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 3 and len(sub) == 0)
+
+    def test_add_two_new_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'http://vivo.school.edu/individual/n1134;'
+                             'http://vivo.school.edu/individual/n3414'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 6 and len(sub) == 0)
+
+    def test_add_two_new_two_existing_to_two(self):
+        from testgraph import TestGraph
+        p = Pump("data/grant_pi_def.json", verbose=True)
+        p.original_graph = TestGraph()
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n45',
+                             u'pis': u'http://vivo.school.edu/individual/n1133;'
+                             'http://vivo.school.edu/individual/n1134;'
+                             'http://vivo.school.edu/individual/n3413;'
+                             'http://vivo.school.edu/individual/n3414;'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 6 and len(sub) == 0)
+
+
 class PumpUpdateDataTestCase(unittest.TestCase):
     def test_unique_one_add(self):
         from rdflib import URIRef, Literal
