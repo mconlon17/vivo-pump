@@ -370,5 +370,5 @@ PEP-8 improvements in vivopump.py. `grant_pi_def` improved. `validate_def ` rais
 contains more than one multi-valued predicate.  `test_invalid_multiple_def` All tests pass.  Comments added to 
 __do_two_step_update describing new algorithm to be coded for handling multi-valued intermediates.
 * **2015-10-25** 0.8.3 **UNTESTED** added code for new two-step processing.  Should handle all cases.  Tests being
-written. Add `test/data/grant_pi_def.json` for testing two step update. Add grant with two investigators to 
+written. Added `test/data/grant_pi_def.json` for testing two step update. Added grant with two investigators to 
 `testgraph.py` for testing two step processing.
