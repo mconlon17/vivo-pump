@@ -369,3 +369,5 @@ provides an easy means to avoid qualifiers when using non-descriptive predicates
 PEP-8 improvements in vivopump.py. `grant_pi_def` improved. `validate_def ` raises `InvalidDefException` when a path
 contains more than one multi-valued predicate.  `test_invalid_multiple_def` All tests pass.  Comments added to 
 __do_two_step_update describing new algorithm to be coded for handling multi-valued intermediates.
+* **2015-10-25** 0.8.3 **UNTESTED** added code for new two-step processing.  Should handle all cases.  Tests being
+written.

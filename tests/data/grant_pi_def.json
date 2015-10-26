@@ -1,0 +1,43 @@
+{
+    "entity_def": {
+        "type": "vivo:Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+    	"title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "rdfs:label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "pis": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:PrincipalInvestigatorRole",
+                    "name": "pirole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:RO_0000052",
+                    "type": "foaf:Person"
+                },
+                "object": {
+                    "literal": false
+                }
+            }
+        ]
+    }
+}
