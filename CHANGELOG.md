@@ -372,3 +372,5 @@ __do_two_step_update describing new algorithm to be coded for handling multi-val
 * **2015-10-25** 0.8.3 **UNTESTED** added code for new two-step processing.  Should handle all cases.  Tests being
 written. Added `test/data/grant_pi_def.json` for testing two step update. Added grant with two investigators to 
 `testgraph.py` for testing two step processing.  Add twelve new test cases in new `class PumpUpdateTwoTestCase`
+* **2015-10-26** Move merge diagnostic printing to __do_merges.  Testing __do_two_step_update. All tests in
+`class PumpUpdateTwoTestCase` pass.

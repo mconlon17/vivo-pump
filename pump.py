@@ -258,11 +258,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                         print row, column_name, column_values, uri, vivo_objs
                     self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
-        # Print the merge info
-
-        if self.verbose:
-            print "Merge Info:", merges
-
         if any(merges):
             self.__do_merges(merges)
 
@@ -285,6 +280,10 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         :param merges: dictionary of merges.  merge key and two elements.  Primary uri and list of secondary uris
         :return: None
         """
+        # Print the merge info
+
+        if self.verbose:
+            print "Merge Info:", merges
         for key in merges:
             primary_uri = merges[key]['primary']
             if primary_uri is not None:
@@ -501,14 +500,31 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             for s, p, o in get_step_triples(self.update_graph, step_uri, column_name, column_def[1],
                                             self.query_parms, self.verbose):
                 vivo_objs[unicode(o)] = [o, step_uri]
+
+        #   Nasty hack below.  The predicate property "single" appears to have two meanings.  One has to do
+        #   with the semantic graph and one has to do with the cardinality of the data column.  These are not
+        #   the same.  When the first step is multiple and the second single, the "second single" is not the
+        #   cardinality of the data column.  The cardinality of the data column is the multiple if any of the
+        #   predicates in the path are multiple.  Here we set the cardinality of the leaf to be used by
+        #   prepare_column_values and then set it back.  Nasty.  Create a property for the leaf cardinality.
+
+        predicate2_cardinality = column_def[1]['predicate']['single']
+        if column_def[0]['predicate']['single'] == False:
+            column_def[1]['predicate']['single'] = False
         column_values = prepare_column_values(data_update[column_name], self.intra, column_def[1], self.enum, row,
                                               column_name)
+        column_def[1]['predicate']['single'] = predicate2_cardinality
+
         vivo_values = [vivo_objs[x][0] for x in vivo_objs.keys()]
-        add_values = set(column_values) - set(vivo_values)
-        sub_values = set(vivo_objs.values()) - set(column_values)
+        if unicode(column_values[0]).lower() == 'none':
+            add_values = set()
+            sub_values = set(vivo_values)
+        else:
+            add_values = set(column_values) - set(vivo_values)
+            sub_values = set(vivo_values) - set(column_values)
         if self.verbose:
-            print 'Two step SET COMPARE', row, column_name, column_values, vivo_values, 'Add:', \
-                add_values, 'Sub:', sub_values
+            print 'Two step SET COMPARE', '\n\tRow', row, '\n\tColumn', column_name, '\n\tSource', column_values, \
+                '\n\tVIVO', vivo_values, '\n\tAdd:', add_values, '\n\tSub:', sub_values
 
         #   Process the adds
 
@@ -520,30 +536,28 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                 for leaf_value in add_values:
                     step_uri = URIRef(new_uri(self.query_parms))
                     self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-                    self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+                    if 'type' in step_def['object']:
+                        self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
                     if 'label' in step_def['object']:
                         self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
                                                                              datatype=step_def['object'].get('datatype',
                                                                                                              None),
                                                                              lang=step_def['object'].get('lang',
                                                                                                          None))))
-                    uri = step_uri
-                    step_def = column_def[1]
-                    self.__do_the_update(row, column_name, uri, step_def, [leaf_value], {})
+                    self.__do_the_update(row, column_name, step_uri, column_def[1], [leaf_value], {})
             else:
 
                 #   Multiple values on the single leaf
 
                 step_uri = URIRef(new_uri(self.query_parms))
                 self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-                self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+                if 'type' in step_def['object']:
+                    self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
                 if 'label' in step_def['object']:
                     self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
                                                                      datatype=step_def['object'].get('datatype', None),
                                                                      lang=step_def['object'].get('lang', None))))
-                uri = step_uri
-                step_def = column_def[1]
-                self.__do_the_update(row, column_name, uri, step_def, column_values, {})
+                self.__do_the_update(row, column_name, step_uri, column_def[1], column_values, {})
 
         #   Process the subs
 

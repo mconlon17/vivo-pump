@@ -936,8 +936,7 @@ class PumpUpdateTwoTestCase(unittest.TestCase):
         p = Pump("data/grant_pi_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n44',
-                             u'pis': u'http://vivo.school.edu/individual/n1133;'
-                             'http://vivo.school.edu/individual/n3413'}}
+                             u'pis': u'http://vivo.school.edu/individual/n1133;http://vivo.school.edu/individual/n3413'}}
         [add, sub] = p.update()
         self.assertTrue(
             len(add) == 6 and len(sub) == 0 and (URIRef("http://vivo.school.edu/individual/n44"),
@@ -962,7 +961,7 @@ class PumpUpdateTwoTestCase(unittest.TestCase):
                              u'pis': u'None'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 0 and len(sub) == 0)
+            len(add) == 0 and len(sub) == 6)
 
     def test_add_existing_to_two(self):
         from testgraph import TestGraph
@@ -972,7 +971,7 @@ class PumpUpdateTwoTestCase(unittest.TestCase):
                              u'pis': u'http://vivo.school.edu/individual/n1133'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 0 and len(sub) == 0)
+            len(add) == 0 and len(sub) == 3)
 
     def test_add_two_existing_to_two(self):
         from testgraph import TestGraph
@@ -993,7 +992,7 @@ class PumpUpdateTwoTestCase(unittest.TestCase):
                              u'pis': u'http://vivo.school.edu/individual/n1134'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 3 and len(sub) == 0)
+            len(add) == 3 and len(sub) == 6)
 
     def test_add_one_new_one_existing_to_two(self):
         from testgraph import TestGraph
@@ -1004,7 +1003,7 @@ class PumpUpdateTwoTestCase(unittest.TestCase):
                              'http://vivo.school.edu/individual/n3414'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 3 and len(sub) == 0)
+            len(add) == 3 and len(sub) == 3)
 
     def test_add_two_new_to_two(self):
         from testgraph import TestGraph
@@ -1015,7 +1014,7 @@ class PumpUpdateTwoTestCase(unittest.TestCase):
                              'http://vivo.school.edu/individual/n3414'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 6 and len(sub) == 0)
+            len(add) == 6 and len(sub) == 6)
 
     def test_add_two_new_two_existing_to_two(self):
         from testgraph import TestGraph

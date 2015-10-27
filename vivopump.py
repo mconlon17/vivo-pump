@@ -1859,8 +1859,8 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
             column_values = ['0']
         else:
             column_values = ['1']
-        print "PREP", update_string, step_def['object']['value'], column_values
     else:
+
         column_values = update_string.split(intra)
         if 'include' in step_def['predicate']:
             column_values += step_def['predicate']['include']
