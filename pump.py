@@ -524,7 +524,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             sub_values = set(vivo_values) - set(column_values)
         if self.verbose:
             print 'Two step SET COMPARE', '\n\tRow', row, '\n\tColumn', column_name, '\n\tSource', column_values, \
-                '\n\tVIVO', vivo_values, '\n\tAdd:', add_values, '\n\tSub:', sub_values
+                '\n\tVIVO', vivo_values, '\n\tAdd:', add_values, '\n\tSub:', sub_values, '\n\tStep_uris', step_uris
 
         #   Process the adds
 
@@ -548,15 +548,17 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             else:
 
                 #   Multiple values on the single leaf
-
-                step_uri = URIRef(new_uri(self.query_parms))
-                self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-                if 'type' in step_def['object']:
-                    self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
-                if 'label' in step_def['object']:
-                    self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
-                                                                     datatype=step_def['object'].get('datatype', None),
-                                                                     lang=step_def['object'].get('lang', None))))
+                if len(step_uris) == 0:
+                    step_uri = URIRef(new_uri(self.query_parms))
+                    self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
+                    if 'type' in step_def['object']:
+                        self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
+                    if 'label' in step_def['object']:
+                        self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
+                                                                         datatype=step_def['object'].get('datatype', None),
+                                                                         lang=step_def['object'].get('lang', None))))
+                else:
+                    step_uri = step_uris[0]
                 self.__do_the_update(row, column_name, step_uri, column_def[1], column_values, {})
 
         #   Process the subs
@@ -573,14 +575,14 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                     self.update_graph.remove((step_uri, None, None))
             else:
 
-                #   Handle single intermediary, multiple leaves, by removing each leaf from the intermediary
+                #   Handle single intermediary, possibly multiple leaves, by removing each leaf from the intermediary
                 #   Then check to see if the intermediary has any remaining leaf assertions and remove if empty
 
-                step_uri = vivo_objs[unicode(sub_values[0])][1]
+                step_uri = vivo_objs[unicode(next(iter(sub_values)))][1]
                 for leaf_value in sub_values:
                     self.update_graph.remove((step_uri, None, leaf_value))
                 g = self.update_graph.triples((step_uri, column_def[1]['predicate']['ref'], None))
-                if len(g) == 0:
+                if g == set():
                     self.update_graph.remove((uri, step_def['predicate']['ref'], step_uri))
                     self.update_graph.remove((step_uri, None, None))
 

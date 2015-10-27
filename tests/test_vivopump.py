@@ -1183,8 +1183,8 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         p = Pump("data/grant_dates_def.json", verbose=True)
         p.original_graph = TestGraph()
 
-        # WARNING.  This test passes by changing the start date value on an existing datetime interval.  Not sure
-        # if this is the desired behavior.
+        #   WARNING.  This test passes by changing the start date value on an existing datetime.
+        #   Not sure if this is the desired behavior.
 
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n125', u'start_date': u'2006-03-02'}}
         [add, sub] = p.update()
