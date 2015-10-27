@@ -1276,6 +1276,46 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         self.assertTrue(len(add) == 0 and len(sub) == 4)
 
 
+class UpdateURITestCase(unittest.TestCase):
+    def test_uri_not_found(self):
+        from testgraph import TestGraph
+
+        #  Use the URI when not found
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n1723097936',
+                             u'types': u'fac;person'}}
+        p.original_graph = TestGraph()
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 2 and len(sub) == 0)
+
+    def test_uri_is_blank(self):
+        from testgraph import TestGraph
+
+        #  Use the URI when not found
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {1: {u'uri': u' ',
+                             u'types': u'fac;person'}}
+        p.original_graph = TestGraph()
+        [add, sub] = p.update()
+        self.assertTrue(len(add) == 2 and len(sub) == 0)
+
+    def test_uri_is_invalid(self):
+        from testgraph import TestGraph
+
+        #  Use the URI when not found
+
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {1: {u'uri': u'not a uri',
+                             u'types': u'fac;person'}}
+        p.original_graph = TestGraph()
+
+        with self.assertRaises(Exception):
+            [add, sub] = p.update()
+            print add, sub
+
+
 class BooleanColumnTestCase(unittest.TestCase):
     def test_summarize(self):
         from testgraph import TestGraph

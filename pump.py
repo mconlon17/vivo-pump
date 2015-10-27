@@ -184,7 +184,30 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         merges = {}
 
         for row, data_update in self.update_data.items():
-            uri = URIRef(data_update['uri'])
+
+            # Create a URI if empty
+
+            if data_update['uri'].strip() == '':
+
+                # If the source uri is empty, create one.  Remaining processing is unchanged.
+                # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
+
+                uri_string = new_uri(self.query_parms)
+                if self.verbose:
+                    print "Adding an entity for row", row, ".  Will be added at", uri_string
+                uri = URIRef(uri_string)
+                self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
+
+            #   Create a URI entity if not found
+
+            else:
+                uri = URIRef(data_update['uri'].strip())
+                if (uri, None, None) not in self.update_graph:
+                    if self.verbose:
+                        print "Adding an entity for row", row, ".  Will be added at", str(uri)
+                    self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
+
+            entity_uri = uri
             action = data_update.get('action', '').lower()
 
             # Process remove action if any
@@ -212,20 +235,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                     if 'secondary' not in merges[action]:
                         merges[action]['secondary'] = []
 
-            # Add the uri if not found
 
-            if (uri, None, None) not in self.update_graph:
-
-                # If the entity uri can not be found in the update graph, make a new URI ignoring the one in the
-                # spreadsheet, if any, and add the URI to the update graph.  Remaining processing is unchanged.
-                # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
-
-                uri_string = new_uri(self.query_parms)
-                if self.verbose:
-                    print "Adding an entity for row", row, ".  Will be added at", uri_string
-                uri = URIRef(uri_string)
-                self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
-            entity_uri = uri
 
             #   For this row, process all the column_defs and then process closure defs if any.  Closures allow
             #   columns to be "reused" providing additional paths from the row entity to entities in the paths.
