@@ -3,11 +3,6 @@
 """ test_vivopump.py -- Test cases for vivopump
 """
 
-__author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015 (c) Michael Conlon"
-__license__ = "New BSD license"
-__version__ = "1.00"
-
 import unittest
 from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, improve_email, improve_phone_number, \
     comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, get_vivo_sponsorid, \
@@ -16,6 +11,11 @@ from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def,
     improve_deptid, improve_sponsor_award_id, improve_jobcode_description, improve_course_title, replace_initials, \
     parse_pages, parse_date_parts, improve_display_name
 from pump import Pump
+
+__author__ = "Michael Conlon"
+__copyright__ = "Copyright 2015 (c) Michael Conlon"
+__license__ = "New BSD license"
+__version__ = "1.00"
 
 
 class ReplaceInitialsCase(unittest.TestCase):
@@ -1076,7 +1076,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#abbreviation"),
                                                  Literal("JWRU", datatype=XSD.string)) in sub)
 
-    def test_unique_two_add_fullpath(self):
+    def test_unique_three_add_fullpath(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
@@ -1093,7 +1093,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
                                                  Literal("32653", datatype=XSD.string)) in add)
 
-    def test_unique_two_add_to_existing(self):
+    def test_unique_three_add_to_existing(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
@@ -1109,7 +1109,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
                                                  Literal("32653", datatype=XSD.string)) in add)
 
-    def test_unique_two_change(self):
+    def test_unique_three_change(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
@@ -1127,7 +1127,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
                                                  Literal("32604", datatype=XSD.string)) in sub)
 
-    def test_unique_two_delete(self):
+    def test_unique_three_delete(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
@@ -1142,7 +1142,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
                                                  Literal("32604", datatype=XSD.string)) in sub)
 
-    def test_unique_two_delete_not_found(self):
+    def test_unique_three_delete_not_found(self):
         from testgraph import TestGraph
 
         # Delete the zip code from an existing address that doesn't have a zip code.
@@ -1153,7 +1153,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         [add, sub] = p.update()
         self.assertTrue(len(add) == 0 and len(sub) == 0)
 
-    def test_unique_three_add_fullpath(self):
+    def test_unique_three_add(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
@@ -1183,7 +1183,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2006-03-01", datatype=XSD.datetime)) in add)
 
-    def test_unique_three_change(self):
+    def test_unique_three_change_datetime(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
         p = Pump("data/grant_dates_def.json", verbose=True)
@@ -1202,7 +1202,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2010-04-01", datatype=XSD.datetime)) in sub)
 
-    def test_unique_three_delete(self):
+    def test_unique_three_delete_datetime(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
