@@ -684,6 +684,12 @@ class PumpTestCase(unittest.TestCase):
         print result
         self.assertTrue("Pump Summary for data/building" in result)
 
+    def test_pump_test(self):
+        p = Pump("data/building_def.json")
+        result = p.test()
+        print result
+        self.assertTrue("Test end" in result)
+
     def test_pump_get_default_filename(self):
         import os
         p = Pump("data/building_def.json")

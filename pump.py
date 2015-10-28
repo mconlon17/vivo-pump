@@ -34,7 +34,7 @@ class Pump(object):
     """
 
     def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt", verbose=False,
-                 nofilters=False, inter='\t', intra=';', rdfprefix = "pump",
+                 nofilters=False, inter='\t', intra=';', rdfprefix="pump",
                  query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
                               'username': 'vivo_root@school.edu',
                               'password': 'v;bisons',
@@ -154,6 +154,9 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                 "Check your Simple VIVO configuration and your VIVO API.\n"
         except urllib2.URLError as uerror:
             result += "Connection to VIVO failed\t" + str(uerror) + "\n" + \
+                "Check your Simple VIVO configuration and your VIVO API.\n"
+        except:
+            result += "Connection to VIVO failed\t" + "\n" + \
                 "Check your Simple VIVO configuration and your VIVO API.\n"
 
         result += str(datetime.now()) + " Test end"
