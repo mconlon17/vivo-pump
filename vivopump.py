@@ -2,15 +2,14 @@
 """ vivopump -- module of helper functions for the pump
 """
 
-__author__ = "Michael Conlon"
-__copyright__ = "Copyright (c) 2015 Michael Conlon"
-__license__ = "New BSD license"
-__version__ = "0.8.3"
-
 import csv
 import string
 import random
-import sys
+
+__author__ = "Michael Conlon"
+__copyright__ = "Copyright (c) 2015 Michael Conlon"
+__license__ = "New BSD license"
+__version__ = "0.8.4"
 
 
 class InvalidDefException(Exception):
@@ -1674,7 +1673,8 @@ def get_args():
     parser = argparse.ArgumentParser(description="Get or update row and column data from and to VIVO",
                                      epilog="For more info, see http://github.com/mconlon17/vivo-pump")
     parser.add_argument("-a", "--action", help="desired action.  get = get data from VIVO.  update = update VIVO "
-                        "data from a spreadsheet. summarize = show def summary. serialize = serial version of the pump",
+                        "data from a spreadsheet. summarize = show def summary. serialize = serial version of the pump"
+                        ". test = test pump configuration.",
                         nargs='?')
     parser.add_argument("-d", "--defn", help="name of definition file", nargs="?")
     parser.add_argument("-i", "--inter", help="interfield delimiter", nargs="?")

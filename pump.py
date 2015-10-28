@@ -20,7 +20,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.3"
+__version__ = "0.8.4"
 
 from datetime import datetime
 from json import dumps
@@ -34,7 +34,7 @@ class Pump(object):
     """
 
     def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt", verbose=False,
-                 nofilters=False, inter='\t', intra=';',
+                 nofilters=False, inter='\t', intra=';', rdfprefix = "pump",
                  query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
                               'username': 'vivo_root@school.edu',
                               'password': 'v;bisons',
@@ -83,6 +83,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         self.verbose = verbose
         self.intra = intra
         self.inter = inter
+        self.rdfprefix = rdfprefix
         self.out_filename = out_filename
         self.query_parms = query_parms
 
@@ -114,6 +115,48 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             str(datetime.now()) + " Enumerations\n" + dumps(self.enum, indent=4) + "\n" + \
             str(datetime.now()) + " Update Definitions\n" + dumps(self.update_def, indent=4) + "\n" + \
             str(datetime.now()) + " Get Query\n" + make_get_query(self.update_def)
+        return result
+
+    def test(self):
+        """
+        Produce a string report regarding testing the configuration of the pump
+        :return: the string test report
+        :rtype: basestring
+        """
+        from vivopump import new_uri
+        from SPARQLWrapper import SPARQLExceptions
+        import urllib2
+
+        result = str(datetime.now()) + " Test results" + "\n" + \
+                 "Update definition\t" + self.json_def_filename + " read.\n" + \
+                 "Source file name\t" + self.out_filename + ".\n" + \
+                 "Enumerations read.\n" + \
+                 "Filters\t" + str(self.filter) + "\n" + \
+                 "Verbose\t" + str(self.verbose) + "\n" + \
+                 "Intra field separator\t" + self.intra + "\n" + \
+                 "Inter field separator\t" + self.inter + "\n" + \
+                 "VIVO SPARQL API URI\t" + self.query_parms['queryuri'] + "\n" + \
+                 "VIVO SPARQL API username\t" + self.query_parms['username'] + "\n" + \
+                 "VIVO SPARQL API password\t" + self.query_parms['password'] + "\n" + \
+                 "VIVO SPARQL API prefix\t" + self.query_parms['prefix'] + "\n" + \
+                 "Prefix for RDF file names\t" + self.rdfprefix + "\n" + \
+                 "Uriprefix for new uri\t" + self.query_parms['uriprefix'] + "\n"
+
+        try:
+            uri = new_uri(self.query_parms)
+            result += "Sample new uri\t" + uri + "\n" + \
+                "Simple VIVO is ready for use.\n"
+        except urllib2.HTTPError as herror:
+            result += "Connection to VIVO failed\t" + str(herror) + "\n" + \
+                "Check your Simple VIVO configuration and your VIVO permissions.\n"
+        except SPARQLExceptions.EndPointNotFound as notfound:
+            result += "Connection to VIVO failed\t" + str(notfound) + "\n" + \
+                "Check your Simple VIVO configuration and your VIVO API.\n"
+        except urllib2.URLError as uerror:
+            result += "Connection to VIVO failed\t" + str(uerror) + "\n" + \
+                "Check your Simple VIVO configuration and your VIVO API.\n"
+
+        result += str(datetime.now()) + " Test end"
         return result
 
     def get(self):
@@ -234,8 +277,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                     merges[action]['primary'] = uri
                     if 'secondary' not in merges[action]:
                         merges[action]['secondary'] = []
-
-
 
             #   For this row, process all the column_defs and then process closure defs if any.  Closures allow
             #   columns to be "reused" providing additional paths from the row entity to entities in the paths.

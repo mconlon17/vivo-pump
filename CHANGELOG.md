@@ -375,3 +375,5 @@ written. Added `test/data/grant_pi_def.json` for testing two step update. Added 
 * **2015-10-26** Move merge diagnostic printing to `__do_merges`.  Testing `__do_two_step_update`. All tests in
 `class PumpUpdateTwoTestCase` pass.  All tests pass.  Unfound URI in update are now used rather than ignored.  New
 `class UpdateURITestCase` with three tests.  New tests for URI cases pass.  All tests pass.
+* **2015-10-27** 0.8.4 Added test action to pump and simple vivo.  `sv.py -a test` will list parameters to the pump
+and perform a connection test to VIVO using `new_uri`.  Errors are trapped and time stamped text report produced.

@@ -16,14 +16,14 @@
     See CHANGELOG.md for history
 """
 
-__author__ = "Michael Conlon"
-__copyright__ = "Copyright (c) 2015 Michael Conlon"
-__license__ = "New BSD License"
-__version__ = "0.8.3"
-
 from datetime import datetime
 from vivopump import get_args
 from pump import Pump
+
+__author__ = "Michael Conlon"
+__copyright__ = "Copyright (c) 2015 Michael Conlon"
+__license__ = "New BSD License"
+__version__ = "0.8.4"
 
 #   Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
 #   is used
@@ -50,7 +50,7 @@ def main():
 
     #   Create a Pump and use it to perform the requested actions based on arguments
 
-    p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra,
+    p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra, args.rdfprefix,
              query_parms={'queryuri': args.queryuri,
                           'username': args.username,
                           'password': args.password,
@@ -72,6 +72,8 @@ def main():
         print p.summarize()
     elif args.action == 'serialize':
         print p.serialize()
+    elif args.action == 'test':
+        print p.test()
     else:
         print datetime.now(), "Unknown action.  Try sv -h for help"
     print datetime.now(), "Finish"
