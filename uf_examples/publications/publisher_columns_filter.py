@@ -24,7 +24,7 @@ for row, data in data_in.items():
 
     new_data['remove'] = ''
     new_data['uri'] = ''
-    new_data['name'] = improve_org_name(new_data['publisher'])
+    new_data['name'] = improve_org_name(new_data['publisher']).upper()
     new_data['type'] = 'publisher'
 
     # Delete everything not in the keep_names set
