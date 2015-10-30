@@ -31,7 +31,7 @@ def bib2csv(bib_data):
             v = v.replace('\n', ' ')
             v = v.replace('\r', ' ')
             v = v.replace('\t', ' ')
-            csv_data[row][col_name] = v
+            csv_data[row][col_name] = v.encode('utf-8').strip()
     return csv_data
 
 bib_str = ""
