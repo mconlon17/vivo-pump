@@ -46,7 +46,7 @@ Disambiguation handler
     
     Then
     
-        python ../../sv.py -a update -d publisher_def.json -c sv_publishers.cfg -s journal_update_data.txt
+        python ../../sv.py -a update -d publisher_def.json -c sv_publishers.cfg -s publisher_update_data.txt
     
     Then
     
