@@ -12,7 +12,8 @@
                     "ref": "rdfs:label"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "filter": "improve_org_name"
                 }
             }
         ],
