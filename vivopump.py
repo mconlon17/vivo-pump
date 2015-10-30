@@ -1902,7 +1902,7 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
     :param update_graph: the update graph
     :param uri: uri of the entity currently the subject of an update
     :param step_def: step definition from update_def
-    :return:  Graph containing one or more triples that match the criteria for the step
+    :return:  Graph containing zero or more triples that match the criteria for the step
     """
     from rdflib import Graph
     type_query_template = """
@@ -1915,7 +1915,13 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
 
     if 'qualifier' not in step_def['object']:
         if 'type' not in step_def['object']:
-            g = update_graph.triples((uri, step_def['predicate']['ref'], None))
+
+            #   No type for object, so use simple predicate filter on update graph
+
+            gset = update_graph.triples((uri, step_def['predicate']['ref'], None))
+            g = Graph()
+            for (s, p, o) in gset:
+                g.add((s, p, o))
         else:
 
             #   Handle non-specific predicates qualified by type (a common case for VIVO-ISF)
@@ -1929,8 +1935,6 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
             g = Graph()
             for row in qresult:
                 g.add(row)
-            if debug:
-                print "Step Triples\n", g.serialize(format='nt')
     else:
 
         #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF))
@@ -1950,8 +1954,8 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
         for binding in result_set['results']['bindings']:
             o = make_rdf_term(binding['o'])
             g.add((uri, step_def['predicate']['ref'], o))
-        if debug:
-            print "Step Triples\n", g.serialize(format='nt')
+    if debug:
+        print "Step Triples\n", g.serialize(format='nt')
     return g
 
 

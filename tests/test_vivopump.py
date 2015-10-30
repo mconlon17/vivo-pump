@@ -1078,21 +1078,55 @@ class PumpUpdateDataTestCase(unittest.TestCase):
                                                  Literal("JWRU", datatype=XSD.string)) in sub)
 
     def test_unique_two_add(self):
-        from rdflib import URIRef, Literal, XSD
+        from rdflib import URIRef
         from testgraph import TestGraph
 
-        p = Pump("data/org_def.json", verbose=True)
+        p = Pump("data/grant_dates_def.json", verbose=True)
         p.original_graph = TestGraph()
 
-        # Add a zip code to an org without an address, so a full path will need
-        # to be created
+        # In this example, dates are enumerated
 
-        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n2525', u'zip': u'32653'}}
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n44', u'start_date': u'2006'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 5 and len(sub) == 0 and (None,
-                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
-                                                 Literal("32653", datatype=XSD.string)) in add)
+            len(add) == 3 and len(sub) == 0 and (URIRef("http://vivo.school.edu/individual/n44"),
+                                                 URIRef("http://vivoweb.org/ontology/core#dateTimeInterval"),
+                                                 None) in add)
+
+    def test_unique_two_change(self):
+        from rdflib import URIRef
+        from testgraph import TestGraph
+
+        p = Pump("data/grant_dates_def.json", verbose=True)
+        p.original_graph = TestGraph()
+
+        # In this example, dates are enumerated
+
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n125', u'end_date': u'2006'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.school.edu/individual/n126"),
+                                                 URIRef("http://vivoweb.org/ontology/core#end"),
+                                                 None) in add and
+                                                (URIRef("http://vivo.school.edu/individual/n126"),
+                                                 URIRef("http://vivoweb.org/ontology/core#end"),
+                                                 None) in sub)
+
+    def test_unique_two_delete(self):
+        from rdflib import URIRef
+        from testgraph import TestGraph
+
+        p = Pump("data/grant_dates_def.json", verbose=True)
+        p.original_graph = TestGraph()
+
+        # In this example, dates are enumerated
+
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n125', u'end_date': u'None'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.school.edu/individual/n126"),
+                                                 URIRef("http://vivoweb.org/ontology/core#end"),
+                                                 None) in sub)
 
     def test_unique_three_add_fullpath(self):
         from rdflib import URIRef, Literal, XSD
@@ -1190,21 +1224,19 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
 
-        # WARNING.  This test passes by constructing a new datetime interval. Not clear if this is the desired result.
-
         p = Pump("data/grant_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n55', u'start_date': u'2006-03-01'}}
         [add, sub] = p.update()
         self.assertTrue(
-            len(add) == 5 and len(sub) == 0 and (None,
+            len(add) == 3 and len(sub) == 0 and (None,
                                                  URIRef("http://vivoweb.org/ontology/core#dateTime"),
                                                  Literal("2006-03-01", datatype=XSD.datetime)) in add)
 
     def test_unique_three_change_datetime(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
-        p = Pump("data/grant_dates_def.json", verbose=True)
+        p = Pump("data/grant_def.json", verbose=True)
         p.original_graph = TestGraph()
 
         #   WARNING.  This test passes by changing the start date value on an existing datetime.
@@ -1227,7 +1259,7 @@ class PumpUpdateDataTestCase(unittest.TestCase):
         # WARNING: Delete start date value from existing datetime interval.  This may not be the desirable data
         # management action
 
-        p = Pump("data/grant_dates_def.json", verbose=True)
+        p = Pump("data/grant_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n125', u'start_date': u'None'}}
         [add, sub] = p.update()

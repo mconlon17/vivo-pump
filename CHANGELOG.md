@@ -378,4 +378,5 @@ written. Added `test/data/grant_pi_def.json` for testing two step update. Added 
 * **2015-10-27** 0.8.4 Added test action to pump and simple vivo.  `sv.py -a test` will list parameters to the pump
 and perform a connection test to VIVO using `new_uri`.  Errors are trapped and time stamped text report produced.
 Added test case for test action.
-* **2015-10-30** Adding test cases for unique two step scenarios.
+* **2015-10-30** Add three new test cases for unique two step scenarios (add, change, delete).  Fixed data in 
+testgraph.py.  get_step_triples now always returns a Graph. All tests (N=143) pass.
