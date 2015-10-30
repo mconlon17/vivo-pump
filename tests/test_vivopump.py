@@ -155,7 +155,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
     def test_pathlength_def(self):
         with self.assertRaises(PathLengthException):
-            p = Pump(json_def_filename='data/grant_invalidpathlength_def.json')
+            p = Pump('data/grant_invalidpathlength_def.json')
             n = p.get()
             print n
 
@@ -672,7 +672,7 @@ class ImproveSponsorAwardIdTestCase(unittest.TestCase):
 class PumpTestCase(unittest.TestCase):
 
     def test_pump_serialize(self):
-        p = Pump(json_def_filename = "data/pump_def.json")
+        p = Pump("data/pump_def.json")
         self.assertTrue(p.serialize().startswith("{\"entity_def\":"))
 
     def test_pump_filename(self):
@@ -758,7 +758,7 @@ class PumpUpdateCallTestCase(unittest.TestCase):
         self.assertTrue("8984374104" in str(p.update_data))  # Using the injected data, not default
 
     def test_empty_column_defs(self):
-        Pump(json_def_filename="data/building_empty_column_def.json", verbose=True)
+        Pump("data/building_empty_column_def.json", verbose=True)
         self.assertTrue(True)  # No error thrown reading def
 
     def test_missing_uri_column_inject(self):
@@ -1375,7 +1375,7 @@ class UpdateURITestCase(unittest.TestCase):
 class BooleanColumnTestCase(unittest.TestCase):
     def test_summarize(self):
         from testgraph import TestGraph
-        p = Pump(json_def_filename="data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json", verbose=True)
         p.original_graph = TestGraph()
         print p.update_def
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n1723097935',
@@ -1385,7 +1385,7 @@ class BooleanColumnTestCase(unittest.TestCase):
     def test_add(self):
         from testgraph import TestGraph
         from rdflib import URIRef
-        p = Pump(json_def_filename="data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json", verbose=True)
         p.original_graph = TestGraph()
         print p.update_def
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n1723097935',
@@ -1399,7 +1399,7 @@ class BooleanColumnTestCase(unittest.TestCase):
     def test_remove(self):
         from testgraph import TestGraph
         from rdflib import URIRef
-        p = Pump(json_def_filename="data/person_def.json", verbose=True)
+        p = Pump("data/person_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n25674',
                              u'any1': u'n'}}
@@ -1412,13 +1412,13 @@ class BooleanColumnTestCase(unittest.TestCase):
 
 class ClosureTestCase(unittest.TestCase):
     def test_read_closure(self):
-        Pump(json_def_filename="data/teaching_def.json", verbose=True)
+        Pump("data/teaching_def.json", verbose=True)
         self.assertTrue(True)  # No exception thrown when reading a def with a closure
 
     def test_normal_closure(self):
         from testgraph import TestGraph
         from rdflib import URIRef
-        p = Pump(json_def_filename="data/teaching_def.json", verbose=True)
+        p = Pump("data/teaching_def.json", verbose=True)
         p.original_graph = TestGraph()
         p.update_data = {1: {u'uri': u'',
                              u'instructor': 'http://orcid.org/0000-0002-1305-8447',
