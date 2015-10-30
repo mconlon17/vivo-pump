@@ -9,7 +9,7 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, improve_title
+from vivopump import read_csv_fp, write_csv_fp, improve_org_name
 import sys
 
 data_in = read_csv_fp(sys.stdin)
@@ -24,7 +24,7 @@ for row, data in data_in.items():
 
     new_data['remove'] = ''
     new_data['uri'] = ''
-    new_data['name'] = improve_title(new_data['publisher'])
+    new_data['name'] = improve_org_name(new_data['publisher'])
     new_data['type'] = 'publisher'
 
     # Delete everything not in the keep_names set
