@@ -1,6 +1,7 @@
 #!/usr/bin/env/python
 # coding=utf-8
-""" test_vivopump.py -- Test cases for vivopump
+"""
+    test_vivopump.py -- Test cases for vivopump
 """
 
 import unittest
@@ -1075,6 +1076,23 @@ class PumpUpdateDataTestCase(unittest.TestCase):
             len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.school.edu/individual/n1001011525"),
                                                  URIRef("http://vivoweb.org/ontology/core#abbreviation"),
                                                  Literal("JWRU", datatype=XSD.string)) in sub)
+
+    def test_unique_two_add(self):
+        from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
+
+        p = Pump("data/org_def.json", verbose=True)
+        p.original_graph = TestGraph()
+
+        # Add a zip code to an org without an address, so a full path will need
+        # to be created
+
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n2525', u'zip': u'32653'}}
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 5 and len(sub) == 0 and (None,
+                                                 URIRef("http://www.w3.org/2006/vcard/ns#postalCode"),
+                                                 Literal("32653", datatype=XSD.string)) in add)
 
     def test_unique_three_add_fullpath(self):
         from rdflib import URIRef, Literal, XSD
