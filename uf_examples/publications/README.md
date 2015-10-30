@@ -42,11 +42,11 @@ Disambiguation handler
 1. Add publishers not currently in VIVO
 
         cat tr_07_03_2015_wk_fin.bib | python bib2csv_filter.py | python publisher_columns_filter.py | 
-        python unique_name_filter.py | python publisher_match_filter.py > publisher_update_data.txt
+        python unique_name_filter.py | python publisher_match_filter.py -c sv_publishers.cfg > publisher_update_data.txt
     
     Then
     
-        sv -c sv_publishers.cfg
+        python ../../sv.py -a update -d publisher_def.json -c sv_publishers.cfg -s journal_update_data.txt
     
     Then
     
