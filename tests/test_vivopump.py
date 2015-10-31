@@ -851,7 +851,46 @@ class MakeRdfTermFromSourceTestCase(unittest.TestCase):
 
 class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
-    def test_with_datatype(self):
+    def test_add_unicode(self):
+        from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n710', u'name': u'ქართული'}}
+        p.original_graph = TestGraph()
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 0 and (URIRef("http://vivo.school.edu/individual/n710"),
+                                                 URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                                                 Literal("ქართული")) in add)
+
+    def test_change_unicode(self):
+        from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n711', u'name': u'বিষ্ণুপ্রিয়া মণিপুরী'}}
+        p.original_graph = TestGraph()
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 1 and len(sub) == 1 and (URIRef("http://vivo.school.edu/individual/n711"),
+                                                 URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                                                 Literal("বিষ্ণুপ্রিয়া মণিপুরী")) in add and
+                                                (URIRef("http://vivo.school.edu/individual/n711"),
+                                                 URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                                                 Literal("Ελληνικά")) in sub)
+
+    def test_delete_unicode(self):
+        from rdflib import URIRef, Literal, XSD
+        from testgraph import TestGraph
+        p = Pump("data/person_def.json", verbose=True)
+        p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n711', u'name': u'None'}}
+        p.original_graph = TestGraph()
+        [add, sub] = p.update()
+        self.assertTrue(
+            len(add) == 0 and len(sub) == 1 and (URIRef("http://vivo.school.edu/individual/n711"),
+                                                 URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+                                                 Literal("Ελληνικά")) in sub)
+
+    def test_change_with_datatype(self):
         from rdflib import URIRef, Literal, XSD
         from testgraph import TestGraph
         p = Pump("data/building_def.json", verbose=True)
@@ -863,7 +902,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#abbreviation"),
                                                  Literal("PH9", datatype=XSD.string)) in add)
 
-    def test_with_lang(self):
+    def test_change_with_lang(self):
         from rdflib import URIRef, Literal
         from testgraph import TestGraph
         p = Pump("data/building_def.json", verbose=True)
@@ -875,7 +914,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
                                                  URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
                                                  Literal("Building 42", lang="en-US")) in add)
 
-    def test_without_datatype(self):
+    def test_add_without_datatype(self):
         from rdflib import URIRef, Literal
         from testgraph import TestGraph
         p = Pump("data/building_def.json", verbose=True)
@@ -887,7 +926,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
                                                  URIRef("http://vivoweb.org/ontology/core#linkURI"),
                                                  Literal("http://a")) in add)
 
-    def test_without_lang(self):
+    def test_change_without_lang(self):
         from rdflib import URIRef, Literal
         from testgraph import TestGraph
         p = Pump("data/org_def.json", verbose=True)
@@ -1447,7 +1486,7 @@ class PumpMergeTestCase(unittest.TestCase):
                          7: {u'uri': u'http://vivo.school.edu/individual/n711', u'action': u'a1'},
                          }
         [add, sub] = p.update()
-        self.assertTrue(len(add) == 1 and len(sub) == 5)
+        self.assertTrue(len(add) == 2 and len(sub) == 6)
 
     def test_no_primary_merge(self):
         from testgraph import TestGraph

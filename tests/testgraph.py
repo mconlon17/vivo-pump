@@ -97,10 +97,12 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n710'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
 
-        #   Person with no attributes
+        #   Person with Unicode in name
 
         self.add((URIRef('http://vivo.school.edu/individual/n711'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
+        self.add((URIRef('http://vivo.school.edu/individual/n711'), RDFS.label,
+                  Literal('Ελληνικά')))
 
         #   Building with name and abbreviation
 
