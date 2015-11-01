@@ -383,3 +383,5 @@ testgraph.py.  get_step_triples now always returns a Graph. All tests (N=143) pa
 test_vivopump.py
 * **2015-10-31** Three new tests added to `PumpUpdateLiteralsTestCase` for testing unicode add, change and delete. All
 tests pass. Remove duplicates and errors from `examples/education/field_enum.txt`
+* **2015-11-01** Improve `examples/degree_def.json` to include Educational Process, closure, object type assertion
+rather than qualifier.

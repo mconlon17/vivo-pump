@@ -20,11 +20,11 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "obo:RO_0000057",
-                    "qualifier": "?recipient a foaf:Person ."
+                    "ref": "obo:RO_0000057"
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "name": "recipient",
                     "enum": "person_enum.txt"
                 }
@@ -38,7 +38,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?degree a vivo:AcademicDegree .",
+                    "type": "vivo:AcademicDegree",
                     "enum": "degree_enum.txt"
                 }
             }
@@ -58,11 +58,11 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "obo:RO_0000057",
-                    "qualifier": "?org a foaf:Organization ."
+                    "ref": "obo:RO_0000057"
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Organization",
                     "name": "org",
                     "enum": "school_enum.txt"
                 }
@@ -71,7 +71,7 @@
         "date": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
