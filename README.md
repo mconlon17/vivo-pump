@@ -80,7 +80,7 @@ is under development.  Minor version numbers continue to increase as features ar
 
 # The Pump API
 
-**Note:  This is a first attempt to define the API of the Pump for semantic versioning.  No guarantees.**
+**Note:  This is a first attempt to define the API of the Pump for semantic versioning.**
 
 The Pump API consists of:
 
