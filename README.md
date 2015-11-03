@@ -33,9 +33,9 @@ will use the definition file person_def.json and the source data in people.txt t
 
 # Additional Features
 
-1.  Enumerations -- each column can have a defined "enumeration" or substitution list that translates to and from codes 
+1.  Enumerations. Each column can have a defined "enumeration" or substitution list that translates to and from codes 
 you might find easier to use than internal VIVO codes.
-1.  Filters  -- each column can have an automated filter that takes the value in VIVO and "improves" it, providing a 
+1.  Filters.  Each column can have an automated filter that takes the value in VIVO and "improves" it, providing a 
 standardized representation. Phone numbers, for example, may be filtered to insure that each conforms to standard 
 formatting.
 1.  Set management.  VIVO supports multiple values for many of its attributes a value -- research areas for a faculty 
@@ -44,8 +44,7 @@ the Pump supports comparing the set of values in VIVO to the set provided in the
 adding and removing as needed to insure that final set in VIVO is the set specified in spreadsheet.
 1. Remove and merge actions.  A special column named 'action' can be used to specify which entities should be removed and which
 should be merged with other entities.
-1.  Handlers (coming soon) permit additional operations to be performed on column values. A photo handler might make
-a thumbnail and insure that the original and its thumbnail are placed in the filesystem where VIVO expects.
+1.  Handlers. (coming soon) Handlers support additional operations to be performed on column values. A photo handler might make a thumbnail and insure that the original and its thumbnail are placed in the filesystem where VIVO expects.
 
 # Use Cases
 

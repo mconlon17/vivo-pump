@@ -35,18 +35,8 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeValue",
-                    "name": "start"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vivo:dateTime"
-                },
-                "object": {
-                    "datatype": "xsd:datetime",
-                    "literal": true
+                    "name": "start",
+                    "enum": "data/date_enum.txt"
                 }
             }
         ],
@@ -69,18 +59,8 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeValue",
-                    "name": "end"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vivo:dateTime"
-                },
-                "object": {
-                    "datatype": "xsd:datetime",
-                    "literal": true
+                    "name": "end",
+                    "enum": "data/date_enum.txt"
                 }
             }
         ]

@@ -52,7 +52,7 @@ class TestGraph(Graph):
         self.add((URIRef("http://vivo.school.edu/individual/n8968236376"), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
         self.add((URIRef("http://vivo.school.edu/individual/n8968236376"),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTime'),
                   Literal("2012-01-01", datatype=XSD.datetime)))
 
         #   Another Date
@@ -60,7 +60,7 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n2871342684'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
         self.add((URIRef('http://vivo.school.edu/individual/n2871342684'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTime'),
                   Literal("2013-01-01", datatype=XSD.datetime)))
 
         #   Person with multiple types
@@ -73,7 +73,7 @@ class TestGraph(Graph):
         #   Authorship
 
         self.add((URIRef('http://vivo.school.edu/individual/n1412'), RDF.type,
-                  URIRef('http://vivo.vivoweb.org/ontology/core#Authorship')))
+                  URIRef('http://vivoweb.org/ontology/core#Authorship')))
         self.add((URIRef('http://vivo.school.edu/individual/n1412'), URIRef('http://any'),
                   URIRef('http://vivo.school.edu/individual/n25674')))
 
@@ -97,15 +97,17 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n710'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
 
-        #   Person with no attributes
+        #   Person with Unicode in name
 
         self.add((URIRef('http://vivo.school.edu/individual/n711'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Person')))
+        self.add((URIRef('http://vivo.school.edu/individual/n711'), RDFS.label,
+                  Literal('Ελληνικά')))
 
         #   Building with name and abbreviation
 
         self.add((URIRef('http://vivo.school.edu/individual/n1001011525'), RDF.type,
-                  URIRef('http://vivo.vivoweb.org/ontology/core#Building')))
+                  URIRef('http://vivoweb.org/ontology/core#Building')))
         self.add((URIRef('http://vivo.school.edu/individual/n1001011525'), RDFS.label,
                   Literal("Building 42")))
         self.add((URIRef('http://vivo.school.edu/individual/n1001011525'),
@@ -117,7 +119,7 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n2525'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Organization')))
         self.add((URIRef('http://vivo.school.edu/individual/n2525'), RDF.type,
-                  URIRef('http://vivo.vivoweb.org/ontology/core#AcademicDepartment')))
+                  URIRef('http://vivoweb.org/ontology/core#AcademicDepartment')))
         self.add((URIRef('http://vivo.school.edu/individual/n2525'), RDFS.label,
                   Literal("Advertising")))
 
@@ -126,7 +128,7 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n3535'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Organization')))
         self.add((URIRef('http://vivo.school.edu/individual/n3535'), RDF.type,
-                  URIRef('http://vivo.vivoweb.org/ontology/core#AcademicDepartment')))
+                  URIRef('http://vivoweb.org/ontology/core#AcademicDepartment')))
         self.add((URIRef('http://vivo.school.edu/individual/n3535'), RDFS.label,
                   Literal("Physics")))
         self.add((URIRef('http://vivo.school.edu/individual/n3535'),
@@ -157,7 +159,7 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n4545'), RDF.type,
                   URIRef('http://xmlns.com/foaf/0.1/Organization')))
         self.add((URIRef('http://vivo.school.edu/individual/n4545'), RDF.type,
-                  URIRef('http://vivo.vivoweb.org/ontology/core#AcademicDepartment')))
+                  URIRef('http://vivoweb.org/ontology/core#AcademicDepartment')))
         self.add((URIRef('http://vivo.school.edu/individual/n4545'), RDFS.label,
                   Literal("Pediatrics")))
         self.add((URIRef('http://vivo.school.edu/individual/n4545'),
@@ -225,17 +227,17 @@ class TestGraph(Graph):
         self.add((URIRef('http://vivo.school.edu/individual/n55'), RDFS.label,
                   Literal("Influences on French Opera 1890-1893")))
         self.add((URIRef('http://vivo.school.edu/individual/n55'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTimeInterval'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTimeInterval'),
                   URIRef('http://vivo.school.edu/individual/n123')))
         self.add((URIRef('http://vivo.school.edu/individual/n123'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeInterval')))
         self.add((URIRef('http://vivo.school.edu/individual/n123'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#end'),
+                  URIRef('http://vivoweb.org/ontology/core#end'),
                   URIRef('http://vivo.school.edu/individual/n124')))
         self.add((URIRef('http://vivo.school.edu/individual/n124'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
         self.add((URIRef('http://vivo.school.edu/individual/n124'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTime'),
                   Literal("2015-12-31", datatype=XSD.datetime)))
 
         #   grant with full datetime interval
@@ -258,12 +260,12 @@ class TestGraph(Graph):
                   URIRef('http://vivoweb.org/ontology/core#dateTime'),
                   Literal("2010-04-01", datatype=XSD.datetime)))
         self.add((URIRef('http://vivo.school.edu/individual/n126'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#end'),
+                  URIRef('http://vivoweb.org/ontology/core#end'),
                   URIRef('http://vivo.school.edu/individual/n128')))
         self.add((URIRef('http://vivo.school.edu/individual/n128'), RDF.type,
                   URIRef('http://vivoweb.org/ontology/core#DateTimeValue')))
         self.add((URIRef('http://vivo.school.edu/individual/n128'),
-                  URIRef('http://vivo.vivoweb.org/ontology/core#dateTime'),
+                  URIRef('http://vivoweb.org/ontology/core#dateTime'),
                   Literal("2014-03-31", datatype=XSD.datetime)))
 
     def __str__(self):

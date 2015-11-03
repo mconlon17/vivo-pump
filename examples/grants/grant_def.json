@@ -130,7 +130,7 @@
         "pis": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -154,7 +154,7 @@
         "cois": [
             {
                 "predicate": {
-                    "single": false, 
+                    "single": true,
                     "ref": "vivo:relates"
                 }, 
                 "object": {
@@ -178,7 +178,7 @@
         "invs": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -240,7 +240,7 @@
         "pis": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -252,7 +252,7 @@
         "cois": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -264,7 +264,7 @@
         "invs": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:relates"
                 },
                 "object": {

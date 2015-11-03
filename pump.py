@@ -602,6 +602,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             else:
 
                 #   Multiple values on the single leaf
+
                 if len(step_uris) == 0:
                     step_uri = URIRef(new_uri(self.query_parms))
                     self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
