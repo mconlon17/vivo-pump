@@ -1,15 +1,29 @@
-#!/usr/bin/env/python
-""" vivopump -- module of helper functions for the pump
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
-
-import csv
-import string
-import random
-
+vivopump -- module of helper functions for the pump
+"""
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
 __version__ = "0.8.4"
+
+import sys
+import csv
+import string
+import random
+
+import logging
+logging.captureWarnings(True)
+logger = logging.getLogger(__name__)
+formatter = logging.Formatter(
+    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler = logging.StreamHandler(sys.stderr)
+# handler = logging.StreamHandler(sys.stdout)
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+# logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 
 class InvalidDefException(Exception):
@@ -659,7 +673,6 @@ def vivo_query(query, parms, debug=False):
     :rtype: dict
     """
     from SPARQLWrapper import SPARQLWrapper, JSON
-    import sys
 
     if debug:
         print >>sys.stderr, "in vivo_query"
@@ -1693,23 +1706,27 @@ def get_args():
 
     if args.config is None:
         args.config = program_defaults['config']
+        logger.debug("No config file specified -- using hardcoded defaults")
+    else:
+        logger.debug("Reading config file: {}".format(args.config))
 
-    #   Config file values overwrite program defaults
-
+    # Read the config parameters from the file specified in the command line
     config = ConfigParser.ConfigParser()
-    config.read(args.config)  # Read the config file from the config filename specified in the command line args
+    config.read(args.config)
+
+    # Config file values overwrite program defaults
     for section in config.sections():
         for name, val in config.items(section):
             program_defaults[name] = val
+            if 'prefix' != name:
+                logger.debug("Param {}= {}".format(name, val))
 
-    #   Non null command line values overwrite the config file values
-
+    # Non null command line values overwrite the config file values
     for name, val in vars(args).items():
         if val is not None:
             program_defaults[name] = val
 
-    #   Put the final values back in args
-
+    # Put the final values back in args
     for name, val in program_defaults.items():
         if val == 'tab':
             val = '\t'
@@ -1720,7 +1737,10 @@ def get_args():
 
 def get_parms():
     """
-    Use get args to get the args, and return a dictionary of the args ready for use in pump software
+    Use get args to get the args, and return a dictionary of the args ready for
+    use in pump software.
+    @see #get_args()
+
     :return: dict: parms
     """
     parms = {}
