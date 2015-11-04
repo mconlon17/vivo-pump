@@ -3,21 +3,23 @@
 """
 vivopump -- module of helper functions for the pump
 """
-__author__ = "Michael Conlon"
-__copyright__ = "Copyright (c) 2015 Michael Conlon"
-__license__ = "New BSD license"
-__version__ = "0.8.4"
 
 import sys
 import csv
 import string
 import random
-
 import logging
+
+__author__ = "Michael Conlon"
+__copyright__ = "Copyright (c) 2015 Michael Conlon"
+__license__ = "New BSD license"
+__version__ = "0.8.4"
+
+# Establish logging
+
 logging.captureWarnings(True)
 logger = logging.getLogger(__name__)
-formatter = logging.Formatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler = logging.StreamHandler(sys.stderr)
 # handler = logging.StreamHandler(sys.stdout)
 handler.setFormatter(formatter)

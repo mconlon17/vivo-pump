@@ -430,6 +430,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
+PREFIX ufVivo: <http://vivo.school.edu/ontology/uf-extension#>
 PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX vivo: <http://vivoweb.org/ontology/core#>
 '''

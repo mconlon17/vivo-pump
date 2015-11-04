@@ -385,4 +385,5 @@ test_vivopump.py
 tests pass. Remove duplicates and errors from `examples/education/field_enum.txt`
 * **2015-11-01** Improve `examples/degree_def.json` to include Educational Process, closure, object type assertion
 rather than qualifier.  Improve `examples/grant_def.json` predicate cardinality.
-* **2015-11-04** Begin work on `test_sv.py`, simple benchmarking.
+* **2015-11-04** Begin work on `test_sv.py`, simple benchmarking. Several pull requests to uf_examples.  Add logging
+to vivopump.py. Reconcile UF usage for sponsorID and ufVivo prefix in `get_vivo_sponsorid`
