@@ -56,3 +56,9 @@ target/
 .idea/workspace.xml
 
 .ropeproject/
+
+# ignore developer's files
+private/
+uf_examples/publications/config
+uf_examples/publications/data_in
+uf_examples/publications/data_out
