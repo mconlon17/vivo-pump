@@ -1,6 +1,7 @@
-#!/usr/bin/env/python
+#!/usr/bin/env python
 # coding=utf-8
-""" test_sv.py -- Test cases for Simple VIVO
+"""
+    test_sv.py -- Test cases for Simple VIVO
 """
 
 __author__ = "Michael Conlon"
@@ -21,11 +22,11 @@ def run_tests(tests):
     for test_id in tests:
         start = datetime.now()
         try:
-            rc = call(tests[test_id])
+            rc = call(tests[test_id], shell=True)
         except OSError as error_thing:
             rc = str(error_thing)
         end = datetime.now()
-        elapsed = end - start
+        elapsed = (end - start).total_seconds()
         test_timings[test_id] = [rc, elapsed]
     return test_timings
 
@@ -36,14 +37,16 @@ def main():
     :return: None
     """
     tests = {
-        "pwd": "pwd",
-        "summarize": "/usr/bin/python ../../sv.py -a summarize",
-        "serialize": "/usr/bin/python ../../sv.py -a serialize",
-        "test": "/usr/bin/python ../../sv.py -a test"
+        "summarize": "python ../sv.py -a summarize",
+        "serialize": "python ../sv.py -a serialize",
+        "update   ": "python ../sv.py -a update",
+        "get      ": "python ../sv.py -a get",
+        "help     ": "python ../sv.py -h",
+        "test     ": "python ../sv.py -a test"
     }
     test_results = run_tests(tests)
     for testid in sorted(test_results):
-        print testid, test_results[testid]
+        print testid, "\t", test_results[testid][0], "\t", test_results[testid][1]
 
 
 if __name__ == "__main__":
