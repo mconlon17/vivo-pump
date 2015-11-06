@@ -387,3 +387,4 @@ tests pass. Remove duplicates and errors from `examples/education/field_enum.txt
 rather than qualifier.  Improve `examples/grant_def.json` predicate cardinality.
 * **2015-11-04** Begin work on `test_sv.py`, simple benchmarking. Several pull requests to uf_examples.  Add logging
 to vivopump.py. Reconcile UF usage for sponsorID and ufVivo prefix in `get_vivo_sponsorid`
+* **2015-11-06** Add test to `test_sv.py`

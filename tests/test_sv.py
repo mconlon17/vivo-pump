@@ -42,7 +42,8 @@ def main():
         "update   ": "python ../sv.py -a update",
         "get      ": "python ../sv.py -a get",
         "help     ": "python ../sv.py -h",
-        "test     ": "python ../sv.py -a test"
+        "test     ": "python ../sv.py -a test",
+        "awards   ": "cd ../examples/awards; python ../../sv.py -a update"
     }
     test_results = run_tests(tests)
     for testid in sorted(test_results):
