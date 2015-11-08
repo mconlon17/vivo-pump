@@ -51,8 +51,8 @@ def main():
         "courses update": "cd ../examples/courses; python ../../sv.py -c sv_courses.cfg -a update",
         "teaching get": "cd ../examples/courses; python ../../sv.py -a get -s get.txt",
         "teaching update": "cd ../examples/courses; python ../../sv.py -a update",
-        "dates get": "cd ../examples/dates; python ../../sv.py -a get -s get.txt",
-        "dates update": "cd ../examples/dates; python ../../sv.py -a update",
+        # "dates get": "cd ../examples/dates; python ../../sv.py -a get -s get.txt",
+        # "dates update": "cd ../examples/dates; python ../../sv.py -a update",
         "education get": "cd ../examples/education; python ../../sv.py -a get -s get.txt",
         "education update": "cd ../examples/education; python ../../sv.py -a update",
         "grants get": "cd ../examples/grants; python ../../sv.py -a get -s get.txt",
@@ -63,14 +63,14 @@ def main():
         "locations update": "cd ../examples/locations; python ../../sv.py -a update",
         "orgs get": "cd ../examples/orgs; python ../../sv.py -a get -s get.txt",
         "orgs update": "cd ../examples/orgs; python ../../sv.py -a update",
-        "people get": "cd ../examples/people; python ../../sv.py -a get -s get.txt",
-        "people update": "cd ../examples/people; python ../../sv.py -a update",
-        "positions get": "cd ../examples/positions; python ../../sv.py -a get -s get.txt",
-        "positions update": "cd ../examples/positions; python ../../sv.py -a update"
+        # "people get": "cd ../examples/people; python ../../sv.py -a get -s get.txt",
+        # "people update": "cd ../examples/people; python ../../sv.py -a update",
+        # "positions get": "cd ../examples/positions; python ../../sv.py -a get -s get.txt",
+        # "positions update": "cd ../examples/positions; python ../../sv.py -a update"
     }
     test_results = run_tests(tests)
     for testid in sorted(test_results):
-        print testid, "\t\t\t", test_results[testid][0], "\t", test_results[testid][1]
+        print testid.rjust(20), test_results[testid][0], "\t", test_results[testid][1]
 
 
 if __name__ == "__main__":

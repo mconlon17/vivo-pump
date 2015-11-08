@@ -1,55 +1,338 @@
-<http://aims.fao.org/aos/geopolitical.owl#Bonaire_Sint_Eustatius_and_Saba> <http://www.w3.org/2000/01/rdf-schema#label> "Bonaire, Sint Eustatius and Saba"@en-US .
-<http://aims.fao.org/aos/geopolitical.owl#eastern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/6714739681> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#eastern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Micronesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#eastern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/1658862358> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
-<http://aims.fao.org/aos/geopolitical.owl#Melanesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/4153480226> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
-<http://aims.fao.org/aos/geopolitical.owl#northern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#central_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
+<http://aims.fao.org/aos/geopolitical.owl#Nigeria> <http://www.w3.org/2000/01/rdf-schema#label> "Nigeria"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Greece> <http://www.w3.org/2000/01/rdf-schema#label> "Greece"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Iraq> <http://www.w3.org/2000/01/rdf-schema#label> "Iraq"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Rwanda> <http://www.w3.org/2000/01/rdf-schema#label> "Rwanda"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Seychelles> <http://www.w3.org/2000/01/rdf-schema#label> "Seychelles"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Turks_and_Caicos_Islands> <http://www.w3.org/2000/01/rdf-schema#label> "Turks and Caicos Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Peru> <http://www.w3.org/2000/01/rdf-schema#label> "Peru"@en-US .
+<http://dbpedia.org/resource/Nebraska> <http://www.w3.org/2000/01/rdf-schema#label> "Nebraska"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Uruguay> <http://www.w3.org/2000/01/rdf-schema#label> "Uruguay"@en-US .
+<http://dbpedia.org/resource/Maryland> <http://www.w3.org/2000/01/rdf-schema#label> "Maryland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Belgium> <http://www.w3.org/2000/01/rdf-schema#label> "Belgium"@en-US .
+<http://dbpedia.org/resource/Alaska> <http://www.w3.org/2000/01/rdf-schema#label> "Alaska"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Ukraine> <http://www.w3.org/2000/01/rdf-schema#label> "Ukraine"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Micronesia__Fed_States_of_> <http://www.w3.org/2000/01/rdf-schema#label> "Micronesia (Federated States of)"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#eastern_Africa> <http://www.w3.org/2000/01/rdf-schema#label> "eastern Africa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#United_States_Virgin_Islands> <http://www.w3.org/2000/01/rdf-schema#label> "United States Virgin Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#United_Republic_of_Tanzania__the> <http://www.w3.org/2000/01/rdf-schema#label> "United Republic of Tanzania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Syrian_Arab_Republic_the> <http://www.w3.org/2000/01/rdf-schema#label> "Syrian Arab Republic"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#South_Africa> <http://www.w3.org/2000/01/rdf-schema#label> "South Africa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Americas> <http://www.w3.org/2000/01/rdf-schema#label> "Americas"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Equatorial_Guinea> <http://www.w3.org/2000/01/rdf-schema#label> "Equatorial Guinea"@en-US .
+<http://dbpedia.org/resource/Virginia> <http://www.w3.org/2000/01/rdf-schema#label> "Virginia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Sri_Lanka> <http://www.w3.org/2000/01/rdf-schema#label> "Sri Lanka"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bahrain> <http://www.w3.org/2000/01/rdf-schema#label> "Bahrain"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Afghanistan> <http://www.w3.org/2000/01/rdf-schema#label> "Afghanistan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Oman> <http://www.w3.org/2000/01/rdf-schema#label> "Oman"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#middle_Africa> <http://www.w3.org/2000/01/rdf-schema#label> "middle Africa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Zaire> <http://www.w3.org/2000/01/rdf-schema#label> "Zaire"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Nauru> <http://www.w3.org/2000/01/rdf-schema#label> "Nauru"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the> <http://www.w3.org/2000/01/rdf-schema#label> "North Korea"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Guinea> <http://www.w3.org/2000/01/rdf-schema#label> "Guinea"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Europe> <http://www.w3.org/2000/01/rdf-schema#label> "Europe"@en-US .
 <http://vivo.school.edu/individual/7365934392> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#western_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
+<http://dbpedia.org/resource/Hawaii> <http://www.w3.org/2000/01/rdf-schema#label> "Hawaii"@en-US .
 <http://aims.fao.org/aos/geopolitical.owl#Curacao> <http://www.w3.org/2000/01/rdf-schema#label> "Cura&#231;ao"@en-US .
-<http://vivo.school.edu/individual/5713889962> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
-<http://aims.fao.org/aos/geopolitical.owl#South_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#western_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/6266739982> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/1624419176> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
-<http://aims.fao.org/aos/geopolitical.owl#western_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Polynesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Oceania> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Saint_Helena> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Helena, Ascension and Tristan da Cunha"@en-US .
-<http://aims.fao.org/aos/geopolitical.owl#Saint-Martin> <http://www.w3.org/2000/01/rdf-schema#label> "Saint-Martin (French Part)"@en-US .
-<http://aims.fao.org/aos/geopolitical.owl#South_Sudan> <http://www.w3.org/2000/01/rdf-schema#label> "South Sudan"@en-US .
-<http://aims.fao.org/aos/geopolitical.owl#Americas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/7810323785> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#Caribbean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire> <http://www.w3.org/2000/01/rdf-schema#label> "C&#244;te d'Ivoire"@en-US .
-<http://aims.fao.org/aos/geopolitical.owl#southern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/6830353835> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
-<http://vivo.school.edu/individual/5428781084> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://dbpedia.org/resource/Kentucky> <http://www.w3.org/2000/01/rdf-schema#label> "Kentucky"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Solomon_Islands> <http://www.w3.org/2000/01/rdf-schema#label> "Solomon Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Mali> <http://www.w3.org/2000/01/rdf-schema#label> "Mali"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Haiti> <http://www.w3.org/2000/01/rdf-schema#label> "Haiti"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Swaziland> <http://www.w3.org/2000/01/rdf-schema#label> "Swaziland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cameroon> <http://www.w3.org/2000/01/rdf-schema#label> "Cameroon"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Mauritius> <http://www.w3.org/2000/01/rdf-schema#label> "Mauritius"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cook_Islands_the> <http://www.w3.org/2000/01/rdf-schema#label> "Cook Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cambodia> <http://www.w3.org/2000/01/rdf-schema#label> "Cambodia"@en-US .
+<http://dbpedia.org/resource/North_Dakota> <http://www.w3.org/2000/01/rdf-schema#label> "North Dakota"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Chad> <http://www.w3.org/2000/01/rdf-schema#label> "Chad"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Mexico> <http://www.w3.org/2000/01/rdf-schema#label> "Mexico"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Albania> <http://www.w3.org/2000/01/rdf-schema#label> "Albania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#The_former_Yugoslav_Republic_of_Macedonia> <http://www.w3.org/2000/01/rdf-schema#label> "Yugoslav, former Yugoslav Republic of Macedonia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Antigua_and_Barbuda> <http://www.w3.org/2000/01/rdf-schema#label> "Antigua and Barbuda"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Guadeloupe> <http://www.w3.org/2000/01/rdf-schema#label> "Guadeloupe"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Micronesia> <http://www.w3.org/2000/01/rdf-schema#label> "Micronesia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Antarctica> <http://www.w3.org/2000/01/rdf-schema#label> "Antarctica"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Panama> <http://www.w3.org/2000/01/rdf-schema#label> "Panama"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#United_States_of_America> <http://www.w3.org/2000/01/rdf-schema#label> "United States of America"@en-US .
+<http://dbpedia.org/resource/Massachusetts> <http://www.w3.org/2000/01/rdf-schema#label> "Massachusetts"@en-US .
+<http://dbpedia.org/resource/Tennessee> <http://www.w3.org/2000/01/rdf-schema#label> "Tennessee"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Mozambique> <http://www.w3.org/2000/01/rdf-schema#label> "Mozambique"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bonaire_Sint_Eustatius_and_Saba> <http://www.w3.org/2000/01/rdf-schema#label> "Bonaire, Sint Eustatius and Saba"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Japan> <http://www.w3.org/2000/01/rdf-schema#label> "Japan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Czech_Republic_the> <http://www.w3.org/2000/01/rdf-schema#label> "Czech Republic"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Mauritania> <http://www.w3.org/2000/01/rdf-schema#label> "Mauritania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Latvia> <http://www.w3.org/2000/01/rdf-schema#label> "Latvia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Nicaragua> <http://www.w3.org/2000/01/rdf-schema#label> "Nicaragua"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Yugoslavia> <http://www.w3.org/2000/01/rdf-schema#label> "Yugoslavia"@en-US .
+<http://dbpedia.org/resource/New_Mexico> <http://www.w3.org/2000/01/rdf-schema#label> "New Mexico"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> <http://www.w3.org/2000/01/rdf-schema#label> "Puerto Rico"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Caribbean> <http://www.w3.org/2000/01/rdf-schema#label> "Caribbean"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#German_Democratic_Republic_the> <http://www.w3.org/2000/01/rdf-schema#label> "German Democratic Republic"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Israel> <http://www.w3.org/2000/01/rdf-schema#label> "Israel"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Serbia_and_Montenegro> <http://www.w3.org/2000/01/rdf-schema#label> "Serbia and Montenegro"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cuba> <http://www.w3.org/2000/01/rdf-schema#label> "Cuba"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Monaco> <http://www.w3.org/2000/01/rdf-schema#label> "Monaco"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bolivia> <http://www.w3.org/2000/01/rdf-schema#label> "Bolivia (Plurinational State of)"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Samoa> <http://www.w3.org/2000/01/rdf-schema#label> "Samoa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Sweden> <http://www.w3.org/2000/01/rdf-schema#label> "Sweden"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Australia> <http://www.w3.org/2000/01/rdf-schema#label> "Australia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Malta> <http://www.w3.org/2000/01/rdf-schema#label> "Malta"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Ghana> <http://www.w3.org/2000/01/rdf-schema#label> "Ghana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Montenegro> <http://www.w3.org/2000/01/rdf-schema#label> "Montenegro"@en-US .
 <http://vivo.school.edu/individual/5902255886> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
-<http://vivo.school.edu/individual/1419851875> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
-<http://aims.fao.org/aos/geopolitical.owl#northern_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#central_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#Saint_Barthelemy> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Barth&#233;lemy"@en-US .
-<http://aims.fao.org/aos/geopolitical.owl#middle_Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
+<http://aims.fao.org/aos/geopolitical.owl#Polynesia> <http://www.w3.org/2000/01/rdf-schema#label> "Polynesia"@en-US .
 <http://vivo.school.edu/individual/6405436230> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://aims.fao.org/aos/geopolitical.owl#New_Caledonia> <http://www.w3.org/2000/01/rdf-schema#label> "New Caledonia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#eastern_Asia> <http://www.w3.org/2000/01/rdf-schema#label> "eastern Asia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Guatemala> <http://www.w3.org/2000/01/rdf-schema#label> "Guatemala"@en-US .
+<http://dbpedia.org/resource/Arizona> <http://www.w3.org/2000/01/rdf-schema#label> "Arizona"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Canada> <http://www.w3.org/2000/01/rdf-schema#label> "Canada"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#United_Arab_Emirates__the> <http://www.w3.org/2000/01/rdf-schema#label> "United Arab Emirates"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Niger_the> <http://www.w3.org/2000/01/rdf-schema#label> "Niger"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#western_Europe> <http://www.w3.org/2000/01/rdf-schema#label> "western Europe"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#central_America> <http://www.w3.org/2000/01/rdf-schema#label> "central America"@en-US .
+<http://dbpedia.org/resource/Washington> <http://www.w3.org/2000/01/rdf-schema#label> "Washington"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Guam> <http://www.w3.org/2000/01/rdf-schema#label> "Guam"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#western_Asia> <http://www.w3.org/2000/01/rdf-schema#label> "western Asia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Wallis_and_Futuna_Is> <http://www.w3.org/2000/01/rdf-schema#label> "Wallis and Futuna Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#central_Asia> <http://www.w3.org/2000/01/rdf-schema#label> "Central Asia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bhutan> <http://www.w3.org/2000/01/rdf-schema#label> "Bhutan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Brazil> <http://www.w3.org/2000/01/rdf-schema#label> "Brazil"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Yemen> <http://www.w3.org/2000/01/rdf-schema#label> "Yemen"@en-US .
+<http://dbpedia.org/resource/Alabama> <http://www.w3.org/2000/01/rdf-schema#label> "Alabama"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Oceania> <http://www.w3.org/2000/01/rdf-schema#label> "Oceania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cayman_Islands> <http://www.w3.org/2000/01/rdf-schema#label> "Cayman Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#El_Salvador> <http://www.w3.org/2000/01/rdf-schema#label> "El Salvador"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Montserrat> <http://www.w3.org/2000/01/rdf-schema#label> "Montserrat"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Viet_Nam> <http://www.w3.org/2000/01/rdf-schema#label> "Viet Nam"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Hungary> <http://www.w3.org/2000/01/rdf-schema#label> "Hungary"@en-US .
+<http://dbpedia.org/resource/New_Jersey> <http://www.w3.org/2000/01/rdf-schema#label> "New Jersey"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Venezuela> <http://www.w3.org/2000/01/rdf-schema#label> "Venezuela (Bolivarian Republic of)"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Paraguay> <http://www.w3.org/2000/01/rdf-schema#label> "Paraguay"@en-US .
+<http://dbpedia.org/resource/Connecticut> <http://www.w3.org/2000/01/rdf-schema#label> "Connecticut"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Central_African_Republic_the> <http://www.w3.org/2000/01/rdf-schema#label> "Central African Republic"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Liberia> <http://www.w3.org/2000/01/rdf-schema#label> "Liberia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Algeria> <http://www.w3.org/2000/01/rdf-schema#label> "Algeria"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Serbia> <http://www.w3.org/2000/01/rdf-schema#label> "Serbia"@en-US .
+<http://dbpedia.org/resource/North_Carolina> <http://www.w3.org/2000/01/rdf-schema#label> "North Carolina"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#northern_America> <http://www.w3.org/2000/01/rdf-schema#label> "North America"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Czechoslovakia> <http://www.w3.org/2000/01/rdf-schema#label> "Czechoslovakia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Tonga> <http://www.w3.org/2000/01/rdf-schema#label> "Tonga"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Norway> <http://www.w3.org/2000/01/rdf-schema#label> "Norway"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Turkey> <http://www.w3.org/2000/01/rdf-schema#label> "Turkey"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#San_Marino> <http://www.w3.org/2000/01/rdf-schema#label> "San Marino"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#northern_Africa> <http://www.w3.org/2000/01/rdf-schema#label> "northern Africa"@en-US .
+<http://dbpedia.org/resource/Nevada> <http://www.w3.org/2000/01/rdf-schema#label> "Nevada"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Netherlands_Antilles> <http://www.w3.org/2000/01/rdf-schema#label> "Netherlands Antilles"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Armenia> <http://www.w3.org/2000/01/rdf-schema#label> "Armenia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Kitts_and_Nevis> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Kitts and Nevis"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Turkmenistan> <http://www.w3.org/2000/01/rdf-schema#label> "Turkmenistan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bangladesh> <http://www.w3.org/2000/01/rdf-schema#label> "Bangladesh"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Sierra_Leone> <http://www.w3.org/2000/01/rdf-schema#label> "Sierra Leone"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Malawi> <http://www.w3.org/2000/01/rdf-schema#label> "Malawi"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Colombia> <http://www.w3.org/2000/01/rdf-schema#label> "Colombia"@en-US .
+<http://vivo.school.edu/individual/1419851875> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#Faroe_Islands> <http://www.w3.org/2000/01/rdf-schema#label> "Faroe Islands"@en-US .
+<http://dbpedia.org/resource/Idaho> <http://www.w3.org/2000/01/rdf-schema#label> "Idaho"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Iran_Islamic_Rep_of_> <http://www.w3.org/2000/01/rdf-schema#label> "Iran (Islamic Republic of)"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Sudan_the_1956> <http://www.w3.org/2000/01/rdf-schema#label> "Sudan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#French_Guiana> <http://www.w3.org/2000/01/rdf-schema#label> "French Guiana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#southern_Europe> <http://www.w3.org/2000/01/rdf-schema#label> "southern Europe"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Marshall_Islands__the> <http://www.w3.org/2000/01/rdf-schema#label> "Marshall Islands"@en-US .
+<http://dbpedia.org/resource/Utah> <http://www.w3.org/2000/01/rdf-schema#label> "Utah"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#American_Samoa> <http://www.w3.org/2000/01/rdf-schema#label> "American Samoa"@en-US .
 <http://aims.fao.org/aos/geopolitical.owl#Reunion> <http://www.w3.org/2000/01/rdf-schema#label> "R&#233;union"@en-US .
-<http://vivo.school.edu/individual/8924972642> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
-<http://aims.fao.org/aos/geopolitical.owl#Africa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
+<http://aims.fao.org/aos/geopolitical.owl#Dominican_Republic_the> <http://www.w3.org/2000/01/rdf-schema#label> "Dominican Republic"@en-US .
+<http://vivo.school.edu/individual/n3049> <http://www.w3.org/2000/01/rdf-schema#label> "Puerto Rico"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Trinidad_and_Tobago> <http://www.w3.org/2000/01/rdf-schema#label> "Trinidad and Tobago"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#China> <http://www.w3.org/2000/01/rdf-schema#label> "China"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Aruba> <http://www.w3.org/2000/01/rdf-schema#label> "Aruba"@en-US .
 <http://aims.fao.org/aos/geopolitical.owl#Antarctica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#northern_America> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/338334941> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
-<http://aims.fao.org/aos/geopolitical.owl#southern_Asia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://aims.fao.org/aos/geopolitical.owl#southern_Europe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <> .
-<http://vivo.school.edu/individual/2760389568> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
+<http://vivo.school.edu/individual/6266739982> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#Saudi_Arabia> <http://www.w3.org/2000/01/rdf-schema#label> "Saudi Arabia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#South_Sudan> <http://www.w3.org/2000/01/rdf-schema#label> "South Sudan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Lebanon> <http://www.w3.org/2000/01/rdf-schema#label> "Lebanon"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Namibia> <http://www.w3.org/2000/01/rdf-schema#label> "Namibia"@en-US .
 <http://aims.fao.org/aos/geopolitical.owl#Sint_Maarten> <http://www.w3.org/2000/01/rdf-schema#label> "Sint Maarten (Dutch Part)"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Botswana> <http://www.w3.org/2000/01/rdf-schema#label> "Botswana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#southern_Africa> <http://www.w3.org/2000/01/rdf-schema#label> "southern Africa"@en-US .
+<http://vivo.school.edu/individual/5428781084> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://dbpedia.org/resource/Delaware> <http://www.w3.org/2000/01/rdf-schema#label> "Delaware"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Kyrgyzstan> <http://www.w3.org/2000/01/rdf-schema#label> "Kyrgyzstan"@en-US .
+<http://dbpedia.org/resource/Oregon> <http://www.w3.org/2000/01/rdf-schema#label> "Oregon"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Slovakia> <http://www.w3.org/2000/01/rdf-schema#label> "Slovakia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#northern_Europe> <http://www.w3.org/2000/01/rdf-schema#label> "northern Europe"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#India> <http://www.w3.org/2000/01/rdf-schema#label> "India"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bermuda> <http://www.w3.org/2000/01/rdf-schema#label> "Bermuda"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#New_Zealand> <http://www.w3.org/2000/01/rdf-schema#label> "New Zealand"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Brunei_Darussalam> <http://www.w3.org/2000/01/rdf-schema#label> "Brunei Darussalam"@en-US .
+<http://dbpedia.org/resource/South_Dakota> <http://www.w3.org/2000/01/rdf-schema#label> "South Dakota"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Tajikistan> <http://www.w3.org/2000/01/rdf-schema#label> "Tajikistan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire> <http://www.w3.org/2000/01/rdf-schema#label> "C&#244;te d'Ivoire"@en-US .
+<http://vivo.school.edu/individual/6714739681> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#Barbados> <http://www.w3.org/2000/01/rdf-schema#label> "Barbados"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Helena> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Helena, Ascension and Tristan da Cunha"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Democratic_Yemen> <http://www.w3.org/2000/01/rdf-schema#label> "Yemen, Democratic"@en-US .
+<http://dbpedia.org/resource/Rhode_Island> <http://www.w3.org/2000/01/rdf-schema#label> "Rhode Island"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Belize> <http://www.w3.org/2000/01/rdf-schema#label> "Belize"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Burundi> <http://www.w3.org/2000/01/rdf-schema#label> "Burundi"@en-US .
+<http://vivo.school.edu/individual/1624419176> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://vivo.school.edu/individual/338334941> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://aims.fao.org/aos/geopolitical.owl#Kiribati> <http://www.w3.org/2000/01/rdf-schema#label> "Kiribati"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Djibouti> <http://www.w3.org/2000/01/rdf-schema#label> "Djibouti"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Sudan_the> <http://www.w3.org/2000/01/rdf-schema#label> "Sudan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Ethiopia_1993> <http://www.w3.org/2000/01/rdf-schema#label> "Ethiopia_1993"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Estonia> <http://www.w3.org/2000/01/rdf-schema#label> "Estonia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Guinea-Bissau> <http://www.w3.org/2000/01/rdf-schema#label> "Guinea-Bissau"@en-US .
+<http://dbpedia.org/resource/Oklahoma> <http://www.w3.org/2000/01/rdf-schema#label> "Oklahoma"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the> <http://www.w3.org/2000/01/rdf-schema#label> "Russian Federation"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the> <http://www.w3.org/2000/01/rdf-schema#label> "United Kingdom"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Falkland_Is> <http://www.w3.org/2000/01/rdf-schema#label> "Falkland Islands"@en-US .
+<http://dbpedia.org/resource/South_Carolina> <http://www.w3.org/2000/01/rdf-schema#label> "South Carolina"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Egypt> <http://www.w3.org/2000/01/rdf-schema#label> "Egypt"@en-US .
+<http://vivo.school.edu/individual/7810323785> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Georgia> .
+<http://aims.fao.org/aos/geopolitical.owl#Singapore> <http://www.w3.org/2000/01/rdf-schema#label> "Singapore"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Malaysia> <http://www.w3.org/2000/01/rdf-schema#label> "Malaysia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Pierre_and_Miquelon> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Pierre and Miquelon"@en-US .
+<http://dbpedia.org/resource/Ohio> <http://www.w3.org/2000/01/rdf-schema#label> "Ohio"@en-US .
+<http://dbpedia.org/resource/California> <http://www.w3.org/2000/01/rdf-schema#label> "California"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Suriname> <http://www.w3.org/2000/01/rdf-schema#label> "Suriname"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Finland> <http://www.w3.org/2000/01/rdf-schema#label> "Finland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Tunisia> <http://www.w3.org/2000/01/rdf-schema#label> "Tunisia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Holy_See> <http://www.w3.org/2000/01/rdf-schema#label> "Holy See"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Zimbabwe> <http://www.w3.org/2000/01/rdf-schema#label> "Zimbabwe"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Jordan> <http://www.w3.org/2000/01/rdf-schema#label> "Jordan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cyprus> <http://www.w3.org/2000/01/rdf-schema#label> "Cyprus"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Angola> <http://www.w3.org/2000/01/rdf-schema#label> "Angola"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Senegal> <http://www.w3.org/2000/01/rdf-schema#label> "Senegal"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Lucia> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Lucia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bulgaria> <http://www.w3.org/2000/01/rdf-schema#label> "Bulgaria"@en-US .
+<http://vivo.school.edu/individual/n4010> <http://www.w3.org/2000/01/rdf-schema#label> "District of Columbia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bahamas_the> <http://www.w3.org/2000/01/rdf-schema#label> "Bahamas"@en-US .
+<http://dbpedia.org/resource/Vermont> <http://www.w3.org/2000/01/rdf-schema#label> "Vermont"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Tokelau> <http://www.w3.org/2000/01/rdf-schema#label> "Tokelau"@en-US .
+<http://dbpedia.org/resource/Texas> <http://www.w3.org/2000/01/rdf-schema#label> "Texas"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Bosnia_and_Herzegovina> <http://www.w3.org/2000/01/rdf-schema#label> "Bosnia and Herzegovina"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Italy> <http://www.w3.org/2000/01/rdf-schema#label> "Italy"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Niue> <http://www.w3.org/2000/01/rdf-schema#label> "Niue"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Gibraltar> <http://www.w3.org/2000/01/rdf-schema#label> "Gibraltar"@en-US .
+<http://dbpedia.org/resource/Minnesota> <http://www.w3.org/2000/01/rdf-schema#label> "Minnesota"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Togo> <http://www.w3.org/2000/01/rdf-schema#label> "Togo"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Pakistan> <http://www.w3.org/2000/01/rdf-schema#label> "Pakistan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Timor-Leste> <http://www.w3.org/2000/01/rdf-schema#label> "Timor-Leste"@en-US .
+<http://dbpedia.org/resource/New_York> <http://www.w3.org/2000/01/rdf-schema#label> "New York"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Dominica> <http://www.w3.org/2000/01/rdf-schema#label> "Dominica"@en-US .
+<http://vivo.school.edu/individual/5713889962> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://aims.fao.org/aos/geopolitical.owl#Socialist_Federal_Republic_of_Yugoslavia_the> <http://www.w3.org/2000/01/rdf-schema#label> "Yugoslavia, Socialist Federal Republic of"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Azerbaijan> <http://www.w3.org/2000/01/rdf-schema#label> "Azerbaijan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Republic_of_Moldova> <http://www.w3.org/2000/01/rdf-schema#label> "Republic of Moldova"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Burkina_Faso> <http://www.w3.org/2000/01/rdf-schema#label> "Burkina Faso"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Luxembourg> <http://www.w3.org/2000/01/rdf-schema#label> "Luxembourg"@en-US .
+<http://vivo.school.edu/individual/1658862358> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://dbpedia.org/resource/Iowa> <http://www.w3.org/2000/01/rdf-schema#label> "Iowa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Vincent_and_the_Grenadines> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Vincent and the Grenadines"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Africa> <http://www.w3.org/2000/01/rdf-schema#label> "Africa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Sao_Tome_and_Principe> <http://www.w3.org/2000/01/rdf-schema#label> "Sao Tome and Principe"@en-US .
+<http://dbpedia.org/resource/Wisconsin> <http://www.w3.org/2000/01/rdf-schema#label> "Wisconsin"@en-US .
+<http://dbpedia.org/resource/West_Virginia> <http://www.w3.org/2000/01/rdf-schema#label> "West Virginia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#western_Africa> <http://www.w3.org/2000/01/rdf-schema#label> "western Africa"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Federal_Republic_of_Germany_the> <http://www.w3.org/2000/01/rdf-schema#label> "Germany, Federal Republic of"@en-US .
+<http://vivo.school.edu/individual/n7756> <http://www.w3.org/2000/01/rdf-schema#label> "Archer"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Slovenia> <http://www.w3.org/2000/01/rdf-schema#label> "Slovenia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Kenya> <http://www.w3.org/2000/01/rdf-schema#label> "Kenya"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Vanuatu> <http://www.w3.org/2000/01/rdf-schema#label> "Vanuatu"@en-US .
+<http://dbpedia.org/resource/Georgia> <http://www.w3.org/2000/01/rdf-schema#label> "Georgia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Poland> <http://www.w3.org/2000/01/rdf-schema#label> "Poland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Morocco> <http://www.w3.org/2000/01/rdf-schema#label> "Morocco"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Iceland> <http://www.w3.org/2000/01/rdf-schema#label> "Iceland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Libyan_Arab_Jamahiriya__the> <http://www.w3.org/2000/01/rdf-schema#label> "Libyan Arab Jamahiriya"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Madagascar> <http://www.w3.org/2000/01/rdf-schema#label> "Madagascar"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Cape_Verde> <http://www.w3.org/2000/01/rdf-schema#label> "Cape Verde"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Somalia> <http://www.w3.org/2000/01/rdf-schema#label> "Somalia"@en-US .
+<http://dbpedia.org/resource/Mississipi> <http://www.w3.org/2000/01/rdf-schema#label> "Mississipi"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#eastern_Europe> <http://www.w3.org/2000/01/rdf-schema#label> "eastern Europe"@en-US .
+<http://dbpedia.org/resource/Montana> <http://www.w3.org/2000/01/rdf-schema#label> "Montana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Republic_of_Korea__the> <http://www.w3.org/2000/01/rdf-schema#label> "South Korea"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Switzerland> <http://www.w3.org/2000/01/rdf-schema#label> "Switzerland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Romania> <http://www.w3.org/2000/01/rdf-schema#label> "Romania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Liechtenstein> <http://www.w3.org/2000/01/rdf-schema#label> "Liechtenstein"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint-Martin> <http://www.w3.org/2000/01/rdf-schema#label> "Saint-Martin (French Part)"@en-US .
+<http://vivo.school.edu/individual/8924972642> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
+<http://aims.fao.org/aos/geopolitical.owl#Jamaica> <http://www.w3.org/2000/01/rdf-schema#label> "Jamaica"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Palau> <http://www.w3.org/2000/01/rdf-schema#label> "Palau"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Ethiopia> <http://www.w3.org/2000/01/rdf-schema#label> "Ethiopia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Maldives> <http://www.w3.org/2000/01/rdf-schema#label> "Maldives"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Argentina> <http://www.w3.org/2000/01/rdf-schema#label> "Argentina"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Georgia> <http://www.w3.org/2000/01/rdf-schema#label> "Georgia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#British_Virgin_Islands> <http://www.w3.org/2000/01/rdf-schema#label> "British Virgin Islands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#French_Polynesia> <http://www.w3.org/2000/01/rdf-schema#label> "French Polynesia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Croatia> <http://www.w3.org/2000/01/rdf-schema#label> "Croatia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Ecuador> <http://www.w3.org/2000/01/rdf-schema#label> "Ecuador"@en-US .
+<http://dbpedia.org/resource/Michigan> <http://www.w3.org/2000/01/rdf-schema#label> "Michigan"@en-US .
+<http://dbpedia.org/resource/New_Hampshire> <http://www.w3.org/2000/01/rdf-schema#label> "New Hampshire"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Gabon> <http://www.w3.org/2000/01/rdf-schema#label> "Gabon"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Gambia__the> <http://www.w3.org/2000/01/rdf-schema#label> "Gambia"@en-US .
+<http://vivo.school.edu/individual/6830353835> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
+<http://aims.fao.org/aos/geopolitical.owl#Papua_New_Guinea> <http://www.w3.org/2000/01/rdf-schema#label> "Papua New Guinea"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Austria> <http://www.w3.org/2000/01/rdf-schema#label> "Austria"@en-US .
+<http://dbpedia.org/resource/Maine> <http://www.w3.org/2000/01/rdf-schema#label> "Maine"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Myanmar> <http://www.w3.org/2000/01/rdf-schema#label> "Myanmar"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Uganda> <http://www.w3.org/2000/01/rdf-schema#label> "Uganda"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Belarus> <http://www.w3.org/2000/01/rdf-schema#label> "Belarus"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Eritrea> <http://www.w3.org/2000/01/rdf-schema#label> "Eritrea"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Australia_and_New_Zealand> <http://www.w3.org/2000/01/rdf-schema#label> "Australia and New Zealand"@en-US .
+<http://vivo.school.edu/individual/2760389568> <http://purl.obolibrary.org/obo/BFO_0000050> <http://aims.fao.org/aos/geopolitical.owl#Puerto_Rico> .
+<http://aims.fao.org/aos/geopolitical.owl#Congo_the> <http://www.w3.org/2000/01/rdf-schema#label> "Congo"@en-US .
+<http://dbpedia.org/resource/Arkansas> <http://www.w3.org/2000/01/rdf-schema#label> "Arkansas"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Saint_Barthelemy> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Barth&#233;lemy"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Guyana> <http://www.w3.org/2000/01/rdf-schema#label> "Guyana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#southern_Asia> <http://www.w3.org/2000/01/rdf-schema#label> "southern Asia"@en-US .
+<http://dbpedia.org/resource/Louisiana> <http://www.w3.org/2000/01/rdf-schema#label> "Louisiana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Kazakhstan> <http://www.w3.org/2000/01/rdf-schema#label> "Kazakhstan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Nepal> <http://www.w3.org/2000/01/rdf-schema#label> "Nepal"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Democratic_Republic_of_the_Congo> <http://www.w3.org/2000/01/rdf-schema#label> "Democratic Republic of the Congo"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Philippines__the> <http://www.w3.org/2000/01/rdf-schema#label> "Philippines"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Martinique> <http://www.w3.org/2000/01/rdf-schema#label> "Martinique"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Portugal> <http://www.w3.org/2000/01/rdf-schema#label> "Portugal"@en-US .
+<http://dbpedia.org/resource/Pennsylvania> <http://www.w3.org/2000/01/rdf-schema#label> "Pennsylvania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Netherlands_the> <http://www.w3.org/2000/01/rdf-schema#label> "Netherlands"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Melanesia> <http://www.w3.org/2000/01/rdf-schema#label> "Melanesia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Zambia> <http://www.w3.org/2000/01/rdf-schema#label> "Zambia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#France> <http://www.w3.org/2000/01/rdf-schema#label> "France"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Ireland> <http://www.w3.org/2000/01/rdf-schema#label> "Ireland"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Anguilla> <http://www.w3.org/2000/01/rdf-schema#label> "Anguilla"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Tuvalu> <http://www.w3.org/2000/01/rdf-schema#label> "Tuvalu"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Thailand> <http://www.w3.org/2000/01/rdf-schema#label> "Thailand"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Lithuania> <http://www.w3.org/2000/01/rdf-schema#label> "Lithuania"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Mongolia> <http://www.w3.org/2000/01/rdf-schema#label> "Mongolia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#south-eastern_Asia> <http://www.w3.org/2000/01/rdf-schema#label> "south-eastern Asia"@en-US .
+<http://vivo.school.edu/individual/4153480226> <http://purl.obolibrary.org/obo/BFO_0000050> <http://vivo.school.edu/individual/1432115235> .
+<http://aims.fao.org/aos/geopolitical.owl#Benin> <http://www.w3.org/2000/01/rdf-schema#label> "Benin"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Yemen_1990> <http://www.w3.org/2000/01/rdf-schema#label> "Yemen_1990"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Lao_People_s_Democratic_Republic__the> <http://www.w3.org/2000/01/rdf-schema#label> "Lao People's Democratic Republic"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Asia> <http://www.w3.org/2000/01/rdf-schema#label> "Asia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Honduras> <http://www.w3.org/2000/01/rdf-schema#label> "Honduras"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Uzbekistan> <http://www.w3.org/2000/01/rdf-schema#label> "Uzbekistan"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Indonesia> <http://www.w3.org/2000/01/rdf-schema#label> "Indonesia"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Qatar> <http://www.w3.org/2000/01/rdf-schema#label> "Qatar"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Andorra> <http://www.w3.org/2000/01/rdf-schema#label> "Andorra"@en-US .
+<http://dbpedia.org/resource/Colorado> <http://www.w3.org/2000/01/rdf-schema#label> "Colorado"@en-US .
+<http://dbpedia.org/resource/Florida> <http://www.w3.org/2000/01/rdf-schema#label> "Florida"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Comoros_the> <http://www.w3.org/2000/01/rdf-schema#label> "Comoros"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Germany> <http://www.w3.org/2000/01/rdf-schema#label> "Germany"@en-US .
+<http://dbpedia.org/resource/Illinois> <http://www.w3.org/2000/01/rdf-schema#label> "Illinois"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Denmark> <http://www.w3.org/2000/01/rdf-schema#label> "Denmark"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Costa_Rica> <http://www.w3.org/2000/01/rdf-schema#label> "Costa Rica"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Union_of_Soviet_Socialist_Republic_the> <http://www.w3.org/2000/01/rdf-schema#label> "Union of Soviet Socialist Republic"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Fiji> <http://www.w3.org/2000/01/rdf-schema#label> "Fiji"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Grenada> <http://www.w3.org/2000/01/rdf-schema#label> "Grenada"@en-US .
+<http://dbpedia.org/resource/Missouri> <http://www.w3.org/2000/01/rdf-schema#label> "Missouri"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Spain> <http://www.w3.org/2000/01/rdf-schema#label> "Spain"@en-US .
+<http://dbpedia.org/resource/Wyoming> <http://www.w3.org/2000/01/rdf-schema#label> "Wyoming"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#South_America> <http://www.w3.org/2000/01/rdf-schema#label> "South America"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Lesotho> <http://www.w3.org/2000/01/rdf-schema#label> "Lesotho"@en-US .
+<http://dbpedia.org/resource/Indiana> <http://www.w3.org/2000/01/rdf-schema#label> "Indiana"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Kuwait> <http://www.w3.org/2000/01/rdf-schema#label> "Kuwait"@en-US .
+<http://dbpedia.org/resource/Kansas> <http://www.w3.org/2000/01/rdf-schema#label> "Kansas"@en-US .
+<http://aims.fao.org/aos/geopolitical.owl#Chile> <http://www.w3.org/2000/01/rdf-schema#label> "Chile"@en-US .
 
 

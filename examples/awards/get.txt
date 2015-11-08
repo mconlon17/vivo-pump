@@ -1,0 +1,2 @@
+conferred_by	person	date	uri	award
+Bucknell University	Conlon, Michael	1975	http://vivo.school.edu/individual/n6916	Phi Beta Kappa
