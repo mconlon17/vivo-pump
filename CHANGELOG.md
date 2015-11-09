@@ -389,3 +389,4 @@ rather than qualifier.  Improve `examples/grant_def.json` predicate cardinality.
 to vivopump.py. Reconcile UF usage for sponsorID and ufVivo prefix in `get_vivo_sponsorid`
 * **2015-11-06** Add test to `test_sv.py`
 * **2015-11-08** Add tests to `test_sv.py`
+* **2015-11-09** Add tests to `test_sv.py`
