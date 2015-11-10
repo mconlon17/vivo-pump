@@ -390,3 +390,4 @@ to vivopump.py. Reconcile UF usage for sponsorID and ufVivo prefix in `get_vivo_
 * **2015-11-06** Add test to `test_sv.py`
 * **2015-11-08** Add tests to `test_sv.py`
 * **2015-11-09** Add tests to `test_sv.py`
+* **2015-11-10** Running tests from `test_sv.py`.  person and positions examples updated.

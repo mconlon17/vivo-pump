@@ -1,0 +1,23 @@
+<http://vivo.school.edu/individual/n3423> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/n3413> <http://www.w3.org/2000/01/rdf-schema#label> "Masters, Forest"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n8066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/n2524> <http://www.w3.org/2000/01/rdf-schema#label> "Willis, Homer "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n3413> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/per-b709943461f5a3dd8a30bee03fe5b5ea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/n3423> <http://www.w3.org/2000/01/rdf-schema#label> "Pendergast, Jane "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n1133> <http://www.w3.org/2000/01/rdf-schema#label> "Conlon, Michael "@en-US .
+<http://vivo.school.edu/individual/n205> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity> .
+<http://vivo.school.edu/individual/n8066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity> .
+<http://vivo.school.edu/individual/n8066> <http://www.w3.org/2000/01/rdf-schema#label> "Jadhov, Manoj "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n2524> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/n3078> <http://www.w3.org/2000/01/rdf-schema#label> "Markow, Jonathan  "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n3413> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity> .
+<http://vivo.school.edu/individual/n1133> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/per-b709943461f5a3dd8a30bee03fe5b5ea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity> .
+<http://vivo.school.edu/individual/n1133> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity> .
+<http://vivo.school.edu/individual/n205> <http://www.w3.org/2000/01/rdf-schema#label> "Gong, Yan"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n2503> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFCurrentEntity> .
+<http://vivo.school.edu/individual/n205> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+<http://vivo.school.edu/individual/n2503> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivo.school.edu/ontology/uf-extension#UFEntity> .
+
+

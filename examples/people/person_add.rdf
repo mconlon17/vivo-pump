@@ -1,0 +1,72 @@
+<http://vivo.school.edu/individual/n1311205314> <http://www.w3.org/2006/vcard/ns#familyName> "Masters" .
+<http://vivo.school.edu/individual/n7523217404> <http://www.w3.org/2006/vcard/ns#hasTitle> <http://vivo.school.edu/individual/n6591409033> .
+<http://vivo.school.edu/individual/n9424374097> <http://www.w3.org/2006/vcard/ns#honorificPrefix> "Dr" .
+<http://vivo.school.edu/individual/n9424374097> <http://www.w3.org/2006/vcard/ns#familyName> "Pendergast" .
+<http://vivo.school.edu/individual/n3644593658> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n1319009139> .
+<http://vivo.school.edu/individual/n3413> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n2627564940> .
+<http://vivo.school.edu/individual/n8066> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n7523217404> .
+<http://vivo.school.edu/individual/n6250448519> <http://www.w3.org/2006/vcard/ns#givenName> "Jonathan" .
+<http://vivo.school.edu/individual/n2503> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n3448622208> .
+<http://vivo.school.edu/individual/n426681096> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n3377472047> .
+<http://vivo.school.edu/individual/n3092133047> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n3380889391> .
+<http://vivo.school.edu/individual/n2925638510> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Email> .
+<http://vivo.school.edu/individual/n1133> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n3092133047> .
+<http://vivo.school.edu/individual/n205> <http://www.w3.org/2000/01/rdf-schema#label> "Gong, Yan" .
+<http://vivo.school.edu/individual/n3448622208> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n3152230125> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n6250448519> .
+<http://vivo.school.edu/individual/n2524> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n426681096> .
+<http://vivo.school.edu/individual/n3448622208> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n5865278439> .
+<http://vivo.school.edu/individual/n1133> <http://www.w3.org/2000/01/rdf-schema#label> "Conlon, Michael" .
+<http://vivo.school.edu/individual/n8755193917> <http://www.w3.org/2006/vcard/ns#title> "VIVO Project Director"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n1319009139> <http://www.w3.org/2006/vcard/ns#familyName> "Gong" .
+<http://vivo.school.edu/individual/n9424374097> <http://www.w3.org/2006/vcard/ns#additionalName> "Meriweather" .
+<http://vivo.school.edu/individual/n6591409033> <http://www.w3.org/2006/vcard/ns#title> "Postdoctoral Associate"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n6250448519> <http://www.w3.org/2006/vcard/ns#familyName> "Markow" .
+<http://vivo.school.edu/individual/n8755193917> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Title> .
+<http://vivo.school.edu/individual/n9424374097> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n8066> <http://www.w3.org/2000/01/rdf-schema#label> "Jadhov, Manoj" .
+<http://vivo.school.edu/individual/n5865278439> <http://www.w3.org/2006/vcard/ns#familyName> "Barnes" .
+<http://vivo.school.edu/individual/n7523217404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n6250448519> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n3413> <http://www.w3.org/2000/01/rdf-schema#label> "Masters, Forest" .
+<http://vivo.school.edu/individual/n7276158870> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Title> .
+<http://vivo.school.edu/individual/n3152230125> <http://www.w3.org/2006/vcard/ns#hasTitle> <http://vivo.school.edu/individual/n7276158870> .
+<http://vivo.school.edu/individual/n205> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n3644593658> .
+<http://vivo.school.edu/individual/n3380889391> <http://www.w3.org/2006/vcard/ns#familyName> "Conlon" .
+<http://vivo.school.edu/individual/n3092133047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n4379427557> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n9424374097> .
+<http://vivo.school.edu/individual/n3092133047> <http://www.w3.org/2006/vcard/ns#hasTitle> <http://vivo.school.edu/individual/n8755193917> .
+<http://vivo.school.edu/individual/n3644593658> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n1311205314> <http://www.w3.org/2006/vcard/ns#givenName> "Forest" .
+<http://vivo.school.edu/individual/n5865278439> <http://www.w3.org/2006/vcard/ns#givenName> "Chrisopher" .
+<http://vivo.school.edu/individual/n6591409033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Title> .
+<http://vivo.school.edu/individual/n3092133047> <http://www.w3.org/2006/vcard/ns#hasEmail> <http://vivo.school.edu/individual/n2925638510> .
+<http://vivo.school.edu/individual/n1319009139> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n9424374097> <http://www.w3.org/2006/vcard/ns#givenName> "Jane" .
+<http://vivo.school.edu/individual/n3380889391> <http://www.w3.org/2006/vcard/ns#givenName> "Michael" .
+<http://vivo.school.edu/individual/n2627564940> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n3078> <http://www.w3.org/2000/01/rdf-schema#label> "Markow, Jonathan" .
+<http://vivo.school.edu/individual/n3380889391> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n426681096> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n9424374097> <http://www.w3.org/2006/vcard/ns#honorificSuffix> "III" .
+<http://vivo.school.edu/individual/n5865278439> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n4379427557> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n3377472047> <http://www.w3.org/2006/vcard/ns#familyName> "Willis" .
+<http://vivo.school.edu/individual/n2524> <http://www.w3.org/2000/01/rdf-schema#label> "Willis, Homer" .
+<http://vivo.school.edu/individual/n2627564940> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n1311205314> .
+<http://vivo.school.edu/individual/n7523217404> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.school.edu/individual/n3696641391> .
+<http://vivo.school.edu/individual/n7276158870> <http://www.w3.org/2006/vcard/ns#title> "Chief Strategy Officer"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n3696641391> <http://www.w3.org/2006/vcard/ns#familyName> "Jadhov" .
+<http://vivo.school.edu/individual/n3696641391> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n3696641391> <http://www.w3.org/2006/vcard/ns#givenName> "Manoj" .
+<http://vivo.school.edu/individual/n1311205314> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n3377472047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+<http://vivo.school.edu/individual/n3078> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n3152230125> .
+<http://vivo.school.edu/individual/n3377472047> <http://www.w3.org/2006/vcard/ns#givenName> "Homer" .
+<http://vivo.school.edu/individual/n3152230125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<http://vivo.school.edu/individual/n3423> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.school.edu/individual/n4379427557> .
+<http://vivo.school.edu/individual/n3423> <http://www.w3.org/2000/01/rdf-schema#label> "Pendergast, Jane" .
+<http://vivo.school.edu/individual/n1319009139> <http://www.w3.org/2006/vcard/ns#givenName> "Yan" .
+<http://vivo.school.edu/individual/n2925638510> <http://www.w3.org/2006/vcard/ns#email> "mconlon@duraspace.org"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+

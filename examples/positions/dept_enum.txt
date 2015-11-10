@@ -4,4 +4,6 @@ Center for Instructional and Research Computing Activities	http://vivo.school.ed
 Chemistry	http://vivo.school.edu/individual/n4145
 Clinical and Translational Science Institute	http://vivo.school.edu/individual/n6310
 College of Liberal Arts and Sciences	http://vivo.school.edu/individual/n721
+Duraspace	http://vivo.school.edu/individual/n1311
+VIVO Project	http://vivo.school.edu/individual/n7580
 Physics	http://vivo.school.edu/individual/n934389325
