@@ -2,13 +2,13 @@
     "entity_def": {
         "type": "vivo:AwardedDegree",
         "entity_sparql": "?uri a vivo:AwardedDegree . ",
-        "order_by": "name"
+        "order_by": "degree"
     }, 
     "column_defs": {
         "person": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
@@ -19,7 +19,7 @@
             },
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0000057"
                 },
                 "object": {
@@ -28,12 +28,12 @@
                     "name": "recipient",
                     "enum": "person_enum.txt"
                 }
-            },
+            }
         ],
         "degree": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -46,7 +46,7 @@
         "school": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
@@ -57,7 +57,7 @@
             },
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0000057"
                 },
                 "object": {
@@ -66,7 +66,7 @@
                     "name": "org",
                     "enum": "school_enum.txt"
                 }
-            },
+            }
         ],
         "date": [
             {
@@ -105,7 +105,7 @@
         "field": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:majorField"
                 },
                 "object": {
@@ -119,11 +119,12 @@
         "person": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "person_enum.txt"
                 }
             }

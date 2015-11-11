@@ -1,2 +1,11 @@
+<http://vivo.school.edu/individual/n3900> <http://vivoweb.org/ontology/core#assignedBy> <http://vivo.school.edu/individual/n8013> .
+<http://vivo.school.edu/individual/n4485374274> <http://purl.obolibrary.org/obo/RO_0000057> <http://vivo.school.edu/individual/n8013> .
+<http://vivo.school.edu/individual/n3900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://vivo.school.edu/individual/n4485374274> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#EducationalProcess> .
+<http://vivo.school.edu/individual/n4485374274> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.school.edu/individual/n4485374274> <http://purl.obolibrary.org/obo/RO_0000057> <http://vivo.school.edu/individual/n1133> .
+<http://vivo.school.edu/individual/n3900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AcademicDegree> .
+<http://vivo.school.edu/individual/n3900> <http://purl.obolibrary.org/obo/RO_0002353> <http://vivo.school.edu/individual/n4485374274> .
+<http://vivo.school.edu/individual/n4485374274> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 
 
