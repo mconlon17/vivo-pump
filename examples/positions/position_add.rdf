@@ -1,17 +1,17 @@
-<http://vivo.school.edu/individual/n7456397613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
-<http://vivo.school.edu/individual/n5040854026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
-<http://vivo.school.edu/individual/n1376> <http://www.w3.org/2000/01/rdf-schema#label> "Chief Strategy Officer" .
 <http://vivo.school.edu/individual/n569> <http://www.w3.org/2000/01/rdf-schema#label> "Co-director" .
-<http://vivo.school.edu/individual/n569> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n7456397613> .
-<http://vivo.school.edu/individual/n7456397613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
-<http://vivo.school.edu/individual/n5040854026> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n8968236376> .
-<http://vivo.school.edu/individual/n4082> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n8396540631> .
-<http://vivo.school.edu/individual/n8396540631> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
-<http://vivo.school.edu/individual/n8396540631> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n9346173581> .
-<http://vivo.school.edu/individual/n5040854026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
-<http://vivo.school.edu/individual/n8396540631> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
-<http://vivo.school.edu/individual/n7456397613> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n9186655952> .
+<http://vivo.school.edu/individual/n4566670843> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/n4973478165> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/n4973478165> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
 <http://vivo.school.edu/individual/n4082> <http://www.w3.org/2000/01/rdf-schema#label> "Project Director" .
-<http://vivo.school.edu/individual/n1376> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n5040854026> .
+<http://vivo.school.edu/individual/n4566670843> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n9346173581> .
+<http://vivo.school.edu/individual/n6101009923> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n8968236376> .
+<http://vivo.school.edu/individual/n6101009923> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/n569> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n4973478165> .
+<http://vivo.school.edu/individual/n4973478165> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n9186655952> .
+<http://vivo.school.edu/individual/n4566670843> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/n4082> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n4566670843> .
+<http://vivo.school.edu/individual/n6101009923> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/n1376> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n6101009923> .
+<http://vivo.school.edu/individual/n1376> <http://www.w3.org/2000/01/rdf-schema#label> "Chief Strategy Officer" .
 
 

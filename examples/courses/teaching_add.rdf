@@ -1,0 +1,8 @@
+<http://vivo.school.edu/individual/n8643634977> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://vivo.school.edu/individual/n6696> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.school.edu/individual/n8643634977> .
+<http://vivo.school.edu/individual/n6696> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n4547662927> .
+<http://vivo.school.edu/individual/n4547662927> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n7225407119> .
+<http://vivo.school.edu/individual/n4547662927> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/n4547662927> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n9038714458> .
+
+

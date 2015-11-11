@@ -1,32 +1,32 @@
-<http://vivo.school.edu/individual/sub-ceb4fd141a731ff6bbb576b0e05b2277> <http://www.w3.org/2000/01/rdf-schema#label> "Immunology"@en-US .
-<http://vivo.school.edu/individual/sub-1426eaafaf90e18093225b1525de2f25> <http://www.w3.org/2000/01/rdf-schema#label> "Cellular and Molecular Neuroscience"@en-US .
-<http://vivo.school.edu/individual/sub-0736615959d4e9d9433631bf9b95aca0> <http://www.w3.org/2000/01/rdf-schema#label> "Medicine(all)"@en-US .
-<http://vivo.school.edu/individual/n1071> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Broader Concept"@en-US .
 <http://vivo.school.edu/individual/sub-1c790ea73d3a27a755d36a67d1cfbc35> <http://www.w3.org/2000/01/rdf-schema#label> "Pediatrics, Perinatology, and Child Health"@en-US .
-<http://vivo.school.edu/individual/sub-0dc3ba61b8e1a4c9cc115eb9144e493f> <http://www.w3.org/2000/01/rdf-schema#label> "Statistics and Probability"@en-US .
+<http://vivoweb.org/ontology/degree/academicDegree115> <http://www.w3.org/2000/01/rdf-schema#label> "M.L.I.S. Master of Library and Information Science"@en-US .
+<http://vivo.school.edu/individual/sub-7396f9db6c7cdcc9844369b30d4cb674> <http://www.w3.org/2000/01/rdf-schema#label> "Statistics, Probability and Uncertainty"@en-US .
 <http://vivo.school.edu/individual/sub-c89ec17cae7626c0f28c316950ee28f0> <http://www.w3.org/2000/01/rdf-schema#label> "Toxicology"@en-US .
-<http://vivo.school.edu/individual/sub-e544da5c72d822770eb346fe3894b396> <http://www.w3.org/2000/01/rdf-schema#label> "Neuroscience(all)"@en-US .
-<http://id.loc.gov/authorities/subjects/sh89005069> <http://www.w3.org/2000/01/rdf-schema#label> "Medical informatics"@en-US .
-<http://vivo.school.edu/individual/n2735> <http://www.w3.org/2000/01/rdf-schema#label> "Phi Beta Kappa"@en-US .
 <http://vivo.school.edu/individual/sub-bf035ab77b10209b5cec697ff0d1599d> <http://www.w3.org/2000/01/rdf-schema#label> "Pharmacology"@en-US .
-<http://vivo.school.edu/individual/sub-220485771efd6d31bc191f4bf4f95bd9> <http://www.w3.org/2000/01/rdf-schema#label> "Cardiology and Cardiovascular Medicine"@en-US .
+<http://vivo.school.edu/individual/sub-0736615959d4e9d9433631bf9b95aca0> <http://www.w3.org/2000/01/rdf-schema#label> "Medicine(all)"@en-US .
+<http://vivoweb.org/ontology/degree/academicDegree111> <http://www.w3.org/2000/01/rdf-schema#label> "M.Phil. Master of Philosophy"@en-US .
+<http://vivo.school.edu/individual/n4220> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Narrower Concept"@en-US .
+<http://vivo.school.edu/individual/sub-cdcf44543af15a06fbfd31e72d9d58e5> <http://www.w3.org/2000/01/rdf-schema#label> "Developmental Neuroscience"@en-US .
 <http://vivo.school.edu/individual/sub-87d6e595f81be15efe8aa39e48bbd94a> <http://www.w3.org/2000/01/rdf-schema#label> "Immunology and Allergy"@en-US .
-<http://vivo.school.edu/individual/sub-b507e57fc1f73a75b8466248f016ea82> <http://www.w3.org/2000/01/rdf-schema#label> "Mathematics(all)"@en-US .
 <http://vivo.school.edu/individual/sub-7113ad9cbb67f8eb97d88b179c18ca2f> <http://www.w3.org/2000/01/rdf-schema#label> "Epidemiology"@en-US .
-<http://vivo.school.edu/individual/sub-1759825949f358dd02ccc3ea76d3390d> <http://www.w3.org/2000/01/rdf-schema#label> "Nursing(all)"@en-US .
-<http://vivo.school.edu/individual/sub-740c7970ddeb78346c0ba5ee0a67ac07> <http://www.w3.org/2000/01/rdf-schema#label> "Pathology and Forensic Medicine"@en-US .
-<http://vivo.school.edu/individual/sub-a728d1690c719bd4b773d262de7dd1b8> <http://www.w3.org/2000/01/rdf-schema#label> "Psychiatry and Mental health"@en-US .
+<http://vivoweb.org/ontology/degree/academicDegree74> <http://www.w3.org/2000/01/rdf-schema#label> "M.C.E. Master of Christian Education"@en-US .
+<http://vivo.school.edu/individual/n6621> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Skos Concept"@en-US .
+<http://vivo.school.edu/individual/n2735> <http://www.w3.org/2000/01/rdf-schema#label> "Phi Beta Kappa"@en-US .
+<http://id.loc.gov/authorities/subjects/sh89005069> <http://www.w3.org/2000/01/rdf-schema#label> "Medical informatics"@en-US .
+<http://vivo.school.edu/individual/n1071> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Broader Concept"@en-US .
+<http://vivo.school.edu/individual/sub-0dc3ba61b8e1a4c9cc115eb9144e493f> <http://www.w3.org/2000/01/rdf-schema#label> "Statistics and Probability"@en-US .
+<http://vivo.school.edu/individual/sub-6661cf099e2a13d321cd1f2c20545286> <http://www.w3.org/2000/01/rdf-schema#label> "Pharmacology, Toxicology and Pharmaceutics(all)"@en-US .
 <http://vivo.school.edu/individual/sub-45808d46d43b0b80bb6e8731ef0d63b8> <http://www.w3.org/2000/01/rdf-schema#label> "Biochemistry, Genetics and Molecular Biology(all)"@en-US .
 <http://vivo.school.edu/individual/sub-643f947c36cda744be8d88bdc6145cbc> <http://www.w3.org/2000/01/rdf-schema#label> "Public Health, Environmental and Occupational Health"@en-US .
-<http://vivo.school.edu/individual/n4220> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Narrower Concept"@en-US .
-<http://vivoweb.org/ontology/degree/academicDegree74> <http://www.w3.org/2000/01/rdf-schema#label> "M.C.E. Master of Christian Education"@en-US .
-<http://vivo.school.edu/individual/sub-6661cf099e2a13d321cd1f2c20545286> <http://www.w3.org/2000/01/rdf-schema#label> "Pharmacology, Toxicology and Pharmaceutics(all)"@en-US .
-<http://vivo.school.edu/individual/n7841> <http://www.w3.org/2000/01/rdf-schema#label> "VIVO"@en-US .
-<http://vivo.school.edu/individual/sub-7396f9db6c7cdcc9844369b30d4cb674> <http://www.w3.org/2000/01/rdf-schema#label> "Statistics, Probability and Uncertainty"@en-US .
-<http://vivo.school.edu/individual/sub-cdcf44543af15a06fbfd31e72d9d58e5> <http://www.w3.org/2000/01/rdf-schema#label> "Developmental Neuroscience"@en-US .
-<http://vivoweb.org/ontology/degree/academicDegree115> <http://www.w3.org/2000/01/rdf-schema#label> "M.L.I.S. Master of Library and Information Science"@en-US .
-<http://vivoweb.org/ontology/degree/academicDegree111> <http://www.w3.org/2000/01/rdf-schema#label> "M.Phil. Master of Philosophy"@en-US .
 <http://id.loc.gov/authorities/subjects/sh2002000569> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Web"@en-US .
-<http://vivo.school.edu/individual/n6621> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Skos Concept"@en-US .
+<http://vivo.school.edu/individual/sub-740c7970ddeb78346c0ba5ee0a67ac07> <http://www.w3.org/2000/01/rdf-schema#label> "Pathology and Forensic Medicine"@en-US .
+<http://vivo.school.edu/individual/sub-a728d1690c719bd4b773d262de7dd1b8> <http://www.w3.org/2000/01/rdf-schema#label> "Psychiatry and Mental health"@en-US .
+<http://vivo.school.edu/individual/sub-ceb4fd141a731ff6bbb576b0e05b2277> <http://www.w3.org/2000/01/rdf-schema#label> "Immunology"@en-US .
+<http://vivo.school.edu/individual/n7841> <http://www.w3.org/2000/01/rdf-schema#label> "VIVO"@en-US .
+<http://vivo.school.edu/individual/sub-b507e57fc1f73a75b8466248f016ea82> <http://www.w3.org/2000/01/rdf-schema#label> "Mathematics(all)"@en-US .
+<http://vivo.school.edu/individual/sub-1426eaafaf90e18093225b1525de2f25> <http://www.w3.org/2000/01/rdf-schema#label> "Cellular and Molecular Neuroscience"@en-US .
+<http://vivo.school.edu/individual/sub-e544da5c72d822770eb346fe3894b396> <http://www.w3.org/2000/01/rdf-schema#label> "Neuroscience(all)"@en-US .
+<http://vivo.school.edu/individual/sub-220485771efd6d31bc191f4bf4f95bd9> <http://www.w3.org/2000/01/rdf-schema#label> "Cardiology and Cardiovascular Medicine"@en-US .
+<http://vivo.school.edu/individual/sub-1759825949f358dd02ccc3ea76d3390d> <http://www.w3.org/2000/01/rdf-schema#label> "Nursing(all)"@en-US .
 
 

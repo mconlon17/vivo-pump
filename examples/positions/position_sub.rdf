@@ -1,5 +1,5 @@
-<http://vivo.school.edu/individual/n1376> <http://www.w3.org/2000/01/rdf-schema#label> "Chief Strategy Officer"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://vivo.school.edu/individual/n4082> <http://www.w3.org/2000/01/rdf-schema#label> "Project Director"^^<http://www.w3.org/2001/XMLSchema#string> .
 <http://vivo.school.edu/individual/n569> <http://www.w3.org/2000/01/rdf-schema#label> "Co-director"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n4082> <http://www.w3.org/2000/01/rdf-schema#label> "Project Director"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n1376> <http://www.w3.org/2000/01/rdf-schema#label> "Chief Strategy Officer"^^<http://www.w3.org/2001/XMLSchema#string> .
 
 
