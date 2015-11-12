@@ -2,13 +2,13 @@
     "entity_def": {
         "type": "vivo:AwardedDegree",
         "entity_sparql": "?uri a vivo:AwardedDegree . ",
-        "order_by": "degree"
+        "order_by": "person"
     }, 
     "column_defs": {
         "person": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
@@ -33,7 +33,7 @@
         "degree": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -46,7 +46,7 @@
         "school": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
@@ -105,7 +105,7 @@
         "field": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:majorField"
                 },
                 "object": {
@@ -119,12 +119,11 @@
         "person": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
-                    "type": "foaf:Person",
                     "enum": "person_enum.txt"
                 }
             }
