@@ -91,7 +91,7 @@
             },
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0000052",
                     "type": "foaf:Organization"
                 },

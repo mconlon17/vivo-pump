@@ -1,0 +1,2 @@
+direct_costs	cois	end_date	title	sponsor_award_id	invs	uri	sponsor	award_id	concepts	department	pis	start_date	total_award
+123000.00	0000-0002-1304-8447	2016-06-30	Fictional Study for the Purpose of Examining Its Assertions	R01 DK4033	0000-0002-1304-8447	http://vivo.school.edu/individual/n3080	National Institutes of Health	3456789	VIVO;Fiction	Clinical and Translational Science Institute	0000-0002-1304-8447	2015-07-01	183000.00

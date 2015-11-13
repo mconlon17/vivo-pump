@@ -1,3 +1,20 @@
+<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#localAwardId> "3456789"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.school.edu/individual/n4432529589> <http://purl.obolibrary.org/obo/RO_0000052> <> .
+<http://vivo.school.edu/individual/n4924604554> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#PrincipalInvestigatorRole> .
+<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#grantDirectCosts> "123000.00"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/n8981385420> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Co-PrincipalInvestigatorRole> .
+<http://vivo.school.edu/individual/n6299017565> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n6389000186> .
+<http://vivo.school.edu/individual/n4924604554> <http://purl.obolibrary.org/obo/RO_0000052> <> .
+<http://vivo.school.edu/individual/n6299017565> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
 <http://vivo.school.edu/individual/n3080> <http://www.w3.org/2000/01/rdf-schema#label> "Fictional Study for the Purpose of Examining Its Assertions" .
+<http://vivo.school.edu/individual/n6299017565> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeValue> .
+<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#relates> <> .
+<http://vivo.school.edu/individual/n8981385420> <http://purl.obolibrary.org/obo/RO_0000052> <> .
+<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n6299017565> .
+<http://vivo.school.edu/individual/n6299017565> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n3601148270> .
+<http://vivo.school.edu/individual/n7064929628> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AdminRole> .
+<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#totalAwardAmount> "183000.00"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://vivo.school.edu/individual/n4432529589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#InvestigatorRole> .
+<http://vivo.school.edu/individual/n7064929628> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.school.edu/individual/n6310> .
 
 
