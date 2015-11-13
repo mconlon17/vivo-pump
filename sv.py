@@ -17,9 +17,6 @@
     See CHANGELOG.md for history
 """
 
-from datetime import datetime
-from vivopump import get_args
-from pump import Pump
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
@@ -44,6 +41,12 @@ def main():
     The main function.  Does the work of Simple VIVO
     :return: None
     """
+    import sys
+    from datetime import datetime
+    from vivopump import get_args
+    from pump import Pump
+
+    return_code = 0
     print datetime.now(), "Start"
     args = get_args()
     if args.verbose:
@@ -61,14 +64,19 @@ def main():
         n_rows = p.get()
         print datetime.now(), n_rows, "rows in", args.src
     elif args.action == 'update':
-        [add_graph, sub_graph] = p.update()
-        add_file = open(args.rdfprefix + '_add.rdf', 'w')
-        print >>add_file, add_graph.serialize(format='nt')
-        add_file.close()
-        sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
-        print >>sub_file, sub_graph.serialize(format='nt')
-        sub_file.close()
-        print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
+        try:
+            [add_graph, sub_graph] = p.update()
+        except IOError:
+            print "File not found"
+            return_code = 1
+        else:
+            add_file = open(args.rdfprefix + '_add.rdf', 'w')
+            print >>add_file, add_graph.serialize(format='nt')
+            add_file.close()
+            sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
+            print >>sub_file, sub_graph.serialize(format='nt')
+            sub_file.close()
+            print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
     elif args.action == 'summarize':
         print p.summarize()
     elif args.action == 'serialize':
@@ -78,6 +86,7 @@ def main():
     else:
         print datetime.now(), "Unknown action.  Try sv -h for help"
     print datetime.now(), "Finish"
+    sys.exit(return_code)
 
 if __name__ == "__main__":
     main()
