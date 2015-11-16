@@ -314,7 +314,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         result = vivo_query("""
         SELECT ?label
         WHERE { <http://vivo.school.edu/individual/n1133> rdfs:label ?label }
-        """, VIVOQueryTestCase.query_parms, debug=True)
+        """, VIVOQueryTestCase.query_parms)
         print result
         self.assertTrue(len(result) > 0)
 
@@ -324,7 +324,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             result = vivo_query("""
             SEWECT ?label
             WHERE { <http://vivo.school.edu/individual/n25562> rdfs:label ?label }
-            """, VIVOQueryTestCase.query_parms, debug=True)
+            """, VIVOQueryTestCase.query_parms)
             print result
 
 

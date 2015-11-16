@@ -617,7 +617,7 @@ def get_graph(update_def, query_parms, debug=False):
     entity_query = 'select ?uri (<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> as ?p) (<' + \
         str(update_def['entity_def']['type']) + '> as ?o)\nwhere {\n    ' + \
         update_def['entity_def']['entity_sparql'] + '\n}'
-    result = vivo_query(entity_query, query_parms, debug=debug)
+    result = vivo_query(entity_query, query_parms)
     for row in result['results']['bindings']:
         s = URIRef(row['uri']['value'])
         p = URIRef(row['p']['value'])
@@ -627,7 +627,7 @@ def get_graph(update_def, query_parms, debug=False):
         update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
             continue
-        result = vivo_query(update_query, query_parms, debug=debug)
+        result = vivo_query(update_query, query_parms)
         for row in result['results']['bindings']:
             s = URIRef(row['uri']['value'])
             p = URIRef(row['p']['value'])
@@ -641,8 +641,7 @@ def get_graph(update_def, query_parms, debug=False):
                     p3 = URIRef(row['p3']['value'])
                     o3 = make_rdf_term(row['o3'])
                     a.add((o2, p3, o3))
-        if debug:
-            print "Triples in original graph", len(a)
+        logger.debug("Triples in original graph {}".format(len(a)))
     return a
 
 
@@ -665,25 +664,21 @@ def new_uri(parms):
     return test_uri
 
 
-def vivo_query(query, parms, debug=False):
+def vivo_query(query, parms):
     """
     A new VIVO query function using SPARQLWrapper.  Tested with Stardog, UF VIVO and Dbpedia
     :param query: SPARQL query.  VIVO PREFIX will be added
     :param parms: dictionary with query parms:  queryuri, username and password
-    :param debug: boolean. If true, query will be printed to stdout
     :return: result object, typically JSON
     :rtype: dict
     """
     from SPARQLWrapper import SPARQLWrapper, JSON
 
-    if debug:
-        print >>sys.stderr, "in vivo_query"
-        print >>sys.stderr, parms
+    logger.debug("in vivo_query\n{}".format(parms))
     sparql = SPARQLWrapper(parms['queryuri'])
     new_query = parms['prefix'] + '\n' + query
     sparql.setQuery(new_query)
-    if debug:
-        print >>sys.stderr, new_query
+    logger.debug(new_query)
     sparql.setReturnFormat(JSON)
     sparql.addParameter("email", parms['username'])
     sparql.addParameter("password", parms['password'])
@@ -721,7 +716,7 @@ def improve_email(email):
         return ""
 
 
-def improve_phone_number(phone, debug=False):
+def improve_phone_number(phone):
     """
     Given an arbitrary string that attempts to represent a phone number,
     return a best attempt to format the phone number according to ITU standards
@@ -793,8 +788,7 @@ def improve_phone_number(phone, debug=False):
         extension_digits = None
     if extension_digits is not None and len(extension_digits) > 0:
         updated_phone = updated_phone + ' ext. ' + "".join(extension_digits)
-    if debug:
-        print phone.ljust(25), updated_phone.ljust(25)
+    logger.debug("improve_phone_number. before {} after {}".format(phone.ljust(25), updated_phone.ljust(25)))
     return updated_phone
 
 
@@ -1721,7 +1715,7 @@ def get_args():
         for name, val in config.items(section):
             program_defaults[name] = val
             if 'prefix' != name:
-                logger.debug("Param {}= {}".format(name, val))
+                logger.debug("Param {} = {}".format(name, val))
 
     # Non null command line values overwrite the config file values
     for name, val in vars(args).items():
@@ -1907,7 +1901,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
             try:
                 column_values[i] = enum[step_def['object']['enum']]['update'][column_values[i]]
             except KeyError:
-                print "ERROR: ", column_values[i], "not found in enumeration.  Blank value substituted."
+                logger.error("{} not found in enumeration.  Blank value substituted.".format(column_values[i]))
                 column_values[i] = ''
 
     # Convert to rdflib terms
@@ -1917,7 +1911,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_terms
 
 
-def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debug):
+def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
     """
     Return the triples matching the criteria defined in the current step of an update
     :param column_name:
@@ -1951,8 +1945,7 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
             type_query = type_query_template.replace('{{uri}}', str(uri))
             type_query = type_query.replace('{{pred}}', str(step_def['predicate']['ref']))
             type_query = type_query.replace('{{type}}', str(step_def['object']['type']))
-            if debug:
-                print 'get_step_triples type query', type_query
+            logger.debug('get_step_triples type query {}'.format(type_query))
             qresult = update_graph.query(type_query)
             g = Graph()
             for row in qresult:
@@ -1969,15 +1962,13 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms, debu
             q = 'select (?' + column_name + ' as ?o) where { <' + str(uri) + '> <' + \
                 str(step_def['predicate']['ref']) + '> ?' + column_name + ' .\n' + \
                 add_qualifiers([step_def]) + ' }\n'
-        if debug:
-            print "\nStep Triples Query\n", q
-        result_set = vivo_query(q, query_parms, debug)
+        logger.debug("Step Triples Query {}".format(q))
+        result_set = vivo_query(q, query_parms)
         g = Graph()
         for binding in result_set['results']['bindings']:
             o = make_rdf_term(binding['o'])
             g.add((uri, step_def['predicate']['ref'], o))
-    if debug:
-        print "Step Triples\n", g.serialize(format='nt')
+    logger.debug("Step Triples {}".format(g.serialize(format='nt')))
     return g
 
 
@@ -2008,8 +1999,8 @@ def load_enum(update_def):
                         try:
                             enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
                         except KeyError:
-                            print >>sys.stderr, "ERROR: Enumeration ", enum_name, \
-                                " does not have required columns named short and vivo"
+                            logger.error(
+                                "Enumeration {} does not have required columns named short and vivo".format(enum_name))
                             raise KeyError
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
     return enum

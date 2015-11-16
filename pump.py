@@ -304,8 +304,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                 elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {unicode(o): o for s, p, o in
-                                 get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
-                                                  self.verbose)}
+                                 get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms)}
                     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
                                                           row, column_name)
                     if self.verbose:
@@ -387,7 +386,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         if self.verbose:
             print self.query_parms
             print query
-        result_set = vivo_query(query, self.query_parms, self.verbose)
+        result_set = vivo_query(query, self.query_parms)
         data = make_get_data(self.update_def, result_set)
 
         #   Write out the file
@@ -487,8 +486,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         from vivopump import new_uri, get_step_triples
 
         step_def = path[0]
-        step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
-                                                       self.verbose)]
+        step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms)]
 
         if len(step_uris) == 0:
 
@@ -547,12 +545,11 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         #   This framework should also handle single valued predicates, and cases where there are no step_uris.
         #   That is, it should handle everything.  All the code below should be replaced.
 
-        step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, column_name, column_def[0],
-                                                       self.query_parms, self.verbose)]
+        step_uris = [o for s, p, o in
+                     get_step_triples(self.update_graph, uri, column_name, column_def[0], self.query_parms)]
         vivo_objs = {}
         for step_uri in step_uris:
-            for s, p, o in get_step_triples(self.update_graph, step_uri, column_name, column_def[1],
-                                            self.query_parms, self.verbose):
+            for s, p, o in get_step_triples(self.update_graph, step_uri, column_name, column_def[1], self.query_parms):
                 vivo_objs[unicode(o)] = [o, step_uri]
 
         #   Nasty hack below.  The predicate property "single" appears to have two meanings.  One has to do

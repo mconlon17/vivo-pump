@@ -396,3 +396,5 @@ to vivopump.py. Reconcile UF usage for sponsorID and ufVivo prefix in `get_vivo_
 * **2015-11-13** Add invalid JSON test to `test_sv.py`. Update grants example.  Update Journals example.  All 
 `test_sv.py` now run to completion.
 * **2015-11-14** Add invalid access test to `test_sv.py`
+* **2015-11-16** logger used throughout `vivopump.py`.  No print statements remain. `vivo_query` `improve_phone_number` 
+and `get_step_triples` refactored to remove debug parameter.  All tests pass.
