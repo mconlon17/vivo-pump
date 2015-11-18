@@ -36,7 +36,7 @@ handler = logging.StreamHandler(sys.stderr)
 # handler = logging.StreamHandler(sys.stdout)
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-# logger.setLevel(logging.DEBUG)
+# logger.setLevel(logging.ow, column_name, column_values, uri, vivo_objsDEBUG)
 logger.setLevel(logging.INFO)
 
 
@@ -220,17 +220,17 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             self.update_graph.add((s, p, o))
 
         if self.verbose:
-            print datetime.now(), 'Graphs ready for processing. Original has ', len(self.original_graph), \
-                '. Update graph has', len(self.update_graph)
-            print datetime.now(), 'Updates ready for processing. ', len(self.update_data), 'rows.'
+            logger.info('Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
+                len(self.original_graph), len(self.update_graph)))
+            logger.info('Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
             if len(self.enum) == 0:
-                print datetime.now(), "No enumerations"
+                logger.info("No enumerations")
             else:
                 for key in self.enum.keys():
-                    print datetime.now(), key, "modified", time.ctime(os.path.getmtime(key)), \
-                        "get", len(self.enum[key]['get']), "update", \
-                        len(self.enum[key]['update'])
-
+                    logger.info(
+                        "Enumeration {} modified {}. {} entries in get enum.  {} entries in update enum".format(
+                            key, time.ctime(os.path.getmtime(key)), len(self.enum[key]['get']),
+                            len(self.enum[key]['update'])))
         return self.__do_update()
 
     def __do_update(self):
@@ -253,8 +253,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                 # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
                 uri_string = new_uri(self.query_parms)
-                if self.verbose:
-                    print "Adding an entity for row", row, ".  Will be added at", uri_string
+                logger.debug("Adding an entity for row {}. Will be added at {}".format(row, uri_string))
                 uri = URIRef(uri_string)
                 self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
 
@@ -263,8 +262,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             else:
                 uri = URIRef(data_update['uri'].strip())
                 if (uri, None, None) not in self.update_graph:
-                    if self.verbose:
-                        print "Adding an entity for row", row, ".  Will be added at", str(uri)
+                    logger.debug("Adding an entity for row {}. Will be added at {}".format(row, str(uri)))
                     self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
 
             entity_uri = uri
@@ -321,8 +319,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                  get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms)}
                     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
                                                           row, column_name)
-                    if self.verbose:
-                        print row, column_name, column_values, uri, vivo_objs
+                    logger.debug("{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
                     self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
         if any(merges):
@@ -331,13 +328,9 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         # Return the add and sub graphs representing the changes that need to be made to the original
 
         add = self.update_graph - self.original_graph  # Triples in update that are not in original
-        if self.verbose:
-            print "Triples to add"
-            print add.serialize(format='nt')
+        logger.info("Triples to add\n {}".format(add.serialize(format='nt')))
         sub = self.original_graph - self.update_graph  # Triples in original that are not in update
-        if self.verbose:
-            print "Triples to sub"
-            print sub.serialize(format='nt')
+        logger.info("Triples to sub\n {}".format(sub.serialize(format='nt')))
         return [add, sub]
 
     def __do_merges(self, merges):

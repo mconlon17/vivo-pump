@@ -707,7 +707,7 @@ class PumpTestCase(unittest.TestCase):
         self.assertEqual(2, n_rows)
 
     def test_pump_update(self):
-        p = Pump("data/building_def.json")
+        p = Pump("data/building_def.json", verbose=True)
         p.out_filename = "data/pump_data.txt"
         [add, sub] = p.update()
         self.assertEqual(2, len(add))
