@@ -342,8 +342,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         """
         # Print the merge info
 
-        if self.verbose:
-            print "Merge Info:", merges
+        logger.info("Merge Info\n".format(merges))
         for key in merges:
             primary_uri = merges[key]['primary']
             if primary_uri is not None:
@@ -369,8 +368,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         self.update_graph.remove((None, None, uri))
         after = len(self.update_graph)
         removed = before - after
-        if self.verbose:
-            print "REMOVING", removed, "triples for ", uri, "on row", row
+        logger.debug("REMOVING {} triples for {} on row {}".format(removed, uri, row))
         return removed
 
     def __do_get(self):
@@ -390,9 +388,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         #   Generate the get query, execute the query, shape the query results into the return object
 
         query = make_get_query(self.update_def)
-        if self.verbose:
-            print self.query_parms
-            print query
+        logger.debug("do_get query_parms\n{}".format(self.query_parms))
+        logger.debug("do_get query\n{}".format(query))
         result_set = vivo_query(query, self.query_parms)
         data = make_get_data(self.update_def, result_set)
 
@@ -416,10 +413,10 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                         # Warn/correct if path is unique and VIVO is not
 
                         if unique_path(path) and len(data[uri][name]) > 1:
-                            print "WARNING. VIVO has non-unique values for unique path:", name, "at", uri, \
-                                data[uri][name]
+                            logger.warning("VIVO has non-unique values for unique path {} at {} values {}".
+                                           format(name, uri, data[uri][name]))
                             data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from multi-valued set
-                            print data[uri][name]
+                            logger.warning("Using {}", data[uri][name])
 
                         # Handle filters
 
@@ -428,10 +425,10 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                             for x in data[uri][name]:
                                 was_string = x
                                 new_string = eval(path[len(path) - 1]['object']['filter'])(x)
-                                if self.verbose and was_string != new_string:
-                                    print uri, name, path[len(path) - 1]['object'][
-                                        'filter'], "FILTER IMPROVED", was_string, 'to', \
-                                        new_string
+                                if was_string != new_string:
+                                    logger.debug("{} {} {} FILTER IMPROVED {} to {}".
+                                                 format(uri, name, path[len(path) - 1]['object']['filter'],
+                                                        was_string, new_string))
                                 a.add(new_string)
                             data[uri][name] = a
 
@@ -445,8 +442,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                 if val != '':
                                     a.add(val)
                                 else:
-                                    print "WARNING: Unable to find ", x, "in", enum_name, \
-                                        ". Blank substituted in", self.out_filename
+                                    logger.warning("WARNING: Unable to find {} in {}. Blank substituted in {}".
+                                                   format(x, enum_name, self.out_filename))
                             data[uri][name] = a
 
                     # Gather values into a delimited string
@@ -467,8 +464,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         try:
             order = sorted(data, key=lambda rown: data[rown][sort_column_name])
         except KeyError:
-            print >>sys.stderr, "ERROR: ", sort_column_name, \
-                "in order_by not found.  No such column name. Sorting by uri."
+            logger.error("{} in order_by not found.  No such column name. Sorting by uri.".
+                         format(sort_column_name))
             order = sorted(data, key=lambda rown: data[rown]['uri'])
         row = 1
         for o in order:

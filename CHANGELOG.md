@@ -400,3 +400,4 @@ to vivopump.py. Reconcile UF usage for sponsorID and ufVivo prefix in `get_vivo_
 and `get_step_triples` refactored to remove debug parameter.  All tests pass.
 * **2015-11-17** logger added to `pump.py`
 * **2015-11-18** Removing print statements, adding logger calls to `pump.py`
+* **2015-11-19** Removing print statements from `pump.py`
