@@ -13,7 +13,7 @@ import logging
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.8.4"
+__version__ = "0.8.5"
 
 # Establish logging
 
@@ -605,7 +605,7 @@ def make_rdf_term(row_term):
     return rdf_term
 
 
-def get_graph(update_def, query_parms, debug=False):
+def get_graph(update_def, query_parms):
     """
     Given the update def, get a graph from VIVO of the triples eligible for updating
     :return: graph of triples
@@ -641,7 +641,7 @@ def get_graph(update_def, query_parms, debug=False):
                     p3 = URIRef(row['p3']['value'])
                     o3 = make_rdf_term(row['o3'])
                     a.add((o2, p3, o3))
-        logger.debug("Triples in original graph {}".format(len(a)))
+        logger.debug(u"Triples in original graph {}".format(len(a)))
     return a
 
 
@@ -674,7 +674,7 @@ def vivo_query(query, parms):
     """
     from SPARQLWrapper import SPARQLWrapper, JSON
 
-    logger.debug("in vivo_query\n{}".format(parms))
+    logger.debug(u"in vivo_query\n{}".format(parms))
     sparql = SPARQLWrapper(parms['queryuri'])
     new_query = parms['prefix'] + '\n' + query
     sparql.setQuery(new_query)
@@ -788,7 +788,7 @@ def improve_phone_number(phone):
         extension_digits = None
     if extension_digits is not None and len(extension_digits) > 0:
         updated_phone = updated_phone + ' ext. ' + "".join(extension_digits)
-    logger.debug("improve_phone_number. before {} after {}".format(phone.ljust(25), updated_phone.ljust(25)))
+    logger.debug(u"improve_phone_number. before {} after {}".format(phone.ljust(25), updated_phone.ljust(25)))
     return updated_phone
 
 
@@ -1702,9 +1702,9 @@ def get_args():
 
     if args.config is None:
         args.config = program_defaults['config']
-        logger.debug("No config file specified -- using hardcoded defaults")
+        logger.debug(u"No config file specified -- using hardcoded defaults")
     else:
-        logger.debug("Reading config file: {}".format(args.config))
+        logger.debug(u"Reading config file: {}".format(args.config))
 
     # Read the config parameters from the file specified in the command line
     config = ConfigParser.ConfigParser()
@@ -1715,7 +1715,7 @@ def get_args():
         for name, val in config.items(section):
             program_defaults[name] = val
             if 'prefix' != name:
-                logger.debug("Param {} = {}".format(name, val))
+                logger.debug(u"Param {} = {}".format(name, val))
 
     # Non null command line values overwrite the config file values
     for name, val in vars(args).items():
@@ -1901,7 +1901,7 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
             try:
                 column_values[i] = enum[step_def['object']['enum']]['update'][column_values[i]]
             except KeyError:
-                logger.error("{} not found in enumeration.  Blank value substituted.".format(column_values[i]))
+                logger.error(u"{} not found in enumeration.  Blank value substituted.".format(column_values[i]))
                 column_values[i] = ''
 
     # Convert to rdflib terms
@@ -1945,7 +1945,7 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
             type_query = type_query_template.replace('{{uri}}', str(uri))
             type_query = type_query.replace('{{pred}}', str(step_def['predicate']['ref']))
             type_query = type_query.replace('{{type}}', str(step_def['object']['type']))
-            logger.debug('get_step_triples type query {}'.format(type_query))
+            logger.debug(u'get_step_triples type query {}'.format(type_query))
             qresult = update_graph.query(type_query)
             g = Graph()
             for row in qresult:
@@ -1962,13 +1962,13 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
             q = 'select (?' + column_name + ' as ?o) where { <' + str(uri) + '> <' + \
                 str(step_def['predicate']['ref']) + '> ?' + column_name + ' .\n' + \
                 add_qualifiers([step_def]) + ' }\n'
-        logger.debug("Step Triples Query {}".format(q))
+        logger.debug(u"Step Triples Query {}".format(q))
         result_set = vivo_query(q, query_parms)
         g = Graph()
         for binding in result_set['results']['bindings']:
             o = make_rdf_term(binding['o'])
             g.add((uri, step_def['predicate']['ref'], o))
-    logger.debug("Step Triples {}".format(g.serialize(format='nt')))
+    logger.debug(u"Step Triples {}".format(g.serialize(format='nt')))
     return g
 
 
@@ -2000,7 +2000,7 @@ def load_enum(update_def):
                             enum[enum_name]['get'][enum_datum['vivo']] = enum_datum['short']
                         except KeyError:
                             logger.error(
-                                "Enumeration {} does not have required columns named short and vivo".format(enum_name))
+                                u"Enumeration {} does not have required columns named short and vivo".format(enum_name))
                             raise KeyError
                         enum[enum_name]['update'][enum_datum['short']] = enum_datum['vivo']
     return enum

@@ -401,3 +401,6 @@ and `get_step_triples` refactored to remove debug parameter.  All tests pass.
 * **2015-11-17** logger added to `pump.py`
 * **2015-11-18** Removing print statements, adding logger calls to `pump.py`
 * **2015-11-19** Removing print statements from `pump.py`
+* **2015-11-20** 0.8.5 pump and vivopump no longer have print statements -- all output is through logger.  
+Remove old code from `pump.py` Remove print statements, substituting logger calls in `pump.py`.  All
+tests pass.  All logger messages support unicode. Remove debug parameter from get_graph.

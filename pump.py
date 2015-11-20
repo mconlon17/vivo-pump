@@ -25,7 +25,7 @@ import sys
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.4"
+__version__ = "0.8.5"
 
 # Establish logging
 
@@ -213,22 +213,22 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
             # Create the original graph from VIVO
 
-            self.original_graph = get_graph(self.update_def, self.query_parms, debug=self.verbose)
+            self.original_graph = get_graph(self.update_def, self.query_parms)
 
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
             self.update_graph.add((s, p, o))
 
         if self.verbose:
-            logger.info('Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
+            logger.info(u'Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
                 len(self.original_graph), len(self.update_graph)))
-            logger.info('Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
+            logger.info(u'Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
             if len(self.enum) == 0:
-                logger.info("No enumerations")
+                logger.info(u"No enumerations")
             else:
                 for key in self.enum.keys():
                     logger.info(
-                        "Enumeration {} modified {}. {} entries in get enum.  {} entries in update enum".format(
+                        u"Enumeration {} modified {}. {} entries in get enum.  {} entries in update enum".format(
                             key, time.ctime(os.path.getmtime(key)), len(self.enum[key]['get']),
                             len(self.enum[key]['update'])))
         return self.__do_update()
@@ -253,7 +253,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                 # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
                 uri_string = new_uri(self.query_parms)
-                logger.debug("Adding an entity for row {}. Will be added at {}".format(row, uri_string))
+                logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, uri_string))
                 uri = URIRef(uri_string)
                 self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
 
@@ -262,7 +262,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             else:
                 uri = URIRef(data_update['uri'].strip())
                 if (uri, None, None) not in self.update_graph:
-                    logger.debug("Adding an entity for row {}. Will be added at {}".format(row, str(uri)))
+                    logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, str(uri)))
                     self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
 
             entity_uri = uri
@@ -319,7 +319,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                  get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms)}
                     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
                                                           row, column_name)
-                    logger.debug("{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
+                    logger.debug(u"{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
                     self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
 
         if any(merges):
@@ -328,9 +328,9 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         # Return the add and sub graphs representing the changes that need to be made to the original
 
         add = self.update_graph - self.original_graph  # Triples in update that are not in original
-        logger.info("Triples to add\n {}".format(add.serialize(format='nt')))
+        logger.info(u"Triples to add\n {}".format(add.serialize(format='nt')))
         sub = self.original_graph - self.update_graph  # Triples in original that are not in update
-        logger.info("Triples to sub\n {}".format(sub.serialize(format='nt')))
+        logger.info(u"Triples to sub\n {}".format(sub.serialize(format='nt')))
         return [add, sub]
 
     def __do_merges(self, merges):
@@ -342,7 +342,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         """
         # Print the merge info
 
-        logger.info("Merge Info\n".format(merges))
+        logger.info(u"Merge Info\n".format(merges))
         for key in merges:
             primary_uri = merges[key]['primary']
             if primary_uri is not None:
@@ -368,7 +368,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         self.update_graph.remove((None, None, uri))
         after = len(self.update_graph)
         removed = before - after
-        logger.debug("REMOVING {} triples for {} on row {}".format(removed, uri, row))
+        logger.debug(u"REMOVING {} triples for {} on row {}".format(removed, uri, row))
         return removed
 
     def __do_get(self):
@@ -388,8 +388,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         #   Generate the get query, execute the query, shape the query results into the return object
 
         query = make_get_query(self.update_def)
-        logger.debug("do_get query_parms\n{}".format(self.query_parms))
-        logger.debug("do_get query\n{}".format(query))
+        logger.debug(u"do_get query_parms\n{}".format(self.query_parms))
+        logger.debug(u"do_get query\n{}".format(query))
         result_set = vivo_query(query, self.query_parms)
         data = make_get_data(self.update_def, result_set)
 
@@ -413,10 +413,10 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                         # Warn/correct if path is unique and VIVO is not
 
                         if unique_path(path) and len(data[uri][name]) > 1:
-                            logger.warning("VIVO has non-unique values for unique path {} at {} values {}".
+                            logger.warning(u"VIVO has non-unique values for unique path {} at {} values {}".
                                            format(name, uri, data[uri][name]))
                             data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from multi-valued set
-                            logger.warning("Using {}", data[uri][name])
+                            logger.warning(u"Using {}", data[uri][name])
 
                         # Handle filters
 
@@ -426,7 +426,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                 was_string = x
                                 new_string = eval(path[len(path) - 1]['object']['filter'])(x)
                                 if was_string != new_string:
-                                    logger.debug("{} {} {} FILTER IMPROVED {} to {}".
+                                    logger.debug(u"{} {} {} FILTER IMPROVED {} to {}".
                                                  format(uri, name, path[len(path) - 1]['object']['filter'],
                                                         was_string, new_string))
                                 a.add(new_string)
@@ -442,7 +442,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                 if val != '':
                                     a.add(val)
                                 else:
-                                    logger.warning("WARNING: Unable to find {} in {}. Blank substituted in {}".
+                                    logger.warning(u"WARNING: Unable to find {} in {}. Blank substituted in {}".
                                                    format(x, enum_name, self.out_filename))
                             data[uri][name] = a
 
@@ -464,7 +464,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         try:
             order = sorted(data, key=lambda rown: data[rown][sort_column_name])
         except KeyError:
-            logger.error("{} in order_by not found.  No such column name. Sorting by uri.".
+            logger.error(u"{} in order_by not found.  No such column name. Sorting by uri.".
                          format(sort_column_name))
             order = sorted(data, key=lambda rown: data[rown]['uri'])
         row = 1
@@ -479,8 +479,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         """
         Given the current state in the update, and a path length three column_def, add, change or delete intermediate
         and end objects as necessary to perform the requested update
-        :param row: row number of the update.  For printing
-        :param column_name: column_name of the update.  For printing
+        :param row: row number of the update.  For logger messages
+        :param column_name: column_name of the update.  For logger messages
         :param uri: uri of the entity at the head of the path
         :param path: the column definition
         :param data_update: the data provided for the update
@@ -512,8 +512,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
             step_uri = step_uris[0]
             if len(step_uris) > 1:
-                print "WARNING: Single predicate", path[0]['object']['name'], "has", len(step_uris), "values: ", \
-                    step_uris, "using", step_uri
+                logger.warning(u"WARNING: Single predicate {} has {} values: {}. Using ".
+                               format(path[0]['object']['name'], len(step_uris), step_uris, step_uri))
             self.__do_two_step_update(row, column_name, step_uri, path[1:], data_update)
         return None
 
@@ -577,9 +577,9 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         else:
             add_values = set(column_values) - set(vivo_values)
             sub_values = set(vivo_values) - set(column_values)
-        if self.verbose:
-            print 'Two step SET COMPARE', '\n\tRow', row, '\n\tColumn', column_name, '\n\tSource', column_values, \
-                '\n\tVIVO', vivo_values, '\n\tAdd:', add_values, '\n\tSub:', sub_values, '\n\tStep_uris', step_uris
+            logger.debug(u"Two step SET COMPARE\n\tRow {}\n\tColumn {}\n\tSource values {}\n\tVIVO values {}" +
+                         "\n\tAdd values {}\n\tSub values {}\n\tStep_uris {}".
+                         format(row, column_name, column_values, vivo_values, add_values, sub_values, step_uris))
 
         #   Process the adds
 
@@ -642,45 +642,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                     self.update_graph.remove((uri, step_def['predicate']['ref'], step_uri))
                     self.update_graph.remove((step_uri, None, None))
 
-        # if len(step_uris) == 0:
-        #
-        #     # VIVO has no values for intermediate, so add a new intermediate and __do_the_update on the leaf
-        #
-        #     step_uri = URIRef(new_uri(self.query_parms))
-        #     self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
-        #     self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
-        #     if 'label' in step_def['object']:
-        #         self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
-        #                                                      datatype=step_def['object'].get('datatype', None),
-        #                                                      lang=step_def['object'].get('lang', None))))
-        #     uri = step_uri
-        #     step_def = column_def[1]
-        #     vivo_objs = {unicode(o): o for s, p, o in
-        #                  get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
-        #                                   self.verbose)}
-        #     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
-        #                                           column_name)
-        #     self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
-        #
-        # elif step_def['predicate']['single'] == True:
-        #
-        #     # VIVO has 1 or more values, so we need to see if the predicate is expected to be single
-        #
-        #     step_uri = step_uris[0]
-        #     if len(step_uris) > 1:
-        #         print "WARNING: Single predicate", column_name, "has", len(step_uris), "values: ", \
-        #             step_uris, "using", step_uri
-        #     uri = step_uri
-        #     step_def = column_def[1]
-        #     vivo_objs = {unicode(o): o for s, p, o in
-        #                  get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms,
-        #                                   self.verbose)}
-        #     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum, row,
-        #                                           column_name)
-        #     self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
-        #
-        # else:
-        #     print "WARNING: Updating multi-valued multi-step predicates such as ", column_name, " not yet implemented"
         return None
 
     def __do_the_update(self, row, column_name, uri, step_def, column_values, vivo_objs):
@@ -714,31 +675,26 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
             elif step_def['predicate']['single'] == 'boolean':
                 if column_string == '1':
-                    if self.verbose:
-                        print "Add boolean value", step_def['object']['value'], "to", str(uri)
+                    logger.debug(u"Add boolean value {} to {}".format(step_def['object']['value'], str(uri)))
                     self.update_graph.add((uri, step_def['predicate']['ref'],
                                           make_rdf_term_from_source(step_def['object']['value'], step_def)))
                 else:
-                    if self.verbose:
-                        print "Sub boolean value", step_def['object']['value'], "from", str(uri)
+                    logger.debug(u"Sub boolean value {} from {}".format(step_def['object']['value'], str(uri)))
                     self.update_graph.remove((uri, step_def['predicate']['ref'],
                                              make_rdf_term_from_source(step_def['object']['value'], step_def)))
 
             #   None processing
 
             elif column_string == 'None':
-                if self.verbose:
-                    print "Remove", column_name, "from", str(uri)
+                logger.debug(u"Remove {} from {}".format(column_name, str(uri)))
                 for vivo_object in vivo_objs.values():
                     self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                    if self.verbose:
-                        print uri, step_def['predicate']['ref'], vivo_object
+                    logger.debug(u"{} {} {}".format(uri, step_def['predicate']['ref'], vivo_object))
 
             #   Add processing
 
             elif len(vivo_objs) == 0:
-                if self.verbose:
-                    print "Adding", column_name, column_string
+                logger.debug(u"Adding {} {}".format(column_name, column_string))
                 self.update_graph.add((uri, step_def['predicate']['ref'], column_values[0]))  # Literal or URIRef
                 if 'type' in step_def['object']:
                     self.update_graph.add((uri, RDF.type, step_def['object']['type']))
@@ -751,21 +707,16 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                         continue  # No action required if vivo term is same as source
                     else:
                         self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
-                        if self.verbose:
-                            print "REMOVE", row, column_name, unicode(vivo_object)
-                            print "VIVO was ", unicode(vivo_object)
-                            print "Source is", column_string
+                        logger.debug(u"REMOVE {} {} {}".format(row, column_name, unicode(vivo_object)))
                         self.update_graph.add((uri, step_def['predicate']['ref'], column_values[0]))
-                        if self.verbose:
-                            print "ADD   ", row, column_name, column_string
-                            print step_def
-                            print "lang is ", step_def['object'].get('lang', None)
+                        logger.debug(u"ADD {} {} {} \n\t step_def {} \n\tlang is {}".
+                                     format(row, column_name, column_string, step_def, step_def['object'].get('lang',
+                                                                                                              None)))
         else:
 
             # Set comparison processing
 
-            if self.verbose:
-                print 'SET COMPARE', row, column_name, column_values, vivo_objs.values()
+            logger.debug(u'SET COMPARE {} {} {} {}'.format(row, column_name, column_values, vivo_objs.values()))
             add_values = set(column_values) - set(vivo_objs.values())
             sub_values = set(vivo_objs.values()) - set(column_values)
             for value in add_values:
