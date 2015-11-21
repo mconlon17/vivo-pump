@@ -404,3 +404,5 @@ and `get_step_triples` refactored to remove debug parameter.  All tests pass.
 * **2015-11-20** 0.8.5 pump and vivopump no longer have print statements -- all output is through logger.  
 Remove old code from `pump.py` Remove print statements, substituting logger calls in `pump.py`.  All
 tests pass.  All logger messages support unicode. Remove debug parameter from get_graph.
+* **2015-11-21** Add catalyst code to uf_examples/publications.  Start work on handler for identifying pubmed papers
+and loading pubmed papers
