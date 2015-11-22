@@ -1,13 +1,21 @@
 ************* Module vivopump
-W:185, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:1142, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
-W:551, 0: Dangerous default value {} as argument (dangerous-default-value)
-W:893,19: Duplicate key 'Pky ' in dictionary (duplicate-key)
+W:223, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:1497, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+W:644,21: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:677,17: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:791,17: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:1707,21: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:1718,29: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:1904,29: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:1948,25: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:1965,21: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:1971,17: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
+W:2002,32: Use % formatting in logging functions but pass the % parameters as arguments (logging-format-interpolation)
 
 
 Report
 ======
-469 statements analysed.
+732 statements analysed.
 
 Statistics by type
 ------------------
@@ -15,13 +23,13 @@ Statistics by type
 +---------+-------+-----------+-----------+------------+---------+
 |type     |number |old number |difference |%documented |%badname |
 +=========+=======+===========+===========+============+=========+
-|module   |1      |NC         |NC         |100.00      |0.00     |
+|module   |1      |1          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|class    |4      |NC         |NC         |100.00      |0.00     |
+|class    |6      |6          |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|method   |7      |NC         |NC         |100.00      |0.00     |
+|method   |11     |11         |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|function |39     |NC         |NC         |100.00      |0.00     |
+|function |52     |52         |=          |100.00      |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
 
 
@@ -41,13 +49,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |537    |41.89 |NC       |NC         |
+|code      |817    |40.91 |817      |=          |
 +----------+-------+------+---------+-----------+
-|docstring |636    |49.61 |NC       |NC         |
+|docstring |1008   |50.48 |1008     |=          |
 +----------+-------+------+---------+-----------+
-|comment   |5      |0.39  |NC       |NC         |
+|comment   |21     |1.05  |21       |=          |
 +----------+-------+------+---------+-----------+
-|empty     |104    |8.11  |NC       |NC         |
+|empty     |151    |7.56  |151      |=          |
 +----------+-------+------+---------+-----------+
 
 
@@ -58,9 +66,9 @@ Duplication
 +-------------------------+------+---------+-----------+
 |                         |now   |previous |difference |
 +=========================+======+=========+===========+
-|nb duplicated lines      |0     |NC       |NC         |
+|nb duplicated lines      |0     |0        |=          |
 +-------------------------+------+---------+-----------+
-|percent duplicated lines |0.000 |NC       |NC         |
+|percent duplicated lines |0.000 |0.000    |=          |
 +-------------------------+------+---------+-----------+
 
 
@@ -71,13 +79,13 @@ Messages by category
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |0      |NC       |NC         |
+|convention |0      |0        |=          |
 +-----------+-------+---------+-----------+
-|refactor   |0      |NC       |NC         |
+|refactor   |0      |0        |=          |
 +-----------+-------+---------+-----------+
-|warning    |4      |NC       |NC         |
+|warning    |12     |12       |=          |
 +-----------+-------+---------+-----------+
-|error      |0      |NC       |NC         |
+|error      |0      |0        |=          |
 +-----------+-------+---------+-----------+
 
 
@@ -88,16 +96,14 @@ Messages
 +------------------------------+------------+
 |message id                    |occurrences |
 +==============================+============+
+|logging-format-interpolation  |10          |
++------------------------------+------------+
 |anomalous-backslash-in-string |2           |
-+------------------------------+------------+
-|duplicate-key                 |1           |
-+------------------------------+------------+
-|dangerous-default-value       |1           |
 +------------------------------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 9.91/10
+Your code has been rated at 9.84/10 (previous run: 9.84/10, +0.00)
 

@@ -406,3 +406,4 @@ Remove old code from `pump.py` Remove print statements, substituting logger call
 tests pass.  All logger messages support unicode. Remove debug parameter from get_graph.
 * **2015-11-21** Add catalyst code to uf_examples/publications.  Start work on handler for identifying pubmed papers
 and loading pubmed papers
+* **2015-11-22** Minor pylint improvements

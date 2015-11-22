@@ -1984,7 +1984,6 @@ def load_enum(update_def):
 
     :return enumeration structure.  Pairs of dictionaries, one pair for each enumeration.  short -> vivo, vivo -> short
     """
-    import sys
     enum = {}
     for path in update_def['column_defs'].values():
         for step in path:
