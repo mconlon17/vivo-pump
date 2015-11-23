@@ -80,7 +80,7 @@ PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX vivo:     <http://vivoweb.org/ontology/core#>
 PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
     '''
-                 }):
+                             }):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
@@ -192,11 +192,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         """
         from vivopump import read_csv, get_graph
         from rdflib import Graph
-        import logging
         import os.path
         import time
-
-        logging.basicConfig(level=logging.INFO)
 
         if self.update_data is None:  # Test for injection
             self.update_data = read_csv(self.out_filename, delimiter=self.inter)
@@ -380,7 +377,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         """
         from vivopump import vivo_query, make_get_data, unique_path, make_get_query, read_csv, write_csv
         import codecs
-        import sys
         from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
             improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name, \
             improve_org_name
@@ -505,14 +501,14 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                                                                      lang=step_def['object'].get('lang', None))))
             self.__do_two_step_update(row, column_name, step_uri, path[1:], data_update)
 
-        elif step_def['predicate']['single']  == True:
+        elif step_def['predicate']['single'] == True:
 
             #   VIVO has 1 or more values for first intermediate, so we need to see if the predicate
             #   is expected to be single
 
             step_uri = step_uris[0]
             if len(step_uris) > 1:
-                logger.warning(u"WARNING: Single predicate {} has {} values: {}. Using ".
+                logger.warning(u"WARNING: Single predicate {} has {} values: {}. Using {}".
                                format(path[0]['object']['name'], len(step_uris), step_uris, step_uri))
             self.__do_two_step_update(row, column_name, step_uri, path[1:], data_update)
         return None
@@ -611,8 +607,8 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                         self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
                     if 'label' in step_def['object']:
                         self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
-                                                                         datatype=step_def['object'].get('datatype', None),
-                                                                         lang=step_def['object'].get('lang', None))))
+                            datatype=step_def['object'].get('datatype', None),
+                            lang=step_def['object'].get('lang', None))))
                 else:
                     step_uri = step_uris[0]
                 self.__do_the_update(row, column_name, step_uri, column_def[1], column_values, {})

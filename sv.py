@@ -49,8 +49,6 @@ def main():
     return_code = 0
     print datetime.now(), "Start"
     args = get_args()
-    if args.verbose:
-        print datetime.now(), "Arguments\n", vars(args)
 
     #   Create a Pump and use it to perform the requested actions based on arguments
 
