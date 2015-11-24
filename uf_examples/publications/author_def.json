@@ -165,7 +165,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "rdf:type",
+                    "ref": "rdf:type"
                 },
                 "object": {
                     "literal": false,
