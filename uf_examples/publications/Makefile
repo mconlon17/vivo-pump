@@ -4,7 +4,7 @@
 #	path contains the root vivo-pump folder
 #
 # @author Andrei Sura
-# 
+#
 # @TODO: add tasks for the remaining steps
 #
 CONFIG_DIR := config
@@ -48,9 +48,19 @@ pump_journals:
 	echo 'todo'
 
 prep_authors:
-	echo 'todo'
+	cat data_in/tr_07_03_2015_wk_fin.bib \
+		| python filters/bib2csv_filter.py \
+		| python filters/author_prep_filter.py \
+		| python filters/author_match_filter.py \
+		> data_out/author_update_data.txt
+
 pump_authors:
-	echo 'todo'
+	@# TODO: fix the code to allow execution from a different folder
+	@# sv -a update
+	python ../../sv.py \
+		-d author_def.json \
+		-c config/sv_authors.cfg \
+		-s data_out/author_update_data.txt
 
 prep_pubs:
 	echo 'todo'
