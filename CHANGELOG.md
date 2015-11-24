@@ -408,3 +408,4 @@ tests pass.  All logger messages support unicode. Remove debug parameter from ge
 and loading pubmed papers
 * **2015-11-22** Minor pylint improvements
 * **2015-11-23** Minor pylint improvements
+* **2015-11-24** Improvements to `README.md`
