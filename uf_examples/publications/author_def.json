@@ -158,7 +158,25 @@
         ],
         "corresponding": [
             {
-                "comment": "corresponding is a property of authorships.  Not authors. Not processed here."
+                 "predicate": {
+                    "single": false,
+                    "ref": "vivo:relatedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:isCorrespondingAuthor",
+                    "name": "correspondingAuthor"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:isCorrespondingAuthor"
+                },
+                "object": {
+                    "literal": true,
+                    "type": "xsd:boolean"
+                }
             }
         ],
         "uf": [
