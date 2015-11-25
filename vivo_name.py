@@ -109,3 +109,21 @@ class VivoName(object):
     def get_key_6(self):
         return self.format_as_key(self.last + DIV +
                                   self.first + DIV + self.middle)
+
+    def get_key(self):
+        if CASE_0 == self.case:
+            return self.get_key_0()
+        if CASE_1 == self.case:
+            return self.get_key_1()
+        if CASE_2 == self.case:
+            return self.get_key_2()
+        if CASE_3 == self.case:
+            return self.get_key_3()
+        if CASE_4 == self.case:
+            return self.get_key_4()
+        if CASE_5 == self.case:
+            return self.get_key_5()
+        if CASE_6 == self.case:
+            return self.get_key_6()
+
+
