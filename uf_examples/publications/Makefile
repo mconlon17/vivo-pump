@@ -24,9 +24,18 @@ CONFIG_FILE_PUBLICATIONS	:= $(CONFIG_DIR)/sv_pubs.cfg
 help:
 	@echo ""
 	@echo "Available tasks: "
-	@echo "  prep_publishers    : Prepare the input file"
-	@echo "  pump_publishers    : Pump the input file"
+	@echo "  copy_example_files : Copy example files (safe to modify)"
+	@echo "  prep_publishers    : Prepare the publishers input file"
+	@echo "  pump_publishers    : Generate the rdf add/sub files"
+	@echo "  prep_authors       : Prepare the authors input file"
+	@echo "  pump_authors       : Generate the rdf add/sub files"
 	@echo ""
+
+copy_example_files:
+	mkdir config data_in data_out
+	cp config_example/* config
+	cp data_in_example/* data_in
+	cp data_out_example/* data_out
 
 prep_publishers:
 	cat $(IN_FILE_PUBLISHERS) \
