@@ -411,3 +411,4 @@ and loading pubmed papers
 * **2015-11-24** Improvements to `README.md`
 * **2015-11-25** Add `README.md` to `examples`
 * **2015-11-26** Improve orgs example
+* **2015-11-27** Improve people example

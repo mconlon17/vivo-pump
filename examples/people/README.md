@@ -4,18 +4,24 @@ Each person in VIVO has contact information and other identifying information as
 
 This Simple VIVO example supports 19 attributes for each person.  Each one is optional.
 
-1. display_name
+1. display_name -- The name of the person as it will appear on the profile.  Some sites display given name first.
+Others display family name first.
 1. orcid -- enter the person's orcid id in the form nnnn-nnnn-nnnn-nnnn
 1. types -- enter the person's type(s) using the abbreviations in the `person_types.txt` enumeration.  
-`fac` for faculty, `pd` for postdoc, etc.
-1. research_areas -- enter the person's research area(s) using the 
+`fac` for faculty, `pd` for postdoc, etc.  A person may have more than one type.  Separate multiple types with the 
+intra field delimiter (defaults to semi-colon)
+1. research_areas -- enter the person's research area(s) using the test in the concept enumeration (see below).  A 
+person may have multiple research areas.  Separate multiple research areas with the intra field delimiter.
 1. overview -- enter a plain text overview for the person.  Do not cut and paste from Microsoft Word.
 1. name_prefix -- name prefix such as "Dr"
 1. first_name -- person's first name
 1. middle_name -- person's middle name
 1. last_name  -- person's last name
 1. name_suffix -- person's name suffix such as "Jr" or "III"
-1. title -- person's title
+1. title -- person's title.  For faculty, this may be simple "Associate Professor".  But the title may be any string
+such as "Institute Director."  title and position title (see positions example) are not "connected" -- the person's
+title may be any strong.  Typically the titlte is the strong that would appear under a person's name on their business
+card.
 1. phone -- person's primary phone number
 1. email -- person's primary email
 1. home_page -- person's home page URL
@@ -31,7 +37,7 @@ with additional attributes in the future.
 
 ## Enumerations
 
-1. `concept_enum.txt` -- used to list possible subject areas for the advising relationship
+1. `concept_enum.txt` -- used to list possible subject areas for the research areas
 1. `person_types.txt` -- used to list possible person types with abbreviations for each
 
 ## Adding and Updating people
@@ -46,4 +52,4 @@ you specify is not found, it will not be added.  To add new values to enumeratio
 then update the enumerations, then add them to the person.
 1. Update VIVO with your improved spreadsheet using `python -a update`
 
-Repeat these steps as needed to add additional mentoring relationships to VIVO.
+Repeat these steps as needed to add additional people to VIVO.
