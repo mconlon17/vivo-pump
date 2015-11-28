@@ -1590,5 +1590,13 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
         os.remove(filename)
 
 
+class PubMedTest(unittest.TestCase):
+
+    def test_catalyst_getpmids_xml(self):
+        from pubmed import catalyst_getpmids_xml
+        result = catalyst_getpmids_xml(first="Michael", middle="", last="Conlon", email="mconlon@ufl.edu")
+        print result
+        self.assertTrue(result.find("PMIDList") > 0)
+
 if __name__ == "__main__":
     unittest.main()

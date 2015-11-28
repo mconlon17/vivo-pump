@@ -3,6 +3,7 @@
     <words>
       <w>ardf</w>
       <w>argparser</w>
+      <w>asctime</w>
       <w>baseurl</w>
       <w>bibtex</w>
       <w>bibtexcol</w>
@@ -20,6 +21,8 @@
       <w>fullpath</w>
       <w>fuseki</w>
       <w>gatorlink</w>
+      <w>getpmi</w>
+      <w>getpmids</w>
       <w>healthcare</w>
       <w>homedept</w>
       <w>interfield</w>
@@ -29,6 +32,7 @@
       <w>ioerror</w>
       <w>isoformat</w>
       <w>iter</w>
+      <w>levelname</w>
       <w>mycities</w>
       <w>nfac</w>
       <w>nofilter</w>
@@ -51,6 +55,8 @@
       <w>skos</w>
       <w>sponsorid</w>
       <w>stardog</w>
+      <w>statuscode</w>
+      <w>statusmessage</w>
       <w>stdout</w>
       <w>tdata</w>
       <w>testid</w>

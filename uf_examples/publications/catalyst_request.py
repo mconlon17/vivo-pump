@@ -1,6 +1,6 @@
 def catalyst_pmid_request(first, middle, last, email, debug=False):
     """
-    Give an author name at the University of Florida, return the PMIDs of
+    Given an author name at the University of Florida, return the PMIDs of
     papers that are likely to be the works of the author.  The Harvard
     Catalyst GETPMIDS service is called.
 
