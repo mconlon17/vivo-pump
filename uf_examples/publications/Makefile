@@ -4,7 +4,7 @@
 #	path contains the root vivo-pump folder
 #
 # @author Andrei Sura
-# 
+#
 # @TODO: add tasks for the remaining steps
 #
 CONFIG_DIR := config
@@ -24,9 +24,18 @@ CONFIG_FILE_PUBLICATIONS	:= $(CONFIG_DIR)/sv_pubs.cfg
 help:
 	@echo ""
 	@echo "Available tasks: "
-	@echo "  prep_publishers    : Prepare the input file"
-	@echo "  pump_publishers    : Pump the input file"
+	@echo "  copy_example_files : Copy example files (safe to modify)"
+	@echo "  prep_publishers    : Prepare the publishers input file"
+	@echo "  pump_publishers    : Generate the rdf add/sub files"
+	@echo "  prep_authors       : Prepare the authors input file"
+	@echo "  pump_authors       : Generate the rdf add/sub files"
 	@echo ""
+
+copy_example_files:
+	mkdir config data_in data_out
+	cp config_example/* config
+	cp data_in_example/* data_in
+	cp data_out_example/* data_out
 
 prep_publishers:
 	cat $(IN_FILE_PUBLISHERS) \
@@ -48,9 +57,19 @@ pump_journals:
 	echo 'todo'
 
 prep_authors:
-	echo 'todo'
+	cat data_in/tr_07_03_2015_wk_fin.bib \
+		| python filters/bib2csv_filter.py \
+		| python filters/author_prep_filter.py \
+		| python filters/author_match_filter.py \
+		> data_out/author_update_data.txt
+
 pump_authors:
-	echo 'todo'
+	@# TODO: fix the code to allow execution from a different folder
+	@# sv -a update
+	python ../../sv.py \
+		-d author_def.json \
+		-c config/sv_authors.cfg \
+		-s data_out/author_update_data.txt
 
 prep_pubs:
 	echo 'todo'

@@ -106,7 +106,10 @@ store the generated files:
 
     Then run:
 
-        sv -c config/sv_authors.cfg
+        sv -a update \
+            -d author_def.json \
+            -c config/sv_authors.cfg \
+            -s data_out/author_update_data.txt
 
     Then using the files generated in `data_out` folder:
 
