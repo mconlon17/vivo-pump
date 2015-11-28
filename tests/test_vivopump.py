@@ -1594,9 +1594,18 @@ class PubMedTest(unittest.TestCase):
 
     def test_catalyst_getpmids_xml(self):
         from pubmed import catalyst_getpmids_xml
-        result = catalyst_getpmids_xml(first="Michael", middle="", last="Conlon", email="mconlon@ufl.edu")
+        result = catalyst_getpmids_xml(first="Michael", middle="", last="Conlon", email=["mconlon@ufl.edu"],
+                                       affiliation=["%University of Florida%"])
         print result
         self.assertTrue(result.find("PMIDList") > 0)
+
+    def test_get_pmids(self):
+        from pubmed import get_pmids
+        result = get_pmids(first="Michael", middle="", last="Conlon", email=["mconlon@ufl.edu",
+                                                                             "mconlon@duraspace.org"],
+                           affiliation=["%university of florida%", "%ufl.edu%"])
+        print result
+        self.assertTrue(len(result) > 0)
 
 if __name__ == "__main__":
     unittest.main()

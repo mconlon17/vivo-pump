@@ -22,8 +22,8 @@ handler = logging.StreamHandler(sys.stderr)
 # handler = logging.StreamHandler(sys.stdout)
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-# logger.setLevel(logging.DEBUG)
-logger.setLevel(logging.INFO)
+# logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 #   Catalyst service access
 
@@ -31,9 +31,30 @@ HOST = "profiles.catalyst.harvard.edu"
 API_URL = "/services/GETPMIDs/default.asp"
 
 
-def catalyst_getpmids_xml(first, middle, last, email):
+def get_pmids(first, middle, last, email, affiliation=None, yes=None, no=None):
     """
-    Give an author name at the University of Florida, return the PMIDs of
+    Given an author's identifiers and affiliation information, optional lists of pmids, call the catalyst service
+    to retrieve PMIDS for the author and return a list of PMIDS
+    :param first: author first name
+    :param middle: author middle name
+    :param last: author last name
+    :param email: author email(s) as a list
+    :param affiliation: author affiliation as a list
+    :param yes: list of pmids written by the author
+    :param no: list of pmids not written by the author
+    :return: list of pmids identified by the catalyst service that have a high probability of being written by the
+    author
+    """
+    from xml.dom.minidom import parseString  # tools for handling XML in python
+
+    result = catalyst_getpmids_xml(first, middle, last, email, affiliation)
+    dom = parseString(result)  # create a document Object Model (DOM) from the Harvard Catalyst result
+    return [node.childNodes[0].data for node in dom.getElementsByTagName('PMID')]  # return a list of PMID values
+
+
+def catalyst_getpmids_xml(first, middle, last, email, affiliation=None):
+    """
+    Given an author name, email(s) and optional affiliation(s), return the PMIDs of
     papers that are likely to be the works of the author.  The Harvard
     Catalyst GETPMIDS service is called.
     """
@@ -47,18 +68,22 @@ def catalyst_getpmids_xml(first, middle, last, email):
                 <Suffix/>
             </Name>
             <EmailList>
-                <email>{}</email>
+                {}
             </EmailList>
             <AffiliationList>
-                <Affiliation>%university of florida%</Affiliation>
-                <Affiliation>%@ufl.edu%</Affiliation>
+                {}
             </AffiliationList>
             <LocalDuplicateNames>1</LocalDuplicateNames>
             <RequireFirstName>false</RequireFirstName>
             <MatchThreshold>0.98</MatchThreshold>
         </FindPMIDs>"""
 
-    request = request.format(first, middle, last, email)
+    if affiliation is None:
+        affiliation = []
+    email_string = ''.join(['<Email>' + em + '</Email>' for em in email])
+    affil_string = ''.join(['<Affiliation>' + aff + '</Affiliation>' for aff in affiliation])
+
+    request = request.format(first, middle, last, email_string, affil_string)
     webservice = httplib.HTTP(HOST)
     webservice.putrequest("POST", API_URL)
     webservice.putheader("Host", HOST)

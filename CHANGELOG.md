@@ -414,4 +414,5 @@ and loading pubmed papers
 * **2015-11-27** Improve people example
 * **2015-11-28** New code file `pubmed.py` for planned functions providing Pubmed identification, retrieval, handling.
 `catalyst_getpmids_xml` low level function for calling the catalyst pmid identification service.  Test case added and
-passes.
+passes. Remove pubmed handling functions from `uf_examples/publications`. Add `get_pmids` returning a list of pubmed
+ids.  Add test case.  Support list of email addresses and list of affiliations.
