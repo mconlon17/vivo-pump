@@ -58,14 +58,22 @@ def get_person_catalyst_pmids(uri, query_parms):
 
 def get_person_vivo_pmids(uri, query_parms):
     """
-    Given the uri of a person, query VIVO to a list of the person's publications and their pmids
+    Given the uri of a person, query VIVO to get a list of the person's publications with pmids
     :param uri:
     :return: a dictionary keyed by pmid with uris of the pubs for each pmid
     """
     from vivopump import vivo_query
-    query = "select ?pmid (MAX(?puri) AS ?puri) where { <{}> relates ?a. ?a a vivo:Authorship . ?a relates ?puri . " \
-            "?puri a bibo:AcademicArticle . ?puri vivo:pmid ?pmid .} GROUP BY ?pmid"
-    query = query.format(uri)
+    query = """SELECT (MAX(?paper_uri) AS ?puri) ?pmid
+    WHERE {
+        <{}> vivo:relatedBy ?a .
+        ?a a vivo:Authorship .
+        ?a vivo:relates ?paper_uri .
+        ?paper_uri a bibo:AcademicArticle .
+        ?paper_uri bibo:pmid ?pmid .
+    }
+    GROUP BY ?pmid
+    """
+    query = query.replace('{}', uri)
     a = vivo_query(query, query_parms)
     pmid = [x['pmid']['value'] for x in a['results']['bindings']]
     puri = [x['puri']['value'] for x in a['results']['bindings']]
