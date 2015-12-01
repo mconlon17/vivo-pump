@@ -180,8 +180,12 @@ def write_csv_fp(fp, data, delimiter='|'):
     :param delimiter: field delimiter for output
     :return:
     """
-    var_names = data[data.keys()[0]].keys()  # create a list of var_names from the first row
+    assert(len(data.keys()) > 0)
+
+    # create a list of var_names from the first row
+    var_names = data[data.keys()[0]].keys()
     fp.write(delimiter.join(var_names) + '\n')
+
     for key in sorted(data.keys()):
         fp.write(delimiter.join([data[key][x] for x in var_names]) + '\n')
 
@@ -288,7 +292,9 @@ def get_vivo_publishers(parms):
 
 def get_vivo_journals(parms):
     """
-    Query VIVO and return a list of all the journals found in VIVO
+    Query VIVO and return a list of all the journals.
+    @see uf_examples/publications/filters/journal_match_filter.py
+
     :param: parms: vivo_query params
     :return: dictionary of uri keyed by ISSN
     """
@@ -299,9 +305,35 @@ def get_vivo_journals(parms):
     return dict(zip(issn, uri))
 
 
+def get_vivo_academic_articles(parms):
+    """
+    Query VIVO and return a list of all the academic articles.
+    @see uf_examples/publications/filters/pub_match_filter.py
+    @see https://wiki.duraspace.org/display/VIVO/VIVO-ISF+1.6+relationship+diagrams%3A+Authorship
+
+    :param: parms: vivo_query params
+    :return: dictionary of uri keyed by DOI
+    """
+    query = """
+SELECT
+    ?uri ?doi
+WHERE {
+    ?uri a vivo:InformationResource .
+    ?uri bibo:doi ?doi .
+}
+"""
+    results = vivo_query(query, parms)
+    bindings = results['results']['bindings']
+    doi_list = [b['doi']['value'] for b in bindings]
+    uri_list = [b['uri']['value'] for b in bindings]
+    return dict(zip(doi_list, uri_list))
+
+
 def get_vivo_ccn(parms):
     """
-    Query VIVO and return a list of all the ccn found in VIVO
+    Query VIVO and return a list of all the ccn found in VIVO.
+    @see uf_examples/courses/merge_filter.py
+
     :param: parms: vivo_query parms
     :return: dictionary of uri keyed by ccn
     """
@@ -496,13 +528,11 @@ def read_update_def(filename, prefix):
                         raise InvalidDefException(name + ' has more than one multiple predicate')
 
         #   Test for reserved column names
-
-        reserved_words = {'uri', 'action'}
-        if set(col_names) & reserved_words != set():
-            raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
+        # reserved_words = {'uri', 'action'}
+        # if set(col_names) & reserved_words != set():
+        #     raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
 
         #   Test for boolean value
-
         for name in col_names:
             for step in a['column_defs'][name]:
                 if step['predicate']['single'] == 'boolean' and 'value' not in step['object']:
