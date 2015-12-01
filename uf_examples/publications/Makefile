@@ -75,3 +75,6 @@ prep_pubs:
 	echo 'todo'
 pump_pubs:
 	echo 'todo'
+
+get_test_pub:
+	curl -d 'email=new_admin@vivo.ufl.edu' -d 'password=Password1' -d 'query=PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX core:<http://vivoweb.org/ontology/core#> SELECT ?uri ?label WHERE {  ?uri a core:InformationResource .  ?uri rdfs:label ?label  . FILTER regex(?label, "Safety Profile")} limit 10' -H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
