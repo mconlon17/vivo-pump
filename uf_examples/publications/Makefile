@@ -39,14 +39,6 @@ help:
 	@echo "  4b) pump_pubs          : Generate the rdf add/sub files"
 	@echo ""
 
-test_read_api:
-	curl -d 'email=new_admin@vivo.ufl.edu' -d 'password=SECURE_EDITED' \
-		-d 'query=PREFIX foaf:<http://xmlns.com/foaf/0.1/> PREFIX obo:<http://purl.obolibrary.org/obo/> PREFIX vcard:<http://www.w3.org/2006/vcard/ns#> SELECT ?person_uri ?fname ?lname ?mname WHERE { ?person_uri a foaf:Person . ?person_uri obo:ARG_2000028 ?contact_info . ?contact_info vcard:hasName ?name . ?name vcard:familyName ?lname . OPTIONAL { ?name vcard:givenName ?fname . }OPTIONAL { ?name vcard:middleName ?mname . }} LIMIT 10' \
-		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
-
-test_add_rdf:
-	curl -X POST http://dev.vivo.ufl.edu/uploadRDFForm -d rdfStream=@publisher_add_test.rdf -d mode=directAddABox -d language=N-TRIPLE -d submit=submit
-
 
 copy_example_files:
 	mkdir config data_in data_out
@@ -124,3 +116,23 @@ pump_pubs:
 	python ../../sv.py \
 		-c config/sv_pubs.cfg \
 		-s data_out/pub_update_data.txt
+
+# === Testing tasks
+test_read_api:
+	curl -d 'email=new_admin@vivo.ufl.edu' \
+		-d 'password=SECURE_EDITED' \
+		-d 'query=PREFIX foaf:<http://xmlns.com/foaf/0.1/> PREFIX obo:<http://purl.obolibrary.org/obo/> PREFIX vcard:<http://www.w3.org/2006/vcard/ns#> SELECT ?person_uri ?fname ?lname ?mname WHERE { ?person_uri a foaf:Person . ?person_uri obo:ARG_2000028 ?contact_info . ?contact_info vcard:hasName ?name . ?name vcard:familyName ?lname . OPTIONAL { ?name vcard:givenName ?fname . }OPTIONAL { ?name vcard:middleName ?mname . }} LIMIT 10' \
+		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
+
+
+get_test_pub:
+	curl -d 'email=new_admin@vivo.ufl.edu' \
+		-d 'password=SECURE_EDITED' \
+		-d 'query=PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX core:<http://vivoweb.org/ontology/core#> SELECT ?uri ?label WHERE {  ?uri a core:InformationResource .  ?uri rdfs:label ?label  . FILTER regex(?label, "Safety Profile")} limit 10' \
+		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
+
+
+test_add_rdf:
+	@# Needs a cookie to work
+	curl -X POST http://dev.vivo.ufl.edu/uploadRDFForm -d rdfStream=@publisher_add_test.rdf -d mode=directAddABox -d language=N-TRIPLE -d submit=submit
+
