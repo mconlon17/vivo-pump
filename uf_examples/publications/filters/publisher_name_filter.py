@@ -1,4 +1,4 @@
-#!/user/bin/env python
+#!/usr/bin/env python
 
 
 """
@@ -31,6 +31,7 @@ Version 1.1 2014-01-13 MC
 --  All data moved to a CSV file
 --  Conform with commenting and coding standards
 """
+
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2014, University of Florida"
 __license__ = "BSD 3-Clause license"
@@ -39,8 +40,10 @@ __version__ = "1.1"
 import sys
 import fileinput
 from vivopump import read_csv
-fix_bibtex = read_csv("fix_bibtex.csv")
+
+names = read_csv("filters/publisher_name_filter.csv")
+
 for line in fileinput.input():
-    for row in fix_bibtex.values():
+    for row in names.values():
         line = line.replace(row['original'], row['improved'])
     sys.stdout.write(line)
