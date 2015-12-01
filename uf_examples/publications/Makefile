@@ -12,8 +12,12 @@ FILTERS_DIR := filters
 IN_DIR := data_in
 OUT_DIR := data_out
 
-IN_FILE_PUBLISHERS := $(IN_DIR)/tr_07_03_2015_wk_fin.bib
+# IN_FILE := $(IN_DIR)/tr_07_03_2015_wk_fin.bib
+# IN_FILE := $(IN_DIR)/tr_6_mon_1_500.bib_full
+IN_FILE := $(IN_DIR)/tr_6_mon_1_500.bib
+
 OUT_FILE_PUBLISHERS := $(OUT_DIR)/publisher_update_data.txt
+OUT_FILE_JOURNALS := $(OUT_DIR)/journal_update_data.txt
 
 CONFIG_FILE_PUBLISHERS		:= $(CONFIG_DIR)/sv_publishers.cfg
 CONFIG_FILE_JOURNALS		:= $(CONFIG_DIR)/sv_journals.cfg
@@ -25,11 +29,24 @@ help:
 	@echo ""
 	@echo "Available tasks: "
 	@echo "  copy_example_files : Copy example files (safe to modify)"
-	@echo "  prep_publishers    : Prepare the publishers input file"
-	@echo "  pump_publishers    : Generate the rdf add/sub files"
-	@echo "  prep_authors       : Prepare the authors input file"
-	@echo "  pump_authors       : Generate the rdf add/sub files"
+	@echo "  1a) prep_publishers    : Prepare the publishers input file"
+	@echo "  1b) pump_publishers    : Generate the rdf add/sub files"
+	@echo "  2a) prep_journals      : Prepare the journals input file"
+	@echo "  2b) pump_journals      : Generate the rdf add/sub files"
+	@echo "  3a) prep_authors       : Prepare the authors input file"
+	@echo "  3b) pump_authors       : Generate the rdf add/sub files"
+	@echo "  4a) prep_pubs          : Prepare the publications input file"
+	@echo "  4b) pump_pubs          : Generate the rdf add/sub files"
 	@echo ""
+
+test_read_api:
+	curl -d 'email=new_admin@vivo.ufl.edu' -d 'password=SECURE_EDITED' \
+		-d 'query=PREFIX foaf:<http://xmlns.com/foaf/0.1/> PREFIX obo:<http://purl.obolibrary.org/obo/> PREFIX vcard:<http://www.w3.org/2006/vcard/ns#> SELECT ?person_uri ?fname ?lname ?mname WHERE { ?person_uri a foaf:Person . ?person_uri obo:ARG_2000028 ?contact_info . ?contact_info vcard:hasName ?name . ?name vcard:familyName ?lname . OPTIONAL { ?name vcard:givenName ?fname . }OPTIONAL { ?name vcard:middleName ?mname . }} LIMIT 10' \
+		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
+
+test_add_rdf:
+	curl -X POST http://dev.vivo.ufl.edu/uploadRDFForm -d rdfStream=@publisher_add_test.rdf -d mode=directAddABox -d language=N-TRIPLE -d submit=submit
+
 
 copy_example_files:
 	mkdir config data_in data_out
@@ -37,41 +54,73 @@ copy_example_files:
 	cp data_in_example/* data_in
 	cp data_out_example/* data_out
 
+# === STEP 1
 prep_publishers:
-	cat $(IN_FILE_PUBLISHERS) \
+	cat $(IN_FILE) \
 		| python $(FILTERS_DIR)/bib2csv_filter.py \
 		| python $(FILTERS_DIR)/publisher_columns_filter.py \
+		| python $(FILTERS_DIR)/publisher_name_filter.py \
 		| python $(FILTERS_DIR)/unique_name_filter.py \
 		| python $(FILTERS_DIR)/publisher_match_filter.py -c $(CONFIG_FILE_PUBLISHERS) \
 		> $(OUT_FILE_PUBLISHERS)
-
+	@echo "\nSee: $(OUT_FILE_PUBLISHERS)"
 pump_publishers:
-	sv -a update \
+	python ../../sv.py \
+		-a update \
 		-d publisher_def.json \
 		-c $(CONFIG_FILE_PUBLISHERS) \
 		-s $(OUT_FILE_PUBLISHERS)
 
+# === STEP 2
 prep_journals:
-	echo 'todo'
+	cat $(IN_FILE) \
+		| python filters/bib2csv_filter.py \
+		| python filters/journal_columns_filter.py \
+		| python filters/unique_issn_filter.py \
+		| python filters/journal_match_filter.py -c $(CONFIG_FILE_JOURNALS) \
+		> $(OUT_FILE_JOURNALS)
 pump_journals:
-	echo 'todo'
+	python ../../sv.py \
+		-a update \
+		-c $(CONFIG_FILE_JOURNALS) \
+		-d journal_def.json \
+		-s data_out/journal_update_data.txt
 
+
+# === STEP 3
 prep_authors:
-	cat data_in/tr_07_03_2015_wk_fin.bib \
+	cat $(IN_FILE) \
 		| python filters/bib2csv_filter.py \
 		| python filters/author_prep_filter.py \
 		| python filters/author_match_filter.py \
 		> data_out/author_update_data.txt
-
 pump_authors:
 	@# TODO: fix the code to allow execution from a different folder
-	@# sv -a update
+	@# <http://vivo.ufl.edu/individual/n1522>		 "Brenner, Mark" .
+	@# <http://vivo.ufl.edu/individual/n45000>		 "Staud, Roland" .
+	@# <http://vivo.ufl.edu/individual/n9190102923> "Mackman, Nigel" .
+	@# <http://vivo.ufl.edu/individual/n3840747597> "Baylis, Chris" .
+	@# <http://vivo.ufl.edu/individual/n5605>		 "Sjoberg, Laura E" .
+	@# <http://vivo.ufl.edu/individual/n7282217>	 "Tong, Fan" .
+	@# Summary:
+	@#	921 rows input
+	@#	11368 triples to add 59 triples to sub
+	@#	time: real 49m20.295s
 	python ../../sv.py \
 		-d author_def.json \
 		-c config/sv_authors.cfg \
 		-s data_out/author_update_data.txt
 
+
+# === STEP 4
 prep_pubs:
-	echo 'todo'
+	@# | python filters/pubmed_match_filter.py
+	cat $(IN_FILE) \
+		| python filters/bib2csv_filter.py \
+		| python filters/pub_columns_filter.py \
+		| python filters/pub_match_filter.py -c $(CONFIG_FILE_PUBLICATIONS) \
+		> data_out/pub_update_data.txt
 pump_pubs:
-	echo 'todo'
+	python ../../sv.py \
+		-c config/sv_pubs.cfg \
+		-s data_out/pub_update_data.txt
