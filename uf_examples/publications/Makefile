@@ -1,12 +1,16 @@
 # Helper file for invoking the pump code
 #
 # Note: Before running the tasks please verify that your include
-#	path contains the root vivo-pump folder
+#	path contains the root vivo-pump folder.
 #
 # @author Andrei Sura
 #
-# @TODO: add tasks for the remaining steps
-#
+# Learning resources:
+#	http://www.w3.org/TR/xpath-functions/#regex-syntax
+#	http://www.cray.com/blog/equality-inequality-sparql/
+#	http://www.cray.com/blog/dont-use-hammer-screw-nail-alternatives-regex-sparql/
+
+
 CONFIG_DIR := config
 FILTERS_DIR := filters
 IN_DIR := data_in
@@ -19,11 +23,30 @@ IN_FILE := $(IN_DIR)/tr_6_mon_1_500.bib
 OUT_FILE_PUBLISHERS := $(OUT_DIR)/publisher_update_data.txt
 OUT_FILE_JOURNALS := $(OUT_DIR)/journal_update_data.txt
 
-CONFIG_FILE_PUBLISHERS		:= $(CONFIG_DIR)/sv_publishers.cfg
-CONFIG_FILE_JOURNALS		:= $(CONFIG_DIR)/sv_journals.cfg
-CONFIG_FILE_AUTHORS			:= $(CONFIG_DIR)/sv_authors.cfg
-CONFIG_FILE_PUBLICATIONS	:= $(CONFIG_DIR)/sv_pubs.cfg
+CONFIG_FILE_PUBLISHERS   := $(CONFIG_DIR)/sv_publishers.cfg
+CONFIG_FILE_JOURNALS     := $(CONFIG_DIR)/sv_journals.cfg
+CONFIG_FILE_AUTHORS      := $(CONFIG_DIR)/sv_authors.cfg
+CONFIG_FILE_PUBLICATIONS := $(CONFIG_DIR)/sv_pubs.cfg
 
+# === API config ===
+API_EMAIL := new_admin@vivo.ufl.edu
+API_PASSWORD := Password1
+
+ENDPOINT_READ := 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
+ENDPOINT_UPDATE := 'https://dev.vivo.ufl.edu/vivo/api/sparqlUpdate'
+
+UPDATE_FILE_PUBLISHER   := data_2_test/add_publisher.rdf
+UPDATE_FILE_JOURNAL     := data_2_test/add_journal.rdf
+UPDATE_FILE_AUTHOR      := data_2_test/add_author.rdf
+UPDATE_FILE_PUBLICATION := data_2_test/add_publication.rdf
+
+READ_FILE_PUBLISHER     := data_2_test/read_publisher.rq
+READ_FILE_JOURNAL       := data_2_test/read_journal.rq
+READ_FILE_AUTHOR        := data_2_test/read_author.rq
+READ_FILE_PUBLICATION   := data_2_test/read_publication.rq
+
+DO_UPDATE := curl -d 'email=$(API_EMAIL)' -d 'password=$(API_PASSWORD)' $(ENDPOINT_UPDATE)
+DO_READ := curl -d 'email=$(API_EMAIL)' -d 'password=$(API_PASSWORD)' $(ENDPOINT_READ)
 
 help:
 	@echo ""
@@ -62,6 +85,7 @@ pump_publishers:
 		-d publisher_def.json \
 		-c $(CONFIG_FILE_PUBLISHERS) \
 		-s $(OUT_FILE_PUBLISHERS)
+
 
 # === STEP 2
 prep_journals:
@@ -118,14 +142,14 @@ pump_pubs:
 		-s data_out/pub_update_data.txt
 
 # === Testing tasks
-test_read_api:
+test_find_persons:
 	curl -d 'email=new_admin@vivo.ufl.edu' \
-		-d 'password=SECURE_EDITED' \
+		-d 'password=Password1' \
 		-d 'query=PREFIX foaf:<http://xmlns.com/foaf/0.1/> PREFIX obo:<http://purl.obolibrary.org/obo/> PREFIX vcard:<http://www.w3.org/2006/vcard/ns#> SELECT ?person_uri ?fname ?lname ?mname WHERE { ?person_uri a foaf:Person . ?person_uri obo:ARG_2000028 ?contact_info . ?contact_info vcard:hasName ?name . ?name vcard:familyName ?lname . OPTIONAL { ?name vcard:givenName ?fname . }OPTIONAL { ?name vcard:middleName ?mname . }} LIMIT 10' \
 		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
 
 
-get_test_pub:
+test_find_publications:
 	curl -d 'email=new_admin@vivo.ufl.edu' \
 		-d 'password=SECURE_EDITED' \
 		-d 'query=PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX core:<http://vivoweb.org/ontology/core#> SELECT ?uri ?label WHERE {  ?uri a core:InformationResource .  ?uri rdfs:label ?label  . FILTER regex(?label, "Safety Profile")} limit 10' \
@@ -133,6 +157,38 @@ get_test_pub:
 
 
 test_add_rdf:
-	@# Needs a cookie to work
+	@# @TODO: fix later - needs a cookie to work
 	curl -X POST http://dev.vivo.ufl.edu/uploadRDFForm -d rdfStream=@publisher_add_test.rdf -d mode=directAddABox -d language=N-TRIPLE -d submit=submit
 
+
+test_insert_publisher:
+	$(DO_UPDATE) -d @$(UPDATE_FILE_PUBLISHER)
+test_read_publisher:
+	$(DO_READ) -d @$(READ_FILE_PUBLISHER)
+
+test_insert_journal:
+	$(DO_UPDATE) -d @$(UPDATE_FILE_JOURNAL)
+test_read_journal:
+	$(DO_READ) -d @$(READ_FILE_JOURNAL)
+
+test_insert_author:
+	$(DO_UPDATE) -d @$(UPDATE_FILE_AUTHOR)
+test_read_author:
+	$(DO_READ) -d @$(READ_FILE_AUTHOR)
+
+test_insert_publication:
+	$(DO_UPDATE) -d @$(UPDATE_FILE_PUBLICATION)
+test_read_publication:
+	$(DO_READ) -d @$(READ_FILE_PUBLICATION)
+
+
+
+test_insert_all:
+	@# adds 4 pieces of data: publisher, journal, author, publication
+	make test_insert_publisher
+	make test_insert_journal
+	make test_insert_author
+	make test_insert_publication
+
+test_delete_all:
+	echo "todo"

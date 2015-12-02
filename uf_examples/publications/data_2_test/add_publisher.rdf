@@ -1,0 +1,10 @@
+update=INSERT DATA {
+    GRAPH <http://vitro.mannlib.cornell.edu/default/vitro-kb-2>
+{
+<http://vivo.ufl.edu/individual/n9990001> <http://www.w3.org/2000/01/rdf-schema#label> "INTERNATIONAL JOURNAL OF TESTING" .
+<http://vivo.ufl.edu/individual/n9990001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://vivo.ufl.edu/individual/n9990001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://vivo.ufl.edu/individual/n9990001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#Publisher> .
+<http://vivo.ufl.edu/individual/n9990001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+}
+}
