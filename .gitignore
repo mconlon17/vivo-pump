@@ -52,9 +52,9 @@ docs/_build/
 
 # PyBuilder
 target/
-
 .idea/workspace.xml
-
+.idea/encodings.xml
+.idea/*
 .ropeproject/
 
 # ignore developer's files
