@@ -1629,7 +1629,7 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
     def test_catalyst_getpmids_xml(self):
         from pubmed import catalyst_getpmids_xml
-        result = catalyst_getpmids_xml(first="Michael", middle="", last="Conlon", email=["mconlon@ufl.edu"],
+        result = catalyst_getpmids_xml(first="David", middle="R", last="Nelson", email=["nelsodr@ufl.edu"],
                                        affiliation=["%University of Florida%"])
         print result
         self.assertTrue(result.find("PMIDList") > 0)
