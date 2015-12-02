@@ -144,14 +144,14 @@ pump_pubs:
 # === Testing tasks
 test_find_persons:
 	curl -d 'email=new_admin@vivo.ufl.edu' \
-		-d 'password=Password1' \
+		-d 'password=$(API_PASSWORD)' \
 		-d 'query=PREFIX foaf:<http://xmlns.com/foaf/0.1/> PREFIX obo:<http://purl.obolibrary.org/obo/> PREFIX vcard:<http://www.w3.org/2006/vcard/ns#> SELECT ?person_uri ?fname ?lname ?mname WHERE { ?person_uri a foaf:Person . ?person_uri obo:ARG_2000028 ?contact_info . ?contact_info vcard:hasName ?name . ?name vcard:familyName ?lname . OPTIONAL { ?name vcard:givenName ?fname . }OPTIONAL { ?name vcard:middleName ?mname . }} LIMIT 10' \
 		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
 
 
 test_find_publications:
 	curl -d 'email=new_admin@vivo.ufl.edu' \
-		-d 'password=SECURE_EDITED' \
+		-d 'password=$(API_PASSWORD)' \
 		-d 'query=PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> PREFIX core:<http://vivoweb.org/ontology/core#> SELECT ?uri ?label WHERE {  ?uri a core:InformationResource .  ?uri rdfs:label ?label  . FILTER regex(?label, "Safety Profile")} limit 10' \
 		-H 'Accept: text/csv' 'https://dev.vivo.ufl.edu/vivo/api/sparqlQuery'
 
