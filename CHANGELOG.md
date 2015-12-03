@@ -419,3 +419,4 @@ ids.  Add test case.  Support list of email addresses and list of affiliations.
 * **2015-11-29** *NOT COMPLETE* New function `get_person_vivo_pmids` to return pmids in VIVO for a person in VIVO.
   New function `get_person_catalyst_pmids` to return pmids in catalyst for a person in VIVO.
 * **2015-11-30** Three pubmed tests pass.  Working on `get_person_catalyst_pmids`
+* **2015-12-03** Catalyst tests passing
