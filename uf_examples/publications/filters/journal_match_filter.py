@@ -20,19 +20,21 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
+from utils import print_err
 from vivopump import read_csv_fp, write_csv_fp, get_vivo_journals, get_parms
 import sys
 
 parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
-print >>sys.stderr, len(data_in)
+print_err("Input data length: {}".format(len(data_in)))
+
 data_out = {}
 
 # get dictionary of journal uri keyed by
 # International Standard Serial Numbers (ISSN)
 vivo_journals = get_vivo_journals(parms)
-print >>sys.stderr, 'VIVO journals', len(vivo_journals)
-print >>sys.stderr, vivo_journals
+print_err('There are {} journals in VIVO'.format(len(vivo_journals)))
+# print_err(vivo_journals)
 
 for row, data in data_in.items():
     data_out[row] = data
@@ -43,5 +45,5 @@ for row, data in data_in.items():
     else:
         data_out[row]['uri'] = vivo_journals[data['issn']]
 
-print >>sys.stderr, 'data out', len(data_out)
+print_err("New journals to add: {}".format(len(data_out)))
 write_csv_fp(sys.stdout, data_out)

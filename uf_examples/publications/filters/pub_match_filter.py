@@ -24,17 +24,18 @@ __version__ = "0.01"
 from vivopump import read_csv_fp, write_csv_fp, get_parms
 from vivopump import get_vivo_academic_articles
 import sys
+from utils import print_err
 
 parms = get_parms()
 data_in = read_csv_fp(sys.stdin)
-print >>sys.stderr, len(data_in)
+print_err("{} rows in the input".format(len(data_in)))
 
 data_out = {}
 # get dictionary of pub uri keyed by doi
 vivo_pubs = get_vivo_academic_articles(parms)
 
-print >>sys.stderr, 'VIVO pubs', len(vivo_pubs)
-print >>sys.stderr, vivo_pubs
+print_err('{} publications found in VIVO'.format(len(vivo_pubs)))
+# print >>sys.stderr, vivo_pubs
 
 for row, data in data_in.items():
     data_out[row] = data
@@ -45,5 +46,5 @@ for row, data in data_in.items():
     else:
         data_out[row]['uri'] = vivo_pubs[data['doi']]
 
-print >>sys.stderr, 'data out', len(data_out)
+print_err('{} rows in the output'.format(len(data_out)))
 write_csv_fp(sys.stdout, data_out)

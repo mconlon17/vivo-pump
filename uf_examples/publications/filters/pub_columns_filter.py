@@ -13,13 +13,14 @@ __version__ = "0.01"
 from vivopump import read_csv_fp, write_csv_fp
 from vivopump import improve_title, parse_pages, parse_date_parts
 import sys
-
+from utils import print_err
 
 data_in = read_csv_fp(sys.stdin)
+column_names = data_in[1].keys()
 
-# create a list of var_names from the first row
-var_names = data_in[data_in.keys()[1]].keys()
-print >>sys.stderr, "Columns in", var_names
+print_err("==> {} columns in the input: {} "
+          .format(len(column_names), column_names))
+
 data_out = {}
 keep_names = set(['remove', 'uri', 'title', 'number', 'pub_date',
                   'author', 'start_page', 'end_page', 'type',
@@ -44,7 +45,8 @@ for row, data in data_in.items():
 
     data_out[row] = new_data
 
-# create a list of var_names from the first row
-var_names = data_out[data_out.keys()[1]].keys()
-print >>sys.stderr, "Columns out", var_names
+column_names_out = data_out[1].keys()
+print_err("==> {} columns in the output: {}"
+          .format(len(column_names_out), column_names_out))
+
 write_csv_fp(sys.stdout, data_out)

@@ -42,11 +42,14 @@ print >>sys.stderr, len(data_in)
 # file_name = '/Users/asura/git/vivo-pump/author_list.csv'
 # @TODO: pass file name path as a command line parameter
 file_name = 'author_list.csv'
+utils.print_err("Using static disambiguation file: {}".format(file_name))
 
 # get dictionaries of authors keyed by name parts
 vivo_auth_disambig_data = utils.get_vivo_disambiguation_data_from_csv(
     file_name)
 
+utils.print_err("Finished loading {} entries from: {}"
+                .format(len(vivo_auth_disambig_data), file_name))
 data_out = {}
 row_out = 0
 
@@ -79,12 +82,17 @@ for row_index, row_data in data_in.items():
             data_out[row_out]['uri'] = ''
         elif count == 1:
             # Bingo! Disambiguated UF author. Add URI
+            data_out[row_out] = row_data
+            utils.print_err("row {} - author_uris: {}"
+                            .format(row_out, author_uris))
+            # sys.exit()
             data_out[row_out]['uri'] = author_uris[0]
             action = "Found UF"
         else:
-            action = 'Disambig'
             # More than one UF author matches. Add to the disambiguation list.
+            data_out[row_out] = row_data
             data_out[row_out]['uri'] = ";".join(author_uris)
+            action = 'Disambig'
 
 print >>sys.stderr, 'data out', len(data_out)
 write_csv_fp(sys.stdout, data_out)
