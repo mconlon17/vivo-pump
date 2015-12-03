@@ -21,10 +21,32 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_parms
-from vivopump import get_vivo_academic_articles
+from vivopump import read_csv_fp, write_csv_fp, get_parms, vivo_query
 import sys
 from utils import print_err
+
+def get_vivo_academic_articles(parms):
+    """
+    Query VIVO and return a list of all the academic articles.
+    @see uf_examples/publications/filters/pub_match_filter.py
+    @see https://wiki.duraspace.org/display/VIVO/VIVO-ISF+1.6+relationship+diagrams%3A+Authorship
+
+    :param: parms: vivo_query params
+    :return: dictionary of uri keyed by DOI
+    """
+    query = """
+    SELECT
+    ?uri ?doi
+    WHERE {
+        ?uri a vivo:InformationResource .
+        ?uri bibo:doi ?doi .
+    }
+    """
+    results = vivo_query(query, parms)
+    bindings = results['results']['bindings']
+    doi_list = [b['doi']['value'] for b in bindings]
+    uri_list = [b['uri']['value'] for b in bindings]
+    return dict(zip(doi_list, uri_list))
 
 parms = get_parms()
 data_in = read_csv_fp(sys.stdin)

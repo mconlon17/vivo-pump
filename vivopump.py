@@ -305,31 +305,6 @@ def get_vivo_journals(parms):
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(issn, uri))
 
-
-def get_vivo_academic_articles(parms):
-    """
-    Query VIVO and return a list of all the academic articles.
-    @see uf_examples/publications/filters/pub_match_filter.py
-    @see https://wiki.duraspace.org/display/VIVO/VIVO-ISF+1.6+relationship+diagrams%3A+Authorship
-
-    :param: parms: vivo_query params
-    :return: dictionary of uri keyed by DOI
-    """
-    query = """
-SELECT
-    ?uri ?doi
-WHERE {
-    ?uri a vivo:InformationResource .
-    ?uri bibo:doi ?doi .
-}
-"""
-    results = vivo_query(query, parms)
-    bindings = results['results']['bindings']
-    doi_list = [b['doi']['value'] for b in bindings]
-    uri_list = [b['uri']['value'] for b in bindings]
-    return dict(zip(doi_list, uri_list))
-
-
 def get_vivo_ccn(parms):
     """
     Query VIVO and return a list of all the ccn found in VIVO.
