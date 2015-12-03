@@ -169,6 +169,7 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
                            str(row))
         else:
             pass  # row has wrong number of columns and skip is True
+    logger.debug("loader returns {} rows".format(len(data)))
     return data
 
 
@@ -192,12 +193,12 @@ def write_csv_fp(fp, data, delimiter='|'):
 
 def write_csv(filename, data, delimiter='|'):
     """
-    Given a filename, a data structure as produced by read_csv and an optional delimiter, write a file
-    that can be read by read_csv
+    Given a filename, a data structure as produced by read_csv and an optional
+    delimiter, write a file that can be read by read_csv
 
-    The data structure is a dictionary keyed by an integer of "row numbers" preserving the natural
-    order of the data.  Each element is in turn a dictionary of name value pairs.  All values are
-    strings
+    The data structure is a dictionary keyed by an integer of "row numbers"
+    preserving the natural order of the data.  Each element is in turn a
+    dictionary of name value pairs.  All values are strings.
 
     :param filename: name of file to write
     :param data: data structure to be written to the file
