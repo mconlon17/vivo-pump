@@ -10,18 +10,29 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
+from utils import print_err
 from vivopump import read_csv_fp, write_csv_fp, improve_org_name
 import sys
 
 data_in = read_csv_fp(sys.stdin)
-# create a list of var_names from the first row
-var_names = data_in[data_in.keys()[1]].keys()
-print >>sys.stderr, "Columns in", var_names
+
+# The first filter should fail if there is no data to process
+assert(len(data_in) > 0)
+
+# import pprint; pprint.pprint(data_in)
+
+# create a list of
+column_names = data_in[1].keys()
+print_err("==> {} columns in the input: {} "
+          .format(len(column_names), column_names))
 
 data_out = {}
 keep_names = set(['remove', 'uri', 'name', 'type'])
 
 for row, data in data_in.items():
+    if 'publisher' not in data:
+        raise Exception("The input row {} is missing the 'publisher' value"
+                        .format(row))
     new_data = dict(data)
 
     # Add these columns
@@ -37,7 +48,7 @@ for row, data in data_in.items():
 
     data_out[row] = new_data
 
-# create a list of var_names from the first row
-var_names = data_out[data_out.keys()[1]].keys()
-print >>sys.stderr, "Columns out", var_names
+column_names_out = data_out[1].keys()
+print_err("==> {} columns in the output: {}"
+          .format(len(column_names_out), column_names_out))
 write_csv_fp(sys.stdout, data_out)
