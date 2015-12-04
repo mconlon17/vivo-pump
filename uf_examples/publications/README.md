@@ -55,8 +55,8 @@ store the generated files:
     cp -R data_in_example/ data_in
 
 
-1. Obtain a current bibtext file from Thomson Reuters Web of Knowledge
-2. Add **publishers** not currently in VIVO
+0. Obtain a current bibtext file from Thomson Reuters Web of Knowledge
+1. Add **publishers** not currently in VIVO
 
         cat data_in/tr_07_03_2015_wk_fin.bib \
             | python filters/bib2csv_filter.py \
@@ -78,7 +78,7 @@ store the generated files:
         (once added a publisher should be never removed)
     2. Add `publisher_add.rdf` to VIVO
 
-3. Add **journals** not currently in VIVO
+2. Add **journals** not currently in VIVO
 
         cat data_in/tr_07_03_2015_wk_fin.bib \
             | python filters/bib2csv_filter.py \
@@ -96,7 +96,7 @@ store the generated files:
     1. Add `journal_add.rdf` to VIVO
     2. Sub `journal_sub.rdf` from VIVO
 
-4. Add **people** not currently in VIVO
+3. Add **people** not currently in VIVO
 
         cat data_in/tr_07_03_2015_wk_fin.bib \
             | python filters/bib2csv_filter.py \
@@ -116,7 +116,7 @@ store the generated files:
         Add `author_add.rdf` to VIVO
         Sub `author_sub.rdf` from VIVO
 
-5. Add **publications** to VIVO
+4. Add **publications** to VIVO
 
         cat data_in/tr_07_03_2015_wk_fin.bib \
             | python filters/bib2csv_filter.py \
@@ -134,8 +134,8 @@ store the generated files:
     1. Add `pub_add.rdf` to VIVO
     2. Sub `pub_sub.rdf` from VIVO
 
-6. Inspect the disambiguation report and manually determine which changes must
+5. Inspect the disambiguation report and manually determine which changes must
     be made and make them in VIVO using the web interface.  A UF weekly ingest
     typically involves 120 papers, 360 UF authors, and 20 disambiguations to
     be resolved manually.  Typically takes about an hour
-7.  Update appropriate documentation regarding actions and results
+6.  Update appropriate documentation regarding actions and results

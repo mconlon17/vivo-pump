@@ -1,0 +1,9 @@
+update=INSERT DATA {
+    GRAPH <http://vitro.mannlib.cornell.edu/default/vitro-kb-2>
+{
+<http://vivo.ufl.edu/individual/9990002> <http://www.w3.org/2000/01/rdf-schema#label> "Testing House Publishing" .
+<http://vivo.ufl.edu/individual/9990002> <http://purl.org/ontology/bibo/eissn> "1234-1234"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.ufl.edu/individual/9990002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Journal> .
+<http://vivo.ufl.edu/individual/9990002> <http://purl.org/ontology/bibo/issn> "1234-9999"^^<http://www.w3.org/2001/XMLSchema#string> .
+}
+}

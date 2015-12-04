@@ -1,4 +1,5 @@
-#!/usr/bin/env/python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """
     unique_name_filter.py -- remove duplicate name
@@ -14,8 +15,10 @@ import sys
 
 data_in = read_csv_fp(sys.stdin)
 print >>sys.stderr, "Input rows", len(data_in)
+
 data_out = {}
 name_out = set()
+
 for row, data in data_in.items():
     new_data = dict(data)
     if data['name'] not in name_out:
@@ -23,8 +26,3 @@ for row, data in data_in.items():
         name_out.add(data['name'])
 print >>sys.stderr, "Output rows", len(data_out)
 write_csv_fp(sys.stdout, data_out)
-
-
-
-
-

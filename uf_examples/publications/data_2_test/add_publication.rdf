@@ -1,0 +1,8 @@
+update=INSERT DATA {
+    GRAPH <http://vitro.mannlib.cornell.edu/default/vitro-kb-2>
+{
+<http://vivo.ufl.edu/individual/n99900010> <http://www.w3.org/2000/01/rdf-schema#label> "This is the Title of our test publication" .
+<http://vivo.ufl.edu/individual/n99900010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#InformationResource> .
+<http://vivo.ufl.edu/individual/n99900010> <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.17125" .
+}
+}

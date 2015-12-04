@@ -52,9 +52,9 @@ docs/_build/
 
 # PyBuilder
 target/
-
 .idea/workspace.xml
-
+.idea/encodings.xml
+.idea/*
 .ropeproject/
 
 # ignore developer's files
@@ -62,3 +62,14 @@ private/
 uf_examples/publications/config
 uf_examples/publications/data_in
 uf_examples/publications/data_out
+uf_examples/publications/author_list.csv
+
+# @TODO: change the config to make the files created in the data_out folder
+uf_examples/publications/author_add.rdf
+uf_examples/publications/author_sub.rdf
+uf_examples/publications/journal_add.rdf
+uf_examples/publications/journal_sub.rdf
+uf_examples/publications/pub_add.rdf
+uf_examples/publications/pub_sub.rdf
+uf_examples/publications/publisher_add.rdf
+uf_examples/publications/publisher_sub.rdf

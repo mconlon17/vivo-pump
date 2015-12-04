@@ -1,0 +1,12 @@
+query=PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX core:<http://vivoweb.org/ontology/core#>
+SELECT
+    ?uri ?label 
+WHERE {
+    ?uri a core:Publisher.
+    ?uri rdfs:label ?label .
+    FILTER regex(?label, "INTERNATIONAL JOURNAL OF TESTING")
+}
+LIMIT 10
+

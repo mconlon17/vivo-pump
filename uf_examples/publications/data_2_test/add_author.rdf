@@ -1,0 +1,40 @@
+update=INSERT DATA {
+    GRAPH <http://vitro.mannlib.cornell.edu/default/vitro-kb-2>
+{
+<http://vivo.ufl.edu/individual/n9990003> <http://www.w3.org/2000/01/rdf-schema#label> "Sura, A." .
+<http://vivo.ufl.edu/individual/n9990003> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.ufl.edu/individual/n9990005> .
+<http://vivo.ufl.edu/individual/n9990003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+
+<http://vivo.ufl.edu/individual/n9990003> <http://vivoweb.org/ontology/core#relatedBy> <http://vivo.ufl.edu/individual/n9990004> .
+<http://vivo.ufl.edu/individual/n9990004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vivo.ufl.edu/individual/n9990004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#isCorrespondingAuthor> .
+<http://vivo.ufl.edu/individual/n9990004> <http://vivoweb.org/ontology/core#isCorrespondingAuthor> "false" .
+
+<http://vivo.ufl.edu/individual/n9990005> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.ufl.edu/individual/n9990006> .
+<http://vivo.ufl.edu/individual/n9990003> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.ufl.edu/individual/n9990005> .
+<http://vivo.ufl.edu/individual/n9990005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+
+<http://vivo.ufl.edu/individual/n9990005> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.ufl.edu/individual/n9990006> .
+<http://vivo.ufl.edu/individual/n9990006> <http://www.w3.org/2006/vcard/ns#familyName> "Sura"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.ufl.edu/individual/n9990006> <http://www.w3.org/2006/vcard/ns#givenName> "A"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.ufl.edu/individual/n9990006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+
+<http://vivo.ufl.edu/individual/n8990003> <http://www.w3.org/2000/01/rdf-schema#label> "Loiacono, A." .
+<http://vivo.ufl.edu/individual/n8990003> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.ufl.edu/individual/n8990005> .
+<http://vivo.ufl.edu/individual/n8990003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+
+<http://vivo.ufl.edu/individual/n8990003> <http://vivoweb.org/ontology/core#relatedBy> <http://vivo.ufl.edu/individual/n8990004> .
+<http://vivo.ufl.edu/individual/n8990004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://vivo.ufl.edu/individual/n8990004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#isCorrespondingAuthor> .
+<http://vivo.ufl.edu/individual/n8990004> <http://vivoweb.org/ontology/core#isCorrespondingAuthor> "false" .
+
+<http://vivo.ufl.edu/individual/n8990005> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.ufl.edu/individual/n8990006> .
+<http://vivo.ufl.edu/individual/n8990003> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivo.ufl.edu/individual/n8990005> .
+<http://vivo.ufl.edu/individual/n8990005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+
+<http://vivo.ufl.edu/individual/n8990005> <http://www.w3.org/2006/vcard/ns#hasName> <http://vivo.ufl.edu/individual/n8990006> .
+<http://vivo.ufl.edu/individual/n8990006> <http://www.w3.org/2006/vcard/ns#familyName> "Loiacono"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.ufl.edu/individual/n8990006> <http://www.w3.org/2006/vcard/ns#givenName> "A"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://vivo.ufl.edu/individual/n8990006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Name> .
+}
+}
