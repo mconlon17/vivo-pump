@@ -92,9 +92,9 @@ The Pump API consists of:
 line of simple vivo (`sv`), 2) settable from the config file used by simple vivo and the "filters" you will see in the
 examples, and 3) hard coded into the software as defaults to be overridden by the config file and/or command line
 parameters.
-2.  Pump methods and instance variables.  The instance variables correspond to the arguments described above.  The
+1.  Pump methods and instance variables.  The instance variables correspond to the arguments described above.  The
 methods are used to execute Pump functionality.
-3.  The JSON definition file structure.  Structure of the JSON definition file is part of the API.  Semantic versioning 
+1.  The JSON definition file structure.  Structure of the JSON definition file is part of the API.  Semantic versioning 
 applies to changes in the structure of definition files used by the Pump.  Features may be added, leading to minor
 version number increments.  When existing JSON files must be upgraded, these constitute major version number increments.
 
