@@ -3,11 +3,20 @@
 utils.py - helper functions
 """
 
+from __future__ import print_function
 __author__ = "Andrei Sura"
 
+from sys import stderr
 import csv
 from vivo_name import VivoName
 from vivo_name import CASE_0, CASE_1, CASE_2, CASE_3, CASE_4, CASE_5, CASE_6
+
+
+def print_err(*args, **kwargs):
+    """
+    python3-compatible helper for printing to stderr
+    """
+    print(*args, file=stderr, **kwargs)
 
 
 def append_to_dict_list(modified_dict, key, val):
@@ -112,7 +121,8 @@ def get_vivo_disambiguation_data_from_csv(file_name):
     }
 
 
-def get_author_disambiguation_data(vivo_auth_disambig_data, last, first, middle):
+def get_author_disambiguation_data(vivo_auth_disambig_data,
+                                   last, first, middle):
     """
     @TODO: check if we can pass an object instead
 

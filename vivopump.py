@@ -169,6 +169,7 @@ def read_csv_fp(fp, skip=True, delimiter="|"):
                            str(row))
         else:
             pass  # row has wrong number of columns and skip is True
+    logger.debug("loader returns {} rows".format(len(data)))
     return data
 
 
@@ -180,20 +181,24 @@ def write_csv_fp(fp, data, delimiter='|'):
     :param delimiter: field delimiter for output
     :return:
     """
-    var_names = data[data.keys()[0]].keys()  # create a list of var_names from the first row
+    assert(len(data.keys()) > 0)
+
+    # create a list of var_names from the first row
+    var_names = data[data.keys()[0]].keys()
     fp.write(delimiter.join(var_names) + '\n')
+
     for key in sorted(data.keys()):
         fp.write(delimiter.join([data[key][x] for x in var_names]) + '\n')
 
 
 def write_csv(filename, data, delimiter='|'):
     """
-    Given a filename, a data structure as produced by read_csv and an optional delimiter, write a file
-    that can be read by read_csv
+    Given a filename, a data structure as produced by read_csv and an optional
+    delimiter, write a file that can be read by read_csv
 
-    The data structure is a dictionary keyed by an integer of "row numbers" preserving the natural
-    order of the data.  Each element is in turn a dictionary of name value pairs.  All values are
-    strings
+    The data structure is a dictionary keyed by an integer of "row numbers"
+    preserving the natural order of the data.  Each element is in turn a
+    dictionary of name value pairs.  All values are strings.
 
     :param filename: name of file to write
     :param data: data structure to be written to the file
@@ -288,7 +293,9 @@ def get_vivo_publishers(parms):
 
 def get_vivo_journals(parms):
     """
-    Query VIVO and return a list of all the journals found in VIVO
+    Query VIVO and return a list of all the journals.
+    @see uf_examples/publications/filters/journal_match_filter.py
+
     :param: parms: vivo_query params
     :return: dictionary of uri keyed by ISSN
     """
@@ -298,10 +305,11 @@ def get_vivo_journals(parms):
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(issn, uri))
 
-
 def get_vivo_ccn(parms):
     """
-    Query VIVO and return a list of all the ccn found in VIVO
+    Query VIVO and return a list of all the ccn found in VIVO.
+    @see uf_examples/courses/merge_filter.py
+
     :param: parms: vivo_query parms
     :return: dictionary of uri keyed by ccn
     """
@@ -496,13 +504,11 @@ def read_update_def(filename, prefix):
                         raise InvalidDefException(name + ' has more than one multiple predicate')
 
         #   Test for reserved column names
-
-        reserved_words = {'uri', 'action'}
-        if set(col_names) & reserved_words != set():
-            raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
+        # reserved_words = {'uri', 'action'}
+        # if set(col_names) & reserved_words != set():
+        #     raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
 
         #   Test for boolean value
-
         for name in col_names:
             for step in a['column_defs'][name]:
                 if step['predicate']['single'] == 'boolean' and 'value' not in step['object']:
