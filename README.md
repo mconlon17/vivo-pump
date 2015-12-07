@@ -114,5 +114,5 @@ management in VIVO.
 [Simple VIVO](https://www.gitbook.com/book/mconlon17/simple-vivo/details), the book, is available on-line as a free, 
 open access, text.  Managed using GitHub and produced using GitBook, you can contribute to the Simple VIVO book in the 
 same way you would contribute to a GitHub open source project.  The book describes Simple VIVO and the Pump in detail 
-with worked examples.  The Simple VIVO book is available as an on-line hypertext, and as a download PDF, an eBook for 
-iBooks and as a Mobi file for Kindle readers.
+with worked examples.  The Simple VIVO book is available as an on-line hypertext, as a PDF download, an eBook for 
+iBooks, and as a Mobi file for use with Kindle readers.
