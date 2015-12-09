@@ -60,6 +60,9 @@ display_name        | suffix  | first   | uri | remove| middle| corresponding | 
 Stienmetz, Jason L. |         | Jason   |     |       | L     |  true         | true| Stienmetz
 """
 
+utils.print_err("length of data in {}".format(len(data_in)))
+
+
 for row_index, row_data in data_in.items():
 
     if row_data['uf'] == 'false':
@@ -67,6 +70,7 @@ for row_index, row_data in data_in.items():
         row_out += 1
         data_out[row_out] = row_data
         data_out[row_out]['uri'] = ''
+        utils.print_err("UF entry is false {}".format(row_index))
     else:
         author_uris = utils.get_author_disambiguation_data(
             vivo_auth_disambig_data,
@@ -80,19 +84,24 @@ for row_index, row_data in data_in.items():
             row_out += 1
             data_out[row_out] = row_data
             data_out[row_out]['uri'] = ''
+            utils.print_err("uri count 0 for {}".format(row_index))
         elif count == 1:
             # Bingo! Disambiguated UF author. Add URI
+            row_out += 1
             data_out[row_out] = row_data
             utils.print_err("row {} - author_uris: {}"
                             .format(row_out, author_uris))
             # sys.exit()
             data_out[row_out]['uri'] = author_uris[0]
             action = "Found UF"
+            utils.print_err("uri count 1 for {}".format(row_index))
         else:
             # More than one UF author matches. Add to the disambiguation list.
+            row_out += 1
             data_out[row_out] = row_data
             data_out[row_out]['uri'] = ";".join(author_uris)
             action = 'Disambig'
+            utils.print_err("uri count 2 for {}".format(row_index))
 
 print >>sys.stderr, 'data out', len(data_out)
 write_csv_fp(sys.stdout, data_out)

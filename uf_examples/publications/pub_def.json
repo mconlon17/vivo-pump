@@ -1,46 +1,10 @@
 {
     "entity_def": {
-        "type": "vivo:InformationResource", 
-        "entity_sparql": "?uri a vivo:InformationResource .", 
+        "type": "bibo:AcademicArticle",
+        "entity_sparql": "?uri vitro:mostSpecificType bibo:AcademicArticle .",
         "order_by": "title"
     }, 
     "column_defs": {
-        "full_text_url": [
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "obo:ARG_2000028"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "vcard:Kind",
-                    "name": "vcard"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vcard:hasURL"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "vcard:URL",
-                    "qualifier": "?url rdfs:label \"Full Text\" .",
-                    "label": "Full Text",
-                    "name": "url"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vcard:url"
-                },
-                "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
-                }
-            }
-        ], 
         "doi": [
             {
                 "predicate": {
@@ -61,6 +25,92 @@
                 "object": {
                     "filter": "improve_title", 
                     "literal": true
+                }
+            }
+        ],
+        "start_page": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "bibo:pageStart"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "pub_date":[
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeValue"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:dateTime",
+                    "name": "pubDateTime"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTime"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "number":[
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "bibo:number"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "volume":[
+            {
+                "predicate": {
+                    "single": true,
+                    "ref":"bibo:volume"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "author": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:Authorship",
+                    "name": "paperAuthroship"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:Authorship"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:relates",
+                    "name": "relatingAuthor"
+                },
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false
                 }
             }
         ]
