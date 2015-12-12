@@ -43,7 +43,7 @@ def main():
         # "get": "python ../sv.py -a get -s get.txt",
         # "help": "python ../sv.py -h",
         # "test": "python ../sv.py -a test",
-        "config not found": "python ../sv.py -a update -c data/cfg_not_found.cfg",
+        "config not found": "python ../sv.py -a update -d -c data/cfg_not_found.cfg",
         # "file not found": "python ../sv.py -a update -c data/file_not_found.cfg",
         # "invalid access": "python ../sv.py -a test -c data/invalid_access.cfg",
         # "invalid JSON": "python ../sv.py -a update -d data/grant_invalid_def.json",

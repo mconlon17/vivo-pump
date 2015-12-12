@@ -421,4 +421,5 @@ ids.  Add test case.  Support list of email addresses and list of affiliations.
 * **2015-11-30** Three pubmed tests pass.  Working on `get_person_catalyst_pmids`
 * **2015-12-03** Catalyst tests passing
 * **2015-12-06** vivo_name.py added to begin modularization.
-* **2015-12-12** Handle cfg not found.
+* **2015-12-12** Handle cfg not found.  Add debug param (-b --debug) to command line args.  verbose controls info, 
+debug controls debug.

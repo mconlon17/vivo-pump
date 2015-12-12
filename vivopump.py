@@ -1651,6 +1651,9 @@ def get_args():
     1. from hard coded values (see below)
     2. Overridden by values in a specified config file (see below)
     3. Overridden by values on the command line
+
+    Set the logging level based on args
+
     :return: args structure as defined by argparser
     """
     import argparse
@@ -1682,7 +1685,8 @@ def get_args():
         'uriprefix': 'http://vivo.school.edu/individual/n',
         'src': 'pump_data.txt',
         'config': 'sv.cfg',
-        'verbose': False,
+        'verbose': logging.WARNING,
+        'debug': logging.WARNING,
         'nofilters': False
     }
 
@@ -1703,7 +1707,10 @@ def get_args():
     parser.add_argument("-s", "--src", help="name of source file containing data to be updated in VIVO", nargs='?')
     parser.add_argument("-c", "--config", help="name of file containing config data.  Config data overrides program "
                         "defaults. Command line overrides config file values", nargs='?')
-    parser.add_argument("-v", "--verbose", action="store_true", help="write verbose processing messages to the log")
+    parser.add_argument("-v", "--verbose", action="store_const", dest='loglevel', const=logging.INFO,
+                        help="write informational messages to the log")
+    parser.add_argument("-b", "--debug", action="store_const", dest='loglevel', const=logging.DEBUG,
+                        default=logging.WARNING, help="write debugging messages to the log")
     parser.add_argument("-n", "--nofilters", action="store_true", help="turn off filters")
     args = parser.parse_args()
 
@@ -1742,6 +1749,11 @@ def get_args():
         if val == 'tab':
             val = '\t'
         vars(args)[name] = val
+
+    # Set the level of logging if verbose and/or debug args were used
+
+    if args.loglevel:
+        logging.basicConfig(level=args.loglevel)
 
     return args
 
