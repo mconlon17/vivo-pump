@@ -41,11 +41,11 @@ def main():
         # "serialize": "python ../sv.py -a serialize",
         # "update": "python ../sv.py -a update",
         # "get": "python ../sv.py -a get -s get.txt",
-        # "help": "python ../sv.py -h",
-        # "test": "python ../sv.py -a test",
-        # "config not found": "python ../sv.py -a update -c data/cfg_not_found.cfg",
+        "help": "python ../sv.py -h",
+        "test": "python ../sv.py -a test",
+        "config not found": "python ../sv.py -a update -c data/cfg_not_found.cfg",
         "source file not found": "python ../sv.py -a update -s data/no_such_source_file.txt",
-        # "definition file not found": "python ../sv.py -a update -d data/no_such_definition_file.cfg",
+        "definition file not found": "python ../sv.py -a update -d data/no_such_definition_file.cfg",
         # "invalid access": "python ../sv.py -a test -c data/invalid_access.cfg",
         # "invalid JSON": "python ../sv.py -a update -d data/grant_invalid_def.json",
         # "awards get": "cd ../examples/awards; python ../../sv.py -a get -s get.txt",
@@ -75,7 +75,8 @@ def main():
     }
     test_results = run_tests(tests)
     for testid in sorted(test_results):
-        print testid.rjust(20), test_results[testid][0], "\t", test_results[testid][1]
+        print testid.rjust(1 + max([len(x) for x in tests.keys()])), '\t', test_results[testid][0], "\t", \
+            test_results[testid][1]
 
 
 if __name__ == "__main__":

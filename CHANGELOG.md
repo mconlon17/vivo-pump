@@ -423,4 +423,5 @@ ids.  Add test case.  Support list of email addresses and list of affiliations.
 * **2015-12-06** vivo_name.py added to begin modularization.
 * **2015-12-12** Handle cfg not found.  Add debug param (-b --debug) to command line args.  verbose controls info, 
 debug controls debug. `sv.py` now returns non-zero return code if `-a test` fails. Include file name in error message 
-in `sv.py` when source for update is not found.
+in `sv.py` when source for update is not found.  `DefNotFoundException` added to `vivopump.py`  When def is not found,
+exception thrown by pump.  sv.py catches the exception, prints an error message and returns rc=1

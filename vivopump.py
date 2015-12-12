@@ -28,6 +28,18 @@ logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
 
+class DefNotFoundException(Exception):
+    """
+    Raise this exception when update definition fle is not found
+    """
+    def __init__(self, value):
+        Exception.__init__(self)
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
 class InvalidDefException(Exception):
     """
     Raise this exception when update definition contains values that can not be processed

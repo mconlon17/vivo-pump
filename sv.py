@@ -43,7 +43,7 @@ def main():
     """
     import sys
     from datetime import datetime
-    from vivopump import get_args
+    from vivopump import get_args, DefNotFoundException
     from pump import Pump
 
     return_code = 0
@@ -52,12 +52,17 @@ def main():
 
     #   Create a Pump and use it to perform the requested actions based on arguments
 
-    p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra, args.rdfprefix,
-             query_parms={'queryuri': args.queryuri,
-                          'username': args.username,
-                          'password': args.password,
-                          'prefix': args.prefix,
-                          'uriprefix': args.uriprefix})
+    try:
+        p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra, args.rdfprefix,
+                 query_parms={'queryuri': args.queryuri,
+                              'username': args.username,
+                              'password': args.password,
+                              'prefix': args.prefix,
+                              'uriprefix': args.uriprefix})
+    except DefNotFoundException:
+        print args.defn, "definition file not found"
+        sys.exit(1)
+
     if args.action == 'get':
         n_rows = p.get()
         print datetime.now(), n_rows, "rows in", args.src

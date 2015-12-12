@@ -85,9 +85,12 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
         """
-        from vivopump import read_update_def, load_enum
+        from vivopump import read_update_def, load_enum, DefNotFoundException
 
-        self.update_def = read_update_def(json_def_filename, query_parms['prefix'])
+        try:
+            self.update_def = read_update_def(json_def_filename, query_parms['prefix'])
+        except:
+            raise DefNotFoundException(json_def_filename)
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
