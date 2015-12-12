@@ -80,7 +80,10 @@ def main():
     elif args.action == 'serialize':
         print p.serialize()
     elif args.action == 'test':
-        print p.test()
+        test_result = p.test()
+        print test_result
+        if 'Check' in test_result:
+            return_code = 1
     else:
         print datetime.now(), "Unknown action.  Try sv -h for help"
     print datetime.now(), "Finish"

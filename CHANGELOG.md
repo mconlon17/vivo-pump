@@ -422,4 +422,4 @@ ids.  Add test case.  Support list of email addresses and list of affiliations.
 * **2015-12-03** Catalyst tests passing
 * **2015-12-06** vivo_name.py added to begin modularization.
 * **2015-12-12** Handle cfg not found.  Add debug param (-b --debug) to command line args.  verbose controls info, 
-debug controls debug.
+debug controls debug. `sv.py` now returns non-zero return code if `-a test` fails.
