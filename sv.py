@@ -65,7 +65,7 @@ def main():
         try:
             [add_graph, sub_graph] = p.update()
         except IOError:
-            print "File not found"
+            print args.src, "file not found"
             return_code = 1
         else:
             add_file = open(args.rdfprefix + '_add.rdf', 'w')
