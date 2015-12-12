@@ -4,12 +4,15 @@ utils.py - helper functions
 """
 
 from __future__ import print_function
-__author__ = "Andrei Sura"
-
 from sys import stderr
 import csv
 from vivo_name import VivoName
 from vivo_name import CASE_0, CASE_1, CASE_2, CASE_3, CASE_4, CASE_5, CASE_6
+
+__author__ = "Andrei Sura"
+__copyright__ = "Copyright (c) 2015 Andrei Sura"
+__license__ = "New BSD license"
+__version__ = "0.8.5"
 
 
 def print_err(*args, **kwargs):

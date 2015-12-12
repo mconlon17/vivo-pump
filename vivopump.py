@@ -305,6 +305,7 @@ def get_vivo_journals(parms):
     uri = [x['uri']['value'] for x in a['results']['bindings']]
     return dict(zip(issn, uri))
 
+
 def get_vivo_ccn(parms):
     """
     Query VIVO and return a list of all the ccn found in VIVO.
@@ -1647,9 +1648,9 @@ def parse_date_parts(month, year):
 def get_args():
     """
     Get the args specified by the user.  Arg values are determined:
-    1) from hard coded values (see below)
-    2) Overridden by values in a specified config file (see below)
-    3) Overridden by values on the command line
+    1. from hard coded values (see below)
+    2. Overridden by values in a specified config file (see below)
+    3. Overridden by values on the command line
     :return: args structure as defined by argparser
     """
     import argparse
@@ -1713,10 +1714,16 @@ def get_args():
         logger.debug(u"Reading config file: {}".format(args.config))
 
     # Read the config parameters from the file specified in the command line
+
     config = ConfigParser.ConfigParser()
-    config.read(args.config)
+    try:
+        config.read(args.config)
+    except IOError:
+        logger.error(u"Config file {} not found.".format(args.config))
+        sys.exit(1)
 
     # Config file values overwrite program defaults
+
     for section in config.sections():
         for name, val in config.items(section):
             program_defaults[name] = val
@@ -1724,11 +1731,13 @@ def get_args():
                 logger.debug(u"Param {} = {}".format(name, val))
 
     # Non null command line values overwrite the config file values
+
     for name, val in vars(args).items():
         if val is not None:
             program_defaults[name] = val
 
     # Put the final values back in args
+
     for name, val in program_defaults.items():
         if val == 'tab':
             val = '\t'
@@ -1739,9 +1748,9 @@ def get_args():
 
 def get_parms():
     """
-    Use get args to get the args, and return a dictionary of the args ready for
+    Use get_args to get the args, and return a dictionary of the args ready for
     use in pump software.
-    @see #get_args()
+    @see get_args()
 
     :return: dict: parms
     """
