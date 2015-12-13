@@ -425,3 +425,4 @@ ids.  Add test case.  Support list of email addresses and list of affiliations.
 debug controls debug. `sv.py` now returns non-zero return code if `-a test` fails. Include file name in error message 
 in `sv.py` when source for update is not found.  `DefNotFoundException` added to `vivopump.py`  When def is not found,
 exception thrown by pump.  sv.py catches the exception, prints an error message and returns rc=1
+* **2015-12-13** PEP-8 improvements to `testgraph.py`

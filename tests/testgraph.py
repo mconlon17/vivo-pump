@@ -3,12 +3,12 @@
 """ test_vivopump.py -- Test cases for vivopump
 """
 
+from rdflib import Graph, URIRef, Literal, RDF, RDFS, XSD
+
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD license"
 __version__ = "1.1.2"
-
-from rdflib import Graph, URIRef, Literal, RDF, RDFS, XSD
 
 
 class TestGraph(Graph):
