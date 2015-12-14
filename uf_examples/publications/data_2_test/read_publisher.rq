@@ -6,7 +6,7 @@ SELECT
 WHERE {
     ?uri a core:Publisher.
     ?uri rdfs:label ?label .
-    FILTER regex(?label, "INTERNATIONAL JOURNAL OF TESTING")
+    FILTER regex(?label, "Testing House Publishing", "i")
 }
 LIMIT 10
 
