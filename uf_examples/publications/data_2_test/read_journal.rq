@@ -9,6 +9,6 @@ WHERE
 {
     ?uri a bibo:Journal .
     ?uri rdfs:label ?label .
-    FILTER regex(?label, "Testing House Publishing")
+    FILTER regex(?label, "International Journal of Testing", "i")
 }
 LIMIT 10
