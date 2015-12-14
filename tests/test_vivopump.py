@@ -73,22 +73,19 @@ class NewUriTestCase(unittest.TestCase):
                    'username': 'vivo_root@school.edu',
                    'password': 'v;bisons',
                    'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
+                   'prefix': ('PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>'
+                              'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'
+                              'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>'
+                              'PREFIX owl: <http://www.w3.org/2002/07/owl#>'
+                              'PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>'
+                              'PREFIX bibo: <http://purl.org/ontology/bibo/>'
+                              'PREFIX event: <http://purl.org/NET/c4dm/event.owl#>'
+                              'PREFIX foaf: <http://xmlns.com/foaf/0.1/>'
+                              'PREFIX obo: <http://purl.obolibrary.org/obo/>'
+                              'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>'
+                              'PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>'
+                              'PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>'
+                              'PREFIX vivo: <http://vivoweb.org/ontology/core#>')
                    }
 
     def test_new_uri_default(self):
@@ -98,30 +95,28 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
 
     def test_new_uri_prefix(self):
         parms = NewUriTestCase.query_parms
-        parms['uriprefix'] = 'http://my.vivo.edu/'
+        parms['uriprefix'] = 'http://my.vivo.edu/date'
         uri = new_uri(parms)
         print uri
         self.assertTrue(uri.startswith('http://my.vivo.edu'))
 
 
 class ReadUpdateDefTestCase(unittest.TestCase):
-
-    prefix = \
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
+    prefix = (
+        'PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>'
+        'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>'
+        'PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>'
+        'PREFIX owl:   <http://www.w3.org/2002/07/owl#>'
+        'PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>'
+        'PREFIX bibo: <http://purl.org/ontology/bibo/>'
+        'PREFIX event: <http://purl.org/NET/c4dm/event.owl#>'
+        'PREFIX foaf: <http://xmlns.com/foaf/0.1/>'
+        'PREFIX obo: <http://purl.obolibrary.org/obo/>'
+        'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>'
+        'PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>'
+        'PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>'
+        'PREFIX vivo: <http://vivoweb.org/ontology/core#>'
+    )
 
     def test_read_normal_def(self):
         update_def = read_update_def('data/grant_def.json', prefix=ReadUpdateDefTestCase.prefix)
@@ -141,11 +136,6 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
     def test_invalid_multiple_def(self):
         with self.assertRaises(InvalidDefException):
             update_def = read_update_def('data/grant_invalid_multiple_def.json', prefix=ReadUpdateDefTestCase.prefix)
-            print update_def
-
-    def test_reserved_word(self):
-        with self.assertRaises(InvalidDefException):
-            update_def = read_update_def('data/grant_reserved_def.json', prefix=ReadUpdateDefTestCase.prefix)
             print update_def
 
     def test_novalue_def(self):

@@ -33,10 +33,10 @@ class UtilsTests(unittest.TestCase):
         Verify that we can parse the static file containing the
         current list of people in vivo (UF data in csv format ~20MB)
 
-person_uri, fname,  lname,   mname
-uri_1,      First,  Last,    Middle
-uri_2,      First,  Last,   X
-uri_3,      Aww,    B,
+        person_uri, fname,  lname,   mname
+        uri_1,      First,  Last,    Middle
+        uri_2,      First,  Last,   X
+        uri_3,      Aww,    B,
         """
         expected = {
             0: {

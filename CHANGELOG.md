@@ -426,3 +426,5 @@ debug controls debug. `sv.py` now returns non-zero return code if `-a test` fail
 in `sv.py` when source for update is not found.  `DefNotFoundException` added to `vivopump.py`  When def is not found,
 exception thrown by pump.  sv.py catches the exception, prints an error message and returns rc=1
 * **2015-12-13** PEP-8 improvements to `testgraph.py`
+* **2014-12-14** PEP-8 improvements to `test_vivopump.py`.  Remove reserved words test -- `uri` and `action` are allowed
+in source spreadsheets -- this supports the round tripping function.

@@ -516,12 +516,8 @@ def read_update_def(filename, prefix):
                     if multiple > 1:
                         raise InvalidDefException(name + ' has more than one multiple predicate')
 
-        #   Test for reserved column names
-        # reserved_words = {'uri', 'action'}
-        # if set(col_names) & reserved_words != set():
-        #     raise InvalidDefException(str(set(col_names) & reserved_words) + " reserved words used as column names")
-
         #   Test for boolean value
+
         for name in col_names:
             for step in a['column_defs'][name]:
                 if step['predicate']['single'] == 'boolean' and 'value' not in step['object']:
