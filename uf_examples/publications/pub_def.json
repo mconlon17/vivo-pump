@@ -87,7 +87,7 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "vivo:relates"
+                    "ref": "vivo:relatedBy"
                 },
                 "object": {
                     "literal": false,
