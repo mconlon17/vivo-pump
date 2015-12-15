@@ -120,6 +120,35 @@ def get_author_uris(author_row_data):
 
     return author_list_out
 
+def get_author_affiliation(affiliation_row_data):
+
+    from vivopump import replace_initials
+
+    affiliation_list_out = []
+
+    affiliation_parts = affiliation_row_data.split('. ')
+
+    utils.print_err("affiliation_parts = \n{}".format(affiliation_parts))
+
+    for affiliation in affiliation_parts:
+
+        utils.print_err("affiliation = \n{}".format(affiliation))
+
+        if '(Reprint Author)' in affiliation:
+            utils.print_err("\nReprint Author found \n")
+            if len(affiliation_list_out) > 0:
+                affiliation_list_out += ';true'
+            else:
+                utils.print_err("\naffiliation_list_out < 0\n")
+                affiliation_list_out = 'true'
+        else:
+            if len(affiliation_list_out) > 0:
+                affiliation_list_out += ';false'
+            else:
+                affiliation_list_out = 'false'
+
+    return affiliation_list_out
+
 parms = get_parms()
 
 # Piped in file
@@ -142,9 +171,13 @@ row_out = 0
 
 for row_index, row_data in data_in.items():
     utils.print_err("row_index is: \n{}".format(row_index))
+
     data_out['author'] = get_author_uris(row_data['author'])
+    data_out['affiliation'] = get_author_affiliation(row_data['affiliation'])
     utils.print_err("data_out is: \n{}".format(data_out))
+
     data_in[row_index]['author'] = data_out['author']
+    data_in[row_index]['affiliation'] = data_out['affiliation']
     utils.print_err("data_in: \n\n{}\n".format(data_in))
 
 write_csv_fp(sys.stdout, data_in)
