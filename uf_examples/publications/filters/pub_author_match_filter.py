@@ -32,7 +32,7 @@ __copyright__ = "Copyright 2015 (c) Alex Loiacono and Nicholas Rejack"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_parms
+from vivopump import read_csv_fp, write_csv_fp, get_parms, get_vivo_journals
 import utils
 import sys
 
@@ -160,6 +160,8 @@ print >>sys.stderr, len(data_in)
 file_name = 'author_list.csv'
 utils.print_err("Using static disambiguation file: {}".format(file_name))
 
+vivo_journals = get_vivo_journals(parms)
+
 # get dictionaries of authors keyed by name parts
 vivo_auth_disambig_data = utils.get_vivo_disambiguation_data_from_csv(
     file_name)
@@ -174,10 +176,17 @@ for row_index, row_data in data_in.items():
 
     data_out['author'] = get_author_uris(row_data['author'])
     data_out['affiliation'] = get_author_affiliation(row_data['affiliation'])
+
+    try:
+        issn_uri = vivo_journals.get(row_data['issn'])
+    except KeyError:
+        utils.print_err("ISSN not found: {}".format(row_data['issn']))
+
     utils.print_err("data_out is: \n{}".format(data_out))
 
     data_in[row_index]['author'] = data_out['author']
     data_in[row_index]['affiliation'] = data_out['affiliation']
+    data_in[row_index]['issn'] = issn_uri
     utils.print_err("data_in: \n\n{}\n".format(data_in))
 
 write_csv_fp(sys.stdout, data_in)

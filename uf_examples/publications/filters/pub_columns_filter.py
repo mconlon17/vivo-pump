@@ -24,7 +24,7 @@ print_err("==> {} columns in the input: {} "
 data_out = {}
 keep_names = set(['remove', 'uri', 'title', 'number', 'pub_date',
                   'author', 'start_page', 'end_page', 'type',
-                  'journal', 'volume', 'doi', 'affiliation'])
+                  'issn', 'volume', 'doi', 'affiliation'])
 
 for row, data in data_in.items():
     new_data = dict(data)
