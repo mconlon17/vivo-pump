@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-pubmed -- identify and retrieve pubmed publications for a person.  Handle those publications in the pump
+    pubmed.py -- tools for identifying pubmed papers, retrieving citation data for pubmed papers, and loading those
+    papers into VIVO
 """
 
 import logging
