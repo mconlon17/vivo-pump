@@ -7,6 +7,6 @@ SELECT
  WHERE {
     ?uri a core:InformationResource .
     ?uri rdfs:label ?label .
-    FILTER CONTAINS(?label, "This is the Title of our test publication")
+    FILTER regex(?label, "This is the Title of our test publication", "i") . 
 }
 LIMIT 10
