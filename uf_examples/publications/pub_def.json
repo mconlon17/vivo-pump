@@ -39,6 +39,17 @@
                 }
             }
         ],
+        "end_page": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "bibo:endPage"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
         "pub_date":[
             {
                 "predicate": {

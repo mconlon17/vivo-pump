@@ -28,7 +28,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vcard:Kind",
+                    "type": "vcard:Individual",
                     "name": "vcard"
                 }
             },
@@ -62,7 +62,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vcard:Kind",
+                    "type": "vcard:Individual",
                     "name": "vcard"
                 }
             },
@@ -96,7 +96,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vcard:Kind",
+                    "type": "vcard:Individual",
                     "name": "vcard"
                 }
             },
@@ -130,7 +130,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vcard:Kind",
+                    "type": "vcard:Individual",
                     "name": "vcard"
                 }
             },
@@ -153,29 +153,6 @@
                 "object": {
                     "literal": true,
                     "datatype": "xsd:string"
-                }
-            }
-        ],
-        "corresponding": [
-            {
-                 "predicate": {
-                    "single": false,
-                    "ref": "vivo:relatedBy"
-                },
-                "object": {
-                    "literal": false,
-                    "type": "vivo:isCorrespondingAuthor",
-                    "name": "correspondingAuthor"
-                }
-            },
-            {
-                "predicate": {
-                    "single": true,
-                    "ref": "vivo:isCorrespondingAuthor"
-                },
-                "object": {
-                    "literal": true,
-                    "type": "xsd:boolean"
                 }
             }
         ],
