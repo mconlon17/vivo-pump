@@ -113,6 +113,59 @@
                     "literal": false
                 }
             }
+        ],
+         "affiliation": [
+             {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relatedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:Authorship",
+                    "name": "paperAuthroship"
+                },
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:isCorrespondingAuthor"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ],
+        "journal": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:hasPublicationVenue"
+                },
+                "object": {
+                    "literal": false
+                }
+            }
+        ]
+    },
+    "closure_defs" : {
+        "affiliation" : [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relatedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:Authorship",
+                    "name": "paperAuthroship"
+                },
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:isCorrespondingAuthor"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
         ]
     }
 }
