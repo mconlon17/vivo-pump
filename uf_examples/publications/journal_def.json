@@ -35,7 +35,6 @@
                     "ref": "bibo:issn"
                 },
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
@@ -49,6 +48,17 @@
                 "object": {
                     "datatype": "xsd:string",
                     "literal": true
+                }
+            }
+        ],
+        "publisher": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:publisher"
+                },
+                "object": {
+                    "literal": false
                 }
             }
         ]

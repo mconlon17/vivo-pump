@@ -158,6 +158,7 @@ prep_pubs:
 		| python filters/bib2csv_filter.py \
 		| python filters/pub_columns_filter.py \
 		| python filters/pub_match_filter.py -c $(CONFIG_FILE_PUBLICATIONS) \
+		| python filters/pub_author_match_filter.py -c $(CONFIG_FILE_PUBLICATIONS) \
 		> $(OUT_FILE_PUBLICATION)
 	@echo "\nSee: $(OUT_FILE_PUBLICATION)"
 pump_pubs:

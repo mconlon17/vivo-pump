@@ -21,7 +21,7 @@ __license__ = "New BSD License"
 __version__ = "0.01"
 
 from utils import print_err
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_journals, get_parms
+from vivopump import read_csv_fp, write_csv_fp, get_vivo_journals, get_parms, get_vivo_publishers
 import sys
 
 parms = get_parms()
@@ -29,6 +29,11 @@ data_in = read_csv_fp(sys.stdin)
 print_err("Input data length: {}".format(len(data_in)))
 
 data_out = {}
+
+
+vivo_publishers = get_vivo_publishers(parms)
+
+#print_err("\n\nvivo_publishers: \n{}\n\n".format(vivo_publishers))
 
 # get dictionary of journal uri keyed by
 # International Standard Serial Numbers (ISSN)
@@ -42,8 +47,11 @@ for row, data in data_in.items():
     if data['issn'] not in vivo_journals:
         # name is not vivo.  These are the ones to add
         data_out[row]['uri'] = ''
+        data_out[row]['publisher'] = vivo_publishers[data_in[row]['publisher'].lower().replace(' ','')]
+
     else:
         data_out[row]['uri'] = vivo_journals[data['issn']]
+
 
 print_err("New journals to add: {}".format(len(data_out)))
 write_csv_fp(sys.stdout, data_out)

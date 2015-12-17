@@ -19,7 +19,7 @@ print_err("==> {} columns in the input: {} "
           .format(len(column_names), column_names))
 
 data_out = {}
-keep_names = set(['remove', 'uri', 'name', 'issn', 'eissn', 'sjr'])
+keep_names = set(['remove', 'uri', 'name', 'issn', 'eissn', 'sjr', 'publisher'])
 
 for row, data in data_in.items():
     new_data = dict(data)
