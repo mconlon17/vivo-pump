@@ -19,7 +19,7 @@ parameters as appropriate for your VIVO to run these tests successfully.
  elements in each row are the test name, the return code for the test (0=pass, 1=fail), and the time in seconds to
  perform the test.
  
- Simple output is shown below:
+ Sample output is shown below:
  
               config not found 	1 	0.110546
      definition file not found 	1 	0.04471
