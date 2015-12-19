@@ -7,8 +7,17 @@ author_correspondence_match_filter.py -- find the authorships in VIVO and based
     corresponding author on a paper
 
 There are two inputs:
-    - authorships in VIVO keyed by name parts.
-    - authors in the source keyed by name parts.
+    - authorships in VIVO keyed on author name and title of paper.
+    - authors in the source keyed by name and title of paper.
+
+Creates a file from vivo of title_of_paper|authorship_uri|author_name
+
+Reads in the same output produced from author_match_filter
+
+Authorship dictionary is then keyed of author_name with a secdondary
+    key of the title of the paper. From this we can index the
+    authorship dictionary to get the authorship uri and assign
+    the correspondence property.
 
 """
 
@@ -45,15 +54,15 @@ with open(file_name, 'rb') as csv_file:
 
 for row_index, row_data in data_in.items():
 
-    utils.print_err("row_data[row_index]: \n{}".format(row_data))
+    data_out[row_index] = row_data
 
-    data_out['authorship_uri'] = authorship_dict[row_data['display_name']][row_data['title']]
-    data_out['corresponding'] = row_data['corresponding']
+    data_out[row_index]['authorship_uri'] = authorship_dict[row_data['display_name']][row_data['title']]
+    data_out[row_index]['corresponding'] = row_data['corresponding']
 
-    utils.print_err("authorhip uri: \n{}".format(data_out.keys()))
+for key in data_out[1].keys():
+    utils.print_err("key:\n{}".format(key))
+    if key != 'corresponding' and key != 'authorship_uri':
+        utils.print_err("removing key\n")
+        data_out[1].pop(key)
 
-with open('correspondence.txt', 'w') as fp:
-    a = csv.DictWriter(fp, delimiter='|',fieldnames=data_out.keys())
-    a.writeheader()
-    for row in data_out:
-        a.writerow(row)
+write_csv_fp(sys.stdout, data_out)
