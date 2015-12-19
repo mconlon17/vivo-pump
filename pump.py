@@ -100,7 +100,6 @@ class Pump(object):
         self.out_filename = out_filename
         self.query_parms = {'queryuri': queryuri, 'username': username, 'password': password, 'uriprefix': uriprefix,
                             'prefix': prefix}
-        print self.query_parms
 
     def __str__(self):
         """
