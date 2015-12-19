@@ -25,7 +25,7 @@ import sys
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.5"
+__version__ = "0.8.6"
 
 # Establish logging
 
@@ -47,7 +47,7 @@ class Pump(object):
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
 
-    def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt", verbose=False,
+    def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt",
                  nofilters=False, inter='\t', intra=';', rdfprefix="pump",
                  query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
                               'username': 'vivo_root@school.edu',
@@ -97,7 +97,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         self.filter = not nofilters
         self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
-        self.verbose = verbose
         self.intra = intra
         self.inter = inter
         self.rdfprefix = rdfprefix
@@ -149,7 +148,6 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                  "Source file name\t" + self.out_filename + ".\n" + \
                  "Enumerations read.\n" + \
                  "Filters\t" + str(self.filter) + "\n" + \
-                 "Verbose\t" + str(self.verbose) + "\n" + \
                  "Intra field separator\t" + self.intra + "\n" + \
                  "Inter field separator\t" + self.inter + "\n" + \
                  "VIVO SPARQL API URI\t" + self.query_parms['queryuri'] + "\n" + \
@@ -219,18 +217,19 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         for s, p, o in self.original_graph:
             self.update_graph.add((s, p, o))
 
-        if self.verbose:
-            logger.info(u'Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
-                len(self.original_graph), len(self.update_graph)))
-            logger.info(u'Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
-            if len(self.enum) == 0:
-                logger.info(u"No enumerations")
-            else:
-                for key in self.enum.keys():
-                    logger.info(
-                        u"Enumeration {} modified {}. {} entries in get enum.  {} entries in update enum".format(
-                            key, time.ctime(os.path.getmtime(key)), len(self.enum[key]['get']),
-                            len(self.enum[key]['update'])))
+        # Provide logger info
+
+        logger.info(u'Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
+            len(self.original_graph), len(self.update_graph)))
+        logger.info(u'Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
+        if len(self.enum) == 0:
+            logger.info(u"No enumerations")
+        else:
+            for key in self.enum.keys():
+                logger.info(
+                    u"Enumeration {} modified {}. {} entries in get enum.  {} entries in update enum".format(
+                        key, time.ctime(os.path.getmtime(key)), len(self.enum[key]['get']),
+                        len(self.enum[key]['update'])))
         return self.__do_update()
 
     def __do_update(self):

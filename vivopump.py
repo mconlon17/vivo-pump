@@ -13,7 +13,7 @@ import logging
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.8.5"
+__version__ = "0.8.6"
 
 # Establish logging
 

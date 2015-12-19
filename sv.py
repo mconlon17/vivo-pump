@@ -21,7 +21,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.5"
+__version__ = "0.8.6"
 
 #   Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
 #   is used

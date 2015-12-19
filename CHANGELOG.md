@@ -428,4 +428,6 @@ exception thrown by pump.  sv.py catches the exception, prints an error message 
 * **2015-12-13** PEP-8 improvements to `testgraph.py`
 * **2014-12-14** PEP-8 improvements to `test_vivopump.py`.  Remove reserved words test -- `uri` and `action` are allowed
 in source spreadsheets -- this supports the round tripping function.
-* **2014-12-16** Improve comments
+* **2014-12-16** Improve comments.
+* **2014-12-19** 0.8.6 Remove verbose parameter from pump calling sequence.  pump uses logging environment, does not
+modify it.
