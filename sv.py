@@ -53,13 +53,20 @@ def main():
     #   Create a Pump and use it to perform the requested actions based on arguments
 
     try:
-        p = Pump(args.defn, args.src, args.inter, args.intra, args.rdfprefix,
-                 args.queryuri, args.username, args.password, args.uriprefix, args.prefix)
+        p = Pump(args.defn, args.src)
     except DefNotFoundException:
         print args.defn, "definition file not found"
         sys.exit(1)
 
     p.filter = not args.nofilters
+    p.inter = args.inter
+    p.intra = args.intra
+    p.rdfprefix = args.rdfprefix
+    p.uriprefix = args.uriprefix
+    p.queryuri = args.queryuri
+    p.username = args.username
+    p.password = args.password
+    p.prefix = args.prefix
 
     if args.action == 'get':
         n_rows = p.get()

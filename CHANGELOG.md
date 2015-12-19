@@ -430,5 +430,6 @@ exception thrown by pump.  sv.py catches the exception, prints an error message 
 in source spreadsheets -- this supports the round tripping function.
 * **2014-12-16** Improve comments.
 * **2014-12-19** 0.8.6 Remove verbose parameter from pump calling sequence.  pump uses logging environment, does not
-modify it.  Remove query_parms (mutable argument) from calling sequence.  All tests pass.  Remove filter parameter
-from Pump calling sequence -- set filter as public attribute
+modify it.  Remove query_parms (mutable argument) from calling sequence.  All tests pass.  Remove filter, intra,
+ inter, rdfprefix, queryuri, uriprefix, username, password, prefix parameters from Pump calling sequence -- set these 
+ as public attributes. Pump has two keyword arguments: defn for definition filename and src for name of source file

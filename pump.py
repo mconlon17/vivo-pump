@@ -45,59 +45,71 @@ class Pump(object):
     May need a Path class and a Step Class.  For now a Path is a list of Steps.  We will see if that holds up.
     """
 
-    def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt",
-                 inter='\t', intra=';', rdfprefix="pump",
-                 queryuri="http://localhost:8080/vivo/api/sparqlQuery",
-                 username="vivo_root@school.edu",
-                 password="v;bisons",
-                 uriprefix="http://vivo.school.edu/individual/n",
-                 prefix=('PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n'
-                         'PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>\n'
-                         'PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>\n'
-                         'PREFIX owl:      <http://www.w3.org/2002/07/owl#>\n'
-                         'PREFIX swrl:     <http://www.w3.org/2003/11/swrl#>\n'
-                         'PREFIX swrlb:    <http://www.w3.org/2003/11/swrlb#>\n'
-                         'PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>\n'
-                         'PREFIX wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#>\n'
-                         'PREFIX bibo:     <http://purl.org/ontology/bibo/>\n'
-                         'PREFIX c4o:      <http://purl.org/spar/c4o/>\n'
-                         'PREFIX cito:     <http://purl.org/spar/cito/>\n'
-                         'PREFIX event:    <http://purl.org/NET/c4dm/event.owl#>\n'
-                         'PREFIX fabio:    <http://purl.org/spar/fabio/>\n'
-                         'PREFIX foaf:     <http://xmlns.com/foaf/0.1/>\n'
-                         'PREFIX geo:      <http://aims.fao.org/aos/geopolitical.owl#>\n'
-                         'PREFIX obo:      <http://purl.obolibrary.org/obo/>\n'
-                         'PREFIX ocrer:    <http://purl.org/net/OCRe/research.owl#>\n'
-                         'PREFIX ocresd:   <http://purl.org/net/OCRe/study_design.owl#>\n'
-                         'PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>\n'
-                         'PREFIX uf:       <http://vivo.school.edu/ontology/uf-extension#>\n'
-                         'PREFIX vcard:    <http://www.w3.org/2006/vcard/ns#>\n'
-                         'PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>\n'
-                         'PREFIX vivo:     <http://vivoweb.org/ontology/core#>\n'
-                         'PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>\n')
-                 ):
+    def __init__(self, defn="pump_def.json", src="pump_data.txt"):
         """
         Initialize the pump
-        :param json_def_filename:  File name of file containing JSON pump definition
+        :param defn:  File name of file containing JSON pump definition
+        :param src: file name of the csv file to contain VIVO data (get), or csv containing data to update VIVO (update)
         """
         from vivopump import read_update_def, load_enum, DefNotFoundException
 
-        try:
-            self.update_def = read_update_def(json_def_filename, prefix)
-        except:
-            raise DefNotFoundException(json_def_filename)
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
+        self.out_filename = src
+        self.json_def_filename = defn
+
+        #   Simple public instance variables
+
         self.filter = True
-        self.enum = load_enum(self.update_def)
-        self.json_def_filename = json_def_filename
-        self.intra = intra
-        self.inter = inter
-        self.rdfprefix = rdfprefix
-        self.out_filename = out_filename
-        self.query_parms = {'queryuri': queryuri, 'username': username, 'password': password, 'uriprefix': uriprefix,
-                            'prefix': prefix}
+        self.intra = ';'
+        self.inter = '\t'
+        self.rdfprefix = 'pump'
+        self.uriprefix="http://vivo.school.edu/individual/n"
+
+        # Query parms should be properties of the query, not the Pump.  Refactor this
+
+        self.queryuri="http://localhost:8080/vivo/api/sparqlQuery"
+        self.username="vivo_root@school.edu"
+        self.password="v;bisons"
+        self.prefix=('PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n'
+                     'PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>\n'
+                     'PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>\n'
+                     'PREFIX owl:      <http://www.w3.org/2002/07/owl#>\n'
+                     'PREFIX swrl:     <http://www.w3.org/2003/11/swrl#>\n'
+                     'PREFIX swrlb:    <http://www.w3.org/2003/11/swrlb#>\n'
+                     'PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>\n'
+                     'PREFIX wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#>\n'
+                     'PREFIX bibo:     <http://purl.org/ontology/bibo/>\n'
+                     'PREFIX c4o:      <http://purl.org/spar/c4o/>\n'
+                     'PREFIX cito:     <http://purl.org/spar/cito/>\n'
+                     'PREFIX event:    <http://purl.org/NET/c4dm/event.owl#>\n'
+                     'PREFIX fabio:    <http://purl.org/spar/fabio/>\n'
+                     'PREFIX foaf:     <http://xmlns.com/foaf/0.1/>\n'
+                     'PREFIX geo:      <http://aims.fao.org/aos/geopolitical.owl#>\n'
+                     'PREFIX obo:      <http://purl.obolibrary.org/obo/>\n'
+                     'PREFIX ocrer:    <http://purl.org/net/OCRe/research.owl#>\n'
+                     'PREFIX ocresd:   <http://purl.org/net/OCRe/study_design.owl#>\n'
+                     'PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>\n'
+                     'PREFIX uf:       <http://vivo.school.edu/ontology/uf-extension#>\n'
+                     'PREFIX vcard:    <http://www.w3.org/2006/vcard/ns#>\n'
+                     'PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>\n'
+                     'PREFIX vivo:     <http://vivoweb.org/ontology/core#>\n'
+                     'PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>\n')
+
+        # Ugly mutable param.  Refactor this
+
+        self.query_parms = {'queryuri': self.queryuri, 'username': self.username, 'password': self.password,
+                            'uriprefix': self.uriprefix, 'prefix': self.prefix}
+
+        #   Create the update_def and enumerations
+
+        try:
+            self.update_def = read_update_def(defn, self.prefix)
+        except:
+            raise DefNotFoundException(defn)
+        else:
+            self.enum = load_enum(self.update_def)  # When the def changes, the enum must be updated
 
     def __str__(self):
         """
