@@ -33,10 +33,8 @@ logging.captureWarnings(True)
 logger = logging.getLogger(__name__)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler = logging.StreamHandler(sys.stderr)
-# handler = logging.StreamHandler(sys.stdout)
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-# logger.setLevel(logging.ow, column_name, column_values, uri, vivo_objsDEBUG)
 logger.setLevel(logging.INFO)
 
 
@@ -48,7 +46,7 @@ class Pump(object):
     """
 
     def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt",
-                 nofilters=False, inter='\t', intra=';', rdfprefix="pump",
+                 inter='\t', intra=';', rdfprefix="pump",
                  queryuri="http://localhost:8080/vivo/api/sparqlQuery",
                  username="vivo_root@school.edu",
                  password="v;bisons",
@@ -91,7 +89,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
-        self.filter = not nofilters
+        self.filter = True
         self.enum = load_enum(self.update_def)
         self.json_def_filename = json_def_filename
         self.intra = intra
