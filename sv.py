@@ -53,12 +53,8 @@ def main():
     #   Create a Pump and use it to perform the requested actions based on arguments
 
     try:
-        p = Pump(args.defn, args.src, args.verbose, args.nofilters, args.inter, args.intra, args.rdfprefix,
-                 query_parms={'queryuri': args.queryuri,
-                              'username': args.username,
-                              'password': args.password,
-                              'prefix': args.prefix,
-                              'uriprefix': args.uriprefix})
+        p = Pump(args.defn, args.src, args.nofilters, args.inter, args.intra, args.rdfprefix,
+                 args.queryuri, args.username, args.password, args.uriprefix, args.prefix)
     except DefNotFoundException:
         print args.defn, "definition file not found"
         sys.exit(1)

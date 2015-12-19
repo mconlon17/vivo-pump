@@ -11,6 +11,7 @@
       <w>bibtexparser</w>
       <w>bisons</w>
       <w>börner</w>
+      <w>cito</w>
       <w>dbpedia</w>
       <w>defn</w>
       <w>defname</w>
@@ -27,6 +28,7 @@
       <w>getpmi</w>
       <w>getpmids</w>
       <w>healthcare</w>
+      <w>herror</w>
       <w>homedept</w>
       <w>interfield</w>
       <w>intra</w>
@@ -49,6 +51,8 @@
       <w>novalue</w>
       <w>objs</w>
       <w>obolibrary</w>
+      <w>ocrer</w>
+      <w>ocresd</w>
       <w>parms</w>
       <w>pathlength</w>
       <w>pmids</w>
@@ -60,6 +64,7 @@
       <w>rdfprefix</w>
       <w>repl</w>
       <w>rown</w>
+      <w>scires</w>
       <w>sdata</w>
       <w>sewect</w>
       <w>skos</w>
@@ -68,9 +73,12 @@
       <w>statuscode</w>
       <w>statusmessage</w>
       <w>stdout</w>
+      <w>swrl</w>
+      <w>swrlb</w>
       <w>tdata</w>
       <w>testid</w>
       <w>tising</w>
+      <w>uerror</w>
       <w>ufrf</w>
       <w>uriprefix</w>
       <w>uriref</w>

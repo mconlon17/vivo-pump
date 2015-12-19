@@ -49,38 +49,35 @@ class Pump(object):
 
     def __init__(self, json_def_filename="pump_def.json", out_filename="pump_data.txt",
                  nofilters=False, inter='\t', intra=';', rdfprefix="pump",
-                 query_parms={'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                              'username': 'vivo_root@school.edu',
-                              'password': 'v;bisons',
-                              'uriprefix': 'http://vivo.school.edu/individual/n',
-                              'prefix':
-    '''
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX swrl:     <http://www.w3.org/2003/11/swrl#>
-PREFIX swrlb:    <http://www.w3.org/2003/11/swrlb#>
-PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#>
-PREFIX bibo:     <http://purl.org/ontology/bibo/>
-PREFIX c4o:      <http://purl.org/spar/c4o/>
-PREFIX cito:     <http://purl.org/spar/cito/>
-PREFIX event:    <http://purl.org/NET/c4dm/event.owl#>
-PREFIX fabio:    <http://purl.org/spar/fabio/>
-PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
-PREFIX geo:      <http://aims.fao.org/aos/geopolitical.owl#>
-PREFIX obo:      <http://purl.obolibrary.org/obo/>
-PREFIX ocrer:    <http://purl.org/net/OCRe/research.owl#>
-PREFIX ocresd:   <http://purl.org/net/OCRe/study_design.owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf:       <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vcard:    <http://www.w3.org/2006/vcard/ns#>
-PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo:     <http://vivoweb.org/ontology/core#>
-PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
-    '''
-                             }):
+                 queryuri="http://localhost:8080/vivo/api/sparqlQuery",
+                 username="vivo_root@school.edu",
+                 password="v;bisons",
+                 uriprefix="http://vivo.school.edu/individual/n",
+                 prefix=('PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n'
+                         'PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>\n'
+                         'PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>\n'
+                         'PREFIX owl:      <http://www.w3.org/2002/07/owl#>\n'
+                         'PREFIX swrl:     <http://www.w3.org/2003/11/swrl#>\n'
+                         'PREFIX swrlb:    <http://www.w3.org/2003/11/swrlb#>\n'
+                         'PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>\n'
+                         'PREFIX wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#>\n'
+                         'PREFIX bibo:     <http://purl.org/ontology/bibo/>\n'
+                         'PREFIX c4o:      <http://purl.org/spar/c4o/>\n'
+                         'PREFIX cito:     <http://purl.org/spar/cito/>\n'
+                         'PREFIX event:    <http://purl.org/NET/c4dm/event.owl#>\n'
+                         'PREFIX fabio:    <http://purl.org/spar/fabio/>\n'
+                         'PREFIX foaf:     <http://xmlns.com/foaf/0.1/>\n'
+                         'PREFIX geo:      <http://aims.fao.org/aos/geopolitical.owl#>\n'
+                         'PREFIX obo:      <http://purl.obolibrary.org/obo/>\n'
+                         'PREFIX ocrer:    <http://purl.org/net/OCRe/research.owl#>\n'
+                         'PREFIX ocresd:   <http://purl.org/net/OCRe/study_design.owl#>\n'
+                         'PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>\n'
+                         'PREFIX uf:       <http://vivo.school.edu/ontology/uf-extension#>\n'
+                         'PREFIX vcard:    <http://www.w3.org/2006/vcard/ns#>\n'
+                         'PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>\n'
+                         'PREFIX vivo:     <http://vivoweb.org/ontology/core#>\n'
+                         'PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>\n')
+                 ):
         """
         Initialize the pump
         :param json_def_filename:  File name of file containing JSON pump definition
@@ -88,7 +85,7 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         from vivopump import read_update_def, load_enum, DefNotFoundException
 
         try:
-            self.update_def = read_update_def(json_def_filename, query_parms['prefix'])
+            self.update_def = read_update_def(json_def_filename, prefix)
         except:
             raise DefNotFoundException(json_def_filename)
         self.update_data = None
@@ -101,7 +98,9 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         self.inter = inter
         self.rdfprefix = rdfprefix
         self.out_filename = out_filename
-        self.query_parms = query_parms
+        self.query_parms = {'queryuri': queryuri, 'username': username, 'password': password, 'uriprefix': uriprefix,
+                            'prefix': prefix}
+        print self.query_parms
 
     def __str__(self):
         """
@@ -144,18 +143,18 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
         import urllib2
 
         result = str(datetime.now()) + " Test results" + "\n" + \
-                 "Update definition\t" + self.json_def_filename + " read.\n" + \
-                 "Source file name\t" + self.out_filename + ".\n" + \
-                 "Enumerations read.\n" + \
-                 "Filters\t" + str(self.filter) + "\n" + \
-                 "Intra field separator\t" + self.intra + "\n" + \
-                 "Inter field separator\t" + self.inter + "\n" + \
-                 "VIVO SPARQL API URI\t" + self.query_parms['queryuri'] + "\n" + \
-                 "VIVO SPARQL API username\t" + self.query_parms['username'] + "\n" + \
-                 "VIVO SPARQL API password\t" + self.query_parms['password'] + "\n" + \
-                 "VIVO SPARQL API prefix\t" + self.query_parms['prefix'] + "\n" + \
-                 "Prefix for RDF file names\t" + self.rdfprefix + "\n" + \
-                 "Uriprefix for new uri\t" + self.query_parms['uriprefix'] + "\n"
+            "Update definition\t" + self.json_def_filename + " read.\n" + \
+            "Source file name\t" + self.out_filename + ".\n" + \
+            "Enumerations read.\n" + \
+            "Filters\t" + str(self.filter) + "\n" + \
+            "Intra field separator\t" + self.intra + "\n" + \
+            "Inter field separator\t" + self.inter + "\n" + \
+            "VIVO SPARQL API URI\t" + self.query_parms['queryuri'] + "\n" + \
+            "VIVO SPARQL API username\t" + self.query_parms['username'] + "\n" + \
+            "VIVO SPARQL API password\t" + self.query_parms['password'] + "\n" + \
+            "VIVO SPARQL API prefix\t" + self.query_parms['prefix'] + "\n" + \
+            "Prefix for RDF file names\t" + self.rdfprefix + "\n" + \
+            "Uriprefix for new uri\t" + self.query_parms['uriprefix'] + "\n"
 
         try:
             uri = new_uri(self.query_parms)
