@@ -39,7 +39,7 @@ vivo_publishers = get_vivo_publishers(parms)
 # International Standard Serial Numbers (ISSN)
 vivo_journals = get_vivo_journals(parms)
 print_err('There are {} journals in VIVO'.format(len(vivo_journals)))
-# print_err(vivo_journals)
+print_err(vivo_publishers)
 
 for row, data in data_in.items():
     data_out[row] = data
@@ -51,6 +51,7 @@ for row, data in data_in.items():
 
     else:
         data_out[row]['uri'] = vivo_journals[data['issn']]
+        data_out[row]['publisher'] = vivo_publishers[data_in[row]['publisher'].lower().replace(' ','')]
 
 
 print_err("New journals to add: {}".format(len(data_out)))
