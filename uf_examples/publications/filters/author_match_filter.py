@@ -85,23 +85,32 @@ for row_index, row_data in data_in.items():
             data_out[row_out] = row_data
             data_out[row_out]['uri'] = ''
             utils.print_err("uri count 0 for {}".format(row_index))
-        elif count == 1:
-            # Bingo! Disambiguated UF author. Add URI
-            row_out += 1
-            data_out[row_out] = row_data
-            utils.print_err("row {} - author_uris: {}"
-                            .format(row_out, author_uris))
-            # sys.exit()
-            data_out[row_out]['uri'] = author_uris[0]
-            action = "Found UF"
-            utils.print_err("uri count 1 for {}".format(row_index))
-        else:
-            # More than one UF author matches. Add to the disambiguation list.
-            row_out += 1
-            data_out[row_out] = row_data
-            data_out[row_out]['uri'] = ";".join(author_uris)
-            action = 'Disambig'
-            utils.print_err("uri count 2 for {}".format(row_index))
+        # elif count == 1:
+        #     # Bingo! Disambiguated UF author. Add URI
+        #     #row_out += 1
+        #     data_out[row_out] = row_data
+        #     utils.print_err("row {} - author_uris: {}"
+        #                     .format(row_out, author_uris))
+        #     # sys.exit()
+        #     data_out[row_out]['uri'] = author_uris[0]
+        #     action = "Found UF"
+        #     utils.print_err("uri count 1 for {}".format(row_index))
+        # else:
+        #     # More than one UF author matches. Add to the disambiguation list.
+        #     #row_out += 1
+        #     data_out[row_out] = row_data
+        #     data_out[row_out]['uri'] = ";".join(author_uris)
+        #     action = 'Disambig'
+        #     utils.print_err("uri count 2 for {}".format(row_index))
+
+data_out = {}
+name_out = set()
+
+for row, data in data_in.items():
+    new_data = dict((data_in_keys,'') for data_in_keys in data)
+    if data['display_name'] not in name_out:
+        data_out[row] = new_data
+        name_out.add(data['display_name'])
 
 print >>sys.stderr, 'data out', len(data_out)
 write_csv_fp(sys.stdout, data_out)
