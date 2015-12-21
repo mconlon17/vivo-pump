@@ -12,7 +12,8 @@
     Inputs:  spreadsheet containing updates and additions.  Definition file containing maps to/from columns to
         VIVO objects.  Enumeration tables for translating spreadsheet values to VIVO values and back.  VIVO for
         current state. Config file with parameters describing VIVO and the pump actions.
-    Outputs:  spreadsheet with current state.  VIVO state changes. stdout with date times and messages.
+    Outputs:  spreadsheet with current state.  RDF files (add and sub) to create VIVO state changes.
+        stdout with timestamped messages. logger output.
 
     See CHANGELOG.md for history
 """
