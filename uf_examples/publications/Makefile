@@ -25,11 +25,13 @@ OUT_FILE_PUBLISHERS := $(OUT_DIR)/publisher_update_data.txt
 OUT_FILE_JOURNALS   := $(OUT_DIR)/journal_update_data.txt
 OUT_FILE_AUTHOR     := $(OUT_DIR)/author_update_data.txt
 OUT_FILE_PUBLICATION:= $(OUT_DIR)/pub_update_data.txt
+OUT_FILE_CORRESPONDING:= $(OUT_DIR)/corresponding_update_data.txt
 
 CONFIG_FILE_PUBLISHERS   := $(CONFIG_DIR)/sv_publishers.cfg
 CONFIG_FILE_JOURNALS     := $(CONFIG_DIR)/sv_journals.cfg
 CONFIG_FILE_AUTHORS      := $(CONFIG_DIR)/sv_authors.cfg
 CONFIG_FILE_PUBLICATIONS := $(CONFIG_DIR)/sv_pubs.cfg
+CONFIG_FILE_CORRESPONDING := $(CONFIG_DIR)/sv_corresponding.cfg
 
 # === API config ===
 API_EMAIL := new_admin@vivo.ufl.edu
@@ -67,6 +69,9 @@ help:
 	@echo "  == 4"
 	@echo "  prep_pubs          : Prepare the publications input file"
 	@echo "  pump_pubs          : Generate the rdf add/sub files"
+	@echo "  == 5"
+	@echo "  prep_corresponding          : Prepare the corresponding author input file"
+	@echo "  pump_corresponding          : Generate the rdf add/sub files"
 	@echo ""
 	@echo "  == Test insert data:"
 	@echo "  test_insert_publisher  : Run sparql query from $(UPDATE_FILE_PUBLISHER)"
@@ -165,6 +170,20 @@ pump_pubs:
 	python ../../sv.py \
 		-c config/sv_pubs.cfg \
 		-s data_out/pub_update_data.txt
+
+# === STEP 5
+prep_corresponding:
+	@# | python filters/pubmed_match_filter.py
+	cat $(IN_FILE) \
+		| python filters/bib2csv_filter.py \
+		| python filters/correspondence_columns_filter.py \
+		| python filters/correspondence_match_filter.py \
+		> $(OUT_FILE_CORRESPONDING)
+	@echo "\nSee: $(OUT_FILE_CORRESPONDING)"
+pump_corresponding:
+	python ../../sv.py \
+		-c config/sv_corresponding.cfg \
+		-s data_out/corresponding_update_data.txt
 
 # === Testing tasks
 test_find_persons:
