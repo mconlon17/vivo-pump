@@ -1,0 +1,20 @@
+{
+    "entity_def": {
+        "type": "vivo:Authorship",
+        "entity_sparql": "?uri a vivo:Authorship .",
+        "order_by": "corresponding"
+    },
+    "column_defs": {
+        "corresponding": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:isCorrespondingAuthor"
+                },
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}
