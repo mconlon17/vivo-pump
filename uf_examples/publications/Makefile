@@ -183,7 +183,8 @@ prep_corresponding:
 pump_corresponding:
 	python ../../sv.py \
 		-c config/sv_corresponding.cfg \
-		-s data_out/corresponding_update_data.txt
+		-s data_out/corresponding_update_data.txt \
+		-d corresponding_def.json
 
 # === Testing tasks
 test_find_persons:
