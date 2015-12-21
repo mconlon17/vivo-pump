@@ -21,6 +21,7 @@ from datetime import datetime
 from json import dumps
 import logging
 import sys
+import utils
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
@@ -38,7 +39,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 # logger.setLevel(logging.ow, column_name, column_values, uri, vivo_objsDEBUG)
 logger.setLevel(logging.INFO)
-
+#logger.setLevel(logging.DEBUG)
 
 class Pump(object):
     """
@@ -200,10 +201,13 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
         # Narrow the update_def to include only columns that appear in the update_data
 
+        utils.print_err("\n len of update_data: {},{}".format(len(self.update_data[2].values()[0]),self.update_data[2].values()[0]))
+
         new_update_columns = {}
         for name, path in self.update_def['column_defs'].items():
-            if name in self.update_data[self.update_data.keys()[0]].keys():
-                new_update_columns[name] = path
+            if len(self.update_data) > 0:
+                if name in self.update_data[self.update_data.keys()[0]].keys():
+                    new_update_columns[name] = path
         self.update_def['column_defs'] = new_update_columns
 
         if self.original_graph is None:  # Test for injection
@@ -211,10 +215,16 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
             # Create the original graph from VIVO
 
             self.original_graph = get_graph(self.update_def, self.query_parms)
+            utils.print_err("\nself.original_graph = {}\n".format(self.original_graph.serialize(format='nt')))
 
         self.update_graph = Graph()
         for s, p, o in self.original_graph:
+            utils.print_err("\nInside pump.py\nInside update()\ns= {}\np= {}\no= {}".format(s,p,o))
             self.update_graph.add((s, p, o))
+
+        utils.print_err("\nself.update_graph = {}\n".format(self.update_graph.serialize(format='nt')))
+
+        utils.print_err('Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
 
         if self.verbose:
             logger.info(u'Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
@@ -240,12 +250,22 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
 
         merges = {}
 
+        utils.print_err("\nupdate_data.items() = {}\n".format(self.update_data.items()))
+
         for row, data_update in self.update_data.items():
 
             # Create a URI if empty
 
-            if data_update['uri'].strip() == '':
+            utils.print_err("\ndata_update[uri] = {}\n".format(data_update['uri']))
 
+            if data_update['uri'].strip() == '':
+                dict_is_empty = True
+                for item in data_update.values():
+                    if len(item) != 0:
+                        dict_is_empty = False
+                if dict_is_empty:
+                    continue
+                    
                 # If the source uri is empty, create one.  Remaining processing is unchanged.
                 # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
@@ -303,14 +323,18 @@ PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
                     continue
 
                 if len(column_def) > 3:
+                    utils.print_err("\ncolumn_def length GREATER THAN 3\n")
                     raise PathLengthException(
                         "ERROR: Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
+                    utils.print_err("\ncolumn_def length EQUALS 3\n")
                     self.__do_three_step_update(row, column_name, uri, column_def, data_update)
                 elif len(column_def) == 2:
+                    utils.print_err("\ncolumn_def length 2\n")
                     self.__do_two_step_update(row, column_name, uri, column_def, data_update)
                 elif len(column_def) == 1:
+                    utils.print_err("\ncolumn_def length 1\n")
                     step_def = column_def[0]
                     vivo_objs = {unicode(o): o for s, p, o in
                                  get_step_triples(self.update_graph, uri, column_name, step_def, self.query_parms)}
