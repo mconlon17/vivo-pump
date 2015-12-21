@@ -50,19 +50,19 @@ with open(file_name, 'rb') as csv_file:
             pub_label = row['label']
             authorship_dict[name][pub_label] = row['authorship']
 
-    utils.print_err("authorship_dict is: \n{}".format(authorship_dict))
+    #utils.print_err("authorship_dict is: \n{}".format(authorship_dict))
 
 for row_index, row_data in data_in.items():
 
     data_out[row_index] = row_data
 
-    data_out[row_index]['authorship_uri'] = authorship_dict[row_data['display_name']][row_data['title']]
+    data_out[row_index]['uri'] = authorship_dict[row_data['display_name']][row_data['title']]
     data_out[row_index]['corresponding'] = row_data['corresponding']
 
 for key in data_out[1].keys():
     utils.print_err("key:\n{}".format(key))
-    if key != 'corresponding' and key != 'authorship_uri':
-        utils.print_err("removing key\n")
+    if key != 'corresponding' and key != 'uri':
+        #utils.print_err("removing key\n")
         data_out[1].pop(key)
 
 write_csv_fp(sys.stdout, data_out)
