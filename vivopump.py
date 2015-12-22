@@ -9,6 +9,8 @@ import csv
 import string
 import random
 import logging
+import utils
+import rdflib
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
@@ -24,8 +26,8 @@ handler = logging.StreamHandler(sys.stderr)
 # handler = logging.StreamHandler(sys.stdout)
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-# logger.setLevel(logging.DEBUG)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
+#logger.setLevel(logging.INFO)
 
 
 class InvalidDefException(Exception):
@@ -240,6 +242,26 @@ def key_string(s):
                                               """ \t\n\r\f!@#$%^&*()_+:"<>?-=[]\\;'`~,./""")
     k = k.lower()
     return k
+
+def get_vivo_inverse_property(forward_property, parms):
+
+    inverse_property = ''
+
+    query = """
+    select ?inverse_property
+    where {
+        <{{forward_property}}> owl:inverseOf ?inverse_property
+    }
+    """
+
+    q = query.replace("{{forward_property}}",forward_property)
+    a = vivo_query(q,parms)
+    inverse_property = [x['inverse_property']['value'] for x in a['results']['bindings']]
+
+    if len(inverse_property) > 0:
+        return inverse_property[0].encode()
+    else:
+        return None
 
 
 def get_vivo_types(selector, parms, separator=';'):
@@ -608,6 +630,7 @@ def make_rdf_term(row_term):
                            lang=row_term.get('xml:lang', None))
     else:
         rdf_term = URIRef(row_term['value'])
+
     return rdf_term
 
 
@@ -629,6 +652,7 @@ def get_graph(update_def, query_parms):
         p = URIRef(row['p']['value'])
         o = make_rdf_term(row['o'])
         a.add((s, p, o))
+        utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s.encode(),p.encode(),o.encode()))
     for column_name, path in update_def['column_defs'].items():
         update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
@@ -638,16 +662,21 @@ def get_graph(update_def, query_parms):
             s = URIRef(row['uri']['value'])
             p = URIRef(row['p']['value'])
             o = make_rdf_term(row['o'])
+            #utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s,p,o))
             a.add((s, p, o))
             if 'p2' in row and 'o2' in row:
                 p2 = URIRef(row['p2']['value'])
                 o2 = make_rdf_term(row['o2'])
+                #utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s,p,o))
                 a.add((o, p2, o2))
                 if 'p3' in row and 'o3' in row:
                     p3 = URIRef(row['p3']['value'])
                     o3 = make_rdf_term(row['o3'])
+                    #utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s,p,o))
                     a.add((o2, p3, o3))
         logger.debug(u"Triples in original graph {}".format(len(a)))
+
+    utils.print_err("\nInside vivopump.py\nInside get_graph()\na = {}".format(a.serialize(format='nt')))
     return a
 
 
@@ -1003,6 +1032,7 @@ def improve_org_name(s):
     :rtype: string
     """
     abbrev_table = {
+        " \& ": " and ",
         " & ": " and ",
         "'S ": "'s ",
         " A ": " a ",
@@ -1012,7 +1042,7 @@ def improve_org_name(s):
         "Admn ": "Administration ",
         "Adv ": "Advanced ",
         "Advanc ": "Advanced ",
-        "Ag ": "Agriculture ",
+        #"Ag ": "Agriculture ",
         "Agri ": "Agriculture ",
         "Amer ": "American ",
         "And ": "and ",
@@ -1974,6 +2004,7 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
         for binding in result_set['results']['bindings']:
             o = make_rdf_term(binding['o'])
             g.add((uri, step_def['predicate']['ref'], o))
+    logger.debug(u"Length of the graph: {}".format(len(g)))
     logger.debug(u"Step Triples {}".format(g.serialize(format='nt')))
     return g
 
@@ -2030,3 +2061,29 @@ def create_enum(filename, query, parms, trim=0):
         else:
             outfile.write(item["short"]["value"][0:trim] + "\t" + item["vivo"]["value"] + "\n")
     outfile.close()
+
+def make_inverse_subs(sub_file, parms):
+    """
+
+    :param sub_file: sub.rdf file to generate inverse properties so that all data is removed
+    :param parms: parms used for sparql queries
+    :return: updated subfile with inverse properties
+    """
+
+    file_out = open(sub_file + '.new', "w")
+
+    utils.print_err("the sube file is: {}".format(sub_file))
+
+    #with open(sub_file,'rw') as input_file:
+        # data = input_file.read()
+        # utils.print_err("data: \n\n{}".format(data))
+    sub_graph = rdflib.Graph()
+    sub_file_data = sub_graph.parse(sub_file,format='nt')
+
+    for s,p,o in sub_file_data:
+        inverse_property = rdflib.URIRef((get_vivo_inverse_property(p,parms)))
+
+        if inverse_property != None:
+            sub_file_data.add((o,rdflib.URIRef(inverse_property),s))
+
+    file_out.write(sub_file_data.serialize(format='nt'))
