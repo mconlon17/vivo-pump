@@ -48,12 +48,11 @@ for row, data in data_in.items():
 
     key = key_string(data['name'])
 
-    print_err('key is: {}'.format(key))
-
     if key not in vivo_publishers:
         # name is not vivo.  These are the ones to add
         print_err("key not found")
         data_out[row_out] = data
+        data_out[row_out]['name'] = data['name'].title()
         row_out += 1
         print_err("key {} will be added to vivo: {}".format(key, data))
 

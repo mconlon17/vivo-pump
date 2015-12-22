@@ -172,21 +172,30 @@ data_out = {}
 row_out = 0
 
 for row_index, row_data in data_in.items():
-    utils.print_err("row_index is: \n{}".format(row_index))
+    utils.print_err("\nrow_index is: \n{}".format(row_index))
+
+    utils.print_err("\nrow_data is: \n{}".format(row_data))
 
     data_out['author'] = get_author_uris(row_data['author'])
     data_out['affiliation'] = get_author_affiliation(row_data['affiliation'])
 
-    try:
+    if len(vivo_journals.get(row_data['issn'])) > 0:
         issn_uri = vivo_journals.get(row_data['issn'])
-    except KeyError:
-        utils.print_err("ISSN not found: {}".format(row_data['issn']))
+    else:
+        utils.print_err("\nISSN not found: {}\n".format(row_data['issn']))
+        issn_uri = ''
+
+    # try:
+    #     issn_uri = vivo_journals.get(row_data['issn'])
+    # except KeyError:
+    #     utils.print_err("\nISSN not found: {}\n".format(row_data['issn']))
+    #     issn_uri = ''
 
     utils.print_err("data_out is: \n{}".format(data_out))
 
     data_in[row_index]['author'] = data_out['author']
     data_in[row_index]['affiliation'] = data_out['affiliation']
-    data_in[row_index]['issn'] = issn_uri
-    utils.print_err("data_in: \n\n{}\n".format(data_in))
+    data_in[row_index]['journal'] = issn_uri
+    data_in[row_index].pop('issn')
 
 write_csv_fp(sys.stdout, data_in)

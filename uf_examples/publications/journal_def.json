@@ -23,7 +23,6 @@
                     "ref": "uf:sjr"
                 },
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }
@@ -46,7 +45,6 @@
                     "ref": "bibo:eissn"
                 },
                 "object": {
-                    "datatype": "xsd:string",
                     "literal": true
                 }
             }

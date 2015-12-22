@@ -41,7 +41,7 @@ print >>sys.stderr, len(data_in)
 
 # file_name = '/Users/asura/git/vivo-pump/author_list.csv'
 # @TODO: pass file name path as a command line parameter
-file_name = 'author_list.csv'
+file_name = 'vivo_author_list.csv'
 utils.print_err("Using static disambiguation file: {}".format(file_name))
 
 # get dictionaries of authors keyed by name parts
