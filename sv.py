@@ -43,7 +43,7 @@ def main():
     """
     import sys
     from datetime import datetime
-    from vivopump import get_args
+    from vivopump import get_args, make_inverse_subs
     from pump import Pump
 
     return_code = 0
@@ -62,6 +62,11 @@ def main():
         n_rows = p.get()
         print datetime.now(), n_rows, "rows in", args.src
     elif args.action == 'update':
+
+        print(args.queryuri)
+        print(args.username)
+        print(args.password)
+
         try:
             [add_graph, sub_graph] = p.update()
         except IOError:
@@ -74,6 +79,7 @@ def main():
             sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
             print >>sub_file, sub_graph.serialize(format='nt')
             sub_file.close()
+            make_inverse_subs(args.rdfprefix + '_sub.rdf',p.query_parms)
             print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'
     elif args.action == 'summarize':
         print p.summarize()
