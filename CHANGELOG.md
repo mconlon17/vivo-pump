@@ -433,4 +433,5 @@ in source spreadsheets -- this supports the round tripping function.
 modify it.  Remove query_parms (mutable argument) from calling sequence.  All tests pass.  Remove filter, intra,
  inter, rdfprefix, queryuri, uriprefix, username, password, prefix parameters from Pump calling sequence -- set these 
  as public attributes. Pump has two keyword arguments: defn for definition filename and src for name of source file
- * **2015-12-20** Improvements to comments
+ * **2015-12-20** Improvements to comments.
+ * **2015-12-24** Replace all query_parm values with one global query_parm in test_vivopump.py.

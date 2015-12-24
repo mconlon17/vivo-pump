@@ -18,6 +18,26 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD license"
 __version__ = "1.00"
 
+QUERY_PARMS = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
+               'username': 'vivo_root@school.edu',
+               'password': 'v;bisons',
+               'uriprefix': 'http://vivo.school.edu/individual/n',
+               'prefix': ('PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n'
+                          'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n'
+                          'PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>\n'
+                          'PREFIX owl:   <http://www.w3.org/2002/07/owl#>\n'
+                          'PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>\n'
+                          'PREFIX bibo: <http://purl.org/ontology/bibo/>\n'
+                          'PREFIX event: <http://purl.org/NET/c4dm/event.owl#>\n'
+                          'PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n'
+                          'PREFIX obo: <http://purl.obolibrary.org/obo/>\n'
+                          'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n'
+                          'PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>\n'
+                          'PREFIX ufVivo: <http://vivo.school.edu/ontology/uf-extension#>\n'
+                          'PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>\n'
+                          'PREFIX vivo: <http://vivoweb.org/ontology/core#>\n'
+                          )}
+
 
 class ReplaceInitialsCase(unittest.TestCase):
     def test_replace_initials_default(self):
@@ -69,32 +89,14 @@ class ParseDatePartsCase(unittest.TestCase):
 
 
 class NewUriTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix': ('PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>'
-                              'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'
-                              'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>'
-                              'PREFIX owl: <http://www.w3.org/2002/07/owl#>'
-                              'PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>'
-                              'PREFIX bibo: <http://purl.org/ontology/bibo/>'
-                              'PREFIX event: <http://purl.org/NET/c4dm/event.owl#>'
-                              'PREFIX foaf: <http://xmlns.com/foaf/0.1/>'
-                              'PREFIX obo: <http://purl.obolibrary.org/obo/>'
-                              'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>'
-                              'PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>'
-                              'PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>'
-                              'PREFIX vivo: <http://vivoweb.org/ontology/core#>')
-                   }
 
     def test_new_uri_default(self):
-        uri = new_uri(NewUriTestCase.query_parms)
+        uri = new_uri(QUERY_PARMS)
         print uri
         self.assertTrue(len(uri) > 0)
 
     def test_new_uri_prefix(self):
-        parms = NewUriTestCase.query_parms
+        parms = QUERY_PARMS
         parms['uriprefix'] = 'http://my.vivo.edu/date'
         uri = new_uri(parms)
         print uri
@@ -102,45 +104,30 @@ class NewUriTestCase(unittest.TestCase):
 
 
 class ReadUpdateDefTestCase(unittest.TestCase):
-    prefix = (
-        'PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>'
-        'PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>'
-        'PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>'
-        'PREFIX owl:   <http://www.w3.org/2002/07/owl#>'
-        'PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>'
-        'PREFIX bibo: <http://purl.org/ontology/bibo/>'
-        'PREFIX event: <http://purl.org/NET/c4dm/event.owl#>'
-        'PREFIX foaf: <http://xmlns.com/foaf/0.1/>'
-        'PREFIX obo: <http://purl.obolibrary.org/obo/>'
-        'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>'
-        'PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>'
-        'PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>'
-        'PREFIX vivo: <http://vivoweb.org/ontology/core#>'
-    )
 
     def test_read_normal_def(self):
-        update_def = read_update_def('data/grant_def.json', prefix=ReadUpdateDefTestCase.prefix)
+        update_def = read_update_def('data/grant_def.json', prefix=QUERY_PARMS['prefix'])
         self.assertTrue(update_def.keys() == ['entity_def', 'column_defs'])
 
     def test_substitution(self):
         from rdflib import URIRef
-        update_def = read_update_def('data/pump_def.json', prefix=ReadUpdateDefTestCase.prefix)
+        update_def = read_update_def('data/pump_def.json', prefix=QUERY_PARMS['prefix'])
         self.assertTrue(update_def['entity_def']['type']) == \
             URIRef(u'http://vivoweb.org/ontology/core#Building')
 
     def test_invalid_def(self):
         with self.assertRaises(InvalidDefException):
-            update_def = read_update_def('data/grant_invalid_def.json', prefix=ReadUpdateDefTestCase.prefix)
+            update_def = read_update_def('data/grant_invalid_def.json', prefix=QUERY_PARMS['prefix'])
             print update_def
 
     def test_invalid_multiple_def(self):
         with self.assertRaises(InvalidDefException):
-            update_def = read_update_def('data/grant_invalid_multiple_def.json', prefix=ReadUpdateDefTestCase.prefix)
+            update_def = read_update_def('data/grant_invalid_multiple_def.json', prefix=QUERY_PARMS['prefix'])
             print update_def
 
     def test_novalue_def(self):
         with self.assertRaises(InvalidDefException):
-            update_def = read_update_def('data/person_novalue_def.json', prefix=ReadUpdateDefTestCase.prefix)
+            update_def = read_update_def('data/person_novalue_def.json', prefix=QUERY_PARMS['prefix'])
             print update_def
 
     def test_pathlength_def(self):
@@ -150,7 +137,7 @@ class ReadUpdateDefTestCase(unittest.TestCase):
             print n
 
     def test_update_def_order(self):
-        update_def = read_update_def('data/grant_def.json', prefix=ReadUpdateDefTestCase.prefix)
+        update_def = read_update_def('data/grant_def.json', prefix=QUERY_PARMS['prefix'])
         self.assertEqual(update_def['entity_def']['order'][0:4], [u'deptid', u'direct_costs',
                                                                   u'cois', u'end_date'])
 
@@ -203,31 +190,10 @@ class MakeRdfTermTestCase(unittest.TestCase):
 
 
 class GetGraphTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_normal_case(self):
-        update_def = read_update_def('data/grant_def.json', prefix=GetGraphTestCase.query_parms['prefix'])
-        a = get_graph(update_def, GetGraphTestCase.query_parms)
+        update_def = read_update_def('data/grant_def.json', prefix=QUERY_PARMS['prefix'])
+        a = get_graph(update_def, QUERY_PARMS)
         print len(a)
         self.assertTrue(len(a) == 11)
 
@@ -278,33 +244,12 @@ class WriteCSVTestCase(unittest.TestCase):
 
 
 class VIVOQueryTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_vivo_query(self):
         result = vivo_query("""
         SELECT ?label
         WHERE { <http://vivo.school.edu/individual/n1133> rdfs:label ?label }
-        """, VIVOQueryTestCase.query_parms)
+        """, QUERY_PARMS)
         print result
         self.assertTrue(len(result) > 0)
 
@@ -314,120 +259,35 @@ PREFIX vivo: <http://vivoweb.org/ontology/core#>
             result = vivo_query("""
             SEWECT ?label
             WHERE { <http://vivo.school.edu/individual/n25562> rdfs:label ?label }
-            """, VIVOQueryTestCase.query_parms)
+            """, QUERY_PARMS)
             print result
 
 
 class VIVOGetTypesTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_vivo_get_types(self):
-        result = get_vivo_types("?uri a foaf:Person .", VIVOGetTypesTestCase.query_parms)
+        result = get_vivo_types("?uri a foaf:Person .", QUERY_PARMS)
         self.assertTrue(len(result) > 0)
 
 
 class VIVOGetUFIDTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_vivo_get_ufid(self):
-        result = get_vivo_ufid(VIVOGetUFIDTestCase.query_parms)
+        result = get_vivo_ufid(QUERY_PARMS)
         self.assertTrue(len(result) > 0)
 
 
 class VIVOGetAuthorsTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_vivo_get_authors(self):
-        result = get_vivo_authors(VIVOGetAuthorsTestCase.query_parms)
+        result = get_vivo_authors(QUERY_PARMS)
         self.assertTrue(len(result) > 0)
 
 
 class VIVOGetSponsorsTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX ufVivo: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_vivo_get_sponsorid(self):
-        result = get_vivo_sponsorid(VIVOGetSponsorsTestCase.query_parms)
+        result = get_vivo_sponsorid(QUERY_PARMS)
         print len(result)
         self.assertTrue(len(result) > 0)
 
@@ -1548,34 +1408,13 @@ class PumpEnumTestCase(unittest.TestCase):
 
 
 class CreateEnumTestCase(unittest.TestCase):
-    query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                   'username': 'vivo_root@school.edu',
-                   'password': 'v;bisons',
-                   'uriprefix': 'http://vivo.school.edu/individual/n',
-                   'prefix':
-'''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-'''
-                   }
 
     def test_normal_case(self):
         from vivopump import create_enum
         import os
         filename = "data/__test_create_enum.txt"
         query = "select ?short ?vivo where {?vivo a foaf:Person . ?vivo rdfs:label ?short .} ORDER BY ?short"
-        create_enum(filename, query, CreateEnumTestCase.query_parms)
+        create_enum(filename, query, QUERY_PARMS)
         self.assertTrue(os.path.isfile(filename))
         os.remove(filename)
 
@@ -1584,28 +1423,8 @@ class PubMedTest(unittest.TestCase):
 
     def test_get_person_vivo_pmids(self):
         from pubmed import get_person_vivo_pmids
-        query_parms = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
-                       'username': 'vivo_root@school.edu',
-                       'password': 'v;bisons',
-                       'uriprefix': 'http://vivo.school.edu/individual/n',
-                       'prefix':
-                           '''
-PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
-PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX event: <http://purl.org/NET/c4dm/event.owl#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf: <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vitrop: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo: <http://vivoweb.org/ontology/core#>
-                           '''
-                       }
-        result = get_person_vivo_pmids("http://vivo.school.edu/individual/n1133", query_parms)
+
+        result = get_person_vivo_pmids("http://vivo.school.edu/individual/n1133", QUERY_PARMS)
         print result
         self.assertTrue(len("PMIDList") > 0)
 
