@@ -143,35 +143,9 @@ class ReadUpdateDefTestCase(unittest.TestCase):
 
 
 class MakeUpdateQueryTestCase(unittest.TestCase):
-    prefix = """
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX swrl:     <http://www.w3.org/2003/11/swrl#>
-PREFIX swrlb:    <http://www.w3.org/2003/11/swrlb#>
-PREFIX vitro:    <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-PREFIX wgs84:    <http://www.w3.org/2003/01/geo/wgs84_pos#>
-PREFIX bibo:     <http://purl.org/ontology/bibo/>
-PREFIX c4o:      <http://purl.org/spar/c4o/>
-PREFIX cito:     <http://purl.org/spar/cito/>
-PREFIX event:    <http://purl.org/NET/c4dm/event.owl#>
-PREFIX fabio:    <http://purl.org/spar/fabio/>
-PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
-PREFIX geo:      <http://aims.fao.org/aos/geopolitical.owl#>
-PREFIX obo:      <http://purl.obolibrary.org/obo/>
-PREFIX ocrer:    <http://purl.org/net/OCRe/research.owl#>
-PREFIX ocresd:   <http://purl.org/net/OCRe/study_design.owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX uf:       <http://vivo.school.edu/ontology/uf-extension#>
-PREFIX vcard:    <http://www.w3.org/2006/vcard/ns#>
-PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
-PREFIX vivo:     <http://vivoweb.org/ontology/core#>
-PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>
-"""
 
     def test_make_query(self):
-        update_def = read_update_def('data/grant_def.json', prefix=MakeUpdateQueryTestCase.prefix)
+        update_def = read_update_def('data/grant_def.json', prefix=QUERY_PARMS['prefix'])
         for column_name, path in update_def['column_defs'].items():
             update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
             self.assertTrue(len(update_query) > 0)
