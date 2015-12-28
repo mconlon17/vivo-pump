@@ -6,12 +6,13 @@
     Install the VIVO Pump, a tool for getting and updating VIVO data to and from spreadsheets
 """
 
+from distutils.core import setup
+
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.61"
 
-from distutils.core import setup
 
 setup(
     name='vivo-pump',

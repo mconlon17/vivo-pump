@@ -25,12 +25,12 @@ def print_err(*args, **kwargs):
 def append_to_dict_list(modified_dict, key, val):
     """
     :return a list with an extra element
-        The list is retrived from the `modified_dict` at address `key`
+        The list is retrieved from the `modified_dict` at address `key`
     """
 
     try:
         my_list = modified_dict[key]
-    except:
+    except IndexError:
         # there is no list at the specified key therefore init one
         my_list = []
     my_list.append(val)
@@ -47,7 +47,7 @@ def append_to_dict_list(modified_dict, key, val):
 
 def get_vivo_disambiguation_data_from_csv(file_name):
     """"
-    Loop through the specidfied csv file which contains one vivo person per row
+    Loop through the specified csv file which contains one vivo person per row
     and generate all possible patterns from the person's name fragments.
 
     return: {

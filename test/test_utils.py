@@ -9,7 +9,7 @@ __author__ = "Andrei Sura"
 import unittest
 import utils
 
-FILE_NAME = 'tests/vivo_people.csv'
+FILE_NAME = 'test/vivo_people.csv'
 
 
 class UtilsTests(unittest.TestCase):

@@ -81,7 +81,7 @@ def get_person_vivo_pmids(uri, query_parms):
     return dict(zip(pmid, puri))
 
 
-def get_catalyst_pmids(first, middle, last, email, affiliation=None, yes=None, no=None):
+def get_catalyst_pmids(first, middle, last, email, affiliation=None):
     """
     Given an author's identifiers and affiliation information, optional lists of pmids, call the catalyst service
     to retrieve PMIDS for the author and return a list of PMIDS
@@ -90,8 +90,6 @@ def get_catalyst_pmids(first, middle, last, email, affiliation=None, yes=None, n
     :param last: author last name
     :param email: author email(s) as a list
     :param affiliation: author affiliation as a list
-    :param yes: list of pmids written by the author
-    :param no: list of pmids not written by the author
     :return: list of pmids identified by the catalyst service that have a high probability of being written by the
     author
     """

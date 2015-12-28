@@ -13,7 +13,7 @@ __version__ = "1.1.2"
 
 class TestGraph(Graph):
     """
-    Test graph for updates.  Insures starting conditions for tests
+    Test graph for updates.  Insures starting conditions for test
     """
     def __init__(self):
         Graph.__init__(self)

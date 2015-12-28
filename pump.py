@@ -178,9 +178,6 @@ class Pump(object):
         except urllib2.URLError as uerror:
             result += "Connection to VIVO failed\t" + str(uerror) + "\n" + \
                 "Check your Simple VIVO configuration and your VIVO API.\n"
-        except:
-            result += "Connection to VIVO failed\t" + "\n" + \
-                "Check your Simple VIVO configuration and your VIVO API.\n"
 
         result += str(datetime.now()) + " Test end"
         return result
@@ -387,9 +384,6 @@ class Pump(object):
         """
         from vivopump import vivo_query, make_get_data, unique_path, make_get_query, read_csv, write_csv
         import codecs
-        from vivopump import improve_title, improve_email, improve_phone_number, improve_date, \
-            improve_dollar_amount, improve_sponsor_award_id, improve_deptid, improve_display_name, \
-            improve_org_name
 
         #   Generate the get query, execute the query, shape the query results into the return object
 

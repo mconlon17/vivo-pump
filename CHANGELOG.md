@@ -435,3 +435,5 @@ modify it.  Remove query_parms (mutable argument) from calling sequence.  All te
  as public attributes. Pump has two keyword arguments: defn for definition filename and src for name of source file
  * **2015-12-20** Improvements to comments.
  * **2015-12-24** Replace all query_parm values with one global query_parm in test_vivopump.py.
+ * **2015-12-28** Rename `tests` to `test`. PEP8 improvements in utils.py, pubmed.py, pump.py, setup.py, vivo_name.py,
+ vivopump.py

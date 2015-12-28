@@ -12,7 +12,7 @@ __version__ = "1.00"
 
 def run_tests(tests):
     """
-    Run a series of tests.  Produce timing for each
+    Run a series of test.  Produce timing for each
     :return: dictionary of test timings keyed by test id.
     """
     from datetime import datetime
@@ -33,7 +33,7 @@ def run_tests(tests):
 
 def main():
     """
-    Run tests, print results
+    Run test, print results
     :return: None
     """
     tests = {

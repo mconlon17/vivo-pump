@@ -5,13 +5,16 @@ vivo_name.py - helper class for encapsulating the logic related to
 """
 
 __author__ = "Andrei Sura"
-
-import sys
+__copyright__ = "Copyright (c) 2015 Andrei Sura"
+__license__ = "New BSD license"
+__version__ = "0.8.5"
 
 # divider for the fragments in the key
+
 DIV = '|'
 
 # constants used to distinguish between disambiguation cases
+
 CASE_0 = 0
 CASE_1 = 1
 CASE_2 = 2
@@ -39,13 +42,13 @@ class VivoName(object):
         return self.case
 
     @classmethod
-    def format_as_key(self, key):
+    def format_as_key(cls, key):
         if key is None:
             return 'none'
 
         try:
             return key.encode('utf-8', errors='ignore').strip().lower()
-        except Exception as exc:
+        except UnicodeEncodeError:
             # print >>sys.stderr, "KEY: " + key
             # sys.exit()
             pass
@@ -125,5 +128,3 @@ class VivoName(object):
             return self.get_key_5()
         if CASE_6 == self.case:
             return self.get_key_6()
-
-

@@ -409,20 +409,20 @@ def read_update_def(filename, prefix):
     :return: JSON-like object from file, replacing all URI strings with URIRef objects
     """
 
-    def make_prefix_dict(prefix):
+    def make_prefix_dict(prefix_text):
         """
         Given prefix text, return a prefix dictionary with tags as keys and url strings as values
-        :param prefix:
+        :param prefix_text:
         :return: dictionary
         :rtype: dict
         """
-        prefix_dict = {}
-        prefix_list = prefix.split()
+        prefix_dictionary = {}
+        prefix_list = prefix_text.split()
         for i in range(len(prefix_list) - 2):
             if prefix_list[i].upper() == "PREFIX":
-                prefix_dict[prefix_list[i + 1]] = prefix_list[i + 2].replace('<', '').replace('>', '')
+                prefix_dictionary[prefix_list[i + 1]] = prefix_list[i + 2].replace('<', '').replace('>', '')
 
-        return prefix_dict
+        return prefix_dictionary
 
     def cast_to_rdflib(t):
         """
@@ -446,7 +446,7 @@ def read_update_def(filename, prefix):
         r = cast_table[t]
         return r
 
-    def fixit(current_object, prefix_dict):
+    def fixit(current_object, prefix_dictionary):
         """
         Read the def data structure and replace all string URIs with URIRef entities
         :param current_object: the piece of the data structure to be fixed
@@ -455,10 +455,10 @@ def read_update_def(filename, prefix):
         from rdflib import URIRef
         if isinstance(current_object, dict):
             for k in current_object.keys():
-                current_object[k] = fixit(current_object[k], prefix_dict)
+                current_object[k] = fixit(current_object[k], prefix_dictionary)
         elif isinstance(current_object, list):
             for i in range(0, len(current_object)):
-                current_object[i] = fixit(current_object[i], prefix_dict)
+                current_object[i] = fixit(current_object[i], prefix_dictionary)
         elif isinstance(current_object, basestring):
             if current_object.startswith("http://"):
                 current_object = URIRef(current_object)
@@ -467,8 +467,8 @@ def read_update_def(filename, prefix):
             elif ':' in current_object:
                 k = current_object.find(':')
                 tag = str(current_object[0:k + 1])
-                if tag in prefix_dict:
-                    current_object = URIRef(str(current_object).replace(tag, prefix_dict[tag]))
+                if tag in prefix_dictionary:
+                    current_object = URIRef(str(current_object).replace(tag, prefix_dictionary[tag]))
         return current_object
 
     def add_order(a, b):

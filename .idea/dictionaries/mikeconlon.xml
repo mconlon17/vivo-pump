@@ -17,6 +17,7 @@
       <w>defname</w>
       <w>defs</w>
       <w>demarc</w>
+      <w>disambig</w>
       <w>disambiguations</w>
       <w>fixit</w>
       <w>fname</w>
@@ -29,6 +30,7 @@
       <w>getpmids</w>
       <w>healthcare</w>
       <w>herror</w>
+      <w>hlthcare</w>
       <w>homedept</w>
       <w>interfield</w>
       <w>intra</w>
@@ -38,6 +40,7 @@
       <w>isoformat</w>
       <w>iter</w>
       <w>jwru</w>
+      <w>kwds</w>
       <w>levelname</w>
       <w>lname</w>
       <w>loglevel</w>
@@ -56,6 +59,7 @@
       <w>parms</w>
       <w>pathlength</w>
       <w>pmids</w>
+      <w>prac</w>
       <w>proc</w>
       <w>puri</w>
       <w>pyunit</w>
@@ -72,7 +76,9 @@
       <w>stardog</w>
       <w>statuscode</w>
       <w>statusmessage</w>
+      <w>stderr</w>
       <w>stdout</w>
+      <w>sura</w>
       <w>swrl</w>
       <w>swrlb</w>
       <w>tdata</w>
@@ -89,6 +95,7 @@
       <w>vitrop</w>
       <w>vivopump</w>
       <w>vivotools</w>
+      <w>vname</w>
       <w>workingtitle</w>
       <w>wuft</w>
     </words>
