@@ -4,10 +4,10 @@
 """
     sv.py: Simple VIVO
 
-    Uses the VIVO Pump to provide data management service for VIVO.  Tabular data is mapped by the pump in and out
-    of VIVO.
-
-    Produce a spreadsheet from VIVO that has the entities and attributes ready for editing and updating
+    Uses the VIVO Pump to provide data management services for VIVO.  Tabular data is mapped by the pump in and out
+    of VIVO.  Simple VIVO can be used from the command line to get data from VIVO into speadsheets (delimited text
+    files).  Spreadsheets can be edited using any text editor or spreadsheet program.  The resulting imporved data
+    can be used to update VIVO.
 
     Inputs:  spreadsheet containing updates and additions.  Definition file containing maps to/from columns to
         VIVO objects.  Enumeration tables for translating spreadsheet values to VIVO values and back.  VIVO for
@@ -18,7 +18,6 @@
     See CHANGELOG.md for history
 """
 
-
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
@@ -26,6 +25,7 @@ __version__ = "0.8.6"
 
 #   Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
 #   is used
+#
 #   1. Defaults in the code.  These defaults are coded for each parameter in the add_argument calls below
 #   2. Values in the config file.  sv.py will read a config file and set the values of the parameters
 #   3. Command line parameters
