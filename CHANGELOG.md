@@ -444,4 +444,4 @@ modify it.  Remove query_parms (mutable argument) from calling sequence.  All te
  improvements in test_utils.  utils.py moved to disambiguate.  vivo_names.py moved to disambiguate.  Debug 
  parameter added to sv.cfg in main.  test_format added to test_improve.py.  eval replaced with improve in pump.
  Fixed bug in improve_jobcode_description that resulting in multiple blanks surrounding the word "and" when 
- substituted for an ampersand.
+ substituted for an ampersand.  Directory cleanup.  Add README.md to all new folders.

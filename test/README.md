@@ -2,7 +2,8 @@
 
 ## Unit Tests
 
-Test cases are in `test_vivopump.py`.  Test data are in the data folder.
+Test cases are in `test_x.py`, where 'x' is the name of the module being tested.  Test data are in the 
+data folder.
 
 Many of the cases use a synthetic graph named `TestGraph`, imported from `testgraph.py`
 
