@@ -437,4 +437,11 @@ modify it.  Remove query_parms (mutable argument) from calling sequence.  All te
  * **2015-12-24** Replace all query_parm values with one global query_parm in test_vivopump.py.
  * **2015-12-28** Rename `tests` to `test`. PEP8 improvements in utils.py, pubmed.py, pump.py, setup.py, vivo_name.py,
  vivopump.py. Improved comments in `sv.py`
- * **2015-12-30** Improve education example.
+ * **2015-12-30** Improve education example.  Reorganize code:  New folder disambiguate for name parsing and
+ matching functions.  New folder improve for text improvement functions.  New folder pubmed for catalyst API and
+ Pubmed handlers.  New folder pump for pump and vivopump.  Improve functions moved from vivopump to improve.
+ New test_improve.py for testing text improvement functions -- tests removed from vivopump.py.  Code formatting
+ improvements in test_utils.  utils.py moved to disambiguate.  vivo_names.py moved to disambiguate.  Debug 
+ parameter added to sv.cfg in main.  test_format added to test_improve.py.  eval replaced with improve in pump.
+ Fixed bug in improve_jobcode_description that resulting in multiple blanks surrounding the word "and" when 
+ substituted for an ampersand.

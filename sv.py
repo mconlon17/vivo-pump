@@ -21,7 +21,7 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.6"
+__version__ = "0.8.7"
 
 #   Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
 #   is used
@@ -44,8 +44,8 @@ def main():
     """
     import sys
     from datetime import datetime
-    from vivopump import get_args, DefNotFoundException
-    from pump import Pump
+    from pump.vivopump import get_args, DefNotFoundException
+    from pump.pump import Pump
 
     return_code = 0
     print datetime.now(), "Start"

@@ -9,10 +9,11 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, improve_phone_number, improve_display_name, \
-    improve_jobcode_description
 import shelve
 import sys
+
+from pump.vivopump import read_csv_fp, write_csv_fp, improve_phone_number, improve_display_name, \
+    improve_jobcode_description
 
 contact_shelve = shelve.open('contact.db')
 contact_ufids = set(contact_shelve.keys())  # a set of ufids that will not be in the output

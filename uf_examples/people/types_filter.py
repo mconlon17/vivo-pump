@@ -20,8 +20,9 @@ __copyright__ = "Copyright 2015 (c), Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, get_vivo_types, get_parms, read_csv
 import sys
+
+from pump.vivopump import read_csv_fp, write_csv_fp, get_vivo_types, get_parms, read_csv
 
 parms = get_parms()
 type_data = read_csv('person_types.txt', delimiter='\t')

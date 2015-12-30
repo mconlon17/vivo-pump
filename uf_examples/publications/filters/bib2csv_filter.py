@@ -10,9 +10,11 @@ __license__ = "New BSD License"
 __version__ = "0.01"
 
 import sys
-from utils import print_err
+
 from bibtexparser import loads
-from vivopump import write_csv_fp
+
+from disambiguate.utils import print_err
+from pump.vivopump import write_csv_fp
 
 
 def bib2csv(bib_data):

@@ -29,9 +29,10 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from utils import print_err
-from vivopump import read_csv_fp, write_csv_fp, improve_display_name
 import sys
+
+from disambiguate.utils import print_err
+from pump.vivopump import read_csv_fp, write_csv_fp, improve_display_name
 
 
 def parse_author_data(author_data, affiliation_data, max_list_length=50):
@@ -49,7 +50,7 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
     :return: author_list.  A list of authors. Each author is a dict with seven
     elements.
     """
-    from vivopump import replace_initials
+    from pump.vivopump import replace_initials
     author_list = []
     author_names = author_data.split(' and ')
     list_length = 0

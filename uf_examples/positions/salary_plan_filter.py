@@ -9,8 +9,9 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, read_csv, write_csv_fp
 import sys
+
+from pump.vivopump import read_csv_fp, read_csv, write_csv_fp
 
 plan_data = read_csv('salary_plan_enum.txt', delimiter='\t')
 vivo_plans = [plan_data[x]['short'] for x in plan_data if plan_data[x]['vivo'] != "None"]  # list of qualifying plans

@@ -10,8 +10,9 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp
 import sys
+
+from pump.vivopump import read_csv_fp, write_csv_fp
 
 data_in = read_csv_fp(sys.stdin)
 data_out = {}

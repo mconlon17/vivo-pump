@@ -9,9 +9,10 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp
 import shelve
 import sys
+
+from pump.vivopump import read_csv_fp, write_csv_fp
 
 uri_exception_shelve = shelve.open('uri_exceptions.db')
 uri_exceptions = set(uri_exception_shelve.keys())  # a set of uris that will not have data updates

@@ -17,10 +17,13 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
 __version__ = "0.3"
 
-from datetime import datetime
-from vivopump import read_csv
 import shelve
 import os
+
+from datetime import datetime
+
+from pump.vivopump import read_csv
+
 
 #   Start here
 

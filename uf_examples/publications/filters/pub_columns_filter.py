@@ -10,10 +10,11 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp
-from vivopump import improve_title, parse_pages, parse_date_parts
 import sys
-from utils import print_err
+
+from pump.vivopump import read_csv_fp, write_csv_fp
+from pump.vivopump import improve_title, parse_pages, parse_date_parts
+from disambiguate.utils import print_err
 
 data_in = read_csv_fp(sys.stdin)
 column_names = data_in[1].keys()

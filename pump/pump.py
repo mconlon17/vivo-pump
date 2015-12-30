@@ -25,7 +25,7 @@ import sys
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2015 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.6"
+__version__ = "0.8.7"
 
 # Establish logging
 
@@ -383,6 +383,7 @@ class Pump(object):
         :return:  Number of rows of data
         """
         from vivopump import vivo_query, make_get_data, unique_path, make_get_query, read_csv, write_csv
+        from improve.improve import improve
         import codecs
 
         #   Generate the get query, execute the query, shape the query results into the return object
@@ -424,7 +425,7 @@ class Pump(object):
                             a = set()
                             for x in data[uri][name]:
                                 was_string = x
-                                new_string = eval(path[len(path) - 1]['object']['filter'])(x)
+                                new_string = improve(path[len(path) - 1]['object']['filter'], x)
                                 if was_string != new_string:
                                     logger.debug(u"{} {} {} FILTER IMPROVED {} to {}".
                                                  format(uri, name, path[len(path) - 1]['object']['filter'],

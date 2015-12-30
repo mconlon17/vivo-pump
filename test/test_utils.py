@@ -4,10 +4,10 @@
 test_utils.py -- Test functions in utils.py
 """
 
-__author__ = "Andrei Sura"
-
 import unittest
-import utils
+from disambiguate import utils
+
+__author__ = "Andrei Sura"
 
 FILE_NAME = 'test/vivo_people.csv'
 

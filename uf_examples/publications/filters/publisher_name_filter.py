@@ -39,7 +39,8 @@ __version__ = "1.1"
 
 import sys
 import fileinput
-from vivopump import read_csv
+
+from pump.vivopump import read_csv
 
 names = read_csv("filters/publisher_name_filter.csv")
 

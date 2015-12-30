@@ -9,10 +9,12 @@ __copyright__ = "Copyright 2015 (c) Michael Conlon"
 __license__ = "New BSD License"
 __version__ = "0.01"
 
-from vivopump import read_csv_fp, write_csv_fp, improve_org_name
-from pump import __version__
-from datetime import date
 import sys
+
+from datetime import date
+
+from pump.vivopump import read_csv_fp, write_csv_fp, improve_org_name
+from pump.pump import __version__
 
 data_in = read_csv_fp(sys.stdin)
 var_names = data_in[data_in.keys()[0]].keys()  # create a list of var_names from the first row

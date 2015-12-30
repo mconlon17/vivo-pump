@@ -63,7 +63,7 @@ def get_person_vivo_pmids(uri, query_parms):
     :param uri:
     :return: a dictionary keyed by pmid with uris of the pubs for each pmid
     """
-    from vivopump import vivo_query
+    from pump.vivopump import vivo_query
     query = """SELECT (MAX(?paper_uri) AS ?puri) ?pmid
     WHERE {
         <{}> vivo:relatedBy ?a .

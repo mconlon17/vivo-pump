@@ -6,8 +6,9 @@ utils.py - helper functions
 from __future__ import print_function
 from sys import stderr
 import csv
-from vivo_name import VivoName
-from vivo_name import CASE_0, CASE_1, CASE_2, CASE_3, CASE_4, CASE_5, CASE_6
+
+from disambiguate.vivo_name import VivoName
+from disambiguate.vivo_name import CASE_0, CASE_1, CASE_2, CASE_3, CASE_4, CASE_5, CASE_6
 
 __author__ = "Andrei Sura"
 __copyright__ = "Copyright (c) 2015 Andrei Sura"

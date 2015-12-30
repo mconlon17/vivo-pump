@@ -10,7 +10,8 @@ __license__ = "BSD 3-Clause license"
 __version__ = "0.1.2"
 
 from datetime import datetime
-from vivopump import get_parms, create_enum
+
+from pump.vivopump import get_parms, create_enum
 
 
 def main():

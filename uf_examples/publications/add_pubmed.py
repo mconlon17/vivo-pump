@@ -202,7 +202,7 @@ def find_author(author):
     that match the author in VIVO.  Could be an empty set, could be a singleton,
     could be a set requiring further disambiguation
     """
-    from vivopump import vivo_query
+    from pump.vivopump import vivo_query
     case = author_case(author)
     queries = author_queries(case, author)
     author_uri_set = set([])
@@ -224,7 +224,7 @@ def make_authorship_rdf(pub_uri, author_uri, rank, corresponding=False):
     """
     Given data values, create the RDF for an authorship
     """
-    from vivopump import new_uri
+    from pump.vivopump import new_uri
     ardf = ""
     authorship_uri = new_uri()
     add = assert_resource_property(authorship_uri, "rdf:type",
@@ -301,7 +301,7 @@ def get_pubmed(pmid, author_uris=None):
     set of size > 1, the author_uris will be examined for matches to
     assist with disambiguation.
     """
-    from vivopump import new_uri
+    from pump.vivopump import new_uri
     ardf = ""
     record = get_entrez_record(pmid)
     if record is None:

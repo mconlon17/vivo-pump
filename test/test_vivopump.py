@@ -5,13 +5,14 @@
 """
 
 import unittest
-from vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, improve_email, improve_phone_number, \
-    comma_space, read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, get_vivo_sponsorid, \
-    improve_title, make_update_query, read_update_def, make_rdf_term, get_graph, \
-    improve_dollar_amount, InvalidDataException, InvalidDefException, PathLengthException, improve_date, \
-    improve_deptid, improve_sponsor_award_id, improve_jobcode_description, improve_course_title, replace_initials, \
-    parse_pages, parse_date_parts, improve_display_name
-from pump import Pump
+
+from pump.vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, \
+    read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, get_vivo_sponsorid, \
+    make_update_query, read_update_def, make_rdf_term, get_graph, \
+    InvalidDefException, PathLengthException, \
+    replace_initials, \
+    parse_pages, parse_date_parts
+from pump.pump import Pump
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2015 (c) Michael Conlon"
@@ -277,221 +278,6 @@ class WriteUpdateDefTestCase(unittest.TestCase):
         os.remove(filename)
 
 
-class ImproveEmailTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_email = "mconlon@ufl.edu"
-        out_email = improve_email(in_email)
-        self.assertEqual(in_email, out_email)
-
-
-class ImproveDisplayNameTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_name = "Conlon, Mike"
-        out_name = improve_display_name(in_name)
-        self.assertEqual(in_name, out_name)
-
-    def test_standard_case(self):
-        in_name = "CONLON,MIKE"
-        out_name = improve_display_name(in_name)
-        self.assertEqual("Conlon, Mike", out_name)
-
-
-class ImprovePhoneNumberTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_phone = "(352) 273-8700"
-        out_phone = improve_phone_number(in_phone)
-        self.assertEqual(in_phone, out_phone)
-
-    def test_uf_special(self):
-        in_phone = "3-8700"
-        out_phone = improve_phone_number(in_phone)
-        self.assertEqual("(352) 273-8700", out_phone)
-
-
-class CommaSpaceTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_string = "A, okay"
-        out_string = comma_space(in_string)
-        self.assertEqual(in_string, out_string)
-
-    def test_trailing_comma(self):
-        in_string = "A, okay,"
-        out_string = comma_space(in_string)
-        self.assertEqual(in_string, out_string)
-
-    def test_adding_spaces_after_commas(self):
-        in_string = "one,two,three"
-        out_string = comma_space(in_string)
-        self.assertEqual("one, two, three", out_string)
-
-
-class ImproveJobCodeDescriptionTestCase(unittest.TestCase):
-    def test_simple_substitution(self):
-        in_title = "ASST PROF"
-        out_title = improve_jobcode_description(in_title)
-        print out_title
-        self.assertEqual("Assistant Professor", out_title)
-
-    def test_substitution_at_end(self):
-        in_title = "RES ASO PROF & DIR"
-        out_title = improve_jobcode_description(in_title)
-        print out_title
-        self.assertEqual("Research Associate Professor  and  Director", out_title)
-
-    def test_preserve_unicode(self):
-        in_title = u"CRD TECH PRG 2"
-        out_title = improve_jobcode_description(in_title)
-        print out_title
-        self.assertEqual(u"Coordinator Technician Program 2", out_title)
-
-
-class ImproveCourseTitleTestCase(unittest.TestCase):
-    def test_simple_substitution(self):
-        in_title = "INTRO TO STAT"
-        out_title = improve_course_title(in_title)
-        print out_title
-        self.assertEqual("Introduction to Statistics", out_title)
-
-    def test_substitution_at_end(self):
-        in_title = "HIST OF HLTHCARE"
-        out_title = improve_course_title(in_title)
-        print out_title
-        self.assertEqual("History of Healthcare", out_title)
-
-    def test_preserve_unicode(self):
-        in_title = u"SPEC TOP IN PRAC"
-        out_title = improve_course_title(in_title)
-        print out_title
-        self.assertEqual(u"Special Topics in Practice", out_title)
-
-
-class ImproveTitleTestCase(unittest.TestCase):
-    def test_simple_substitution(self):
-        in_title = " hiv in fla, a multi-ctr  trial  "
-        out_title = improve_title(in_title)
-        print out_title
-        self.assertEqual("HIV in Florida, a Multi-Center Trial", out_title)
-
-    def test_substitution_at_end(self):
-        in_title = "Agricultural Engineering Bldg"
-        out_title = improve_title(in_title)
-        print out_title
-        self.assertEqual("Agricultural Engineering Building", out_title)
-
-    def test_preserve_unicode(self):
-        in_title = u"François Börner"
-        out_title = improve_title(in_title)
-        print out_title
-        self.assertEqual(u"François Börner", out_title)
-
-    def test_comma_spacing(self):
-        in_title = "a big,fat comma"
-        out_title = improve_title(in_title)
-        print out_title
-        self.assertEqual("A Big, Fat Comma", out_title)
-
-    def test_apostrophe(self):
-        in_title = "Tom's"
-        out_title = improve_title(in_title)
-        print out_title
-        self.assertEqual("Tom's", out_title)
-
-
-class ImproveDollarAmountTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_string = "1234.56"
-        out_string = improve_dollar_amount(in_string)
-        self.assertEqual(in_string, out_string)
-
-    def test_remove_chars(self):
-        in_string = "$1,234.56"
-        out_string = improve_dollar_amount(in_string)
-        self.assertEqual("1234.56", out_string)
-
-    def test_add_cents(self):
-        in_string = "123"
-        out_string = improve_dollar_amount(in_string)
-        self.assertEqual("123.00", out_string)
-
-    def test_invalid_data(self):
-        in_string = "A6"
-        with self.assertRaises(InvalidDataException):
-            out_string = improve_dollar_amount(in_string)
-            print out_string
-
-
-class ImproveDateTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_string = "2014-12-09"
-        out_string = improve_date(in_string)
-        self.assertEqual(in_string, out_string)
-
-    def test_short(self):
-        in_string = "14-12-9"
-        out_string = improve_date(in_string)
-        self.assertEqual("2014-12-09", out_string)
-
-    def test_separators(self):
-        in_string = "34/2/1"
-        out_string = improve_date(in_string)
-        self.assertEqual("2034-02-01", out_string)
-
-    def test_invalid_data(self):
-        in_string = "A6"
-        with self.assertRaises(InvalidDataException):
-            out_string = improve_date(in_string)
-            print out_string
-
-    def test_month_word(self):
-        in_string = "15-aug-9"
-        out_string = improve_date(in_string)
-        self.assertEqual("2015-08-09", out_string)
-
-    def test_invalid_data(self):
-        in_string = "15-alg-9"
-        with self.assertRaises(InvalidDataException):
-            out_string = improve_date(in_string)
-            print out_string
-
-
-class ImproveDeptIdTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_string = "16350100"
-        out_string = improve_deptid(in_string)
-        self.assertEqual(in_string, out_string)
-
-    def test_short(self):
-        in_string = "1234567"
-        out_string = improve_deptid(in_string)
-        self.assertEqual("01234567", out_string)
-
-    def test_invalid_data(self):
-        in_string = "A6"
-        with self.assertRaises(InvalidDataException):
-            out_string = improve_deptid(in_string)
-            print out_string
-
-
-class ImproveSponsorAwardIdTestCase(unittest.TestCase):
-    def test_no_op(self):
-        in_string = "14 A 76 Jan 2009"
-        out_string = improve_sponsor_award_id(in_string)
-        self.assertEqual(in_string, out_string)
-
-    def test_strip(self):
-        in_string = "  1234567 "
-        out_string = improve_sponsor_award_id(in_string)
-        self.assertEqual("1234567", out_string)
-
-    def test_nih(self):
-        in_string = "5R01 DK288283 "
-        out_string = improve_sponsor_award_id(in_string)
-        self.assertEqual("R01DK288283", out_string)
-
-    def test_nih_upper(self):
-        in_string = "5r01 Dk288283 "
-        out_string = improve_sponsor_award_id(in_string)
-        self.assertEqual("R01DK288283", out_string)
 
 
 class PumpTestCase(unittest.TestCase):
@@ -553,7 +339,7 @@ class PumpGetTestCase(unittest.TestCase):
         self.assertEqual(2, n_rows)
 
     def test_boolean_get(self):
-        from vivopump import read_csv
+        from pump.vivopump import read_csv
         p = Pump("data/faculty_boolean_def.json")
         p.get()
         data = read_csv('pump_data.txt', delimiter='\t')
@@ -607,7 +393,7 @@ class PumpUpdateCallTestCase(unittest.TestCase):
 class MakeRdfTermFromSourceTestCase(unittest.TestCase):
     def test_empty(self):
         from rdflib import Literal
-        from vivopump import make_rdf_term_from_source
+        from pump.vivopump import make_rdf_term_from_source
 
         step_def = {
             "object": {
@@ -621,7 +407,7 @@ class MakeRdfTermFromSourceTestCase(unittest.TestCase):
 
     def test_empty_compare(self):
         from rdflib import Literal
-        from vivopump import make_rdf_term_from_source
+        from pump.vivopump import make_rdf_term_from_source
 
         step_def = {
             "object": {
@@ -635,7 +421,7 @@ class MakeRdfTermFromSourceTestCase(unittest.TestCase):
 
     def test_lang(self):
         from rdflib import Literal
-        from vivopump import make_rdf_term_from_source
+        from pump.vivopump import make_rdf_term_from_source
 
         step_def = {
             "object": {
@@ -649,7 +435,7 @@ class MakeRdfTermFromSourceTestCase(unittest.TestCase):
 
     def test_ref(self):
         from rdflib import URIRef
-        from vivopump import make_rdf_term_from_source
+        from pump.vivopump import make_rdf_term_from_source
 
         step_def = {
             "object": {
@@ -662,7 +448,7 @@ class MakeRdfTermFromSourceTestCase(unittest.TestCase):
 
     def test_ref_string(self):
         from rdflib import URIRef
-        from vivopump import make_rdf_term_from_source
+        from pump.vivopump import make_rdf_term_from_source
 
         step_def = {
             "object": {
@@ -677,7 +463,7 @@ class MakeRdfTermFromSourceTestCase(unittest.TestCase):
 class PumpUpdateLiteralsTestCase(unittest.TestCase):
 
     def test_add_unicode(self):
-        from rdflib import URIRef, Literal, XSD
+        from rdflib import URIRef, Literal
         from testgraph import TestGraph
         p = Pump("data/person_def.json")
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n710', u'name': u'ქართული'}}
@@ -689,7 +475,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
                                                  Literal("ქართული")) in add)
 
     def test_change_unicode(self):
-        from rdflib import URIRef, Literal, XSD
+        from rdflib import URIRef, Literal
         from testgraph import TestGraph
         p = Pump("data/person_def.json")
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n711', u'name': u'বিষ্ণুপ্রিয়া মণিপুরী'}}
@@ -704,7 +490,7 @@ class PumpUpdateLiteralsTestCase(unittest.TestCase):
                                                  Literal("Ελληνικά")) in sub)
 
     def test_delete_unicode(self):
-        from rdflib import URIRef, Literal, XSD
+        from rdflib import URIRef, Literal
         from testgraph import TestGraph
         p = Pump("data/person_def.json")
         p.update_data = {1: {u'uri': u'http://vivo.school.edu/individual/n711', u'name': u'None'}}
@@ -1384,7 +1170,7 @@ class PumpEnumTestCase(unittest.TestCase):
 class CreateEnumTestCase(unittest.TestCase):
 
     def test_normal_case(self):
-        from vivopump import create_enum
+        from pump.vivopump import create_enum
         import os
         filename = "data/__test_create_enum.txt"
         query = "select ?short ?vivo where {?vivo a foaf:Person . ?vivo rdfs:label ?short .} ORDER BY ?short"
@@ -1396,14 +1182,14 @@ class CreateEnumTestCase(unittest.TestCase):
 class PubMedTest(unittest.TestCase):
 
     def test_get_person_vivo_pmids(self):
-        from pubmed import get_person_vivo_pmids
+        from pubmed.pubmed import get_person_vivo_pmids
 
         result = get_person_vivo_pmids("http://vivo.school.edu/individual/n1133", QUERY_PARMS)
         print result
         self.assertTrue(len("PMIDList") > 0)
 
     def test_get_catalyst_pmids(self):
-        from pubmed import get_catalyst_pmids
+        from pubmed.pubmed import get_catalyst_pmids
         result = get_catalyst_pmids(first="Michael", middle="", last="Conlon", email=["mconlon@ufl.edu",
                                     "mconlon@duraspace.org"],
                                     affiliation=["%university of florida%", "%ufl.edu%"])
@@ -1411,7 +1197,7 @@ class PubMedTest(unittest.TestCase):
         self.assertTrue(len(result) > 0)
 
     def test_catalyst_getpmids_xml(self):
-        from pubmed import catalyst_getpmids_xml
+        from pubmed.pubmed import catalyst_getpmids_xml
         result = catalyst_getpmids_xml(first="David", middle="R", last="Nelson", email=["nelsodr@ufl.edu"],
                                        affiliation=["%University of Florida%"])
         print result
