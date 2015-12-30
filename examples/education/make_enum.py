@@ -72,7 +72,7 @@ def main():
     WHERE
     {
           ?vivo a vivo:DateTimeValue .
-#          ?vivo vivo:dateTimePrecision vivo:yearMonthPrecision .
+          ?vivo vivo:dateTimePrecision vivo:yearMonthPrecision .
           ?vivo vivo:dateTime ?short .
     }
     ORDER BY ?short

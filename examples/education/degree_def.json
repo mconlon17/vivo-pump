@@ -25,7 +25,6 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Person",
-                    "name": "recipient",
                     "enum": "person_enum.txt"
                 }
             }
@@ -33,7 +32,7 @@
         "degree": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -63,7 +62,6 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Organization",
-                    "name": "org",
                     "enum": "school_enum.txt"
                 }
             }
@@ -88,7 +86,7 @@
                 "object": {
                     "literal": false,
                     "type": "vivo:DateTimeInterval",
-                    "name": "awarded_date"
+                    "name": "degree_date"
                 }
             },
             {
@@ -103,6 +101,17 @@
             }
         ],
         "field": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:RO_0002353"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:EducationalProcess",
+                    "name": "educ_proc"
+                }
+            },
             {
                 "predicate": {
                     "single": true,
@@ -131,7 +140,7 @@
         "school": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:assignedBy"
                 },
                 "object": {
