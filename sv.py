@@ -44,7 +44,7 @@ def main():
     """
     import sys
     from datetime import datetime
-    from pump.vivopump import get_args, DefNotFoundException
+    from pump.vivopump import get_args, DefNotFoundException, InvalidDefException
     from pump.pump import Pump
 
     return_code = 0
@@ -57,6 +57,9 @@ def main():
         p = Pump(args.defn, args.src)
     except DefNotFoundException:
         print args.defn, "definition file not found"
+        sys.exit(1)
+    except InvalidDefException as invalid:
+        print "Invalid definition file", args.defn, "\n", invalid
         sys.exit(1)
 
     p.filter = not args.nofilters

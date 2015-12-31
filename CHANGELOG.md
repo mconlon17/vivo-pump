@@ -445,3 +445,7 @@ modify it.  Remove query_parms (mutable argument) from calling sequence.  All te
  parameter added to sv.cfg in main.  test_format added to test_improve.py.  eval replaced with improve in pump.
  Fixed bug in improve_jobcode_description that resulting in multiple blanks surrounding the word "and" when 
  substituted for an ampersand.  Directory cleanup.  Add README.md to all new folders.
+ * **2015-12-31** Object names are not checked on last step of path (this is a temporary work around -- names for
+ objects of last step of path will be set to the column_def name, after all, the path is a path to the column_def
+ name.  Fixed bug in handling of InvalidDefException.  Added type restrictions to get processing.  Type restrictions
+ passing preliminary tests.  More to do.

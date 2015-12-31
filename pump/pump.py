@@ -106,7 +106,7 @@ class Pump(object):
 
         try:
             self.update_def = read_update_def(defn, self.prefix)
-        except:
+        except IOError:
             raise DefNotFoundException(defn)
         else:
             self.enum = load_enum(self.update_def)  # When the def changes, the enum must be updated

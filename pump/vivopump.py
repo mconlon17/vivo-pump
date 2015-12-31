@@ -500,7 +500,7 @@ def read_update_def(filename, prefix):
         :param a: update_def
         :return None
         """
-        names = [y[x].get('object', None).get('name', '') for y in a['column_defs'].values() for x in range(len(y))]
+        names = [y[x].get('object', None).get('name', '') for y in a['column_defs'].values() for x in range(len(y) - 1)]
         col_names = a['column_defs'].keys()
         for name in col_names:
             if name in names:
@@ -538,7 +538,7 @@ def add_qualifiers(input_path):
     """
     Given an update_def input_path, generate the SPARQL fragment to express the qualifiers in the path, if any
     :param input_path:
-    :return:
+    :return: qualifer SPARQL string
     """
     return ' '.join([x['object'].get('qualifier', '') for x in input_path])
 
@@ -889,6 +889,19 @@ def get_parms():
     return parms
 
 
+def add_type_restriction(step):
+    """
+    for a given step, look for object type and construct a SPARQL fragement to restrict the graph
+    to objects of the type. If the object does not have a type restriction, return an empty string.
+    :param step: The step for which an object restriction is requested
+    :return: the SPARQL fragement for thr restriction, or an empty string if no type is specified
+    """
+    if 'type' in step['object']:
+        return '?' + step['object']['name'] + ' a <' + str(step['object']['type']) + '> . '
+    else:
+        return ""
+
+
 def make_get_query(update_def):
     """
     Given an update_def, return the sparql query needed to produce a spreadsheet of the data to be managed.
@@ -905,17 +918,17 @@ def make_get_query(update_def):
     for name, path in update_def['column_defs'].items():
         middle_query += '    OPTIONAL {  ?uri <' + str(path[0]['predicate']['ref']) + '> ?'
         if len(path) == 1:
-            middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
+            middle_query += name + ' . ' + add_type_restriction(path[0]) + add_qualifiers(path) + ' }\n'
         else:
-            middle_query += path[0]['object']['name'] + ' . ?' + \
+            middle_query += path[0]['object']['name'] + ' . ' + add_type_restriction(path[0]) + '?' + \
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?'
             if len(path) == 2:
-                middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
+                middle_query += name + ' . ' + add_type_restriction(path[1]) + add_qualifiers(path) + ' }\n'
             else:
-                middle_query += path[1]['object']['name'] + ' . ?' + \
+                middle_query += path[1]['object']['name'] + ' . ' + add_type_restriction(path[1]) + '?' + \
                     path[1]['object']['name'] + ' <' + str(path[2]['predicate']['ref']) + '> ?'
                 if len(path) == 3:
-                    middle_query += name + ' . ' + add_qualifiers(path) + ' }\n'
+                    middle_query += name + ' . ' + add_type_restriction(path[2]) + add_qualifiers(path) + ' }\n'
                 else:
                     raise PathLengthException('Path length >3 not supported in do_get')
     if 'order_by' in update_def['entity_def']:
