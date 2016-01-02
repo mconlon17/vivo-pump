@@ -1,2 +1,0 @@
-school	degree	field	uri	person	date
-University of Florida	Ph.D. Doctor of Philosophy	Statistics	http://vivo.school.edu/individual/n3900	Conlon, Michael	

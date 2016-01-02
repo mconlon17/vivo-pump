@@ -8,7 +8,7 @@
         "person": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
@@ -19,7 +19,7 @@
             },
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "obo:RO_0000057"
                 },
                 "object": {
@@ -47,7 +47,7 @@
         "school": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "obo:RO_0002353"
                 },
                 "object": {
@@ -58,7 +58,7 @@
             },
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "obo:RO_0000057"
                 },
                 "object": {

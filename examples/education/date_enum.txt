@@ -148,6 +148,7 @@ short	vivo
 1982-03	http://vivo.school.edu/individual/n3655097437
 1982-04	http://vivo.school.edu/individual/n465665485
 1982-05	http://vivo.school.edu/individual/n7105275773
+1982-06	http://vivo.school.edu/individual/n2276
 1982-06	http://vivo.school.edu/individual/n7295994056
 1982-07	http://vivo.school.edu/individual/n6459358439
 1982-08	http://vivo.school.edu/individual/n2395947650
