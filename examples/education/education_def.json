@@ -33,7 +33,7 @@
         "degree": [
             {
                 "predicate": {
-                    "single": true,
+                    "single": false,
                     "ref": "vivo:relates"
                 },
                 "object": {
@@ -147,7 +147,7 @@
         "school": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:assignedBy"
                 },
                 "object": {

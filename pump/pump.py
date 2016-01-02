@@ -332,9 +332,9 @@ class Pump(object):
         # Return the add and sub graphs representing the changes that need to be made to the original
 
         add = self.update_graph - self.original_graph  # Triples in update that are not in original
-        logger.info(u"Triples to add\n {}".format(add.serialize(format='nt')))
+        logger.info(u"Triples to add\n{}".format(add.serialize(format='nt')))
         sub = self.original_graph - self.update_graph  # Triples in original that are not in update
-        logger.info(u"Triples to sub\n {}".format(sub.serialize(format='nt')))
+        logger.info(u"Triples to sub\n{}".format(sub.serialize(format='nt')))
         return [add, sub]
 
     def __do_merges(self, merges):
@@ -612,8 +612,8 @@ class Pump(object):
                         self.update_graph.add((step_uri, RDF.type, step_def['object']['type']))
                     if 'label' in step_def['object']:
                         self.update_graph.add((step_uri, RDFS.label, Literal(step_def['object']['label'],
-                            datatype=step_def['object'].get('datatype', None),
-                            lang=step_def['object'].get('lang', None))))
+                                              datatype=step_def['object'].get('datatype', None),
+                                              lang=step_def['object'].get('lang', None))))
                 else:
                     step_uri = step_uris[0]
                 self.__do_the_update(row, column_name, step_uri, column_def[1], column_values, {})
@@ -663,7 +663,6 @@ class Pump(object):
         :return: None
         """
         from vivopump import make_rdf_term_from_source
-        from rdflib import RDF
 
         # Compare VIVO to Input and update as indicated
 
@@ -692,15 +691,13 @@ class Pump(object):
                     self.update_graph.remove((uri, step_def['predicate']['ref'], vivo_object))
                     logger.debug(u"{} {} {}".format(uri, step_def['predicate']['ref'], vivo_object))
 
-            #   Add processing
+            #   Add value processing
 
             elif len(vivo_objs) == 0:
                 logger.debug(u"Adding {} {}".format(column_name, column_string))
                 self.update_graph.add((uri, step_def['predicate']['ref'], column_values[0]))  # Literal or URIRef
-                if 'type' in step_def['object']:
-                    self.update_graph.add((uri, RDF.type, step_def['object']['type']))
 
-            #   Update processing
+            #   Update value processing
 
             else:
                 for vivo_object in vivo_objs.values():

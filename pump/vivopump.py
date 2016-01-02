@@ -1105,6 +1105,7 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
             g = Graph()
             for row in qresult:
                 g.add(row)
+            logger.debug(u'{} get_step_triples found'.format(len(g)))
     else:
 
         #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF))
