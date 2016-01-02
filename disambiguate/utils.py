@@ -11,7 +11,7 @@ from disambiguate.vivo_name import VivoName
 from disambiguate.vivo_name import CASE_0, CASE_1, CASE_2, CASE_3, CASE_4, CASE_5, CASE_6
 
 __author__ = "Andrei Sura"
-__copyright__ = "Copyright (c) 2015 Andrei Sura"
+__copyright__ = "Copyright (c) 2016 Andrei Sura"
 __license__ = "New BSD license"
 __version__ = "0.8.5"
 

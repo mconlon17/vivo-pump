@@ -7,7 +7,7 @@
 import unittest
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2015 (c) Michael Conlon"
+__copyright__ = "Copyright 2016 (c) Michael Conlon"
 __license__ = "New BSD license"
 __version__ = "0.1"
 

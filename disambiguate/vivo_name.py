@@ -5,7 +5,7 @@ vivo_name.py - helper class for encapsulating the logic related to
 """
 
 __author__ = "Andrei Sura"
-__copyright__ = "Copyright (c) 2015 Andrei Sura"
+__copyright__ = "Copyright (c) 2016 Andrei Sura"
 __license__ = "New BSD license"
 __version__ = "0.8.5"
 

@@ -449,3 +449,4 @@ modify it.  Remove query_parms (mutable argument) from calling sequence.  All te
  objects of last step of path will be set to the column_def name, after all, the path is a path to the column_def
  name.  Fixed bug in handling of InvalidDefException.  Added type restrictions to get processing.  Type restrictions
  passing preliminary tests.  More to do.
+ * **2016-01-01** Update copyright notices in main and modules.
