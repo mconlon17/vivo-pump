@@ -431,25 +431,25 @@ in source spreadsheets -- this supports the round tripping function.
 * **2015-12-16** Improve comments.
 * **2015-12-19** 0.8.6 Remove verbose parameter from pump calling sequence.  pump uses logging environment, does not
 modify it.  Remove query_parms (mutable argument) from calling sequence.  All tests pass.  Remove filter, intra,
- inter, rdfprefix, queryuri, uriprefix, username, password, prefix parameters from Pump calling sequence -- set these 
- as public attributes. Pump has two keyword arguments: defn for definition filename and src for name of source file
- * **2015-12-20** Improvements to comments.
- * **2015-12-24** Replace all query_parm values with one global query_parm in test_vivopump.py.
- * **2015-12-28** Rename `tests` to `test`. PEP8 improvements in utils.py, pubmed.py, pump.py, setup.py, vivo_name.py,
- vivopump.py. Improved comments in `sv.py`
- * **2015-12-30** Improve education example.  Reorganize code:  New folder disambiguate for name parsing and
- matching functions.  New folder improve for text improvement functions.  New folder pubmed for catalyst API and
- Pubmed handlers.  New folder pump for pump and vivopump.  Improve functions moved from vivopump to improve.
- New test_improve.py for testing text improvement functions -- tests removed from vivopump.py.  Code formatting
- improvements in test_utils.  utils.py moved to disambiguate.  vivo_names.py moved to disambiguate.  Debug 
- parameter added to sv.cfg in main.  test_format added to test_improve.py.  eval replaced with improve in pump.
- Fixed bug in improve_jobcode_description that resulting in multiple blanks surrounding the word "and" when 
- substituted for an ampersand.  Directory cleanup.  Add README.md to all new folders.
- * **2015-12-31** Object names are not checked on last step of path (this is a temporary work around -- names for
- objects of last step of path will be set to the column_def name, after all, the path is a path to the column_def
- name.  Fixed bug in handling of InvalidDefException.  Added type restrictions to get processing.  Type restrictions
- passing preliminary tests.  More to do.
- * **2016-01-01** Update copyright notices in main and modules.
- * **2016-01-02** Update copyright notices in examples.  Improvements to education example. Fix display of triples in
- log.  `pump.py` PEP-8 improvements. Additional logger.debug output in get_step_triples
- * **2016-01-03** Start adding type of objects to update graph
+inter, rdfprefix, queryuri, uriprefix, username, password, prefix parameters from Pump calling sequence -- set these 
+as public attributes. Pump has two keyword arguments: defn for definition filename and src for name of source file
+* **2015-12-20** Improvements to comments.
+* **2015-12-24** Replace all query_parm values with one global query_parm in test_vivopump.py.
+* **2015-12-28** Rename `tests` to `test`. PEP8 improvements in utils.py, pubmed.py, pump.py, setup.py, vivo_name.py,
+vivopump.py. Improved comments in `sv.py`
+* **2015-12-30** Improve education example.  Reorganize code:  New folder disambiguate for name parsing and
+matching functions.  New folder improve for text improvement functions.  New folder pubmed for catalyst API and
+Pubmed handlers.  New folder pump for pump and vivopump.  Improve functions moved from vivopump to improve.
+New test_improve.py for testing text improvement functions -- tests removed from vivopump.py.  Code formatting
+improvements in test_utils.  utils.py moved to disambiguate.  vivo_names.py moved to disambiguate.  Debug 
+parameter added to sv.cfg in main.  test_format added to test_improve.py.  eval replaced with improve in pump.
+Fixed bug in improve_jobcode_description that resulting in multiple blanks surrounding the word "and" when 
+substituted for an ampersand.  Directory cleanup.  Add README.md to all new folders.
+* **2015-12-31** Object names are not checked on last step of path (this is a temporary work around -- names for
+objects of last step of path will be set to the column_def name, after all, the path is a path to the column_def
+name.  Fixed bug in handling of InvalidDefException.  Added type restrictions to get processing.  Type restrictions
+passing preliminary tests.  More to do.
+* **2016-01-01** Update copyright notices in main and modules.
+* **2016-01-02** Update copyright notices in examples.  Improvements to education example. Fix display of triples in
+log.  `pump.py` PEP-8 improvements. Additional logger.debug output in get_step_triples
+* **2016-01-03** Start adding type of objects to update graph
