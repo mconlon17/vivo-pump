@@ -587,18 +587,20 @@ def make_update_query(column_name, entity_sparql, path):
                 '(?' + path[0]['object']['name'] + ' as ?o) ?t1 (<' + \
                 str(path[1]['predicate']['ref']) + '> as ?p2) ?o2 ?t2\n' + \
                 '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
-                path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' . ?' + path[0]['object']['name'] + 'a ?t1 . ?' + \
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2' + \
-                ' . ' + add_qualifiers(path) + ' \n}'
+                ' . ?o2 a ?t2 . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 3:
         query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
                 '(?' + path[0]['object']['name'] + ' as ?o) ?t1 (<' + str(path[1]['predicate']['ref']) + \
                 '> as ?p2) (?' + path[1]['object']['name'] + ' as ?o2) ?t2 (<' + str(path[2]['predicate']['ref']) + \
                 '> as ?p3) ?o3 ?t3\n' + 'where { ' + entity_sparql + '\n    ?uri <' + \
                 str(path[0]['predicate']['ref']) + '> ?' + path[0]['object']['name'] + ' . ?' + \
+                path[0]['object']['name'] + ' a ?t1 . ' + \
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
-                path[1]['object']['name'] + ' . ?' + path[1]['object']['name'] + ' <' + \
-                str(path[2]['predicate']['ref']) + '> ?o3' + ' . ' + add_qualifiers(path) + ' \n}'
+                path[1]['object']['name'] + ' . ?' + path[1]['object']['name'] + ' a ?t2 . ' + \
+                path[1]['object']['name'] + ' <' + \
+                str(path[2]['predicate']['ref']) + '> ?o3 . ?o3 a t3 . ' + add_qualifiers(path) + ' \n}'
     return query
 
 

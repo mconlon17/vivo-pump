@@ -453,3 +453,4 @@ passing preliminary tests.  More to do.
 * **2016-01-02** Update copyright notices in examples.  Improvements to education example. Fix display of triples in
 log.  `pump.py` PEP-8 improvements. Additional logger.debug output in get_step_triples
 * **2016-01-03** Start adding type of objects to update graph
+* **2016-01-04** Continue adding type of objects to update graph
