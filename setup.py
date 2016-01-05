@@ -11,12 +11,12 @@ from distutils.core import setup
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2016 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.61"
+__version__ = "0.8.7"
 
 
 setup(
     name='vivo-pump',
-    version='0.61',
+    version='0.8.7',
     url='https://github.com/mconlon17/vivo-pump',
     license='New BSD License',
     author='Michael Conlon',
