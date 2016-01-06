@@ -587,7 +587,7 @@ def make_update_query(column_name, entity_sparql, path):
                 '(?' + path[0]['object']['name'] + ' as ?o) ?t1 (<' + \
                 str(path[1]['predicate']['ref']) + '> as ?p2) ?o2 ?t2\n' + \
                 '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
-                path[0]['object']['name'] + ' . ?' + path[0]['object']['name'] + 'a ?t1 . ?' + \
+                path[0]['object']['name'] + ' . ?' + path[0]['object']['name'] + ' a ?t1 . ?' + \
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2' + \
                 ' . ?o2 a ?t2 . ' + add_qualifiers(path) + ' \n}'
     elif len(path) == 3:
@@ -596,11 +596,11 @@ def make_update_query(column_name, entity_sparql, path):
                 '> as ?p2) (?' + path[1]['object']['name'] + ' as ?o2) ?t2 (<' + str(path[2]['predicate']['ref']) + \
                 '> as ?p3) ?o3 ?t3\n' + 'where { ' + entity_sparql + '\n    ?uri <' + \
                 str(path[0]['predicate']['ref']) + '> ?' + path[0]['object']['name'] + ' . ?' + \
-                path[0]['object']['name'] + ' a ?t1 . ' + \
+                path[0]['object']['name'] + ' a ?t1 . ?' + \
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
-                path[1]['object']['name'] + ' . ?' + path[1]['object']['name'] + ' a ?t2 . ' + \
+                path[1]['object']['name'] + ' . ?' + path[1]['object']['name'] + ' a ?t2 . ?' + \
                 path[1]['object']['name'] + ' <' + \
-                str(path[2]['predicate']['ref']) + '> ?o3 . ?o3 a t3 . ' + add_qualifiers(path) + ' \n}'
+                str(path[2]['predicate']['ref']) + '> ?o3 . ?o3 a ?t3 . ' + add_qualifiers(path) + ' \n}'
     return query
 
 
@@ -627,7 +627,7 @@ def get_graph(update_def, query_parms):
     :return: graph of triples
     """
 
-    from rdflib import Graph, URIRef
+    from rdflib import Graph, URIRef, RDF
 
     a = Graph()
     entity_query = 'select ?uri (<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> as ?p) (<' + \
@@ -639,7 +639,8 @@ def get_graph(update_def, query_parms):
         p = URIRef(row['p']['value'])
         o = make_rdf_term(row['o'])
         a.add((s, p, o))
-    for column_name, path in update_def['column_defs'].items():
+    for column_name, path in update_def['column_defs'].items() + \
+            update_def.get('closure_defs', {}).items():
         update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
             continue
@@ -649,14 +650,20 @@ def get_graph(update_def, query_parms):
             p = URIRef(row['p']['value'])
             o = make_rdf_term(row['o'])
             a.add((s, p, o))
+            if 't1' in row:
+                a.add((o, RDF.type, make_rdf_term(row['t1'])))
             if 'p2' in row and 'o2' in row:
                 p2 = URIRef(row['p2']['value'])
                 o2 = make_rdf_term(row['o2'])
                 a.add((o, p2, o2))
+                if 't2' in row:
+                    a.add((o2, RDF.type, make_rdf_term(row['t2'])))
                 if 'p3' in row and 'o3' in row:
                     p3 = URIRef(row['p3']['value'])
                     o3 = make_rdf_term(row['o3'])
                     a.add((o2, p3, o3))
+                    if 't3' in row:
+                        a.add((o3, RDF.type, make_rdf_term(row['t3'])))
         logger.debug(u"Triples in original graph {}".format(len(a)))
     return a
 
