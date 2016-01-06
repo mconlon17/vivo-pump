@@ -454,3 +454,4 @@ passing preliminary tests.  More to do.
 log.  `pump.py` PEP-8 improvements. Additional logger.debug output in get_step_triples
 * **2016-01-03** Start adding type of objects to update graph
 * **2016-01-04** Continue adding type of objects to update graph
+* **2016-01-06** Update copyright noticer in `uf_examples`
