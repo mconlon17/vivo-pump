@@ -261,6 +261,7 @@ def get_vivo_inverse_property(forward_property, parms):
     if len(inverse_property) > 0:
         return inverse_property[0].encode()
     else:
+        utils.print_err("No Invesrse")
         return None
 
 
@@ -652,7 +653,7 @@ def get_graph(update_def, query_parms):
         p = URIRef(row['p']['value'])
         o = make_rdf_term(row['o'])
         a.add((s, p, o))
-        utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s.encode(),p.encode(),o.encode()))
+       # utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s.encode(),p.encode(),o.encode()))
     for column_name, path in update_def['column_defs'].items():
         update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
@@ -2081,9 +2082,14 @@ def make_inverse_subs(sub_file, parms):
     sub_file_data = sub_graph.parse(sub_file,format='nt')
 
     for s,p,o in sub_file_data:
-        inverse_property = rdflib.URIRef((get_vivo_inverse_property(p,parms)))
-
-        if inverse_property != None:
+        utils.print_err("p is: \n{}".format(p))
+        try:
+            inverse_property = rdflib.URIRef((get_vivo_inverse_property(p,parms)))
             sub_file_data.add((o,rdflib.URIRef(inverse_property),s))
+            utils.print_err("inverse_property is: \n{}".format(inverse_property))
+        except TypeError:
+            continue
+
+        utils.print_err("inverse_property is: \n{}".format(inverse_property))
 
     file_out.write(sub_file_data.serialize(format='nt'))
