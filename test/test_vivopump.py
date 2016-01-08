@@ -108,6 +108,7 @@ class ReadUpdateDefTestCase(unittest.TestCase):
 
     def test_read_normal_def(self):
         update_def = read_update_def('data/grant_def.json', prefix=QUERY_PARMS['prefix'])
+        print update_def
         self.assertTrue(update_def.keys() == ['entity_def', 'column_defs'])
 
     def test_substitution(self):
@@ -115,11 +116,6 @@ class ReadUpdateDefTestCase(unittest.TestCase):
         update_def = read_update_def('data/pump_def.json', prefix=QUERY_PARMS['prefix'])
         self.assertTrue(update_def['entity_def']['type']) == \
             URIRef(u'http://vivoweb.org/ontology/core#Building')
-
-    def test_invalid_def(self):
-        with self.assertRaises(InvalidDefException):
-            update_def = read_update_def('data/grant_invalid_def.json', prefix=QUERY_PARMS['prefix'])
-            print update_def
 
     def test_invalid_multiple_def(self):
         with self.assertRaises(InvalidDefException):
@@ -148,7 +144,8 @@ class MakeUpdateQueryTestCase(unittest.TestCase):
     def test_make_query(self):
         update_def = read_update_def('../examples/education/education_def.json', prefix=QUERY_PARMS['prefix'])
         for column_name, path in update_def['column_defs'].items():
-            update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
+            update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
+            print update_query
             self.assertTrue(len(update_query) > 0)
 
 

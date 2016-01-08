@@ -456,3 +456,5 @@ log.  `pump.py` PEP-8 improvements. Additional logger.debug output in get_step_t
 * **2016-01-04** Continue adding type of objects to update graph
 * **2016-01-06** Update copyright notices in `uf_examples`.  Add closure_defs to make_update_graph.  Syntax of 
 update_graph query is now correct.  Additional work needed to collect types.
+* **2016-01-08** Rewriting make_update_query and related methods to support update selection via type.  Work in
+progress.

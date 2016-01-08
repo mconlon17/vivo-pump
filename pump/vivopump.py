@@ -500,11 +500,15 @@ def read_update_def(filename, prefix):
         :param a: update_def
         :return None
         """
-        names = [y[x].get('object', None).get('name', '') for y in a['column_defs'].values() for x in range(len(y) - 1)]
         col_names = a['column_defs'].keys()
-        for name in col_names:
-            if name in names:
-                raise InvalidDefException(name + " in object and column_defs")
+
+        # #   Test for object name same as column def names
+        #
+        # names = [y[x].get('object', None).get('name', '') for y in a['column_defs'].values() for x
+        #          in range(len(y) - 1)]
+        # for name in col_names:
+        #     if name in names:
+        #         raise InvalidDefException(name + " in object and column_defs")
 
         #   Test for multiple multiple predicates (can only have one multiple per path)
 
@@ -524,12 +528,34 @@ def read_update_def(filename, prefix):
                     raise InvalidDefException(name + 'is boolean with no value')
         return None
 
+    def add_object_names(a):
+        """
+        handed an update_def structure a, return an improved structure b in which each object has a generated name
+        attribute based on the column_def or closure_def name
+        """
+        b = dict(a)
+        for name, path in b['column_defs'].items():
+            for i in range(len(path)):
+                if i==len(path) - 1:
+                    b['column_defs'][name][i]['object']['name'] = name
+                else:
+                    b['column_defs'][name][i]['object']['name'] = name + '_' + str(len(path) - i - 1)
+        if 'closure_defs' in b:
+            for name, path in b['closure_defs'].items():
+                for i in range(len(path)):
+                    if i==len(path) - 1:
+                        b['closure_defs'][name][i]['object']['name'] = name
+                    else:
+                        b['closure_defs'][name][i]['object']['name'] = name + '_' + str(len(path) - i - 1)
+        return b
+
     import json
     with open(filename, "r") as my_file:
         data = my_file.read()
         prefix_dict = make_prefix_dict(prefix)
         update_def = fixit(json.loads(data), prefix_dict)
         update_def = add_order(update_def, data)
+        update_def = add_object_names(update_def)
         validate_update_def(update_def)
     return update_def
 
@@ -543,64 +569,82 @@ def add_qualifiers(input_path):
     return ' '.join([x['object'].get('qualifier', '') for x in input_path])
 
 
-def make_update_query(column_name, entity_sparql, path):
+def gather_types(input_step, varname):
+    """
+    Given and input step, return a SPARQL fragment to gather the types for the step
+    :param input_step:
+    :return: SPARQL fragment as string
+    """
+    if not input_step['object']['literal']:
+        return ' ?' + input_step['object']['name'] + ' a ?' + varname + ' . '
+    else:
+        return ''
+
+
+def make_update_query(entity_sparql, path):
     """
     Given a path from an update_def data structure, generate the query needed to pull the triples from VIVO that might
-    be updated.  Here's what the queries look like by path length
+    be updated.  Here's what the queries look like (psuedo code) by path length
 
-    :param column_name:
     Path length 1 example:
 
-            select ?uri (vivo:subOrganizationWithin as ?p) ?o
+            select ?uri (vivo:subOrganizationWithin as ?p) (?column_name as ?o)
             where {
                 ... entity sparql goes here ...
-                ?uri vivo:subOrganizationWithin ?o
+                ?uri vivo:subOrganizationWithin ?column_name .  # ?uri ?p ?o
             }
 
     Path Length 2 example:
 
-            select ?uri (vivo:webpage as ?p) (?webpage as ?o) (vivo:linkURI as ?p2) ?o2
+            select ?uri (vivo:webpage as ?p1) (?column_name_1 as ?o1) (vivo:linkURI as ?p) (?column_name as ?o)
             where {
                 ... entity sparql goes here ...
-                ?uri vivo:webpage ?webpage . ?webpage vivo:linkURI ?o2 .
+                ?uri vivo:webpage ?column_name_1 .           # ?uri ?p1 ?o1
+                ?column_name_1 vivo:linkURI ?column_name .   # ?o1 ?p ?o
             }
 
     Path length 3 example:
 
-            select ?uri (vivo:dateTimeInterval as ?p) (?award_period as ?o) (vivo:end as ?p2)
-                                                            (?end as ?o2) (vivo:dateTime as ?p3) ?o3
+            select ?uri (vivo:dateTimeInterval as ?p2) (?column_name_2 as ?o2) (vivo:end as ?p1)
+                                                            (?column_name_1 as ?o1) (vivo:dateTime as ?p)
+                                                            (?column_name as ?o)
             where {
                 ... entity sparql goes here ...
-                ?uri vivo:dateTimeInterval ?award_period . ?award_period vivo:end ?end . ?end vivo:dateTime ?o3 .
+                ?uri vivo:dateTimeInterval ?column_name_2 .  # ?uri ?p2 ?o2
+                ?column_name_2 vivo:end ?column_name_1 .     # ?o2 ?p1 ?o1
+                ?column_name_1 vivo:dateTime ?column_name .  # ?o1 ?p ?o
             }
 
     :return: a sparql query string
     """
     query = ""
     if len(path) == 1:
-        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) (?' + column_name + ' as ?o) ?t1\n' + \
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) (?' + path[0]['object']['name'] + \
+                ' as ?o) ?t\n' + \
                 '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
-                column_name + \
-                ' . ?' + column_name + ' a ?t1 . ' + add_qualifiers(path) + ' \n}'
+                path[0]['object']['name'] + \
+                ' . ' + gather_types(path[0], 't') + add_qualifiers(path) + ' \n}'
     elif len(path) == 2:
-        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
-                '(?' + path[0]['object']['name'] + ' as ?o) ?t1 (<' + \
-                str(path[1]['predicate']['ref']) + '> as ?p2) ?o2 ?t2\n' + \
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p1) ' + \
+                '(?' + path[0]['object']['name'] + ' as ?o1) ?t1 (<' + \
+                str(path[1]['predicate']['ref']) + '> as ?p) (?' + path[1]['object']['name'] + ' as ?o) ?t\n' + \
                 '    where { ' + entity_sparql + '\n    ?uri <' + str(path[0]['predicate']['ref']) + '> ?' + \
-                path[0]['object']['name'] + ' . ?' + path[0]['object']['name'] + ' a ?t1 . ?' + \
-                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?o2' + \
-                ' . ?o2 a ?t2 . ' + add_qualifiers(path) + ' \n}'
-    elif len(path) == 3:
-        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p) ' + \
-                '(?' + path[0]['object']['name'] + ' as ?o) ?t1 (<' + str(path[1]['predicate']['ref']) + \
-                '> as ?p2) (?' + path[1]['object']['name'] + ' as ?o2) ?t2 (<' + str(path[2]['predicate']['ref']) + \
-                '> as ?p3) ?o3 ?t3\n' + 'where { ' + entity_sparql + '\n    ?uri <' + \
-                str(path[0]['predicate']['ref']) + '> ?' + path[0]['object']['name'] + ' . ?' + \
-                path[0]['object']['name'] + ' a ?t1 . ?' + \
+                path[0]['object']['name'] + ' . ' + gather_types(path[0], 't1') + '?' + \
                 path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
-                path[1]['object']['name'] + ' . ?' + path[1]['object']['name'] + ' a ?t2 . ?' + \
+                path[1]['object']['name'] + ' . ' + gather_types(path[1], 't') + add_qualifiers(path) + ' \n}'
+    elif len(path) == 3:
+        query = 'select ?uri (<' + str(path[0]['predicate']['ref']) + '> as ?p2) ' + \
+                '(?' + path[0]['object']['name'] + ' as ?o2) ?t2 (<' + str(path[1]['predicate']['ref']) + \
+                '> as ?p1) (?' + path[1]['object']['name'] + ' as ?o1) ?t1 (<' + str(path[2]['predicate']['ref']) + \
+                '> as ?p) (?' + path[2]['object']['name'] + ' as ?o)  ?t\n' + \
+                'where { ' + entity_sparql + '\n    ?uri <' + \
+                str(path[0]['predicate']['ref']) + '> ?' + path[0]['object']['name'] + ' . ' + \
+                gather_types(path[0], 't2') + ' ?' + \
+                path[0]['object']['name'] + ' <' + str(path[1]['predicate']['ref']) + '> ?' + \
+                path[1]['object']['name'] + ' . ' + gather_types(path[1], 't1') + ' ?' + \
                 path[1]['object']['name'] + ' <' + \
-                str(path[2]['predicate']['ref']) + '> ?o3 . ?o3 a ?t3 . ' + add_qualifiers(path) + ' \n}'
+                str(path[2]['predicate']['ref']) + '> ?' + path[2]['object']['name'] + ' . ' + \
+                gather_types(path[2], 't') + add_qualifiers(path) + ' \n}'
     return query
 
 
@@ -641,7 +685,7 @@ def get_graph(update_def, query_parms):
         a.add((s, p, o))
     for column_name, path in update_def['column_defs'].items() + \
             update_def.get('closure_defs', {}).items():
-        update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
+        update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
             continue
         result = vivo_query(update_query, query_parms)
