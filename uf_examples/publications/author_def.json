@@ -49,8 +49,7 @@
                     "ref": "vcard:givenName"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -80,11 +79,10 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "vcard:additionalName"
+                    "ref": "vivo:middleName"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -117,8 +115,7 @@
                     "ref": "vcard:familyName"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -151,8 +148,7 @@
                     "ref": "vcard:honorificSuffix"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -160,6 +156,9 @@
             {
                 "predicate": {
                     "single": false,
+                    "include": [
+                        "person"
+                    ],
                     "ref": "rdf:type"
                 },
                 "object": {

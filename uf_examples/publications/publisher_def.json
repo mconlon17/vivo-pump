@@ -21,6 +21,11 @@
             {
                 "predicate": {
                     "single": false,
+                    "include": [
+                        "thing",
+                        "agent",
+                        "org"
+                    ],
                     "ref": "rdf:type"
                 }, 
                 "object": {

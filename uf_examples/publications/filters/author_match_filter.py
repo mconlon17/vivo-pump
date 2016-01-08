@@ -52,6 +52,8 @@ utils.print_err("Finished loading {} entries from: {}"
                 .format(len(vivo_auth_disambig_data), file_name))
 data_out = {}
 row_out = 0
+new_authors = 0
+non_uf = 0
 
 """
 Example of rows in data_in:
@@ -68,9 +70,10 @@ for row_index, row_data in data_in.items():
     if row_data['uf'] == 'false':
         # Always put in the non-UF author as new
         row_out += 1
+        non_uf += 1
         data_out[row_out] = row_data
         data_out[row_out]['uri'] = ''
-        utils.print_err("UF entry is false {}".format(row_index))
+        #utils.print_err("UF entry is false {}".format(row_index))
     else:
         author_uris = utils.get_author_disambiguation_data(
             vivo_auth_disambig_data,
@@ -82,9 +85,10 @@ for row_index, row_data in data_in.items():
         if count == 0:
             # There is no match in the current VIVO ==> add a new UF author
             row_out += 1
+            new_authors += 1
             data_out[row_out] = row_data
             data_out[row_out]['uri'] = ''
-            utils.print_err("uri count 0 for {}".format(row_index))
+            #utils.print_err("uri count 0 for {}".format(row_data))
         # elif count == 1:
         #     # Bingo! Disambiguated UF author. Add URI
         #     #row_out += 1
@@ -103,14 +107,18 @@ for row_index, row_data in data_in.items():
         #     action = 'Disambig'
         #     utils.print_err("uri count 2 for {}".format(row_index))
 
-data_out = {}
+# data_out = {}
 name_out = set()
 
-for row, data in data_in.items():
-    new_data = dict((data_in_keys,'') for data_in_keys in data)
-    if data['display_name'] not in name_out:
-        data_out[row] = new_data
-        name_out.add(data['display_name'])
+#
+# for row, data in data_in.items():
+#     new_data = dict((data_in_keys,'') for data_in_keys in data)
+#     utils.print_err(new_data)
+#     if data['display_name'] not in name_out:
+#         data_out[row] = new_data
+#         name_out.add(data['display_name'])
 
 print >>sys.stderr, 'data out', len(data_out)
+print >>sys.stderr, 'non uf authors', non_uf
+print >>sys.stderr, 'number of new authors', new_authors
 write_csv_fp(sys.stdout, data_out)
