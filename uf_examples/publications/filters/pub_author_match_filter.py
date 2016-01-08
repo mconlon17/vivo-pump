@@ -157,7 +157,7 @@ print >>sys.stderr, len(data_in)
 
 # file_name = '/Users/asura/git/vivo-pump/author_list.csv'
 # @TODO: pass file name path as a command line parameter
-file_name = 'author_list.csv'
+file_name = 'vivo_author_list.csv'
 utils.print_err("Using static disambiguation file: {}".format(file_name))
 
 vivo_journals = get_vivo_journals(parms)
@@ -179,11 +179,14 @@ for row_index, row_data in data_in.items():
     data_out['author'] = get_author_uris(row_data['author'])
     data_out['affiliation'] = get_author_affiliation(row_data['affiliation'])
 
-    if len(vivo_journals.get(row_data['issn'])) > 0:
-        issn_uri = vivo_journals.get(row_data['issn'])
-    else:
-        utils.print_err("\nISSN not found: {}\n".format(row_data['issn']))
-        issn_uri = ''
+    try:
+        if len(vivo_journals.get(row_data['issn'])) > 0:
+            issn_uri = vivo_journals.get(row_data['issn'])
+        else:
+            utils.print_err("\nISSN not found: {}\n".format(row_data['issn']))
+            issn_uri = ''
+    except TypeError:
+        continue
 
     # try:
     #     issn_uri = vivo_journals.get(row_data['issn'])

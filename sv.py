@@ -45,6 +45,7 @@ def main():
     from datetime import datetime
     from vivopump import get_args, make_inverse_subs
     from pump import Pump
+    import utils
 
     return_code = 0
     print datetime.now(), "Start"

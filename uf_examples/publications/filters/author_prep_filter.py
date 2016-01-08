@@ -129,7 +129,7 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
         else:
             affiliation['uf'] = 'false'
     affiliations.append(affiliation)
-    print_err(affiliations)
+    # print_err(affiliations)
 
     # Now we are ready to look for affiliations by name.  Messy business.
     for author_dict in author_list:
@@ -146,7 +146,7 @@ def parse_author_data(author_data, affiliation_data, max_list_length=50):
                 # the default affiliation is uf false
                 continue
 
-    print_err("{} Authors in list: {}".format(len(author_list), author_list))
+    #print_err("{} Authors in list: {}".format(len(author_list), author_list))
     return author_list
 
 data_in = read_csv_fp(sys.stdin)

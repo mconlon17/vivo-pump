@@ -24,12 +24,13 @@ print_err("==> {} columns in the input: {} "
 data_out = {}
 keep_names = set(['remove', 'uri', 'title', 'number', 'pub_date',
                   'author', 'start_page', 'end_page', 'type',
-                  'issn', 'volume', 'doi', 'affiliation'])
+                  'issn', 'volume', 'doi', 'affiliation', 'journal'])
 
 for row, data in data_in.items():
     new_data = dict(data)
 
     # Add these columns
+    new_data['journal'] = ''
     new_data['remove'] = ''
     new_data['uri'] = ''
     new_data['title'] = improve_title(new_data['title'])
