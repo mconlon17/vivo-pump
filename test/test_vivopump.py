@@ -166,8 +166,7 @@ class GetGraphTestCase(unittest.TestCase):
     def test_normal_case(self):
         update_def = read_update_def('data/grant_def.json', prefix=QUERY_PARMS['prefix'])
         a = get_graph(update_def, QUERY_PARMS)
-        print len(a)
-        self.assertTrue(len(a) == 11)
+        self.assertTrue(len(a) == 29)
 
 
 class ReadCSVTestCase(unittest.TestCase):

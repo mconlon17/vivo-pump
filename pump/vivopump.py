@@ -690,24 +690,43 @@ def get_graph(update_def, query_parms):
             continue
         result = vivo_query(update_query, query_parms)
         for row in result['results']['bindings']:
-            s = URIRef(row['uri']['value'])
-            p = URIRef(row['p']['value'])
-            o = make_rdf_term(row['o'])
-            a.add((s, p, o))
-            if 't1' in row:
-                a.add((o, RDF.type, make_rdf_term(row['t1'])))
             if 'p2' in row and 'o2' in row:
+                uri = URIRef(row['uri']['value'])
                 p2 = URIRef(row['p2']['value'])
                 o2 = make_rdf_term(row['o2'])
-                a.add((o, p2, o2))
+                a.add((uri, p2, o2))
                 if 't2' in row:
                     a.add((o2, RDF.type, make_rdf_term(row['t2'])))
-                if 'p3' in row and 'o3' in row:
-                    p3 = URIRef(row['p3']['value'])
-                    o3 = make_rdf_term(row['o3'])
-                    a.add((o2, p3, o3))
-                    if 't3' in row:
-                        a.add((o3, RDF.type, make_rdf_term(row['t3'])))
+                p1 = URIRef(row['p1']['value'])
+                o1 = make_rdf_term(row['o1'])
+                a.add((o2, p1, o1))
+                if 't1' in row:
+                    a.add((o1, RDF.type, make_rdf_term(row['t1'])))
+                p = URIRef(row['p']['value'])
+                o = make_rdf_term(row['o'])
+                a.add((o1, p, o))
+                if 't' in row:
+                    a.add((o, RDF.type, make_rdf_term(row['t'])))
+            elif 'p1' in row and 'o1' in row:
+                uri = URIRef(row['uri']['value'])
+                p1 = URIRef(row['p1']['value'])
+                o1 = make_rdf_term(row['o1'])
+                a.add((uri, p1, o1))
+                if 't1' in row:
+                    a.add((o1, RDF.type, make_rdf_term(row['t1'])))
+                p = URIRef(row['p']['value'])
+                o = make_rdf_term(row['o'])
+                a.add((o1, p, o))
+                if 't' in row:
+                    a.add((o, RDF.type, make_rdf_term(row['t'])))
+            elif 'p' in row and 'o' in row:
+                uri = URIRef(row['uri']['value'])
+                p = URIRef(row['p']['value'])
+                o = make_rdf_term(row['o'])
+                a.add((uri, p, o))
+                if 't' in row:
+                    a.add((o, RDF.type, make_rdf_term(row['t'])))
+
         logger.debug(u"Triples in original graph {}".format(len(a)))
     return a
 
