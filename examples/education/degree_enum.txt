@@ -7,6 +7,7 @@ ADN Associate Degree Nursing	http://vivoweb.org/ontology/degree/academicDegree11
 AeEng. Aeronautical Engineer	http://vivoweb.org/ontology/degree/academicDegree2
 Au.D. Doctor of Audiology	http://vivoweb.org/ontology/degree/academicDegree145
 B.A. Bachelor of Arts	http://vivoweb.org/ontology/degree/academicDegree4
+ba	http://vivoweb.org/ontology/degree/academicDegree4
 B.A.E. Aeronautical Engineering	http://vivoweb.org/ontology/degree/academicDegree7
 B.A.E. Agricultural Engineering	http://vivoweb.org/ontology/degree/academicDegree8
 B.A.E. Architectural Engineering	http://vivoweb.org/ontology/degree/academicDegree9
@@ -38,6 +39,7 @@ B.N.S. Bachelor of Science in Nursing	http://vivoweb.org/ontology/degree/academi
 B.Pharm. Bachelor of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree31
 B.R.E. Bachelor of Religious Education	http://vivoweb.org/ontology/degree/academicDegree32
 B.S. Bachelor of Science	http://vivoweb.org/ontology/degree/academicDegree33
+bs	http://vivoweb.org/ontology/degree/academicDegree33
 B.S.E. Bachelor of Science in Engineering	http://vivoweb.org/ontology/degree/academicDegree120
 B.S.Ed. Bachelor of Science in Education	http://vivoweb.org/ontology/degree/academicDegree34
 B.S.F.S. Bachelor of Science in Forensic Science	http://vivoweb.org/ontology/degree/academicDegree136
@@ -90,6 +92,7 @@ LL.M. Master of Laws	http://vivoweb.org/ontology/degree/academicDegree70
 Litt.B. Bachelor of Letters	http://vivoweb.org/ontology/degree/academicDegree66
 Litt.M. Master of Letters	http://vivoweb.org/ontology/degree/academicDegree67
 M.A. Master of Arts	http://vivoweb.org/ontology/degree/academicDegree71
+ma	http://vivoweb.org/ontology/degree/academicDegree71
 M.Aero.E. Master of Aeronautical Engineering	http://vivoweb.org/ontology/degree/academicDegree72
 M.B.A. Master of Business Administration	http://vivoweb.org/ontology/degree/academicDegree73
 M.B.E. Master of Business Engineering	http://vivoweb.org/ontology/degree/academicDegree141
@@ -98,6 +101,7 @@ M.C.E. Master of Civil Engineering	http://vivoweb.org/ontology/degree/academicDe
 M.C.S. Master of Computer Science	http://vivoweb.org/ontology/degree/academicDegree76
 M.Ch.E. Master of Chemical Engineering	http://vivoweb.org/ontology/degree/academicDegree140
 M.D. Doctor of Medicine	http://vivoweb.org/ontology/degree/academicDegree77
+md	http://vivoweb.org/ontology/degree/academicDegree77
 M.Div. Master of Divinity	http://vivoweb.org/ontology/degree/academicDegree78
 M.E. Master of Engineering	http://vivoweb.org/ontology/degree/academicDegree79
 M.Ed. Master of Education	http://vivoweb.org/ontology/degree/academicDegree80
@@ -121,6 +125,7 @@ M.P.H. Master of Public Health	http://vivoweb.org/ontology/degree/academicDegree
 M.Phil. Master of Philosophy 	http://vivoweb.org/ontology/degree/academicDegree111
 M.R.E. Master of Religious Education	http://vivoweb.org/ontology/degree/academicDegree90
 M.S. Master of Science	http://vivoweb.org/ontology/degree/academicDegree91
+ms	http://vivoweb.org/ontology/degree/academicDegree91
 M.S.E. Master of Science in Engineering	http://vivoweb.org/ontology/degree/academicDegree134
 M.S.P.H. Master of Science in Public Health	http://vivoweb.org/ontology/degree/academicDegree114
 M.S.W. Master of Social Work	http://vivoweb.org/ontology/degree/academicDegree92
@@ -131,6 +136,7 @@ Nuc.E. Nuclear Engineer	http://vivoweb.org/ontology/degree/academicDegree94
 O.D. Doctor of Optometry	http://vivoweb.org/ontology/degree/academicDegree95
 Ph.B. Bachelor of Philosophy	http://vivoweb.org/ontology/degree/academicDegree97
 Ph.D. Doctor of Philosophy	http://vivoweb.org/ontology/degree/academicDegree98
+phd	http://vivoweb.org/ontology/degree/academicDegree98
 Pharm.B. Bachelor of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree142
 Pharm.D. Doctor of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree96
 Pharm.M. Master of Pharmacy	http://vivoweb.org/ontology/degree/academicDegree143

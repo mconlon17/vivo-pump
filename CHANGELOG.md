@@ -458,3 +458,5 @@ log.  `pump.py` PEP-8 improvements. Additional logger.debug output in get_step_t
 update_graph query is now correct.  Additional work needed to collect types.
 * **2016-01-08** Rewriting make_update_query and related methods to support update selection via type.  Work in
 progress.  `get_graph` updated to handle types.  All tests pass.
+* **2016-01-09** Provide common abbreviations for popular degrees as short forms (ba, bs, ma, ms, phd, md) in 
+`examples/education/degree_enum.txt`.  Education example is ready for release.

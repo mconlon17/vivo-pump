@@ -1,3 +1,3 @@
 school	degree	field	uri	person	date
-University of Florida	Ph.D. Doctor of Philosophy	Statistics	http://vivo.school.edu/individual/n3900	Conlon, Michael	1982-06
-Harvard University	A.A. Associate of Arts	Engineering		Masters, Forest	1999-01
+Harvard University	phd	Engineering		Masters, Forest	1991-02
+Harvard University	ba	Engineering		Masters, Forest	1984-02
