@@ -460,3 +460,4 @@ update_graph query is now correct.  Additional work needed to collect types.
 progress.  `get_graph` updated to handle types.  All tests pass.
 * **2016-01-09** Provide common abbreviations for popular degrees as short forms (ba, bs, ma, ms, phd, md) in 
 `examples/education/degree_enum.txt`.  Education example is ready for release.
+* **2016-01-10**Begin updating grant example.

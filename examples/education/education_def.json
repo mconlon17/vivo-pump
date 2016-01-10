@@ -13,8 +13,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:EducationalProcess",
-                    "name": "educ_proc"
+                    "type": "vivo:EducationalProcess"
                 }
             },
             {
@@ -25,7 +24,6 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Person",
-                    "name": "person",
                     "enum": "person_enum.txt"
                 }
             }
@@ -39,7 +37,6 @@
                 "object": {
                     "literal": false,
                     "type": "vivo:AcademicDegree",
-                    "name": "degree",
                     "enum": "degree_enum.txt"
                 }
             }
@@ -52,8 +49,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:EducationalProcess",
-                    "name": "educ_proc"
+                    "type": "vivo:EducationalProcess"
                 }
             },
             {
@@ -64,7 +60,6 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Organization",
-                    "name": "school",
                     "enum": "school_enum.txt"
                 }
             }
@@ -77,8 +72,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:EducationalProcess",
-                    "name": "educ_proc"
+                    "type": "vivo:EducationalProcess"
                 }
             },
             {
@@ -88,8 +82,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeInterval",
-                    "name": "degree_date"
+                    "type": "vivo:DateTimeInterval"
                 }
             },
             {
@@ -99,7 +92,6 @@
                 },
                 "object": {
                     "literal": false,
-                    "name": "date",
                     "enum": "date_enum.txt"
                 }
             }
@@ -112,8 +104,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:EducationalProcess",
-                    "name": "educ_proc"
+                    "type": "vivo:EducationalProcess"
                 }
             },
             {
@@ -123,7 +114,6 @@
                 },
                 "object": {
                     "literal": true,
-                    "name": "field",
                     "enum": "field_enum.txt"
                 }
             }
@@ -139,7 +129,6 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Person",
-                    "name": "person",
                     "enum": "person_enum.txt"
                 }
             }
@@ -153,7 +142,6 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Organization",
-                    "name": "school",
                     "enum": "school_enum.txt"
                 }
             }

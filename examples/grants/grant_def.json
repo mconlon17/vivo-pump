@@ -37,8 +37,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeInterval",
-                    "name": "award_period"
+                    "type": "vivo:DateTimeInterval"
                 }
             },
             {
@@ -61,8 +60,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeInterval",
-                    "name": "award_period"
+                    "type": "vivo:DateTimeInterval"
                 }
             },
             {
@@ -85,8 +83,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:AdminRole",
-                    "name": "adminrole"
+                    "type": "vivo:AdminRole"
                 }
             },
             {
@@ -109,7 +106,7 @@
                 },
                 "object": {
                     "filter": "improve_dollar_amount",
-                     "datatype": "xsd:decimal",
+                    "datatype": "xsd:decimal",
                     "literal": true
                 }
             }
@@ -135,8 +132,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:PrincipalInvestigatorRole",
-                    "name": "pirole"
+                    "type": "vivo:PrincipalInvestigatorRole"
                 }
             },
             {
@@ -159,8 +155,7 @@
                 }, 
                 "object": {
                     "literal": false,
-                    "type": "vivo:Co-PrincipalInvestigatorRole",
-                    "name": "coirole"
+                    "type": "vivo:Co-PrincipalInvestigatorRole"
                 }
             }, 
             {
@@ -183,8 +178,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:InvestigatorRole",
-                    "name": "invrole"
+                    "type": "vivo:InvestigatorRole"
                 }
             },
             {
