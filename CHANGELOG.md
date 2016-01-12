@@ -462,3 +462,4 @@ progress.  `get_graph` updated to handle types.  All tests pass.
 `examples/education/degree_enum.txt`.  Education example is ready for release.
 * **2016-01-10** Begin updating grant example.
 * **2016-01-11** Improve grant `README.md`
+* **2016-01-12** Update all cfg files in `examples`

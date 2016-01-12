@@ -25,7 +25,8 @@
                 }, 
                 "object": {
                     "filter": "improve_title",
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ],
@@ -106,8 +107,8 @@
                 },
                 "object": {
                     "filter": "improve_dollar_amount",
-                    "datatype": "xsd:decimal",
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:decimal"
                 }
             }
         ],
@@ -119,8 +120,8 @@
                 }, 
                 "object": {
                     "filter": "improve_dollar_amount",
-                    "datatype": "xsd:decimal",
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:decimal"
                 }
             }
         ],
@@ -225,7 +226,8 @@
                 }, 
                 "object": {
                     "filter": "improve_sponsor_award_id",
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ]
