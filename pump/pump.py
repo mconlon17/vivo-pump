@@ -157,7 +157,7 @@ class Pump(object):
             "Enumerations read.\n" + \
             "Filters\t" + str(self.filter) + "\n" + \
             "Intra field separator\t" + self.intra + "\n" + \
-            "Inter field separator\t" + self.inter + "\n" + \
+            "Inter field separator\t" + 'tab\n' if self.inter=='\t' else self.inter + "\n" + \
             "VIVO SPARQL API URI\t" + self.query_parms['queryuri'] + "\n" + \
             "VIVO SPARQL API username\t" + self.query_parms['username'] + "\n" + \
             "VIVO SPARQL API password\t" + self.query_parms['password'] + "\n" + \
