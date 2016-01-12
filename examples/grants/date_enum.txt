@@ -3782,6 +3782,7 @@ short	vivo
 1979-12-29	http://vivo.school.edu/individual/n3564528347
 1979-12-30	http://vivo.school.edu/individual/n5322782417
 1979-12-31	http://vivo.school.edu/individual/n8030843647
+1980-01-01	http://vivo.school.edu/individual/n7242
 1980-01-01	http://vivo.school.edu/individual/n5983423182
 1980-01-01	http://vivo.school.edu/individual/n7127719028
 1980-01-01	http://vivo.school.edu/individual/n7225407119
@@ -4539,7 +4540,7 @@ short	vivo
 1981-12-29	http://vivo.school.edu/individual/n79751163
 1981-12-30	http://vivo.school.edu/individual/n1791986000
 1981-12-31	http://vivo.school.edu/individual/n2129445382
-1982-01-01	http://vivo.school.edu/individual/n2276
+1982-01-01	http://vivo.school.edu/individual/n5973
 1982-01-01	http://vivo.school.edu/individual/n2249127401
 1982-01-01	http://vivo.school.edu/individual/n8531308868
 1982-01-01	http://vivo.school.edu/individual/n9038714458
@@ -4697,6 +4698,7 @@ short	vivo
 1982-05-29	http://vivo.school.edu/individual/n6038947633
 1982-05-30	http://vivo.school.edu/individual/n362946719
 1982-05-31	http://vivo.school.edu/individual/n4137986019
+1982-06-01	http://vivo.school.edu/individual/n2276
 1982-06-01	http://vivo.school.edu/individual/n4723454148
 1982-06-01	http://vivo.school.edu/individual/n7295994056
 1982-06-02	http://vivo.school.edu/individual/n275671315

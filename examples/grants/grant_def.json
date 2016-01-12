@@ -90,11 +90,11 @@
             {
                 "predicate": {
                     "single": true,
-                    "ref": "obo:RO_0000052",
-                    "type": "foaf:Organization"
+                    "ref": "obo:RO_0000052"
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Organization",
                     "enum": "dept_enum.txt"
                 }
             }
@@ -139,11 +139,12 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "obo:RO_0000052",
-                    "type": "foaf:Person"
+                    "ref": "obo:RO_0000052"
+
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -162,11 +163,12 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "obo:RO_0000052",
-                    "type": "foaf:Person"
+                    "ref": "obo:RO_0000052"
+
                 }, 
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -185,11 +187,12 @@
             {
                 "predicate": {
                     "single": false,
-                    "ref": "obo:RO_0000052",
-                    "type": "foaf:Person"
+                    "ref": "obo:RO_0000052"
+
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -202,6 +205,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "skos:Concept",
                     "enum": "concept_enum.txt"
                 }
             }
@@ -214,6 +218,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Organization",
                     "enum": "sponsor_enum.txt"
                 }
             }
@@ -241,6 +246,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -253,6 +259,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -265,6 +272,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -277,6 +285,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "foaf:Organization",
                     "enum" : "dept_enum.txt"
                 }
             }

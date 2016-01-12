@@ -1,3 +1,2 @@
 short	vivo
 0000-0002-1304-8447	http://vivo.school.edu/individual/n1133
-0000-0001-2002-0020 http://vivo.school.edu/individual/

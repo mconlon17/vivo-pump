@@ -1,11 +1,2 @@
-<http://vivo.school.edu/individual/n3080> <http://www.w3.org/2000/01/rdf-schema#label> "Fictional Study for the Purpose of Examining its Assertions"^^<http://www.w3.org/2001/XMLSchema#string> .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#grantDirectCosts> "123000" .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#totalAwardAmount> "183000" .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n5819> .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#localAwardId> "3456789" .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n2105> .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n7165> .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n5765> .
-<http://vivo.school.edu/individual/n3080> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n7393> .
 
 

@@ -21,12 +21,12 @@ example, gives its grants award IDs that look like R01DK22343
 
 ## Enumerations
 
-Simple VIVO for grants uses several enumerations to identify data in VIVO.  Each enumeration is made using 
-`make_enum.py` as described below.
+Simple VIVO for grants uses several enumerations to identify data already in your VIVO, that may be linked to one
+of your grants.  Each enumeration is made or updated using `make_enum.py` as described below.
 
 1. `concept_enum.txt` lists the concepts in your VIVO by name
 1. `date_enum.txt` lists the year-month-day dates in your VIVO by date value
-1. `dept_enum.txt` lists your institutions organizations by name
+1. `dept_enum.txt` lists your organizations by name
 1. `orcid_enum.txt` lists your investigators by ORCID.  ORCID is used to identify your investigators.  
 Each should have an ORCID, and the ORCID for each investigator should be in your VIVO.  See examples/people for
 adding ORCID to people.
