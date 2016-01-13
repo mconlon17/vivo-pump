@@ -1,0 +1,5 @@
+short	vivo
+faculty	http://vivoweb.org/ontology/core#FacultyMentoringRelationship
+graduate	http://vivoweb.org/ontology/core#GaduateAdvisingRelationship
+undergrad	http://vivoweb.org/ontology/core#UndergraduateAdvisingRelationship
+postdoc	http://vivoweb.org/ontology/core#PostdocOrFellowAdvisingRelationship

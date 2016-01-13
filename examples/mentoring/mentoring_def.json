@@ -28,6 +28,19 @@
                 }
             }
         ],
+        "type": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "rdf:type"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:AdvisingRelationship",
+                    "enum": "mentoring_types_enum.txt"
+                }
+            }
+        ],
         "advisee": [
             {
                 "predicate": {
