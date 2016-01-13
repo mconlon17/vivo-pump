@@ -1,6 +1,7 @@
 # Managing mentoring relationships in VIVO
 
-Chair of committee, professional mentoring, other types of person-to-person scholarly relationships.
+Professional mentoring, graduate or undergrauate degree mentoring, 
+other types of person-to-person mentoring relationships.
 
 To enter a mentoring relationship, there are seven attributes
 
@@ -17,9 +18,9 @@ with additional attributes in the future.
 
 ## Enumerations
 
-1. `orcid_enum.txt` -- used to list possible advisors and advisees
-1. `concept_enum.txt` -- used to list possible subject areas for the advising relationship
-1. `degree_enum.txt` -- used to list the possible degrees
+1. `orcid_enum.txt` -- used to identify possible advisors and advisees
+1. `concept_enum.txt` -- used to identify possible subject areas for the advising relationship
+1. `degree_enum.txt` -- used to identify the degree if mentoring is related to obtaning a degree
 1. `date_enum.txt` -- used to list the dates by year to indicate start and end
 
 ## Adding and Updating mentoring relationships

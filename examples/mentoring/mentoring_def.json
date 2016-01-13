@@ -1,19 +1,29 @@
 {
     "entity_def": {
         "type": "vivo:AdvisingRelationship",
-        "entity_sparql": "?uri a vivo:AdvisingRelationship . ",
-        "order_by": "name"
+        "entity_sparql": "?uri a vivo:AdvisingRelationship . "
     }, 
     "column_defs": {
         "advisor": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?advisee a foaf:Person .",
+                    "type": "vivo:AdvisorRole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:RO_0000052"
+
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -21,12 +31,23 @@
         "advisee": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": true,
                     "ref": "vivo:relates"
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?advisee a foaf:Person .",
+                    "type": "vivo:AdviseeRole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:RO_0000052"
+
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
                 }
             }
@@ -39,6 +60,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "skos:Concept",
                     "enum": "concept_enum.txt"
                 }
             }
@@ -51,7 +73,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "qualifier": "?degree a vivo:AcademicDegree .",
+                    "type": "vivo:AcademicDegree",
                     "enum": "degree_enum.txt"
                 }
             }
@@ -64,8 +86,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeInterval",
-                    "name": "teaching_period"
+                    "type": "vivo:DateTimeInterval"
                 }
             },
             {
@@ -75,6 +96,7 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "vivo:dateTime",
                     "enum": "date_enum.txt"
                 }
             }
@@ -87,8 +109,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:DateTimeInterval",
-                    "name": "teaching_period"
+                    "type": "vivo:DateTimeInterval"
                 }
             },
             {
@@ -98,9 +119,38 @@
                 },
                 "object": {
                     "literal": false,
+                    "type": "vivo:dateTime",
                     "enum": "date_enum.txt"
                 }
             }
+        ]
+    },
+    "closure_defs": {
+        "advisor": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                     "enum": "orcid_enum.txt"
+                 }
+            }
+        ],
+        "advisor": [
+             {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                 "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                  }
+             }
         ]
     }
 }
