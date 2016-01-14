@@ -1232,13 +1232,14 @@ def load_enum(update_def):
     return enum
 
 
-def create_enum(filename, query, parms, trim=0):
+def create_enum(filename, query, parms, trim=0, skip=0):
     """
     Given, query, parms and a filename, execute the query and write the enum into the file
     :param: filename: name of the file to contain the enumeration
     :param: query: the query to be used to create the columns for the enumeration
     :param: parms: dictionary of VIVO SPARQL API parameters
     :param: trim:  If 0, no trim.  If k, return the first k characters as a trimmed value for short
+    :param: skip: If 0, no skip.  If k, skip the first k characters as a trimmed value for short
     :return: None
     """
     import codecs
@@ -1246,10 +1247,12 @@ def create_enum(filename, query, parms, trim=0):
     outfile = codecs.open(filename, mode='w', encoding='ascii', errors='xmlcharrefreplace')
     outfile.write("short\tvivo\n")
     for item in data['results']['bindings']:
-        if trim == 0:
+        if trim == 0 and skip==0:
             outfile.write(item["short"]["value"] + "\t" + item["vivo"]["value"] + "\n")
+        elif trim == 0 and skip != 0:
+            outfile.write(item["short"]["value"][skip:] + "\t" + item["vivo"]["value"] + "\n")
         else:
-            outfile.write(item["short"]["value"][0:trim] + "\t" + item["vivo"]["value"] + "\n")
+            outfile.write(item["short"]["value"][skip:-trim] + "\t" + item["vivo"]["value"] + "\n")
     outfile.close()
 
 

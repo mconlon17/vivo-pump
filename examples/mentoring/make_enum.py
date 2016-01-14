@@ -4,14 +4,13 @@
     make_enum.py -- make enumerations for education
 """
 
+from datetime import datetime
+from pump.vivopump import get_parms, create_enum
+
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2016 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
 __version__ = "0.1.2"
-
-from datetime import datetime
-
-from pump.vivopump import get_parms, create_enum
 
 
 def main():
@@ -33,7 +32,7 @@ def main():
     ORDER BY ?short
     """
 
-    create_enum("orcid_enum.txt", query, parms)
+    create_enum("orcid_enum.txt", query, parms, skip=17)
 
     #   degree
 

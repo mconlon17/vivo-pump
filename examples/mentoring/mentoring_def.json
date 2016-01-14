@@ -81,8 +81,8 @@
         "degree": [
             {
                 "predicate": {
-                    "single": false,
-                    "ref": "vivo:relates"
+                    "single": true,
+                    "ref": "vivo:degreeCandidacy"
                 },
                 "object": {
                     "literal": false,

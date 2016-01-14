@@ -465,3 +465,5 @@ progress.  `get_graph` updated to handle types.  All tests pass.
 * **2016-01-12** Update all cfg files in `examples`. Fix display of tab as separator in pump test method.  Grant 
 example is ready for release.
 * **2016-01-13** Begin updating mentoring example.
+* **2016-01-14** `create_enum` now has skip parameter to help make short entires for enumerations.  `mentoring_def`
+updated. `make_enum.py` updated.

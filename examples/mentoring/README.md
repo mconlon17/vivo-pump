@@ -6,6 +6,8 @@ other types of person-to-person mentoring relationships.
 To enter a mentoring relationship, there are seven attributes
 
 1.  Mentor -- entered by orcid from list in enumeration
+1.  Type -- the type of mentoring relationship.  faculty, graduate, undergrad, postdoc.  For "other", leave the type
+blank.
 1.  Mentee -- entered by orcid from list in enumeration
 1.  Subject area(s) -- entered by name from list in enumeration
 1.  Degree candidacy -- entered by name from list in enumeration
@@ -22,6 +24,8 @@ with additional attributes in the future.
 1. `concept_enum.txt` -- used to identify possible subject areas for the advising relationship
 1. `degree_enum.txt` -- used to identify the degree if mentoring is related to obtaning a degree
 1. `date_enum.txt` -- used to list the dates by year to indicate start and end
+1. `mentoring_type_enum.txt` -- used to indicate the type of mentoring relationship.  To indicate "other" leave
+the type blank.
 
 ## Adding and Updating mentoring relationships
 
