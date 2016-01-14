@@ -1249,11 +1249,10 @@ def create_enum(filename, query, parms, trim=0, skip=0):
     for item in data['results']['bindings']:
         if trim == 0 and skip==0:
             outfile.write(item["short"]["value"] + "\t" + item["vivo"]["value"] + "\n")
+        elif trim != 0 and skip == 0:
+            outfile.write(item["short"]["value"][:trim] + "\t" + item["vivo"]["value"] + "\n")
         elif trim == 0 and skip != 0:
             outfile.write(item["short"]["value"][skip:] + "\t" + item["vivo"]["value"] + "\n")
         else:
             outfile.write(item["short"]["value"][skip:-trim] + "\t" + item["vivo"]["value"] + "\n")
     outfile.close()
-
-
-

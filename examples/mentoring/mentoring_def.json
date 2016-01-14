@@ -109,7 +109,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:dateTime",
+                    "type": "vivo:DateTimeValue",
                     "enum": "date_enum.txt"
                 }
             }
@@ -132,7 +132,7 @@
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:dateTime",
+                    "type": "vivo:DateTimeValue",
                     "enum": "date_enum.txt"
                 }
             }
