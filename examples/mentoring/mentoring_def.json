@@ -28,16 +28,51 @@
                 }
             }
         ],
-        "type": [
+        "fac": [
             {
                 "predicate": {
-                    "single": false,
+                    "single": "boolean",
                     "ref": "rdf:type"
                 },
                 "object": {
                     "literal": false,
-                    "type": "vivo:AdvisingRelationship",
-                    "enum": "mentoring_types_enum.txt"
+                    "value": "vivo:FacultyMentoringRelationship"
+                }
+            }
+        ],
+        "grad": [
+            {
+                "predicate": {
+                    "single": "boolean",
+                    "ref": "rdf:type"
+                },
+                "object": {
+                    "literal": false,
+                    "value": "vivo:GraduateAdvisingRelationship"
+                }
+            }
+        ],
+        "undergrad": [
+            {
+                "predicate": {
+                    "single": "boolean",
+                    "ref": "rdf:type"
+                },
+                "object": {
+                    "literal": false,
+                    "value": "vivo:UndergraduateAdvisingRelationship"
+                }
+            }
+        ],
+        "postdoc": [
+            {
+                "predicate": {
+                    "single": "boolean",
+                    "ref": "rdf:type"
+                },
+                "object": {
+                    "literal": false,
+                    "value": "vivo:PostdocOrFellowAdvisingRelationship"
                 }
             }
         ],
