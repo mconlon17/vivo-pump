@@ -1,0 +1,24 @@
+<http://vivo.school.edu/individual/n353133534> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.school.edu/individual/n3423> .
+<http://vivo.school.edu/individual/n8183> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n8968236376> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n1133> .
+<http://vivo.school.edu/individual/n1591> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n8968236376> .
+<http://vivo.school.edu/individual/n3297152076> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AdvisingRelationship> .
+<http://vivo.school.edu/individual/n2740> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n5286173468> .
+<http://vivo.school.edu/individual/n2401787236> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n287633224> .
+<http://vivo.school.edu/individual/n1144885941> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AdvisorRole> .
+<http://vivo.school.edu/individual/n2401787236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#DateTimeInterval> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#dateTimeInterval> <http://vivo.school.edu/individual/n2401787236> .
+<http://vivo.school.edu/individual/n8183> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n7206661779> .
+<http://vivo.school.edu/individual/n3297152076> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#UndergraduateAdvisingRelationship> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n1144885941> .
+<http://vivo.school.edu/individual/n2401787236> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n7225407119> .
+<http://vivo.school.edu/individual/n1591> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n7206661779> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n353133534> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#degreeCandidacy> <http://vivoweb.org/ontology/degree/academicDegree4> .
+<http://vivo.school.edu/individual/n353133534> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vivoweb.org/ontology/core#AdviseeRole> .
+<http://vivo.school.edu/individual/n2740> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n7206661779> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#hasSubjectArea> <http://vivo.school.edu/individual/sub-c89ec17cae7626c0f28c316950ee28f0> .
+<http://vivo.school.edu/individual/n3297152076> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n3423> .
+<http://vivo.school.edu/individual/n1144885941> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.school.edu/individual/n1133> .
+
+

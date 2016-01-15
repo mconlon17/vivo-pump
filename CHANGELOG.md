@@ -467,3 +467,4 @@ example is ready for release.
 * **2016-01-13** Begin updating mentoring example.
 * **2016-01-14** `create_enum` now has skip parameter to help make short entires for enumerations.  `mentoring_def`
 updated. `make_enum.py` updated.
+* **2016-01-15** improving the mentoring example.

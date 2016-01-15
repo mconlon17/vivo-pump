@@ -1,0 +1,11 @@
+<http://vivo.school.edu/individual/n2740> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n5818> .
+<http://vivo.school.edu/individual/n8183> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n5419> .
+<http://vivo.school.edu/individual/n8183> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n2889> .
+<http://vivo.school.edu/individual/n2740> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n971> .
+<http://vivo.school.edu/individual/n4905> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n2503> .
+<http://vivo.school.edu/individual/n4563> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n205> .
+<http://vivo.school.edu/individual/n5201> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n8066> .
+<http://vivo.school.edu/individual/n1591> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n7458> .
+<http://vivo.school.edu/individual/n1591> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n2438> .
+
+
