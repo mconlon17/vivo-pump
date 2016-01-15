@@ -307,6 +307,7 @@ class Pump(object):
                 uri = entity_uri
 
                 if data_update[column_name] == '':
+                    logger.debug(u"Skipping blank value. row {} column {}".format(row, column_name))
                     continue
 
                 if len(column_def) > 3:

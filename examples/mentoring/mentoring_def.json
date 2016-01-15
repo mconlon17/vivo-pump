@@ -183,8 +183,8 @@
                 "object": {
                     "literal": false,
                     "type": "foaf:Person",
-                     "enum": "orcid_enum.txt"
-                 }
+                    "enum": "orcid_enum.txt"
+                }
             }
         ],
         "advisee": [
@@ -193,11 +193,11 @@
                     "single": false,
                     "ref": "vivo:relates"
                 },
-                 "object": {
+                "object": {
                     "literal": false,
                     "type": "foaf:Person",
                     "enum": "orcid_enum.txt"
-                  }
+                }
              }
         ]
     }
