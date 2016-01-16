@@ -468,4 +468,5 @@ example is ready for release.
 * **2016-01-14** `create_enum` now has skip parameter to help make short entires for enumerations.  `mentoring_def`
 updated. `make_enum.py` updated.
 * **2016-01-15** improving the mentoring example.
-* **2016-01-16** Add validity check to `read_update_def` -- closure names must be found in column names.
+* **2016-01-16** Add validity check to `read_update_def` -- closure names must be found in column names.  With
+corresponding new unit test `test_closure_not_in_column_def`
