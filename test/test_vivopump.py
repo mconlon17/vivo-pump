@@ -127,6 +127,11 @@ class ReadUpdateDefTestCase(unittest.TestCase):
             update_def = read_update_def('data/person_novalue_def.json', prefix=QUERY_PARMS['prefix'])
             print update_def
 
+    def test_closure_not_in_column_def(self):
+        with self.assertRaises(InvalidDefException):
+            update_def = read_update_def('data/grant_invalid_closure_def.json', prefix=QUERY_PARMS['prefix'])
+            print update_def
+
     def test_pathlength_def(self):
         with self.assertRaises(PathLengthException):
             p = Pump('data/grant_invalidpathlength_def.json')

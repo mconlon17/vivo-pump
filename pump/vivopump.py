@@ -502,15 +502,13 @@ def read_update_def(filename, prefix):
         """
         col_names = a['column_defs'].keys()
 
-        # #   Test for object name same as column def names
-        #
-        # names = [y[x].get('object', None).get('name', '') for y in a['column_defs'].values() for x
-        #          in range(len(y) - 1)]
-        # for name in col_names:
-        #     if name in names:
-        #         raise InvalidDefException(name + " in object and column_defs")
+        # Test that each closure_def name can be found in the column_def names
 
-        #   Test for multiple multiple predicates (can only have one multiple per path)
+        for name in a.get('closure_defs', {}).keys():
+            if name not in col_names:
+                raise InvalidDefException(name + 'in closure_def, not in column_def.')
+
+        # Test for paths having more than one multiple predicate
 
         for name in col_names:
             multiple = 0
@@ -520,7 +518,7 @@ def read_update_def(filename, prefix):
                     if multiple > 1:
                         raise InvalidDefException(name + ' has more than one multiple predicate')
 
-        #   Test for boolean value
+        # Test for presence of required boolean value
 
         for name in col_names:
             for step in a['column_defs'][name]:
