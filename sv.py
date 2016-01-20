@@ -45,7 +45,6 @@ def main():
     from datetime import datetime
     from vivopump import get_args, make_inverse_subs
     from pump import Pump
-    import utils
 
     return_code = 0
     print datetime.now(), "Start"
@@ -63,10 +62,6 @@ def main():
         n_rows = p.get()
         print datetime.now(), n_rows, "rows in", args.src
     elif args.action == 'update':
-
-        print(args.queryuri)
-        print(args.username)
-        print(args.password)
 
         try:
             [add_graph, sub_graph] = p.update()

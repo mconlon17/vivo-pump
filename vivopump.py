@@ -9,7 +9,6 @@ import csv
 import string
 import random
 import logging
-import utils
 import rdflib
 
 __author__ = "Michael Conlon"
@@ -261,7 +260,6 @@ def get_vivo_inverse_property(forward_property, parms):
     if len(inverse_property) > 0:
         return inverse_property[0].encode()
     else:
-        utils.print_err("No Invesrse")
         return None
 
 
@@ -653,7 +651,6 @@ def get_graph(update_def, query_parms):
         p = URIRef(row['p']['value'])
         o = make_rdf_term(row['o'])
         a.add((s, p, o))
-       # utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s.encode(),p.encode(),o.encode()))
     for column_name, path in update_def['column_defs'].items():
         update_query = make_update_query(column_name, update_def['entity_def']['entity_sparql'], path)
         if len(update_query) == 0:
@@ -663,21 +660,17 @@ def get_graph(update_def, query_parms):
             s = URIRef(row['uri']['value'])
             p = URIRef(row['p']['value'])
             o = make_rdf_term(row['o'])
-            #utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s,p,o))
             a.add((s, p, o))
             if 'p2' in row and 'o2' in row:
                 p2 = URIRef(row['p2']['value'])
                 o2 = make_rdf_term(row['o2'])
-                #utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s,p,o))
                 a.add((o, p2, o2))
                 if 'p3' in row and 'o3' in row:
                     p3 = URIRef(row['p3']['value'])
                     o3 = make_rdf_term(row['o3'])
-                    #utils.print_err("\nInside vivopump.py\nInside get_graph()\ns= {}\np= {}\no= {}".format(s,p,o))
                     a.add((o2, p3, o3))
         logger.debug(u"Triples in original graph {}".format(len(a)))
 
-    utils.print_err("\nInside vivopump.py\nInside get_graph()\na = {}".format(a.serialize(format='nt')))
     return a
 
 
@@ -840,6 +833,30 @@ def comma_space(s):
         s = s[0:k] + ', ' + comma_space(s[k + 1:])
     return s
 
+
+def improve_type(s):
+    """
+    The Office of the University Registrar at UF uses a series of abbreviations to fit course titles into limited text
+    strings.
+    Here we attempt to reverse the process -- a short title is turned into a
+    longer one for use in labels
+    """
+
+    abbrev_table = {
+        "Article": "article",
+        "Review": "review",
+        "Book Review": "bookreview",
+        "Editorial Material": "editorialmaterial",
+        "Meeting Abstract": "meetingabstract",
+        "Proceedings Paper": "proceedingspaper",
+        "Letter": "letter",
+        "Correction": "correction",
+        "Biographical-Item": "biographicalitem",
+        "News Item": "newsitem"
+    }
+    for abbrev in abbrev_table:
+        s = s.replace(abbrev, abbrev_table[abbrev])
+    return s
 
 def improve_course_title(s):
     """
@@ -2071,25 +2088,21 @@ def make_inverse_subs(sub_file, parms):
     :return: updated subfile with inverse properties
     """
 
-    file_out = open(sub_file + '.new', "w")
+    file_out = open(sub_file + '.inverse', "w")
 
-    utils.print_err("the sube file is: {}".format(sub_file))
+    logger.debug("the sube file is: {}".format(sub_file))
 
     #with open(sub_file,'rw') as input_file:
         # data = input_file.read()
-        # utils.print_err("data: \n\n{}".format(data))
     sub_graph = rdflib.Graph()
     sub_file_data = sub_graph.parse(sub_file,format='nt')
 
     for s,p,o in sub_file_data:
-        utils.print_err("p is: \n{}".format(p))
         try:
             inverse_property = rdflib.URIRef((get_vivo_inverse_property(p,parms)))
             sub_file_data.add((o,rdflib.URIRef(inverse_property),s))
-            utils.print_err("inverse_property is: \n{}".format(inverse_property))
         except TypeError:
             continue
 
-        utils.print_err("inverse_property is: \n{}".format(inverse_property))
 
     file_out.write(sub_file_data.serialize(format='nt'))
