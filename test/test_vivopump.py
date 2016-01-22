@@ -9,9 +9,7 @@ import unittest
 from pump.vivopump import new_uri, read_csv, write_csv, vivo_query, write_update_def, \
     read_csv_fp, write_csv_fp, get_vivo_ufid, get_vivo_authors, get_vivo_types, get_vivo_sponsorid, \
     make_update_query, read_update_def, make_rdf_term, get_graph, \
-    InvalidDefException, PathLengthException, \
-    replace_initials, \
-    parse_pages, parse_date_parts
+    InvalidDefException, PathLengthException, parse_pages, parse_date_parts
 from pump.pump import Pump
 
 __author__ = "Michael Conlon"
@@ -41,19 +39,24 @@ QUERY_PARMS = {'queryuri': 'http://localhost:8080/vivo/api/sparqlQuery',
 
 
 class ReplaceInitialsCase(unittest.TestCase):
+
     def test_replace_initials_default(self):
+        from pump.vivopump import replace_initials
         t = replace_initials('This is A. test')
         self.assertEqual(t, 'This is A test')
 
     def test_replace_initials_two(self):
+        from pump.vivopump import replace_initials
         t = replace_initials('This is A. B. test')
         self.assertEqual(t, 'This is A B test')
 
     def test_replace_initials_consecutive_dots(self):
+        from pump.vivopump import replace_initials
         t = replace_initials('This is A.. B. test')
         self.assertEqual(t, 'This is A. B test')
 
     def test_replace_initials_consecutive_initials(self):
+        from pump.vivopump import replace_initials
         t = replace_initials('This is A.B. test')
         self.assertEqual(t, 'This is AB test')
 
