@@ -226,7 +226,7 @@ def replace_initials(s):
         """
         return m.group(0)[0]
 
-    t = re.sub('[A-Z]\.', repl_function, s)
+    t = re.sub('US(?!A.)[A-Z]\.', repl_function, s)
     return t
 
 
