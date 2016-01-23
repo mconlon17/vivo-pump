@@ -1143,37 +1143,16 @@ def get_step_triples(update_graph, uri, step_def, query_parms):
     :param step_def: step definition from update_def
     :return:  Graph containing zero or more triples that match the criteria for the step
     """
-    from rdflib import Graph
-    type_query_template = """
-    CONSTRUCT {<{{uri}}> <{{pred}}> ?o}
-    WHERE {
-        <{{uri}}> <{{pred}}> ?o .
-        ?o a <{{type}}> .
-    }
-    """
+    from rdflib import Graph, RDF
 
     if 'qualifier' not in step_def['object']:
-        if 'type' not in step_def['object']:
-
-            #   No type for object, so use simple predicate filter on update graph
-
-            gset = update_graph.triples((uri, step_def['predicate']['ref'], None))
-            g = Graph()
-            for (s, p, o) in gset:
-                g.add((s, p, o))
-        else:
-
-            #   Handle non-specific predicates qualified by type (a common case for VIVO-ISF)
-
-            type_query = type_query_template.replace('{{uri}}', str(uri))
-            type_query = type_query.replace('{{pred}}', str(step_def['predicate']['ref']))
-            type_query = type_query.replace('{{type}}', str(step_def['object']['type']))
-            logger.debug(u'get_step_triples type query {}'.format(type_query))
-            qresult = update_graph.query(type_query)
-            g = Graph()
-            for row in qresult:
-                g.add(row)
-            logger.debug(u'{} get_step_triples found'.format(len(g)))
+        g = Graph()
+        for obj in update_graph.objects(uri, step_def['predicate']['ref']):
+            if 'type' in step_def['object']:
+                if (obj, RDF.type, step_def['object']['type']) in update_graph:
+                    g.add((uri, step_def['predicate']['ref'], obj))
+            else:
+                g.add((uri, step_def['predicate']['ref'], obj))
     else:
 
         #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF)
