@@ -237,145 +237,6 @@ class Pump(object):
                         len(self.enum[key]['update'])))
         return self.__do_update()
 
-    def __do_update(self):
-        """
-        For each row, process each column.  Compare to data in VIVO.  Generate add and sub
-        rdf as necessary to process requested add, change, delete
-        """
-        from rdflib import URIRef, RDF
-        from vivopump import new_uri, prepare_column_values, get_step_triples, PathLengthException
-
-        merges = {}
-
-        for row, data_update in self.update_data.items():
-
-            # Create a URI if empty
-
-            if data_update['uri'].strip() == '':
-
-                # If the source uri is empty, create one.  Remaining processing is unchanged.
-                # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
-
-                uri_string = new_uri(self.query_parms)
-                logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, uri_string))
-                uri = URIRef(uri_string)
-                self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
-
-            #   Create a URI entity if not found
-
-            else:
-                uri = URIRef(data_update['uri'].strip())
-                if (uri, None, None) not in self.update_graph:
-                    logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, str(uri)))
-                    self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
-
-            entity_uri = uri
-            action = data_update.get('action', '').lower()
-
-            # Process remove action if any
-
-            if action == 'remove':
-                self.__do_remove(row, uri)
-                continue
-
-            # Collect merge info if any
-
-            if action != '':
-                k = action.find('1')
-                if k > -1:
-                    key = action[0:k]
-                    if key not in merges:
-                        merges[key] = {}
-                        merges[key]['primary'] = None
-                        merges[key]['secondary'] = [uri]
-                    else:
-                        merges[key]['secondary'].append(uri)
-                else:
-                    if action not in merges:
-                        merges[action] = {}
-                    merges[action]['primary'] = uri
-                    if 'secondary' not in merges[action]:
-                        merges[action]['secondary'] = []
-
-            #   For this row, process all the column_defs and then process closure defs if any.  Closures allow
-            #   columns to be "reused" providing additional paths from the row entity to entities in the paths.
-
-            for column_name, column_def in self.update_def['column_defs'].items() + \
-                    self.update_def.get('closure_defs', {}).items():
-                if column_name not in data_update:
-                    continue  # extra column names are allowed in the spreadsheet for annotation
-                uri = entity_uri
-
-                if data_update[column_name] == '':
-                    logger.debug(u"Skipping blank value. row {} column {}".format(row, column_name))
-                    continue
-
-                if len(column_def) > 3:
-                    raise PathLengthException(
-                        "ERROR: Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
-                            len(column_def)))
-                elif len(column_def) == 3:
-                    self.__do_three_step_update(row, column_name, uri, column_def, data_update)
-                elif len(column_def) == 2:
-                    self.__do_two_step_update(row, column_name, uri, column_def, data_update)
-                elif len(column_def) == 1:
-                    step_def = column_def[0]
-                    vivo_objs = {unicode(o): o for s, p, o in
-                                 get_step_triples(self.update_graph, uri, step_def, self.query_parms)}
-                    column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
-                                                          row, column_name)
-                    logger.debug(u"{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
-                    self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
-
-        if any(merges):
-            self.__do_merges(merges)
-
-        # Return the add and sub graphs representing the changes that need to be made to the original
-
-        add = self.update_graph - self.original_graph  # Triples in update that are not in original
-        logger.info(u"Triples to add\n{}".format(add.serialize(format='nt')))
-        sub = self.original_graph - self.update_graph  # Triples in original that are not in update
-        logger.info(u"Triples to sub\n{}".format(sub.serialize(format='nt')))
-        return [add, sub]
-
-    def __do_merges(self, merges):
-        """
-        Given merge data collected by processing the action column of the update data, merge all the secondary
-        uris to the corresponding primary uris
-        :param merges: dictionary of merges.  merge key and two elements.  Primary uri and list of secondary uris
-        :return: None
-        """
-        # Print the merge info
-
-        logger.info(u"Merge Info\n".format(merges))
-        for key in merges:
-            primary_uri = merges[key]['primary']
-            if primary_uri is not None:
-                for secondary_uri in merges[key]['secondary']:
-                    for s, p, o in self.update_graph.triples((secondary_uri, None, None)):
-                        self.update_graph.add((primary_uri, p, o))
-                        self.update_graph.remove((secondary_uri, p, o))
-                    for s, p, o in self.update_graph.triples((None, None, secondary_uri)):
-                        self.update_graph.add((s, p, primary_uri))
-                        self.update_graph.remove((s, p, secondary_uri))
-
-    def __do_remove(self, row, uri):
-        """
-        Given the row an uri of a remove instruction, find the uri in the update_graph and remove all triples
-        associated with it as either a subject or object
-        :param row: the row number in the data for the remove instruction
-        :param uri: the uri of the entity to be removed
-        :return: int: Number of triples removed.  Must have remove =true and uri found in update_graph
-        :rtype: int
-        """
-        before = len(self.update_graph)
-        self.update_graph.remove((uri, None, None))
-        self.update_graph.remove((None, None, uri))
-        after = len(self.update_graph)
-        removed = before - after
-        logger.debug(u"REMOVING {} triples for {} on row {}".format(removed, uri, row))
-        return removed
-
     def __do_get(self):
         """
         Data is queried from VIVO and returned as a tab delimited text file suitable for
@@ -477,6 +338,145 @@ class Pump(object):
 
         return len(data)
 
+    def __do_merges(self, merges):
+        """
+        Given merge data collected by processing the action column of the update data, merge all the secondary
+        uris to the corresponding primary uris
+        :param merges: dictionary of merges.  merge key and two elements.  Primary uri and list of secondary uris
+        :return: None
+        """
+        # Print the merge info
+
+        logger.info(u"Merge Info\n".format(merges))
+        for key in merges:
+            primary_uri = merges[key]['primary']
+            if primary_uri is not None:
+                for secondary_uri in merges[key]['secondary']:
+                    for s, p, o in self.update_graph.triples((secondary_uri, None, None)):
+                        self.update_graph.add((primary_uri, p, o))
+                        self.update_graph.remove((secondary_uri, p, o))
+                    for s, p, o in self.update_graph.triples((None, None, secondary_uri)):
+                        self.update_graph.add((s, p, primary_uri))
+                        self.update_graph.remove((s, p, secondary_uri))
+
+    def __do_remove(self, row, uri):
+        """
+        Given the row an uri of a remove instruction, find the uri in the update_graph and remove all triples
+        associated with it as either a subject or object
+        :param row: the row number in the data for the remove instruction
+        :param uri: the uri of the entity to be removed
+        :return: int: Number of triples removed.  Must have remove =true and uri found in update_graph
+        :rtype: int
+        """
+        before = len(self.update_graph)
+        self.update_graph.remove((uri, None, None))
+        self.update_graph.remove((None, None, uri))
+        after = len(self.update_graph)
+        removed = before - after
+        logger.debug(u"REMOVING {} triples for {} on row {}".format(removed, uri, row))
+        return removed
+
+    def __do_update(self):
+        """
+        For each row, process each column.  Compare to data in VIVO.  Generate add and sub
+        rdf as necessary to process requested add, change, delete
+        """
+        from rdflib import URIRef, RDF
+        from vivopump import new_uri, prepare_column_values, get_step_triples, PathLengthException
+
+        merges = {}
+
+        for row, data_update in self.update_data.items():
+
+            # Create a URI if empty
+
+            if data_update['uri'].strip() == '':
+
+                # If the source uri is empty, create one.  Remaining processing is unchanged.
+                # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
+
+                uri_string = new_uri(self.query_parms)
+                logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, uri_string))
+                uri = URIRef(uri_string)
+                self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
+
+            #   Create a URI entity if not found
+
+            else:
+                uri = URIRef(data_update['uri'].strip())
+                if (uri, None, None) not in self.update_graph:
+                    logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, str(uri)))
+                    self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
+
+            entity_uri = uri
+            action = data_update.get('action', '').lower()
+
+            # Process remove action if any
+
+            if action == 'remove':
+                self.__do_remove(row, uri)
+                continue
+
+            # Collect merge info if any
+
+            if action != '':
+                k = action.find('1')
+                if k > -1:
+                    key = action[0:k]
+                    if key not in merges:
+                        merges[key] = {}
+                        merges[key]['primary'] = None
+                        merges[key]['secondary'] = [uri]
+                    else:
+                        merges[key]['secondary'].append(uri)
+                else:
+                    if action not in merges:
+                        merges[action] = {}
+                    merges[action]['primary'] = uri
+                    if 'secondary' not in merges[action]:
+                        merges[action]['secondary'] = []
+
+            #   For this row, process all the column_defs and then process closure defs if any.  Closures allow
+            #   columns to be "reused" providing additional paths from the row entity to entities in the paths.
+
+            for column_name, column_def in self.update_def['column_defs'].items() + \
+                    self.update_def.get('closure_defs', {}).items():
+                if column_name not in data_update:
+                    continue  # extra column names are allowed in the spreadsheet for annotation
+                uri = entity_uri
+
+                if data_update[column_name] == '':
+                    logger.debug(u"Skipping blank value. row {} column {}".format(row, column_name))
+                    continue
+
+                if len(column_def) > 3:
+                    raise PathLengthException(
+                        "ERROR: Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
+                            len(column_def)))
+                elif len(column_def) == 3:
+                    self.__do_three_step_update(row, column_name, uri, column_def, data_update)
+                elif len(column_def) == 2:
+                    self.__do_two_step_update(row, column_name, uri, column_def, data_update)
+                elif len(column_def) == 1:
+                    step_def = column_def[0]
+                    vivo_objs = {unicode(o): o for s, p, o in
+                                 get_step_triples(self.update_graph, uri, step_def, self.query_parms)}
+                    column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
+                                                          row, column_name)
+                    logger.debug(u"{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
+                    self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
+
+        if any(merges):
+            self.__do_merges(merges)
+
+        # Return the add and sub graphs representing the changes that need to be made to the original
+
+        add = self.update_graph - self.original_graph  # Triples in update that are not in original
+        logger.info(u"Triples to add\n{}".format(add.serialize(format='nt')))
+        sub = self.original_graph - self.update_graph  # Triples in original that are not in update
+        logger.info(u"Triples to sub\n{}".format(sub.serialize(format='nt')))
+        return [add, sub]
+
     def __do_three_step_update(self, row, column_name, uri, path, data_update):
         """
         Given the current state in the update, and a path length three column_def, add, change or delete intermediate
@@ -561,9 +561,9 @@ class Pump(object):
         #   Nasty hack below.  The predicate property "single" appears to have two meanings.  One has to do
         #   with the semantic graph and one has to do with the cardinality of the data column.  These are not
         #   the same.  When the first step is multiple and the second single, the "second single" is not the
-        #   cardinality of the data column.  The cardinality of the data column is the multiple if any of the
+        #   cardinality of the data column.  The cardinality of the data column is multiple if any of the
         #   predicates in the path are multiple.  Here we set the cardinality of the leaf to be used by
-        #   prepare_column_values and then set it back.  Nasty.  Create a property for the leaf cardinality.
+        #   prepare_column_values and then set it back.  Nasty.  Create a property for leaf cardinality.
 
         predicate2_cardinality = column_def[1]['predicate']['single']
         if column_def[0]['predicate']['single'] == False:
