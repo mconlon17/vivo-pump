@@ -1177,17 +1177,12 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
             logger.debug(u'{} get_step_triples found'.format(len(g)))
     else:
 
-        #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF))
+        #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF)
 
-        if 'name' in step_def['object']:
-            q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
-                str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' .\n' + \
-                add_qualifiers([step_def]) + ' }\n'
-        else:
-            q = 'select (?' + column_name + ' as ?o) where { <' + str(uri) + '> <' + \
-                str(step_def['predicate']['ref']) + '> ?' + column_name + ' .\n' + \
-                add_qualifiers([step_def]) + ' }\n'
-        logger.debug(u"Step Triples Query {}".format(q))
+        q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
+            str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' . \n' + \
+            add_qualifiers([step_def]) + ' }\n'
+        logger.debug(u"Qualified Step Triples Query {}".format(q))
         result_set = vivo_query(q, query_parms)
         g = Graph()
         for binding in result_set['results']['bindings']:
