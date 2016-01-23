@@ -1135,10 +1135,9 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     return column_terms
 
 
-def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
+def get_step_triples(update_graph, uri, step_def, query_parms):
     """
     Return the triples matching the criteria defined in the current step of an update
-    :param column_name:
     :param update_graph: the update graph
     :param uri: uri of the entity currently the subject of an update
     :param step_def: step definition from update_def
@@ -1183,7 +1182,7 @@ def get_step_triples(update_graph, uri, column_name, step_def, query_parms):
             str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' . \n' + \
             add_qualifiers([step_def]) + ' }\n'
         logger.debug(u"Qualified Step Triples Query {}".format(q))
-        result_set = vivo_query(q, query_parms)
+        result_set = vivo_query(q, query_parms)  # SLOW
         g = Graph()
         for binding in result_set['results']['bindings']:
             o = make_rdf_term(binding['o'])
