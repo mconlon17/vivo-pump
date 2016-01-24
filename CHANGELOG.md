@@ -472,3 +472,4 @@ updated. `make_enum.py` updated.
 corresponding new unit test `test_closure_not_in_column_def`
 * **2016-01-23** Qualifiers in `get_step_triples` now assume object has name. `get_step_triples` calling sequence no
 longer has `column_name`.  Refactor `get_step_triples` to remove use of query for non-qualified steps.  Faster, clearer.
+* **2016-01-24** Improve code formatting in `pump.py`

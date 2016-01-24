@@ -97,7 +97,7 @@ class Pump(object):
                      'PREFIX vivo:     <http://vivoweb.org/ontology/core#>\n'
                      'PREFIX scires:   <http://vivoweb.org/ontology/scientific-research#>\n')
 
-        # Ugly mutable param.  Refactor this
+        #   Ugly mutable param.  Refactor this
 
         self.query_parms = {'queryuri': self.queryuri, 'username': self.username, 'password': self.password,
                             'uriprefix': self.uriprefix, 'prefix': self.prefix}
@@ -204,7 +204,7 @@ class Pump(object):
         if self.update_data is None:  # Test for injection
             self.update_data = read_csv(self.out_filename, delimiter=self.inter)
 
-        # Narrow the update_def to include only columns that appear in the update_data
+        #   Narrow the update_def to include only columns that appear in the update_data
 
         new_update_columns = {}
         for name, path in self.update_def['column_defs'].items():
@@ -222,11 +222,10 @@ class Pump(object):
         for s, p, o in self.original_graph:
             self.update_graph.add((s, p, o))
 
-        # Provide logger info
-
         logger.info(u'Graphs ready for processing. Original has {} triples.  Update graph has {} triples.'.format(
             len(self.original_graph), len(self.update_graph)))
         logger.info(u'Updates ready for processing. {} rows in update.'.format(len(self.update_data)))
+
         if len(self.enum) == 0:
             logger.info(u"No enumerations")
         else:
@@ -268,12 +267,12 @@ class Pump(object):
             for name in columns:
                 if name in data[uri]:
 
-                    # Translate VIVO values via enumeration if any
+                    #   Translate VIVO values via enumeration if any
 
                     if name in self.update_def['column_defs']:
                         path = self.update_def['column_defs'][name]
 
-                        # Warn/correct if path is unique and VIVO is not
+                        #   Warn/correct if path is unique and VIVO is not
 
                         if unique_path(path) and len(data[uri][name]) > 1:
                             logger.warning(u"VIVO has non-unique values for unique path {} at {} values {}".
@@ -281,7 +280,7 @@ class Pump(object):
                             data[uri][name] = {next(iter(data[uri][name]))}  # Pick one element from multi-valued set
                             logger.warning(u"Using {}", data[uri][name])
 
-                        # Handle filters
+                        #   Handle filters
 
                         if self.filter and 'filter' in path[len(path) - 1]['object']:
                             a = set()
@@ -295,7 +294,7 @@ class Pump(object):
                                 a.add(new_string)
                             data[uri][name] = a
 
-                        # Handle enumerations
+                        #   Handle enumerations
 
                         if 'enum' in path[len(path) - 1]['object']:
                             enum_name = path[len(path) - 1]['object']['enum']
@@ -309,7 +308,7 @@ class Pump(object):
                                                    format(x, enum_name, self.out_filename))
                             data[uri][name] = a
 
-                    # Gather values into a delimited string
+                    #   Gather values into a delimited string
 
                     val = self.intra.join(data[uri][name])
                     outfile.write(val.replace('\r', ' ').replace('\n', ' ').replace('\t', ' '))
@@ -319,7 +318,7 @@ class Pump(object):
 
         outfile.close()
 
-        # Rewrite the file based on the order_by or uri if none
+        #   Rewrite the file based on the order_by or uri if none
 
         sort_column_name = self.update_def['entity_def'].get('order_by', 'uri')
         data = read_csv(self.out_filename, delimiter=self.inter)
@@ -345,7 +344,6 @@ class Pump(object):
         :param merges: dictionary of merges.  merge key and two elements.  Primary uri and list of secondary uris
         :return: None
         """
-        # Print the merge info
 
         logger.info(u"Merge Info\n".format(merges))
         for key in merges:
@@ -392,8 +390,8 @@ class Pump(object):
 
             if data_update['uri'].strip() == '':
 
-                # If the source uri is empty, create one.  Remaining processing is unchanged.
-                # Since the new uri does not have triples for the columns in the spreadsheet, each will be added
+                #   If the source uri is empty, create one.  Remaining processing is unchanged.
+                #   Since the new uri does not have triples for the columns in the spreadsheet, each will be added
 
                 uri_string = new_uri(self.query_parms)
                 logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, uri_string))
@@ -411,13 +409,13 @@ class Pump(object):
             entity_uri = uri
             action = data_update.get('action', '').lower()
 
-            # Process remove action if any
+            #   Process remove action if any
 
             if action == 'remove':
                 self.__do_remove(row, uri)
                 continue
 
-            # Collect merge info if any
+            #   Collect merge info if any
 
             if action != '':
                 k = action.find('1')
@@ -469,7 +467,7 @@ class Pump(object):
         if any(merges):
             self.__do_merges(merges)
 
-        # Return the add and sub graphs representing the changes that need to be made to the original
+        #   Return the add and sub graphs representing the changes that need to be made to the original
 
         add = self.update_graph - self.original_graph  # Triples in update that are not in original
         logger.info(u"Triples to add\n{}".format(add.serialize(format='nt')))
@@ -496,7 +494,7 @@ class Pump(object):
 
         if len(step_uris) == 0:
 
-            # VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
+            #   VIVO has no values for first intermediate, so add new intermediate and do a two step update on it
 
             step_uri = URIRef(new_uri(self.query_parms))
             self.update_graph.add((uri, step_def['predicate']['ref'], step_uri))
@@ -665,7 +663,7 @@ class Pump(object):
         """
         from vivopump import make_rdf_term_from_source
 
-        # Compare VIVO to Input and update as indicated
+        #   Compare VIVO to Input and update as indicated
 
         if len(column_values) == 1:
             column_string = unicode(column_values[0])
@@ -713,7 +711,7 @@ class Pump(object):
                                                                                                               None)))
         else:
 
-            # Set comparison processing
+            #   Set comparison processing
 
             logger.debug(u'SET COMPARE {} {} {} {}'.format(row, column_name, column_values, vivo_objs.values()))
             add_values = set(column_values) - set(vivo_objs.values())
