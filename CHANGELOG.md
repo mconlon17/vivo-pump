@@ -473,6 +473,6 @@ corresponding new unit test `test_closure_not_in_column_def`
 * **2016-01-23** Qualifiers in `get_step_triples` now assume object has name. `get_step_triples` calling sequence no
 longer has `column_name`.  Refactor `get_step_triples` to remove use of query for non-qualified steps.  Faster, clearer.
 * **2016-01-24** Improve code formatting in `pump.py`
-* **2016-01-27** Closure now checked tyo insure that datatype and type of last object in path has same datatype and
+* **2016-01-27** Closure now checked to insure that datatype and type of last object in path has same datatype and
 type as specified in the corresponding object in the column_def.  `read_updatedef` thows InvalidDefException if these 
 are mismatched.  Unit test added.
