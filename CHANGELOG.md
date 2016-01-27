@@ -474,6 +474,6 @@ corresponding new unit test `test_closure_not_in_column_def`
 longer has `column_name`.  Refactor `get_step_triples` to remove use of query for non-qualified steps.  Faster, clearer.
 * **2016-01-24** Improve code formatting in `pump.py`
 * **2016-01-27** Closure now checked to insure that datatype and type of last object in path has same datatype and
-type as specified in the corresponding object in the column_def.  `read_updatedef` thows InvalidDefException if these 
-are mismatched.  Unit test added.  `get_step_triples` is now a pump method.  Calling sequence simplied.  All tests
+type as specified in the corresponding object in the column_def.  `read_update_def` throws InvalidDefException if these 
+are mismatched.  Unit tests added.  `get_step_triples` is now a pump method.  Calling sequence simplied.  All tests
 pass.
