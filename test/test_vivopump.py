@@ -125,6 +125,11 @@ class ReadUpdateDefTestCase(unittest.TestCase):
             update_def = read_update_def('data/grant_invalid_multiple_def.json', prefix=QUERY_PARMS['prefix'])
             print update_def
 
+    def test_invalid_closure_object_def(self):
+        with self.assertRaises(InvalidDefException):
+            update_def = read_update_def('data/grant_invalid_closure_object_def.json', prefix=QUERY_PARMS['prefix'])
+            print update_def
+
     def test_novalue_def(self):
         with self.assertRaises(InvalidDefException):
             update_def = read_update_def('data/person_novalue_def.json', prefix=QUERY_PARMS['prefix'])
@@ -137,7 +142,7 @@ class ReadUpdateDefTestCase(unittest.TestCase):
 
     def test_pathlength_def(self):
         with self.assertRaises(PathLengthException):
-            p = Pump('data/grant_invalidpathlength_def.json')
+            p = Pump('data/grant_invalid_path_length_def.json')
             n = p.get()
             print n
 

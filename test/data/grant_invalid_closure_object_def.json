@@ -1,0 +1,294 @@
+{
+    "entity_def": {
+        "type": "vivo:Grant", 
+        "entity_sparql": "?uri a vivo:Grant . ",
+        "order_by": "title"
+    }, 
+    "column_defs": {
+        "award_id": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:localAwardId"
+                },
+                "object": {
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+    	"title": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "rdfs:label"
+                }, 
+                "object": {
+                    "filter": "improve_title",
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ],
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:start"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeValue",
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:end"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeValue",
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "department": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:AdminRole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:RO_0000052"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Organization",
+                    "enum": "dept_enum.txt"
+                }
+            }
+        ],
+        "total_award": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:totalAwardAmount"
+                },
+                "object": {
+                    "filter": "improve_dollar_amount",
+                    "literal": true,
+                    "datatype": "xsd:decimal"
+                }
+            }
+        ],
+        "direct_costs": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:grantDirectCosts"
+                }, 
+                "object": {
+                    "filter": "improve_dollar_amount",
+                    "literal": true,
+                    "datatype": "xsd:decimal"
+                }
+            }
+        ],
+        "pis": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:PrincipalInvestigatorRole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000052"
+
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "cois": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                }, 
+                "object": {
+                    "literal": false,
+                    "type": "vivo:Co-PrincipalInvestigatorRole"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000052"
+
+                }, 
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "invs": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:InvestigatorRole"
+                }
+            },
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000052"
+
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "concepts": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:hasSubjectArea"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "skos:Concept",
+                    "enum": "concept_enum.txt"
+                }
+            }
+        ],
+        "sponsor": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:assignedBy"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Organization",
+                    "enum": "sponsor_enum.txt"
+                }
+            }
+        ],
+        "sponsor_award_id": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:sponsorAwardId"
+                }, 
+                "object": {
+                    "filter": "improve_sponsor_award_id",
+                    "literal": true,
+                    "datatype": "xsd:string"
+                }
+            }
+        ]
+    },
+    "closure_defs": {
+        "pi": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "cois": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "invs": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "department": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:AcademicDepartment",
+                    "enum" : "dept_enum.txt"
+                }
+            }
+        ]
+    }
+}
