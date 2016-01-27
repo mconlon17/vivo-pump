@@ -380,7 +380,7 @@ class Pump(object):
         rdf as necessary to process requested add, change, delete
         """
         from rdflib import URIRef, RDF
-        from vivopump import new_uri, prepare_column_values, get_step_triples, PathLengthException
+        from vivopump import new_uri, prepare_column_values, PathLengthException
 
         merges = {}
 
@@ -458,7 +458,7 @@ class Pump(object):
                 elif len(column_def) == 1:
                     step_def = column_def[0]
                     vivo_objs = {unicode(o): o for s, p, o in
-                                 get_step_triples(self.update_graph, uri, step_def, self.query_parms)}
+                                 self._get_step_triples(uri, step_def)}
                     column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
                                                           row, column_name)
                     logger.debug(u"{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
@@ -487,10 +487,10 @@ class Pump(object):
         :return: Changes in the update_graph
         """
         from rdflib import RDF, RDFS, Literal, URIRef
-        from vivopump import new_uri, get_step_triples
+        from vivopump import new_uri
 
         step_def = path[0]
-        step_uris = [o for s, p, o in get_step_triples(self.update_graph, uri, step_def, self.query_parms)]
+        step_uris = [o for s, p, o in self._get_step_triples(uri, step_def)]
 
         if len(step_uris) == 0:
 
@@ -535,7 +535,7 @@ class Pump(object):
         :return: alterations in update graph
         """
         from rdflib import RDF, RDFS, Literal, URIRef
-        from vivopump import new_uri, get_step_triples, prepare_column_values
+        from vivopump import new_uri, prepare_column_values
 
         step_def = column_def[0]
 
@@ -550,10 +550,10 @@ class Pump(object):
         #   That is, it should handle everything.  All the code below should be replaced.
 
         step_uris = [o for s, p, o in
-                     get_step_triples(self.update_graph, uri, column_def[0], self.query_parms)]
+                     self._get_step_triples(uri, column_def[0])]
         vivo_objs = {}
         for step_uri in step_uris:
-            for s, p, o in get_step_triples(self.update_graph, step_uri, column_def[1], self.query_parms):
+            for s, p, o in self._get_step_triples(step_uri, column_def[1]):
                 vivo_objs[unicode(o)] = [o, step_uri]
 
         #   Nasty hack below.  The predicate property "single" appears to have two meanings.  One has to do
@@ -722,3 +722,37 @@ class Pump(object):
                 self.update_graph.remove((uri, step_def['predicate']['ref'], value))
 
         return None
+
+    def _get_step_triples(self, uri, step_def):
+        """
+        Return the triples matching the criteria defined in the current step of an update
+        :param uri: uri of the entity currently the subject of an update
+        :param step_def: step definition from update_def
+        :return:  Graph containing zero or more triples that match the criteria for the step
+        """
+        from rdflib import Graph, RDF
+        from vivopump import add_qualifiers, vivo_query, make_rdf_term
+        
+        if 'qualifier' not in step_def['object']:
+            g = Graph()
+            for obj in self.update_graph.objects(uri, step_def['predicate']['ref']):
+                if 'type' in step_def['object']:
+                    if (obj, RDF.type, step_def['object']['type']) in self.update_graph:
+                        g.add((uri, step_def['predicate']['ref'], obj))
+                else:
+                    g.add((uri, step_def['predicate']['ref'], obj))
+        else:
+        
+            #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF)
+            
+            q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
+                str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' . \n' + \
+                add_qualifiers([step_def]) + ' }\n'
+            logger.debug(u"Qualified Step Triples Query {}".format(q))
+            result_set = vivo_query(q, self.query_parms)  # SLOW
+            g = Graph()
+            for binding in result_set['results']['bindings']:
+                o = make_rdf_term(binding['o'])
+                g.add((uri, step_def['predicate']['ref'], o))
+        logger.debug(u"Step Triples {}".format(g.serialize(format='nt')))
+        return g

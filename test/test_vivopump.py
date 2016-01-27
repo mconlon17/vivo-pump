@@ -125,6 +125,10 @@ class ReadUpdateDefTestCase(unittest.TestCase):
             update_def = read_update_def('data/grant_invalid_multiple_def.json', prefix=QUERY_PARMS['prefix'])
             print update_def
 
+    def test_valid_closure_object_def(self):
+        update_def = read_update_def('data/mentoring_def.json', prefix=QUERY_PARMS['prefix'])
+        self.assertTrue(set(update_def.keys()) == set(['entity_def', 'column_defs', 'closure_defs']))
+
     def test_invalid_closure_object_def(self):
         with self.assertRaises(InvalidDefException):
             update_def = read_update_def('data/grant_invalid_closure_object_def.json', prefix=QUERY_PARMS['prefix'])
@@ -155,7 +159,7 @@ class ReadUpdateDefTestCase(unittest.TestCase):
 class MakeUpdateQueryTestCase(unittest.TestCase):
 
     def test_make_query(self):
-        update_def = read_update_def('../examples/education/education_def.json', prefix=QUERY_PARMS['prefix'])
+        update_def = read_update_def('../examples/education//education_def.json', prefix=QUERY_PARMS['prefix'])
         for column_name, path in update_def['column_defs'].items():
             update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
             print update_query

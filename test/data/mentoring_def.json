@@ -5,7 +5,32 @@
         "order_by": "name"
     },
     "closure_defs": {
-
+        "advisor": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ],
+        "advisee": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:relates"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "foaf:Person",
+                    "enum": "orcid_enum.txt"
+                }
+            }
+        ]
     },
     "column_defs": {
         "advisor": [
@@ -17,6 +42,7 @@
                 "object": {
                     "literal": false,
                     "qualifier": "?advisee a foaf:Person .",
+                    "type": "foaf:Person",
                     "enum": "data/orcid_enum.txt"
                 }
             }
@@ -30,6 +56,7 @@
                 "object": {
                     "literal": false,
                     "qualifier": "?advisee a foaf:Person .",
+                    "type": "foaf:Person",
                     "enum": "data/orcid_enum.txt"
                 }
             }

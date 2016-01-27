@@ -512,8 +512,8 @@ def read_update_def(filename, prefix):
 
         if 'closure_defs' in a:
             for name in a.get('closure_defs').keys():
-                col_object = a.column_def[name][-1]['object']  # last object in the column_def
-                clo_object = a.closure_def[name][-1]['object']  # last object in the closure_def
+                col_object = a['column_defs'][name][-1]['object']  # last object in the column_def
+                clo_object = a['closure_defs'][name][-1]['object']  # last object in the closure_def
                 if col_object.get('dataype', '') == clo_object.get('datatype', '') and \
                    col_object.get('type', '') == clo_object.get('type', ''):
                     continue
@@ -1145,41 +1145,6 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     column_terms = [make_rdf_term_from_source(column_value, step_def) for column_value in column_values]
 
     return column_terms
-
-
-def get_step_triples(update_graph, uri, step_def, query_parms):
-    """
-    Return the triples matching the criteria defined in the current step of an update
-    :param update_graph: the update graph
-    :param uri: uri of the entity currently the subject of an update
-    :param step_def: step definition from update_def
-    :return:  Graph containing zero or more triples that match the criteria for the step
-    """
-    from rdflib import Graph, RDF
-
-    if 'qualifier' not in step_def['object']:
-        g = Graph()
-        for obj in update_graph.objects(uri, step_def['predicate']['ref']):
-            if 'type' in step_def['object']:
-                if (obj, RDF.type, step_def['object']['type']) in update_graph:
-                    g.add((uri, step_def['predicate']['ref'], obj))
-            else:
-                g.add((uri, step_def['predicate']['ref'], obj))
-    else:
-
-        #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF)
-
-        q = 'select (?' + step_def['object']['name'] + ' as ?o) where { <' + str(uri) + '> <' + \
-            str(step_def['predicate']['ref']) + '> ?' + step_def['object']['name'] + ' . \n' + \
-            add_qualifiers([step_def]) + ' }\n'
-        logger.debug(u"Qualified Step Triples Query {}".format(q))
-        result_set = vivo_query(q, query_parms)  # SLOW
-        g = Graph()
-        for binding in result_set['results']['bindings']:
-            o = make_rdf_term(binding['o'])
-            g.add((uri, step_def['predicate']['ref'], o))
-    logger.debug(u"Step Triples {}".format(g.serialize(format='nt')))
-    return g
 
 
 def load_enum(update_def):

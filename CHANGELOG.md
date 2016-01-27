@@ -475,4 +475,5 @@ longer has `column_name`.  Refactor `get_step_triples` to remove use of query fo
 * **2016-01-24** Improve code formatting in `pump.py`
 * **2016-01-27** Closure now checked to insure that datatype and type of last object in path has same datatype and
 type as specified in the corresponding object in the column_def.  `read_updatedef` thows InvalidDefException if these 
-are mismatched.  Unit test added.
+are mismatched.  Unit test added.  `get_step_triples` is now a pump method.  Calling sequence simplied.  All tests
+pass.
