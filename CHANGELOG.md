@@ -479,4 +479,5 @@ are mismatched.  Unit tests added.  `get_step_triples` is now a pump method.  Ca
 pass.
 * **2016-01-30** Add 'closure' and 'column_name' as derived attrbutes to each step_def in `read_update_def`.  Now
 step_def objects know whether they are part of a closure and the name of their column.  This will be used in 
-`get_step_triples` to sieve triples in closures based on additional constraints defined by the column def.
+`get_step_triples` to sieve triples in closures based on additional constraints defined by the column def. Frame
+a sieve function to use in sub selecting triples in`get_step_triples`

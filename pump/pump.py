@@ -732,6 +732,15 @@ class Pump(object):
         """
         from rdflib import Graph, RDF
         from vivopump import add_qualifiers, vivo_query, make_rdf_term
+
+        def sieve_triples(a, current_step, current_uri):
+            if len(g) == 0:
+                return g
+            else:
+                #   select only the triples that meet the current step requirements, if zero, return
+                #   if you're not at the first step, call yourself on the previous step in the path
+                pass
+            return g
         
         if 'qualifier' not in step_def['object']:
             g = Graph()
@@ -741,6 +750,15 @@ class Pump(object):
                         g.add((uri, step_def['predicate']['ref'], obj))
                 else:
                     g.add((uri, step_def['predicate']['ref'], obj))
+
+            #   If the step_def is in a closure, sieve the triples based on the column_def
+
+            if step_def['closure']:
+
+                # start at the last step of the column_def of the same name as the step_def
+
+                step = self.update_def['column_def'][step_def['column_name']][-1]
+                g = sieve_triples(g, step, uri)
         else:
         
             #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF)
