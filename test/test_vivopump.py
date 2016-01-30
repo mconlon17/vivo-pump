@@ -160,6 +160,7 @@ class MakeUpdateQueryTestCase(unittest.TestCase):
 
     def test_make_query(self):
         update_def = read_update_def('../examples/education//education_def.json', prefix=QUERY_PARMS['prefix'])
+        print update_def
         for column_name, path in update_def['column_defs'].items():
             update_query = make_update_query(update_def['entity_def']['entity_sparql'], path)
             print update_query

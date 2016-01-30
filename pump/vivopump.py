@@ -538,7 +538,7 @@ def read_update_def(filename, prefix):
                     raise InvalidDefException(name + 'is boolean with no value')
         return None
 
-    def add_object_names(a):
+    def add_object_names_and_step_attributes(a):
         """
         handed an update_def structure a, return an improved structure b in which each object has a generated name
         attribute based on the column_def or closure_def name
@@ -546,6 +546,8 @@ def read_update_def(filename, prefix):
         b = dict(a)
         for name, path in b['column_defs'].items():
             for i in range(len(path)):
+                b['column_defs'][name][i]['closure'] = False
+                b['column_defs'][name][i]['column_name'] = name
                 if i==len(path) - 1:
                     b['column_defs'][name][i]['object']['name'] = name
                 else:
@@ -553,6 +555,8 @@ def read_update_def(filename, prefix):
         if 'closure_defs' in b:
             for name, path in b['closure_defs'].items():
                 for i in range(len(path)):
+                    b['closure_defs'][name][i]['closure'] = True
+                    b['closure_defs'][name][i]['column_name'] = name
                     if i==len(path) - 1:
                         b['closure_defs'][name][i]['object']['name'] = name
                     else:
@@ -565,7 +569,7 @@ def read_update_def(filename, prefix):
         prefix_dict = make_prefix_dict(prefix)
         update_def = fixit(json.loads(data), prefix_dict)
         update_def = add_order(update_def, data)
-        update_def = add_object_names(update_def)
+        update_def = add_object_names_and_step_attributes(update_def)
         validate_update_def(update_def)
     return update_def
 

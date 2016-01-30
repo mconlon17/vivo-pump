@@ -477,3 +477,6 @@ longer has `column_name`.  Refactor `get_step_triples` to remove use of query fo
 type as specified in the corresponding object in the column_def.  `read_update_def` throws InvalidDefException if these 
 are mismatched.  Unit tests added.  `get_step_triples` is now a pump method.  Calling sequence simplied.  All tests
 pass.
+* **2016-01-30** Add 'closure' and 'column_name' as derived attrbutes to each step_def in `read_update_def`.  Now
+step_def objects know whether they are part of a closure and the name of their column.  This will be used in 
+`get_step_triples` to sieve triples in closures based on additional constaints defined by the column def.
