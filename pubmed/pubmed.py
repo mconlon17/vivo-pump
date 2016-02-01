@@ -16,15 +16,7 @@ __version__ = "0.8.5"
 
 # Establish logging
 
-logging.captureWarnings(True)
 logger = logging.getLogger(__name__)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-handler = logging.StreamHandler(sys.stderr)
-# handler = logging.StreamHandler(sys.stdout)
-handler.setFormatter(formatter)
-logger.addHandler(handler)
-# logger.setLevel(logging.INFO)
-logger.setLevel(logging.DEBUG)
 
 #   Catalyst service access
 

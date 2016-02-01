@@ -43,9 +43,18 @@ def main():
     :return: None
     """
     import sys
+    import logging
     from datetime import datetime
     from pump.vivopump import get_args, DefNotFoundException, InvalidDefException
     from pump.pump import Pump
+
+    logging.captureWarnings(True)
+    logger = logging.getLogger(__name__)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler = logging.StreamHandler(sys.stderr)
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.DEBUG)
 
     return_code = 0
     print datetime.now(), "Start"

@@ -481,3 +481,5 @@ pass.
 step_def objects know whether they are part of a closure and the name of their column.  This will be used in 
 `get_step_triples` to sieve triples in closures based on additional constraints defined by the column def. Frame
 a sieve function to use in sub selecting triples in`get_step_triples`
+* **2016-01-30** Clean up logging usage -- logger decalred in main.  All other modules have loggers that are children of
+the main logger and get parameters fromthe main logger for consistency. 
