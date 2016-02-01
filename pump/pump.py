@@ -56,6 +56,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
+        self.entity_uri = None  # cycles during update processing over the entity_uris of the rows in the update_data
         self.out_filename = src
         self.json_def_filename = defn
 
@@ -406,7 +407,7 @@ class Pump(object):
                     logger.debug(u"Adding an entity for row {}. Will be added at {}".format(row, str(uri)))
                     self.update_graph.add((uri, RDF.type, self.update_def['entity_def']['type']))
 
-            entity_uri = uri
+            self.entity_uri = uri
             action = data_update.get('action', '').lower()
 
             #   Process remove action if any
@@ -441,7 +442,7 @@ class Pump(object):
                     self.update_def.get('closure_defs', {}).items():
                 if column_name not in data_update:
                     continue  # extra column names are allowed in the spreadsheet for annotation
-                uri = entity_uri
+                uri = self.entity_uri
 
                 if data_update[column_name] == '':
                     logger.debug(u"Skipping blank value. row {} column {}".format(row, column_name))
@@ -733,14 +734,30 @@ class Pump(object):
         from rdflib import Graph, RDF
         from vivopump import add_qualifiers, vivo_query, make_rdf_term
 
-        def sieve_triples(a, current_step, current_uri):
-            if len(g) == 0:
-                return g
+        def sieve_triples(a, column_name):
+            if len(a) == 0:
+                return a
             else:
-                #   select only the triples that meet the current step requirements, if zero, return
-                #   if you're not at the first step, call yourself on the previous step in the path
                 pass
-            return g
+                #   Loop through the column_def steps from the end.
+                #   Select only the triples that meet the current step
+                #   requirements, if zero, return.
+
+                # step_uri = self.entity_uri
+                # step_graph = self.update_graph
+                # b = Graph()
+                # for step in step_graph['column_defs'][column_name]:
+                #     for step_obj in step_graph.objects(step_uri, step['predicate']['ref']):
+                #         if 'type' in step['object']:
+                #             if (step_obj, RDF.type, step['object']['type']) in step_graph:
+                #                 b.add((uri, step['predicate']['ref'], step_obj))
+                #         else:
+                #             b.add((uri, step['predicate']['ref'], step_obj))
+                #     if len(b) == 0:
+                #         return b  # path is empty, return empty graph
+                #     else:
+                #         step_graph = b
+            return a
         
         if 'qualifier' not in step_def['object']:
             g = Graph()
@@ -755,10 +772,7 @@ class Pump(object):
 
             if step_def['closure']:
 
-                # start at the last step of the column_def of the same name as the step_def
-
-                step = self.update_def['column_def'][step_def['column_name']][-1]
-                g = sieve_triples(g, step, uri)
+                g = sieve_triples(g, step_def['column_name'])
         else:
         
             #   Handle non-specific predicates qualified by SPARQL (a rare case for VIVO-ISF)
