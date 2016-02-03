@@ -482,6 +482,6 @@ step_def objects know whether they are part of a closure and the name of their c
 `get_step_triples` to sieve triples in closures based on additional constraints defined by the column def. Frame
 a sieve function to use in sub selecting triples in`get_step_triples`
 * **2016-02-01** Clean up logging usage -- logger declared in main.  All other modules have loggers that are children of
-the main logger and get parameters fromthe main logger for consistency. 
+the main logger and get parameters from the main logger for consistency. 
 * **2016-02-03** get_step_triples refactored to call an internal step_graph function to find the triples.  All
 tests pass.
