@@ -47,7 +47,7 @@ class Pump(object):
         self.update_data = None
         self.original_graph = None
         self.update_graph = None
-        self.entity_uri = None  # cycles during update processing over the entity_uris of the rows in the update_data
+        self.entity_uri = None  # the entity_uri of the current row being processed in the update_data
         self.out_filename = src
         self.json_def_filename = defn
 
@@ -725,39 +725,39 @@ class Pump(object):
         from rdflib import Graph, RDF
         from vivopump import add_qualifiers, vivo_query, make_rdf_term
 
+        def step_graph(uris, pred, otype):
+            """
+            Given a list of uri, a pred and a type, return a graph of the update_graph triples satisfying
+                uri pred any   <- these are the returned triples
+                any a type
+            :param uris: list of uris.
+            :param pred:
+            :param otype:
+            :return: graph
+            """
+            sg = Graph()
+            for suri in uris:
+                for obj in self.update_graph.objects(suri, pred):
+                    if otype is not None and (obj, RDF.type, otype) in self.update_graph:
+                            sg.add((suri, pred, obj))
+                    else:
+                        sg.add((suri, pred, obj))
+
+            return sg
+
         def sieve_triples(a, column_name):
             if len(a) == 0:
                 return a
             else:
                 pass
-                #   Loop through the column_def steps from the end.
+                #   Loop through the column_def steps
                 #   Select only the triples that meet the current step
                 #   requirements, if zero, return.
 
-                # step_uri = self.entity_uri
-                # step_graph = self.update_graph
-                # b = Graph()
-                # for step in step_graph['column_defs'][column_name]:
-                #     for step_obj in step_graph.objects(step_uri, step['predicate']['ref']):
-                #         if 'type' in step['object']:
-                #             if (step_obj, RDF.type, step['object']['type']) in step_graph:
-                #                 b.add((uri, step['predicate']['ref'], step_obj))
-                #         else:
-                #             b.add((uri, step['predicate']['ref'], step_obj))
-                #     if len(b) == 0:
-                #         return b  # path is empty, return empty graph
-                #     else:
-                #         step_graph = b
             return a
         
         if 'qualifier' not in step_def['object']:
-            g = Graph()
-            for obj in self.update_graph.objects(uri, step_def['predicate']['ref']):
-                if 'type' in step_def['object']:
-                    if (obj, RDF.type, step_def['object']['type']) in self.update_graph:
-                        g.add((uri, step_def['predicate']['ref'], obj))
-                else:
-                    g.add((uri, step_def['predicate']['ref'], obj))
+            g = step_graph([uri], step_def['predicate']['ref'], step_def['object'].get('type', None))
 
             #   If the step_def is in a closure, sieve the triples based on the column_def
 
