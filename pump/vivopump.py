@@ -540,8 +540,10 @@ def read_update_def(filename, prefix):
                 b['column_defs'][name][i]['column_name'] = name
                 if i==len(path) - 1:
                     b['column_defs'][name][i]['object']['name'] = name
+                    b['column_defs'][name][i]['last'] = True
                 else:
                     b['column_defs'][name][i]['object']['name'] = name + '_' + str(len(path) - i - 1)
+                    b['column_defs'][name][i]['last'] = False
         if 'closure_defs' in b:
             for name, path in b['closure_defs'].items():
                 for i in range(len(path)):
@@ -549,8 +551,10 @@ def read_update_def(filename, prefix):
                     b['closure_defs'][name][i]['column_name'] = name
                     if i==len(path) - 1:
                         b['closure_defs'][name][i]['object']['name'] = name
+                        b['closure_defs'][name][i]['last'] = True
                     else:
                         b['closure_defs'][name][i]['object']['name'] = name + '_' + str(len(path) - i - 1)
+                        b['closure_defs'][name][i]['last'] = False
         return b
 
     import json

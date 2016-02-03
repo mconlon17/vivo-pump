@@ -1090,8 +1090,7 @@ class ClosureTestCase(unittest.TestCase):
                              u'instructor': 'http://orcid.org/0000-0002-1305-8447',
                              u'course': 'Introduction to Statistics',
                              u'start_date': '2012',
-                             u'end_date': u'2013'}}
-        print p.summarize()
+                             u'end_date': '2013'}}
         [add, sub] = p.update()
         self.assertTrue(len(add) == 8 and len(sub) == 0 and
                         (URIRef("http://vivo.school.edu/individual/n25674"),

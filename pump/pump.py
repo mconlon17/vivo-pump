@@ -745,23 +745,46 @@ class Pump(object):
 
             return sg
 
-        def sieve_triples(a, column_name):
-            if len(a) == 0:
-                return a
+        def sieve_triples(sgc, column_name):
+            """
+            Given a step graph of triples from a closure (sgc), and the current column_name,
+            select the triples from the closure graph that have a path from the entity_uri to
+            one or more objects in the closure.  If there is no path, return an empty graph.
+            :param sgc:  the step closure graph to be "sieved"
+            :param column_name: the name of the column to use
+            :return: the sieved closure graph
+            """
+            if len(sgc) == 0:
+                return sgc  # Nothing to sieve
             else:
-                pass
-                #   Loop through the column_def steps
-                #   Select only the triples that meet the current step
-                #   requirements, if zero, return.
+                pred = self.update_def['column_defs'][column_name][0]['predicate']['ref']
+                otype = self.update_def['column_defs'][column_name][0]['object'].get('type', None)
+                sg = step_graph([self.entity_uri], pred, otype)
+                if len(sg) == 0 or len(self.update_def['column_defs'][column_name]) == 1:
+                    return sg
+                for step in self.update_def['column_defs'][column_name][1:]:
+                    sg = step_graph([y for y in sg.objects(None, None)], step['predicate']['ref'],
+                                    step['object'].get('type', None))
+                if len(sg) == 0:
+                    return sg  # column path is empty, so nothing in the closure can match
 
-            return a
+                #   Wait for it .... Here's the sieve.  Return triples in the closure graph that have
+                #   objects on the column graph
+
+                sgr = Graph()
+                for (sgcs, sgcp, sgco) in sgc.triples((None, None, None)):
+                    if sgco in sg.objects(None, None):
+                        sgr.add((sgcs, sgcp, sgco))
+
+            return sgr
         
         if 'qualifier' not in step_def['object']:
             g = step_graph([uri], step_def['predicate']['ref'], step_def['object'].get('type', None))
 
-            #   If the step_def is in a closure, sieve the triples based on the column_def
+            #   If the step_def is in a closure, and its the last step in the closure, then the
+            #   closure triples must be sieved against the objects defined by the column.
 
-            if step_def['closure']:
+            if step_def['closure'] and step_def['last']:
 
                 g = sieve_triples(g, step_def['column_name'])
         else:
