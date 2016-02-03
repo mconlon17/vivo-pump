@@ -691,6 +691,7 @@ class Pump(object):
             #   Update value processing
 
             else:
+
                 for vivo_object in vivo_objs.values():
                     if vivo_object == column_values[0]:
                         continue  # No action required if vivo term is same as source
@@ -738,9 +739,9 @@ class Pump(object):
             sg = Graph()
             for suri in uris:
                 for obj in self.update_graph.objects(suri, pred):
-                    if otype is not None and (obj, RDF.type, otype) in self.update_graph:
-                            sg.add((suri, pred, obj))
-                    else:
+                    if otype is None:
+                        sg.add((suri, pred, obj))
+                    elif (obj, RDF.type, otype) in self.update_graph:
                         sg.add((suri, pred, obj))
 
             return sg
@@ -754,6 +755,11 @@ class Pump(object):
             :param column_name: the name of the column to use
             :return: the sieved closure graph
             """
+
+            print "\nBeginning Closure Graph for", column_name
+            for (s, p, o) in sgc.triples((None, None, None)):
+                print s, p, o
+
             if len(sgc) == 0:
                 return sgc  # Nothing to sieve
             else:
@@ -762,9 +768,15 @@ class Pump(object):
                 sg = step_graph([self.entity_uri], pred, otype)
                 if len(sg) == 0 or len(self.update_def['column_defs'][column_name]) == 1:
                     return sg
+                print "step 0 graph"
+                for (s, p, o) in sg.triples((None, None, None)):
+                    print s, p, o
                 for step in self.update_def['column_defs'][column_name][1:]:
                     sg = step_graph([y for y in sg.objects(None, None)], step['predicate']['ref'],
                                     step['object'].get('type', None))
+                    print "next step graph"
+                    for (s, p, o) in sg.triples((None, None, None)):
+                        print s, p, o
                 if len(sg) == 0:
                     return sg  # column path is empty, so nothing in the closure can match
 
@@ -776,10 +788,19 @@ class Pump(object):
                     if sgco in sg.objects(None, None):
                         sgr.add((sgcs, sgcp, sgco))
 
+                print "reduced step graph"
+                for (s, p, o) in sgr.triples((None, None, None)):
+                    print s, p, o
+
             return sgr
         
         if 'qualifier' not in step_def['object']:
+
             g = step_graph([uri], step_def['predicate']['ref'], step_def['object'].get('type', None))
+
+            print "\nStep_triples for", step_def['column_name'], [uri], step_def['predicate']['ref'], step_def['object'].get('type', None)
+            for (s, p, o) in g.triples((None, None, None)):
+                print unicode(s), unicode(p), unicode(o)
 
             #   If the step_def is in a closure, and its the last step in the closure, then the
             #   closure triples must be sieved against the objects defined by the column.

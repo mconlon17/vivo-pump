@@ -1,4 +1,6 @@
+<http://vivo.school.edu/individual/n7355> <http://purl.obolibrary.org/obo/RO_0000052> <http://vivo.school.edu/individual/n3423> .
 <http://vivo.school.edu/individual/n1591> <http://vivoweb.org/ontology/core#end> <http://vivo.school.edu/individual/n8968236376> .
 <http://vivo.school.edu/individual/n1591> <http://vivoweb.org/ontology/core#start> <http://vivo.school.edu/individual/n7206661779> .
+<http://vivo.school.edu/individual/n4563> <http://vivoweb.org/ontology/core#relates> <http://vivo.school.edu/individual/n3423> .
 
 
