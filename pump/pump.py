@@ -726,19 +726,20 @@ class Pump(object):
         from rdflib import Graph, RDF
         from vivopump import add_qualifiers, vivo_query, make_rdf_term
 
-        def step_graph(uris, pred, otype):
+        def step_graph(uris, pred, otype=None, graph=self.update_graph):
             """
             Given a list of uri, a pred and a type, return a graph of the update_graph triples satisfying
                 uri pred any   <- these are the returned triples
                 any a type
             :param uris: list of uris.
-            :param pred:
-            :param otype:
+            :param pred: the predicate to use in selecting triples for the step_graph
+            :param otype: the object type to use.  default in None, and no type selection will be done.
+            :param graph: default is update_graph. Closure sieve requires original_graph
             :return: graph
             """
             sg = Graph()
             for suri in uris:
-                for obj in self.update_graph.objects(suri, pred):
+                for obj in graph.objects(suri, pred):
                     if otype is None:
                         sg.add((suri, pred, obj))
                     elif (obj, RDF.type, otype) in self.update_graph:
@@ -765,7 +766,7 @@ class Pump(object):
             else:
                 pred = self.update_def['column_defs'][column_name][0]['predicate']['ref']
                 otype = self.update_def['column_defs'][column_name][0]['object'].get('type', None)
-                sg = step_graph([self.entity_uri], pred, otype)
+                sg = step_graph([self.entity_uri], pred, otype, graph=self.original_graph)
                 if len(sg) == 0 or len(self.update_def['column_defs'][column_name]) == 1:
                     return sg
                 print "step 0 graph"
@@ -773,7 +774,7 @@ class Pump(object):
                     print s, p, o
                 for step in self.update_def['column_defs'][column_name][1:]:
                     sg = step_graph([y for y in sg.objects(None, None)], step['predicate']['ref'],
-                                    step['object'].get('type', None))
+                                    step['object'].get('type', None), graph=self.original_graph)
                     print "next step graph"
                     for (s, p, o) in sg.triples((None, None, None)):
                         print s, p, o

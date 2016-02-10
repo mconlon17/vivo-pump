@@ -1,1 +1,1 @@
-uri	advisor	advisee	subject_areas	degree	fac	postdoc	grad	undergrad	start_date	end_datehttp://vivo.school.edu/individual/n4563	0000-0002-1304-8447	0000-0004-2222-3333	VIVO		1	0	0	0	2009	2012
+uri	advisor	advisee	subject_areas	degree	fac	postdoc	grad	undergrad	start_date	end_datehttp://vivo.school.edu/individual/n4563	0000-0002-1304-8447	0000-0004-2222-3333	VIVO		1	0	0	0	2009	2012	0000-0001-7114-1992	0000-0001-2222-3333	Semantic Web	B.A. Bachelor of Arts				1	2013	2015
