@@ -532,12 +532,16 @@ def read_update_def(filename, prefix):
         """
         handed an update_def structure a, return an improved structure b in which each object has a generated name
         attribute based on the column_def or closure_def name
+        Assign multiple to each object.  Object is multiple if any preceding predicate is not single
         """
         b = dict(a)
         for name, path in b['column_defs'].items():
+            multiple = False
             for i in range(len(path)):
+                multiple = multiple or (b['column_defs'][name][i]['predicate']['single'] == False)
                 b['column_defs'][name][i]['closure'] = False
                 b['column_defs'][name][i]['column_name'] = name
+                b['column_defs'][name][i]['object']['multiple'] = multiple
                 if i==len(path) - 1:
                     b['column_defs'][name][i]['object']['name'] = name
                     b['column_defs'][name][i]['last'] = True
@@ -546,9 +550,12 @@ def read_update_def(filename, prefix):
                     b['column_defs'][name][i]['last'] = False
         if 'closure_defs' in b:
             for name, path in b['closure_defs'].items():
+                multiple = False
                 for i in range(len(path)):
+                    multiple = multiple or (b['closure_defs'][name][i]['predicate']['single'] == False)
                     b['closure_defs'][name][i]['closure'] = True
                     b['closure_defs'][name][i]['column_name'] = name
+                    b['closure_defs'][name][i]['object']['multiple'] = multiple
                     if i==len(path) - 1:
                         b['closure_defs'][name][i]['object']['name'] = name
                         b['closure_defs'][name][i]['last'] = True
@@ -1093,14 +1100,9 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
     :rtype: list[str]
     """
 
-    # Split source data into list, add include values, strip white space
+    #   Three cases: boolean, single valued and multiple valued
 
-    if step_def['predicate']['single'] == True:
-        column_values = [update_string.strip()]
-    elif step_def['predicate']['single'] == 'boolean':
-
-        #   For boolean predicates the instruction is either '0', '1' or ''.
-
+    if step_def['predicate']['single'] == 'boolean':
         update_string = update_string.strip()
         if update_string == '':
             column_values = ['']
@@ -1109,21 +1111,24 @@ def prepare_column_values(update_string, intra, step_def, enum, row, column_name
             column_values = ['0']
         else:
             column_values = ['1']
-    else:
 
+    elif not step_def['object']['multiple']:
+        column_values = [update_string.strip()]
+    else:
         column_values = update_string.split(intra)
         if 'include' in step_def['predicate']:
             column_values += step_def['predicate']['include']
         for i in range(len(column_values)):
             column_values[i] = column_values[i].strip()
 
-    # Check column values for consistency with single and multi-value attributes
+    # Check column values for consistency with single and multi-value paths
 
-    if step_def['predicate']['single'] == True and len(column_values) > 1:
+    if step_def['object']['multiple'] != True and len(column_values) > 1:
         raise InvalidSourceException(str(row) + str(column_name) +
-                                     'Predicate is single-valued, multiple values in source.')
+                                     'Path is single-valued, multiple values in source.')
     while '' in column_values:
         column_values.remove('')
+
     if 'None' in column_values and len(column_values) > 1:
         raise InvalidSourceException(str(row) + str(column_name) +
                                      'None value in multi-valued predicate set')

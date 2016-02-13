@@ -489,3 +489,6 @@ read_update_def.  New sieve code.  Passing tests, but still needs debugging (upd
 * **2016-02-10** Closure sieve now uses `original_graph` to select triples for the closure.  This insures that the 
 closure has the original state of the graph, and not an updated graph based on the column work.  Open question if
 this can handle all cases, but does handle one step closures for both add and update. All tests pass.
+* **2016-02-13** `read_update_def` adds a derived attribute to each object.  multiple is True if any of the 
+predicates in the path up to an including the object are not single. 'prepare_column_values` uses multiple.
+Code improvements in `_do_update`

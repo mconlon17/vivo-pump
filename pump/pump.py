@@ -431,30 +431,39 @@ class Pump(object):
 
             for column_name, column_def in self.update_def['column_defs'].items() + \
                     self.update_def.get('closure_defs', {}).items():
+
+                #   Skip any columns in the data that are not in the update_def
+
                 if column_name not in data_update:
-                    continue  # extra column names are allowed in the spreadsheet for annotation
-                uri = self.entity_uri
+                    continue
+
+                #   Skip the column if it is empty
 
                 if data_update[column_name] == '':
                     logger.debug(u"Skipping blank value. row {} column {}".format(row, column_name))
                     continue
+
+                #   Process the column values, returning a list of RDF elements
+
+                last_def = column_def[len(column_def) - 1]
+                column_values = prepare_column_values(data_update[column_name], self.intra, last_def, self.enum, row,
+                                                      column_name)
+
+                #   Process the path depending on its length.  Some day we will refactor this to a recursion
 
                 if len(column_def) > 3:
                     raise PathLengthException(
                         "ERROR: Path lengths > 3 not supported.  Path length for " + column_name + " is " + str(
                             len(column_def)))
                 elif len(column_def) == 3:
-                    self.__do_three_step_update(row, column_name, uri, column_def, data_update)
+                    self.__do_three_step_update(row, column_name, self.entity_uri, column_def, data_update)
                 elif len(column_def) == 2:
-                    self.__do_two_step_update(row, column_name, uri, column_def, data_update)
+                    self.__do_two_step_update(row, column_name, self.entity_uri, column_def, data_update)
                 elif len(column_def) == 1:
-                    step_def = column_def[0]
                     vivo_objs = {unicode(o): o for s, p, o in
-                                 self._get_step_triples(uri, step_def)}
-                    column_values = prepare_column_values(data_update[column_name], self.intra, step_def, self.enum,
-                                                          row, column_name)
-                    logger.debug(u"{} {} {} {} {}".format(row, column_name, column_values, uri, vivo_objs))
-                    self.__do_the_update(row, column_name, uri, step_def, column_values, vivo_objs)
+                                 self._get_step_triples(self.entity_uri, last_def)}
+                    logger.debug(u"{} {} {} {} {}".format(row, column_name, column_values, self.entity_uri, vivo_objs))
+                    self.__do_the_update(row, column_name, self.entity_uri, last_def, column_values, vivo_objs)
 
         if any(merges):
             self.__do_merges(merges)
