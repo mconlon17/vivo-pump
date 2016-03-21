@@ -13,12 +13,12 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 out_file = open('dates.txt', "w")
-print >>out_file, "uri\tPrecision\tDate"
+print >>out_file, "uri\tprecision\tdate"
 
 #   Generate years
 
-start_year = 1970
-end_year = 2020
+start_year = 2015
+end_year = 2016
 
 for year in range(start_year, end_year + 1):
     date_string = str(year) + "-01-01T00:00:00"
