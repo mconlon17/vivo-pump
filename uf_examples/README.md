@@ -4,6 +4,11 @@ These examples show actual configurations used at the University of Florida to m
 
 They may require UF ontology extensions.
 
+The UF examples introduce the concept of filters -- simple command line utilities that can read from stdin and 
+write to stdout.  Filters can be changed to perform data management tasks neeed for preparing enterpirse data
+for consumption by VIVO.  Filters add and remove columns from enterprise data, bulk-edit column values, and 
+provide look-ups.  Each UF example uses filters to prepare data for use by the Pump.
+
 ## Organizations
 
 UF updates organizations as needed.  UF organizations are classified as UFEntity.  UF organizations are identified
