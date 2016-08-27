@@ -51,7 +51,8 @@
                     "ref": "vivo:hasResearchArea"
                 },
                 "object": {
-                    "literal": false
+                    "literal": false,
+                    "enum": "concept_enum.txt"
                 }
             }
         ],

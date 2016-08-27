@@ -1,6 +1,6 @@
 # PubMed Utilities
 
-PubMed is a common source of citation information for VIVO.  
+PubMed is a common source of bibliographic information for VIVO.  
 
 The following capabilities are in development for the Pump:
 

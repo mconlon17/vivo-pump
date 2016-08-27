@@ -87,15 +87,15 @@ def get_catalyst_pmids(first, middle, last, email, affiliation=None):
     """
     from xml.dom.minidom import parseString  # tools for handling XML in python
 
-    result = catalyst_getpmids_xml(first, middle, last, email, affiliation)
+    result = get_catalyst_pmids_xml(first, middle, last, email, affiliation)
     dom = parseString(result)  # create a document Object Model (DOM) from the Harvard Catalyst result
     return [node.childNodes[0].data for node in dom.getElementsByTagName('PMID')]  # return a list of PMID values
 
 
-def catalyst_getpmids_xml(first, middle, last, email, affiliation=None):
+def get_catalyst_pmids_xml(first, middle, last, email, affiliation=None):
     """
-    Given an author name, email(s) and optional affiliation(s), return the PMIDs of
-    papers that are likely to be the works of the author.  The Harvard
+    Given author name parts (first, middle and last), email(s) and optional affiliation(s),
+    return the PMIDs of papers that are likely to be the works of the author.  The Harvard
     Catalyst GETPMIDS service is called.
     """
     request = """
