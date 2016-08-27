@@ -33,11 +33,21 @@ class CatalystTestCase(unittest.TestCase):
         print len(result), "papers found"
         self.assertTrue(len(result) > 0)
 
+
+class EntrezTestCase(unittest.TestCase):
+    def test_get_pubmed_entrez(self):
+        from pubmed.pubmed import get_pubmed_entrez
+        from types import GeneratorType
+        pmid = '21916639'
+        result = get_pubmed_entrez(pmid)
+        self.assertTrue(isinstance(result, GeneratorType))
+
     def test_get_pubmed_paper(self):
         from pubmed.pubmed import get_pubmed_paper
+        from json import dumps
         pmid = '21916639'
         result = get_pubmed_paper(pmid)
-        print result
+        print dumps(result, indent=4)
         self.assertTrue(len(result) > 0)
 
 

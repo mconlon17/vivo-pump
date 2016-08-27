@@ -139,16 +139,13 @@ def get_catalyst_pmids_xml(first, middle, last, email, affiliation=None):
     return result
 
 
-def get_pubmed_paper(pmid):
+def get_pubmed_entrez(pmid):
     """
-    Given a PubMed ID, return the current the paper metadata from PubMed
+    Given a PubMed ID, return the current the paper metadata from PubMed as an Entrez result set
     """
     from Bio import Entrez
     import time
     Entrez.email = 'mconlon@ufl.edu'
-    paper = {}
-    grants_cited = []
-    keyword_list = []
 
     # Get record(s) from Entrez.  Retry if Entrez does not respond
 
@@ -169,11 +166,30 @@ def get_pubmed_paper(pmid):
                 " Will sleep now for " + str(sleep_seconds)+ \
                 " seconds and retry -->"
             time.sleep(sleep_seconds)  # increase the wait time with each retry
+    return records
+
+
+def get_pubmed_paper(pmid):
+    """
+    Given an Entrez structure, return a simplified struture with attributes useful for VIVO
+    :param pmid:
+    :return: paper
+    """
+
+    from json import dumps
+    from datetime import date
+
+    month_number = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 6, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9,
+                    'Oct': 10, 'Nov': 11, 'Dec': 12}
+
+    paper = {}
+    grants_cited = []
+    keyword_list = []
 
     # Find the desired attributes in the record structures returned by Entrez
 
-    for record in records:
-        print "Entrez record:", record
+    for record in get_pubmed_entrez(pmid):
+        print "Entrez record:", dumps(record, indent=4)
         article_id_list = record['PubmedData']['ArticleIdList']
         for article_id in article_id_list:
             attributes = article_id.attributes
@@ -196,6 +212,62 @@ def get_pubmed_paper(pmid):
         try:
             paper['title'] = \
                 record['MedlineCitation']['Article']['ArticleTitle']
+        except KeyError:
+            pass
+        try:
+            pages = record['MedlineCitation']['Article']['Pagination']['MedlinePgn']
+            pages_list = pages.split('-')
+            try:
+                start = pages_list[0]
+                try:
+                    istart = int(start)
+                except:
+                    istart = -1
+            except:
+                start = ""
+                istart = -1
+            try:
+                end = pages_list[1]
+                if end.find(';') > 0:
+                    end = end[:end.find(';')]
+            except:
+                end = ""
+            if start != "" and istart > -1 and end != "":
+                if int(start) > int(end):
+                    if int(end) > 99:
+                        end = str(int(start) - (int(start) % 1000) + int(end))
+                    elif int(end) > 9:
+                        end = str(int(start) - (int(start) % 100) + int(end))
+                    else:
+                        end = str(int(start) - (int(start) % 10) + int(end))
+            paper['page_start'] = start
+            paper['page_end'] = end
+        except KeyError:
+            pass
+        try:
+            paper['issn'] = \
+                record['MedlineCitation']['Article']['Journal']['ISSN']
+        except KeyError:
+            pass
+        try:
+            paper['volume'] = \
+                record['MedlineCitation']['Article']['Journal']['JournalIssue']['Volume']
+        except KeyError:
+            pass
+        try:
+            paper['issue'] = \
+                record['MedlineCitation']['Article']['Journal']['JournalIssue']['Issue']
+        except KeyError:
+            pass
+        try:
+            month = month_number[record['MedlineCitation']['Article']['Journal']['JournalIssue']['PubDate']['Month']]
+            day = int(record['MedlineCitation']['Article']['Journal']['JournalIssue']['PubDate']['Day'])
+            year = int(record['MedlineCitation']['Article']['Journal']['JournalIssue']['PubDate']['Year'])
+            paper['pub_date'] = date(year, month, day).isoformat()
+        except KeyError:
+            pass
+        try:
+            paper['author_list'] = record['MedlineCitation']['Article']['AuthorList']
         except KeyError:
             pass
         try:
