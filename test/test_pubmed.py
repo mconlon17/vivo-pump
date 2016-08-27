@@ -33,5 +33,12 @@ class CatalystTestCase(unittest.TestCase):
         print len(result), "papers found"
         self.assertTrue(len(result) > 0)
 
+    def test_get_pubmed_paper(self):
+        from pubmed.pubmed import get_pubmed_paper
+        pmid = '21916639'
+        result = get_pubmed_paper(pmid)
+        print result
+        self.assertTrue(len(result) > 0)
+
 
 

@@ -6,13 +6,12 @@
 """
 
 import logging
-import sys
 import httplib
 
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright (c) 2016 Michael Conlon"
 __license__ = "New BSD license"
-__version__ = "0.8.5"
+__version__ = "0.2"
 
 # Establish logging
 
@@ -32,7 +31,7 @@ def get_person_catalyst_pmids(uri, query_parms):
     :param uri: the uri of a person in VIVO
     :return: A dictionary of two lists, the vivo_pmids and the catalyst_pmids
     """
-    from vivopump import vivo_query
+    from pump.vivopump import vivo_query
     query = """
     SELECT ?first ?middle ?last ?email ?affiliation
     WHERE {
@@ -89,7 +88,7 @@ def get_catalyst_pmids(first, middle, last, email, affiliation=None):
 
     result = get_catalyst_pmids_xml(first, middle, last, email, affiliation)
     dom = parseString(result)  # create a document Object Model (DOM) from the Harvard Catalyst result
-    return [node.childNodes[0].data for node in dom.getElementsByTagName('PMID')]  # return a list of PMID values
+    return [node.childNodes[0].data for node in dom.getElementsByTagName('PMID')]  # return a list of PMID paper
 
 
 def get_catalyst_pmids_xml(first, middle, last, email, affiliation=None):
@@ -138,3 +137,80 @@ def get_catalyst_pmids_xml(first, middle, last, email, affiliation=None):
                                                                                           statusmessage, header,
                                                                                           result))
     return result
+
+
+def get_pubmed_paper(pmid):
+    """
+    Given a PubMed ID, return the current the paper metadata from PubMed
+    """
+    from Bio import Entrez
+    import time
+    Entrez.email = 'mconlon@ufl.edu'
+    paper = {}
+    grants_cited = []
+    keyword_list = []
+
+    # Get record(s) from Entrez.  Retry if Entrez does not respond
+
+    start = 2.0
+    retries = 10
+    count = 0
+    while True:
+        try:
+            handle = Entrez.efetch(db="pubmed", id=pmid, retmode="xml")
+            records = Entrez.parse(handle)
+            break
+        except:
+            count += 1
+            if count > retries:
+                return {}
+            sleep_seconds = start**count
+            print "<!-- Failed Entrez query. Count = " + str(count)+ \
+                " Will sleep now for " + str(sleep_seconds)+ \
+                " seconds and retry -->"
+            time.sleep(sleep_seconds)  # increase the wait time with each retry
+
+    # Find the desired attributes in the record structures returned by Entrez
+
+    for record in records:
+        print "Entrez record:", record
+        article_id_list = record['PubmedData']['ArticleIdList']
+        for article_id in article_id_list:
+            attributes = article_id.attributes
+            if 'IdType' in attributes:
+                if attributes['IdType'] == 'pmc':
+                    paper["pmcid"] = str(article_id)
+                    paper['full_text_uri'] = "http://www.ncbi.nlm.nih.gov/pmc/articles/" + \
+                        paper['pmcid'].upper()+ "/pdf"
+                if attributes['IdType'] == 'mid':
+                    paper["nihmsid"] = str(article_id)
+                if attributes['IdType'] == 'pubmed':
+                    paper["pmid"] = str(article_id)
+                if attributes['IdType'] == 'doi':
+                    paper["doi"] = str(article_id)
+        try:
+            paper['abstract'] = \
+                str(record['MedlineCitation']['Article']['Abstract']['AbstractText'][0])
+        except KeyError:
+            pass
+        try:
+            paper['title'] = \
+                record['MedlineCitation']['Article']['ArticleTitle']
+        except KeyError:
+            pass
+        try:
+            keywords = record['MedlineCitation']['MeshHeadingList']
+            for keyword in keywords:
+                keyword_list.append(str(keyword['DescriptorName']))
+            paper['keyword_list'] = keyword_list
+        except KeyError:
+            pass
+        try:
+            grants = record['MedlineCitation']['Article']['GrantList']
+            for grant in grants:
+                grants_cited.append(grant['GrantID'])
+            paper['grants_cited'] = grants_cited
+        except KeyError:
+            pass
+
+    return paper
