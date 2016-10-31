@@ -80,7 +80,8 @@
                     "ref": "rdfs:label"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ],
@@ -195,7 +196,8 @@
                     "ref": "obo:BFO_0000050"
                 }, 
                 "object": {
-                    "literal": false
+                    "literal": false,
+                    "enum": "org_enum.txt"
                 }
             }
         ], 
@@ -206,7 +208,8 @@
                     "ref": "vivo:abbreviation"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ],
@@ -355,19 +358,15 @@
                     "ref": "vivo:overview"
                 }, 
                 "object": {
-                    "literal": true
+                    "literal": true,
+                    "datatype": "xsd:string"
                 }
             }
         ], 
         "type": [
             {
                 "predicate": {
-                    "single": false, 
-                    "include": [
-                        "thing", 
-                        "agent", 
-                        "org"
-                    ], 
+                    "single": false,
                     "ref": "rdf:type"
                 }, 
                 "object": {

@@ -492,4 +492,4 @@ this can handle all cases, but does handle one step closures for both add and up
 * **2016-02-13** `read_update_def` adds a derived attribute to each object.  multiple is True if any of the 
 predicates in the path up to an including the object are not single. 'prepare_column_values` uses multiple.
 Code improvements in `_do_update`
-* **2016-10-31** Fix bug in `sv.py` in which default query params were used regardless of config
+* **2016-10-31** Fix bug in `sv.py` in which default query params were used regardless of config. org example updated.
