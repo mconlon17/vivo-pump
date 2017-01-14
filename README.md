@@ -9,10 +9,10 @@ relationship of the columns to the graph of data in VIVO.  Each row/column inter
 * None means remove any value found in VIVO
 * a value means replace the value in VIVO with the value in the spreadsheet.
 
-The Pump has two major operators:
+The Pump has two major operations:
 
-1. Get -- gets values from VIVO according to the definition and returns a spreadsheet
-1. Update -- uses a spreadsheet to update VIVO according to the definition
+1. get -- gets values from VIVO according to the definition and returns a spreadsheet
+1. update -- uses a spreadsheet to update VIVO according to the definition
 
 # Requirements
 
