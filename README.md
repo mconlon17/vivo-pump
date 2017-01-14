@@ -16,6 +16,9 @@ The Pump has two major operators:
 
 # Requirements
 
+The VIVO Pump is a Python 2.7.x application.  Please make sure you have Python 2.7.x installed before attempting to use 
+the Pump.  You can find the current version of Python 2.7 at [Python.org](http://python.org/downloads)
+
 Before you can use this tool please install the requirements:
 
     pip install -r requirements.txt
