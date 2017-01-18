@@ -36,7 +36,8 @@ do social network analysis and use the VIVO system for producing basic reports a
 1. Awards
 1. Education
 1. Mentoring
+1. Memberships
 1. Service
 
-Awards, Education, Mentoring, and Service can be added as needed to further deepen the representation of the work of 
-each scholar.
+Awards, Education, Mentoring, Memberships, and Service can be added as needed to further deepen the representation 
+of the work of each scholar.

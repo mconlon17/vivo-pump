@@ -1,0 +1,89 @@
+{
+    "entity_def": {
+        "entity_sparql": "?uri a vivo:MemberRole . ",
+        "type": "vivo:MemberRole"
+    }, 
+    "column_defs": {
+        "person": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "obo:RO_0000052"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "person_enum.txt"
+                }
+            }
+        ],
+        "group": [
+            {
+                "predicate": {
+                    "single": false,
+                    "ref": "vivo:roleContributesTo"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "group_enum.txt"
+                }
+            }
+        ],
+        "start_date": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:dateTimeInterval"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "vivo:DateTimeInterval"
+                }
+            }, 
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "vivo:start"
+                }, 
+                "object": {
+                    "literal": false, 
+                    "type": "vivo:DateTimeValue", 
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "end_date": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:dateTimeInterval"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeInterval"
+                }
+            },
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "vivo:end"
+                },
+                "object": {
+                    "literal": false,
+                    "type": "vivo:DateTimeValue",
+                    "enum": "date_enum.txt"
+                }
+            }
+        ],
+        "role": [
+            {
+                "predicate": {
+                    "single": true, 
+                    "ref": "rdfs:label"
+                }, 
+                "object": {
+                    "literal": true
+                }
+            }
+        ]
+    }
+}
