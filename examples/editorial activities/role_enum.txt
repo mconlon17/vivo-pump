@@ -1,0 +1,3 @@
+short	vivo
+editor	http://vivoweb.org/ontology/core#EditorRole
+reviewer	http://vivoweb.org/ontology/core#ReviewerRole

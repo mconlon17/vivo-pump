@@ -493,4 +493,5 @@ this can handle all cases, but does handle one step closures for both add and up
 predicates in the path up to an including the object are not single. 'prepare_column_values` uses multiple.
 Code improvements in `_do_update`
 * **2016-10-31** Fix bug in `sv.py` in which default query params were used regardless of config. org example updated.
-* **2017-01-18** Add `examples\memberships` 
+* **2017-01-18** Add `examples/memberships` 
+* **2017-01-28** Add `examples/editorial activities` to manage journal review activity and editorial activity

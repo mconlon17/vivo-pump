@@ -1,7 +1,7 @@
 #!/usr/bin/env/python
 
 """
-    make_enum.py -- make enumerations for positions
+    make_enum.py -- make enumerations for memberships
 """
 
 from datetime import datetime
