@@ -34,8 +34,7 @@
                     "ref": "vcard:locality"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -68,8 +67,7 @@
                     "ref": "vcard:postalCode"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -80,8 +78,7 @@
                     "ref": "rdfs:label"
                 }, 
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -150,8 +147,7 @@
                     "ref": "vcard:email"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -184,8 +180,7 @@
                     "ref": "vcard:streetAddress"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -208,8 +203,7 @@
                     "ref": "vivo:abbreviation"
                 }, 
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -243,8 +237,7 @@
                     "ref": "vcard:telephone"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -278,8 +271,7 @@
                     "ref": "vcard:telephone"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -312,8 +304,7 @@
                     "ref": "vcard:region"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -346,8 +337,7 @@
                     "ref": "vcard:country"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -358,8 +348,7 @@
                     "ref": "vivo:overview"
                 }, 
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ], 

@@ -12,8 +12,7 @@
                     "ref": "vivo:localAwardId"
                 },
                 "object": {
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -25,8 +24,7 @@
                 }, 
                 "object": {
                     "filter": "improve_title",
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ],
@@ -231,8 +229,7 @@
                 }, 
                 "object": {
                     "filter": "improve_sponsor_award_id",
-                    "literal": true,
-                    "datatype": "xsd:string"
+                    "literal": true
                 }
             }
         ]
