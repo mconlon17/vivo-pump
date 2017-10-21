@@ -22,7 +22,7 @@ To update VIVO with your improved data, use:
 
     python sv.py -a update
     
-The result will be `orgs_add.rdf` and `orgs_sub.rdf` data.  These should be added to VIVO and subtracted from VIVO 
+The result will be `orgs_add.nt` and `orgs_sub.nt` data.  These should be added to VIVO and subtracted from VIVO 
 respectively, using the VIVO Site Admin menu.
 
 Repeat the steps here, starting with `make_enum.py` to continue to improve your organizational data.

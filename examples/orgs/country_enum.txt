@@ -1,0 +1,211 @@
+short	vivo
+Afghanistan	http://aims.fao.org/aos/geopolitical.owl#Afghanistan
+Albania	http://aims.fao.org/aos/geopolitical.owl#Albania
+Algeria	http://aims.fao.org/aos/geopolitical.owl#Algeria
+Andorra	http://aims.fao.org/aos/geopolitical.owl#Andorra
+Angola	http://aims.fao.org/aos/geopolitical.owl#Angola
+Antigua and Barbuda	http://aims.fao.org/aos/geopolitical.owl#Antigua_and_Barbuda
+Argentina	http://aims.fao.org/aos/geopolitical.owl#Argentina
+Armenia	http://aims.fao.org/aos/geopolitical.owl#Armenia
+Australia	http://aims.fao.org/aos/geopolitical.owl#Australia
+Austria	http://aims.fao.org/aos/geopolitical.owl#Austria
+Azerbaijan	http://aims.fao.org/aos/geopolitical.owl#Azerbaijan
+Bahamas	http://aims.fao.org/aos/geopolitical.owl#Bahamas_the
+Bahrain	http://aims.fao.org/aos/geopolitical.owl#Bahrain
+Bangladesh	http://aims.fao.org/aos/geopolitical.owl#Bangladesh
+Barbados	http://aims.fao.org/aos/geopolitical.owl#Barbados
+Belarus	http://aims.fao.org/aos/geopolitical.owl#Belarus
+Belgium	http://aims.fao.org/aos/geopolitical.owl#Belgium
+Belize	http://aims.fao.org/aos/geopolitical.owl#Belize
+Benin	http://aims.fao.org/aos/geopolitical.owl#Benin
+Bhutan	http://aims.fao.org/aos/geopolitical.owl#Bhutan
+Bolivia (Plurinational State of)	http://aims.fao.org/aos/geopolitical.owl#Bolivia
+Bosnia and Herzegovina	http://aims.fao.org/aos/geopolitical.owl#Bosnia_and_Herzegovina
+Botswana	http://aims.fao.org/aos/geopolitical.owl#Botswana
+Brazil	http://aims.fao.org/aos/geopolitical.owl#Brazil
+Brunei Darussalam	http://aims.fao.org/aos/geopolitical.owl#Brunei_Darussalam
+Bulgaria	http://aims.fao.org/aos/geopolitical.owl#Bulgaria
+Burkina Faso	http://aims.fao.org/aos/geopolitical.owl#Burkina_Faso
+Burundi	http://aims.fao.org/aos/geopolitical.owl#Burundi
+Cambodia	http://aims.fao.org/aos/geopolitical.owl#Cambodia
+Cameroon	http://aims.fao.org/aos/geopolitical.owl#Cameroon
+Canada	http://aims.fao.org/aos/geopolitical.owl#Canada
+Cape Verde	http://aims.fao.org/aos/geopolitical.owl#Cape_Verde
+Central African Republic	http://aims.fao.org/aos/geopolitical.owl#Central_African_Republic_the
+Chad	http://aims.fao.org/aos/geopolitical.owl#Chad
+Chile	http://aims.fao.org/aos/geopolitical.owl#Chile
+China	http://aims.fao.org/aos/geopolitical.owl#China
+Colombia	http://aims.fao.org/aos/geopolitical.owl#Colombia
+Comoros	http://aims.fao.org/aos/geopolitical.owl#Comoros_the
+Congo	http://aims.fao.org/aos/geopolitical.owl#Congo_the
+Cook Islands	http://aims.fao.org/aos/geopolitical.owl#Cook_Islands_the
+Costa Rica	http://aims.fao.org/aos/geopolitical.owl#Costa_Rica
+Croatia	http://aims.fao.org/aos/geopolitical.owl#Croatia
+Cuba	http://aims.fao.org/aos/geopolitical.owl#Cuba
+Cyprus	http://aims.fao.org/aos/geopolitical.owl#Cyprus
+Czech Republic	http://aims.fao.org/aos/geopolitical.owl#Czech_Republic_the
+Czechoslovakia	http://aims.fao.org/aos/geopolitical.owl#Czechoslovakia
+C&#244;te d'Ivoire	http://aims.fao.org/aos/geopolitical.owl#Cote_d_Ivoire
+Democratic Republic of the Congo	http://aims.fao.org/aos/geopolitical.owl#Democratic_Republic_of_the_Congo
+Denmark	http://aims.fao.org/aos/geopolitical.owl#Denmark
+Djibouti	http://aims.fao.org/aos/geopolitical.owl#Djibouti
+Dominica	http://aims.fao.org/aos/geopolitical.owl#Dominica
+Dominican Republic	http://aims.fao.org/aos/geopolitical.owl#Dominican_Republic_the
+Ecuador	http://aims.fao.org/aos/geopolitical.owl#Ecuador
+Egypt	http://aims.fao.org/aos/geopolitical.owl#Egypt
+El Salvador	http://aims.fao.org/aos/geopolitical.owl#El_Salvador
+Equatorial Guinea	http://aims.fao.org/aos/geopolitical.owl#Equatorial_Guinea
+Eritrea	http://aims.fao.org/aos/geopolitical.owl#Eritrea
+Estonia	http://aims.fao.org/aos/geopolitical.owl#Estonia
+Ethiopia	http://aims.fao.org/aos/geopolitical.owl#Ethiopia
+Ethiopia_1993	http://aims.fao.org/aos/geopolitical.owl#Ethiopia_1993
+Faroe Islands	http://aims.fao.org/aos/geopolitical.owl#Faroe_Islands
+Fiji	http://aims.fao.org/aos/geopolitical.owl#Fiji
+Finland	http://aims.fao.org/aos/geopolitical.owl#Finland
+France	http://aims.fao.org/aos/geopolitical.owl#France
+Gabon	http://aims.fao.org/aos/geopolitical.owl#Gabon
+Gambia	http://aims.fao.org/aos/geopolitical.owl#Gambia__the
+Georgia	http://aims.fao.org/aos/geopolitical.owl#Georgia
+German Democratic Republic	http://aims.fao.org/aos/geopolitical.owl#German_Democratic_Republic_the
+Germany	http://aims.fao.org/aos/geopolitical.owl#Germany
+Germany, Federal Republic of	http://aims.fao.org/aos/geopolitical.owl#Federal_Republic_of_Germany_the
+Ghana	http://aims.fao.org/aos/geopolitical.owl#Ghana
+Greece	http://aims.fao.org/aos/geopolitical.owl#Greece
+Grenada	http://aims.fao.org/aos/geopolitical.owl#Grenada
+Guatemala	http://aims.fao.org/aos/geopolitical.owl#Guatemala
+Guinea	http://aims.fao.org/aos/geopolitical.owl#Guinea
+Guinea-Bissau	http://aims.fao.org/aos/geopolitical.owl#Guinea-Bissau
+Guyana	http://aims.fao.org/aos/geopolitical.owl#Guyana
+Haiti	http://aims.fao.org/aos/geopolitical.owl#Haiti
+Holy See	http://aims.fao.org/aos/geopolitical.owl#Holy_See
+Honduras	http://aims.fao.org/aos/geopolitical.owl#Honduras
+Hungary	http://aims.fao.org/aos/geopolitical.owl#Hungary
+Iceland	http://aims.fao.org/aos/geopolitical.owl#Iceland
+India	http://aims.fao.org/aos/geopolitical.owl#India
+Indonesia	http://aims.fao.org/aos/geopolitical.owl#Indonesia
+Iran (Islamic Republic of)	http://aims.fao.org/aos/geopolitical.owl#Iran_Islamic_Rep_of_
+Iraq	http://aims.fao.org/aos/geopolitical.owl#Iraq
+Ireland	http://aims.fao.org/aos/geopolitical.owl#Ireland
+Israel	http://aims.fao.org/aos/geopolitical.owl#Israel
+Italy	http://aims.fao.org/aos/geopolitical.owl#Italy
+Jamaica	http://aims.fao.org/aos/geopolitical.owl#Jamaica
+Japan	http://aims.fao.org/aos/geopolitical.owl#Japan
+Jordan	http://aims.fao.org/aos/geopolitical.owl#Jordan
+Kazakhstan	http://aims.fao.org/aos/geopolitical.owl#Kazakhstan
+Kenya	http://aims.fao.org/aos/geopolitical.owl#Kenya
+Kiribati	http://aims.fao.org/aos/geopolitical.owl#Kiribati
+Kuwait	http://aims.fao.org/aos/geopolitical.owl#Kuwait
+Kyrgyzstan	http://aims.fao.org/aos/geopolitical.owl#Kyrgyzstan
+Lao People's Democratic Republic	http://aims.fao.org/aos/geopolitical.owl#Lao_People_s_Democratic_Republic__the
+Latvia	http://aims.fao.org/aos/geopolitical.owl#Latvia
+Lebanon	http://aims.fao.org/aos/geopolitical.owl#Lebanon
+Lesotho	http://aims.fao.org/aos/geopolitical.owl#Lesotho
+Liberia	http://aims.fao.org/aos/geopolitical.owl#Liberia
+Libyan Arab Jamahiriya	http://aims.fao.org/aos/geopolitical.owl#Libyan_Arab_Jamahiriya__the
+Liechtenstein	http://aims.fao.org/aos/geopolitical.owl#Liechtenstein
+Lithuania	http://aims.fao.org/aos/geopolitical.owl#Lithuania
+Luxembourg	http://aims.fao.org/aos/geopolitical.owl#Luxembourg
+Madagascar	http://aims.fao.org/aos/geopolitical.owl#Madagascar
+Malawi	http://aims.fao.org/aos/geopolitical.owl#Malawi
+Malaysia	http://aims.fao.org/aos/geopolitical.owl#Malaysia
+Maldives	http://aims.fao.org/aos/geopolitical.owl#Maldives
+Mali	http://aims.fao.org/aos/geopolitical.owl#Mali
+Malta	http://aims.fao.org/aos/geopolitical.owl#Malta
+Marshall Islands	http://aims.fao.org/aos/geopolitical.owl#Marshall_Islands__the
+Mauritania	http://aims.fao.org/aos/geopolitical.owl#Mauritania
+Mauritius	http://aims.fao.org/aos/geopolitical.owl#Mauritius
+Mexico	http://aims.fao.org/aos/geopolitical.owl#Mexico
+Micronesia (Federated States of)	http://aims.fao.org/aos/geopolitical.owl#Micronesia__Fed_States_of_
+Monaco	http://aims.fao.org/aos/geopolitical.owl#Monaco
+Mongolia	http://aims.fao.org/aos/geopolitical.owl#Mongolia
+Montenegro	http://aims.fao.org/aos/geopolitical.owl#Montenegro
+Morocco	http://aims.fao.org/aos/geopolitical.owl#Morocco
+Mozambique	http://aims.fao.org/aos/geopolitical.owl#Mozambique
+Myanmar	http://aims.fao.org/aos/geopolitical.owl#Myanmar
+Namibia	http://aims.fao.org/aos/geopolitical.owl#Namibia
+Nauru	http://aims.fao.org/aos/geopolitical.owl#Nauru
+Nepal	http://aims.fao.org/aos/geopolitical.owl#Nepal
+Netherlands	http://aims.fao.org/aos/geopolitical.owl#Netherlands_the
+New Zealand	http://aims.fao.org/aos/geopolitical.owl#New_Zealand
+Nicaragua	http://aims.fao.org/aos/geopolitical.owl#Nicaragua
+Niger	http://aims.fao.org/aos/geopolitical.owl#Niger_the
+Nigeria	http://aims.fao.org/aos/geopolitical.owl#Nigeria
+Niue	http://aims.fao.org/aos/geopolitical.owl#Niue
+North Korea	http://aims.fao.org/aos/geopolitical.owl#Democratic_People_s_Republic_of_Korea_the
+Norway	http://aims.fao.org/aos/geopolitical.owl#Norway
+Oman	http://aims.fao.org/aos/geopolitical.owl#Oman
+Pakistan	http://aims.fao.org/aos/geopolitical.owl#Pakistan
+Palau	http://aims.fao.org/aos/geopolitical.owl#Palau
+Panama	http://aims.fao.org/aos/geopolitical.owl#Panama
+Papua New Guinea	http://aims.fao.org/aos/geopolitical.owl#Papua_New_Guinea
+Paraguay	http://aims.fao.org/aos/geopolitical.owl#Paraguay
+Peru	http://aims.fao.org/aos/geopolitical.owl#Peru
+Philippines	http://aims.fao.org/aos/geopolitical.owl#Philippines__the
+Poland	http://aims.fao.org/aos/geopolitical.owl#Poland
+Portugal	http://aims.fao.org/aos/geopolitical.owl#Portugal
+Qatar	http://aims.fao.org/aos/geopolitical.owl#Qatar
+Republic of Moldova	http://aims.fao.org/aos/geopolitical.owl#Republic_of_Moldova
+Romania	http://aims.fao.org/aos/geopolitical.owl#Romania
+Russian Federation	http://aims.fao.org/aos/geopolitical.owl#Russian_Federation__the
+Rwanda	http://aims.fao.org/aos/geopolitical.owl#Rwanda
+Saint Kitts and Nevis	http://aims.fao.org/aos/geopolitical.owl#Saint_Kitts_and_Nevis
+Saint Lucia	http://aims.fao.org/aos/geopolitical.owl#Saint_Lucia
+Saint Vincent and the Grenadines	http://aims.fao.org/aos/geopolitical.owl#Saint_Vincent_and_the_Grenadines
+Samoa	http://aims.fao.org/aos/geopolitical.owl#Samoa
+San Marino	http://aims.fao.org/aos/geopolitical.owl#San_Marino
+Sao Tome and Principe	http://aims.fao.org/aos/geopolitical.owl#Sao_Tome_and_Principe
+Saudi Arabia	http://aims.fao.org/aos/geopolitical.owl#Saudi_Arabia
+Senegal	http://aims.fao.org/aos/geopolitical.owl#Senegal
+Serbia	http://aims.fao.org/aos/geopolitical.owl#Serbia
+Serbia and Montenegro	http://aims.fao.org/aos/geopolitical.owl#Serbia_and_Montenegro
+Seychelles	http://aims.fao.org/aos/geopolitical.owl#Seychelles
+Sierra Leone	http://aims.fao.org/aos/geopolitical.owl#Sierra_Leone
+Singapore	http://aims.fao.org/aos/geopolitical.owl#Singapore
+Slovakia	http://aims.fao.org/aos/geopolitical.owl#Slovakia
+Slovenia	http://aims.fao.org/aos/geopolitical.owl#Slovenia
+Solomon Islands	http://aims.fao.org/aos/geopolitical.owl#Solomon_Islands
+Somalia	http://aims.fao.org/aos/geopolitical.owl#Somalia
+South Africa	http://aims.fao.org/aos/geopolitical.owl#South_Africa
+South Korea	http://aims.fao.org/aos/geopolitical.owl#Republic_of_Korea__the
+South Sudan 	http://aims.fao.org/aos/geopolitical.owl#South_Sudan
+Spain	http://aims.fao.org/aos/geopolitical.owl#Spain
+Sri Lanka	http://aims.fao.org/aos/geopolitical.owl#Sri_Lanka
+Sudan	http://aims.fao.org/aos/geopolitical.owl#Sudan_the
+Sudan	http://aims.fao.org/aos/geopolitical.owl#Sudan_the_1956
+Suriname	http://aims.fao.org/aos/geopolitical.owl#Suriname
+Swaziland	http://aims.fao.org/aos/geopolitical.owl#Swaziland
+Sweden	http://aims.fao.org/aos/geopolitical.owl#Sweden
+Switzerland	http://aims.fao.org/aos/geopolitical.owl#Switzerland
+Syrian Arab Republic	http://aims.fao.org/aos/geopolitical.owl#Syrian_Arab_Republic_the
+Tajikistan	http://aims.fao.org/aos/geopolitical.owl#Tajikistan
+Thailand	http://aims.fao.org/aos/geopolitical.owl#Thailand
+Timor-Leste	http://aims.fao.org/aos/geopolitical.owl#Timor-Leste
+Togo	http://aims.fao.org/aos/geopolitical.owl#Togo
+Tokelau	http://aims.fao.org/aos/geopolitical.owl#Tokelau
+Tonga	http://aims.fao.org/aos/geopolitical.owl#Tonga
+Trinidad and Tobago	http://aims.fao.org/aos/geopolitical.owl#Trinidad_and_Tobago
+Tunisia	http://aims.fao.org/aos/geopolitical.owl#Tunisia
+Turkey	http://aims.fao.org/aos/geopolitical.owl#Turkey
+Turkmenistan	http://aims.fao.org/aos/geopolitical.owl#Turkmenistan
+Tuvalu	http://aims.fao.org/aos/geopolitical.owl#Tuvalu
+Uganda	http://aims.fao.org/aos/geopolitical.owl#Uganda
+Ukraine	http://aims.fao.org/aos/geopolitical.owl#Ukraine
+Union of Soviet Socialist Republic	http://aims.fao.org/aos/geopolitical.owl#Union_of_Soviet_Socialist_Republic_the
+United Arab Emirates	http://aims.fao.org/aos/geopolitical.owl#United_Arab_Emirates__the
+United Kingdom	http://aims.fao.org/aos/geopolitical.owl#United_Kingdom_of_Great_Britain_and_Northern_Ireland__the
+United Republic of Tanzania	http://aims.fao.org/aos/geopolitical.owl#United_Republic_of_Tanzania__the
+United States of America	http://aims.fao.org/aos/geopolitical.owl#United_States_of_America
+Uruguay	http://aims.fao.org/aos/geopolitical.owl#Uruguay
+Uzbekistan	http://aims.fao.org/aos/geopolitical.owl#Uzbekistan
+Vanuatu	http://aims.fao.org/aos/geopolitical.owl#Vanuatu
+Venezuela (Bolivarian Republic of)	http://aims.fao.org/aos/geopolitical.owl#Venezuela
+Viet Nam	http://aims.fao.org/aos/geopolitical.owl#Viet_Nam
+Yemen	http://aims.fao.org/aos/geopolitical.owl#Yemen
+Yemen, Democratic	http://aims.fao.org/aos/geopolitical.owl#Democratic_Yemen
+Yemen_1990	http://aims.fao.org/aos/geopolitical.owl#Yemen_1990
+Yugoslav, former Yugoslav Republic of Macedonia	http://aims.fao.org/aos/geopolitical.owl#The_former_Yugoslav_Republic_of_Macedonia
+Yugoslavia	http://aims.fao.org/aos/geopolitical.owl#Yugoslavia
+Yugoslavia, Socialist Federal Republic of	http://aims.fao.org/aos/geopolitical.owl#Socialist_Federal_Republic_of_Yugoslavia_the
+Zaire	http://aims.fao.org/aos/geopolitical.owl#Zaire
+Zambia	http://aims.fao.org/aos/geopolitical.owl#Zambia
+Zimbabwe	http://aims.fao.org/aos/geopolitical.owl#Zimbabwe

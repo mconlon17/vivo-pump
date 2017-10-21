@@ -1,0 +1,14 @@
+short	vivo
+California Institute of Technology	http://vivo.mydomain.edu/individual/n489
+Chemistry	http://vivo.mydomain.edu/individual/n7257
+College of Arts and Humanties	http://vivo.mydomain.edu/individual/n3910
+College of Science	http://vivo.mydomain.edu/individual/n469
+English	http://vivo.mydomain.edu/individual/n4085
+Harvard University	http://vivo.mydomain.edu/individual/n4762
+History	http://vivo.mydomain.edu/individual/n2837
+John Wiley	http://vivo.mydomain.edu/individual/n6356
+Music	http://vivo.mydomain.edu/individual/n4109
+National Science Foundation	http://vivo.mydomain.edu/individual/n3787
+Physics	http://vivo.mydomain.edu/individual/n1927
+Sample University	http://vivo.mydomain.edu/individual/n6810
+University of California Press	http://vivo.mydomain.edu/individual/n6795

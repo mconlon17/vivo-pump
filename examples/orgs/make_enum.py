@@ -9,19 +9,19 @@ from datetime import datetime
 from pump.vivopump import get_parms, create_enum
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright 2016 (c) Michael Conlon"
+__copyright__ = "Copyright 2017 (c) Michael Conlon"
 __license__ = "BSD 3-Clause license"
-__version__ = "0.1"
+__version__ = "0.2"
 
 
 def main():
     """
-    Generate the organizaiton enum
+    Generate the organization enum
     """
     print datetime.now(), "Start"
     parms = get_parms()
 
-    #   Concept
+    #   Organization
 
     query = """
     SELECT (MIN (?xlabel) AS ?short) ?vivo
@@ -34,7 +34,22 @@ def main():
     ORDER BY ?short
     """
 
-    create_enum("org_enum.txt", query, parms)
+    create_enum("country_enum.txt", query, parms)
+
+    #   Country
+
+    query = """
+    SELECT (MIN (?xlabel) AS ?short) ?vivo
+    WHERE
+    {
+          ?vivo rdf:type vivo:Country .
+          ?vivo rdfs:label ?xlabel .
+    }
+    GROUP BY ?vivo
+    ORDER BY ?short
+    """
+
+    create_enum("country_enum.txt", query, parms)
 
     print datetime.now(), "End"
 

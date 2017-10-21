@@ -809,7 +809,9 @@ class Pump(object):
 
             g = step_graph([uri], step_def['predicate']['ref'], step_def['object'].get('type', None))
 
-            print "\nStep_triples for", step_def['column_name'], [uri], step_def['predicate']['ref'], step_def['object'].get('type', None)
+            # print "\nStep_triples for", step_def['column_name'], [uri],
+            # step_def['predicate']['ref'], step_def['object'].get('type', None)
+
             for (s, p, o) in g.triples((None, None, None)):
                 print unicode(s), unicode(p), unicode(o)
 

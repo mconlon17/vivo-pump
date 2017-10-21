@@ -495,3 +495,7 @@ Code improvements in `_do_update`
 * **2016-10-31** Fix bug in `sv.py` in which default query params were used regardless of config. org example updated.
 * **2017-01-18** Add `examples/memberships` 
 * **2017-01-28** Add `examples/editorial activities` to manage journal review activity and editorial activity
+* **2017-10-21** sv.py 0.8.9 sv.py now uses the '.nt' file type for add and sub files.  These files continue to contain
+triples.  Now the filetype is appropriate for the file contents.  Removed debug printing from pump.py.  Improved orgs
+example, adding country_enum, and separating country_address (text) from country_location (object reference) to show
+how each is represented in VIVO.

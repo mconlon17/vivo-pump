@@ -19,9 +19,9 @@
 """
 
 __author__ = "Michael Conlon"
-__copyright__ = "Copyright (c) 2016 Michael Conlon"
+__copyright__ = "Copyright (c) 2017 Michael Conlon"
 __license__ = "New BSD License"
-__version__ = "0.8.8"
+__version__ = "0.8.9"
 
 #   Simple VIVO uses three sources for parameters to control its actions.  The _last_ value found is the value that
 #   is used
@@ -93,10 +93,10 @@ def main():
             print args.src, "file not found"
             return_code = 1
         else:
-            add_file = open(args.rdfprefix + '_add.rdf', 'w')
+            add_file = open(args.rdfprefix + '_add.nt', 'w')
             print >>add_file, add_graph.serialize(format='nt')
             add_file.close()
-            sub_file = open(args.rdfprefix + '_sub.rdf', 'w')
+            sub_file = open(args.rdfprefix + '_sub.nt', 'w')
             print >>sub_file, sub_graph.serialize(format='nt')
             sub_file.close()
             print datetime.now(), len(add_graph), 'triples to add', len(sub_graph), 'triples to sub'

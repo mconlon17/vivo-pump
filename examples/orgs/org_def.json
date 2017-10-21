@@ -308,7 +308,19 @@
                 }
             }
         ],
-        "country": [
+        "country_location": [
+            {
+                "predicate": {
+                    "single": true,
+                    "ref": "obo:RO_0001025"
+                },
+                "object": {
+                    "literal": false,
+                    "enum": "country_enum.txt"
+                }
+            }
+        ],
+        "country_address": [
             {
                 "predicate": {
                     "single": true,
