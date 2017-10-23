@@ -76,9 +76,9 @@ for row_index, row_data in data_in.items():
             row_data['middle'])
 
         count = len(author_uris)
+        row_out += 1
         if count == 0:
             # There is no match in the current VIVO ==> add a new UF author
-            row_out += 1
             data_out[row_out] = row_data
             data_out[row_out]['uri'] = ''
         elif count == 1:
